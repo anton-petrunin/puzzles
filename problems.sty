@@ -1,0 +1,136 @@
+\usepackage{amssymb, amsfonts, amsmath, amsthm}
+\usepackage{enumerate}
+\usepackage{bm}%makes better bold fornt in math
+\usepackage{color}
+\usepackage{pifont}
+\usepackage[top=0.9in, bottom=0.9in,left=0.9in, right=0.9in, paperwidth=6in, paperheight=9in]{geometry}
+\usepackage{graphicx}
+\usepackage{epsfig,lpic,wrapfig}
+\usepackage{ushort}
+\usepackage[integrals]{wasysym} 
+\usepackage{xfrac}
+
+%LIST STILES
+\renewcommand{\@listI}{%
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 1pt
+\partopsep=\topsep
+\parsep=\topsep
+\itemsep=\topsep}
+%ITEMIZE-first order sign
+\renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
+\renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
+
+%ITEMIZE-first order sign
+\renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
+\renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
+
+
+\def\smallskip{\vskip\smallskipamount}
+\def\medskip{\vskip\medskipamount}
+\def\bigskip{\vskip\bigskipamount}
+
+
+\def\parit#1{\smallskip\noindent{\it #1}}
+\def\parbf#1{\smallskip\noindent{\bf #1}}
+\def\wrenches{\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/wrenches(0.5)}\end{lpic}\ }
+
+\def\noi{\noindent}%  
+\def\CC{\mathbb{C}}%  
+\def\DD{\mathbb{D}}%  
+\def\HH{\mathbb{H}}% 
+\def\PP{\mathbb{P}}%  
+\def\NN{\mathbb{N}}%  
+\def\RR{\mathbb{R}}%  
+\def\TT{\mathbb{T}}%
+\def\ZZ{\mathbb{Z}}% 
+\def\QQ{\mathbb{Q}}% 
+\def\II{\mathbb{I}}%
+
+\def\RP{\RR\mathrm{P}}%
+\def\CP{\CC\mathrm{P}}%
+\def\SO{\mathrm{SO}}%
+
+\def\eps{\varepsilon}%  
+\def\ge{\geqslant}%
+\def\le{\leqslant}%
+\def\phi{\varphi}%
+\def\<{\langle}%
+\def\>{\rangle}%
+\def\~{\tilde}%
+\def\emptyset{\varnothing}%
+
+%operators
+\def\CAT{\operatorname{\rm CAT}\nolimits}
+\def\Const{\operatorname{\rm Const}}
+\def\area{\operatorname{\rm area}}
+\def\acts{\curvearrowright}
+\def\vol{\operatorname{\rm vol}}
+\def\diam{\operatorname{\rm diam}}
+\def\codim{\operatorname{\rm codim}}
+\def\dim{\operatorname{\rm dim}}
+\def\dist{\operatorname{\rm dist}}
+\def\div{\operatorname{\rm div}}
+\def\FillRad{\operatorname{\rm FillRad}}
+\def\Hess{\operatorname{\rm Hess}\nolimits}
+\def\InjRad{\operatorname{\rm InjRad}\nolimits}
+\def\Int{\operatorname{\rm Int}\nolimits}
+\def\id{\operatorname{\rm id}}
+\def\length{\operatorname{\rm length}}
+\def\pack{\operatorname{\rm pack}}
+\def\Ric{\operatorname{\rm Ric}}
+\def\Rm{\operatorname{\rm Rm}}
+\def\Tor{\operatorname{\rm Tor}}
+\def\T{\mathrm{T}}
+\def\N{\mathrm{\rm N}}
+\newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
+
+\def\:{\colon}
+\newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right|\,{#2}\,\right\}}
+
+%problems type
+\def\easy{$\lefteqn{{}^{\circ}}$}
+\def\hard{$\lefteqn{{}^{\hskip.1mm*}}$}
+\def\thm{$\lefteqn{{}^{{}^{{}_+}}}$}
+\def\many{$\lefteqn{{}^{\sharp}}$}
+
+%sign
+\def\sign#1{\hfill\ \hbox{\small{\it #1}}}
+\def\bigsign#1{\\$\mathstrut$\hfill\ \small{\it #1}}
+
+%problem
+\newcounter{thm}
+\renewcommand{\thethm}{\arabic{thm}}
+\def\claim#1#2{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf{\arabic{thm}#1.} {\it #2.}}}
+\def\endclaim{
+\par\medskip}
+\newenvironment{pr}{\claim}{\endclaim}
+
+%comment
+\def\comment#1{\par\smallskip
+\hbox{%
+\hspace{3em}\parbox{.91\textwidth}%
+{{\small\it #1}}}
+}
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
+
+\let\oldcdot\cdot
+\def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
+
+\hyphenation{qua-si-geo-de-sic 
+qua-si-geo-de-sics 
+Alex-an-drov 
+half-space 
+Lyt-chak 
+dif-feo-mor-phisms 
+sub-ma-ni-fold 
+ho-mo-mor-phism 
+Rie-mann-ian 
+ho-meo-mor-phisms}
