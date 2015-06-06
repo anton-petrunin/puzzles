@@ -1,0 +1,14 @@
+*.pdf
+lib/*
+*.backup
+*.log
+*.aux
+*.dvi
+*.gz
+*.idx
+*.ind
+*.out
+*.ilg
+*.toc
+*.patch
+*/*.zip

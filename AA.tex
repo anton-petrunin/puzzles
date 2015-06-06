@@ -1,0 +1,771 @@
+
+
+
+
+
+\begin{pr}{\thm}{Constant curvature is everything}\label{figure-eight-2} Given integer $m\ge 2$, prove that any compact \hyperref[Length space]{\emph{length spaces}} $K$ is a Gromov--Hausdorff limit of a sequence of $m$-dimensional
+manifolds $M_n$ with curvature $-n^2$.
+\end{pr}
+
+\parbf{\wrenches\ref{figure-eight-2}.} 
+\textit{Constant curvature is everything.}
+Assume a fundamental group of a compact manifold $M$ admits an epimorphism to the free group with two generators.
+In other words, there are two disjoint closed hypersurfaces $S_1$ and $S_2$ in $M$ 
+which do not separate points in $M$
+but each $S_i$ separates points of any of its small neighborhoods.
+
+Prepare many copies of $M$, cut one copy along $S_1$ and $S_2$,
+$n_1$ copies along $S_1$ and $n_2$ copies along $S_2$
+then glue them as it shown on the picture. %+PIC???
+It produce a finite cover of $M$ which is after rescaling is close to figure eight.
+
+Finally applying Problem~\ref{figure-eight-1}.
+
+\parit{Comments} The problem appears in thesis of Sahovic \cite{sahovic}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Wild Cantor set}\label{Wild Cantor set} 
+Contract a subset $C$ of $\RR^3$ 
+such that $C$ is homeomorphic to the Cantor set and the complement $\RR^3\backslash C$ is not simply connected.
+\end{pr}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Wild Cantor set}.}
+\textit{Wild Cantor set.}
+We will construct a compact totally discontinous subset $K\subset\RR^3$ without isolated points  
+such that the complement $\RR^3\backslash K$ is not simply connected.
+Then the problem will follow
+since any compact totally discontinous set and without isolated points
+is homeomorphic to the Cantor set.
+
+The needed set can be obtained as intersection $K=\bigcap_n K_n$
+of a nested sequence 
+of sets $K_1\supset K_2\supset\dots$, where each $K_n$ is a union of finite collection of solid tori. 
+The construction can be guessed from the first two itarations shown on the picture.
+
+\parit{Comments.}
+This example was constructed by Louis Antoine in \cite{antoine}.
+The pictures above were made by \href{http://en.wikipedia.org/wiki/User:Blacklemon67}{blackle}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{pr}{\hard}{Besicovitch's set}\label{Besicovitch's set}
+%Show that one can cut a unit plane disc along a finite number of radii into sectors and then move each sector by a parallel translation in such a way that their union have arbitrary small area.
+%\sign{\cite{besicovitch}}
+%\end{pr}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Closed magnetic geodesics}\label{twisted-geodesic} %???
+Give an example of a closed Riemannian 
+2-manifold which has no closed smooth curve with constant geodesic curvature $=1$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{twisted-geodesic}.} 
+\textit{Closed magnetic geodesics.}
+Take $\Sigma$ to be a compact surface with constant curvature $-1$;
+that is, 
+ $\Sigma=\HH^2/\Gamma$,
+where $\HH^2$
+is the hyperbolic plane 
+and $\Gamma$ is a descrete subgroup of isometries of $\HH^2$ which acts freely.
+
+Prove that $\Gamma$ contains only hyperbolic elements; that is, any transformation $\gamma\in\Gamma$ fix two distinct points on the absolute.
+
+Assume $\Sigma$ contains a closed curve with curvature $1$.
+Note that this curve lifts to a horocycle in $\HH^2$.
+Therefore $\Gamma$ has to contain an element which preserves this horocycle.
+Such an element has to be parabolic;
+that is, it fixes a single point on the absolute of $\HH^2$,
+ a contradiction.
+
+\parit{Comments.}
+The problem appears in the Ginzburg's paper \cite{ginzburg}.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Divergence}\label{Divergence} %???
+Let $F$ be a convex figure in the $\RR^2$ with smooth boundary
+and $\area F=\pi$.
+Show that there is a vector field $\bm{v}$ on $F$
+such that $|\bm{v}|\le 1$ and $\div \bm{v}\ge 2$. 
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Divergence}.}
+\textit{Divergence.}
+Fix a Cartesian coordinate system $(x,y)$ on the plane.
+Denote by $D$ the unit disc centered at the origin;
+so $\area F=\area D$.
+ 
+Prove that there is a smooth area preserving map $F\to D$, 
+of the form
+$(x,y)\mapsto (v(x),w(x,y))$.
+
+Show that the vector field $\bm{v}(x,y)=(v(x),w(x,y))$
+is a solution for the problem.
+
+\parit{Comments.}
+This is the key ingredient in the famous proof of isoperimetric inequality --- to finish the proof apply the divergence formula for $\bm{v}$.
+
+The same argument works in all dimensions.
+See the Gromov's appendix in \cite{gromov-apendix} for more details.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Deformation of polygon}\label{Deformation of polygon}
+Let $A_t$, $t\in [0,1]$ be a continuous one parameter family of not necessary convex polygons with fixed side lengths.
+Assume that each angle of $A_t$ is either increasing or decreasing in $t$.
+Show that the vertices with increasing angles of $A_0$
+can not be separated from the vertices with decreasing angles by a line.
+\end{pr}
+
+
+Let us cut the polygon $A_0$ from the plane and glue instead the polygon $A_t$ for small enough $t$.
+Denote by $\Pi$ the obtained polyhedral space.
+
+Note that 
+$\Pi$ coincides with Euclidean plane outside of compact region.
+The vertices with increasing/decreasing angles of $A_0$ 
+correspond to the singular points of $\Pi$ with negative/positive curvature.
+
+Assume we have at least two singular points with positive curvature in $\Pi$.
+Choose two of them, say $p$ and $q$ which which lie on the minimal distance from each other. 
+Cut $\Pi$ along a geodesic $[pq]$
+and patch the hole 
+so that in the obtained polyhedral space, say $\Pi'$, 
+the points $p$ and $q$ become regular and yet an other singular point apears in the patch. 
+The patch is obtained by doubling a triangle in two sides.
+This way we can remove all singular points with positive curvature except one.
+
+A similar procedure gives a way to 
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Invisible island}
+Let $g$ be a Riemannian metric on $\RR^n$ which coincides with the canonical Euclidean metric outside of a bounded set $K\subset \RR^n$.
+Assume $\gamma$ and $\gamma'$ be geodesics in the canonical metric and in $g$
+such that
+\end{pr}
+
+
+
+
+
+\begin{pr}{}{Bound on the area of sphere}
+Let $M$ be a complete connected non-compact Riemannian manifold with non-negative Ricci curvature and $p\in M$.
+Show that there is $\eps>0$ such that
+$$\area [\partial B_r(p)]>\eps$$
+for any $r>1$.
+\sign{\cite{user16750}}
+\end{pr}
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Kirszbraun's theorem}\label{kirszbrun}
+Let $X\subset\RR^2$ be an arbitrary subset and $f\:X\to\RR^2$ be a \hyperref[Short map]{\emph{short map}}.
+Show that $f$ can be extended as a short map to whole $\RR^2$;
+i.e., there is a short map $\bar f\:\RR^2\to\RR^2$ such that its restriction to $X$ coincides with~$f$.
+\end{pr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\wrenches\ref{kirszbrun}.} 
+\textit{Kirszbraun's theorem.}
+First observe that it is sufficient to prove the following weaker statement.
+
+\textit{Assume $a_1,a_2,\dots,a_n$ and $b_1,b_2,\dots, b_n$ be the points in the plane such that 
+$|a_i-a_j|\ge |b_i-b_j|$
+for any $i$ and $j$.
+Then for any point $x$ in the plane there is an other point $y$ such that
+$|a_i-x|\ge |b_j-y|$
+for each $i$.}
+
+Take $y$ to be the minimum point  of the function ???
+and show that it satisfies the inequalities.
+
+\parit{Comments.}
+The problem was discovered by Kirszbraun in his thesis, see \cite{kirszbraun}.
+Later it was reproved by Valentine in \cite{valentine}.
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Negative curvature vs. symmetry}\label{Negative curvature vs. symmetry} Let $(M,g)$ be a closed Riemannian manifold with negative Ricci curvature.
+ 
+Prove that $(M,g)$ does not admit an isometric $\mathbb{S}^1$-action.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Negative curvature vs. symmetry}.} 
+\textit{Negative curvature vs. symmetry.}
+Assume contrary.
+Consider a longest orbit $\gamma\:\mathbb{S}^1\to M$ of the $\mathbb{S}^1$-action.
+Note that $\gamma$ has to be a geodesic. 
+
+Choose a point $p$ on $\gamma$
+and an orthonormal basis $e_1,e_2,\dots ,e_{n-1}$ in the  subspace $N\subset \T_p$ which is normal to $\gamma$.
+For each $i$ and $t\in \RR$,
+consider the orbit of $\exp_p(t\cdot e_i)$,
+denote by $\ell_i(t)$ its length.
+
+Prove that
+\[\sum_i\ell_i''(0)>0;\leqno{({*})}\]
+here you need to use that $\mathop{\rm Ricc}(\dot\gamma(t),\dot\gamma(t))<0$.
+
+Finally note that inequality $({*})$ implies that 
+length of $\gamma$ is not maximal, a contradiction.
+
+\parit{Comments.}
+The problem discovered by Bochner, see \cite{bochner}.
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{\easy}{Cut which does not cut}\label{Cut which does not cut}
+Construct an injective 
+unit-speed curve 
+$\gamma\:\RR\z\to\RR^2$ with bounded curvature
+such that the complement $\RR^2\backslash\gamma(\RR)$ 
+has connected interior.
+\end{pr}
+
+%???
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\wrenches\ref{Cut which does not cut}.}
+\textit{Cut which does not cut.}
+
+\parit{Comments.} The problem is inspired by Panov's papper \cite{panov-torus}.
+%???PIC
+
+
+
+
+
+
+
+\begin{pr}{}{Area contracting map}\label{Area contracting map}
+Let 
+$$A=[0,1]\times[0,1]\times[0,1000]\ \ \text{and}\ \ B=[0,1]\times[0,10]\times[0,10].$$
+Construct a Lipschitz map 
+$f\:A\to B$ which is area contracting and such that the restriction $f|_{\partial A}$ 
+is a degree one map $\partial A\to \partial B$.
+\bigsign{\cite[\ref{guth-area-cnotractin}]{guth}}
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\parbf{\ref{Area contracting map}.} 
+\textit{Area contracting map.}
+Smash point 
+a small neighborhood of $\partial A$ into $\partial A$;
+this can be done by a map $f_1\:A\to A$
+with a Lipschitz constant arbitrary close to $1$, say $e^\eps$.
+
+Now map $A$ into onto by a  $B$ by a $e^{-\eps}$-Lipshitz snake like map $f_2$ shown on the diagram.
+The composition $f_2\circ f_1\:A\to B$ is 1-Lipshitz, in particular area nonexpanding. 
+
+
+%???
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{\thm}{Flexible convex polyhedron}\label{Flexible convex polyhedron}
+Show that no triangulation of the surface of a convex polyhedron in $\mathbb R^3$ 
+can be flexible.
+I.e., given a convex polyhedral surface with a triangulation $\mathcal T$, one can not move the vertexes of $\mathcal T$ continuously in such a way that one triangle in $\mathcal T$ is in a fixed
+and 
+all the edges of $\mathcal T$ have fixed length.
+\sign{\cite{connelly}}
+\comment{Note that by Alexandrov's theorem, if such banding exists then the surface immediately becomes non-convex.}
+\end{pr}
+
+
+
+\parbf{\ref{Flexible convex polyhedron}.} 
+\textit{Flexible convex polyhedron.}
+Assume contrary; i.e., there is a convex polyhedron $P$ which admits a flexible triangulation $\tau$. 
+Denote by $P^t$ the continuous deformation of $P$ which moves each triangle $\triangle_1,\dots,\triangle_n$ of $\tau$ 
+by motions $m_1^t,\dots,m_n^t$ of $\RR^3$.
+Given triangle edge or vertex of $\tau$ we will mark by upper index $t$ the corresponding object in $P^t$; 
+for example $\triangle_i^t=m^t_i(\triangle_i)$.
+
+Denote by $v_1,v_2,\dots,v_k$ the vertices of $\tau$.
+We can assume that one of the triangles, say $[v_1v_2v_3]$ of $\tau$ does not move in the deformation.
+
+Let us choose a sequence $t_n\to 0$ and set 
+\[\eps_n=\max_i\{|v_i^{t_n}-v_i|\}.\leqno{({*})}\]
+
+Prove that if $v_i$ and $v_j$ lie in one face of $P$ then
+\[|v_i^{t_n}-v_j^{t_n}|=|v_i-v_j|+O(\eps_n^2).\leqno{({*}{*})}\]
+
+Passing to a subsequence if necessary,
+we can assume that the limit
+\[w_i=\lim_{n\to\infty} \frac{v_i^{t_n}-v_i}{\eps_n}\] 
+is defined for each $i$.
+Note that $w_1=w_2=w_3=0$,
+$|w_i|\le 1$ for each $i$ 
+and $|w_k|=1$ for some $k$.
+
+Note that from the equation $({*}{*})$ it follows that $w_i$ restricted to the vertices of the original polyhedron gives its  infintesimal deformation;
+i.e., 
+\[\<v_i-v_j,w_i-w_j\>=0\]
+for any edge $[v_iv_j]$ of the polyhedron.
+The later contradicts Dehn's theorem on the infinetesimal rigidity of simplicial polyhedron. 
+
+\bibitem[R.~Connelly]{connelly}\textit{The rigidity of certain cabled frameworks and the second-order rigidity of arbitrarily triangulated convex surfaces.} Adv. in Math. 37 (1980), no. 3, 272--299.
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Fixed point of conformal mappings}\label{Fixed point of conformal mappings}
+Let $(M,g)$ be an oriented positively curved closed Riemannian manifold with even dimension
+and $f\:M\to M$ be a conformal orientation preserving map. 
+Prove that $f$ has a fixed point.
+\sign{\cite[\ref{weinstein-Fixed-pnt}]{weinstein}}
+\end{pr}
+
+
+
+
+
+
+
+
+\begin{pr}{}{Minimal hypersurfaces}\label{Minimal hypersurfaces}
+Show that any two compact \hyperref[Minimal surface]{\emph{minimal hypersurfaces}} in a Riemannian manifold with positive Ricci curvature must intersect.
+\sign{\cite{frankel}}
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Minimal hypersurfaces}.} 
+\textit{Minimal hypersurfaces.}
+Assume contrary, let $V$ and $W$ be disjoint compact minimal hypersurfaces in the manifold $M$.
+Consider a pair of points $v\in V$ and $w\in W$ which realize the minimum of the distance.
+
+Note that the minimizing geodesic $[vw]$ is unique and it is normal to each of the hypersurface at the end points.
+In particular the parallel translation of the tangent hyperplane $\T_vV$ along $[vw]$ gives the tangent hyperplane $\T_wW$.
+
+Consider pairs of unit-speed geodesics $\alpha$ and $\beta$ 
+in $V$ and $W$ correspondingly 
+which start at $v$ and $W$ and go in the parallel directions. 
+Set $\ell(t)=|\alpha(t)-\beta(t)|_M$.
+
+Use the second variation formula to show that $\ell''(0)$ has negative average value. 
+In particular $\ell''(0)<0$ for a pair $\alpha$ and $\beta$ as above
+and therefore  $v$ and $w$ is not a minimal pair, a contradiction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{letter of S. Tabachnikov}
+
+Dear AHTOH, here are my (sorry, much belated!) comments on your list
+of geometry problems. I will be happy to provide more details if you
+wish. Do you include open problems? Privet, Serezha
+
+1. Spiral. A reference to Kneser's theorem is appropriate: as long as
+the curvature is monotonic, the osculating circles are nested.???
+
+2. A curve in a sphere. Isn't it an immediate consequence of integral
+geometry (length=const \times average number of intersections with
+great circles)?
+
+3.
+
+4. Convex polygon. This is known as Cauchy Lemma; this was the main
+ingredient in his proof that convex polyhedra in 3-space are rigid.
+
+5. Convex triangulations. I think, this is discussed, with
+references, in Gelfand-Kapranov-Zelevinsky book.
+
+6. Short curve in a sphere. Doesn't it follow from integral geometry
+that every open interval of this curve doesn't intersect some grat
+circle?
+
+7. Transversal foliation. To this I'd add that a non-vanishing
+divergence free vector field on a closed 3-mfld with finite
+fundamental group is not tangent to any foliation. This is proved in
+my 1989 Func. Anal. note.
+
+I don't know whether the following results qualifies for your list.
+
+A. Given partition of a square into triangles of equal areas, the
+number of triangles is even. There are many generalizations. E.g.,
+the same holds for a centrally symmetric polygon. There is literature
+on this subject.
+
+B. Let G be a closed convex plane curve and g a closed immersed curve
+inside G. Then average absolute curvature (g) \geq that of G, with
+equality iff g is G, possibly traversed more than once. Average
+absolute curvature = integral of abs. value of curvature divided by
+total length.
+For G a circle, this is an old Fary theorem (I know a few proofs);
+for arbitrary G this was proved recently (there are two papers).
+
+
+
+\chapter{letter of P. Petersen}
+
+Peter Petersen 	to Anton
+
+I'll be happy to make a few corrections.
+In the problem a la Abresch-Gromoll you use Minkowski space for finite
+dimensional normed vector space. This is a bit confusing to those who
+think of Minkowski spaces as space-times!
+In the Immerses convex hypersurface problem the third and last question
+should say nonnegative (sectional) curvature rather than nonpositive which
+is the second question.
+In Fixed points of conformal mappings the dimension should be even? The
+antipodal map on S^3 has no fixed points. Actually you might want to say
+that in even dimensions the map is orientation preserving and in odd
+dimensions it is orientation reversing. 
+Then the problem should be correct.
+
+And here are two problems I have always liked.
+1. Show that if a
+simply connected
+compact positively curved manifold admits a totally geodesic hypersurface,
+then it is a sphere. Actually one just needs to know that the hypersurface
+is two sided.
+2. Show that two minimal hypersufaces in positive Ricci curvature must
+intersect.
+
+Best regards, Peter
+
+
+
+
+
+
+
+
+\chapter{AA}
+
+{\bf A.} Let $S^2$ be unit $2$-sphere and
+$B_\alpha(p)$ be a ball of
+radius $\alpha$ with center $p$ in $S^2$.
+Assume $f\:B_\alpha(p)\to \RR^2$ is a bi-Lipschitz map;
+that is, there are positive constants $c_1 < c_2$, such that for any two points
+$x,y\in D_\alpha$ we have
+$$c_1\cdot |x y|_{S^2}\le |f(x)f(y)|_{\RR^2} \le c_2\cdot|x y|_{S^2}.$$
+Prove that
+$$\frac{c_2}{c_1}\ge \frac{\alpha}{\sin\alpha}$$
+and in case of equality
+$f$ is similar to $\exp_p^{-1}\:B_\alpha(p)\to T_p(S^2)=\RR^2$.
+
+\item{\bf Conformal factor/map.} Two Riemannian metrics $g$ and $h$ on a manifold $M$ are called {\it conformally equivalent} if for $g=u h$ for some positive function $u$on $M$
+The function $u$ called {\it conformal factor}.
+A diffeomorphism between two Riemannian manifolds is called conformal map if the pulled back metric is conformally equivalent to the original one.
+
+\begin{pr}{}{Hilbert's problem} Let $\sigma$ be a centrally
+symmetric measure on $S^2\subset \RR^3$, such that $\sigma(X)=0$ if $X$ is a
+subset of big circle and $\sigma(X)>0$ if $X$ is open.
+A continuous centrally symmetric metric $\rho$ on $S^2$
+is called $\sigma$-metric
+if there is a measure $\sigma$ as above such that
+$$\rho(x,y)=\sigma\bigl(B_{\pi/2}(x)\backslash B_{\pi/2}(y)\bigr).$$
+
+Prove that all geodesics of any $\sigma$-metric coincide with big circles
+of $S^2$.
+\end{pr}
+
+\begin{pr}{}
+{Transversal foliation.} (D.~Burago)
+
+{\bf A.} Find a vector field on $S^3$ which does not admit a transversal foliation.
+
+{\bf B.} Show that any volume preserving vector field on $S^3$ does not admit a transversal foliation.
+Transversal foliation. To this I'd add that a non-vanishing divergence free vector field on a closed 3-mfld with finitefundamental group is not tangent to any foliation. This is proved in my 1989 Func. Anal. note.
+\sign{???}
+\end{pr}
+
+\begin{pr}{}{Area of minimal surface.} Let $\Sigma$ be a minimal 2-disc in $\RR^3$ which passes through the origin and its boundary $\partial\Sigma$ on the unit sphere is a curve in a unit sphere and center of the sphere belongs to $S$.
+(i) Prove that area of $S$ is at least $\pi$.
+(ii) Prove that length of $\partial S$ is at least $2\cdot\pi$
+\sign{???}
+\end{pr}
+
+\begin{pr}
+{\bf  Rescaling-invariant metrics} Let $(M,d)$ be a manifold with an intrinsic metric. 
+Assume it is simply connected homogeneous; 
+that is, there is an isometric transitive group action, and rescaling invariant, 
+that is, for any $\lambda>0$ there is a homeomorphism $h_\lambda\:M\to M$ such that $$d(h_\lambda(x)h_\lambda(y))=\lambda d(x,y),$$ Prove that $M$ is isometric to a nilpotant Lie group with a left invariant sub-Riemannian metric.
+\end{pr}
+
+\begin{pr}
+{\bf  Tennis ball} \cite{arnold}\cite{angenent} Any smooth curve in a sphere which divides its area into two equal parts has at least 4 {\it inflection points}.
+%Tennis ball. A more general theorem was proved by B. Segre before Arnold.???B. Segre, Alcune proprieta differenziali in grande delle curve chiuse sghembe}, Rend. Mat. 1 (1968), 237--297.
+\end{pr}
+
+\begin{pr}{\easy}{Cauchy lemma} Let $a_1a_2a_3....a_n$ and $b_1b_2b_3...b_n$ be two convex non-isometric polygons such that correspondent sides have the same length.
+Write next to each vertex $a_i$  a plus if $\measuredangle a_i>\measuredangle b_i$, zero if  $\measuredangle a_i=\measuredangle b_i$ and minus if $\measuredangle a_i<\measuredangle b_i$.
+Prove that if one would go around $a_i$ it will be at least four changes of sign.
+\end{pr}
+
+\begin{pr}{}{Lipschitz approximation}
+Prove that any compact Riemannian manifold admits a Lipschitz approximation by Euclidean polyhedra; 
+that is, for any Riemannian compact manifold $M$ there is a sequence of polyhedra $P_n$ with $(1\pm\tfrac1n)$-bi-Lipschitz homeomorphisms $h_n\:P_n\to M$.
+\end{pr}
+
+\begin{pr}{}
+{\bf  Convex surface}
+Let $P$ be a \emph{polyhedral space} and $f_0,f_1\:P\to \RR^q$ be two piecewise linear isometries with the same asociated triangulation $T$.
+Consider $\RR^q$ as a subspace of $\RR^{2q}$.
+Prove that there is homotopy $F_t\:P\to\RR^{2q}$, $F_0=f_0$, $F_1=f_1$, such that for each $t\in[0,1]$ the map $F_t$ is a piecewise linear isometry with asociated triangulation $T$.
+\end{pr}
+
+\begin{pr}{}
+{\bf  Convex surface}
+Construct a closed convex surface $\Sigma\subset \RR^3$ such that for any two points $x,y\in \Sigma$ we have $|x y|_\Sigma< \frac{\pi}{2}|x y|$, where $|**|$ denotes distance in $\RR^3$ and $|**|_\Sigma$ the induced distance in $\Sigma$.
+\end{pr}
+
+\begin{pr}{}{Ocean of scalar curvature} Show that if a Riemannian metric on $\RR^3$ coincides with Euclidean outside of a ball and its scalar curvature is nonnegative then it is flat.
+\end{pr}
+
+\begin{pr}{}{Fixed set of group action} Let $M$ be a smooth manifold with a smooth action of a compact group.
+Prove without using Riemannian geometry that any connected component of fixed point set forms a submanifold.
+\sign{A.~Katok}
+\end{pr}
+
+\begin{pr}{\hard}{Katok's paradox}
+Construct a set of full measure $E$ in $\RR^2$ and a one-parameter family of smooth curves $\gamma_t\:\RR\to\RR^2$ such that the map $(t,\tau)\mapsto\gamma_t(\tau)$ gives a homeomorphism of $\RR^2$ and for each $t$ there is at most one point of $A$ on $\gamma_t$.
+\sign{\cite{milnor:katok}}
+\end{pr}
+
+\begin{pr}{\hard}{Triangulation of a square} 
+Show that there is no triangulation of a square with an odd number of triangles with equal area.
+\sign{\cite{monsky}}
+\end{pr}
+
+\begin{pr}{\hard}{Almost non-positively curved sphere}  Construct a Riemannian metric on $S^3$ with sectional curvature $\le 1$ and arbitrary small diameter.
+\bigsign{M.~Gromov, \cite{buser-gromoll}}
+\end{pr}
+
+\begin{pr}{}{???Saddle graph}
+Let $f\:\RR^2\to\RR$ be a smooth bounded function.
+Assume that its graph $z=f(x,y)$ is a strictly \emph{saddle suface}.
+Show that $f$ is constant. 
+\sign{???}
+\end{pr}
+
+\begin{pr}{}{??? A curve in the plane}
+Let $\gamma\:[0,1]\to \RR^2$ be a simple curve%
+\footnote{that is, injective and continuous map}.
+Prove that for any $\eps>0$ there is a sequence of numbers
+$0=t_0<t_1<t_2<...<t_n=1$ such that
+$\sum_{i=1}^n|\gamma(t_{i-1})\gamma(t_{i})|^2<\eps$.
+\sign{???}
+\end{pr}
+
+%\parbf{Cartography.}
+
+\begin{pr}{}{???bi-Lipschitz cartography} Let $\mathbb{S}^2$ be unit $2$-sphere.
+Assume $\Omega\subset \mathbb{S}^2$ is a convex domain with perimeter%
+\footnote{An analogous questin for area is open.}
+$\le 2\cdot\pi\sin\alpha$, $0<\alpha<\pi/2$.
+Show that there is a bi-Lipschitz mapping $f\:\Omega\to \RR^2$
+with constants $c_1 < c_2$ such that
+$$\frac{c_2}{c_1}\le \frac{\alpha}{\sin\alpha}.$$
+\sign{\cite{milnor}$+$\cite{lawlor}}
+\end{pr}
+
+
+\begin{pr}{}{???Conformal cartography}
+Let $U$ be a simply connected region
+bounded by smooth curve in a positively curved \emph{surface}, $f\:U\to \RR^2$
+be a conformal map and $\sigma\:U\to R_+$ be its conformal factor.
+Prove that there is one, and up to similarity transformation of $\RR^2$,
+only one conformal map $f^*\:U\to \RR^2$ which minimize ratio
+$\sup\sigma/\inf\sigma$ and $f^*$ is characterized by property that $\sigma$
+is constant along the boundary of $U$.
+
+Prove that if $U$ is convex then $f^*$
+is one-to-one and $f^*(U)$ is convex.
+\sign{\cite{milnor}}
+\end{pr}
+
+\begin{pr}{}{???Chebyshev's net}
+Assume a complete positively curved Riemannian metric on $\RR^2$ is invariant with respect to reflections $(x,y)\mapsto (\pm x,\mp y)$.
+
+Show that there are new coordinates $(u,v)$ on $\RR^2$ with first fundamental form given by
+\def\d{d}
+$\d s^2=\d u^2+2\cdot\d u\cdot\d v\cdot \cos\alpha(u,v)+\d v^2$.
+\sign{\cite{bakelman}}
+\end{pr}
+
+\begin{pr}{}{Convex/Strictly convex}\label{strict-convex} 
+Show that there is a Riemannian metric $g$ on $\mathbb{S}^3$ for which any  $C^\infty$-close metric $g'$ has the following property: 
+Every $C^1$-smooth convex surface in $(\mathbb{S}^3,g')$ is strictly convex; 
+that is, it has no geodesic segments on~it.
+\sign{}
+\end{pr}
+
+\begin{pr}{\thm}{Concave 3-ball}\label{hass}
+Construct a negatively curved Riemannian metric on a closed 3-ball $\bar B$ with concave boundary; 
+that is, such that  $\dist_{\partial \bar B}$ is convex function in a neighborhood of $\partial \bar B$.
+\sign{\cite{hass}}
+\end{pr}
+for doing problem \ref{hass} you have to know basic examples of hyperbolic 3-manifolds with one end
+
+
+
+
+
+
+
+
+\begin{pr}{}{Inscribed triangulation}
+Let $Q$ be a unit square and $f\:Q\to\RR_>$ be an arbitrary (not nesessury continuous) function.
+Prove that there is a triangulation $\mathcal T$ of $Q$ such that each triangle $\triangle xyz$ in $\mathcal T$ is covered by three discs $B_{f(x)}(x)$, $B_{f(y)}(y)$ and $B_{f(z)}(z)$.
+\sign{S.~Buyalo}
+\end{pr}
+
+
+
+
+\begin{pr}{}{Telescopic group}
+Given a group $\Gamma$, let us denote by $\langle\Tor\Gamma\rangle$ the subgroup of $\Gamma$ generated by all elements of finite order.
+
+Construct a finitely presented hyperbolic group, $\Gamma$ such that for any finitely presented group $G$ there is a subgroup $\Gamma'<\Gamma$ of finite index such that 
+$G$ is isomorphic to the factor group $\Gamma'/\langle\Tor\Gamma'\rangle$
+\sign{\cite{panov-petrunin}}
+\end{pr}
+
+
+
+\begin{pr}{}{Smooth orbifold}\label{Smooth orbifold}
+Let $M$ be a smooth Riemannian manifold with isometric 
+$\mathbb{S}^1$-action.
+Show that there is a smooth Riemannian orbifold $\mathcal{O}$
+such that its underlying metric space 
+is isometric to the orbit space $M/\mathbb{S}^1$.
+\sign{\cite{lytchak}}
+\end{pr}
+
+
+\begin{pr}{}{Finite orbits}\label{Finite orbits}
+Let $P$ be a compact polyhedral space and $T\:P\z\to P$ be a piecewise linear map.
+Assume for any $x\in P$ there is a positive integer $n$ such that
+$T^n(x)=x$.
+Show that $T^n$ is the identity map for some $n$. 
+\end{pr}
+
+\begin{pr}{\easy}{Periodic homeomorphism}\label{Finite action}
+Assume a homeomorphism $h$ of unit $m$-dimensional sphere $\mathbb S^m$ has  finite period $n>1$.
+Show that there is an orbit which does not lie in any open hemisphere.
+\sign{Newman???}
+\end{pr}
