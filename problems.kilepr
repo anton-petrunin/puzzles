@@ -96,12 +96,12 @@ order=2
 
 [item:cover/caver-two-sided.tex]
 archive=true
-column=1
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=10
+line=0
 mode=LaTeX
-open=true
+open=false
 order=5
 
 [item:dictionary.tex]
