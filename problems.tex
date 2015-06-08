@@ -697,9 +697,6 @@ Show that $(\mathrm{T} \mathbb{S}^2, \hat g)$ lies on bounded Gromov--Hausdorff 
 
 \chapter{Actions and coverings}
 
-\comment{
-To do problem \ref{figure-eight-2} you have to know in addition a construction of compact manifolds of constant negative curvature of given dimension $m$
-and it is better to do the problem \ref{figure-eight-1} first.}
 
 \begin{pr}{}{Bounded orbit}\label{Bounded orbit} Let $X$ be a 
 \hyperref[Proper metric space]{\emph{proper metric space}} 
@@ -845,15 +842,19 @@ Construct a bounded open set in $\RR^2$ whose boundary does not contain a
 Construct three disjointed non-empty open sets in $\RR$ which have the same boundary.
 \end{pr}
 
-\begin{pr}{}{Deformation of homeomorphism}\label{Deformation of homeomorphism}
-Let $f\:\RR^n\to\RR^n$ be a homeomorphism with displacement at most $\eps$;
-that is $|x-f(x)|\le\eps$ for any $x\in\RR^n$.
-
-Construct a homomorphism $h\:\RR^n\to\RR^n$ 
-with displacement at most $\eps$ such that
- $h(x)=f(x)$ if $|x|\le 1$ 
-and  $h(x)=x$ if $|x|\ge 2$.
+\begin{pr}{}{Homeomorphism of cube}\label{Homeomorphism of cube}
+Assume $h$ is a homeomorphism from $m$-dimesional cube to itself 
+which sends each face to itself.
+Construct a homeomorphism $f$ from $\RR^m$ to itself
+such that 
+the set 
+\[X=\set{x\in\RR^m}{f(x)\ne x}\] is bounded 
+and 
+the set 
+\[Y=\set{x\in\RR^m}{f(x)=h(x)}\]
+ has nonempty interior.    
 \end{pr}
+
 
 \begin{pr}{\easy}{Finite topological space}\label{Finite topological space}
 Prove that every finite simplicial complex is weakly homotopy equivalent 
