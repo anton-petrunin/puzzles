@@ -47,7 +47,7 @@ If you have suitable problems or corrections please e-mail it to me.
 
 \parbf{Many thanks.} I want to thank everyone sharing the problems.
 Also I want to thank 
-%B.~Georgiev,
+B.~Georgiev,
 J. Luukkainen,
 R.~Matveyev, 
 P.~Petersen, 
@@ -195,7 +195,6 @@ if it has unique supporting line at every boundary point.}
  forms a G-delta dense subset in $\mathfrak{C}$.
 \end{pr}
 
-
 \begin{pr}{\easy}{Fat curve}\label{Fat curve}
 Construct a \hyperref[Simple curve]{\emph{simple plane curve}} with non-zero Lebesgue's measure.
 \end{pr}
@@ -235,6 +234,25 @@ Show that the length of $\alpha$ is at least $2\cdot\pi$.
 \begin{pr}{}{Oval in oval}\label{Oval in oval} %???+PIC
 Consider two closed smooth strictly convex planar curves, one inside another. 
 Show that there is a chord of the outer curve, which is tangent to the inner curve at its midpoint.
+\end{pr}
+
+\begin{pr}{\hard}{Twisted anulus}\label{Twisted anulus}
+Let $f\:\CC\to \CC$ be an area preserving homeomorphism
+such that 
+\[f(z)
+=
+\left[
+\begin{aligned}
+&z-i&&\text{if}&&\Re(z)\le -1,
+\\
+&z+i&&\text{if}&&\Re(z)\le 1.
+\end{aligned}
+\right.
+\] 
+which $i\cdot \ZZ$-invriant; that is
+$f(z+i)=f(z)+i$ for any $z\in\CC$.
+
+Show that $f$ has a fixed point.
 \end{pr}
 
 \begin{pr}{\easy}{Surrounded area}\label{Surrounded area}
@@ -292,7 +310,11 @@ which \emph{rotates 1000 times} around $\ell$;
 that is, if $\phi(t)$ is continuous azimuth-function of $\sigma(t)$ in the cylindrical coordinates with axis at $\ell$ then $|\phi(b)-\phi(a)|=2000\cdot\pi$.
 \end{pr}
 
-
+\begin{pr}{\easy}{Dense homeomorphism}\label{Dense homeomorphism}
+Let $\mathcal{H}$ be the set of all homeomorphisms $\mathbb {S}^2\to\mathbb {S}^2$ equipped with $C^0$-metric.
+Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations $a\circ h\circ a^{-1}$ for all $a\in\mathcal{H}$ form a dense set in $\mathcal{H}$.
+ 
+\end{pr}
 
 
 \chapter{Comparison geometry}
@@ -496,6 +518,9 @@ Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and involution $\iota\:\math
  for any $x\in\mathbb{S}^3$.
 \end{pr}
 
+
+
+
 \begin{pr}{\easy}{Normal exponential map}\label{Normal exponential map}
 Let $M,N$ be complete connected Riemannian manifolds.
 Assume $N$ is immersed into $M$.
@@ -504,6 +529,7 @@ Show that the image  of the
 \hyperref[Exponential map]{\emph{exponential}} 
 \hyperref[Exponential map]{\emph{map}} of $N$ is dense in $M$.
 \end{pr}
+
 
 \begin{pr}{}{Symplectic squeezing in the torus}\label{Symplectic squeezing in the torus}
 Let 
@@ -537,8 +563,8 @@ where $B_r(M)$ denotes $r$-neighborhood of $M$.
 \end{pr}
 
 \begin{pr}{\hard}{Disc}\label{Disc}
-Let $L$ be a big real number.
-Construct a Riemannian metric $g$ on the disc $\mathbb D$ 
+Given a big real number $L$,
+construct a Riemannian metric $g$ on the disc $\mathbb D$ 
 with 
 \[\diam(\mathbb D,g)\le 1
 \ \ 
@@ -843,16 +869,10 @@ Construct three disjointed non-empty open sets in $\RR$ which have the same boun
 \end{pr}
 
 \begin{pr}{}{Homeomorphism of cube}\label{Homeomorphism of cube}
-Assume $h$ is a homeomorphism from $m$-dimesional cube to itself 
-which sends each face to itself.
-Construct a homeomorphism $f$ from $\RR^m$ to itself
-such that 
-the set 
-\[X=\set{x\in\RR^m}{f(x)\ne x}\] is bounded 
-and 
-the set 
-\[Y=\set{x\in\RR^m}{f(x)=h(x)}\]
- has nonempty interior.    
+Denote by $\square^m$ a cube in $\RR^m$.
+
+Assume that a homeomorphism $h\:\square^m\to\square^m$ sends each face of $\square^m$ to itself.
+Extend $h$ to a homeomorphism $f\:\RR^m\to\RR^m$ which coincides with the identity map outside of a bounded set.    
 \end{pr}
 
 

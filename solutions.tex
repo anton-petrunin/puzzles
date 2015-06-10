@@ -453,8 +453,9 @@ Similar argument gives a continuous one parameter family of M\"obius transformat
 and allows the ball to escape. 
 
 \parit{Comments.}
-This is a question of Brady, see \cite{zeb}, 
-the idea in the solution is due to David Eppstein.
+This is a problem of Zarathustra Brady, 
+the idea in the solution is due to David Eppstein, 
+see \cite{zeb}.
 
 
 
@@ -483,6 +484,8 @@ Hence the result follows.
 This is the simplest case of so called \emph{Gehring's problem}. 
 The solution above was given by Edelstein and Schwatz in \cite{edelstein-schwatz};
 later the same solution was rediscovered few times.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -529,6 +532,48 @@ The later contradicts $({*})$.
 
 \parit{Comments.} This is a problem of Tabachnikov, see \cite{tabachnikob-mi}.
 A closely related, so called \emph{equal tangents problem} is discussed by the same author in \cite{tabacnikov=tan}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\wrenches\ref{Twisted anulus}.} 
+\textit{Twisted anulus.}
+Set 
+\begin{align*}
+H_+&=\set{z\in\CC}{\Re(z)\ge 1},
+\\
+H_-&=\set{z\in\CC}{\Re(z)\le -1}.
+\end{align*}
+
+Assume $f$ has no fixed points.
+Fix $\eps>0$ such that $|f(z)-z|>\eps$ for any $z\in\CC$.
+In particular the map 
+\[\hat f\:z\mapsto f(z)+\eps\]
+has no fixed points.
+
+Prove that there is a curve $\hat \gamma$ such that 
+\[\hat f\circ\hat\gamma(t)=\hat\gamma(t+1)\ \ 
+\text{and}\ \ 
+\hat \gamma(\pm T)\in H_\pm
+\]
+for some big $T>0$.
+
+Repeat the same construction for the function $\check f}(z)=f^{-1(z)+\eps$ and obtain a curve $\check \gamma$.
+
+Consider two maps $\hat\theta,\check\theta\:[-T,T]\to\CC$
+ defined by
+\begin{align*}
+\hat\theta\:t&\mapsto f(\hat\gamma(t))-\hat\gamma(t).
+\\
+\check\theta\:t&\mapsto f(\check\gamma(t))-\check\gamma(t).
+\end{align*}
+Note that $\hat\theta(-T)=\check\theta(-T)=-i$ 
+and $\hat\theta(T)=\check\theta(T)=i$.
+
+Since $f$ has no fixed points, the maps $\theta_\pm$ have to be homotopic in $\CC\backslash\{0\}$ rel ends. 
+Arrive to a contradisction by showing that this is not so (look at the picture). 
+
+\parit{Comments.}
+The problem was proposed by by Poincare in \cite{poincare}
+and solved by Birkhoff in \cite{birkhoff} with the same solution as above.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Surrounded area}.}
@@ -731,7 +776,22 @@ has to cross these lines in the cyclic order at nearly each edge, and the number
 see
 \cite{imre-kuiperberg-zamfirescu}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Dense homeomorphism}.} 
+\textit{Dense homeomorphism.}
+Note that there is countable set of homeomorphisms $h_1,h_2,\dots$ which is dense in $\mathcal{H}$
+such that
+each $h_n$ fix all the points outside an open round disc, say $D_n$.
 
+Choose a countable disjoint collection of round discs $D_n'$
+and consider the homeomorphism $h\:\mathbb S^2\to \mathbb S^2$
+which fix all the poins ouside of $\bigcup_nD'_n$ and
+for each $n$,
+the restriction $h|_{D_n'}$ is conjugate to $h_n|_{D_n}$. 
+
+Show that $h$ solves the problem.
+
+\parit{Comments.} I leaned this problem from Frederic Le Rox.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1677,6 +1737,9 @@ It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
 Note that according to Gromov's systolic inequality, 
 the involution $\iota$ above can not be made isometric (see \cite {gromov-filling}).
 
+
+
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Normal exponential map}.} 
 \textit{Normal exponential map.}
@@ -1705,6 +1768,7 @@ From the picture, you should guess an example of immersion
 $\iota\:\RR\looparrowright\RR^2$ 
 such that one point does not lie in the image of the corresponding normal exponential.
 It might be interesting to see a more detailed picture for the sets which can appear as the complement to the image of normal exponential map.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2964,13 +3028,21 @@ It remains to show that the boundary of the obtained disc does not contain a sim
 \textit{Boundary in $\RR$.}
 Prove that the Cantor's set forms a boundary of three disjoint open set in $\RR$.
 
-\parit{Comments.} In the plane 
+\parit{Comments.} 
+In $\RR^2$
 one can assume in addition that each set is connected.
 This examples are called \emph{lakes of Wada};
-these are three disjoint open discs in the plane which share the same boundary.   
+these are disjoint open discs in the plane which have identical boundary.   
 This example described by Yoneyama in \cite{yoneyama}.
-It is easy to see that the boundary of each lake contains no simple nontrivial curves, therefore it also solves problem  \ref{Knaster's circle}.
+It is easy to see that the boundary of each lake contains no simple nontrivial curves
+and it is related to so called pseudo-arc constructed by Knaster in \cite{knaster}. 
 
+In $\RR^3$, a similar construction can be used to produce a Cantor's set with non simply connected complement.
+This example was constructed by Louis Antoine in \cite{antoine}.
+The construction can be guessed from the first and second itaration on the shown on the pictures%
+\footnote{These are black-and-white versions of the pictures 
+made by \href{http://en.wikipedia.org/wiki/User:Blacklemon67}{Blacklemon67} 
+for the article on Antoine's Necklace in Wikipedia.}.
 \begin{center}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Antoine's_Necklace_Iteration_1(.1)}
 \end{lpic}
@@ -2978,30 +3050,34 @@ It is easy to see that the boundary of each lake contains no simple nontrivial c
 \end{lpic}
 %???https://en.wikipedia.org/wiki/User:Blacklemon67
 \end{center}
+In a similar fashion one can construct so called \emph{Whitehead manifold}, 
+an example of open 3-dimensional manifold which is contractible, 
+but not homeomorphic to $\RR^3$.
+One have to start with standard sphere and remove the intersection of nested sequence of solid tori embedded in each other in a certain way.
 
-An other related problem is to construct a set in $\RR^3$ homeomorphic to the Cantor's set with non simply connected complement.
-This example was constructed by Louis Antoine in \cite{antoine}.
-The construction can be guessed from the first and second itaration on the shown on the pictures%
-\footnote{These are black-and-white versions of the pictures 
-made by \href{http://en.wikipedia.org/wiki/User:Blacklemon67}{Blacklemon67} 
-for the article on Antoine's Necklace in Wikipedia.} above.
+%Yet an other related example is Casson handle, Dogbone space???
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Homeomorphism of cube}.} 
 \textit{Homeomorphism of cube.}
-Without loss of generality, we may assume that the cube contains the unit ball centered at the origin.
+Without loss of generality, we may assume that the cube $\square^m$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
 
 Let us extend the homeomorphism $h$ to whole $\RR^m$ by reflecting the cube in its facets.
-We get a homeomorphism say $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any point $x$ in the cube and 
-\[\tilde h(\gamma\cdot x)=\gamma\cdot \tilde h(x)\]
-for any isometry $\gamma$ in the group generated by the reflections in the facets of the cube.
+We get a homeomorphism say $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any $x\in\square^m$ and 
+\[\tilde h\circ\gamma=\gamma\circ \tilde h\]
+for any motion $\gamma\:\RR^m\to\RR^m$ in the group generated by the reflections in the facets of the cube.
 
-Notice that $\tilde h$ has \emph{finite displacement};
-that is, there is a constant $D$ 
-such that 
-\[|\tilde h(x)-x|\le D\]
+Notice that $\tilde h$ has \emph{displacement} at most $2$;
+that is, 
+\[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
-(One can take $D$ to be diameter of the cube.)
+
+\begin{wrapfigure}{r}{46mm}
+%\begin{center}
+\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/Phi(1)}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
 
 Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
 $\phi(r)=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
@@ -3010,21 +3086,26 @@ Consider $\RR^n$ with polar coordinates $(u,r)$, where $u\in\mathbb{S}^{n-1}$ an
 Let $\Phi\:\RR^n\to\RR^n$
 is defined by $\Phi(u,r)=(u,\phi(r))$.
 
-Set $f(x)=\Phi\circ \tilde h \circ \Phi^{-1}(x)$ if $|x|<2$
-and $f(x)=x$ otherwise.
-
+Set 
+\[
+f(x)=\left[
+\begin{aligned}
+&x&&\text{if}\ |x|\ge 2
+\\
+&\Phi\circ \tilde h \circ \Phi^{-1}(x)&&\text{if}\ |x|< 2
+\end{aligned}
+\right.
+\]
 Prove that $f\:\RR^n\to\RR^n$ is a solution.
 
-\parit{Comments.}
+\parit{Comments.} 
 The proof above is a stripped version of the one given by Kirby in \cite{kirby};
 the condition that face is mapped to face can be removed and 
 instead of homeomorphism one can take an embedding which is close enough to the identity.
 
-An analogous construction was used by Sullivan in \cite{sullivan} 
-to prove the same for bi-Lipschitz homeomorphisms.
+An analogous idea was used by Sullivan in \cite{sullivan}.
 Instead of the discrete group of motions of Euclidean space,
 he use a discrete group of motions of hyperbolic space in the Poincare model.
-
 Say, repeat the same argument if instead of cube we have a Coxeter polytope in the hyperbolic space.
 In this case the constructed map coinsides with the identity on the absolute and therefore the last ``shrinking'' step in the proof above is not needed.
 Moreover, if the original homeomorphism is bi-Lipschitz then the construction also produce a bi-Lipschitz homeomorphism.
