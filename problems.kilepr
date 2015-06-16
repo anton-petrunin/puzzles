@@ -86,13 +86,13 @@ order=5
 
 [item:bib.tex]
 archive=true
-column=13
+column=22
 encoding=windows-1251
 highlight=LaTeX
-line=997
+line=1074
 mode=LaTeX
 open=true
-order=3
+order=2
 
 [item:cover/caver-two-sided.tex]
 archive=true
@@ -111,8 +111,8 @@ encoding=UTF-8
 highlight=LaTeX
 line=211
 mode=LaTeX
-open=true
-order=2
+open=false
+order=3
 
 [item:pics/57-triangulation.eps]
 archive=true
@@ -287,6 +287,26 @@ order=-1
 [item:pics/bing-6.jpg]
 archive=true
 column=4485205
+encoding=
+highlight=
+line=0
+mode=
+open=false
+order=-1
+
+[item:pics/birkhoff.eps]
+archive=true
+column=0
+encoding=
+highlight=
+line=0
+mode=
+open=false
+order=-1
+
+[item:pics/birkhoff.ggb]
+archive=true
+column=0
 encoding=
 highlight=
 line=0
@@ -526,30 +546,30 @@ order=-1
 
 [item:problems.sty]
 archive=true
-column=0
+column=21
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=57
 mode=LaTeX
 open=false
 order=4
 
 [item:problems.tex]
 archive=true
-column=8
+column=20
 encoding=windows-1251
 highlight=LaTeX
-line=837
+line=765
 mode=LaTeX
 open=true
 order=0
 
 [item:solutions.tex]
 archive=true
-column=48
+column=115
 encoding=UTF-8
 highlight=LaTeX
-line=2993
+line=2618
 mode=LaTeX
 open=true
 order=1
@@ -561,10 +581,10 @@ JumpList=
 ViMarks=.,535,26,[,535,26,],535,26
 
 [view-settings,view=0,item:bib.tex]
-CursorColumn=13
-CursorLine=997
+CursorColumn=22
+CursorLine=1074
 JumpList=
-ViMarks=.,1005,4,[,1005,4,],1005,4
+ViMarks=.,1074,12,[,1074,12,],1074,21
 
 [view-settings,view=0,item:cover/caver-two-sided.tex]
 CursorColumn=1
@@ -579,19 +599,19 @@ JumpList=
 ViMarks=.,211,16,[,211,16,],211,16
 
 [view-settings,view=0,item:problems.sty]
-CursorColumn=33
-CursorLine=94
+CursorColumn=21
+CursorLine=57
 JumpList=
-ViMarks=.,87,32,[,87,32,],87,32
+ViMarks=.,57,0,[,57,0,],57,20
 
 [view-settings,view=0,item:problems.tex]
-CursorColumn=8
-CursorLine=837
+CursorColumn=20
+CursorLine=765
 JumpList=
-ViMarks=.,848,53,[,848,49,],848,53
+ViMarks=.,765,19,[,765,19,],765,19
 
 [view-settings,view=0,item:solutions.tex]
-CursorColumn=48
-CursorLine=2993
+CursorColumn=115
+CursorLine=2618
 JumpList=
-ViMarks=.,2993,47,[,2993,46,],2993,47
+ViMarks=.,2618,114,[,2618,114,],2618,114
