@@ -95,9 +95,9 @@ Prove that $\gamma$ has no self-intersections.
 (In other words, if you drive on the plane and turn the steering wheel to the right all the time then you can not come back to the same place.)
 \end{pr}
 
-{\begin{wrapfigure}{r}{28mm}
+{\begin{wrapfigure}[5]{r}{27mm}
 %\begin{center}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/moon-in-puddle(1)}
+\begin{lpic}[t(-11mm),b(0mm),r(0mm),l(0mm)]{pics/moon-in-puddle(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -114,7 +114,8 @@ Construct a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$
 with all the principle curvatures between $-1$ and $1$
 such that it does not surround a ball of radius 1.
 \end{pr}
-}%wrapfigure-ends
+
+}
 
 \begin{pr}{\many}{A curve in a sphere}\label{curve-in-S^2} 
 Prove that any closed curve on unit sphere which intersects every equator has length at least $2\cdot\pi$.
@@ -196,7 +197,7 @@ if it has unique supporting line at every boundary point.}
 \end{pr}
 
 \begin{pr}{\easy}{Fat curve}\label{Fat curve}
-Construct a \hyperref[Simple curve]{\emph{simple plane curve}} with non-zero Lebesgue's measure.
+Construct a \hyperref[Simple curve]{\emph{simple plane curve}} with positive Lebesgue measure.
 \end{pr}
 
 \begin{pr}{}{Rectifiable curve}\label{Rectifiable curve}
@@ -310,6 +311,7 @@ which \emph{rotates 1000 times} around $\ell$;
 that is, if $\phi(t)$ is continuous azimuth-function of $\sigma(t)$ in the cylindrical coordinates with axis at $\ell$ then $|\phi(b)-\phi(a)|=2000\cdot\pi$.
 \end{pr}
 
+
 \begin{pr}{\easy}{Dense homeomorphism}\label{Dense homeomorphism}
 Let $\mathcal{H}$ be the set of all homeomorphisms $\mathbb {S}^2\to\mathbb {S}^2$ equipped with $C^0$-metric.
 Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations $a\circ h\circ a^{-1}$ for all $a\in\mathcal{H}$ form a dense set in $\mathcal{H}$.
@@ -330,7 +332,7 @@ Toponogov splitting theorems
 and Synge's lemma 
 also might help.
 We suggest to solve problem~\ref{Immersed surface}
-before solving problem~\ref{Immersed convex hypersurface II}.
+before solving problem~\ref{Immersed ball}.
 To solve problem~\ref{kleiner-hopf}, 
 it is better know that the quotient of positively curved Riemannian manifold 
 by an isometry group is a positively curved Alexandrov space.
@@ -338,17 +340,17 @@ Problem \ref{scalar-curv} requires Liouville's theorem for geodesic flow.
 Problem~\ref{hS=>S} requires a Bochner type formula.
 }
 
-\begin{pr}{}{Totally geodesic hypersurface}\label{Totally geodesic hypersurface}
-Prove that if a compact positively curved $m$-dimensional manifold $M$ admits a totally geodesic embedded hypersurface then $M$ or its double cover is homeomorphic to the sphere.
+\begin{pr}{}{Geodesic hypersurface}\label{Geodesic hypersurface}
+Prove that if a compact connected positively curved manifold $M$ admits a totally geodesic embedded hypersurface then $M$ or its double cover is homeomorphic to the sphere.
 \end{pr}
 
 
-\begin{pr}{}{Immersed convex hypersurface {\rm I}}\label{Immersed convex hypersurface I} Let $M$ be a complete simply connected Riemannian manifold with nonpositive curvature with dimension at least $3$.
+\begin{pr}{}{If convex then embedded}\label{If convex then embedded} Let $M$ be a complete simply connected Riemannian manifold with nonpositive curvature with dimension at least $3$.
 Prove that any  immersed locally convex
 compact hypersurface in $M$ is embedded.
 \end{pr}
 
-\begin{pr}{\hard}{Immersed convex hypersurface {\rm II}}\label{Immersed convex hypersurface II}
+\begin{pr}{\hard}{Immersed ball}\label{Immersed ball}
 Prove that any immersed locally convex
 hypersurface $\iota\:\Sigma\looparrowright M$
 in a compact positively curved manifold $M$ of dimension $m\ge 3$, is the boundary of an immersed ball. 
@@ -381,11 +383,17 @@ $\Sigma$ with the  induced intrinsic metric has \hyperref[Polynomial volume grow
 \end{pr}
 
 \begin{pr}{}{Minimal spheres}\label{Minimal spheres}
-Show that a compact positively curved $4$-manifold can not contain infinite number of  mutually
+Show that a 
+$4$-dimensional
+compact 
+positively curved 
+Riemannian manifold 
+can not contain infinite number of  mutually
  \hyperref[Equidistant subsets]{\emph{equidistant}} \hyperref[Minimal surface]{\emph{minimal}} 2-spheres.
 \end{pr}
 
-\begin{pr}{\hard}{Totally geodesic immersion}\label{Totally geodesic immersion}
+\begin{pr}{\hard}{Geodesic immersion}
+\label{Geodesic immersion}
 Let $(M,g)$ be a simply connected positively curved manifold and $\iota\:N\looparrowright M$ be a totally geodesic immersion.
 Assume that 
 \[\dim N>\tfrac 12\cdot \dim M.\]
@@ -483,7 +491,7 @@ have positive sign.
 
 \chapter{Curvature free differential geometry}
 
-\comment{A solution of problem \ref{gromomorphic-curves} relies on Gromov's pseudo-holomorphic curves. The problem \ref{convex-infinite} uses Liouville's theorem for geodesic flow.
+\comment{A solution of problem \ref{gromomorphic-curves} relies on Gromov's pseudo-holomorphic curves. The problem \ref{Volume and convexity} uses Liouville's theorem for geodesic flow.
 A solution of the problem \ref{short-homotopy} use a curve shortening process.}
 
 \begin{pr}{\thm}{Minimal foliation}\label{gromomorphic-curves} Consider $\mathbb{S}^2\times \mathbb{S}^2$ equipped with a Riemannian metric $g$ which
@@ -492,9 +500,14 @@ such that each sphere $\mathbb{S}^2\times x$ and $y\times \mathbb{S}^2$ forms a 
 in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \end{pr}
 
-\begin{pr}{}{Loewner's theorem}\label{Loewner's theorem}
- Given $\RP^n$ equipped with a Riemannian metric $g$
-conformally equivalent to the canonical metric $g_{\text{can}}$ let $\ell$ denote the minimal length of curves in $(\RP^n,g)$ which are not null-homotopic. Prove that 
+\begin{pr}{}{Loewner's theorem}
+\label{Loewner's theorem}
+Let $g$ be Riemannian metric
+on the real projective space, $\RP^n$,
+which is
+conformally equivalent to the canonical metric $g_{\text{can}}$.
+Denote by $\ell$ the minimal length of curves in $(\RP^n,g)$ which are not null-homotopic. 
+Prove that 
 $$\pi^n\cdot\vol(\RP^n,g)
 \ge 
 \ell^n
@@ -503,7 +516,9 @@ $$\pi^n\cdot\vol(\RP^n,g)
 and in case of equality $g=c\cdot g_{\text{can}}$ for some positive constant $c$.
 \end{pr}
 
-\begin{pr}{\thm}{Convex function vs. finite volume}\label{convex-infinite} Let
+\begin{pr}{\thm}{Volume and convexity}
+\label{Volume and convexity} 
+Let
 $M$ be a complete Riemannian manifold which admits a non-constant
 convex function. Prove that $M$ has infinite volume.
 \end{pr}
@@ -590,7 +605,7 @@ such that
 \end{enumerate}
 \end{pr}
 
-\begin{pr}{\easy}{Geodescic hypersurface}\label{Geodescic hypersurface}
+\begin{pr}{\easy}{Convex hypersurface}\label{Convex hypersurface}
 Let $M$ be a hypersurface 
 in a closed Riemannian $m$-dimensional manifold $W$.
 Assume $M$ is geodesic and convex;
@@ -667,7 +682,10 @@ on the $\mathbb{S}^m$ is isometric to the intrinsic metric of a hypersurface in 
 
 
 \begin{pr}{}{Hyperbolic space}\label{Hyperbolic space}
-Show that the hyperbolic $3$-space is \hyperref[Quasi-isometry]{\emph{quasi-isometric}} to a subset of product of two hyperbolic planes.
+Construct a \hyperref[Quasi-isometry]{\emph{quasi-isometry}}
+from the hyperbolic $3$-space 
+to a subset 
+of the product of two hyperbolic planes.
 \end{pr}
 
 \begin{pr}{}{Fixed line}\label{Fixed line}
@@ -712,9 +730,8 @@ map $c\:[0,1]\to \mathbb{S}^1$ such that $c(t)\in C_t$ for any $t$.
 \end{pr}
 
 \begin{pr}{}{Sasaki metric}\label{pr:Sasaki metric}
-Let $(\mathrm{T} \mathbb{S}^2, \hat g)$
-be the tangent bundle over $\mathbb{S}^2$ 
-equipped with \hyperref[Sasaki metric]{Sasaki metric} induced by a Riemannian metric $g$ on $\mathbb{S}^2$.
+Consider the tangent bumbde $\mathrm{T} \mathbb{S}^2$ 
+equipped with \hyperref[Sasaki metric]{Sasaki metric} $\hat g$ induced by a Riemannian metric $g$ on $\mathbb{S}^2$.
 Show that $(\mathrm{T} \mathbb{S}^2, \hat g)$ lies on bounded Gromov--Hausdorff distance to the ray.
 \end{pr}
 
@@ -731,7 +748,7 @@ Assume that for some $x\in X$, the the sequence $x_n\z=\iota^n(x)$, $n\in\ZZ$ ha
 Prove that $x_n$ is bounded.
 \end{pr}
 
-\begin{pr}{}{Action on the sphere}\label{Action on the sphere}
+\begin{pr}{}{Finite action}\label{Finite action}
 Show that for any nontrivial continuous action of a finite group on the unit sphere
 there is an orbit which does not lie in the interior of a hemisphere.
 \end{pr}
@@ -811,16 +828,16 @@ is generated by the homotopy classes of loops with length at most $2\cdot\diam M
 \end{pr}
 
 \begin{pr}{}{Short basis}\label{Short basis}
-Let $M$ be a complete nonnegatively curved $m$-dimensional Riemannian manifold.
-Show that the minimal number of generators of $\pi_1 M$
-can be bounded above only in terms of $m$.
+Let $M$ be a complete connected nonnegatively curved Riemannian manifold.
+Show that the minimal number of generators of the fundamental group $\pi_1 M$
+can be bounded above in terms of $\dim M$.
 \end{pr}
 
 
 
 \chapter{Topology}
 
-\begin{pr}{}{Milnor's disks}\label{Milnor's disks} 
+\begin{pr}{}{Immersed disks}\label{Immersed disks} 
 Construct two \emph{essentially different} smooth immersions of the disk 
 into the plane which coincide near the boundary. 
 Two immersions $f_1,f_2\:D\looparrowright \RR^2$ are called essentially different 
@@ -865,7 +882,10 @@ Moreover, $h$ can be chosen to be isotopic to the identity map.
 
 
 \begin{pr}{}{Knaster's circle}\label{Knaster's circle} 
-Construct a bounded open set in $\RR^2$ whose boundary does not contain a 
+Construct 
+a bounded open set in $\RR^2$ 
+such that 
+its boundary does not contain a 
 \hyperref[Simple curve]{\emph{simple curve}}.
 \end{pr}
 
@@ -922,7 +942,7 @@ Show that $A$ is congruent to $B$.
 
 
 
-\begin{pr}{}{Piecewise linear isometry {\rm I}} \label{Piecewise linear isometry I}
+\begin{pr}{}{Folding problem} \label{Folding problem}
 Let $P$ be a compact $m$-dimensional 
 \hyperref[Polyhedral space]{\emph{polyhedral}}
 \hyperref[Polyhedral space]{\emph{space}}. 
@@ -931,8 +951,10 @@ Construct a
 $f\:P\to \RR^m$.
 \end{pr}
 
-\begin{pr}{\thm}{Piecewise linear isometry {\rm II}} \label{iso-kirzhbraun}
-Prove that any \hyperref[Short map]{\emph{short map}} to $\RR^2$ which is defined on a finite subset of $\RR^2$ can be extended to a 
+\begin{pr}{}{Piecewise linear extension} \label{iso-kirzhbraun}
+Prove that any \hyperref[Short map]{\emph{short map}} from a finite subset $F\subset \RR^2$
+to 
+$\RR^2$ can be extended to a 
 \hyperref[Piecewise distance preserving map]{\emph{piecewise distance preserving map}} 
 $\RR^2\to\RR^2$.
 \end{pr}
