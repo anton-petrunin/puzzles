@@ -1302,20 +1302,56 @@ has nontrivial fundamental group.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{lie-nonneg}.} 
-\textit{Lie group.} 
-Consider the product $(G,g_0)\times (G,g_1)$;
-it is the Lie group $G\times G$ with a left invariant metric.
+\parbf{\ref{lie-nonneg}.} 
+\textit{Lie group.} We will write the metrics in contrvariant form, 
+so metric $g$ is considered to be a linear transformation $\mathrm T\to \mathrm T^*$ and 
+\[|v|_g=\sqrt{[g^{-1}(v)](v)}\]
+for any tangent vector $v$.
 
-Consider the diagonal subgroup 
-\[\Delta= \{(g,g)\in G\times G\}.\]
-The quotient space $(G,g_0)\times (G,g_1)/\Delta$
-is isometric to $(G,???g_0+g_1)$.
-Hence the result follows.
+
+Let $G$ be the compact Lie group and $e\in G$ is the identity element.
+
+Denote by $K$ the set of all contrvariant metrics $g\:\mathrm{T}^*_e\to \mathrm{T}_e $ 
+which extend to non-negatively curved left invariant metrics $\tilde g$ on $G$. 
+
+First recall that the bi-invariant metrc on a compact Lie groups is nonnegatively curved. 
+Therefore $K$ is non empty.
+
+We will show that $K$ is convex, this is stronger than required.
+That is, we need to show that if $g_0, g_1\in K$
+then 
+\[g_t=(1-t)\cdot g_0+t\cdot g_1\in K\] 
+for any $t\in [0,1]$.
+
+Denote by $\Delta$ the diagonal subgroup of $G\times G$.
+
+For each $t\in (0,1)$, consider the product 
+\[(G\times G,\tilde h_t)
+=
+(G,(1-t)\cdot \tilde g_0)\times (G,t\cdot \tilde g_1).\]
+Note that $h_t$ is nonnegatively curved left invariant metric on $G\times G$.
+
+The quotient map 
+\[
+ (G\times G,\tilde h_t)\to (G\times G,\tilde h_t)/\Delta
+\]
+is a Riemannian submersion.
+By O'Nail's formula,
+the target has nonneggative curvature.
+
+Fianally note that $(G,\tilde g_t)$
+is isometric to
+$(G\times G,\tilde h_t)/\Delta$ for any $t\in (0,1)$.
+Therfore $g_t\in K$ for any $t\in [0,1]$ as required.
 
 \parit{Comment.}
-This trick was used in \cite{GKM} to show that Berger's spheres have positive curvature.
-This is the earliest case I was able to find. 
+This construction some times is called \emph{Cheeger's trick}.
+
+The earliest use of this construction 
+I found  in \cite{GKM}.
+It was used to show that Berger's spheres have positive curvature;
+Berger's spheres are isometric to the quotient space $(\mathbb S^3\times \RR)/\RR$ for certain $\RR$-actions which shifts $\RR$ and rotates $\mathbb{S}^3$ at the same time.
+
 Most of the examples of positively and non-negatively curved manifolds are constructed using this trick,
 see \cite{aloff-wallach}, \cite{gromoll-meyer}, \cite{eschenburg-spaces} and \cite{bazajkin}.
 
@@ -1354,11 +1390,11 @@ The problem was considered by Milka's in \cite{milka-poly}, he gave there the fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\wrenches\ref{Deformation to a product}.} 
 \textit{Deformation to a product.} 
-Denote by $\Gamma$ the fundamental group of $M$;
-if $\Gamma$ is finite then the universal cover will do the trick.
+Denote by $\Gamma$ the fundamental group of $M$.
 
 Let $(\tilde M,\tilde g)$ be universal cover of $(M,g)$ with induced Riemannian metric.
-The space $(\tilde M,\tilde g)$ is isometric to a product $\RR^k\times K$, where $K$ is a compact Riemannian manifold.
+The space $(\tilde M,\tilde g)$ is isometric to a product $\RR^k\times K$, 
+where $k$ is nonnegative integer and $K$ is a compact Riemannian manifold.
 
 Denote by $G$ the isometry group of $K$.
 Given a continuous one parameter family of homomorphisms $\phi_t\:\RR^k\to G$,
@@ -1401,14 +1437,14 @@ Given $p\in M$,
 denote by $\nu_pM$ the sphere of unit normal vectors to $M$ at $p$.
 Given $v\in \nu_p$ and real value $k$,
 set 
-\[p^{k\cdot v}=s\circ\exp_{\iota(p)} (k\cdot v).\]
+\[p^{k\cdot v}=s\circ\exp_{p} (k\cdot v).\]
 Note that 
-\[p^0=p\ \ \text{for any}\ \  p\in M.\leqno({*})\]
+\[p^{0\cdot v}=p\ \ \text{for any}\ \  p\in M\ \ \text{and}\ \ v\in \nu_p.\leqno({*})\]
 
 Fix sufficiently small $\delta>0$.
 By Rauch comparison, if $w\in \nu_q$ 
 is the parallel translation of $v\in \nu_q$ 
-along the minimizing geodesic from $p$ to $q$ in $M$
+along a minimizing geodesic from $p$ to $q$ in $M$
 then 
 \[|p^{k\cdot v}-q^{k\cdot w}|_M<|p-q|_M
 \leqno({*}{*})\]
@@ -1422,7 +1458,7 @@ Choose $p$ and $v \in \nu_p$ so that $r=|p-p^{\delta\cdot v}|$
 takes the maximal possible value.
 From $({*}{*})$ it follows that $r>0$.
 
-Let $\gamma$ be the extension of unit-speed minimizing geodesic from $p_v$ to $p$;
+Let $\gamma$ be the extension of the unit-speed minimizing geodesic from $p_v$ to $p$;
 denote by $v_t$ the parallel translation of $v$ to $\gamma(t)$ along $\gamma$. 
 
 We can choose the parameter of $\gamma$ so that $p=\gamma(0)$, $p^v=\gamma(-r)$.
@@ -1430,7 +1466,25 @@ Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^v=p_{-1}$.
 Fix large integer $N$ and set $w_n=(1-\tfrac nN)\cdot v_{n\cdot r}$
 and $q_n=p_n^{w_n}$.
 
-%%%???+PIC
+%%%???+PIC%\begin{wrapfigure}{r}{50mm}
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/perelman(1)}
+\lbl[trw]{8,5;$p_{-1}{=}q_0$}
+\lbl[tr]{14,5;$p_0$}
+\lbl[tl]{15,5;$q_1$}
+\lbl[tr]{24,5;$p_1$}
+\lbl[tl]{26,5;$q_2$}
+\lbl[tr]{34.5,5;$p_2$}
+\lbl[tl]{36.5,5;$q_3$}
+\lbl[tr]{45,5;$p_3$}
+\lbl[tl]{47.2,5;$q_4$}
+\lbl[tr]{55.5,5;$p_4$}
+\lbl[b]{64,8;$M$}
+\lbl[t]{64,5;$\dots$}
+\lbl[b]{35.2,26,90;{\small $\exp_{p_3} (w_3)$}}
+\end{lpic}
+\end{center}
+%\end{wrapfigure}
 
 From $({*}{*}{*})$, there is a constant $C$ independent of $N$ such that
 \[|q_k-q_{k+1}|<r+\tfrac C{N^2}\cdot\delta^2.\]
