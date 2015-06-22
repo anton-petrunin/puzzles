@@ -48,7 +48,8 @@ If you have suitable problems or corrections please e-mail it to me.
 \parbf{Many thanks.} I want to thank everyone sharing the problems.
 Also I want to thank 
 B.~Georgiev,
-J. Luukkainen,
+J.~Luukkainen,
+A.~Lytchak
 R.~Matveyev, 
 P.~Petersen, 
 I.~Sabitov,
@@ -500,16 +501,16 @@ in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \begin{pr}{}{Loewner's theorem}
 \label{Loewner's theorem}
 Let $g$ be Riemannian metric
-on the real projective space, $\RP^n$,
+on the real projective space, $\RP^m$,
 which is
 conformally equivalent to the canonical metric $g_{\text{can}}$.
-Denote by $\ell$ the minimal length of curves in $(\RP^n,g)$ which are not null-homotopic. 
+Denote by $\ell$ the minimal length of curves in $(\RP^m,g)$ which are not null-homotopic. 
 Prove that 
-$$\pi^n\cdot\vol(\RP^n,g)
+$$\pi^m\cdot\vol(\RP^m,g)
 \ge 
-\ell^n
+\ell^m
 \cdot
-\vol(\RP^n,g_{\text{can}})$$ 
+\vol(\RP^m,g_{\text{can}})$$ 
 and in case of equality $g=c\cdot g_{\text{can}}$ for some positive constant $c$.
 \end{pr}
 
@@ -568,7 +569,7 @@ Show that $f$ is a diffeomorphism.
 \end{pr}
 
 \begin{pr}{}{Volume of tubular neighborhoods}\label{Volume of tubular neighborhoods}
-Assume $M$ and $M'$ be isometric closed smooth submanifolds in $\RR^n$.
+Assume $M$ and $M'$ be isometric closed smooth submanifolds in $\RR^m$.
 Show that for all small $r$ we have
 $$\vol B_r(M)=\vol B_r(M'),$$
 where $B_r(M)$ denotes $r$-neighborhood of $M$.
@@ -629,8 +630,30 @@ Prove that $f$ is an isometry.
 \end{pr}
 
 
-\begin{pr}{\thm}{Embedding of a compact}\label{compact} Prove that any compact metric space is isometric to a subset of a compact \hyperref[Length space]{\emph{length spaces}}.
+
+
+\begin{pr}{\thm}{Embedding of a compact}\label{compact} 
+Prove that any compact metric space 
+is isometric to 
+a subset of a compact \hyperref[Length space]{\emph{length spaces}}.
 \end{pr}
+
+\begin{pr}{\easy}{Metric compactification}\label{Metric compactification}
+Let $X$ be a metric space.
+Denote by $C(X,\RR)$ the space of continous real-valued functions on $X$ equipped with compact open topology.
+
+Fix a point $z_0$.
+Given a point $z\in X$, let $f_z\in C(X,\RR)$ be the function defined as 
+\[f_z(x)=|z-x|_X-|z-x_0|_X.\]
+Let $F_X\:X\to C(X,\RR)$ be the map 
+defined as $F\:z\mapsto f_z$.
+
+Construct a proper metric space $X$
+such that $F_X$ is not an embedding.
+
+Show that there are no such examples among proper length metric spaces.
+\end{pr}
+
 
 
 
@@ -685,11 +708,11 @@ to a subset
 of the product of two hyperbolic planes.
 \end{pr}
 
-\begin{pr}{}{Fixed line}\label{Fixed line}
+\begin{pr}{}{Fixed segment}\label{Fixed segment}
 Let $d(x,y)=\|x-y\|$ be a metric on $\RR^m$ induced by a norm $\|{*}\|$.
 
-Assume that $f\:(\RR^n,d)\to(\RR^n,d)$ is an isometry which fixes two distinct point.
-Show that $f$ fixes the line through these points.
+Assume that $f\:(\RR^m,d)\to(\RR^m,d)$ is an isometry which fixes two distinct point.
+Show that $f$ fixes the line segment between them.
 \end{pr}
 
 \begin{pr}{}{Pogorelov's construction}\label{Pogorelov's construction}
@@ -703,19 +726,19 @@ and moreover, geodesics in this metric formed by arcs of grate circles.
 \end{pr}
 
 \begin{pr}{}{Straight geodesics}\label{Straight geodesics}
-Let $\rho$ be a length-metric on $\RR^n$, which is bi-Lipschitz equivalent to the canonical metric.
+Let $\rho$ be a length-metric on $\RR^m$, which is bi-Lipschitz equivalent to the canonical metric.
 Assume that every \hyperref[Geodesic]{\emph{ge\-o\-de\-sic}} $\gamma$ in $(\RR^d,\rho)$ is linear 
-(that is, $\gamma(t)=v+w\cdot t$ for some $v,w\in\RR^n$).
-Show that $\rho$ is induced by a norm on $\RR^n$.
+(that is, $\gamma(t)=v+w\cdot t$ for some $v,w\in\RR^m$).
+Show that $\rho$ is induced by a norm on $\RR^m$.
 \end{pr}
 
 \begin{pr}{\thm}{A homeomorphism near quasi-isometry}\label{hom-near-QI} 
-Let $f\:\RR^n\to\RR^n$ be a \hyperref[Quasi-isometry]{\emph{quasi-isometry}}.
+Let $f\:\RR^m\to\RR^m$ be a \hyperref[Quasi-isometry]{\emph{quasi-isometry}}.
 Show that there is a (bi-Lipscitz) homeomorphism 
-$h\:\RR^n\to\RR^n$ on a bounded distance from $f$;
+$h\:\RR^m\to\RR^m$ on a bounded distance from $f$;
 that is, there is a real constant $C$ such that
 $$|f(x)-h(x)|\le C$$
-for any $x\in\RR^n$.
+for any $x\in\RR^m$.
 \end{pr}
 
 \begin{pr}{}{A family of sets with no section}\label{hausdorff-section} 
@@ -807,9 +830,9 @@ M$.
 }
 
 \begin{pr}{\easy}{Piecewise Euclidean quotient}\label{Piecewise Euclidean quotient}
-Let $\Gamma$ be a finite subgroup of $\SO(n)$; 
-denote by $P$ the quotient $\RR^n/\Gamma$ equipped with induced \hyperref[Polyhedral space]{\emph{polyhedral metric}}.
-Assume $P$ is \hyperref[PL-homeomorphism]{\emph{PL-homeomorphic}} to $\RR^n$.
+Let $\Gamma$ be a finite subgroup of $\SO(m)$; 
+denote by $P$ the quotient $\RR^m/\Gamma$ equipped with induced \hyperref[Polyhedral space]{\emph{polyhedral metric}}.
+Assume $P$ is \hyperref[PL-homeomorphism]{\emph{PL-homeomorphic}} to $\RR^m$.
 Show that $\Gamma$ is generated by rotations  around subspaces of codimension $2$.
 \end{pr}
 
@@ -847,8 +870,8 @@ Prove that any composition of \hyperref[Dehn twist]{\emph{positive Dehn twists}}
 \end{pr}
 
 \begin{pr}{\many}{Function with no critical points}\label{Function with no critical points}
-Given $n\ge 2$, construct a smooth function $f$ defined on a neighborhood of closed unit ball $B^n$ in $\RR^n$ which has no critical points and which can not be presented in the form $\ell\circ\phi$, 
-where $\ell\:\RR^n\to\RR$ is a linear function and $\phi\:B^n\to\RR^n$ is a smooth embedding.
+Given $n\ge 2$, construct a smooth function $f$ defined on a neighborhood of closed unit ball $B^m$ in $\RR^m$ which has no critical points and which can not be presented in the form $\ell\circ\phi$, 
+where $\ell\:\RR^m\to\RR$ is a linear function and $\phi\:B^m\to\RR^m$ is a smooth embedding.
 \end{pr}
 
 \begin{pr}{}{Conic neighborhood}\label{Conic neighborhood}  
@@ -870,9 +893,9 @@ $K_1$ is not homeomorphic to $K_2$, but $K_1\times[0,1]$ is homeomorphic to $K_2
 \end{pr}
 
 \begin{pr}{}{Isotropy}\label{Isotropy}
-Let $K_1$ and $K_2$ be compact subsets of the coordinate subspace $\RR^n$ of $\RR^{2\cdot n}$.
+Let $K_1$ and $K_2$ be compact subsets of the coordinate subspace $\RR^m$ of $\RR^{2\cdot m}$.
 Show that there is a homeomorphism 
-\[h\:\RR^{2\cdot n}\z\to \RR^{2\cdot n}\] 
+\[h\:\RR^{2\cdot m}\z\to \RR^{2\cdot m}\] 
 such that $K_2=h(K_1)$.
 Moreover, $h$ can be chosen to be isotopic to the identity map.
 \end{pr}
@@ -1067,10 +1090,10 @@ Construct two noncongruent convex bodies $K_1$ and $K_2$ which have the same sha
 
 
 \begin{pr}{\easy}{Kissing number}\label{pr:Kissing number}
-Show that for any convex body $W$ in $\RR^n$
+Show that for any convex body $W$ in $\RR^m$
 $$\mathop{\rm kiss}W\ge \mathop{\rm kiss}B,$$
 where $\mathop{\rm kiss}W$ denotes the \hyperref[Kissing number]{\emph{kissing number}}
-of $W$ and $B$ denotes the unit ball in $\RR^n$.
+of $W$ and $B$ denotes the unit ball in $\RR^m$.
 \end{pr}
 
 \begin{pr}{}{Monotonic homotopy}\label{mono-homotopy} 
