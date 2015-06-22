@@ -99,6 +99,14 @@ and the metric is defined by cosine rule;
 that is,
 $$|(x,a)-(y,b)|^2_K=a^2+b^2-2\cdot a\cdot b\cdot\!\cos|x-y|_\Sigma.$$
 
+\item{\bf Energy functional.}\refstepcounter{thm}\label{Energy functional} Let $F$ be a smooth map from a closed Reiamnnian manifold $M$ to a Reiamnnian manifold $N$.
+Then energy functional of $F$ is defined as
+\[E(F)=\int\limits_M |d_xF|^2\cdot d_x\vol_M.\]
+If $(a_{i,j})$ denote the components 
+of the differential $d_xF$ 
+written in the orthonormal basises in $\mathrm{T}_xM$ and $\mathrm{T}_{F(x)}N$
+then 
+\[|d_xF|^2=\sum_{i,j}a_{i,j}^2.\]
 
 \item{\bf Equidistant subsets.}\refstepcounter{thm}\label{Equidistant subsets} 
 Two subsets $A$ and $B$ in a metric space $X$ are called equidistant if the distance function $\dist_A\:X\to\RR$ is constant on $B$ and $\dist_B$ is constant on $A$.
@@ -140,7 +148,8 @@ Let  $W_0$ be a convex body in $\RR^m$.
 The kissing number of $W_0$ is the maximal integer $k$ such that there are $k$ bodies $W_1,W_2,\dots,W_k$ such that each $W_i$ is congruent to $W_0$,
 for each $i$ we have $W_i\cap W_0\not=\emptyset$ and have no pair $W_i,W_j$ has common interior points.
 
-\item{\bf  Length space.}\refstepcounter{thm}\label{Length space} A complete metric space $X$ is called {\it length space}  if the distance between any pair of points in $X$ is equal to the infimum of lengths of curves connecting these points. 
+\item{\bf  Length-metric space.}\refstepcounter{thm}\label{Length-metric space} 
+A complete metric space $X$ is called {\it length space}  if the distance between any pair of points in $X$ is equal to the infimum of lengths of curves connecting these points. 
 
 \item{\bf Macrodimension.}\refstepcounter{thm}\label{Macrodimension}
 Let $X$ be a locally compact metric space $a>0$ and $m$ is an integer.
@@ -157,8 +166,10 @@ the least integer $m$ such that $X$ admits an open covering with diameter of eac
 and such that each point in $X$ is covered by at most $m+1$ sets in the cover.
 
 
-\item{\bf Length preserving map.}\refstepcounter{thm}\label{Length preserving map} 
-A continuous map $f\:X\to Y$ between \hyperref[Length space]{\emph{length spaces}} $X$ and $Y$ is a length preserving map if for any path $\alpha\:[0,1]\to X$, we have 
+\item{\bf Length-preserving map.}\refstepcounter{thm}\label{Length-preserving map} 
+A continuous map $f\:X\to Y$ between 
+\hyperref[Length-metric space]{\emph{length-metric spaces}} 
+$X$ and $Y$ is a length-preserving map if for any path $\alpha\:[0,1]\to X$, we have 
 $$\length(\alpha)=\length(f\circ\alpha).$$
 
 \item{\bf Minimal surface.}\refstepcounter{thm}\label{Minimal surface} 
@@ -184,7 +195,7 @@ The celebrated Gromov's theorem states that almost flat manifolds admit a finite
 
 
 \item{\bf Polyhedral space}\refstepcounter{thm}\label{Polyhedral space}
-is a complete length space which admits a finite triangulation 
+is a complete length-metric space which admits a finite triangulation 
 such that each simplex is globally isometric to a simplex in a Euclidean space.
 
 A point in a polyhedral space is called \emph{regular} if it has a neighborhood isometric to an open set in a Euclidean space;
@@ -304,7 +315,9 @@ from the vectors of the following type:
 $A(x)$, $[A,B](x)$, $[A,[B,C]](x)$, $[A,[B,[C,D]]](x),\dots$ where all vector fields $A,B,C,D, \dots$ are horizontal.
 
 
-\item{\bf Variation of turn.}\refstepcounter{thm}\label{Variation of turn} Let $\gamma\:[a,b]\to\RR^m$ be a curve.
+\item{\bf Variation of turn.}
+\refstepcounter{thm}\label{Variation of turn} 
+Let $\gamma\:[a,b]\to\RR^m$ be a curve.
 The variation of turn of $\gamma$ is defined as supremum of sum of external angles for broken lines inscribed in $\gamma$. 
 Namely, 
 $$\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},$$

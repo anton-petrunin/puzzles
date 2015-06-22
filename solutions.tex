@@ -53,9 +53,9 @@ see \cite{liberman}.
 \textit{Spiral.}
 Without loss of generality we may assume that the curvature of $\gamma$ decreases in $t$.
 
-\begin{wrapfigure}{r}{50mm}
+\begin{wrapfigure}{o}{50mm}
 %\begin{center}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/kneser-log(.5)}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/kneser-log(.5)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -171,7 +171,9 @@ Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$.
 Let $r$ be a point of intersection of $\alpha$ with the equator with pole at $z$.  
 Without loss of generality we may assume that $r\in\check\alpha$. 
 
-The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that passes through $r$ and its antipodal point $r'$.
+The arc $\check\alpha$ together with its reflection in $z$ 
+form a closed curve of length $2\cdot \ell$ 
+that passes through $r$ and its antipodal point $r'$.
 Therefore 
 \[\ell=\length \check\alpha\ge |r-r'|_{\mathbb S^2}=\pi.\]
 
@@ -329,7 +331,8 @@ Let $K$ be the convex hull of $\Omega'$.
 Consider the boundary curve $\gamma'$ of $\partial K\cap \Omega'$ in $\Omega'$.
 
 First note that the Gauss curvature of $\Omega'$ has to vanish at the points of $\gamma'$;
-in other words, $\gamma'$ is the image of $\gamma$ under the length-preserving map.
+in other words, $\gamma'$ is the image of $\gamma$ 
+under the length-preserving map.
 Indeed since $\gamma'$ lies on convex part, 
 the Gauss curvature at the points of $\gamma'$ has to be nonnegative. 
 On the other hand $\gamma'$ bounds a flat disc in $\partial K$;
@@ -413,7 +416,7 @@ Number of similar problems surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %???CHANGE PIC
-\begin{wrapfigure}{r}{29mm}
+\begin{wrapfigure}{o}{29mm}
 \begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/hilbertcurve5(.25)}
 \end{lpic}
 \end{wrapfigure}
@@ -798,7 +801,7 @@ Since $\eps>0$ is arbitrary, we get that there are 4 point in $\Sigma$, each wit
 and remaining part of $\Sigma$ is flat.
 
 \begin{wrapfigure}{o}{21mm}
-\begin{lpic}[t(-0mm),b(-2mm),r(0mm),l(0mm)]{pics/akopyan(1)}
+\begin{lpic}[t(-3mm),b(-2mm),r(0mm),l(0mm)]{pics/akopyan(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -961,9 +964,9 @@ take the point $p$ as the image of the center $\bar B^m$
 and take the surfaces $\Sigma_t$ as the restrictions of the  embedding to the spheres;
 the existance of the immersion follows from the Morse lemma.
 
-\begin{wrapfigure}[5]{r}{23mm}
+\begin{wrapfigure}{o}{23mm}
 %\begin{center}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/ass(1)}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/ass(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -987,15 +990,16 @@ this way he has to perform some calculations, but does not have to worry about n
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{almgren}.} 
 \textit{Almgren's inequalities.}
-Fix a  geodesic $m$-dimensional sphere $\mathbb{S}^m$ in $\mathbb{S}^n$.
+Fix a  geodesic $n$-dimensional sphere $\mathbb{S}^n$ in $\mathbb{S}^m$.
 
 Given $r\in (0,\tfrac\pi2]$,
 denote by $U_r$ and $\tilde U_r$ the tubular $r$-neighbohood 
-of $\Sigma$ and $\mathbb{S}^m$ in $\mathbb{S}^n$ correspondingly.
+of $\Sigma$ and $\mathbb{S}^n$ in $\mathbb{S}^m$ correspondingly.
 
-Prove that $U_{\frac\pi2}\supset\mathbb{S}^n$.
+Prove that $U_{\frac\pi2}\supset\mathbb{S}^m$.
 Then it follows that
-\[U_{\frac\pi2}=\tilde U_{\frac\pi2}=\mathbb{S}^n.\leqno({*})\]
+\[U_{\frac\pi2}=\tilde U_{\frac\pi2}=\mathbb{S}^m.
+\leqno({*})\]
 
 Prove that for any $x\in \partial U_r$ we have
 \[H_r(x)\ge \tilde H_r,\] 
@@ -1004,13 +1008,13 @@ and $\tilde H_r$ its mean curvature of $\partial\tilde U_r$.
 
 Set 
 \begin{align*}
-a(r)&=\vol_{n-1} \partial U_r,
+a(r)&=\vol_{m-1} \partial U_r,
 &
-\tilde a(r)&=\vol_{n-1} \partial\tilde U_r,
+\tilde a(r)&=\vol_{m-1} \partial\tilde U_r,
 \\
-v(r)&=\vol_n U_r,
+v(r)&=\vol_m U_r,
 &
-\tilde v(r)&=\vol_n \tilde U_r.
+\tilde v(r)&=\vol_m \tilde U_r.
 \intertext{by coarea formula,}
 \tfrac d{dr} v(r)&= a(r),
 &
@@ -1018,7 +1022,7 @@ v(r)&=\vol_n U_r,
 \end{align*}
 for almost all $r$.
 Note that
-\begin{align*}\tfrac d{dr}a(r)&\le \int\limits_{\partial U_r} H_r(x)\cdot d_x\vol_{n-1}\le
+\begin{align*}\tfrac d{dr}a(r)&\le \int\limits_{\partial U_r} H_r(x)\cdot d_x\vol_{m-1}\le
 \\
 &\le a(r)\cdot \tilde H_r
 \end{align*}
@@ -1029,13 +1033,14 @@ and
 \intertext{It follows that}
 \frac {v''(r)}{v(r)}&\le \frac {\tilde v''(r)}{\tilde v(r)}
 \end{align*}
-for almost all $r$. Therefore
-\[v(r)\le\frac{\area\Sigma}{\area \mathbb{S}^m}\cdot \tilde v(r)\]
+for almost all $r$. 
+Therefore
+\[v(r)\le\frac{\area\Sigma}{\area \mathbb{S}^n}\cdot \tilde v(r)\]
 
 for any $r>0$.
 
 According to $({*})$,
-\[v(\tfrac\pi2)=\tilde v(\tfrac\pi2)=\vol\mathbb{S}^n.\]
+\[v(\tfrac\pi2)=\tilde v(\tfrac\pi2)=\vol\mathbb{S}^m.\]
 Whence the result follows.
 
 \parit{Comments.}
@@ -1307,10 +1312,11 @@ therefore
 where $\bar{K}$ denotes the average of sectional curvatures on $(M,g)$.
 Hence the result follows.
 
-%\parit{Comments.} Here is a short list of problems which can be solved the same way; that is, by switch the order of integrals using Liouville's theorem.
-
-%???+LIST-OF-PROBLEMS
-
+\parit{Comments.} Liouville's theorem has a number of similar applications,
+one of the most beautiful is sharp isoperimetric inequality for 
+4-dimensional Hadamard manifolds;
+it was proved by Cristopher Croke in \cite{croke-4d},
+see also \cite{croke-eigenvalue}.
 
 
 
@@ -1766,35 +1772,48 @@ see \cite{honda}.
 
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Loewner's theorem}.} 
-\textit{Loewner's theorem.}
-Denote by $\lambda$ the conformal factor of $g$;
-i.e, $g=\lambda^2\cdot g_{\mathrm{can}}$.
+\parbf{\ref{Energy minimizer}.} 
+\textit{Energy minimizer.}
+Denote by $\mathrm{U}$ the unit tangent bundle over $\RP^m$
+and $\mathrm{L}^{2\cdot(m-1)}$ the space of projective lines in $\ell\:\RP^1\to \RP^m$.
+The spaces $\mathrm{U}$ and $\mathrm{L}$ 
+have dimesions $2\cdot m-1$ 
+and $2\cdot(m-1)$
+correspondingly.
 
-Denote by $s$ the average of $g$-lengths of the lines in $\RP^m$.
-Prove that 
-\[\ell \le s=\pi\cdot\oint\limits_{\RP^m}\lambda\cdot d\vol_{\mathrm{can}},\]
-where $\vol_{\mathrm{can}}$ denotes the volume for $g_{\mathrm{can}}$ and $\oint$ denoted the avarage value.
 
-Note that
-\[\vol(\RP^m,g)
+According to Liouville's theorem, the identity
+\[\int\limits_{\mathrm{U}}f(v)\cdot d_v\vol_{2\cdot m-1}
 =
-\vol(\RP^m,g_{\mathrm{can}})
-\cdot
-\oint\limits_{\RP^m}\lambda^m\cdot d\vol_{\mathrm{can}}.\]
-By H\"older's inequality, we have
-\[\left(\,\,\oint\limits_{\RP^m}\lambda\cdot d\vol_{\mathrm{can}}\right)^m
-\le \oint\limits_{\RP^m}\lambda^m\cdot d\vol_{\mathrm{can}}.\]
-Hence the result follows.
+\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} f(\ell'(t))\cdot dt\]
+holds for any integrable function $f\:\mathrm{U}\to\RR$.
 
-\parit{Comments.}
-An analogous inequality,
-with worse constant holds for any Riemannina metric, 
-not necessary conformal to the canonical one.
-This is so called \emph{systolic inequality} proved by Mikhael Gromov in \cite{gromov-filling}.
+Let $F\:\RP^m\to\RP^m$ be a smooth map.
+Note that up to multiplicative constant,
+the energy of $F$ can be expressed the following way
+\[\int\limits_{\mathrm{U}} |dF(v)|^2\cdot d_v\vol_{2m-1}
+=
+\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\].
+
+The result follows since
+\[\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\ge \pi\]
+for any line $\ell\:\RP^1\to \RP^m$.
+
+\parit{Comments.} 
+The same idea is used to prove Loewner's inequality on the volume in of $\RP^m$ with metric conformally equivalent to the canonical one, see \cite{gromov-filling}.
+
+The problem is due to Cristopher Croke, see \cite{croke-energy}. 
+He use the same idea to show that the identity map on $\CP^m$ is energy minimizing in its homotopy class.
+For $\mathbb S^m$, an analogous statement does not hold if $m\ge 3$.
+In fact if a closed Riemannian manifold $M$ 
+has dimension at least 3 
+and $\pi_1M=\pi_2M=0$ 
+then the identity map on $M$ is homotopic 
+to a map with arbitrary small energy;
+the later was shown by Brian White in \cite{white}.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Volume and convexity}.} 
@@ -1821,7 +1840,12 @@ if $i\ne j$.
 The later implies that $\vol T^1M=\infty$,
 a contradiction.
 
-\parit{Comment.} The problem to Shing-Tung Yau, see \cite{yau}.
+\parit{Comment.} The idea in the proof is essentially 
+Poincar\'e recurrence theorem.
+
+The problem is due to Shing-Tung Yau, see \cite{yau};
+for smooth functions the statement was proved by Richard Bishop and Barrett O'Neill in \cite{bishop-o'neill}.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Besikovitch inequality}.} 
@@ -1855,9 +1879,9 @@ Show that $g$ is flat.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{32mm}
+\begin{wrapfigure}{o}{32mm}
 %\begin{center}
-\begin{lpic}[t(-2mm),b(3mm),r(0mm),l(0mm)]{pics/tripod}
+\begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/tripod}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -1905,7 +1929,7 @@ then there is a unit speed curve in $N$
 which moves to $p$ with velocity at least $\delta$.
 (In fact, the value $\delta$ depends on $\eps$, $R$ and the curvature bounds in $B(p,R)$.)
 
-\begin{wrapfigure}{r}{25mm}
+\begin{wrapfigure}{o}{25mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/spiral}
 \end{lpic}
 \end{wrapfigure}
@@ -2008,15 +2032,7 @@ of $r$ and its coefficients can be expressed in terms of the curvature tensor $R
 It follows that the right hand side in $({*})$ can be expressed in terms of curvature tensor of $M$.
 The problem follows since the curvature tensor can be expressed in terms of metric tensor of $M$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{wrapfigure}{r}{42mm}
-%\begin{center}
-\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(0mm)]{pics/tree(1)}
-%\lbl[b]{24,41;x}
-\end{lpic}
-%\end{center}
-\end{wrapfigure}
 
 \parit{Comments.} The formula for volume of tubular neighborhood 
 was given by Hermann Weyl in \cite{weyl}.
@@ -2027,6 +2043,15 @@ was given by Hermann Weyl in \cite{weyl}.
 Show that given a positive integer $n$ one can construct a tree $T$ embedded into the disc such that any homotopy of the boundary of the disc to a point pass through a curve which intersects $n$ different edges.
 (For the tree on the diagram $n=3$.)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\begin{wrapfigure}{o}{42mm}
+%\begin{center}
+\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(0mm)]{pics/tree(1)}
+%\lbl[b]{24,41;x}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
 
 Fix small $\eps>0$, say $\eps=\tfrac1{10}$.
 Consider the disc with embedded tree $T$ as above.
@@ -2036,7 +2061,10 @@ such that
 the distance between any two edges of $T$ of without common vertex 
 is at least $\eps$ .
 
-To construct such a metric, first fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that 
+To construct such a metric, first fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
+
+}
+
 \begin{itemize}
 \item The $\eps$-neighborhoods of the boundary components are product metrics.
 \item Any vertical sigment $x\times[0,1]$ has length $\tfrac 12$.
@@ -2044,8 +2072,10 @@ To construct such a metric, first fix a metric on the cylinder $\mathbb S^1\time
 \item The other boundary component has length $2\cdot m\cdot \eps$, 
 where $m$ is the number of edges in $T$.
 \end{itemize}
-Equip $T$ with a metric so that each edge has length $\eps$
+Equip $T$ with a length-metric so that each edge has length $\eps$
 and glue the long boundary component of the cylinder to $T$ by piecewise isometry so that the resulting space is homeomorphic to disc and the tree corresponds to it-self.
+
+
 
 According to the first construction,
 for any null-homotopy of the boundary 
@@ -2232,7 +2262,7 @@ Note that the map $\phi\:K\to B(K)$, defied by $x\mapsto \dist_x$
 is a distance preserving embedding.
 
 Denote by $W$ the linear convex hull of the image $\phi(K)\subset B(K)$ with the metric induced from $B(K)$.
-It remains to show that $W$ forms a compact length space.
+It remains to show that $W$ forms a compact length-metric space.
 
 \parit{Comment.}
 The map $\phi$ is called \emph{Kuratowski embedding},
@@ -2400,7 +2430,7 @@ see \cite{BIS}.
 Consider a chain of disjoint circles $c_0,c_1,\dots,c_n$ in $\RR^3$;
 that is, $c_i$ and $c_{i-1}$ are linked for each $i$. 
 
-%\begin{wrapfigure}{r}{50mm}
+%\begin{wrapfigure}{o}{50mm}
 \begin{center}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/chain(1)}
 \lbl[t]{5,0;$c_0$}
@@ -2418,7 +2448,7 @@ Note that for any short homeomorphism $f\:(U,d)\to\RR^3$ the distance from $f(c_
 
 Fix a line segment $[ab]$ in $\RR^3$.
 Modify 
-the length metric on $\RR^3$ in arbitrary small neighbohood of $[ab]$
+the length-metric on $\RR^3$ in arbitrary small neighbohood of $[ab]$
 so that there is a chain $(c_i)$ of circles as above,
 which goes from $a$ to $b$ 
 such that
@@ -2448,7 +2478,7 @@ and for a sequences
 $\eps_n$ and $\ell_n$ 
 which converge to zero very fast.
 
-The obtainded lenght metric $d$ is still close to the canonical,
+The obtainded length-metric $d$ is still close to the canonical,
 but for any open set $U$ containing $[a_\infty b_\infty]$
 the space $(U,d)$ does not admit 
 a short homeomorphism to $\RR^3$.
@@ -2518,7 +2548,7 @@ Yet my paper \cite{petrunin-paths} is closely relevant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{two2one}.} 
-\textit{Length preserving map.}
+\textit{Length-preserving map.}
 Assume there is a length-preserving map $f\:\RR^2\to \RR$.
 
 Note that $f$ is Lipschitz.
@@ -2538,7 +2568,7 @@ The idea above can be also used to solve the following problem.
 {\it Assume $d$ is a metric on $\RR^2$ 
 which is induced by a norm.
 Show that $(\RR^2,d)$ admits 
-a \hyperref[Length preserving map]{\emph{length preserving map}} 
+a \hyperref[Length-preserving map]{\emph{length-preserving map}} 
 to $\RR^3$ 
 if and only if 
 $(\RR^2,d)$ is isometric to the Euclidean plane.}
@@ -2851,9 +2881,9 @@ First show that any compact metric space can be presented as a limit of a sequen
 Moreover, show that one can assume  each vertex of $\Gamma_n$ has degree 3 
 and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
-\begin{wrapfigure}{r}{27mm}
+\begin{wrapfigure}{o}{27mm}
 %\begin{center}
-\begin{lpic}[t(-8mm),b(-5mm),r(0mm),l(0mm)]{pics/fig8(1)}
+\begin{lpic}[t(-2mm),b(-5mm),r(0mm),l(0mm)]{pics/fig8(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2883,7 +2913,7 @@ Let
 $\tilde\gamma\:[0,1]\to \tilde M$ be a minimizing geodesic from $\tilde p$ to $\tilde q$. 
 
 We need to show that 
-$$\length \tilde\gamma\le m\cdot diam(M).$$ 
+\[\length \tilde\gamma\le m\cdot diam(M).\]
 Suppose the contrary.
 
 Denote by $p,q$ and $\gamma$ the projections of $\tilde p,\tilde q$ and $\tilde \gamma$ in $M$. 
@@ -2895,7 +2925,7 @@ so
 
 Let $\sigma_i$ be a minimizing geodesic in $M$ connecting the endpoints of $\gamma_i$. 
 Note that 
-$$\length\sigma_i\le \diam M< \length\gamma_i.$$ 
+\[\length\sigma_i\le \diam M< \length\gamma_i.\] 
 
 Consider $m+1$ paths $\alpha_0,\dots,\alpha_m$ defined as 
 \[\alpha_i=\sigma_1{*}\dots{*}\sigma_i{*}\gamma_{i+1}{*}\dots{*}\gamma_m.\]
@@ -3020,8 +3050,7 @@ Hence the result follows.
 The converse to the problem also holds;
 it was proved by Christian Lange in \cite{lange},
 his proof based ealier results of 
-%??? FIRST NAME???
-Mikhailova, see \cite{mikhailova}.
+Marina Mikhailova, see \cite{mikhailova}.
 
 Note that the cone over spherical suspension over Poincar\'e sphere is homeomorphic to $\RR^5$ and it is quotient of $\RR^5$ by a finite subgroup of $\SO(5)$. 
 Therefore, if one exchanges ``PL-homeomorphism'' to ``homeomorphism'' in the formulation then the answer is different; 
@@ -3034,8 +3063,8 @@ Let $G$ be a finitely generated subgroup of free group with $m$ generators, furt
 
 Let $W$ be the wedge sum of $n$ circles, 
 so  $\pi_1(W,p)=F_m$.
-Equip $W$ with length metric so that 
-that each circle has unit length.
+Equip $W$ with the length-metric 
+such that each circle has unit length.
 
 Pass to the metric cover $\tilde W$ of $W$ 
 such that  $\pi_1(\tilde W,\tilde p)=G$ 
@@ -3074,7 +3103,7 @@ the some element $w$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Lengths of generators of the fundamental group}.}
 \textit{Lengths of generators of the fundamental group.}
-Choose a length-minimizing geodesic loop $\gamma$ 
+Choose a length minimizing loop $\gamma$ 
 which represents a given element $a\in\pi_1M$.
 
 Fix $\eps>0$.
@@ -3084,7 +3113,7 @@ as a joint
 of paths with $\length\gamma_i<\eps$ for each $i$.
  
 Denote by $p=p_0,p_1,\dots, p_n=p$ the endpoints of these arcs.
-Connect $p$ to $p_i$ by a length minimizing geodesic $\sigma_i$.
+Connect $p$ to $p_i$ by a minimizing geodesic $\sigma_i$.
 Note that $\gamma$ is homotopic to a product of loops
 \[\alpha_i=\sigma_{i-1}{*}\gamma_i{*}\sigma_{i-1}\]
 and $\length \alpha_i<2\cdot\diam M+\eps$ for each $i$.
@@ -3152,7 +3181,7 @@ see \cite{gromov-almost-flat}.
 \textit{Immersed disks.}
 Both circles on the picture bound essentially different discs.
 
-\begin{wrapfigure}[5]{r}{46mm}
+\begin{wrapfigure}[5]{o}{46mm}
 %\begin{center}
 \begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
 %\lbl[b]{24,41;x}
@@ -3167,7 +3196,7 @@ It is a good exercise to count the essentially different discs in these examples
 The first example is generally attributed to John Milnor.
 The second example was given by Daniel Bennequin in \cite{bennequin}.
 
-\begin{wrapfigure}[4]{r}{19mm}
+\begin{wrapfigure}[4]{o}{19mm}
 %\begin{center}
 \begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/annuli()}
 %\lbl[b]{24,41;x}
@@ -3274,8 +3303,10 @@ This problem was suggested by Greg Kuperberg, see \cite{One-step problems in geo
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{r}{37mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/Simple-stabilization(1)}
+\begin{wrapfigure}{o}{37mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/Simple-stabilization(1)}
+\lbl[]{8.7,8.3;{\color{white} $K_1$}}
+\lbl[]{28.7,8.3;{\color{white} $K_2$}}
 \end{lpic}
 \end{wrapfigure}
 
@@ -3286,8 +3317,7 @@ The example can be guessed from the diagram.
 \parit{Caomments.} 
 I learned this problem 
 in my analysis class taught by 
-%???FIRST NAME???
-Galuzina.
+Maria Goluzina.
 
 }
 
@@ -3388,7 +3418,7 @@ that is,
 \[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
 
-\begin{wrapfigure}{r}{46mm}
+\begin{wrapfigure}{o}{46mm}
 %\begin{center}
 \begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/Phi(1)}
 \end{lpic}
@@ -3610,7 +3640,7 @@ say $\triangle pxy$ and $\triangle qxy$
 such that 
 \[\measuredangle \hinge pxy+\measuredangle \hinge qxy> \pi.\]
 
-\begin{wrapfigure}{r}{21mm}
+\begin{wrapfigure}{o}{21mm}
 \begin{lpic}[t(-12mm),b(-6mm),r(0mm),l(0mm)]{pics/tent}
 \end{lpic}
 \end{wrapfigure}
@@ -3630,10 +3660,10 @@ An example of such surface can be seen on the picture. %???+PIC
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{wrapfigure}{r}{23mm}
+{
+\begin{wrapfigure}{o}{22mm}
 %\begin{center}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
+\begin{lpic}[t(-1mm),b(0mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
 \end{lpic}
 %\end{center}
 \end{wrapfigure}
@@ -3648,7 +3678,7 @@ Israel Gelfand,
 Mikhail Kapranov 
 and Andrei Zelevinsky in \cite{GKZ}*{7C}.
 
-
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{conic neighborhoods}.} 
@@ -3756,7 +3786,7 @@ This way we obtain an annulus with flat metric.
 Look at the neighborhood of the boundary components and show that the anulus can and can not be isometrically immersed into the plane;
 this is a contradiction.
 
-\begin{wrapfigure}{r}{20mm}
+\begin{wrapfigure}{o}{20mm}
 %\begin{center}
 \begin{lpic}[t(-7mm),b(-4mm),r(0mm),l(0mm)]{pics/57-triangulation(1)}
 %\lbl[b]{24,41;x}
@@ -3805,7 +3835,7 @@ Show that there are two distinct minimizing geodesics between $x$ and $y$.
 The later leads to a contradiction.
 
 \parit{Comments.}
-The existence of geodesic $\gamma$ seem to be proved first by Brian Bowditch in \cite{bowditch};
+The existence of geodesic $\gamma$ was proved by Brian Bowditch in \cite{bowditch};
 a simpler proof can be found in the book 
 by Stephanie Alexandr, Vitali Kapovitch and me, see \cite{akp}.
 

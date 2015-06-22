@@ -96,7 +96,7 @@ Prove that $\gamma$ has no self-intersections.
 (In other words, if you drive on the plane and turn the steering wheel to the right all the time then you can not come back to the same place.)
 \end{pr}
 
-{\begin{wrapfigure}[5]{r}{27mm}
+{\begin{wrapfigure}[5]{o}{27mm}
 %\begin{center}
 \begin{lpic}[t(-11mm),b(0mm),r(0mm),l(0mm)]{pics/moon-in-puddle(1)}
 %\lbl[b]{24,41;x}
@@ -224,7 +224,7 @@ which lie at a distance $1$ from each other.
 Show that the length of $\alpha$ is at least $2\cdot\pi$.
 \end{pr}
 
-\begin{wrapfigure}{r}{30mm}
+\begin{wrapfigure}{o}{30mm}
 %\begin{center}
 \begin{lpic}[t(-6mm),b(-1mm),r(0mm),l(0mm)]{pics/tangent-eq(1)}
 %\lbl[b]{24,41;x}
@@ -293,7 +293,7 @@ Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-inters
 \end{pr}
 
 
-\begin{wrapfigure}{r}{21mm}
+\begin{wrapfigure}{o}{21mm}
 \begin{lpic}[t(-9mm),b(-4mm),r(0mm),l(0mm)]{pics/long-geodesic(1)}
 \end{lpic}
 \end{wrapfigure}
@@ -359,11 +359,11 @@ I.e., there is an immersion of a closed ball $\bar B^m\looparrowright M$ such th
 \end{pr}
 
 \begin{pr}{}{Almgren's inequalities}\label{almgren} 
-Let $\Sigma$ be a closed $m$-dimensional 
+Let $\Sigma$ be a closed $n$-dimensional 
 \hyperref[Minimal surface]{\emph{minimal surface}} 
-in $\mathbb{S}^n$.
+in $\mathbb{S}^m$.
 Prove that
-$\vol_m \Sigma\ge \vol_m \mathbb{S}^m$.
+$\vol_n \Sigma\ge \vol_n \mathbb{S}^n$.
 \end{pr}
 
 
@@ -498,21 +498,13 @@ such that each sphere $\mathbb{S}^2\times x$ and $y\times \mathbb{S}^2$ forms a 
 in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \end{pr}
 
-\begin{pr}{}{Loewner's theorem}
-\label{Loewner's theorem}
-Let $g$ be Riemannian metric
-on the real projective space, $\RP^m$,
-which is
-conformally equivalent to the canonical metric $g_{\text{can}}$.
-Denote by $\ell$ the minimal length of curves in $(\RP^m,g)$ which are not null-homotopic. 
-Prove that 
-$$\pi^m\cdot\vol(\RP^m,g)
-\ge 
-\ell^m
-\cdot
-\vol(\RP^m,g_{\text{can}})$$ 
-and in case of equality $g=c\cdot g_{\text{can}}$ for some positive constant $c$.
+\begin{pr}{}{Energy minimizer}\label{Energy minimizer}
+Show that the identity map on $\RP^m$ is 
+\hyperref[Energy functional]{\emph{energy}}
+minimizing in its homotopy class.
+Here we assume that $\RP^m$ is equipped with canonical metric.
 \end{pr}
+
 
 \begin{pr}{\thm}{Volume and convexity}
 \label{Volume and convexity} 
@@ -522,7 +514,8 @@ convex function. Prove that $M$ has infinite volume.
 \end{pr}
 
 \begin{pr}{}{Besikovitch inequality}\label{Besikovitch inequality}
-Let $g$ be a Riemannian metric on a $m$-dimensional cube $Q=[0,1]^m$ such that any curve connecting opposite faces has length $\ge 1$. Prove that $\vol(Q,g)\ge 1$ and equality holds if and only if $(Q,g)$ is isometric to the unit cube.
+Let $g$ be a Riemannian metric on a $m$-dimensional cube $Q=[0,1]^m$ such that any curve connecting opposite faces has length $\ge 1$. 
+Prove that $\vol(Q,g)\ge 1$ and equality holds if and only if $(Q,g)$ is isometric to the unit cube.
 \end{pr}
 
 \begin{pr}{}{Distant involution}\label{Distant involution}
@@ -635,7 +628,7 @@ Prove that $f$ is an isometry.
 \begin{pr}{\thm}{Embedding of a compact}\label{compact} 
 Prove that any compact metric space 
 is isometric to 
-a subset of a compact \hyperref[Length space]{\emph{length spaces}}.
+a subset of a compact \hyperref[Length-metric space]{\emph{length-metric spaces}}.
 \end{pr}
 
 \begin{pr}{\easy}{Metric compactification}\label{Metric compactification}
@@ -651,7 +644,7 @@ defined as $F\:z\mapsto f_z$.
 Construct a proper metric space $X$
 such that $F_X$ is not an embedding.
 
-Show that there are no such examples among proper length metric spaces.
+Show that there are no such examples among proper length-metric spaces.
 \end{pr}
 
 
@@ -696,7 +689,8 @@ Prove that any \hyperref[Sub-Riemannian metric]{\emph{sub-\hskip0mm Riemannian m
 on the $\mathbb{S}^m$ is isometric to the intrinsic metric of a hypersurface in $\RR^{m+1}$.
 \end{pr}
 
-\begin{pr}{\thm}{Length preserving map}\label{two2one} Show that there is no \hyperref[Length preserving map]{\emph{length preserving map}} $\RR^2\to \RR$.
+\begin{pr}{\thm}{Length-preserving map}\label{two2one} 
+Show that there is no \hyperref[Length-preserving map]{\emph{length-preserving map}} $\RR^2\to \RR$.
 \end{pr}
 
 
@@ -721,7 +715,7 @@ Given two points $x,y\in \mathbb{S}^2$,
 set 
 \[\rho(x,y)=\mu[B(x,\tfrac \pi2)\backslash B(y,\tfrac\pi2)].\]
 
-Show that $\rho$ is a length metric on $\mathbb{S}^2$
+Show that $\rho$ is a length-metric on $\mathbb{S}^2$
 and moreover, geodesics in this metric formed by arcs of grate circles.
 \end{pr}
 
@@ -780,14 +774,14 @@ that is,
 a metric space which
 is obtained by gluing together all four ends of two unit segments.
 
-Prove that any compact \hyperref[Length space]{\emph{length spaces}} $K$ is a
+Prove that any compact \hyperref[Length-metric space]{\emph{length-metric spaces}} $K$ is a
 Gromov--Hausdorff limit of a sequence of
 metric covers  $(\widetilde \Phi_n, \tilde d/n)\to
 (\Phi,d/n)$.
 \end{pr}
 
 \begin{pr}{\hard}{Diameter of \textit{m}-fold cover}\label{m-fold-cover}
-Let $X$ be a \hyperref[Length space]{\emph{length space}}
+Let $X$ be a \hyperref[Length-metric space]{\emph{length-metric space}}
 and $\tilde X$ be a connected $m$-fold cover of $X$ equiped with induced intrinsic metric.
 Prove that
 $$\diam\tilde X\le m\cdot \diam X.$$
@@ -799,8 +793,8 @@ Note that $X{\times} X$ admits natural $\ZZ_2$-action by $(x,y)\mapsto (y,x)$.
 Show that fundamental group of $X{\times} X/\ZZ_2$ is commutative.
 \end{pr}
 
-{
-\begin{wrapfigure}[4]{r}{25mm}
+{%???CHANGE PIC
+\begin{wrapfigure}[4]{o}{25mm}
 %\begin{center}
 \begin{lpic}[t(-8mm),b(-4mm),r(0mm),l(0mm)]{pics/Sierpinski-Trigon(.125)}
 %\lbl[b]{24,41;x}
