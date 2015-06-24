@@ -1,5 +1,4 @@
-\appendix
-\renewcommand\chaptername{}
+\backmatter
 \chapter{Semisolutions}
 
 \section*{Curves and surfaces}
@@ -56,7 +55,7 @@ Without loss of generality we may assume that the curvature of $\gamma$ decrease
 
 \begin{wrapfigure}{o}{50mm}
 %\begin{center}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/kneser-log(.5)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/kneser-log(.5)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -1274,6 +1273,47 @@ Karsten Grove
 and Burkhard Wilking 
 in  \cite{grove-wilking}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Energy minimizer}.} 
+\textit{Energy minimizer.}
+Denote by $\mathrm{U}$ the unit tangent bundle over $\RP^m$
+and $\mathrm{L}^{2\cdot(m-1)}$ the space of projective lines in $\ell\:\RP^1\to \RP^m$.
+The spaces $\mathrm{U}$ and $\mathrm{L}$ 
+have dimesions $2\cdot m-1$ 
+and $2\cdot(m-1)$
+correspondingly.
+
+
+According to Liouville's theorem, the identity
+\[\int\limits_{\mathrm{U}}f(v)\cdot d_v\vol_{2\cdot m-1}
+=
+\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} f(\ell'(t))\cdot dt\]
+holds for any integrable function $f\:\mathrm{U}\to\RR$.
+
+Let $F\:\RP^m\to\RP^m$ be a smooth map.
+Note that up to multiplicative constant,
+the energy of $F$ can be expressed the following way
+\[\int\limits_{\mathrm{U}} |dF(v)|^2\cdot d_v\vol_{2m-1}
+=
+\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\].
+
+The result follows since
+\[\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\ge \pi\]
+for any line $\ell\:\RP^1\to \RP^m$.
+
+\parit{Comments.} 
+The same idea is used to prove Loewner's inequality on the volume in of $\RP^m$ with metric conformally equivalent to the canonical one, see \cite{gromov-filling}.
+
+The problem is due to Cristopher Croke, see \cite{croke-energy}. 
+He use the same idea to show that the identity map on $\CP^m$ is energy minimizing in its homotopy class.
+For $\mathbb S^m$, an analogous statement does not hold if $m\ge 3$.
+In fact if a closed Riemannian manifold $M$ 
+has dimension at least 3 
+and $\pi_1M=\pi_2M=0$ 
+then the identity map on $M$ is homotopic 
+to a map with arbitrary small energy;
+the later was shown by Brian White in \cite{white}.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1773,46 +1813,7 @@ see \cite{honda}.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Energy minimizer}.} 
-\textit{Energy minimizer.}
-Denote by $\mathrm{U}$ the unit tangent bundle over $\RP^m$
-and $\mathrm{L}^{2\cdot(m-1)}$ the space of projective lines in $\ell\:\RP^1\to \RP^m$.
-The spaces $\mathrm{U}$ and $\mathrm{L}$ 
-have dimesions $2\cdot m-1$ 
-and $2\cdot(m-1)$
-correspondingly.
 
-
-According to Liouville's theorem, the identity
-\[\int\limits_{\mathrm{U}}f(v)\cdot d_v\vol_{2\cdot m-1}
-=
-\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} f(\ell'(t))\cdot dt\]
-holds for any integrable function $f\:\mathrm{U}\to\RR$.
-
-Let $F\:\RP^m\to\RP^m$ be a smooth map.
-Note that up to multiplicative constant,
-the energy of $F$ can be expressed the following way
-\[\int\limits_{\mathrm{U}} |dF(v)|^2\cdot d_v\vol_{2m-1}
-=
-\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\].
-
-The result follows since
-\[\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\ge \pi\]
-for any line $\ell\:\RP^1\to \RP^m$.
-
-\parit{Comments.} 
-The same idea is used to prove Loewner's inequality on the volume in of $\RP^m$ with metric conformally equivalent to the canonical one, see \cite{gromov-filling}.
-
-The problem is due to Cristopher Croke, see \cite{croke-energy}. 
-He use the same idea to show that the identity map on $\CP^m$ is energy minimizing in its homotopy class.
-For $\mathbb S^m$, an analogous statement does not hold if $m\ge 3$.
-In fact if a closed Riemannian manifold $M$ 
-has dimension at least 3 
-and $\pi_1M=\pi_2M=0$ 
-then the identity map on $M$ is homotopic 
-to a map with arbitrary small energy;
-the later was shown by Brian White in \cite{white}.
 
 
 
@@ -2187,6 +2188,41 @@ a contradiction.
 \parit{Comment.}
 This problem is a stripped version of the bound on filling radius given by Mikhael Gromov in \cite{gromov-filling}.  
 
+\parbf{\wrenches\ref{Almost constant function}.}
+\textit{Almost constant function.}
+Let $u\in\mathbb{S}^m$.
+Denote by $p_m$ 
+the probability that 
+\[|\langle u,w\rangle|>\eps\]
+for a random vector $w\in \mathbb{S}^m$.
+
+Observe that $p_m\to 0$ as $m\to\infty$.
+
+It follows that for a random unit vector $w$ in the tangent bundle of $M$,
+the probability of the event
+\[|df(w)|>\eps\]
+is at most $p_m$.
+
+Note that 
+\begin{align*}
+|f\circ \gamma(1)-f\circ\gamma(0)|
+&=
+\left|\int\limits_0^1df(\gamma'(t))\cdot dt\right|\le \\
+&\le \int\limits_0^1\left|df(\gamma'(t))\right|\cdot dt.
+\end{align*}
+
+Applying Liuville's theorem, we get that for any fixed $t\in[0,1]$
+the distribution of $\gamma'(t)$ is uniform.
+In particular for random geodesic $\gamma$
+the probability of the event
+\[\int\limits_0^1|df(\gamma'(t))|\cdot dt>\eps\]
+is at most $p_m$.
+Hence the result follows.
+
+\parit{Comments.}
+The problem an example of phenomen called \emph{concentration of measure}; 
+it was discovered by Vitali Milman, see ???.
+The problem was formulated by Mikhael Gromov. 
 
 
 \section*{Metric geometry}
@@ -4032,6 +4068,10 @@ and Robert Connelly \cite{bezdek-connelly}
 in their proof of 
 Kneser--Poulsen  
 and Klee--Wagon conjectures in dimension $2$.
+
+It is instructive to check that the dimension $2\cdot m$ is optimal;
+that is, for any positive integer $m$,
+there are two maps $h_0,h_1\:F\to \RR^m$ which can not be connected by a monotonic homotopy $h_t\:F\to\RR^{2\cdot m-1}$.
 
 
 

@@ -81,7 +81,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=14
 mode=LaTeX
-open=true
+open=false
 order=4
 
 [item:bib.tex]
@@ -572,24 +572,24 @@ highlight=LaTeX
 line=3
 mode=LaTeX
 open=true
-order=5
+order=4
 
 [item:problems.tex]
 archive=true
-column=11
+column=69
 encoding=windows-1251
 highlight=LaTeX
-line=599
+line=608
 mode=LaTeX
 open=true
 order=0
 
 [item:solutions.tex]
 archive=true
-column=62
+column=16
 encoding=UTF-8
 highlight=LaTeX
-line=2987
+line=2190
 mode=LaTeX
 open=true
 order=1
@@ -625,13 +625,13 @@ JumpList=
 ViMarks=.,57,0,[,57,0,],57,20
 
 [view-settings,view=0,item:problems.tex]
-CursorColumn=11
-CursorLine=599
+CursorColumn=69
+CursorLine=608
 JumpList=
-ViMarks=.,599,11,[,599,11,],599,11
+ViMarks=.,608,60,[,608,60,],608,68
 
 [view-settings,view=0,item:solutions.tex]
-CursorColumn=62
-CursorLine=2987
+CursorColumn=16
+CursorLine=2190
 JumpList=
-ViMarks=.,2987,61,[,2987,55,],2987,61
+ViMarks=.,2190,8,[,2190,8,],2190,15
