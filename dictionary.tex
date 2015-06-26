@@ -6,11 +6,10 @@
 is a curve always tangent to an \emph{asymptotic direction} of $\Sigma$; 
 that is, the direction in which the normal curvature of $\Sigma$ is zero.
 
-\item{\bf Busemann function.}\refstepcounter{thm}\label{Busemann function} Let $X$ be a metric space
-and $\gamma$ is a \hyperref[Geodesic]{\emph{geodesic}} ray in $X$; 
-that is, $\gamma\:[0, \infty)\to X$ is a curve such that for any $t_0,t_1\in[0,\infty)$, we have  
-$$|\gamma(t_0)-\gamma(t_1)|_X=|t_1-t_0|,$$
-where $|x-y|_X$ denotes the distance from $x$ to $y$ in $X$
+\item{\bf Busemann function.}\refstepcounter{thm}\label{Busemann function} 
+Let $X$ be a metric space
+and $\gamma$ is a ray in $X$; 
+that is, $\gamma\:[0, \infty)\to X$ is a \hyperref[Geodesic]{\emph{minimizing unit-speed geodesic}}.
 
 The Busemann function $b_\gamma\:X\to\RR$ is defined by
 $$b_\gamma(p)=\lim_{t\to\infty}\left(|p-\gamma(t)|_X-t\right).$$
@@ -61,12 +60,14 @@ then it is the maximal vertex for exactly $\tfrac{i!}{k!\cdot (i-k)!}$
 faces of dimension $k$.
 This observation can be packed in the following polynomial identity 
 \[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
-Note that the identity above implies that $h$-vector does not depend on the choice of order of the vertices.
-The Dehn--Sommerville equations can be written as 
-\[h_k=h_{m-k};\]
-this identity obtained by reversing the order of vertices.
 
-The Dehn--Sommerville equations is a complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
+Note that the identity above implies that $h$-vector does not depend on the choice of order of the vertices.
+In particular, the $h$ vector is the same for the reversed order;
+that is
+\[h_k=h_{m-k}\]
+for any $k$.
+These identities are called Dehn--Sommerville equations.
+It gives the complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
 
 \item{\bf Doubling}\refstepcounter{thm}\label{Doubling} 
 of a metric space $V$ in a closed subset $A\subset V$
@@ -74,8 +75,8 @@ is the metric space $W$ which obtained by gluing two copies of $V$ along the cor
 
 More precicely, consider the minimal equivalence relation $\sim$ on the set $V\times\{1,2\}$,  such that $(a,1)\sim (a,2)$ for any $a\in A$.
 Then  $W$ 
-is the set $(V\times\{1,2\})/\sim$, equipped with the metric
-such that 
+is the set $(V\times\{1,2\})/\sim$, 
+equipped with the metric such that 
 \begin{align*}
 |(x,i)-(y,i)|_W&=|x-y|_V
 \intertext{and}
@@ -125,13 +126,18 @@ Given a smooth submanifold $S\subset M$;
 denote by $\mathrm{N} S$ the normal bundle over $S$.
 The restriction of $\exp$ to $\mathrm{N} S$ is called \emph{normal exponential map} of $S$ and denoted as $\exp_S$. 
 
-\item{\bf Geodesic.}\refstepcounter{thm}\label{Geodesic}  Let $X$ be a metric space and $\II$ be a real interval.
-A locally isometric immersion $\gamma\:\II\looparrowright X$ is called geodesic.
-In other words, $\gamma$ is a geodesic if for any $t_0\in\II$ we have 
+\item{\bf Geodesic.}\refstepcounter{thm}\label{Geodesic}  
+Let $X$ be a metric space and $\II$ be a real interval.
+A locally isometric immersion $\gamma\:\II\looparrowright X$ is called \emph{unit-speed geodesic}.
+In other words, $\gamma$ is a unit-speed geodesic
+if for any $t_0\in\II$ we have 
 $$|\gamma(t)-\gamma(t')|_X=|t-t'|$$ 
 for all $t,t'\in\II$ sufficiently close to $t_0$.
-Note that in our definition geodesic has unit speed 
-(that is not quite standard).
+
+If the codition holds for any $t,t'\in\II$ then $\gamma$ is called \emph{minimizing}.
+A minimizing geodesic from point $p$ to point $q$ usually denoted $[pq]$.
+
+Any linear reparametrization of $\gamma$ is called \emph{geodesic}.
 
 \item{\bf Heisenberg group}\refstepcounter{thm}\label{Heisenberg group}
 is the group of $3\times3$ upper triangular matrices of the form
@@ -149,7 +155,7 @@ The kissing number of $W_0$ is the maximal integer $k$ such that there are $k$ b
 for each $i$ we have $W_i\cap W_0\not=\emptyset$ and have no pair $W_i,W_j$ has common interior points.
 
 \item{\bf  Length-metric space.}\refstepcounter{thm}\label{Length-metric space} 
-A complete metric space $X$ is called {\it length space}  if the distance between any pair of points in $X$ is equal to the infimum of lengths of curves connecting these points. 
+A complete metric space $X$ is called {\it length-metric space}  if the distance between any pair of points in $X$ is equal to the infimum of lengths of curves connecting these points. 
 
 \item{\bf Macrodimension.}\refstepcounter{thm}\label{Macrodimension}
 Let $X$ be a locally compact metric space $a>0$ and $m$ is an integer.
@@ -182,8 +188,6 @@ set $H_x=\sum_i s(e_i,e_i)\in \mathrm{N}_x$;
 it is the mean curvature vector at $x\in \Sigma$. 
 
 We say that $\Sigma$ is \emph{minimal} if $H\equiv 0$.
-
-\item{\bf Minkowski space}\refstepcounter{thm}\label{Minkowski space} --- $\RR^m$ with a metric induced by a norm.
 
 \item{\bf Nil-manifolds}\refstepcounter{thm}\label{Nil-manifolds} form the minimal class of manifolds which includes a point, and has the following property:  
 the total space of any principle $\mathbb{S}^1$-bundle over a nil-manifold is a nil-manifold. 
@@ -299,7 +303,8 @@ if all its tangent vectors are horizontal.
 The sub-Riemannian distance between points $x$ and $y$ is defined as infimum of lengths of horizontal curves connecting $x$ to $y$.
 
 Alternatively, the distance can be defined as a limit of Riemannian distances 
-for the metrics $g_\lambda(X,Y)=g(X^h,Y^h)+\lambda\cdot g(X^v,Y^v)$ 
+for the metrics 
+\[g_\lambda(X,Y)=g(X^h,Y^h)+\lambda\cdot g(X^v,Y^v)\] 
 as $\lambda\to \infty$,
 where $X^h$ denotes the horizontal part of $X$;
 that is, the orthogonal projection of $X$ to $H$

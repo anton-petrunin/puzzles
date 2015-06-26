@@ -431,7 +431,8 @@ but does not admit a finite covering by a \hyperref[Nil-manifolds]{\emph{nil-man
 \end{pr}
 
 \begin{pr}{\easy}{Lie group}\label{lie-nonneg}
-Show that the space of nonnegatively curved left invariant metrics on a given compact Lie group is contractible.
+Show that the space of nonnegatively curved left invariant metrics 
+on a given compact Lie group is contractible.
 \end{pr}
 
 \begin{pr}{\many}{Polar points} \label{milka-polar} Let $(M,g)$ be a compact Riemannian manifold with sectional curvature $\ge 1$. 
@@ -456,15 +457,18 @@ that is, there is no isometric embedding $\iota\:M\hookrightarrow W$ such that $
 \end{pr}
 
 
-\begin{pr}{\many}{Minkowski space}\label{pr:Minkowski space}
-Let us denote by $(\mathbb R^m,\ell_p)$ the set $\RR^m$ equipped with the metric induced by the $\ell^p$-norm.
-Prove that if $p\not=2$ then $(\mathbb R^m,\ell_p)$ can not be a
+\begin{pr}{\many}{No approximation}\label{No approximation}
+Prove that if $p\not=2$ then $\RR^m$ 
+equipped with the metric induced by the $\ell^p$-norm 
+can not be a
 Gromov--Hausdorff limit of
 Riemannian $m$-dimensional manifolds $(M_n,g_n)$ such that $\Ric_{g_n}\z\ge C$ for some fixed constant $C\in\RR$.
 \end{pr}
 
 \begin{pr}{}{Curvature hollow}\label{Curvature hollow}
- Construct a Riemannian metric $g$ on $\RR^3$ which is Euclidean outside of an open bounded set $\Omega$ and scalar curvature of $g$ is negative in $\Omega$.
+Construct a Riemannian metric $g$ on $\RR^3$ 
+which is Euclidean outside of an open bounded set $\Omega$ 
+and scalar curvature of $g$ is negative in $\Omega$.
 \end{pr}
 
 \begin{pr}{\thm}{If hemisphere then sphere}\label{hS=>S} 
@@ -495,14 +499,20 @@ have positive sign.
 \end{pr}
 
 
+
+
+
 \chapter{Curvature free differential geometry}
 
 \comment{A solution of problem \ref{gromomorphic-curves} relies on Gromov's pseudo-holomorphic curves. The problem \ref{Volume and convexity} uses Liouville's theorem for geodesic flow.
 A solution of the problem \ref{short-homotopy} use a curve shortening process.}
 
-\begin{pr}{\thm}{Minimal foliation}\label{gromomorphic-curves} Consider $\mathbb{S}^2\times \mathbb{S}^2$ equipped with a Riemannian metric $g$ which
-is $C^\infty$-close to the product metric. Prove that there is a conformally equivalent metric $\lambda\cdot g$ and re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
-such that each sphere $\mathbb{S}^2\times x$ and $y\times \mathbb{S}^2$ forms a \hyperref[Minimal surface]{\emph{minimal surface}} 
+\begin{pr}{\thm}{Minimal foliation}\label{gromomorphic-curves} 
+Consider $\mathbb{S}^2\times \mathbb{S}^2$ equipped with a Riemannian metric $g$ 
+which is $C^\infty$-close to the product metric. 
+Prove that there is a conformally equivalent metric $\lambda\cdot g$ and re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
+such that each sphere $\mathbb{S}^2\times x$ and $y\times \mathbb{S}^2$ forms a 
+\hyperref[Minimal surface]{\emph{minimal surface}} 
 in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \end{pr}
 
@@ -684,13 +694,6 @@ in its own  1-neighborhood.
 Prove that \hyperref[Macrodimension]{\emph{the macrodimension of $M$ on the scale $100$}} is at most $1$.
 \end{pr}
 
-\begin{pr}{}{Anti-collapse}\label{anti-collaps} Construct
-a sequence of Riemannian metric $g_n$ on a 2-sphere such that 
-$\vol (\mathbb S^2,g_n)<1$ for any $n$ 
-and the induced distance functions $d_n\:\mathbb{S}^2\times \mathbb{S}^2\to \RR_+$
-converge to a metric $d\:\mathbb{S}^2\times \mathbb{S}^2\to \RR_+$ 
-with arbitrary large Hausdorff dimension.
-\end{pr}
 
 {\begin{pr}{\hard}{No short embedding}\label{weird-metric} 
 Construct a length-metric $d$ on $\RR^3$,
@@ -718,9 +721,9 @@ of the product of two hyperbolic planes.
 \end{pr}
 
 \begin{pr}{}{Fixed segment}\label{Fixed segment}
-Let $d(x,y)=\|x-y\|$ be a metric on $\RR^m$ induced by a norm $\|{*}\|$.
+Let $\rho(x,y)=\|x-y\|$ be a metric on $\RR^m$ induced by a norm $\|{*}\|$.
 
-Assume that $f\:(\RR^m,d)\to(\RR^m,d)$ is an isometry which fixes two distinct point.
+Assume that $f\:(\RR^m,\rho)\to(\RR^m,\rho)$ is an isometry which fixes two distinct point.
 Show that $f$ fixes the line segment between them.
 \end{pr}
 
@@ -735,7 +738,8 @@ and moreover, geodesics in this metric formed by arcs of grate circles.
 \end{pr}
 
 \begin{pr}{}{Straight geodesics}\label{Straight geodesics}
-Let $\rho$ be a length-metric on $\RR^m$, which is bi-Lipschitz equivalent to the canonical metric.
+Let $\rho$ be a length-metric on $\RR^m$, 
+which is bi-Lipschitz equivalent to the canonical metric.
 Assume that every \hyperref[Geodesic]{\emph{ge\-o\-de\-sic}} $\gamma$ in $(\RR^d,\rho)$ is linear 
 (that is, $\gamma(t)=v+w\cdot t$ for some $v,w\in\RR^m$).
 Show that $\rho$ is induced by a norm on $\RR^m$.
@@ -797,7 +801,8 @@ metric covers  $(\widetilde \Phi_n, \tilde d/n)\to
 
 \begin{pr}{\hard}{Diameter of \textit{m}-fold cover}\label{m-fold-cover}
 Let $X$ be a \hyperref[Length-metric space]{\emph{length-metric space}}
-and $\tilde X$ be a connected $m$-fold cover of $X$ equiped with induced intrinsic metric.
+and $\tilde X$ be a connected $m$-fold cover of $X$ 
+equiped with induced intrinsic metric.
 Prove that
 $$\diam\tilde X\le m\cdot \diam X.$$
 
@@ -808,10 +813,10 @@ Note that $X{\times} X$ admits natural $\ZZ_2$-action by $(x,y)\mapsto (y,x)$.
 Show that fundamental group of $X{\times} X/\ZZ_2$ is commutative.
 \end{pr}
 
-{%???CHANGE PIC
-\begin{wrapfigure}[4]{o}{25mm}
+{
+\begin{wrapfigure}[3]{o}{21mm}
 %\begin{center}
-\begin{lpic}[t(-8mm),b(-4mm),r(0mm),l(0mm)]{pics/Sierpinski-Trigon(.125)}
+\begin{lpic}[t(-10mm),b(-5mm),r(0mm),l(0mm)]{pics/serpinski-triangle(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -824,7 +829,8 @@ Show that fundamental group of $X{\times} X/\ZZ_2$ is commutative.
 Let $L$ and $M$ be two discrete subgroups
 of a connected Lie group $G$ and $h$ be a left
 invariant metric on $G$.
-Equip the groups $L$ and $M$ with the induced left invariant metric from $G$.
+Equip the groups $L$ and $M$ 
+with the induced left invariant metric from $G$.
 Assume $L\backslash G$ and $M\backslash G$ are compact and moreover
 $$\vol(L\backslash (G,h))
 =
@@ -840,7 +846,8 @@ M$.
 
 \begin{pr}{\easy}{Piecewise Euclidean quotient}\label{Piecewise Euclidean quotient}
 Let $\Gamma$ be a finite subgroup of $\SO(m)$; 
-denote by $P$ the quotient $\RR^m/\Gamma$ equipped with induced \hyperref[Polyhedral space]{\emph{polyhedral metric}}.
+denote by $P$ the quotient $\RR^m/\Gamma$ equipped with induced
+\hyperref[Polyhedral space]{\emph{polyhedral metric}}.
 Assume $P$ is \hyperref[PL-homeomorphism]{\emph{PL-homeomorphic}} to $\RR^m$.
 Show that $\Gamma$ is generated by rotations  around subspaces of codimension $2$.
 \end{pr}
@@ -924,8 +931,7 @@ Construct three disjointed non-empty open sets in $\RR$ which have the same boun
 \end{pr}
 
 \begin{pr}{}{Homeomorphism of cube}\label{Homeomorphism of cube}
-Denote by $\square^m$ a cube in $\RR^m$.
-
+Let $\square^m$ be a cube in $\RR^m$.
 Assume that a homeomorphism $h\:\square^m\to\square^m$ sends each face of $\square^m$ to itself.
 Extend $h$ to a homeomorphism $f\:\RR^m\to\RR^m$ which coincides with the identity map outside of a bounded set.    
 \end{pr}
@@ -1044,8 +1050,9 @@ are connected by unique geodesic.
 Show that $P$ is a $\mathrm{CAT}(0)$ space.
 \end{pr}
 
-\begin{pr}{\easy}{No simple geodesic}\label{No simple geodesic}
-Construct a convex polyhedron $P$ which surface does not admit closed simple geodesic.
+\begin{pr}{\easy}{No simple geodesics}\label{No simple geodesics}
+Construct a convex polyhedron $P$ which surface 
+does not have a closed simple geodesic.
 \end{pr}
 
 

@@ -1,3 +1,106 @@
+\begin{pr}{}{Bounded curvature}\label{Bounded curvature}
+Denote by $\mathcal{R}_{\mathbb S^5}$ the space of all Riemannian metrics with absolute value of sectional curvature at most $1$.
+Show that there are two metrics $g_0,g_1\in \mathcal{R}_{\mathbb S^5}$ such that if $g_t\in\mathcal{R}_{\mathbb S^5}$,
+$t\in [0,1]$ is a continuous one parameter famitly of metrirics connecting $g_0$ to $g_1$ then
+\[\vol(g_t)>\exp(\exp(\exp(\exp(\exp(\max\{\vol(g_0),\vol(g_1)\})))))\]
+for some $t\in [0,1]$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Bounded curvature}.} 
+\textit{Bounded curvature.}
+Assume there is no such pair of metrics.
+Note that it implies that there is an algorithm which 
+tells whether a given manifold diffeomorphic to $\mathbb{S}^5$.
+Existance of such algorithm contradicts ???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Anti-collapse}\label{anti-collaps} Construct
+a sequence of Riemannian metric $g_n$ on a 2-sphere such that 
+$\vol (\mathbb S^2,g_n)<1$ for any $n$ 
+and the induced distance functions $d_n\:\mathbb{S}^2\times \mathbb{S}^2\to \RR_+$
+converge to a metric $d\:\mathbb{S}^2\times \mathbb{S}^2\to \RR_+$ 
+with arbitrary large Hausdorff dimension.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\wrenches\ref{anti-collaps}.} 
+\textit{Anti-collapse.}
+Fix a decreasing sequence $\eps_0,\eps_1,\dots$ of positive numbers converging to $0$ as $n\to \infty$.
+
+Let $T$ be the infinite binary tree
+and $T_n\subset T$ be the subtree up to level $n$.
+Let us equip $T$ with the length-metric such that the edges coming from $(n-1)$-th level to $n$-th level have length $\eps_{n-1}-\eps_n$.
+
+Denote by $\bar T$ the completion of $T$.
+Note that $C=\bar T\backslash T$ is a Cantor set;
+The set $C$ can be identified with the set of $\{0,1\}$-sequences 
+with the distance between two sequences $\bm{x}=(x_0,x_1,\dots)$ and $\bm{y}=(y_0,y_1,\dots)$ defined as $\eps_n$, where $n$ is the least number such that $x_n\ne y_n$.
+
+Choosing $\eps_n$ one can make $C$ to have arbitrary large Hausdorff dimension.
+
+Now choose $\delta_n\ll\eps_n$ and prepare for each edge of $T$ a cilinder with hight ... and radius of the base $\delta_n$.
+ 
+
+Note that there is a natural embedding $T_{n}\to T_{n+1}$ for all $n$.
+
+
+Assume $S$ be a surface with a flat disc $D_0\subset S$ of radius $r_0$.
+Let us cut from $D_0$ two discs $D_1$ and $D_1'$ 
+of radii $r_1=r_0/10$ and glue instead a cylinder with high $\eps_0$ 
+with discs on the top.
+Now repeat the operation for each $D_1$ and $D_1'$ cutting 
+from each two discs of radius $r_2=r_1/10$
+and glue instead cylinder with high $\eps_0$ 
+with discs on the top.
+Continue the process, we get an increasing sequence of Riemannian metrics on $S$.
+%???PIC
+
+\parit{Comments.}
+The problem is due
+Dmitri Burago, 
+Sergei Ivanov 
+and David Shoenthal,
+see \cite{BIS}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{pr}{}{Loewner's theorem}
 \label{Loewner's theorem}
 Let $g$ be Riemannian metric
@@ -73,7 +176,7 @@ but each $S_i$ separates points of any of its small neighborhoods.
 
 Prepare many copies of $M$, cut one copy along $S_1$ and $S_2$,
 $n_1$ copies along $S_1$ and $n_2$ copies along $S_2$
-then glue them as it shown on the picture. %+PIC???
+then glue them as it shown on the picture. 
 It produce a finite cover of $M$ which is after rescaling is close to figure eight.
 
 Finally applying Problem~\ref{figure-eight-1}.

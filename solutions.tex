@@ -415,9 +415,8 @@ forms the subset of all smooth figures in $\mathfrak{C}$.
 Number of similar problems surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%???CHANGE PIC
-\begin{wrapfigure}{o}{29mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/hilbertcurve5(.25)}
+\begin{wrapfigure}{o}{40mm}
+\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(0mm)]{pics/serpinski-cemetery(1)}
 \end{lpic}
 \end{wrapfigure}
 \parbf{\ref{Fat curve}.}
@@ -425,8 +424,10 @@ Number of similar problems surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 Modify your favorite space filling curve 
 to keep area nearly the same and removing self-intersections.
 
-Say, you can modify the Hilbert curve which can be constructed as a limit of recursively defined sequence of curve;
-see the 5-th iteration on the diagram. 
+Say, you can modify the Sierpi\'{n}ski curve 
+which can be constructed as a limit of 
+recursively defined sequence of curves;
+see the 8-th iteration on the diagram. 
 
 \parit{Comments.} The existence of such curves was observed by William Osgood in \cite{osgood}.
 
@@ -1121,7 +1122,7 @@ For example, consider the horosphere $\Sigma$ in the
 the complex hyperbolic space 
 of real dimension $4$.
 Clearly $m=\dim \Sigma=3$ but the degree of its volume growth is $4$.
-The later follows since $\Sigma$ comes with a left-invariant metric on the \hyperref[Heisenberg group]{\emph{Heisenberg group}}.
+The later follows since $\Sigma$ comes with a left-invariant metric on the \hyperref[Heisenberg group]{\emph{Heisenberg group}} (any such metric has volume  growth of degree $4$).
 
 
                                                       
@@ -1563,7 +1564,7 @@ Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^v=p_{-1}$.
 Fix large integer $N$ and set $w_n=(1-\tfrac nN)\cdot v_{n\cdot r}$
 and $q_n=p_n^{w_n}$.
 
-%%%???+PIC%\begin{wrapfigure}{r}{50mm}
+%\begin{wrapfigure}{r}{50mm}
 \begin{center}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/perelman(1)}
 \lbl[trw]{8,5;$p_{-1}{=}q_0$}
@@ -1599,8 +1600,8 @@ by Grigori Perelman,
 see \cite{perelman}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{pr:Minkowski space}.} 
-\textit{Minkowski space.}
+\parbf{\ref{No approximation}.} 
+\textit{No approximation.}
 Fix an increasing function $\phi\:(0,r)\to \RR$
 such that 
 \[\phi''+(n-1)\cdot(\phi')^2+C=0.\]
@@ -1883,7 +1884,7 @@ Show that $g$ is flat.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{o}{32mm}
 %\begin{center}
-\begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/tripod}
+\begin{lpic}[t(-0mm),b(3mm),r(0mm),l(0mm)]{pics/tripod}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2049,7 +2050,7 @@ Show that given a positive integer $n$ one can construct a tree $T$ embedded int
 {
 \begin{wrapfigure}{o}{42mm}
 %\begin{center}
-\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(0mm)]{pics/tree(1)}
+\begin{lpic}[t(-6mm),b(-3mm),r(0mm),l(0mm)]{pics/tree(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2063,12 +2064,14 @@ such that
 the distance between any two edges of $T$ of without common vertex 
 is at least $\eps$ .
 
-To construct such a metric, first fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
+To construct such a metric, 
+fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
 
 }
 
 \begin{itemize}
-\item The $\eps$-neighborhoods of the boundary components are product metrics.
+\item The $\eps$-neighborhoods of the boundary components 
+have product metrics.
 \item Any vertical sigment $x\times[0,1]$ has length $\tfrac 12$.
 \item One of the boundary component has length $\eps$.
 \item The other boundary component has length $2\cdot m\cdot \eps$, 
@@ -2298,7 +2301,8 @@ that is,
 Note that the map $\phi\:K\to B(K)$, defied by $x\mapsto \dist_x$
 is a distance preserving embedding.
 
-Denote by $W$ the linear convex hull of the image $\phi(K)\subset B(K)$ with the metric induced from $B(K)$.
+Denote by $W$ the linear convex hull of the image $\phi(K)\subset B(K)$ 
+with the metric induced from $B(K)$.
 It remains to show that $W$ forms a compact length-metric space.
 
 \parit{Comment.}
@@ -2421,45 +2425,6 @@ the later contradicts the assumption.
 \parit{Comment.}
 The problem was discussed it a talk by Nikita Zinoviev around 2004.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{anti-collaps}.} 
-\textit{Anti-collapse.}
-Fix a decreasing sequence $\eps_0,\eps_1,\dots$ of positive numbers converging to $0$ as $n\to \infty$.
-
-Let $T$ be the infinite binary tree
-and $T_n\subset T$ be the subtree up to level $n$.
-Let us equip $T$ with the length-metric such that the edges coming from $(n-1)$-th level to $n$-th level have length $\eps_{n-1}-\eps_n$.
-
-Denote by $\bar T$ the completion of $T$.
-Note that $C=\bar T\backslash T$ is a Cantor set;
-The set $C$ can be identified with the set of $\{0,1\}$-sequences 
-with the distance between two sequences $\bm{x}=(x_0,x_1,\dots)$ and $\bm{y}=(y_0,y_1,\dots)$ defined as $\eps_n$, where $n$ is the least number such that $x_n\ne y_n$.
-
-Choosing $\eps_n$ one can make $C$ to have arbitrary large Hausdorff dimension.
-
-Now choose $\delta_n\ll\eps_n$ and prepare for each edge of $T$ a cilinder with hight ... and radius of the base $\delta_n$.
- 
-
-Note that there is a natural embedding $T_{n}\to T_{n+1}$ for all $n$.
-
-
-Assume $S$ be a surface with a flat disc $D_0\subset S$ of radius $r_0$.
-Let us cut from $D_0$ two discs $D_1$ and $D_1'$ 
-of radii $r_1=r_0/10$ and glue instead a cylinder with high $\eps_0$ 
-with discs on the top.
-Now repeat the operation for each $D_1$ and $D_1'$ cutting 
-from each two discs of radius $r_2=r_1/10$
-and glue instead cylinder with high $\eps_0$ 
-with discs on the top.
-Continue the process, we get an increasing sequence of Riemannian metrics on $S$.
-%???PIC
-
-\parit{Comments.}
-The problem is due
-Dmitri Burago, 
-Sergei Ivanov 
-and David Shoenthal,
-see \cite{BIS}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{weird-metric}.} 
@@ -2478,11 +2443,12 @@ that is, $c_i$ and $c_{i-1}$ are linked for each $i$.
 \end{center}
 %\end{wrapfigure}
 
-Assume that $\RR^3$ is equipped with a length-metric $d$,
+Assume that $\RR^3$ is equipped with a length-metric $\rho$,
 such that the total length of the circles is $\ell$
 and $U$ is an open set containing all the circles $c_i$.
-Note that for any short homeomorphism $f\:(U,d)\to\RR^3$ the distance from $f(c_0)$ to $f(c_n)$ is less than $\ell$.
+Note that for any short homeomorphism $f\:(U,\rho)\to\RR^3$ the distance from $f(c_0)$ to $f(c_n)$ is less than $\ell$.
 
+Let us show that the $\rho$-distance from $c_0$ to $c_n$ might be much larger than $\ell$.
 Fix a line segment $[ab]$ in $\RR^3$.
 Modify 
 the length-metric on $\RR^3$ in arbitrary small neighbohood of $[ab]$
@@ -2492,12 +2458,12 @@ such that
 (1) the total length, say $\ell$, 
 of $(c_i)$ is arbitrary small,
 but 
-(2) the obtained metric $d$ 
+(2) the obtained metric $\rho$ 
 is arbitrary close to the canonical, say
-\[\bigl|d(x,y)-|x-y|\bigr|<\eps\]
+\[\bigl|\rho(x,y)-|x-y|\bigr|<\eps\]
 for any two points $x,y\in\RR^3$
 and fixed in advanced small $\eps>0$.
-The construction of $d$ 
+The construction of $\rho$ 
 is done by shrinking the length of each circle
 and expanding the length in the normal diections  
 to the circles in their small neigbourhood.
@@ -2515,9 +2481,9 @@ and for a sequences
 $\eps_n$ and $\ell_n$ 
 which converge to zero very fast.
 
-The obtainded length-metric $d$ is still close to the canonical,
+The obtainded length-metric $\rho$ is still close to the canonical,
 but for any open set $U$ containing $[a_\infty b_\infty]$
-the space $(U,d)$ does not admit 
+the space $(U,\rho)$ does not admit 
 a short homeomorphism to $\RR^3$.
 Indeed, if such homeomorphism $h$
 exists then 
@@ -2602,13 +2568,13 @@ in particular $d_xf$ is defined and has rank 2 at some point $x$, a contradictio
 \parit{Comment.} The Rademacher's theorem appears in \cite{rademacher}.
 The idea above can be also used to solve the following problem.
 
-{\it Assume $d$ is a metric on $\RR^2$ 
+{\it Assume $\rho$ is a metric on $\RR^2$ 
 which is induced by a norm.
-Show that $(\RR^2,d)$ admits 
+Show that $(\RR^2,\rho)$ admits 
 a \hyperref[Length-preserving map]{\emph{length-preserving map}} 
 to $\RR^3$ 
 if and only if 
-$(\RR^2,d)$ is isometric to the Euclidean plane.}
+$(\RR^2,\rho)$ is isometric to the Euclidean plane.}
 
 
 
@@ -2734,6 +2700,11 @@ we get
 $\|\bm{v}\|_{\bm{x}}$ does not depend on $\bm{x}$;
 hence the result follows.
 
+\parit{Comments.} 
+The idea in the proof is due to Thomas Foertsch
+and Viktor Schroeder, see \cite{foertsch-schroeder}.
+A more general statement was proved by Petra Hitzelberger and Alexander Lytchak in \cite{hitzelberger-lytchak}.
+Namely they show that if any pair of points in a geodesic metric space $X$ can be separated by an affine then $X$ is isometric to a convex subset a normed vector space.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2920,7 +2891,7 @@ and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
 \begin{wrapfigure}{o}{27mm}
 %\begin{center}
-\begin{lpic}[t(-2mm),b(-5mm),r(0mm),l(0mm)]{pics/fig8(1)}
+\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(0mm)]{pics/fig8(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3219,9 +3190,9 @@ see \cite{gromov-almost-flat}.
 \textit{Immersed disks.}
 Both circles on the picture bound essentially different discs.
 
-\begin{wrapfigure}[5]{o}{46mm}
+\begin{wrapfigure}[6]{o}{46mm}
 %\begin{center}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3234,7 +3205,7 @@ It is a good exercise to count the essentially different discs in these examples
 The first example is generally attributed to John Milnor.
 The second example was given by Daniel Bennequin in \cite{bennequin}.
 
-\begin{wrapfigure}[4]{o}{19mm}
+\begin{wrapfigure}[5]{i}{19mm}
 %\begin{center}
 \begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/annuli()}
 %\lbl[b]{24,41;x}
@@ -3342,7 +3313,7 @@ This problem was suggested by Greg Kuperberg, see \cite{One-step problems in geo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 \begin{wrapfigure}{o}{37mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/Simple-stabilization(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Simple-stabilization(1)}
 \lbl[]{8.7,8.3;{\color{white} $K_1$}}
 \lbl[]{28.7,8.3;{\color{white} $K_2$}}
 \end{lpic}
@@ -3431,7 +3402,7 @@ for the article on Antoine's Necklace in Wikipedia.}.
 \end{lpic}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Antoine's_Necklace_Iteration_2(.1)}
 \end{lpic}
-%???https://en.wikipedia.org/wiki/User:Blacklemon67
+%https://en.wikipedia.org/wiki/User:Blacklemon67
 \end{center}
 In a similar fashion one can construct so called \emph{Whitehead manifold}, 
 an example of open 3-dimensional manifold which is contractible, 
@@ -3456,12 +3427,6 @@ that is,
 \[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
 
-\begin{wrapfigure}{o}{46mm}
-%\begin{center}
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/Phi(1)}
-\end{lpic}
-%\end{center}
-\end{wrapfigure}
 
 Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
 $\phi(r)=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
@@ -3469,6 +3434,13 @@ $\phi(r)=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
 Consider $\RR^m$ with polar coordinates $(u,r)$, where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
 Let $\Phi\:\RR^m\to\RR^m$
 is defined by $\Phi(u,r)=(u,\phi(r))$.
+
+\begin{wrapfigure}{o}{46mm}
+%\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Phi(1)}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
 
 Set 
 \[
@@ -3694,7 +3666,7 @@ This problem is discussed in my paper \cite{petrunin-monthly}.
 
 For general polyhedral surface, the deformation which decrease the legths of all edges may not decrease the area.
 Moreover, the surface which minimize the area among all surfaces with fixed  triagulation may be not saddle. 
-An example of such surface can be seen on the picture. %???+PIC
+An example of such surface can be seen on the picture.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3749,7 +3721,7 @@ The problem is mentioned by Nina Lebedeva and me in \cite{lebedeva-petrunin}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{panov-S^3}.} 
 \textit{A sphere with one edge.}
-Such example $P$ can be found among the spherical polyhedral spaces which admit
+An example, say $P$, can be found among the spherical polyhedral spaces which admit
 an isometric $\mathbb{S}^1$-action with geodesic orbits.
 
 Fix large relatively prime integers $p>q$. 
@@ -3760,9 +3732,9 @@ it has 3 singular points with total angles $2\cdot\tfrac\pi p$,
 $2\cdot\tfrac\pi q$ and $2\cdot\pi\cdot(1-\tfrac1 p)$.
 
 Consider $\mathbb S^1$-action on $\mathbb S^3\subset\CC^2$ by the diagonal matrices $\left(\begin{smallmatrix}z^p&0\\0&z^q\end{smallmatrix}\right)$, $z\in\mathbb S^1\subset\CC$.
-Construct a spherical polyhedral metric $d$ on  $\mathbb S^3$
+Construct a spherical polyhedral metric $\rho$ on  $\mathbb S^3$
 such that the $\mathbb S^1$-orbits become geodesics 
-and the quotient $(\mathbb S^3,d)/\mathbb S^1$
+and the quotient $(\mathbb S^3,\rho)/\mathbb S^1$
 is isometric to $\hat \Delta$.
 
 In the constructed example 
@@ -3880,8 +3852,8 @@ by Stephanie Alexandr, Vitali Kapovitch and me, see \cite{akp}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{No simple geodesic}.} 
-\textit{No simple geodesic.}
+\parbf{\ref{No simple geodesics}.} 
+\textit{No simple geodesics.}
 The curvature of a vertex on the surface of a convex polyhedron
 is defined as the $2\cdot\pi-\theta$, where $\theta$ is the total angle around the vertex.
 
@@ -4069,9 +4041,10 @@ in their proof of
 Kneser--Poulsen  
 and Klee--Wagon conjectures in dimension $2$.
 
-It is instructive to check that the dimension $2\cdot m$ is optimal;
+The dimension $2\cdot m$ is optimal;
 that is, for any positive integer $m$,
 there are two maps $h_0,h_1\:F\to \RR^m$ which can not be connected by a monotonic homotopy $h_t\:F\to\RR^{2\cdot m-1}$.
+The later was shown by Maria Belk and Robert Connelly in \cite{belk-connelly}
 
 
 
