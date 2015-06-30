@@ -1,3 +1,181 @@
+
+
+
+
+
+
+
+
+\begin{pr}{}{Deformation to a product}\label{Deformation to a product} 
+Let $(M,g)$ be a compact Riemannian manifold with non-negative sectional curvature. 
+Show that there is a continuous one parameter family of non-negatively curved metrics $g_t$ on $M$, $t\in[0,1]$, 
+such that $g_0=g$ and a finite Riemannian cover of $(M,g_1)$ is isometric to a product of a flat torus and a simply connected manifold.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\wrenches\ref{Deformation to a product}.} 
+\textit{Deformation to a product.} 
+Denote by $\Gamma$ the fundamental group of $M$.
+
+Let $(\tilde M,\tilde g)$ be universal cover of $(M,g)$ with induced Riemannian metric.
+The space $(\tilde M,\tilde g)$ is isometric to a product $\RR^k\times K$, 
+where $k$ is nonnegative integer and $K$ is a compact Riemannian manifold.
+
+Denote by $G$ the isometry group of $K$.
+Given a continuous one parameter family of homomorphisms $\phi_t\:\RR^k\to G$,
+consider the the  one parameter family of diffeomorphisms of $\RR^k\times K$ to itself defined as
+\[\Phi_t\:(x,k)\mapsto (x,\phi_t(x)\cdot k).\]
+Denote by 
+ $\tilde g_t$ pullback 
+of $\tilde g$ via $\Phi_t$,
+so 
+\[\Phi_t\:(\RR^k\times K,\tilde g_t)\to (\RR^k\times K,\tilde g)\]
+is an isometry.
+
+It remains to find the one parameter family $\phi_t$ such that 
+(1) $\tilde g_t$ is $\Gamma$-invariant for all $t$
+and (2) $(M,g_1)=(\tilde M,\tilde g)/\Gamma$ admits a finite Riemannian cover by the product of a flat torus and $K$.
+
+First assume that $\Gamma$ is acting on $\RR^k$ by parallel translations.
+ 
+
+
+
+
+In terms of $\phi_t$, it can be formulated the following way.
+There is a normal subgroup of finite index $\Gamma_0\vartriangleleft\Gamma$ such that 
+\begin{itemize}
+\item $\Gamma_0$ acts on $\RR^k$ by parallel translations; 
+in particular $\Gamma_0$ can be identified with with a lattice in $\RR^k$.
+\item the action of $\Gamma_0$ on $K$ is given by $\phi_1(\Gamma_0)$.
+\end{itemize}
+
+
+\parit{Comment.}
+The problem is due to Burkhard Wilking, see \cite{wilking-2000}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{\thm}{If hemisphere then sphere}\label{hS=>S} 
+Let $M$ be an $m$-dimensional Riemannian manifold with Ricci curvature at least $m-1$;
+moreover there is a point $p\in M$ such that sectional curvature is exactly $1$ at all points on distance $\le \tfrac\pi2$ from $p$.
+Show that $M$ has constant sectional curvature.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\wrenches\ref{hS=>S}.} 
+\textit{If hemisphere then sphere.}
+Denote by $q$ a point in $M$ which lies on the maximal distance from $p$.
+
+Consider the function $f=\cos \dist_p+\cos\dist_q$.
+Note that 
+\[\triangle f+m\cdot f\le 0\] 
+in the sense of distributions.
+If follows that $f\ge 0$, in particular 
+\[B(p,\tfrac\pi2)\cup B(q,\tfrac\pi2)=M.\]
+
+Set \[a(r)=\area(\partial [B(q,r)\backslash B(p,\tfrac\pi2)]).\]
+Prove that the function
+\[r \mapsto \tfrac{a(r)}{(\sin r)^{m-1}}\]
+is nonincreasing 
+and 
+\[\tfrac{a(r)}{(\sin r)^{m-1}}\le\area\mathbb{S}^{m-1}.\]
+Moreover if equality holds for some $r$ then $B(q,r)\backslash B(p,\tfrac\pi2)$ is isometric to an $r$-ball in the unit sphere.
+This statement is analogous to the Bishop--Gromov inequality and can be proved the same way.
+
+Finally note that $a(\tfrac\pi2)=\area\mathbb{S}^{m-1}$,
+hence the result follows.
+ 
+
+\parit{Comments.}
+The problem is due to Fengbo Hang %Fengbo Hang fengbo@cims.nyu.edu
+and Xiaodong Wang %Xiaodong Wang xwang@math.msu.edu 
+\cite{hang-wang};
+their proof is different.
+
+The problem is still nontrivial 
+even if instead of the first condition one has that sectional curvature $\ge 1$;
+In dimension 2, 
+it was proved by Victor Toponogov in \cite{toponogov},
+but it also follow easily from the proof given by Victor Zalgaller in \cite{zalgaller-shperical-polygon}.
+
+
+If instead of first condition one only has that scalar curvature $\ge m\cdot(m-1)$, then the conclusion does not hold; 
+it was conjectured by Maung Min-Oo in 1995 
+and disproved by
+Simon Brendle,
+Fernando Marques
+and Andre Neves in \cite{brendle-marques-neve}.
+
+
+
+
+
+
+
+
+
+
+
+\begin{pr}{}{Closed surface}\label{3D-moon-in-puddle}
+Construct a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
+with all the principle curvatures between $-1$ and $1$
+such that it does not surround a ball of radius 1.
+\end{pr}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{3D-moon-in-puddle}.} 
+\textit{Closed surface.}
+The solution should be guessed from the picture.
+
+%???CHANGE PIC
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-1(.2)}
+\end{lpic}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-2(.2)}
+\end{lpic}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-3(.2)}
+\end{lpic}
+
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-6(.2)}
+\end{lpic}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-5(.2)}
+\end{lpic}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-4(.2)}
+\end{lpic}
+
+\parit{Comments.}
+This solution is a fattening of \emph{Bing's House}, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{pr}{}{Bounded curvature}\label{Bounded curvature}
 Denote by $\mathcal{R}_{\mathbb S^5}$ the space of all Riemannian metrics with absolute value of sectional curvature at most $1$.
 Show that there are two metrics $g_0,g_1\in \mathcal{R}_{\mathbb S^5}$ such that if $g_t\in\mathcal{R}_{\mathbb S^5}$,

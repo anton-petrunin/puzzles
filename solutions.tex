@@ -1,7 +1,7 @@
 \backmatter
 \chapter{Semisolutions}
 
-\section*{Curves and surfaces}
+\section*{Curves}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{liberman}.} 
@@ -110,38 +110,20 @@ The statement still holds if the curve fails to be smooth at one point.
 A spherical version of this statement 
 was used by Dmitri Panov and me 
 in \cite{panov-petrunin-ramification}.
- 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{3D-moon-in-puddle}.} 
-\textit{Closed surface.}
-The solution should be guessed from the picture.
-
-%???CHANGE PIC
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-1(.2)}
-\end{lpic}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-2(.2)}
-\end{lpic}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-3(.2)}
-\end{lpic}
-
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-6(.2)}
-\end{lpic}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-5(.2)}
-\end{lpic}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(-5mm)]{pics/bing-4(.2)}
-\end{lpic}
-
-\parit{Comments.}
-This solution is a fattening of \emph{Bing's House}, 
+The analog of this statement in 3-dimensional case does not work.
+Namely, there is a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
+with all the principle curvatures between $-1$ and $1$
+such that it does not surround a ball of radius 1.
+Such example can be obtained by fatenning Bing's house,
 a nontrivial example of contractible 2-complex in $\RR^3$, 
 see \cite{bing}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{curve-in-S^2}.}
 \textit{A curve in a sphere.}
-Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intesects each equator.
+Assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intesects each equator.
+Let us present two solutions.
 
 \parit{A solution with Crofton formula.}
 Note that we can assume that $\alpha$ is a broken line.
@@ -220,183 +202,6 @@ number of different proofs are discussed by Serge Tabachnikov in \cite{tabachnik
 If instead of a disc we have a region bounded by closed convex curve $\gamma$ then it is still true that the average curvature of $\alpha$ is at least as big as average curvature of $\gamma$. 
 The proof was given by Jeffrey Lagarias
 and Thomas Richardson in \cite{lagarias-richardson}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Convex hat}.}
-\textit{Convex hat.}
-Let $\gamma$ be a minimizing geodesic with the ends in $\Delta$.
-
-Assume $\gamma\backslash\Delta\ne\emptyset$.
-Denote by $\gamma'$ the curve formed by $\gamma\cap \Delta$ 
-and the reflection on $\gamma\backslash\Delta$ in $\Pi$.
-Note 
-\[\length\gamma'=\length\gamma\]
-and $\gamma'$ runs partly in and partly outside of the surface, but does not get inside of $\Sigma$.
-
-Denote by $\gamma''$ the closest point projection of $\gamma'$ on $\Sigma$.
-The curve $\gamma''$ lies in $\Sigma$ has the same ends as $\gamma$.
-
-It remains to note that 
-\[\length\gamma''<\length\gamma;\]
-the later leads to a contradiction.
-
- 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Unbended geodesic}.} 
-\textit{Unbended geodesic.}
-Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
-
-Prove that for any $x\in\Sigma$ the distance $|x - p_t|$ is nondecreasing in $t$.
-
-Use the later statement, to prove the same for $|x - p_t|_W$,
-where $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
-
-Prove that 
-\[|q - p|_W=|q - p|_\Sigma\] 
-for any $p,q\in\Sigma$.
-
-
-Conclude that the distance $|q - p_t|_W=|q - p|_\Sigma$
-for any $t$.
-It follows that the curve 
-$$\gamma_t(\tau)=\left[
-\begin{aligned}
-&(\tau-t)\cdot\gamma'(\tau)&&\text{if}&&\tau< t;
-\\
-&\gamma(\tau)&&\text{if}&&\tau> t.
-\end{aligned}
-\right.$$
-is a minimizing geodesic from $p_t$ to $q$ in the intrinsic metric of $W$. 
-
-If $q$ is visible from $p_t$ for some $t$ then the line segment $[qp_t]$ intersects $\Sigma$ only at $q$.
-From above, 
-$\gamma_t$  coinsides with the line segment $[qp_t]$ which is impossible.
-
-\parit{Comment.}
-This  observation was used by Anatoliy Milka
-to generalize Alexandrov's comparison theorem for convex surfaces, see \cite{milka-geod}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{min-surf}.} 
-\textit{A minimal surface.}
-Without loss of generality we may assume that the sphere is centered at $0\in\RR^3$.
-
-Consider the restriction $h$ of the function $x\mapsto |x|^2$ to the surface $\Sigma$.
-Prove that $\Delta_\Sigma h\le 2$ and apply apply the divergence theorem for $\nabla_\Sigma h$.
-It follows that the function
-\[f\:r\mapsto \frac{\area(\Sigma\cap B(0,r))}{r^2}
-\]
-is non-decreasing in the interval $(0,1)$.
-Hence the result follows.
-
-\parit{Comments.}
-We described a partial case of so called \emph{monotonicity formula}.
-
-Note that if we assume in addition that the surface is a disc,
-then the statement holds for any saddle surface. 
-Indeed, denote by $S_r$ the sphere of radius $r$ concentrated with the unit sphere. 
-Then according to Problem~\ref{curve-in-S^2}, 
-$\length \Sigma\cap S_r\ge 2\cdot\pi\cdot r$.
-Then coarea formula leads to the solution.
-
-On the other hand there are saddle surfaces homeomorphic to the cylinder
-may have have arbitrary small area in the ball. 
-
-If $\Sigma$ does not pass through the center 
-and we only know the distance, say $r$, 
-from center to $\Sigma$ 
-then optimal bound is expected to be $\pi\cdot(1-r^2)$.
-This is known if $\Sigma$ is homeomorphic to  disc.
-This is also known for the area minimizing surfaces;
-an analogous statement
-holds in all dimensions and codimensions.
-These results were proved by 
-Herbert Alexander, 
-David Hoffman
-and Robert Osserman in \cite{alexander-osserman} and \cite{alexander-hoffman-osserman} correspondingly.
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{half-torus}.} 
-\textit{Half-torus.}
-Let $K$ be the convex hull of $\Omega'$.
-Consider the boundary curve $\gamma'$ of $\partial K\cap \Omega'$ in $\Omega'$.
-
-First note that the Gauss curvature of $\Omega'$ has to vanish at the points of $\gamma'$;
-in other words, $\gamma'$ is the image of $\gamma$ 
-under the length-preserving map.
-Indeed since $\gamma'$ lies on convex part, 
-the Gauss curvature at the points of $\gamma'$ has to be nonnegative. 
-On the other hand $\gamma'$ bounds a flat disc in $\partial K$;
-therefore its integral intrinsic curvature has to be $2{\cdot}\pi$.
-If the Gauss curvature is positive at some point of $\gamma'$ then total intrinsic curvature of $\gamma'$ has to be $<2{\cdot}\pi$, a contradiction.
-
-Now prove that $\gamma'$ is an asymptotic line.
-(Assume that the asymptotic direction goes transversely to $\gamma'(t)$ and conclude $\gamma(t)\notin\partial K$.)
-
-Without loss of generality, we can assume that the length of $\gamma$ is $2{\cdot}\pi$ and its intrinsic curvature is $\equiv 1$.
-Therefore, as the space curve,
-$\gamma'$ has to be a curve with constant curvature $1$ and it should be closed.
-Any such curve is congruent to a flat circle.
-
-\parit{Comments.} It is not known if $\Omega'$ is congruent to $\Omega$.
-
-The solution presented above is based on my answer 
-to the question of Joseph O'Rourke, see \cite{rourke}.
-Here are some related statements.
-\begin{itemize}
-\item Half-torus is second order rigid;
-this was proved by Eduard Rembs in
-\cite{rembs}, see also \cite{efimov}*{p. 135}.
-\item Any second order rigid surface does not admit analytic deformation (proved by Nikolay Efimov in \cite{efimov}*{p. 121})
-and for the surfaces of revolution, the assumption of analyticity can be removed (proved by Idzhad Sabitov in \cite{sabitov}).
-\end{itemize}
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{asymptotic-line}.} 
-\textit{Asymptotic line.}
-Arguing by contradiction, assume that the projection $\bar\gamma$
-of $\gamma$ on $x y$-plane is star shaped with respect to the origin.
-
-Consider the function 
-$$h(t)=(d_{\bar\gamma(t)}f)(\gamma(t)).$$
-Prove that $h'(t)\ne 0$.
-In particular $h(t)$ is a strictly monotonic function of $\mathbb{S}^1$, a contradiction.
-
-\parit{Comments.}
-The problem is discussed by Dmitri Panov in \cite{panov-curves}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{torus}.}
-\textit{Non-contractible geodesics.}
-Take a torus of revolution $T$;
-the rotations of the circle produce a family closed geodesics which we will call \emph{meridians}.
-
-Note that a geodesic on $T$ is either a meridian
-or it is transversal to all the meridians.
-No closed curve of these types can be contractible. 
-
-\parit{Comments.} I know this problem 
-from the book of Mikhael Gromov \cite{gromov-MetStr},
-where it is attributed to Y. Colin de Verdi\`ere.
-I am not aware of any solutions 
-which do not admit a foliation by geodesics.
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Convex figures}.}
@@ -517,18 +322,19 @@ later the same solution was rediscovered few times.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Oval in oval}.}
-\textit{Oval in oval.}
-Show that the chord which minimize (or maximize) the ratio in which it divides the bigger oval solves the problem.
-
-\begin{wrapfigure}{o}{51mm}
-\begin{lpic}[t(-1mm),b(-0mm),r(0mm),l(0mm)]{pics/tangent-eq-sol(1)}
+\begin{wrapfigure}[8]{o}{51mm}
+\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/tangent-eq-sol(1)}
 \lbl[tr]{20,5;$u$}
 \lbl[rt]{18,15;$r$}
 \lbl[rt]{26,6;$l$}
 \lbl[bl]{25,10;$x_u$}
 \end{lpic}
 \end{wrapfigure}
+
+\parbf{\ref{Oval in oval}.}
+\textit{Oval in oval.}
+Show that the chord which minimize (or maximize) the ratio in which it divides the bigger oval solves the problem.
+
 
 \parit{Alternative solution.}
 Given a unit vector $u$, denote by $x_u$ the point on the inner curve
@@ -555,13 +361,226 @@ In particular
 the integrals are equal to eachother. 
 The later contradicts $({*})$.
 
+
+
 \parit{Comments.} This is a problem of Serge Tabachnikov, see \cite{tabachnikob-mi}.
 A closely related, so called \emph{equal tangents problem} is discussed by the same author in \cite{tabacnikov=tan}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Surfaces}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Convex hat}.}
+\textit{Convex hat.}
+Let $\gamma$ be a minimizing geodesic with the ends in $\Delta$.
+
+Assume $\gamma\backslash\Delta\ne\emptyset$.
+Denote by $\gamma'$ the curve formed by $\gamma\cap \Delta$ 
+and the reflection on $\gamma\backslash\Delta$ in $\Pi$.
+Note 
+\[\length\gamma'=\length\gamma\]
+and $\gamma'$ runs partly in and partly outside of the surface, but does not get inside of $\Sigma$.
+
+Denote by $\gamma''$ the closest point projection of $\gamma'$ on $\Sigma$.
+The curve $\gamma''$ lies in $\Sigma$ has the same ends as $\gamma$.
+
+It remains to note that 
+\[\length\gamma''<\length\gamma;\]
+the later leads to a contradiction.
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Unbended geodesic}.} 
+\textit{Unbended geodesic.}
+Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
+
+Prove that for any $x\in\Sigma$ the distance $|x - p_t|$ is nondecreasing in $t$.
+
+Use the later statement, to prove the same for $|x - p_t|_W$,
+where $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
+
+Prove that 
+\[|q - p|_W=|q - p|_\Sigma\] 
+for any $p,q\in\Sigma$.
+
+
+Conclude that the distance $|q - p_t|_W=|q - p|_\Sigma$
+for any $t$.
+It follows that the curve 
+$$\gamma_t(\tau)=\left[
+\begin{aligned}
+&(\tau-t)\cdot\gamma'(\tau)&&\text{if}&&\tau< t;
+\\
+&\gamma(\tau)&&\text{if}&&\tau> t.
+\end{aligned}
+\right.$$
+is a minimizing geodesic from $p_t$ to $q$ in the intrinsic metric of $W$. 
+
+If $q$ is visible from $p_t$ for some $t$ then the line segment $[qp_t]$ intersects $\Sigma$ only at $q$.
+From above, 
+$\gamma_t$  coinsides with the line segment $[qp_t]$ which is impossible.
+
+\parit{Comment.}
+This  observation was used by Anatoliy Milka
+to generalize Alexandrov's comparison theorem for convex surfaces, see \cite{milka-geod}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{min-surf}.} 
+\textit{A minimal surface.}
+Without loss of generality we may assume that the sphere is centered at $0\in\RR^3$.
+
+Consider the restriction $h$ of the function $x\mapsto |x|^2$ to the surface $\Sigma$.
+Prove that $\Delta_\Sigma h\le 2$ and apply apply the divergence theorem for $\nabla_\Sigma h$.
+It follows that the function
+\[f\:r\mapsto \frac{\area(\Sigma\cap B(0,r))}{r^2}
+\]
+is non-decreasing in the interval $(0,1)$.
+Hence the result follows.
+
+\parit{Comments.}
+We described a partial case of so called \emph{monotonicity formula}.
+
+The seme argument shows that if $0$ is a double point
+of $\Sigma$ then $\area\Sigma\ge 2\cdot \pi$.
+This observation was used in the proof 
+that the minimal disc bounded by a simple closed curve with totoal curvature $\le 4\cdot\pi$ is necessary emebdded.
+The proof was given by 
+Tobias Ekholm, 
+Brian White
+and Daniel Wienholtz
+in \cite{EWW};
+an amusing simplification 
+was obtained by 
+Stephan Stadler. %???REF
+This result also imlies the result of John Milnor that any emebdded circle of total curvature at most $4\cdot\pi$ is unknot, see \cite{milnor}.
+
+Note that if we assume in addition that the surface is a disc,
+then the statement holds for any saddle surface. 
+Indeed, denote by $S_r$ the sphere of radius $r$ concentrated with the unit sphere. 
+Then according to Problem~\ref{curve-in-S^2}, 
+$\length(\Sigma\cap S_r)\ge 2\cdot\pi\cdot r$.
+Then coarea formula leads to the solution.
+
+On the other hand there are saddle surfaces homeomorphic to the cylinder
+may have have arbitrary small area in the ball. 
+
+If $\Sigma$ does not pass through the center 
+and we only know the distance, say $r$, 
+from center to $\Sigma$ 
+then optimal bound is expected to be $\pi\cdot(1-r^2)$.
+This is known if $\Sigma$ is homeomorphic to  disc.
+This is also known for the area minimizing surfaces;
+an analogous statement
+holds in all dimensions and codimensions.
+These results were proved by 
+Herbert Alexander, 
+David Hoffman
+and Robert Osserman in \cite{alexander-osserman} and \cite{alexander-hoffman-osserman} correspondingly.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{half-torus}.} 
+\textit{Half-torus.}
+Let $K$ be the convex hull of $\Omega'$.
+Consider the boundary curve $\gamma'$ of $\partial K\cap \Omega'$ in $\Omega'$.
+
+First note that the Gauss curvature of $\Omega'$ has to vanish at the points of $\gamma'$;
+in other words, $\gamma'$ is the image of $\gamma$ 
+under the length-preserving map.
+Indeed since $\gamma'$ lies on convex part, 
+the Gauss curvature at the points of $\gamma'$ has to be nonnegative. 
+On the other hand $\gamma'$ bounds a flat disc in $\partial K$;
+therefore its integral intrinsic curvature has to be $2{\cdot}\pi$.
+If the Gauss curvature is positive at some point of $\gamma'$ then total intrinsic curvature of $\gamma'$ has to be $<2{\cdot}\pi$, a contradiction.
+
+Now prove that $\gamma'$ is an asymptotic line.
+(Assume that the asymptotic direction goes transversely to $\gamma'(t)$ and conclude $\gamma(t)\notin\partial K$.)
+
+Without loss of generality, we can assume that the length of $\gamma$ is $2{\cdot}\pi$ and its intrinsic curvature is $\equiv 1$.
+Therefore, as the space curve,
+$\gamma'$ has to be a curve with constant curvature $1$ and it should be closed.
+Any such curve is congruent to a flat circle.
+
+\parit{Comments.} It is not known if $\Omega'$ is congruent to $\Omega$.
+
+The solution presented above is based on my answer 
+to the question of Joseph O'Rourke, see \cite{rourke}.
+Here are some related statements.
+\begin{itemize}
+\item Half-torus is second order rigid;
+this was proved by Eduard Rembs in
+\cite{rembs}, see also \cite{efimov}*{p. 135}.
+\item Any second order rigid surface does not admit analytic deformation (proved by Nikolay Efimov in \cite{efimov}*{p. 121})
+and for the surfaces of revolution, the assumption of analyticity can be removed (proved by Idzhad Sabitov in \cite{sabitov}).
+\end{itemize}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{asymptotic-line}.} 
+\textit{Asymptotic line.}
+Arguing by contradiction, assume that the projection $\bar\gamma$
+of $\gamma$ on $x y$-plane is star shaped with respect to the origin.
+
+Consider the function 
+$$h(t)=(d_{\bar\gamma(t)}f)(\gamma(t)).$$
+Prove that $h'(t)\ne 0$.
+In particular $h(t)$ is a strictly monotonic function of $\mathbb{S}^1$, a contradiction.
+
+\parit{Comments.}
+The problem is discussed by Dmitri Panov in \cite{panov-curves}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{torus}.}
+\textit{Non-contractible geodesics.}
+Take a torus of revolution $T$;
+the rotations of the circle produce a family closed geodesics which we will call \emph{meridians}.
+
+Note that a geodesic on $T$ is either a meridian
+or it is transversal to all the meridians.
+No closed curve of these types can be contractible. 
+
+\parit{Comments.} I know this problem 
+from the book of Mikhael Gromov \cite{gromov-MetStr},
+where it is attributed to Y. Colin de Verdi\`ere.
+I am not aware of any solutions 
+which do not admit a foliation by geodesics.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{The last problem of Poincare}.} 
+\textit{The last problem of Poincar\'e.}
+Set 
+\begin{align*}
+H_+&=\set{z\in\CC}{\Re(z)\ge 1},
+\\
+H_-&=\set{z\in\CC}{\Re(z)\le -1}.
+\end{align*}
+
+Assume $f$ has no fixed points;
+in other words the image of the map 
+\[\phi\:z\mapsto f(z)-z\] 
+lies in $\CC^*=\CC\backslash\{0\}$.
 
 \begin{wrapfigure}{o}{44mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/birkhoff(1)}
+\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/birkhoff(1)}
 \lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
 \lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
 \lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
@@ -574,20 +593,6 @@ A closely related, so called \emph{equal tangents problem} is discussed by the s
 \lbl{3,3;$H_-$}
 \end{lpic}
 \end{wrapfigure}
-
-\parbf{\ref{Poincare's last theorem}.} 
-\textit{Poincar\'e's last theorem.}
-Set 
-\begin{align*}
-H_+&=\set{z\in\CC}{\Re(z)\ge 1},
-\\
-H_-&=\set{z\in\CC}{\Re(z)\le -1}.
-\end{align*}
-
-Assume $f$ has no fixed points;
-in other words the image of the map 
-\[\phi\:z\mapsto f(z)-z\] 
-lies in $\CC^*=\CC\backslash\{0\}$.
 
 Fix $\eps>0$ such that $|f(z)-z|>\eps$ for any $z\in\CC$.
 Note that the map 
@@ -711,14 +716,14 @@ see \cite{gromov-SGMC}*{\S\textonehalf}.
 Choose a continuous map $h\:\Sigma_1\to \Sigma_2$
 which is identical on $\gamma$.
 Let us prove that for some $p_1\in \Sigma_1$ and $p_2=h(p_1)\in \Sigma_2$
-the tangent plane $\mathrm{T}_{p_1} \Sigma_1$ is parallel to the tangent plane $\mathrm{T}_{p_2} \Sigma_2$;
+the tangent plane $\T_{p_1} \Sigma_1$ is parallel to the tangent plane $\T_{p_2} \Sigma_2$;
 this is stronger than required.
 
 Arguing by contradiction,
 assume that such point does not exist.
 Then for each $p\in\Sigma_1$
 there is unique line $\ell_p\ni p$ 
-which is parallel to each of the the tangent planes $\mathrm{T}_{p} \Sigma_1$ and $\mathrm{T}_{h(p)} \Sigma_2$.
+which is parallel to each of the the tangent planes $\T_{p} \Sigma_1$ and $\T_{h(p)} \Sigma_2$.
 
 Note that the lines $\ell_p$ form a tangent line distribution over $\Sigma_1$
 and $\ell_p$ is tangent to $\gamma$ at any $p\in\gamma$.
@@ -823,6 +828,7 @@ The polyhedron $K$ should look like a vertical needle.
 On the surface of $K$ there three broken lines, formed by the corresponding vertices of triangle.
 The polyhedron can be made in such a way that any minimizing geodesic from the top of $K$ to its bottom
 has to cross these lines in the cyclic order at nearly each edge, and the number of edges can be made arbitrary large. 
+(The projection of geodesic spirals around the origin.)
 
 \parit{Comments.} This construction is due to 
 Imre B{\'a}r{\'a}ny, 
@@ -832,21 +838,6 @@ see
 \cite{imre-kuiperberg-zamfirescu}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Dense homeomorphism}.} 
-\textit{Dense homeomorphism.}
-Note that there is countable set of homeomorphisms $h_1,h_2,\dots$ which is dense in $\mathcal{H}$
-such that
-each $h_n$ fix all the points outside an open round disc, say $D_n$.
-
-Choose a countable disjoint collection of round discs $D_n'$
-and consider the homeomorphism $h\:\mathbb S^2\to \mathbb S^2$
-which fix all the poins ouside of $\bigcup_nD'_n$ and
-for each $n$,
-the restriction $h|_{D_n'}$ is conjugate to $h_n|_{D_n}$. 
-
-Show that $h$ solves the problem.
-
-\parit{Comments.} The problem was mentioned by Frederic Le Rox, see \cite{rox}*{Problem section}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -934,17 +925,17 @@ Denote by $\kappa$ the lower bound for principle curvatures of $\Sigma$.
 Note that we can assume that $\kappa>0$.
 
 Fix sufficiently small $\eps=\eps(M,\kappa)>0$.
-Given $p\in \Sigma$ consider the lift $\tilde h_p\:B(p,\eps)\to \mathrm{T}_{h(p)}$ along the exponential map $\exp_{h(p)}\:\mathrm{T}_{h(p)}\to M$.
+Given $p\in \Sigma$ consider the lift $\tilde h_p\:B(p,\eps)\to \T_{h(p)}$ along the exponential map $\exp_{h(p)}\:\T_{h(p)}\to M$.
 More precisely:
 \begin{enumerate}
 \item Connect each point $q\in B(p,\eps)\subset \Sigma$ to $p$
 by a the minimizing geodesic  path $\gamma_q\:[0,1]\to \Sigma$
-\item Consider the lifting $\tilde\gamma_q$ in $\mathrm{T}_{h(p)}$; 
+\item Consider the lifting $\tilde\gamma_q$ in $\T_{h(p)}$; 
 that is the curve such that $\tilde\gamma_q(0)=0$ and $\exp_{h(p)}\circ\tilde\gamma_q(t)=\gamma_q(t)$ for any $t\in[0,1]$.
  \item Set $\tilde h(q)=\tilde\gamma_q(1)$.
 \end{enumerate}
 
-Show any the hypersurface $\tilde h_p(B(p,\eps))\subset \mathrm{T}_{h(p)}$ has principle curvatures at least $\tfrac\kappa2$.
+Show any the hypersurface $\tilde h_p(B(p,\eps))\subset \T_{h(p)}$ has principle curvatures at least $\tfrac\kappa2$.
 
 Use the same idea as in problem~\ref{Immersed surface} to show that 
 one can fix $\delta\z=\delta(M,\kappa)>0$ such that the restriction of $\tilde h_p|_{B(p,\delta)}$ is injective.
@@ -1055,13 +1046,13 @@ the proof of Gromov--Levy isometric inequality given in the Gromov's appendix to
 Fix $p\in M$.
 Denote by $s$ 
 the second fundamental form of $M$ at $p$;
-it is a symmetric bi-linear form on the tangent space $\mathrm{T}_pM$ of $M$ with values in the normal space $\mathrm{N}_pM$ to $M$, see page~\pageref{Second fundamental form}.
+it is a symmetric bi-linear form on the tangent space $\T_pM$ of $M$ with values in the normal space $\mathrm{N}_pM$ to $M$, see page~\pageref{Second fundamental form}.
 Note that the normal space $\mathrm{N}_pM$ is two-dimensional.
 
 Prove that if sectional curvature of $M$ is positive, 
 then
 \[\<s(X,X),s(Y,Y)\> > 0\leqno({*})\]
-for any pair of nonzero vectors $X,Y\in\mathrm{T}_pM$.
+for any pair of nonzero vectors $X,Y\in\T_pM$.
 
 Show that $({*})$ implies that there is an orthonormal basis $e_1,e_2$ in $\mathrm{N}_pM$ 
 such that the real-valued quadratic forms 
@@ -1136,9 +1127,9 @@ Choose a pair of sufficiently close minimal spheres $\Sigma$ and $\Sigma'$,
 say assume that the distance $a$ between $\Sigma$ and $\Sigma'$ is strictly smaller than the injectivity radius of the manifold.
 Note that in this case there is a bijection $\Sigma\to \Sigma'$, which will be denoted by $p\mapsto p'$ such that the distance $|p-p'|=a$ for any $p\in\Sigma$.
 
-Let $\iota_p\:\mathrm{T}_p\to\mathrm{T}_{p'}$ be the parallel translation along the (necessary unique) minimizing geodesic from $p$ to $p'$.
+Let $\iota_p\:\T_p\to\T_{p'}$ be the parallel translation along the (necessary unique) minimizing geodesic from $p$ to $p'$.
 Use hairy ball theorem 
-to show that there is a pair $(p,p')$ such that $\iota_p(\mathrm{T}_p\Sigma)=\mathrm{T}_{p'}\Sigma'$.
+to show that there is a pair $(p,p')$ such that $\iota_p(\T_p\Sigma)=\T_{p'}\Sigma'$.
 
 Consider pairs of unit-speed geodesics $\alpha$ and $\alpha'$ 
 in $\Sigma$ and $\Sigma'$  
@@ -1277,26 +1268,26 @@ in  \cite{grove-wilking}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Energy minimizer}.} 
 \textit{Energy minimizer.}
-Denote by $\mathrm{U}$ the unit tangent bundle over $\RP^m$
-and $\mathrm{L}^{2\cdot(m-1)}$ the space of projective lines in $\ell\:\RP^1\to \RP^m$.
-The spaces $\mathrm{U}$ and $\mathrm{L}$ 
+Denote by $\mathcal{U}$ the unit tangent bundle over $\RP^m$
+and $\mathcal{L}$ the space of projective lines in $\ell\:\RP^1\to \RP^m$.
+The spaces $\mathcal{U}$ and $\mathcal{L}$ 
 have dimesions $2\cdot m-1$ 
 and $2\cdot(m-1)$
 correspondingly.
 
 
 According to Liouville's theorem, the identity
-\[\int\limits_{\mathrm{U}}f(v)\cdot d_v\vol_{2\cdot m-1}
+\[\int\limits_{\mathcal{U}}f(v)\cdot d_v\vol_{2\cdot m-1}
 =
-\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} f(\ell'(t))\cdot dt\]
-holds for any integrable function $f\:\mathrm{U}\to\RR$.
+\int\limits_{\mathcal{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} f(\ell'(t))\cdot dt\]
+holds for any integrable function $f\:\mathcal{U}\to\RR$.
 
 Let $F\:\RP^m\to\RP^m$ be a smooth map.
 Note that up to multiplicative constant,
 the energy of $F$ can be expressed the following way
-\[\int\limits_{\mathrm{U}} |dF(v)|^2\cdot d_v\vol_{2m-1}
+\[\int\limits_{\mathcal{U}} |dF(v)|^2\cdot d_v\vol_{2m-1}
 =
-\int\limits_{\mathrm{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\].
+\int\limits_{\mathcal{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt.\]
 
 The result follows since
 \[\int\limits_{\RP^1} |(F\circ \ell)(t)|^2\cdot dt\ge \pi\]
@@ -1324,11 +1315,11 @@ We will show that if the injectivity radius of the manifold $(M,g)$ is at least 
 then the average of sectional curvatures on $(M,g)$ is at most $1$.
 This is equivalent to the problem.
 
-Fix a point $p\in M$ and two orthonormal vectors $U,V\in\mathrm{T}_p M$.
+Fix a point $p\in M$ and two orthonormal vectors $U,V\in\T_p M$.
 Consider the geodesic $\gamma$ in $M$ such that $\dot\gamma(0)=U$.
 
-Set $U_t=\dot\gamma(t)\in \mathrm{T}_{\gamma(t)}$ 
-and let $V_t\in \mathrm{T}_{\gamma(t)}$ be the parallel translation of $V=V_0$ along $\gamma$.
+Set $U_t=\dot\gamma(t)\in \T_{\gamma(t)}$ 
+and let $V_t\in \T_{\gamma(t)}$ be the parallel translation of $V=V_0$ along $\gamma$.
 
 Consider the field $W_t=\sin t\cdot V_t$ on $\gamma$.
 Set 
@@ -1401,14 +1392,14 @@ and Detlef Gromoll in \cite{buser-gromoll}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{lie-nonneg}.} 
 \textit{Lie group.} We will write the metrics in contrvariant form, 
-so metric $g$ is considered to be a linear transformation $\mathrm T\to \mathrm T^*$ and 
+so metric $g$ is considered to be a linear transformation $\T\to \T^*$ and 
 \[|v|_g=\sqrt{[g^{-1}(v)](v)}\]
 for any tangent vector $v$.
 
 
 Let $G$ be the compact Lie group and $e\in G$ is the identity element.
 
-Denote by $K$ the set of all contrvariant metrics $g\:\mathrm{T}^*_e\to \mathrm{T}_e $ 
+Denote by $K$ the set of all contrvariant metrics $g\:\T^*_e\to \T_e $ 
 which extend to non-negatively curved left invariant metrics $\tilde g$ on $G$. 
 
 First recall that the bi-invariant metric on a compact Lie groups is nonnegatively curved. 
@@ -1485,42 +1476,7 @@ a contradiction.
 \parit{Comments.}
 The problem is due to Anatoliy Milka, see \cite{milka-poly}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{Deformation to a product}.} 
-\textit{Deformation to a product.} 
-Denote by $\Gamma$ the fundamental group of $M$.
 
-Let $(\tilde M,\tilde g)$ be universal cover of $(M,g)$ with induced Riemannian metric.
-The space $(\tilde M,\tilde g)$ is isometric to a product $\RR^k\times K$, 
-where $k$ is nonnegative integer and $K$ is a compact Riemannian manifold.
-
-Denote by $G$ the isometry group of $K$.
-Given a continuous one parameter family of homomorphisms $\phi_t\:\RR^k\to G$,
-consider the the  one parameter family of diffeomorphisms of $\RR^k\times K$ to itself defined as
-\[\Phi_t\:(x,k)\mapsto (x,\phi_t(x)\cdot k).\]
-Denote by 
- $\tilde g_t$ pullback 
-of $\tilde g$ via $\Phi_t$,
-so 
-\[\Phi_t\:(\RR^k\times K,\tilde g_t)\to (\RR^k\times K,\tilde g)\]
-is an isometry.
-
-It remains to find the one parameter family $\phi_t$ such that 
- $\tilde g_t$ is $\Gamma$-invariant for all $t$.
-and $(M,g_1)=(\tilde M,\tilde g)/\Gamma$ admits a finite Riemannian cover by the product of a flat torus and $K$.
-
-
-In terms of $\phi_t$, it can be formulated the following way.
-There is a normal subgroup of finite index $\Gamma_0\vartriangleleft\Gamma$ such that 
-\begin{itemize}
-\item $\Gamma_0$ acts on $\RR^k$ by parallel translations; 
-in particular $\Gamma_0$ can be identified with with a lattice in $\RR^k$.
-\item the action of $\Gamma_0$ on $K$ is given by $\phi_1(\Gamma_0)$.
-\end{itemize}
-
-
-\parit{Comment.}
-The problem is due to Burkhard Wilking, see \cite{wilking-2000}.
 
 
 
@@ -1656,52 +1612,36 @@ with negative Ricci curvature.
 On the other hand there are no hollows with positive scalar curvature;
 the later equivalent to the Positive Mass Conjecture.
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{hS=>S}.} 
-\textit{If hemisphere then sphere.}
-Denote by $q$ a point in $M$ which lies on the maximal distance from $p$.
+\parbf{\ref{Area of spheres}.}
+\textit{Area of spheres.}
+Fix $r_0>0$.
+Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$. 
 
-Consider the function $f=\cos \dist_p+\cos\dist_q$.
-Note that 
-\[\triangle f+m\cdot f\le 0\] 
-in the sense of distributions.
-If follows that $f\ge 0$, in particular 
-\[B(p,\tfrac\pi2)\cup B(q,\tfrac\pi2)=M.\]
+Note that any minimizing geodesic from $q$ to a point in $B(p,r_0)$
+has to cross $\partial B(p,r)$.
+By volume comparison, we get that 
+\[\vol B(p,r_0)\le C_m\cdot r_0\cdot \area \partial B(p,r),\]
+where $C_m$ is a constant depending only on the dimension $m=\dim M$,
+say one can take $C_m=10^m$.
 
-Set \[a(r)=\area(\partial [B(q,r)\backslash B(p,\tfrac\pi2)]).\]
-Prove that the function
-\[r \mapsto \tfrac{a(r)}{(\sin r)^{m-1}}\]
-is nonincreasing 
-and 
-\[\tfrac{a(r)}{(\sin r)^{m-1}}\le\area\mathbb{S}^{m-1}.\]
-Moreover if equality holds for some $r$ then $B(q,r)\backslash B(p,\tfrac\pi2)$ is isometric to an $r$-ball in the unit sphere.
-This statement is analogous to the Bishop--Gromov inequality and can be proved the same way.
-
-Finally note that $a(\tfrac\pi2)=\area\mathbb{S}^{m-1}$,
-hence the result follows.
- 
+\begin{wrapfigure}{o}{30mm}
+%\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/calabi-yau(1)}
+\lbl[t]{9.5,8;$p$}
+\lbl[t]{28,2;$q$}
+\lbl[b]{10,20;$\partial B(p,r)$}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
 
 \parit{Comments.}
-The problem is due to Fengbo Hang %Fengbo Hang fengbo@cims.nyu.edu
-and Xiaodong Wang %Xiaodong Wang xwang@math.msu.edu 
-\cite{hang-wang};
-their proof is different.
-
-The problem is still nontrivial 
-even if instead of the first condition one has that sectional curvature $\ge 1$;
-In dimension 2, 
-it was proved by Victor Toponogov in \cite{toponogov},
-but it also follow easily from the proof given by Victor Zalgaller in \cite{zalgaller-shperical-polygon}.
-
-
-If instead of first condition one only has that scalar curvature $\ge m\cdot(m-1)$, then the conclusion does not hold; 
-it was conjectured by Maung Min-Oo in 1995 
-and disproved by
-Simon Brendle,
-Fernando Marques
-and Andre Neves in \cite{brendle-marques-neve}.
-
-
+Applying coarea formula, 
+we get that volume growth of $M$ is at least linear and in particular it has infinite volume.
+The later was proved independently 
+by Eugenio Calabi 
+and Shing-Tung Yau, see \cite{calabi} and \cite{yau-ricci}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Flat coordinate planes}.} 
@@ -1786,11 +1726,11 @@ where $\star$ denotes the Hodge star operator.
 Fix $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 Use the identity $\star\omega_p=\omega_p$
 to show that
-there is a real number $\lambda_p$ and the isometry $\mathrm{J}_p\:\mathrm{T}_p\to\mathrm{T}_p$ 
+there is a real number $\lambda_p$ and the isometry $\mathrm{J}_p\:\T_p\to\T_p$ 
 such that
 $\mathrm{J}_p\circ\mathrm{J}_p =-\id$ 
 and 
-$\omega(X,Y)=\lambda_p\cdot g(X,\mathrm{J}_pY)$ for any $X,Y\in \mathrm{T}_p$.
+$\omega(X,Y)=\lambda_p\cdot g(X,\mathrm{J}_pY)$ for any $X,Y\in \T_p$.
 
 Consider canonical symplectic form $\omega_0$ on $\mathbb{S}^2\times\mathbb{S}^2$;
 that is sum of pullbacks of volume forms on $\mathbb{S}^2$  
@@ -1824,14 +1764,14 @@ see \cite{honda}.
 Assume contrary; that is, there is a complete Riemannian manifold $M$
 with finite volume which admits a convex function $f$.
 
-Denote by $\tau\:\mathrm{T}^1 M\to M$ the unit tangent bundle over $M$. 
-Clearly $\vol T^1M$ is finite.
+Denote by $\tau\:\U M\to M$ the unit tangent bundle over $M$. 
+Clearly $\vol \U M$ is finite.
 
 Note that 
-there is a nonempty bounded open set $U\subset \mathrm{T}^1 M$
+there is a nonempty bounded open set $U\subset \U M$
 such that $df(u)>\eps$ for any $u\in U$ and some fixed $\eps>0$.
 
-Denote by $\phi^t$ the geodesic flow on $\mathrm{T}^1 M$.
+Denote by $\phi^t$ the geodesic flow on $\U M$.
 Given $u\in U$,
 consider the function $h\:t\mapsto f\circ\tau\circ\phi^t(u)$.
 Note that $h'(t)>\eps$ for any $t\ge 0$.
@@ -1840,14 +1780,16 @@ Prove that there is an infinite sequence of positive reals $t_1,t_2,\dots$
 such that 
 $$\phi^{t_i}(U)\cap\phi^{t_j}(U)=\emptyset$$ 
 if $i\ne j$.
-The later implies that $\vol T^1M=\infty$,
+The later implies that $\vol \U M=\infty$,
 a contradiction.
 
 \parit{Comment.} The idea in the proof is essentially 
 Poincar\'e recurrence theorem.
 
-The problem is due to Shing-Tung Yau, see \cite{yau};
-for smooth functions the statement was proved by Richard Bishop and Barrett O'Neill in \cite{bishop-o'neill}.
+The problem is due 
+to Richard Bishop and Barrett O'Neill see \cite{bishop-o'neill},
+it was generalized by
+Shing-Tung Yau  in \cite{yau}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1884,7 +1826,7 @@ Show that $g$ is flat.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{o}{32mm}
 %\begin{center}
-\begin{lpic}[t(-0mm),b(3mm),r(0mm),l(0mm)]{pics/tripod}
+\begin{lpic}[t(-3mm),b(3mm),r(0mm),l(0mm)]{pics/tripod}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2010,7 +1952,7 @@ It remains to prove that any local isometry between complete connected Riemannia
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Volume of tubular neighborhoods}.} 
 \textit{Volume of tubular neighborhoods.}
-Let us denote by $\mathrm{N} M$ and $\mathrm{T} M$ the normal and tangent bundle of $M$ in $\RR^m$.
+Let us denote by $\mathrm{N} M$ and $\T M$ the normal and tangent bundle of $M$ in $\RR^m$.
 
 Consider the the normal exponential map $\exp_M\:\mathrm{N} M\to\RR^m$
 and denote by $J_V$ its Jacobian at $V\in \mathrm{N}_pM$.
@@ -2019,7 +1961,7 @@ Note that for all small $\eps>0$, we have
 
 Set $m=\dim M$.
 Given $p\in M$, 
-denote by $s_p\:\mathrm{T}_p\times \mathrm{T}_p\to \mathrm{N}_p$
+denote by $s_p\:\T_p\times \T_p\to \mathrm{N}_p$
 the \hyperref[Second fundamental form]{second fundamental form} of $M$.
 Recall that the curvature tensor of $M$ at $p$ can be expressed the following way
 \[R_p(X\wedge Y), V\wedge W\rangle 
@@ -2048,9 +1990,9 @@ Show that given a positive integer $n$ one can construct a tree $T$ embedded int
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{o}{42mm}
+\begin{wrapfigure}{o}{33mm}
 %\begin{center}
-\begin{lpic}[t(-6mm),b(-3mm),r(0mm),l(0mm)]{pics/tree(1)}
+\begin{lpic}[t(-6mm),b(-0mm),r(0mm),l(0mm)]{pics/tree(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2191,42 +2133,70 @@ a contradiction.
 \parit{Comment.}
 This problem is a stripped version of the bound on filling radius given by Mikhael Gromov in \cite{gromov-filling}.  
 
-\parbf{\wrenches\ref{Almost constant function}.}
+\parbf{\ref{Almost constant function}.}
 \textit{Almost constant function.}
-Let $u\in\mathbb{S}^m$.
-Denote by $p_m$ 
-the probability that 
-\[|\langle u,w\rangle|>\eps\]
-for a random vector $w\in \mathbb{S}^m$.
+Given a positive integer $m$,
+denote by $\delta_m$ 
+the expected value $|x_1|$ of a unit vector 
+$\bm{x}=(x_1,\dots,x_m)\z\in\RR^m$ 
+with respect to the uniform distribution.
 
-Observe that $p_m\to 0$ as $m\to\infty$.
+Observe that $\delta_m\to 0$ as $m\to\infty$.
 
-It follows that for a random unit vector $w$ in the tangent bundle of $M$,
-the probability of the event
-\[|df(w)|>\eps\]
-is at most $p_m$.
+Equip the unit tangent bundle $\U M$ of $M$ with the natural probability measure.
+Since $f$ is $1$-Lipschitz,
+for a random vector $v$ in $\U M$,
+the  expected value of $|df(w)|$
+is at most $\delta_m$.
 
 Note that 
 \begin{align*}
 |f\circ \gamma(1)-f\circ\gamma(0)|
 &=
-\left|\int\limits_0^1df(\gamma'(t))\cdot dt\right|\le \\
-&\le \int\limits_0^1\left|df(\gamma'(t))\right|\cdot dt.
+\left|\int\limits_0^1df(\dot\gamma(t))\cdot dt\right|\le \\
+&\le \int\limits_0^1\left|df(\dot\gamma(t))\right|\cdot dt.
 \end{align*}
 
-Applying Liuville's theorem, we get that for any fixed $t\in[0,1]$
-the distribution of $\gamma'(t)$ is uniform.
-In particular for random geodesic $\gamma$
-the probability of the event
-\[\int\limits_0^1|df(\gamma'(t))|\cdot dt>\eps\]
-is at most $p_m$.
+Assume $\dot\gamma(0)$
+takes random value in $\U M$.
+By Liuville's theorem, the same holds for $\dot\gamma(t)$
+for any fixed $t$.
+Therefore
+the expected value of
+\[\int\limits_0^1|df(\dot\gamma(t))|\cdot dt\]
+is at most $\delta_m$.
+
+By Markov's inequality,
+the probability of the event 
+\[|f\circ \gamma(1)-f\circ\gamma(0)|>\eps\]
+is at most $\tfrac{\delta_m}{\eps}$.
 Hence the result follows.
 
-\parit{Comments.}
-The problem an example of phenomen called \emph{concentration of measure}; 
-it was discovered by Vitali Milman, see ???.
-The problem was formulated by Mikhael Gromov. 
 
+\parit{Comments.}
+I learned the problem from Mikhael Gromov.
+It gives an example 
+of so called \emph{concentration of measure phenomenon}
+introduced by Vitali Milman.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Bounded curvature}.}
+\textit{Bounded curvature.}
+The one parameter family of metrics $g_t$
+can be found among the metrics of the type 
+\[g_t=a(t)\cdot g_0+b(t)\cdot g_1,\]
+where $a,b\:[0,1]\to\RR$
+are smooth functions such that $a(0)=1=b(1)$ and $a(1-s)=0=b(s)$ for $s\le \tfrac13$.
+In order to keep the bounds on the curvature and injectivity radius,
+the functions $a$ and $b$
+suppose to take huge values in the middle of inteval.
+
+To prove the second part of theorem, notice that if such metric would not exist, it would be an algorithm to recognize $\mathbb S^5$ among $5$-dimensinal manifolds.
+The later is impossible by Novikov theorem.
+
+\parit{Comments.}
+The problem is due to Alexander Nabutovsky, see \cite{nabutovsky-Disconnectedness}.
+A detailed proof of Novikov theorem can be found in \cite{nabutovsky-NovThm}
 
 \section*{Metric geometry}
 
@@ -2782,7 +2752,7 @@ It is instructive to check that any Hausdorff continuous family of closed sets i
 \parbf{\ref{pr:Sasaki metric}.} 
 \textit{Sasaki metric.}
 Show that there is a constant $\ell$
-such that for any two unit tangent vectors $v\in\mathrm{T}_p\mathbb{S}^2$ 
+such that for any two unit tangent vectors $v\in\T_p\mathbb{S}^2$ 
 and $w\in T_q\mathbb{S}^2$
 there is a path 
 $\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
@@ -2792,8 +2762,8 @@ and
 $w$ is the parallel transformation of $v$ along $\gamma$.
 
 Note that once it is proved, 
-it follows that diameter of the set of all vectors of fixed length in $\mathrm{T} \mathbb{S}^2$ has diameter at most $\ell$;
-in particular the map $\mathrm{T}\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
+it follows that diameter of the set of all vectors of fixed length in $\T \mathbb{S}^2$ has diameter at most $\ell$;
+in particular the map $\T\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
 preserves the distance with the maximal error $\ell$.
 Hence the result follows.
 
@@ -3301,10 +3271,17 @@ Note that for two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Si
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{No knots}.} 
+\parbf{\ref{No knots}.} 
 \textit{No $C^0$-knots.}
+Observe that it is possible to draw any knot tight keeping it smoothly embedded all the time.
 
-%???+PIC
+%\begin{wrapfigure}{r}{50mm}
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/knot(1)}
+%\lbl[trw]{8,5;$p_{-1}{=}q_0$}
+\end{lpic}
+\end{center}
+%\end{wrapfigure}
 
 \parit{Comment.}
 This problem was suggested by Greg Kuperberg, see \cite{One-step problems in geometry}.
@@ -3313,7 +3290,7 @@ This problem was suggested by Greg Kuperberg, see \cite{One-step problems in geo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 \begin{wrapfigure}{o}{37mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Simple-stabilization(1)}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/Simple-stabilization(1)}
 \lbl[]{8.7,8.3;{\color{white} $K_1$}}
 \lbl[]{28.7,8.3;{\color{white} $K_2$}}
 \end{lpic}
@@ -3472,16 +3449,52 @@ this is the main advantage of Sullivan's construction.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\wrenches\ref{Finite topological space}.} 
 \textit{Finite topological space.}
-Let $F$ be a finite topological space.
-Given two points $p,q\in F$ we will write $p\preccurlyeq q$ if $p$ lies in any closed set containing $q$.
+Given a point $p\in F$,
+denote by $O_p$ the minimal open set in $F$ containing $p$. 
+Note that we can assume that $F$ is $T_0$;
+that is $O_p=O_q$ if and only if $p=q$.
 
-Prepare a cell for each point in $F$
+Let us write $p\preccurlyeq q$ 
+if $O_p\subset O_q$.
+The relation $\preccurlyeq$ is a partial order on $F$.
 
+Let us construct a simplicial complex $K$ 
+by taking $F$ as the set of its vertices
+and saying that a collection of vertices form a simplex 
+if they can form a an increasing sequence with respect to $\preccurlyeq$.
 
-Consider a finite CW complex $W$.
+Given $k\in K$,
+consider the minimal simplex $\triangle=(f_0,\dots,f_m)$;
+we can assume that $f_0\preccurlyeq \dots\preccurlyeq f_m$.
+Set $h\:k\mapsto f_0$;
+it defines a map $K\to F$.
 
-Denote by $S$ the set of all cells of $W$
-and equip $S$ with the topology  such that ???
+It remains to check that $h$ is continues 
+and induces an isomorphism of all the homotopy groups.
+
+\parit{Comments.}
+In a similar facion, one can construct a finite topological space $F$ for given simplicial complex $K$ 
+such that 
+there is a weak homotopy equivalence $K\to F$.
+Both results were proved by Michael McCord in \cite{mccord};
+it is based on the construction given by Pavel Alexandrov in \cite{alexandrov-finite}.
+
+\parbf{\ref{Dense homeomorphism}.} 
+\textit{Dense homeomorphism.}
+Note that there is countable set of homeomorphisms $h_1,h_2,\dots$ which is dense in $\mathcal{H}$
+such that
+each $h_n$ fix all the points outside an open round disc, say $D_n$.
+
+Choose a countable disjoint collection of round discs $D_n'$
+and consider the homeomorphism $h\:\mathbb S^2\to \mathbb S^2$
+which fix all the points outside of $\bigcup_nD'_n$ and
+for each $n$,
+the restriction $h|_{D_n'}$ is conjugate to $h_n|_{D_n}$. 
+
+Show that $h$ solves the problem.
+
+\parit{Comments.} The problem was mentioned by Frederic Le Rox, see \cite{rox}*{Problem section}.
+
 
 
 \section*{Piecewise linear geometry}
@@ -3673,7 +3686,7 @@ An example of such surface can be seen on the picture.
 {
 \begin{wrapfigure}{o}{22mm}
 %\begin{center}
-\begin{lpic}[t(-1mm),b(0mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
 \end{lpic}
 %\end{center}
 \end{wrapfigure}
