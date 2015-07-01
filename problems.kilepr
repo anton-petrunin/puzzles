@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=solutions.tex
+lastDocument=dictionary.tex
 masterDocument=
 name=problems
 pkg_extIsRegExp=false
@@ -86,10 +86,10 @@ order=5
 
 [item:bib.tex]
 archive=true
-column=15
+column=4
 encoding=windows-1251
 highlight=LaTeX
-line=1359
+line=1900
 mode=LaTeX
 open=true
 order=2
@@ -106,10 +106,10 @@ order=5
 
 [item:dictionary.tex]
 archive=true
-column=0
+column=62
 encoding=UTF-8
 highlight=LaTeX
-line=107
+line=327
 mode=LaTeX
 open=true
 order=3
@@ -566,30 +566,30 @@ order=-1
 
 [item:problems.sty]
 archive=true
-column=16
+column=21
 encoding=UTF-8
 highlight=LaTeX
-line=51
+line=60
 mode=LaTeX
 open=true
 order=4
 
 [item:problems.tex]
 archive=true
-column=48
+column=104
 encoding=windows-1251
 highlight=LaTeX
-line=308
+line=453
 mode=LaTeX
 open=true
 order=0
 
 [item:solutions.tex]
 archive=true
-column=52
+column=35
 encoding=UTF-8
 highlight=LaTeX
-line=3813
+line=1558
 mode=LaTeX
 open=true
 order=1
@@ -601,10 +601,10 @@ JumpList=
 ViMarks=.,12,0,[,8,0,],12,7
 
 [view-settings,view=0,item:bib.tex]
-CursorColumn=15
-CursorLine=1359
+CursorColumn=4
+CursorLine=1900
 JumpList=
-ViMarks=.,1359,16,[,1359,5,],1359,31
+ViMarks=.,1900,3,[,1900,3,],1900,3
 
 [view-settings,view=0,item:cover/caver-two-sided.tex]
 CursorColumn=1
@@ -613,25 +613,25 @@ JumpList=
 ViMarks=.,10,0,[,10,0,],10,0
 
 [view-settings,view=0,item:dictionary.tex]
-CursorColumn=0
-CursorLine=107
+CursorColumn=62
+CursorLine=327
 JumpList=
-ViMarks=.,295,35,[,295,35,],295,36
+ViMarks=.,340,109,[,340,109,],340,109
 
 [view-settings,view=0,item:problems.sty]
-CursorColumn=16
-CursorLine=51
+CursorColumn=21
+CursorLine=60
 JumpList=
-ViMarks=.,51,15,[,51,15,],51,15
+ViMarks=.,60,20,[,60,20,],60,20
 
 [view-settings,view=0,item:problems.tex]
-CursorColumn=48
-CursorLine=308
+CursorColumn=104
+CursorLine=453
 JumpList=
-ViMarks=.,645,29,[,645,29,],645,29
+ViMarks=.,453,26,[,453,26,],453,35
 
 [view-settings,view=0,item:solutions.tex]
-CursorColumn=52
-CursorLine=3813
+CursorColumn=35
+CursorLine=1558
 JumpList=
-ViMarks=.,2191,52,[,2191,52,],2191,52
+ViMarks=.,1601,11,[,1601,3,],1601,11

@@ -1556,6 +1556,56 @@ by Grigori Perelman,
 see \cite{perelman}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\wrenches\ref{Warped product}.} 
+\textit{Warped product.}
+Let $W=\mathbb S^1\times_f\Sigma$.
+Given a point $x\in W$ denote by $\bar x$ its projection in $\Sigma$.
+Straightforward computations show that
+\begin{align*}
+\Sc_W(x)
+&=\Sc_\Sigma(\bar x)-2\cdot\frac{\Delta f(\bar x)}{f(\bar x)}=
+\\
+&=\Sc_M(\bar x)+|s_{\bar x}|^2-2\cdot\Ric(\nu_{\bar x})-2\cdot\frac{\Delta f(\bar x)}{f(\bar x)},
+\end{align*}
+where $\nu_{\bar x}$ and $s_{\bar x}$ 
+denotes 
+the normal vector 
+and correspondingly the second fundamental form
+of $\Sigma$ at $\bar x$.
+Therefore it is sufficient to find a function $f$ on $\Sigma$ such that
+\[\Ric(\nu_x)\cdot f(x)+\Delta f(x)\le 0\leqno({*})\]
+for all $x\in \Sigma$.
+
+Note that we can assume that $\Sigma$ is strictly stable;
+that is the second variation of area is strictly positive for all normal vector fields.
+
+Given a smooth function $f\:\Sigma\to\RR$,
+consider the one parameter family of embeddings
+$\iota_t\:\Sigma\to M$ 
+defined as 
+\[\iota_t(\bar x)=\exp_x(t\cdot f(\bar x)\cdot \nu_{\bar x}).\]
+Denote by $H_t(x)$
+the mean curvature 
+of $\iota_t(\Sigma)$ 
+at $\iota_t(x)$.
+
+Show that there is positive $f$ such that for any fixed $\bar x\in\Sigma$ the function $t\mapsto H_t(\bar x)$ is decreasing for small $t$.
+
+Note that 
+\[H_t(x)=t\cdot[\Ric(\nu_x)\cdot f(x)+\Delta f(x)]+o(t).\]
+Therefore $({*})$ holds for $f$.
+
+\parit{Comments.}
+The problem is due to Mikhael Gromov and Blaine Lawson, see \cite{gromov-lawson}.
+It can be used instead of the main lemma 
+in the proof that 3-torus does not admit a metric with positive scalar curvature;
+the original proof was given by Shing-Tung  Yau and Richard Schoen in \cite{schoen-yau}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{No approximation}.} 
 \textit{No approximation.}
 Fix an increasing function $\phi\:(0,r)\to \RR$
@@ -2861,7 +2911,7 @@ and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
 \begin{wrapfigure}{o}{27mm}
 %\begin{center}
-\begin{lpic}[t(-0mm),b(-5mm),r(0mm),l(0mm)]{pics/fig8(1)}
+\begin{lpic}[t(-3mm),b(-5mm),r(0mm),l(0mm)]{pics/fig8(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3451,7 +3501,7 @@ this is the main advantage of Sullivan's construction.
 \textit{Finite topological space.}
 Given a point $p\in F$,
 denote by $O_p$ the minimal open set in $F$ containing $p$. 
-Note that we can assume that $F$ is $T_0$;
+Note that we can assume that $F$ connected and is $T_0$;
 that is $O_p=O_q$ if and only if $p=q$.
 
 Let us write $p\preccurlyeq q$ 
@@ -3476,8 +3526,7 @@ and induces an isomorphism of all the homotopy groups.
 In a similar facion, one can construct a finite topological space $F$ for given simplicial complex $K$ 
 such that 
 there is a weak homotopy equivalence $K\to F$.
-Both results were proved by Michael McCord in \cite{mccord};
-it is based on the construction given by Pavel Alexandrov in \cite{alexandrov-finite}.
+The constructions are dueto Pavel Alexandrov, see \cite{alexandrov-finite}, and \cite{mccord}.
 
 \parbf{\ref{Dense homeomorphism}.} 
 \textit{Dense homeomorphism.}
@@ -3493,7 +3542,7 @@ the restriction $h|_{D_n'}$ is conjugate to $h_n|_{D_n}$.
 
 Show that $h$ solves the problem.
 
-\parit{Comments.} The problem was mentioned by Frederic Le Rox, see \cite{rox}*{Problem section}.
+\parit{Comments.} The problem was mentioned by Frederic Le Rox, see \cite{rox}.
 
 
 
@@ -3686,7 +3735,7 @@ An example of such surface can be seen on the picture.
 {
 \begin{wrapfigure}{o}{22mm}
 %\begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
 \end{lpic}
 %\end{center}
 \end{wrapfigure}
@@ -3811,7 +3860,8 @@ this is a contradiction.
 
 \begin{wrapfigure}{o}{20mm}
 %\begin{center}
-\begin{lpic}[t(-7mm),b(-4mm),r(0mm),l(0mm)]{pics/57-triangulation(1)}
+\begin{lpic}[t(-0%7
+mm),b(-4mm),r(0mm),l(0mm)]{pics/57-triangulation(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
