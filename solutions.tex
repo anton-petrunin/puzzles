@@ -580,7 +580,7 @@ in other words the image of the map
 lies in $\CC^*=\CC\backslash\{0\}$.
 
 \begin{wrapfigure}{o}{44mm}
-\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/birkhoff(1)}
+\begin{lpic}[t(-7mm),b(2mm),r(0mm),l(0mm)]{pics/birkhoff(1)}
 \lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
 \lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
 \lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
@@ -1558,48 +1558,75 @@ see \cite{perelman}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\wrenches\ref{Warped product}.} 
 \textit{Warped product.}
+Given $x\in \Sigma$, denote by $\nu_x$ the normal vector to $\Sigma$ at $x$ which agrees with the orientations of $\Sigma$ and $M$.
+Denote by $\kappa_x$ the non-negative principle curvature of $\Sigma$ at $x$;
+since $\Sigma$ is minimal the other principle curvature has to be $-\kappa_x$.
+
 Let $W=\mathbb S^1\times_f\Sigma$.
-Given a point $x\in W$ denote by $\bar x$ its projection in $\Sigma$.
+Assume that a point $x\in W$ projects to a point $x\in\Sigma$.
 Straightforward computations show that
 \begin{align*}
-\Sc_W(x)
-&=\Sc_\Sigma(\bar x)-2\cdot\frac{\Delta f(\bar x)}{f(\bar x)}=
+\Sc_W(y)
+&=\Sc_\Sigma(x)-2\cdot\frac{\Delta f(x)}{f(x)}=
 \\
-&=\Sc_M(\bar x)+|s_{\bar x}|^2-2\cdot\Ric(\nu_{\bar x})-2\cdot\frac{\Delta f(\bar x)}{f(\bar x)},
+&=\Sc_M(x)-2\cdot\kappa_x^2-2\cdot\Ric(\nu_x)-2\cdot\frac{\Delta f(x)}{f(x)}.
 \end{align*}
-where $\nu_{\bar x}$ and $s_{\bar x}$ 
-denotes 
-the normal vector 
-and correspondingly the second fundamental form
-of $\Sigma$ at $\bar x$.
-Therefore it is sufficient to find a function $f$ on $\Sigma$ such that
-\[\Ric(\nu_x)\cdot f(x)+\Delta f(x)\le 0\leqno({*})\]
+Consider linear operator 
+\[L\:f(x)\mapsto [-\kappa_x^2-\Ric(\nu_x)]\cdot f(x)-\Delta f(x)\]
+It is sufficient to find a function $f$ on $\Sigma$ such that
+\[(Lf)(x)\ge 0\leqno({*})\]
 for all $x\in \Sigma$.
 
-Note that we can assume that $\Sigma$ is strictly stable;
-that is the second variation of area is strictly positive for all normal vector fields.
 
-Given a smooth function $f\:\Sigma\to\RR$,
-consider the one parameter family of embeddings
-$\iota_t\:\Sigma\to M$ 
-defined as 
-\[\iota_t(\bar x)=\exp_x(t\cdot f(\bar x)\cdot \nu_{\bar x}).\]
-Denote by $H_t(x)$
-the mean curvature 
-of $\iota_t(\Sigma)$ 
-at $\iota_t(x)$.
+Fix a smooth function $f\:\Sigma\to \RR$.
+Let us extend the field $f(x)\cdot\nu_x$
+from $\Sigma$ to a smooth field, say $v$ on whole $M$.
+Denote by $\iota_t$ the flow along $v$ for time $t$ and set $\Sigma_t=\iota_t(\Sigma)$.
 
-Show that there is positive $f$ such that for any fixed $\bar x\in\Sigma$ the function $t\mapsto H_t(\bar x)$ is decreasing for small $t$.
 
-Note that 
-\[H_t(x)=t\cdot[\Ric(\nu_x)\cdot f(x)+\Delta f(x)]+o(t).\]
-Therefore $({*})$ holds for $f$.
+Denote by $H_t(x)$ the mean curvature of $\Sigma_t$ at $\iota_t(x)$.
+Then the value $(Lf)(x)$ is the derivative of
+the function $t\mapsto H_t(x)$  at $0$.
+The existance of $f$ with this property should be evident;
+if not read further.
+
+\parit{Formal end of proof.}
+Denote by $\delta(f)$ the second variation of area of $\Sigma_t$;
+that is consider the area function $a(t)=\area\Sigma_t$ 
+and set $\delta(f)=a''(0)$.
+Direct calculations show that
+\[\delta(f)
+=
+\int\limits_{\Sigma} 
+[(-\kappa_x^2-\Ric(\nu_x))\cdot f^2(x)+|\nabla f(x)|^2]\cdot d_x\area.\]
+
+Since $\Sigma$ is area minimizing we get 
+\[\delta(f)\ge 0\leqno({*}{*})\] for any $f$.
+
+Choose a function $f$ which minimize $\delta(f)$ among all the functions such that $\int_\Sigma f^2(x)\cdot d_x\area=1$.
+Note that this is an eigen function 
+for the operator 
+\[L\:f\mapsto [-\kappa_x^2-\Ric(\nu_x)]\cdot f+\Delta f,\]
+denote by $\lambda$ its eigen value;
+by $({*}{*})$,
+$\lambda\ge 0$.
+
+Prove that $f(x)>0$ at any $x$.
+It follows that $Lf=\lambda f>0$.
+
+
+
 
 \parit{Comments.}
-The problem is due to Mikhael Gromov and Blaine Lawson, see \cite{gromov-lawson}.
-It can be used instead of the main lemma 
-in the proof that 3-torus does not admit a metric with positive scalar curvature;
-the original proof was given by Shing-Tung  Yau and Richard Schoen in \cite{schoen-yau}.
+It is is due to Mikhael Gromov and Blaine Lawson, see \cite{gromov-lawson}.
+Earlier Shing-Tung  Yau and Richard Schoen swoed that the same assumptions 
+impy existance of conformal factor on $\Sigma$ which makes it positively curved.
+Both statements admit straightforward generalizations to the higher dimensions.
+Both can be used 
+to proof that 3-torus does not admit a metric with positive scalar curvature;
+the original proof is given in \cite{schoen-yau}.
+The same proof works in dimension up to 7;
+in dimesnion 8 and higher it stop to work since the area minimizing hypersurfaces start to have singularities, see ???.
 
 
 
@@ -2245,6 +2272,7 @@ To prove the second part of theorem, notice that if such metric would not exist,
 The later is impossible by Novikov theorem.
 
 \parit{Comments.}
+Instead of function $\Phi$ one can take any Turing computable function.
 The problem is due to Alexander Nabutovsky, see \cite{nabutovsky-Disconnectedness}.
 A detailed proof of Novikov theorem can be found in \cite{nabutovsky-NovThm}
 
@@ -3212,7 +3240,7 @@ Both circles on the picture bound essentially different discs.
 
 \begin{wrapfigure}[6]{o}{46mm}
 %\begin{center}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3860,7 +3888,7 @@ this is a contradiction.
 
 \begin{wrapfigure}{o}{20mm}
 %\begin{center}
-\begin{lpic}[t(-0%7
+\begin{lpic}[t(-10
 mm),b(-4mm),r(0mm),l(0mm)]{pics/57-triangulation(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
