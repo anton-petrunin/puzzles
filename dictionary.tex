@@ -19,14 +19,14 @@ therefore  the limit above is defined for any $p$.
 
 \item{\bf Curvature operator.}\refstepcounter{thm}\label{Curvature operator}
 The Riemannian curvature tensor $R$
-can be viewed as an operator $\text{\bf R}$ on the space of tangent bi-vectors $\bigwedge^2 \mathrm{T}$;
+can be viewed as an operator $\text{\bf R}$ on the space of tangent bi-vectors $\bigwedge^2 \T$;
 it is uniquely defined by identity
 $$\langle\mathbf{R}(X\wedge Y),V\wedge W\rangle
 =
 \langle R(X,Y)V,W\rangle,$$
-The operator $\mathbf{R}\:\bigwedge^2 \mathrm{T}\to \bigwedge^2 \mathrm{T}$ is called \emph{curvature operator} and it is said to be \emph{positive definite} if
+The operator $\mathbf{R}\:\bigwedge^2 \T\to \bigwedge^2 \T$ is called \emph{curvature operator} and it is said to be \emph{positive definite} if
 $\langle\mathbf{R}(\phi),\phi\rangle>0$ for all non zero
-bi-vector $\phi\in\bigwedge^2 \mathrm{T}$.
+bi-vector $\phi\in\bigwedge^2 \T$.
 
 \item{\bf Dehn twist.}\refstepcounter{thm}\label{Dehn twist}
 Let $\Sigma$ be a surface and $\gamma\:\RR/\ZZ\to\Sigma$ be noncontractible closed \hyperref[Simple curve]{\emph{simple curve}}.
@@ -105,7 +105,7 @@ Then energy functional of $F$ is defined as
 \[E(F)=\int\limits_M |d_xF|^2\cdot d_x\vol_M.\]
 If $(a_{i,j})$ denote the components 
 of the differential $d_xF$ 
-written in the orthonormal basises in $\mathrm{T}_xM$ and $\mathrm{T}_{F(x)}N$
+written in the orthonormal basises in $\T_xM$ and $\T_{F(x)}N$
 then 
 \[|d_xF|^2=\sum_{i,j}a_{i,j}^2.\]
 
@@ -114,13 +114,13 @@ Two subsets $A$ and $B$ in a metric space $X$ are called equidistant if the dist
 
 \item{\bf Exponential map.}\refstepcounter{thm}\label{Exponential map} 
 Let $(M,g)$ be a Riemannian manifold;
-denote by $\mathrm{T} M$ the tangent bundle over $M$ and by $\mathrm{T}_p=\mathrm{T}_pM$ the tangent space at point $p\in M$.
+denote by $\T M$ the tangent bundle over $M$ and by $\T_p=\T_pM$ the tangent space at point $p\in M$.
 
-Given a vector $v\in\mathrm{T}_pM$ denote by $\gamma_v$ the geodesic in $(M,g)$
+Given a vector $v\in\T_pM$ denote by $\gamma_v$ the geodesic in $(M,g)$
 such that $\gamma(0)=p$ and $\gamma'(0)=v$.
-The map $\exp\:\mathrm{T} M\to M$ defiend by $v\mapsto \gamma_v(1)$ is called exponential map.
+The map $\exp\:\T M\to M$ defiend by $v\mapsto \gamma_v(1)$ is called exponential map.
 
-The restriction of $\exp$ to the $\mathrm{T}_p$ is called \emph{exponential map at} $p$ and denoted as $\exp_p$.
+The restriction of $\exp$ to the $\T_p$ is called \emph{exponential map at} $p$ and denoted as $\exp_p$.
 
 Given a smooth submanifold $S\subset M$;
 denote by $\mathrm{N} S$ the normal bundle over $S$.
@@ -181,9 +181,9 @@ $$\length(\alpha)=\length(f\circ\alpha).$$
 \item{\bf Minimal surface.}\refstepcounter{thm}\label{Minimal surface} 
 Let $\Sigma$ be a $k$-dimensional smooth surface in
 a Riemannian manifold $M$
-and $\mathrm{T}=\mathrm{T}\,\Sigma$ and $\mathrm{N}=\mathrm{N}\,\Sigma$ correspondingly tangent and normal bundle.
-Let $s\:\mathrm{T}\otimes \mathrm{T}\to \mathrm{N}$ denotes the \hyperref[Second fundamental form]{\emph{second fundamental form}} of $\Sigma$.
-Let  $e_i$ is an orthonormal basis for $\mathrm{T}_x$, 
+and $\T=\T\,\Sigma$ and $\mathrm{N}=\mathrm{N}\,\Sigma$ correspondingly tangent and normal bundle.
+Let $s\:\T\otimes \T\to \mathrm{N}$ denotes the \hyperref[Second fundamental form]{\emph{second fundamental form}} of $\Sigma$.
+Let  $e_i$ is an orthonormal basis for $\T_x$, 
 set $H_x=\sum_i s(e_i,e_i)\in \mathrm{N}_x$; 
 it is the mean curvature vector at $x\in \Sigma$. 
 
@@ -249,33 +249,33 @@ One can generalize it further to an arbitrary ambient space, using  convex funct
 
 \item{\bf Sasaki metric.}\label{Sasaki metric}
 Let $(M,g)$ be a Riemannian manifold.
-The Sasaki metric is the most natural choice of metric on the tangent space $\mathrm{T} M$.
+The Sasaki metric is the most natural choice of metric on the tangent space $\T M$.
 It is uniquely defined by the following properties:
 \begin{enumerate}[(i)]
-\item The natural projection $\tau\:\mathrm{T} M\to M$ is a Riemannian submersion.
-\item The metric on each tangent space $\mathrm{T}_p\subset \mathrm{T} M$ is the Euclidean metric induced by $g$.
-\item Assume $\gamma(t)$ is a curve in $M$ and $v(t)\in\mathrm{T}_{\gamma(t)}$ is a parallel vector field along $\gamma$. 
-Note that $v(t)$ forms a curve in $\mathrm{T} M$ 
-and $\mathrm{T}_{\gamma(t)}M$ forms a submanifold in $\mathrm{T} M$.
-For the Sasaki metric, we have $\dot v(t)\perp \mathrm{T}_{\gamma(t)}M$ for any $t$.
+\item The natural projection $\tau\:\T M\to M$ is a Riemannian submersion.
+\item The metric on each tangent space $\T_p\subset \T M$ is the Euclidean metric induced by $g$.
+\item Assume $\gamma(t)$ is a curve in $M$ and $v(t)\in\T_{\gamma(t)}$ is a parallel vector field along $\gamma$. 
+Note that $v(t)$ forms a curve in $\T M$ 
+and $\T_{\gamma(t)}M$ forms a submanifold in $\T M$.
+For the Sasaki metric, we have $\dot v(t)\perp \T_{\gamma(t)}M$ for any $t$.
 \end{enumerate}
 
 A more constructive way to describe Sasaki metric is given by identifying 
-$\mathrm{T}_u[\mathrm{T} M]$ for any $u\in \mathrm{T}_p M$ with the direct sum of so called vertical and horizontal vectors $\mathrm{T}_p M\oplus \mathrm{T}_p M$.
+$\T_u[\T M]$ for any $u\in \T_p M$ with the direct sum of so called vertical and horizontal vectors $\T_p M\oplus \T_p M$.
 The projection of this splitting defined by the differential of $\tau$
 and the Levi-Civita connection.
-Then $\mathrm{T}_u[\mathrm{T} M]$ is equipped with the metric  defined as 
+Then $\T_u[\T M]$ is equipped with the metric  defined as 
 \[\hat g(X,Y)=g(X^V,Y^V)+g(X^H,Y^H),\]
-where $X^V,X^H\in\mathrm{T}_pM$ denotes the vertical and horizontal components of $X\in\mathrm{T}_u[\mathrm{T} M]$.
+where $X^V,X^H\in\T_pM$ denotes the vertical and horizontal components of $X\in\T_u[\T M]$.
 
 \item{\bf Second fundamental form.}\refstepcounter{thm}\label{Second fundamental form} 
 Assume $f\:M\looparrowright \RR^m$ be an immersion of smooth manifold $M$.
-Given a point $p\in M$ denote by $\mathrm{T}_p$ and $\mathrm{N}_p=\mathrm{T}_p^\bot$
+Given a point $p\in M$ denote by $\T_p$ and $\mathrm{N}_p=\T_p^\bot$
 the tangent and normal spaces of $L$ at $p$.
 The second fundamental form for $f$ at $p\in M$ is defined as $$s(v,w)=(\nabla_v w)^\bot,\eqno({*})$$ 
 where $(\nabla_v w)^\bot$ denotes the orthogonal projection of covariant derivative $\nabla_v w$ onto the normal bundle.
 
-Assume $\gamma_v\:\RR\to M$ is a geodesic with tangent vector $v\in \mathrm{T}_p$;
+Assume $\gamma_v\:\RR\to M$ is a geodesic with tangent vector $v\in \T_p$;
 that is, such that $\gamma_v(0)=p$ and $\gamma'(0)=v$.
 Then 
 \[s(v,v)=(f\circ\gamma_v)''(0).\]
@@ -293,7 +293,7 @@ or distance nonexpanding map.
 \item{\bf Sub-Riemannian metric.}\refstepcounter{thm}\label{Sub-Riemannian metric}
 Let $(M,g)$ is a Riemannian manifold.
 
-Assume that in the tangent bundle $\mathrm{T} M$ 
+Assume that in the tangent bundle $\T M$ 
 a choice of sub-bundle $H$ is given;
 the sub-bundle $H$ which will be called  \emph{horizontal distribution}.
 The tangent vectors which lie in $H$ will be called \emph{horizontal}.
@@ -327,4 +327,20 @@ The variation of turn of $\gamma$ is defined as supremum of sum of external angl
 Namely, 
 $$\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},$$
 where $\alpha_i=\pi-\measuredangle \hinge{\gamma(t_{i})}{\gamma(t_{i-1})}{\gamma(t_{i+1})}$.
+
+\item{\bf Warped product.}
+\refstepcounter{thm}
+\label{def:Warped product} 
+Let $(M,g)$ and $(N,h)$ be Riemannian manifolds 
+and $f$ be a smooth positive function defined on $M$.
+Consider the product manifold $W=M\times N$.
+Given a tangent vector 
+$X\z\in \T_{(p,q)} W
+=\T_p M\times \T_p N$ denote by 
+$X_M\z\in \T M$ and $X_N\z\in \T N$ its projections.
+Let us equip $W$ with the Riemannin metric defined as
+\[s(X,Y)=g(X_M,Y_M)+f^2\cdot h(X_N,Y_N).\]
+The obtained Riemannin manifold $(W,s)$ is called warped product of $M$ and $N$ with respect to $f\:M\to \RR$;
+it can be written as  $(W,g)=(N,h)\times_f(M,g)$.
+
 \end{description}
