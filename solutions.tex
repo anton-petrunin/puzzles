@@ -35,7 +35,7 @@ $$\phi(\II)\le 2\cdot\ell\cdot\sqrt{1+\ell^2}.$$
 
 A straightforward improvement of these estimates gives 
 $$\phi(\II)\le 2\cdot\ell.$$
-This bound is optimal, check for example $f(x,y)=-\ell\cdot\sqrt{x^2+y^2}$.
+This bound is optimal, check a both side infinite geodesic on the graph of  \[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
 
 \parit{Comments.}
 The problem is due to David Berg, \cite{berg}.
@@ -322,15 +322,6 @@ later the same solution was rediscovered few times.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}[8]{o}{51mm}
-\begin{lpic}[t(-3mm),b(-0mm),r(0mm),l(0mm)]{pics/tangent-eq-sol(1)}
-\lbl[tr]{20,5;$u$}
-\lbl[rt]{18,15;$r$}
-\lbl[rt]{26,6;$l$}
-\lbl[bl]{25,10;$x_u$}
-\end{lpic}
-\end{wrapfigure}
-
 \parbf{\ref{Oval in oval}.}
 \textit{Oval in oval.}
 Show that the chord which minimize (or maximize) the ratio in which it divides the bigger oval solves the problem.
@@ -342,6 +333,14 @@ with outer normal vector $u$.
 Draw a chord of outer curve which is tangent to the inner curve at $x_u$;
 denote by $r=r(u)$ and $l=l(u)$ the lengths of this chord at the right and left from $x_u$.
 
+\begin{wrapfigure}{o}{51mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/tangent-eq-sol(1)}
+\lbl[tr]{20,5;$u$}
+\lbl[rt]{18,15;$r$}
+\lbl[rt]{26,6;$l$}
+\lbl[bl]{25,10;$x_u$}
+\end{lpic}
+\end{wrapfigure}
 
 Arguing by contradiction, assume $r(u)\ne l(u)$ for any $u\in\mathbb{S}^1$.
 Since the functions $r$ and $l$ are continuous,
@@ -3414,58 +3413,58 @@ Problem \ref{mono-homotopy} is closely related.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{Knaster's circle}.} 
-\textit{Knaster's circle.}
-A map $f\:\mathbb S^1\to\mathbb S^1$ will be called $\eps$-crooked 
-if for any arc $\II\subset \mathbb S^1$ with end points $a$ and $b$ there are points $x,y\in \II$ such that the points $a,y,x,b$ appear on $\II$ in the same order and
-\[|f(x)-f(a)|_{\mathbb S^1},|f(y)-f(b)|_{\mathbb S^1}<\eps.\]
+\parbf{\wrenches\ref{Complicated circle}.} 
+\textit{Complicated circle.}
+Acontinuous function $f\:[0,1]\to [0,1]$
+will be called $\eps$-crooked 
+if $f(0)=0$, $f(1)=1$ 
+and for any segment $[a,b]\subset [0,1]$ 
+one can choose $a\le x\le y\le b$ 
+such that
+\[|f(x)-f(a)|,|f(y)-f(b)|\le\eps.\]
 
-Show that for any $\eps>0$ there is an $\eps$-crooked map $f\:\mathbb S^1\to\mathbb S^1$ of degree $1$.
+A $\tfrac1n$-crooked maps $f_n\:[0,1]\to [0,1]$ can be constructed recurcevely. 
+Guess the construction from the diagram.
 
-Take a sequence of $\eps_n$-crooked maps for a sequence $\eps_n$ which converge fast ot $0$
-and use this map to construct a nested sequence of embedding of annuli in the plane.
-Each annulus bounds a disc and the intersection 
-of all these annuli bound a disc which is the union of all thse discs.
-
-It remains to show that the boundary of the obtained disc does not contain a simple curve.
-%???PIC
-\parit{Comments.}
-\cite{wayne}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Boundary in R}.} 
-\textit{Boundary in $\RR$.}
-Prove that the Cantor's set forms a boundary of three disjoint open set in $\RR$.
-
-\parit{Comments.} 
-In $\RR^2$
-one can assume in addition that each set is connected.
-This examples are called \emph{lakes of Wada};
-these are disjoint open discs in the plane which have identical boundary.   
-This example described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.
-It is easy to see that the boundary of each lake contains no simple nontrivial curves
-and it is related to so called pseudo-arc constructed by Bronis{\l}aw Knaster in \cite{knaster}. 
-
-In $\RR^3$, a similar construction can be used to produce a Cantor's set with non simply connected complement.
-This example was constructed by Louis Antoine in \cite{antoine}.
-The construction can be guessed from the first and second itaration on the shown on the pictures%
-\footnote{These are black-and-white versions of the pictures 
-made by \href{http://en.wikipedia.org/wiki/User:Blacklemon67}{Blacklemon67} 
-for the article on Antoine's Necklace in Wikipedia.}.
+%\begin{wrapfigure}{r}{50mm}
 \begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Antoine's_Necklace_Iteration_1(.1)}
+\begin{lpic}[t(-0mm),b(4mm),r(0mm),l(0mm)]{pics/crooked(1)}
+\lbl[t]{8,0;$\eps=\tfrac12$}
+\lbl[t]{33,0;$\eps=\tfrac13$}
+\lbl[t]{57,0;$\eps=\tfrac14$}
+\lbl[t]{80,0;$\eps=\tfrac15$}
 \end{lpic}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Antoine's_Necklace_Iteration_2(.1)}
-\end{lpic}
-%https://en.wikipedia.org/wiki/User:Blacklemon67
 \end{center}
-In a similar fashion one can construct so called \emph{Whitehead manifold}, 
-an example of open 3-dimensional manifold which is contractible, 
-but not homeomorphic to $\RR^3$.
-One have to start with standard sphere and remove the intersection of nested sequence of solid tori embedded in each other in a certain way,
-see \cite{whitehead}.
+%\end{wrapfigure}
 
-%Yet an other related example is Casson handle, Dogbone space???
+Start with the unit circle, 
+$\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
+Construct recursevly a sequence of smooth simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
+Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
+and 
+\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
+for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
+
+Denote by $D$ the union of all discs bounded by $\gamma_n$.
+Show that $D$ is homeomorphic to an open disc 
+and if one choose $\eps_n$ converging to zero fast enough
+then the bondary of $D$ contains no simple curves.
+
+\parit{Comments.} The proof repeats the construction of pseudoarc 
+given by Bronis\l{}aw Knaster in \cite{knaster}.
+Let us list few similar problems.
+\begin{itemize}
+\item Construct three disjointed non-empty open sets in $\RR$ which have the same boundary.
+\item Construct three open discs in $\RR^2$ which have the same boundary.
+(This examples are called \emph{lakes of Wada};
+these are disjoint open discs in the plane which have identical boundary.   
+This example described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
+\item Construct a Cantor set in $\RR^3$ with non simply connected complement. This example was constructed by Louis Antoine in \cite{antoine}.
+\item Construct an open 3-dimensional manifold which is contractible, 
+but not homeomorphic to $\RR^3$. This example is called \emph{Whitehead manifold},
+see \cite{whitehead}.
+\end{itemize}
+For more advanced examples seach for Dogbone space and Casson handle, Dogbone space.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Homeomorphism of cube}.} 
