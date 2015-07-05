@@ -119,6 +119,15 @@ Such example can be obtained by fatenning Bing's house,
 a nontrivial example of contractible 2-complex in $\RR^3$, 
 see \cite{bing}.
 
+Similar argument shows that
+for any point $p\in (\mathbb S^2,g)$ there is a minimizing geodesic $[pq]$ with conjugate ends.
+On the other hand, 
+for $(\mathbb S^3,g)$ this is not true.
+In fact there are Riemannian metrics on $\mathbb{S}^3$ 
+without minimizing geodesics with conjugate ends, 
+see the comments for Problem \ref{almost-flat}.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{curve-in-S^2}.}
 \textit{A curve in a sphere.}
@@ -454,7 +463,7 @@ Tobias Ekholm,
 Brian White
 and Daniel Wienholtz
 in \cite{EWW};
-an amusing simplification 
+an amusing simplification and generalization
 was obtained by 
 Stephan Stadler. %???REF
 This result also imlies the result of John Milnor that any emebdded circle of total curvature at most $4\cdot\pi$ is unknot, see \cite{milnor}.
@@ -953,7 +962,7 @@ the surface $\Sigma_a$ degenerates to a point, say $p$.
 To construct the immersion $\partial \bar B^m\looparrowright M$,
 take the point $p$ as the image of the center $\bar B^m$ 
 and take the surfaces $\Sigma_t$ as the restrictions of the  embedding to the spheres;
-the existance of the immersion follows from the Morse lemma.
+the existence of the immersion follows from the Morse lemma.
 
 \begin{wrapfigure}{o}{23mm}
 %\begin{center}
@@ -1557,12 +1566,14 @@ see \cite{perelman}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\wrenches\ref{Warped product}.} 
 \textit{Warped product.}
+Without loss of generality we may assume that $\Sc_M\ge 1$.
+
 Given $x\in \Sigma$, denote by $\nu_x$ the normal vector to $\Sigma$ at $x$ which agrees with the orientations of $\Sigma$ and $M$.
 Denote by $\kappa_x$ the non-negative principle curvature of $\Sigma$ at $x$;
 since $\Sigma$ is minimal the other principle curvature has to be $-\kappa_x$.
 
 Let $W=\mathbb S^1\times_f\Sigma$.
-Assume that a point $x\in W$ projects to a point $x\in\Sigma$.
+Assume that a point $y\in W$ projects to a point $x\in\Sigma$.
 Straightforward computations show that
 \begin{align*}
 \Sc_W(y)
@@ -1570,11 +1581,11 @@ Straightforward computations show that
 \\
 &=\Sc_M(x)-2\cdot\kappa_x^2-2\cdot\Ric(\nu_x)-2\cdot\frac{\Delta f(x)}{f(x)}.
 \end{align*}
-Consider linear operator 
-\[L\:f(x)\mapsto [-\kappa_x^2-\Ric(\nu_x)]\cdot f(x)-\Delta f(x)\]
-It is sufficient to find a function $f$ on $\Sigma$ such that
-\[(Lf)(x)\ge 0\leqno({*})\]
-for all $x\in \Sigma$.
+Consider linear operator $L$ on the space of smooth functions on $\Sigma$ defined as 
+\[(Lf)(x)= [-\kappa_x^2-\Ric(\nu_x)]\cdot f(x)+(\Delta f)(x)\]
+It is sufficient to find a smooth function $f$ on $\Sigma$ such that
+\[f(x)>0 \ \ \text{and}\ \ (Lf)(x)\ge 0\leqno({*})\]
+for any $x\in \Sigma$.
 
 
 Fix a smooth function $f\:\Sigma\to \RR$.
@@ -1584,48 +1595,62 @@ Denote by $\iota_t$ the flow along $v$ for time $t$ and set $\Sigma_t=\iota_t(\S
 
 
 Denote by $H_t(x)$ the mean curvature of $\Sigma_t$ at $\iota_t(x)$.
-Then the value $(Lf)(x)$ is the derivative of
-the function $t\mapsto H_t(x)$  at $0$.
-The existance of $f$ with this property should be evident;
-if not read further.
+Note that the value $(Lf)(x)$ is the derivative of
+the function $t\mapsto H_t(x)$  at $t=0$.
+Therefore condition $({*})$
+means that we can push $\Sigma$ to one of its sides while nonincreasing its mean curvature in the first order.
+The existence of such push should be evident;
+read further if this is not the case.
 
 \parit{Formal end of proof.}
 Denote by $\delta(f)$ the second variation of area of $\Sigma_t$;
 that is consider the area function $a(t)=\area\Sigma_t$ 
 and set $\delta(f)=a''(0)$.
 Direct calculations show that
-\[\delta(f)
-=
+\begin{align*}
+\delta(f)
+&=
 \int\limits_{\Sigma} 
-[(-\kappa_x^2-\Ric(\nu_x))\cdot f^2(x)+|\nabla f(x)|^2]\cdot d_x\area.\]
+[(-\kappa_x^2-\Ric(\nu_x))\cdot f^2(x)+|\nabla f(x)|^2]\cdot d_x\area=
+\\
+&=\int\limits_{\Sigma} 
+(Lf)(x)\cdot f(x)\cdot d_x\area.\end{align*}
 
 Since $\Sigma$ is area minimizing we get 
 \[\delta(f)\ge 0\leqno({*}{*})\] for any $f$.
 
 Choose a function $f$ which minimize $\delta(f)$ among all the functions such that $\int_\Sigma f^2(x)\cdot d_x\area=1$.
-Note that this is an eigen function 
-for the operator 
-\[L\:f\mapsto [-\kappa_x^2-\Ric(\nu_x)]\cdot f+\Delta f,\]
-denote by $\lambda$ its eigen value;
+Note that $f$ an eigenfunction 
+for the linear operator $L$;
+denote by $\lambda$ its eigenvalue;
 by $({*}{*})$,
 $\lambda\ge 0$.
 
 Prove that $f(x)>0$ at any $x$.
-It follows that $Lf=\lambda f>0$.
+Since $Lf=\lambda f$, the inequalities $({*})$ follow.
+
 
 
 
 
 \parit{Comments.}
-It is is due to Mikhael Gromov and Blaine Lawson, see \cite{gromov-lawson}.
-Earlier Shing-Tung  Yau and Richard Schoen swoed that the same assumptions 
-impy existance of conformal factor on $\Sigma$ which makes it positively curved.
-Both statements admit straightforward generalizations to the higher dimensions.
-Both can be used 
-to proof that 3-torus does not admit a metric with positive scalar curvature;
+The problem is is due to Mikhael Gromov and Blaine Lawson, see \cite{gromov-lawson}.
+Earlier, Shing-Tung  Yau and Richard Schoen showed that the same assumptions 
+imply existence of conformal factor on $\Sigma$ which makes it positively curved.
+Both statement are used 
+to proof that $\TT^3$ does not admit a metric with positive scalar curvature;
 the original proof is given in \cite{schoen-yau}.
-The same proof works in dimension up to 7;
-in dimesnion 8 and higher it stop to work since the area minimizing hypersurfaces start to have singularities, see ???.
+
+Both statements admit straightforward generalization to higher dimensions
+and they can be used to show non existence metric with positive scalar curvature on $\TT^m$ with $m\le 7$.
+For $m=8$, the proof stops to work 
+since in this dimension the area minimizing hypersurfaces might have singularities.
+For example, 
+any domain in the cone in $\RR^8$
+defined by the identity
+\[x^2_1+x^2_2+x^2_3+x^2_4=x^2_5+x^2_6+x^2_7+x^2_8\]
+is area minimizing among the hypersurfaces with the same boundary;
+see ???
 
 
 
@@ -1944,16 +1969,17 @@ Assume contrary; that is, there is a point $p\in M$
 such that the image of normal exponential map to $N$
  does not touch $\eps$-neighborhood of $p$.
 
+\begin{wrapfigure}[6]{o}{25mm}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/spiral}
+\end{lpic}
+\end{wrapfigure}
+
 Show that given $R>0$ there is $\delta>0$ such that 
 if $x\in N$ and $|p-x|_M<R$ 
 then there is a unit speed curve in $N$
 which moves to $p$ with velocity at least $\delta$.
 (In fact, the value $\delta$ depends on $\eps$, $R$ and the curvature bounds in $B(p,R)$.)
 
-\begin{wrapfigure}{o}{25mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/spiral}
-\end{lpic}
-\end{wrapfigure}
 
 Following this curve for sufficient time brings us to $p$;
 that is, $p\in N$, a contradiction.
@@ -2899,6 +2925,8 @@ on the preimage $W=f^{-1}(V)$
 of a small open neighborhood $V\ni x$.
 Therefore the quotient map $\theta\:W\to W'=W/\ZZ_p$ is a $p$-fold covering.
 From  (\ref{f(x)=f(a(x))}),
+the restriction $f|_W$ factors through $\theta$;
+that is
 there is $f'\:W'\to V$ such that
 $f|_W=f'\circ\theta$.
 
@@ -2912,7 +2940,7 @@ Therefore
 Finally observe that $({*})$ contradicts $({*}{*})$.
 
 In the case $p=2$ the same proof works, 
-but the degree is defined only modulo $2$.
+but the degrees have to be defined only modulo $2$.
 
 \parit{Comments.}
 Along the same lines one can get a lower bound for the maximal diameter of orbit for any nontrivial actions of finite groups on a Riemannian manifold.
@@ -2938,7 +2966,7 @@ and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
 \begin{wrapfigure}{o}{27mm}
 %\begin{center}
-\begin{lpic}[t(-3mm),b(-5mm),r(0mm),l(0mm)]{pics/fig8(1)}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/fig8(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3239,7 +3267,7 @@ Both circles on the picture bound essentially different discs.
 
 \begin{wrapfigure}[6]{o}{46mm}
 %\begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3254,7 +3282,7 @@ The second example was given by Daniel Bennequin in \cite{bennequin}.
 
 \begin{wrapfigure}[5]{i}{19mm}
 %\begin{center}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/annuli()}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/annuli()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3413,7 +3441,7 @@ Problem \ref{mono-homotopy} is closely related.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{Complicated circle}.} 
+\parbf{\ref{Complicated circle}.} 
 \textit{Complicated circle.}
 Acontinuous function $f\:[0,1]\to [0,1]$
 will be called $\eps$-crooked 
@@ -3421,9 +3449,9 @@ if $f(0)=0$, $f(1)=1$
 and for any segment $[a,b]\subset [0,1]$ 
 one can choose $a\le x\le y\le b$ 
 such that
-\[|f(x)-f(a)|,|f(y)-f(b)|\le\eps.\]
+\[|f(y)-f(a)|\le\eps\ \ \text{and}\ \ |f(x)-f(b)|\le\eps.\]
 
-A $\tfrac1n$-crooked maps $f_n\:[0,1]\to [0,1]$ can be constructed recurcevely. 
+A seuence of $\tfrac1n$-crooked maps can be constructed recurcevely. 
 Guess the construction from the diagram.
 
 %\begin{wrapfigure}{r}{50mm}
@@ -3439,32 +3467,47 @@ Guess the construction from the diagram.
 
 Start with the unit circle, 
 $\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
-Construct recursevly a sequence of smooth simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
+Construct recursevly a sequence of simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
 Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
 and 
 \[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
 for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
 
+\begin{wrapfigure}{o}{46mm}
+%\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/circrooked(1)}
+\lbl[tr]{35,33;$\gamma_0$}
+\lbl[bl]{38,36;$\gamma_1$}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
+
+On the diagram you see an attempt to draw the first iteration.
+
 Denote by $D$ the union of all discs bounded by $\gamma_n$.
 Show that $D$ is homeomorphic to an open disc 
-and if one choose $\eps_n$ converging to zero fast enough
-then the bondary of $D$ contains no simple curves.
+and for the right coice of the $\eps_n$ the set $D$ is bounded and its
+bondary contains no simple curves.
+
 
 \parit{Comments.} The proof repeats the construction of pseudoarc 
 given by Bronis\l{}aw Knaster in \cite{knaster}.
-Let us list few similar problems.
+Let us list few problems which can be solved the same way.
 \begin{itemize}
 \item Construct three disjointed non-empty open sets in $\RR$ which have the same boundary.
 \item Construct three open discs in $\RR^2$ which have the same boundary.
 (This examples are called \emph{lakes of Wada};
 these are disjoint open discs in the plane which have identical boundary.   
 This example described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
-\item Construct a Cantor set in $\RR^3$ with non simply connected complement. This example was constructed by Louis Antoine in \cite{antoine}.
+\item Construct a Cantor set in $\RR^3$ with non simply connected complement. 
+(This example was is called  \emph{Antoine's necklace};
+it is constructed in \cite{antoine}.)
 \item Construct an open 3-dimensional manifold which is contractible, 
-but not homeomorphic to $\RR^3$. This example is called \emph{Whitehead manifold},
-see \cite{whitehead}.
+but not homeomorphic to $\RR^3$. 
+(This example is called \emph{Whitehead manifold},
+see \cite{whitehead}.)
 \end{itemize}
-For more advanced examples seach for Dogbone space and Casson handle, Dogbone space.
+For more advanced examples seach check Dogbone space and Casson handle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Homeomorphism of cube}.} 
@@ -3524,7 +3567,7 @@ this is the main advantage of Sullivan's construction.
   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{Finite topological space}.} 
+\parbf{\ref{Finite topological space}.} 
 \textit{Finite topological space.}
 Given a point $p\in F$,
 denote by $O_p$ the minimal open set in $F$ containing $p$. 
@@ -3541,7 +3584,7 @@ and saying that a collection of vertices form a simplex
 if they can form a an increasing sequence with respect to $\preccurlyeq$.
 
 Given $k\in K$,
-consider the minimal simplex $\triangle=(f_0,\dots,f_m)$;
+consider the minimal simplex $(f_0,\dots,f_m)\ni k$;
 we can assume that $f_0\preccurlyeq \dots\preccurlyeq f_m$.
 Set $h\:k\mapsto f_0$;
 it defines a map $K\to F$.
@@ -3553,7 +3596,8 @@ and induces an isomorphism of all the homotopy groups.
 In a similar facion, one can construct a finite topological space $F$ for given simplicial complex $K$ 
 such that 
 there is a weak homotopy equivalence $K\to F$.
-The constructions are dueto Pavel Alexandrov, see \cite{alexandrov-finite}, and \cite{mccord}.
+Both constructions are due to Pavel Alexandrov, 
+see \cite{alexandrov-finite} and \cite{mccord}.
 
 \parbf{\ref{Dense homeomorphism}.} 
 \textit{Dense homeomorphism.}
@@ -3726,10 +3770,16 @@ the proof of Brehm uses the same idea.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Minimal polyhedron}.} 
 \textit{Minimal polyhedron.}
-Arguing by contradiction, assume $T$ is a minimal polyhedral surface which is not saddle.
+Arguing by contradiction, 
+assume a polyhedral surface $T$ minimize the area but not saddle.
 
 Prove that 
 one can move one of the vertices of $T$ in such a way that the lengths of all edges starting at this vertex decrease.
+
+\begin{wrapfigure}{o}{21mm}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/tent}
+\end{lpic}
+\end{wrapfigure}
 
 Prove that if, 
 by this deformation, 
@@ -3739,15 +3789,10 @@ say $\triangle pxy$ and $\triangle qxy$
 such that 
 \[\measuredangle \hinge pxy+\measuredangle \hinge qxy> \pi.\]
 
-\begin{wrapfigure}{o}{21mm}
-\begin{lpic}[t(-12mm),b(-6mm),r(0mm),l(0mm)]{pics/tent}
-\end{lpic}
-\end{wrapfigure}
-
 Finally show that in this case exchanging triangles $\triangle pxy$ and $\triangle qxy$
 to the triangles $\triangle pxq$ and $\triangle pyq$
 leads to a polyhedral surface with smaller area.
-I.e., $T$ was is not minimal, a contradiction.
+That is, $T$ is not area minimizing, a contradiction.
 
 
 \parit{Comments.}
@@ -3762,7 +3807,7 @@ An example of such surface can be seen on the picture.
 {
 \begin{wrapfigure}{o}{22mm}
 %\begin{center}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
+\begin{lpic}[t(-4mm),b(1mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
 \end{lpic}
 %\end{center}
 \end{wrapfigure}
@@ -3887,7 +3932,7 @@ this is a contradiction.
 
 \begin{wrapfigure}{o}{20mm}
 %\begin{center}
-\begin{lpic}[t(-10
+\begin{lpic}[t(-0
 mm),b(-4mm),r(0mm),l(0mm)]{pics/57-triangulation(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
@@ -3911,7 +3956,7 @@ and Ernest Jucovi\v{c}, in \cite{jendrol-jucovich},
 their proof is combinatorial.
 The solution described above was given by Rostislav Matveyev
 in his lectures \cite{matveyev}.
-A complex-analytic proof was later found by Ivan Izmestiev, Robert Kusner, G{\"u}nter Rote, Boris Springborn and John Sullivan in \cite{izmestiev-rote-springborn-kusner}.
+A complex-analytic proof was found by Ivan Izmestiev, Robert Kusner, G{\"u}nter Rote, Boris Springborn and John Sullivan in \cite{izmestiev-rote-springborn-kusner}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Unique geodesics imply CAT}.} 
@@ -4198,11 +4243,11 @@ The later contradicts $({*})$ for $m\ge 6$.
 
 \parit{Comments.} 
 The proof above 
-is the core of proof of nonexistance of compact hyperbolic Coxeter's polyhedra of large dimensions 
+is the core of proof of nonexistence of compact hyperbolic Coxeter's polyhedra of large dimensions 
 given by Ernest Vinberg in \cite{vinberg}, see also \cite{vinberg-strong}.
 
 Playing a bit more with the same inequalities, 
-one gets nonexistance of  right-angled hyperbolic polyhedra,
+one gets nonexistence of  right-angled hyperbolic polyhedra,
 in all dimensions starting from $5$.
 In 4-dimensional case, an example of a bonded right-angled hyperbolic polyhedron
 can be found among regular \emph{120-cells}.
