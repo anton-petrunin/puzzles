@@ -81,7 +81,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=193
 mode=LaTeX
-open=false
+open=true
 order=5
 
 [item:bib.tex]
@@ -91,17 +91,17 @@ encoding=windows-1251
 highlight=LaTeX
 line=1270
 mode=LaTeX
-open=false
+open=true
 order=2
 
 [item:cover/caver-two-sided.tex]
 archive=true
-column=0
+column=92
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=22
 mode=LaTeX
-open=false
+open=true
 order=6
 
 [item:dictionary.tex]
@@ -111,7 +111,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=343
 mode=LaTeX
-open=false
+open=true
 order=3
 
 [item:pics/57-triangulation.eps]
@@ -571,15 +571,15 @@ encoding=UTF-8
 highlight=LaTeX
 line=60
 mode=LaTeX
-open=false
+open=true
 order=4
 
 [item:problems.tex]
 archive=true
-column=5
+column=33
 encoding=windows-1251
 highlight=LaTeX
-line=81
+line=10
 mode=LaTeX
 open=true
 order=0
@@ -610,7 +610,7 @@ ViMarks=.,0,0,[,0,0,],2274,11
 CursorColumn=92
 CursorLine=22
 JumpList=
-ViMarks=.,22,90,[,22,90,],22,91
+ViMarks=.,0,0,[,0,0,],32,13
 
 [view-settings,view=0,item:dictionary.tex]
 CursorColumn=3
@@ -625,13 +625,13 @@ JumpList=
 ViMarks=.,0,0,[,0,0,],137,17
 
 [view-settings,view=0,item:problems.tex]
-CursorColumn=5
-CursorLine=81
+CursorColumn=33
+CursorLine=10
 JumpList=
-ViMarks=.,1050,75,[,1050,75,],1050,75
+ViMarks=.,10,32,[,10,32,],10,32
 
 [view-settings,view=0,item:solutions.tex]
 CursorColumn=11
 CursorLine=1566
 JumpList=
-ViMarks=.,3934,16,[,3934,16,],3934,16
+ViMarks=.,0,0,[,0,0,],-1,-1

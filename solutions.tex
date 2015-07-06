@@ -18,7 +18,7 @@ Denote by $s=s(t)$ the natural parameter of the plane curve \[t\mapsto (x(t),y(t
 
 Prove that the function $f\:s\mapsto z$ is concave.
 
-Given a semiopen interval $\mathbb J=(a,b]\subset \II$,
+Given a semi-open interval $\mathbb J=(a,b]\subset \II$,
 set
 $\mu(\mathbb J)=f^+(a)-f^+(b)$,
 where $f^+$ denotes right derivatives.
@@ -40,7 +40,7 @@ This bound is optimal, check a both side infinite geodesic on the graph of  \[f(
 \parit{Comments.}
 The problem is due to David Berg, \cite{berg}.
 The main observation (the concavity of the function $s\mapsto z$)
-is called \emph{Libeman's lemma}; 
+is called \emph{Liberman’s lemma}; 
 it was used earlier 
 to bound on the variation of turn 
 of a geodesic on a convex surface,
@@ -53,9 +53,9 @@ see \cite{liberman}.
 \textit{Spiral.}
 Without loss of generality we may assume that the curvature of $\gamma$ decreases in $t$.
 
-\begin{wrapfigure}{o}{50mm}
+\begin{wrapfigure}{o}{50 mm}
 %\begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/kneser-log(.5)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kneser-log(.5)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -115,7 +115,7 @@ The analog of this statement in 3-dimensional case does not work.
 Namely, there is a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
 with all the principle curvatures between $-1$ and $1$
 such that it does not surround a ball of radius 1.
-Such example can be obtained by fatenning Bing's house,
+Such example can be obtained by fattening Bing's house,
 a nontrivial example of contractible 2-complex in $\RR^3$, 
 see \cite{bing}.
 
@@ -131,7 +131,7 @@ see the comments for Problem \ref{almost-flat}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{curve-in-S^2}.}
 \textit{A curve in a sphere.}
-Assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intesects each equator.
+Assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intersects each equator.
 Let us present two solutions.
 
 \parit{A solution with Crofton formula.}
@@ -156,7 +156,7 @@ The first identity above is called \emph{Crofton formula};
 prove it first for one geodesic segment in $\alpha$ and then sum it up for all segments in $\alpha$.
 
 \parit{Solution with symmetry.}
-Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$.  
+Let $\check\alpha$ be a sub-arc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$.  
 Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$.  
 
 Let $r$ be a point of intersection of $\alpha$ with the equator with pole at $z$.  
@@ -205,7 +205,7 @@ we get the result.
 
 \parit{Comment.}
 The statement was originally proved 
-by Istv{\'a}n F{\'a}ry in \cite{fary};
+by Istv\'an F\'ary in \cite{fary};
 number of different proofs are discussed by Serge Tabachnikov in \cite{tabachnikov}.
 
 If instead of a disc we have a region bounded by closed convex curve $\gamma$ then it is still true that the average curvature of $\alpha$ is at least as big as average curvature of $\gamma$. 
@@ -229,8 +229,77 @@ forms the subset of all smooth figures in $\mathfrak{C}$.
 Number of similar problems surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{40mm}
-\begin{lpic}[t(-5mm),b(-3mm),r(0mm),l(0mm)]{pics/serpinski-cemetery(1)}
+\parbf{\ref{Complicated circle}.} 
+\textit{Complicated circle.}
+A continuous function $f\:[0,1]\to [0,1]$
+will be called $\eps$-crooked 
+if $f(0)=0$, $f(1)=1$ 
+and for any segment $[a,b]\subset [0,1]$ 
+one can choose $a\le x\le y\le b$ 
+such that
+\[|f(y)-f(a)|\le\eps\ \ \text{and}\ \ |f(x)-f(b)|\le\eps.\]
+
+A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
+Guess the construction from the diagram.
+
+%\begin{wrapfigure}{r}{50 mm}
+\begin{center}
+\begin{lpic}[t(-0 mm),b(4 mm),r(0 mm),l(0 mm)]{pics/crooked(1)}
+\lbl[t]{8,0;$\eps=\tfrac12$}
+\lbl[t]{33,0;$\eps=\tfrac13$}
+\lbl[t]{57,0;$\eps=\tfrac14$}
+\lbl[t]{80,0;$\eps=\tfrac15$}
+\end{lpic}
+\end{center}
+%\end{wrapfigure}
+
+Start with the unit circle, 
+$\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
+Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
+Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
+and 
+\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
+for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
+
+\begin{wrapfigure}{o}{46 mm}
+%\begin{center}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/circrooked(1)}
+\lbl[tr]{35,33;$\gamma_0$}
+\lbl[bl]{38,36;$\gamma_1$}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
+
+On the diagram you see an attempt to draw the first iteration.
+
+Denote by $D$ the union of all discs bounded by $\gamma_n$.
+Show that $D$ is homeomorphic to an open disc 
+and for the right choice of the $\eps_n$ the set $D$ is bounded and its
+boundary contains no simple curves.
+
+
+\parit{Comments.} The proof repeats the construction of pseudo-arc 
+given by Bronis\l{}aw Knaster in \cite{knaster}.
+Let us list few problems which can be solved the same way.
+\begin{itemize}
+\item Construct three disjointed non-empty open sets in $\RR$ which have the same boundary.
+\item Construct three open discs in $\RR^2$ which have the same boundary.
+(This examples are called \emph{lakes of Wada};
+these are disjoint open discs in the plane which have identical boundary.   
+This example described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
+\item Construct a Cantor set in $\RR^3$ with non simply connected complement. 
+(This example was is called  \emph{Antoine's necklace};
+it is constructed in \cite{antoine}.)
+\end{itemize}
+For more advanced examples check 
+Whitehead manifold, 
+Dogbone space, 
+Casson handle
+and  problem~\ref{Conic neighborhood}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{o}{40 mm}
+\begin{lpic}[t(-5 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
 \end{lpic}
 \end{wrapfigure}
 \parbf{\ref{Fat curve}.}
@@ -238,10 +307,10 @@ Number of similar problems surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 Modify your favorite space filling curve 
 to keep area nearly the same and removing self-intersections.
 
-Say, you can modify the Sierpi\'{n}ski curve 
+Say, you can modify the Sierpi\'nski curve 
 which can be constructed as a limit of 
 recursively defined sequence of curves;
-see the 8-th iteration on the diagram. 
+see the 8th iteration on the diagram. 
 
 \parit{Comments.} The existence of such curves was observed by William Osgood in \cite{osgood}.
 
@@ -251,7 +320,7 @@ see the 8-th iteration on the diagram.
 The 1-dimensional Hausdorff measure will be denoted as $\mathcal{H}_1$. 
 
 Set $L=\mathcal{H}_1(K)$.
-Without loss of generality, we may assume that $K$ has diametr $1$.
+Without loss of generality, we may assume that $K$ has diameter $1$.
 
 Assume that $0<\eps<\tfrac12$.
 Prove that 
@@ -283,7 +352,7 @@ We can assume that the knot is given by a diagram on the the sphere.
 
 Fix a M\"obius transformation $\mathbb{S}^2\to\mathbb{S}^2$ which is not an isometry.
 Denote by $u$ its conformal factor. 
-Since the M\"obius transformation preservs total area, 
+Since the M\"obius transformation preserves total area, 
 we get 
 $$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u^2=1.$$ 
 Therefore, 
@@ -324,7 +393,7 @@ Hence the result follows.
 
 \parit{Comments.}
 This is the simplest case of so called \emph{Gehring's problem}. 
-The solution above was given by Michael Edelstein and Binyamin Schwatz in \cite{edelstein-schwatz};
+The solution above was given by Michael Edelstein and Binyamin Schwarz in \cite{edelstein-schwatz};
 later the same solution was rediscovered few times.
 
 
@@ -342,8 +411,8 @@ with outer normal vector $u$.
 Draw a chord of outer curve which is tangent to the inner curve at $x_u$;
 denote by $r=r(u)$ and $l=l(u)$ the lengths of this chord at the right and left from $x_u$.
 
-\begin{wrapfigure}{o}{51mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/tangent-eq-sol(1)}
+\begin{wrapfigure}{o}{51 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tangent-eq-sol(1)}
 \lbl[tr]{20,5;$u$}
 \lbl[rt]{18,15;$r$}
 \lbl[rt]{26,6;$l$}
@@ -366,7 +435,7 @@ each of the following two integrals
 give 
 the area between the curves.
 In particular 
-the integrals are equal to eachother. 
+the integrals are equal to each other. 
 The later contradicts $({*})$.
 
 
@@ -408,7 +477,7 @@ the later leads to a contradiction.
 \textit{Unbended geodesic.}
 Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
 
-Prove that for any $x\in\Sigma$ the distance $|x - p_t|$ is nondecreasing in $t$.
+Prove that for any $x\in\Sigma$ the distance $|x - p_t|$ is non-decreasing in $t$.
 
 Use the later statement, to prove the same for $|x - p_t|_W$,
 where $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
@@ -432,7 +501,7 @@ is a minimizing geodesic from $p_t$ to $q$ in the intrinsic metric of $W$.
 
 If $q$ is visible from $p_t$ for some $t$ then the line segment $[qp_t]$ intersects $\Sigma$ only at $q$.
 From above, 
-$\gamma_t$  coinsides with the line segment $[qp_t]$ which is impossible.
+$\gamma_t$  coincides with the line segment $[qp_t]$ which is impossible.
 
 \parit{Comment.}
 This  observation was used by Anatoliy Milka
@@ -454,10 +523,10 @@ Hence the result follows.
 \parit{Comments.}
 We described a partial case of so called \emph{monotonicity formula}.
 
-The seme argument shows that if $0$ is a double point
+The same argument shows that if $0$ is a double point
 of $\Sigma$ then $\area\Sigma\ge 2\cdot \pi$.
 This observation was used in the proof 
-that the minimal disc bounded by a simple closed curve with totoal curvature $\le 4\cdot\pi$ is necessary emebdded.
+that the minimal disc bounded by a simple closed curve with total curvature $\le 4\cdot\pi$ is necessary embedded.
 The proof was given by 
 Tobias Ekholm, 
 Brian White
@@ -466,14 +535,14 @@ in \cite{EWW};
 an amusing simplification and generalization
 was obtained by 
 Stephan Stadler. %???REF
-This result also imlies the result of John Milnor that any emebdded circle of total curvature at most $4\cdot\pi$ is unknot, see \cite{milnor}.
+This result also implies the result of John Milnor that any embedded circle of total curvature at most $4\cdot\pi$ is unknot, see \cite{milnor}.
 
 Note that if we assume in addition that the surface is a disc,
 then the statement holds for any saddle surface. 
 Indeed, denote by $S_r$ the sphere of radius $r$ concentrated with the unit sphere. 
 Then according to Problem~\ref{curve-in-S^2}, 
 $\length(\Sigma\cap S_r)\ge 2\cdot\pi\cdot r$.
-Then coarea formula leads to the solution.
+Then the coarea formula leads to the solution.
 
 On the other hand there are saddle surfaces homeomorphic to the cylinder
 may have have arbitrary small area in the ball. 
@@ -506,7 +575,7 @@ First note that the Gauss curvature of $\Omega'$ has to vanish at the points of 
 in other words, $\gamma'$ is the image of $\gamma$ 
 under the length-preserving map.
 Indeed since $\gamma'$ lies on convex part, 
-the Gauss curvature at the points of $\gamma'$ has to be nonnegative. 
+the Gauss curvature at the points of $\gamma'$ has to be non-negative. 
 On the other hand $\gamma'$ bounds a flat disc in $\partial K$;
 therefore its integral intrinsic curvature has to be $2{\cdot}\pi$.
 If the Gauss curvature is positive at some point of $\gamma'$ then total intrinsic curvature of $\gamma'$ has to be $<2{\cdot}\pi$, a contradiction.
@@ -559,7 +628,7 @@ Take a torus of revolution $T$;
 the rotations of the circle produce a family closed geodesics which we will call \emph{meridians}.
 
 Note that a geodesic on $T$ is either a meridian
-or it is transversal to all the meridians.
+or it intersects meridians transversally.
 No closed curve of these types can be contractible. 
 
 \parit{Comments.} I know this problem 
@@ -587,8 +656,8 @@ in other words the image of the map
 \[\phi\:z\mapsto f(z)-z\] 
 lies in $\CC^*=\CC\backslash\{0\}$.
 
-\begin{wrapfigure}{o}{44mm}
-\begin{lpic}[t(-7mm),b(2mm),r(0mm),l(0mm)]{pics/birkhoff(1)}
+\begin{wrapfigure}{o}{44 mm}
+\begin{lpic}[t(-7 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
 \lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
 \lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
 \lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
@@ -703,7 +772,7 @@ Given $s<s_0$, denote by $\Sigma_s$ the connected component of $z$ in $\Sigma\ca
 Note that for all $s$ sufficiently close to $s_0$
 we have
 \begin{itemize}
-\item $\Sigma_s$ is an embeded disc;
+\item $\Sigma_s$ is an embedded disc;
 \item $\partial\Sigma_s$ is convex plane curve.
 \end{itemize}
 
@@ -795,7 +864,7 @@ see \cite{bangert}*{Cor. 2}.
 Denote by $a$ the area of the surface.
 
 Cut the surface along a long closed simple geodesic $\gamma$.
-We get two discs with nonnegative curvature and large perimeter, 
+We get two discs with non-negative curvature and large perimeter, 
 say $\ell$.
 Note that the area of each disc is bounded above by $a$.
 
@@ -814,8 +883,8 @@ By Gauss--Bonnet formula the total curvature of $\Sigma$ is $4\cdot\pi$.
 Since $\eps>0$ is arbitrary, we get that there are 4 point in $\Sigma$, each with curvature $\pi$
 and remaining part of $\Sigma$ is flat.
 
-\begin{wrapfigure}{o}{21mm}
-\begin{lpic}[t(-3mm),b(-2mm),r(0mm),l(0mm)]{pics/akopyan(1)}
+\begin{wrapfigure}{o}{21 mm}
+\begin{lpic}[t(-3 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -830,7 +899,7 @@ The problem was suggested by Arseniy Akopyan.
 \parbf{\ref{Corkscrew geodesic}.}
 \textit{Corkscrew geodesic.}
 An example can be found among the surfaces of convex polyhedrons 
-such that the nondegenerate intersections with horizontal planes are triangles with parallel sides.
+such that the non-degenerate intersections with horizontal planes are triangles with parallel sides.
 
 The polyhedron $K$ should look like a vertical needle. 
 On the surface of $K$ there three broken lines, formed by the corresponding vertices of triangle.
@@ -839,7 +908,7 @@ has to cross these lines in the cyclic order at nearly each edge, and the number
 (The projection of geodesic spirals around the origin.)
 
 \parit{Comments.} This construction is due to 
-Imre B{\'a}r{\'a}ny, 
+Imre B\'ar\'any, 
 Krystyna Kuiperberg 
 and Tudor Zamfirescu,
 see
@@ -868,7 +937,7 @@ Cut $M$ along $\Sigma$,
 you get two manifolds $M_1$ and $M_2$
 with geodesic boundaries. 
 Prove that the distance functions to the boundary 
-$f_1\:M_1\to\mathbb{R}$ and $f_2\:M_2\to\mathbb{R}$ are siricly convex in the interiors of the manifolds.
+$f_1\:M_1\to\mathbb{R}$ and $f_2\:M_2\to\mathbb{R}$ are strictly convex in the interiors of the manifolds.
 
 Smooth the functions $f_i$ keeping them convex, this can be done by applying Greene--Wu Theorem (\cite{greene-wu}*{Thm. 2}).
 In particular each $f_i$ has singe critical point which is its maximum.
@@ -964,9 +1033,9 @@ take the point $p$ as the image of the center $\bar B^m$
 and take the surfaces $\Sigma_t$ as the restrictions of the  embedding to the spheres;
 the existence of the immersion follows from the Morse lemma.
 
-\begin{wrapfigure}{o}{23mm}
+\begin{wrapfigure}{o}{23 mm}
 %\begin{center}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/ass(1)}
+\begin{lpic}[t(-2 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/ass(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -993,7 +1062,7 @@ this way he has to perform some calculations, but does not have to worry about n
 Fix a  geodesic $n$-dimensional sphere $\mathbb{S}^n$ in $\mathbb{S}^m$.
 
 Given $r\in (0,\tfrac\pi2]$,
-denote by $U_r$ and $\tilde U_r$ the tubular $r$-neighbohood 
+denote by $U_r$ and $\tilde U_r$ the tubular $r$-neighborhood 
 of $\Sigma$ and $\mathbb{S}^n$ in $\mathbb{S}^m$ correspondingly.
 
 Prove that $U_{\frac\pi2}\supset\mathbb{S}^m$.
@@ -1161,7 +1230,7 @@ positively curved
 can not contain a pair of equidistant spheres.
 The argument above implies that the distance between such a pair has to exceed the injectivity radius of the manifold.
 
-The problem was suggested by Dima Burago.
+The problem was suggested by Dmitri Burago.
 Here is a short list of classical problems with similar solutions:
 \begin{itemize}
 \item Synge's problem, see \cite{synge}.
@@ -1224,7 +1293,7 @@ Hence the result follows.
 \parit{Comments.}
 The statement was proved by 
 Fuquan Fang, 
-S{\'e}rgio Mendon{\c{c}}a 
+S\'ergio Mendon\c{c}a 
 and Xiaochun Rong in \cite{FMR}.
 The main idea was discovered by 
 Burkhard Wilking, 
@@ -1279,7 +1348,7 @@ in  \cite{grove-wilking}.
 Denote by $\mathcal{U}$ the unit tangent bundle over $\RP^m$
 and $\mathcal{L}$ the space of projective lines in $\ell\:\RP^1\to \RP^m$.
 The spaces $\mathcal{U}$ and $\mathcal{L}$ 
-have dimesions $2\cdot m-1$ 
+have dimensions $2\cdot m-1$ 
 and $2\cdot(m-1)$
 correspondingly.
 
@@ -1304,7 +1373,7 @@ for any line $\ell\:\RP^1\to \RP^m$.
 \parit{Comments.} 
 The same idea is used to prove Loewner's inequality on the volume in of $\RP^m$ with metric conformally equivalent to the canonical one, see \cite{gromov-filling}.
 
-The problem is due to Cristopher Croke, see \cite{croke-energy}. 
+The problem is due to Christopher Croke, see \cite{croke-energy}. 
 He use the same idea to show that the identity map on $\CP^m$ is energy minimizing in its homotopy class.
 For $\mathbb S^m$, an analogous statement does not hold if $m\ge 3$.
 In fact if a closed Riemannian manifold $M$ 
@@ -1345,7 +1414,7 @@ in the sectional direction spanned by $U$ and $V$.
 
 Since any geodesics of length $\pi$ is minimizing,
 we get $q(U,V)\ge0$ for any pair of orthonormal vectors $U$ and $V$.
-It follows that average value of the right hand side in $({*})$ is nonnegative.
+It follows that average value of the right hand side in $({*})$ is non-negative.
 
 By Liouville's theorem, while taking the average of $({*})$, we can switch the order of integrals;
 therefore  
@@ -1356,7 +1425,7 @@ Hence the result follows.
 \parit{Comments.} Liouville's theorem has a number of similar applications,
 one of the most beautiful is the sharp isoperimetric inequality for 
 4-dimensional Hadamard manifolds;
-it was proved by Cristopher Croke in \cite{croke-4d},
+it was proved by Christopher Croke in \cite{croke-4d},
 see also \cite{croke-eigenvalue}.
 
 
@@ -1410,7 +1479,7 @@ Let $G$ be the compact Lie group and $e\in G$ is the identity element.
 Denote by $K$ the set of all contrvariant metrics $g\:\T^*_e\to \T_e $ 
 which extend to non-negatively curved left invariant metrics $\tilde g$ on $G$. 
 
-First recall that the bi-invariant metric on a compact Lie groups is nonnegatively curved. 
+First recall that the bi-invariant metric on a compact Lie groups is non-negatively curved. 
 Therefore $K$ is non empty.
 
 We will show that $K$ is convex, this is stronger than required.
@@ -1425,7 +1494,7 @@ For each $t\in (0,1)$, consider the product
 \[(G\times G,\tilde h_t)
 =
 (G,(1-t)\cdot \tilde g_0)\times (G,t\cdot \tilde g_1).\]
-Note that $h_t$ is nonnegatively curved left invariant metric on $G\times G$.
+Note that $h_t$ is non-negatively curved left invariant metric on $G\times G$.
 
 The quotient map 
 \[
@@ -1433,12 +1502,12 @@ The quotient map
 \]
 is a Riemannian submersion.
 By O'Nail's formula,
-the target has nonneggative curvature.
+the target has non-negative curvature.
 
-Fianally note that $(G,\tilde g_t)$
+Finally note that $(G,\tilde g_t)$
 is isometric to
 $(G\times G,\tilde h_t)/\Delta$ for any $t\in (0,1)$.
-Therfore $g_t\in K$ for any $t\in [0,1]$ as required.
+Therefore $g_t\in K$ for any $t\in [0,1]$ as required.
 
 \parit{Comment.}
 The earliest use of this construction 
@@ -1463,13 +1532,13 @@ Set $p^*=\gamma(\pi)$.
 
 Prove that $p^*$ is a solution.
 
-\parit{Alterntive proof.} 
+\parit{Alternative proof.} 
 Assume contrary;
 that is, for any $x\in M$ there is a point $x'$ such that 
 \[|x-x'|_g+|p-x'|_g>\pi.\]
 
 Show that there is a continuous map $x\mapsto x'$
-such that the above inequaliy holds for any $x$.
+such that the above inequality holds for any $x$.
 
 Fix sufficiently small $\eps>0$.
 Prove that the set $W_\eps=M\backslash B(p,\eps)$ 
@@ -1528,9 +1597,9 @@ Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^v=p_{-1}$.
 Fix large integer $N$ and set $w_n=(1-\tfrac nN)\cdot v_{n\cdot r}$
 and $q_n=p_n^{w_n}$.
 
-%\begin{wrapfigure}{r}{50mm}
+%\begin{wrapfigure}{r}{50 mm}
 \begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/perelman(1)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/perelman(1)}
 \lbl[trw]{8,5;$p_{-1}{=}q_0$}
 \lbl[tr]{14,5;$p_0$}
 \lbl[tl]{15,5;$q_1$}
@@ -1564,42 +1633,43 @@ by Grigori Perelman,
 see \cite{perelman}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\wrenches\ref{Warped product}.} 
+\parbf{\ref{Warped product}.} 
 \textit{Warped product.}
-Without loss of generality we may assume that $\Sc_M\ge 1$.
-
 Given $x\in \Sigma$, denote by $\nu_x$ the normal vector to $\Sigma$ at $x$ which agrees with the orientations of $\Sigma$ and $M$.
 Denote by $\kappa_x$ the non-negative principle curvature of $\Sigma$ at $x$;
 since $\Sigma$ is minimal the other principle curvature has to be $-\kappa_x$.
 
-Let $W=\mathbb S^1\times_f\Sigma$.
+Consider the warped product $W=\mathbb S^1\times_f\Sigma$ for some positive smooth function $f\:\Sigma\to \RR$.
 Assume that a point $y\in W$ projects to a point $x\in\Sigma$.
 Straightforward computations show that
 \begin{align*}
 \Sc_W(y)
 &=\Sc_\Sigma(x)-2\cdot\frac{\Delta f(x)}{f(x)}=
 \\
-&=\Sc_M(x)-2\cdot\kappa_x^2-2\cdot\Ric(\nu_x)-2\cdot\frac{\Delta f(x)}{f(x)}.
+&=\Sc_M(x)-2\cdot\Ric(\nu_x)-2\cdot\kappa_x^2-2\cdot\frac{\Delta f(x)}{f(x)}.
 \end{align*}
 Consider linear operator $L$ on the space of smooth functions on $\Sigma$ defined as 
-\[(Lf)(x)= [-\kappa_x^2-\Ric(\nu_x)]\cdot f(x)+(\Delta f)(x)\]
+\[(Lf)(x)= -[\Ric(\nu_x)+\kappa_x^2]\cdot f(x)-(\Delta f)(x)\]
 It is sufficient to find a smooth function $f$ on $\Sigma$ such that
 \[f(x)>0 \ \ \text{and}\ \ (Lf)(x)\ge 0\leqno({*})\]
 for any $x\in \Sigma$.
 
 
 Fix a smooth function $f\:\Sigma\to \RR$.
-Let us extend the field $f(x)\cdot\nu_x$
-from $\Sigma$ to a smooth field, say $v$ on whole $M$.
+Extend the field $f(x)\cdot\nu_x$
+on $\Sigma$ to a smooth field, say $v$, on whole $M$.
 Denote by $\iota_t$ the flow along $v$ for time $t$ and set $\Sigma_t=\iota_t(\Sigma)$.
 
-
+\parit{Informal end of proof.}
 Denote by $H_t(x)$ the mean curvature of $\Sigma_t$ at $\iota_t(x)$.
 Note that the value $(Lf)(x)$ is the derivative of
 the function $t\mapsto H_t(x)$  at $t=0$.
-Therefore condition $({*})$
-means that we can push $\Sigma$ to one of its sides while nonincreasing its mean curvature in the first order.
-The existence of such push should be evident;
+
+Therefore the condition $({*})$
+means that we can push $\Sigma$ into one of its sides 
+so that its mean curvature does not increase in the first order.
+Since $\Sigma$ is area minimizing,
+the existence of such push should be evident;
 read further if this is not the case.
 
 \parit{Formal end of proof.}
@@ -1611,30 +1681,30 @@ Direct calculations show that
 \delta(f)
 &=
 \int\limits_{\Sigma} 
-[(-\kappa_x^2-\Ric(\nu_x))\cdot f^2(x)+|\nabla f(x)|^2]\cdot d_x\area=
+\left(-[\Ric(\nu_x)+\kappa_x^2]\cdot f^2(x)+|\nabla f(x)|^2\right)\cdot d_x\area=
 \\
 &=\int\limits_{\Sigma} 
 (Lf)(x)\cdot f(x)\cdot d_x\area.\end{align*}
-
 Since $\Sigma$ is area minimizing we get 
 \[\delta(f)\ge 0\leqno({*}{*})\] for any $f$.
 
 Choose a function $f$ which minimize $\delta(f)$ among all the functions such that $\int_\Sigma f^2(x)\cdot d_x\area=1$.
 Note that $f$ an eigenfunction 
 for the linear operator $L$;
-denote by $\lambda$ its eigenvalue;
+in particular $f$ is smooth.
+Denote by $\lambda$ the eigenvalue of $f$;
 by $({*}{*})$,
 $\lambda\ge 0$.
 
-Prove that $f(x)>0$ at any $x$.
-Since $Lf=\lambda f$, the inequalities $({*})$ follow.
+Show that $f(x)>0$ at any $x$.
+Since $Lf=\lambda\cdot f$, the inequalities $({*})$ follow.
 
 
 
 
 
 \parit{Comments.}
-The problem is is due to Mikhael Gromov and Blaine Lawson, see \cite{gromov-lawson}.
+The problem is due to Mikhael Gromov and Blaine Lawson, see \cite{gromov-lawson}.
 Earlier, Shing-Tung  Yau and Richard Schoen showed that the same assumptions 
 imply existence of conformal factor on $\Sigma$ which makes it positively curved.
 Both statement are used 
@@ -1649,8 +1719,7 @@ For example,
 any domain in the cone in $\RR^8$
 defined by the identity
 \[x^2_1+x^2_2+x^2_3+x^2_4=x^2_5+x^2_6+x^2_7+x^2_8\]
-is area minimizing among the hypersurfaces with the same boundary;
-see ???
+is area minimizing among the hypersurfaces with the same boundary.
 
 
 
@@ -1678,7 +1747,7 @@ of the form
 $$f(x)=\sum_i\lambda_i\cdot\phi(|p_i-x|_{\ell_p})$$
 does not admit a local minima in $\mathbb{R}^m$.
 
-It remains to arrive to a contradiction
+Arrive to a contradiction
 by showing that if $p\ne 2$ then there is an array
 points $p_i$ and positive reals $\lambda_i$
 such that the function 
@@ -1696,7 +1765,7 @@ Construct a metric that the connected sum
 $M=\RR^3\#\mathbb{S}^2\times\mathbb{S}^1$ admits a metric which is flat outside a compact set and has non positive scalar curvature.
 Further, note that such metric can be constructed in such a way that it has a closed geodesic $\gamma$ with trivial holonomy and with constant negative curvature in its a tubular neighborhood.
 
-Cut the tubular neigbourhood $D^2\times \mathbb{S}^1$ of $\gamma$, 
+Cut the tubular neighborhood $D^2\times \mathbb{S}^1$ of $\gamma$, 
 prepare a metric $g$ on $\mathbb{S}^1\times D^2$ with negative scalar curvature which 
 is identical to the original metric near the boundary.
 The needed patch $(\mathbb{S}^1\times D^2,g)$ can be found among wrap products $\mathbb{S}^1\times_f D^2$.
@@ -1718,7 +1787,17 @@ the later equivalent to the Positive Mass Conjecture.
 \parbf{\ref{Area of spheres}.}
 \textit{Area of spheres.}
 Fix $r_0>0$.
-Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$. 
+Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
+
+ \begin{wrapfigure}[5]{o}{30 mm}
+%\begin{center}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
+\lbl[t]{9.5,8;$p$}
+\lbl[t]{28,2;$q$}
+\lbl[b]{10,20;$\partial B(p,r)$}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
 
 Note that any minimizing geodesic from $q$ to a point in $B(p,r_0)$
 has to cross $\partial B(p,r)$.
@@ -1726,16 +1805,6 @@ By volume comparison, we get that
 \[\vol B(p,r_0)\le C_m\cdot r_0\cdot \area \partial B(p,r),\]
 where $C_m$ is a constant depending only on the dimension $m=\dim M$,
 say one can take $C_m=10^m$.
-
-\begin{wrapfigure}{o}{30mm}
-%\begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/calabi-yau(1)}
-\lbl[t]{9.5,8;$p$}
-\lbl[t]{28,2;$q$}
-\lbl[b]{10,20;$\partial B(p,r)$}
-\end{lpic}
-%\end{center}
-\end{wrapfigure}
 
 \parit{Comments.}
 Applying coarea formula, 
@@ -1803,7 +1872,7 @@ its index has to be at least $2$,
 
 \parit{Alexandrov-style proof.}
 Fix a constant Riemannian metric $g$ on $\RR^4$.
-According to the main result of Alexander Bishop and Berg in \cite{ABB}, $X_g=(\RR^4\backslash (\Int K),g)$ has nonpositive curvature in the sense of Alexandrov.
+According to the main result of Alexander Bishop and Berg in \cite{ABB}, $X_g=(\RR^4\backslash (\Int K),g)$ has non-positive curvature in the sense of Alexandrov.
 In particular the universal cover of $\tilde X_g$ of $X_g$ is a $\CAT[0]$ space.
 
 By rescaling $g$ and passing to the limit we obtain that universal Riemannian cover $Z_g$ of $(\RR^4,g)$ branching in the coordinate planes is a $\CAT[0]$ space.
@@ -1842,12 +1911,12 @@ Since $g$ is close to the standard metric,
 we can assume that $\omega$ is close to $\omega_0$.
 In particular $\lambda_p\ne0$ for any $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 
-It follows that $\omega$ defines simplectic structure on $\mathbb{S}^2\times\mathbb{S}^2$
-and $\mathrm{J}$ is its psudocomplex structure.
-It remains to take the reparametrization of $\mathbb{S}^2\times \mathbb{S}^2$
-so that vertical and horizontal spheres will form pseudoholomorphic curves in the homology classes of $\mathbb{S}^2\times x$ and $x\times \mathbb{S}^2$.
+It follows that $\omega$ defines symplectic structure on $\mathbb{S}^2\times\mathbb{S}^2$
+and $\mathrm{J}$ is its pseudo-complex structure.
+It remains to take the re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
+so that vertical and horizontal spheres will form pseudo-holomorphic curves in the homology classes of $\mathbb{S}^2\times x$ and $x\times \mathbb{S}^2$.
  
-\parit{Comments.} The pseudoholomorphic curves (sometimes called \emph{gromomorphic curves}) 
+\parit{Comments.} The pseudo-holomorphic curves (sometimes called \emph{gromomorphic curves}) 
 were introduced by Mikhael Gromov in \cite{gromov-pseudoholomorphic}.
 For general metric the form $\omega$ might vanish at some points;
 if the metric is generic then it happens on disjoint circles,
@@ -1915,19 +1984,19 @@ Hence the result follows.
 It remains to do the equality case.
 
 \parit{Comments.} 
-The inequality was proved by Abram Besicovitch in \cite{besicovitch}.
+The inequality was proved by Abram Besikovitch in \cite{besicovitch}.
 It has number applications in Riemannian geometry.
 For example using this inequality it is easy to solve the following problem.
 
 Assume a metric $g$ on $\RR^m$ coincides with Euclidean outside of a bounded set $K$;
-assume further that any geodesic which comes into $K$ goes out from $K$ the same way as if the metric would be Euclidean everwhere. 
+assume further that any geodesic which comes into $K$ goes out from $K$ the same way as if the metric would be Euclidean everywhere. 
 Show that $g$ is flat.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{32mm}
+\begin{wrapfigure}{o}{32 mm}
 %\begin{center}
-\begin{lpic}[t(-3mm),b(3mm),r(0mm),l(0mm)]{pics/tripod}
+\begin{lpic}[t(-3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/tripod}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -1952,7 +2021,7 @@ and the restriction of the involution $(x,y)\mapsto (\iota(x),\iota(y))$ has the
 It remains to smooth $\partial(D\times D)$.
 
 \parit{Comments.}
-This example is given by Cristopher Croke in \cite{croke}.
+This example is given by Christopher Croke in \cite{croke}.
 
 It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
 
@@ -1969,8 +2038,8 @@ Assume contrary; that is, there is a point $p\in M$
 such that the image of normal exponential map to $N$
  does not touch $\eps$-neighborhood of $p$.
 
-\begin{wrapfigure}[6]{o}{25mm}
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/spiral}
+\begin{wrapfigure}[6]{o}{25 mm}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
 \end{lpic}
 \end{wrapfigure}
 
@@ -2030,7 +2099,7 @@ by Larry Guth in \cite{guth-symplectic}
 and attributed to Leonid Polterovich.
 
 Note that according to the Gromov's non-squeezing theorem in \cite{gromov-pseudoholomorphic}, 
-an analogous statement with $\CC\times \DD$ as the target does not hold, here $\DD\subset \CC$ is the open disc with incuced symplectic structure.
+an analogous statement with $\CC\times \DD$ as the target does not hold, here $\DD\subset \CC$ is the open disc with the induced symplectic structure.
 In particular, it shows that
 the projection of $\lambda(\Omega)$ as above 
 to $(x_1,y_1)$-plane
@@ -2047,7 +2116,7 @@ Let $h$ be the pullback metric on $M$ for $f\:M\to N$.
 Clearly $h\ge g$.
 In particular $(M,h)$ is complete and the map $f\:(M,h)\to N$ is a local isometry. 
 
-It remains to prove that any local isometry between complete connected Riemannian manifolls of the same dimension if a covering map. 
+It remains to prove that any local isometry between complete connected Riemannian manifolds of the same dimension if a covering map. 
 
 %???\parit{Comments.} 
 
@@ -2084,17 +2153,16 @@ The problem follows since the curvature tensor can be expressed in terms of metr
 \parit{Comments.} The formula for volume of tubular neighborhood 
 was given by Hermann Weyl in \cite{weyl}.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Disc}.} 
 \textit{Disc.}
 Show that given a positive integer $n$ one can construct a tree $T$ embedded into the disc such that any homotopy of the boundary of the disc to a point pass through a curve which intersects $n$ different edges.
 (For the tree on the diagram $n=3$.)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{o}{33mm}
+\begin{wrapfigure}[9]{o}{33 mm}
 %\begin{center}
-\begin{lpic}[t(-6mm),b(-0mm),r(0mm),l(0mm)]{pics/tree(1)}
+\begin{lpic}[t(-3 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2106,7 +2174,7 @@ We will construct a metric on the disc
 with diameter and length of its boundary below $1$
 such that 
 the distance between any two edges of $T$ of without common vertex 
-is at least $\eps$ .
+is at least $\eps$.
 
 To construct such a metric, 
 fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
@@ -2116,7 +2184,7 @@ fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
 \begin{itemize}
 \item The $\eps$-neighborhoods of the boundary components 
 have product metrics.
-\item Any vertical sigment $x\times[0,1]$ has length $\tfrac 12$.
+\item Any vertical segment $x\times[0,1]$ has length $\tfrac 12$.
 \item One of the boundary component has length $\eps$.
 \item The other boundary component has length $2\cdot m\cdot \eps$, 
 where $m$ is the number of edges in $T$.
@@ -2129,7 +2197,7 @@ and glue the long boundary component of the cylinder to $T$ by piecewise isometr
 According to the first construction,
 for any null-homotopy of the boundary 
 the least length is at least $n\cdot\tfrac{\eps}{10}$.
-The obtained metric is not Riemannian, but is is easy to smooth.
+The obtained metric is not Riemannian, but is easy to smooth.
 Since $n$ is arbitrary the result follows.
 
 \parit{Comments.} 
@@ -2205,13 +2273,13 @@ see \cite{balacheff-croke-katz}.
 Let $h$ be the maximal distance from points in $W$ to $M$.
 
 Fix a fine triangulation of $W$ 
-so that $M$ becomes a subcomplex.
+so that $M$ becomes a sub-complex.
 Say, let us assume that the diameter of each simplex in $\tau$ is less than 
 $\eps$.
 We can assume that $\tau$ is a barycentric subdivision of an other triangulation, so all the vertices of $\tau$ can be colored into colors $(0,\dots, m+1)$
 in such a way that the vertices of each simplex 
 get different colors.
-Denote by $\tau_i$ the maximal $i$-dimensional subcomplex of $\tau$ 
+Denote by $\tau_i$ the maximal $i$-dimensional sub-complex of $\tau$ 
 with all the vertices colored by $0,\dots, i$.
 
 For each vertex $v$ in $\tau$ 
@@ -2261,7 +2329,7 @@ Note that
 
 Assume $\dot\gamma(0)$
 takes random value in $\U M$.
-By Liuville's theorem, the same holds for $\dot\gamma(t)$
+By Liouville's theorem, the same holds for $\dot\gamma(t)$
 for any fixed $t$.
 Therefore
 the expected value of
@@ -2291,9 +2359,9 @@ where $a,b\:[0,1]\to\RR$
 are smooth functions such that $a(0)=1=b(1)$ and $a(1-s)=0=b(s)$ for $s\le \tfrac13$.
 In order to keep the bounds on the curvature and injectivity radius,
 the functions $a$ and $b$
-suppose to take huge values in the middle of inteval.
+suppose to take huge values in the middle of interval.
 
-To prove the second part of theorem, notice that if such metric would not exist, it would be an algorithm to recognize $\mathbb S^5$ among $5$-dimensinal manifolds.
+To prove the second part of theorem, notice that if such metric would not exist, it would be an algorithm to recognize $\mathbb S^5$ among $5$-dimensional manifolds.
 The later is impossible by Novikov theorem.
 
 \parit{Comments.}
@@ -2307,7 +2375,7 @@ A detailed proof of Novikov theorem can be found in \cite{nabutovsky-NovThm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Noncontracting map}.} 
-\textit{Noncontracting map.}
+\textit{Non-contracting map.}
 Given any pair of point $x_0,y_0\in K$, 
 consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
 such that 
@@ -2327,7 +2395,7 @@ that is,
 \]
 
 
-Since $f$ is noncontracting, we get
+Since $f$ is non-contracting, we get
 \[
 |x_0-x_{|n_i-n_j|}|
 \le 
@@ -2342,7 +2410,7 @@ x_{m_i}\to x\ \ \text{and}\ \ y_{m_i}\to y\ \ \text{as}\ \ i\to\infty.
 
 Set \[\ell_n=|x_n-y_n|_K,\]
 where $|{*}-{*}|_K$ denotes the distance between points in $K$.
-Since $f$ is noncontracting, $(\ell_n)$ is a nondecreasing sequence.
+Since $f$ is non-contracting, $(\ell_n)$ is a non-decreasing sequence.
 
 By $({*})$, it follows that $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
 It follows that $(\ell_n)$ is a constant sequence.
@@ -2388,7 +2456,7 @@ in the same paper he introduced metric spaces, see \cite{frechet}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Metric compactification}.}
 \textit{Metric compactification.}
-Take $X$ to be the set of nonnegative integers with the metic $\rho$ defined as 
+Take $X$ to be the set of non-negative integers with the metric $\rho$ defined as 
 $\rho(m,n)=m+n$ for $m\ne n$.
 
 Assume $F_X$ is not an embedding.
@@ -2421,10 +2489,10 @@ The complement
 $\partial_\infty X=\bar X\backslash F_X(X)$ 
 is called \emph{metric absolute} of $X$.
 
-The compactifiacation
+The compactification
 and absolute
-was inroduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
-The problem above was sugested by Linus Kramer.
+was introduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
+The problem above was suggested by Linus Kramer.
 
 
 
@@ -2473,11 +2541,11 @@ which is surjective on the fundamental groups.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{macrodimension}.} 
-\textit{Macrodimension.}
+\textit{Macro-dimension.}
 Choose a point $p\in M$,
 denote by $f$ the distance function from $p$.
 
-Let us cover $M$ by the connected components of the preimages 
+Let us cover $M$ by the connected components of the inverse images 
 $f^{-1}((n-1,n+1))$.
 Clearly any point in $M$ is covered by at most two such components.
 It remains to show that each of these components has diameter less than $100$.
@@ -2505,9 +2573,9 @@ The problem was discussed it a talk by Nikita Zinoviev around 2004.
 Consider a chain of disjoint circles $c_0,c_1,\dots,c_n$ in $\RR^3$;
 that is, $c_i$ and $c_{i-1}$ are linked for each $i$. 
 
-%\begin{wrapfigure}{o}{50mm}
+%\begin{wrapfigure}{o}{50 mm}
 \begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/chain(1)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/chain(1)}
 \lbl[t]{5,0;$c_0$}
 \lbl[t]{11,0;$c_1$}
 \lbl[t]{31,0;$\cdots$}
@@ -2524,7 +2592,7 @@ Note that for any short homeomorphism $f\:(U,\rho)\to\RR^3$ the distance from $f
 Let us show that the $\rho$-distance from $c_0$ to $c_n$ might be much larger than $\ell$.
 Fix a line segment $[ab]$ in $\RR^3$.
 Modify 
-the length-metric on $\RR^3$ in arbitrary small neighbohood of $[ab]$
+the length-metric on $\RR^3$ in arbitrary small neighborhood of $[ab]$
 so that there is a chain $(c_i)$ of circles as above,
 which goes from $a$ to $b$ 
 such that
@@ -2538,23 +2606,23 @@ for any two points $x,y\in\RR^3$
 and fixed in advanced small $\eps>0$.
 The construction of $\rho$ 
 is done by shrinking the length of each circle
-and expanding the length in the normal diections  
-to the circles in their small neigbourhood.
+and expanding the length in the normal directions  
+to the circles in their small neighborhood.
 The later is made in order to make impossible to use the circles $c_i$ as a shortcut;
 that is, one spends more time to go from one circle to an other 
 than saves on going along the circle.
 
 Set $a_n=(0,\tfrac1n,0)$ and $b_n=(1,\tfrac1n,0)$.
-Note that the line segmments $[a_nb_n]$ are disjoint and converging
+Note that the line segments $[a_nb_n]$ are disjoint and converging
 to $[a_\infty b_\infty]$
 where $a_\infty=(0,0,0)$ and $b_\infty=(1,0,0)$.
 
-Apply the above construction in nonoverlaping convex neighborhoods of $[a_nb_n]$ 
+Apply the above construction in non-overlapping convex neighborhoods of $[a_nb_n]$ 
 and for a sequences 
 $\eps_n$ and $\ell_n$ 
 which converge to zero very fast.
 
-The obtainded length-metric $\rho$ is still close to the canonical,
+The obtained length-metric $\rho$ is still close to the canonical,
 but for any open set $U$ containing $[a_\infty b_\infty]$
 the space $(U,\rho)$ does not admit 
 a short homeomorphism to $\RR^3$.
@@ -2596,12 +2664,12 @@ see \cite{BIS}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{sub-Riemannian}.} 
 \textit{Sub-Riemannian sphere.}
-Prove that there is a nondecreasing sequence of Riemannian metric tensors
+Prove that there is a non-decreasing sequence of Riemannian metric tensors
 $g_0\le g_1\le ...$ such that the induced metrics converge to the given sub-Riemannian metrics.
 The metric $g_0$ can be assumed to be a metric on round sphere.
 
 Applying the construction as in Nash--Kuiper theorem,
-one can produce a sequence of smooth embedings $h_n\:\mathbb{S}^m\to \RR^{m+1}$ with the induced metrics $g_n'$
+one can produce a sequence of smooth embeddings $h_n\:\mathbb{S}^m\to \RR^{m+1}$ with the induced metrics $g_n'$
 such that $|g_n'-g_n|\to 0$.
 
 Moreover, assume we assign a positive real number $\eps(h)$ for any smooth embedding $h\:\mathbb{S}^m\to\RR^{m+1}$.
@@ -2739,7 +2807,7 @@ This construction was given by
 Aleksei Pogorelov in \cite{pogorelov}.
 It is closely related to the construction given 
 by David Hilbert in \cite{hilbert}
-which was the motivating example of his 4-th problem,
+which was the motivating example of his 4th problem,
 see \cite{hilbert-problems}.
 
 
@@ -2788,7 +2856,7 @@ Define $(M,A)$-quasi-isometry
 as a map $f\:X\to Y$ between metric spaces $X$ and $Y$ such that for any $x,y\in X$,
  we have
 \[\tfrac1M\cdot |x-y|-A\le |f(x)-f(y)|\le M\cdot |x-y|+A\]
-and any point in $Y$ lies on the distance at most $A$ from a point in the immage $f(X)$.
+and any point in $Y$ lies on the distance at most $A$ from a point in the image $f(X)$.
 
 Note that $(M,0)$-quasi-isometry is a $[\tfrac1M,M]$-bi-Lipschitz map.
 Moreover,
@@ -2803,7 +2871,7 @@ such that
 \[|f(x)-h(x)|<\eps\]
 for any $x\in B(p,1)$.
 
-Applying recaling, we can get the following equivalent formulation. 
+Applying rescaling, we can get the following equivalent formulation. 
 Given $M\ge 1$, $A\ge 0$ and $\eps>0$
 there is big enough $R>0$ such that for any $(M,A)$-quasi-isometry 
 $f\:\RR^m\to\RR^m$ and any $p\in\RR^m$ there is a $[\tfrac1M,M]$-bi-Lipschitz map $h\:B(p,R)\to \RR^m$
@@ -2921,7 +2989,7 @@ in particular
 
 Fix $x\in \mathbb{S}^m$ such that $a(x)\ne x$.
 Note that $a$ acts without fixed points 
-on the preimage $W=f^{-1}(V)$ 
+on the inverse image $W=f^{-1}(V)$ 
 of a small open neighborhood $V\ni x$.
 Therefore the quotient map $\theta\:W\to W'=W/\ZZ_p$ is a $p$-fold covering.
 From  (\ref{f(x)=f(a(x))}),
@@ -2964,9 +3032,9 @@ First show that any compact metric space can be presented as a limit of a sequen
 Moreover, show that one can assume  each vertex of $\Gamma_n$ has degree 3 
 and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
-\begin{wrapfigure}{o}{27mm}
+\begin{wrapfigure}{o}{27 mm}
 %\begin{center}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/fig8(1)}
+\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/fig8(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2977,7 +3045,7 @@ Guess this part
 from the following picture; it shows the needed approximation of the doted graph.
 
 \parit{Comments.} 
-The same idea works if instead of figure eight, we have any compact length-metric space $X$ wich admits a map $X\to\Phi$
+The same idea works if instead of figure eight, we have any compact length-metric space $X$ which admits a map $X\to\Phi$
 which is surjective on fundamental groups.
 Such spaces $X$ can be found among compact hyperbolic manifolds of any dimension $\ge 2$.
 For more details see the thesis of Vedrin Sahovic \cite{sahovic}.
@@ -3105,7 +3173,7 @@ Dmitri Burago
 and Bruce Kleiner,
 see \cite{burago-kleiner}. 
 For a finitely generated group $G$  
-it is not known if $G$ and $G\times \ZZ_2$ can fail to be bi-Lipscitz.
+it is not known if $G$ and $G\times \ZZ_2$ can fail to be bi-Lipschitz.
 (The groups are assumed to be equipped with word metric.)
  
 
@@ -3133,7 +3201,7 @@ Hence the result follows.
 \parit{Comments.}
 The converse to the problem also holds;
 it was proved by Christian Lange in \cite{lange},
-his proof based ealier results of 
+his proof based earlier results of 
 Marina Mikhailova, see \cite{mikhailova}.
 
 Note that the cone over spherical suspension over Poincar\'e sphere is homeomorphic to $\RR^5$ and it is quotient of $\RR^5$ by a finite subgroup of $\SO(5)$. 
@@ -3214,7 +3282,7 @@ see \cite{gromov-MetStr}*{Prop. 3.22}.
 \parbf{\ref{Short basis}.}
 \textit{Short basis.}
 Consider universal Riemannian cover $\tilde M$ of $M$.
-Note that $\tilde M$ is nonnegatively curved and
+Note that $\tilde M$ is non-negatively curved and
 $\pi_1M$ acts by isometries on $\tilde M$.
 
 Fix $p\in \tilde M$.
@@ -3265,9 +3333,9 @@ see \cite{gromov-almost-flat}.
 \textit{Immersed disks.}
 Both circles on the picture bound essentially different discs.
 
-\begin{wrapfigure}[6]{o}{46mm}
+\begin{wrapfigure}[5]{o}{46 mm}
 %\begin{center}
-\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/milnors-discs()}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3280,9 +3348,9 @@ It is a good exercise to count the essentially different discs in these examples
 The first example is generally attributed to John Milnor.
 The second example was given by Daniel Bennequin in \cite{bennequin}.
 
-\begin{wrapfigure}[5]{i}{19mm}
+\begin{wrapfigure}[6]{r}{19 mm}
 %\begin{center}
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/annuli()}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3337,7 +3405,7 @@ for any embedding  $\phi\:B^m\to\RR^m$.
 It remains to note that the composition $f=\ell\circ\psi$ has no critical points.
 
 \parit{Comments.} 
-The problem was suggested by Petya Pushkar.
+The problem was suggested by Petr Pushkar.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Conic neighborhood}.} 
@@ -3350,7 +3418,7 @@ such that
 \begin{enumerate}[(i)]
 \item 
 For any compact set $K\subset V$ 
-there is a postive ineteger $n=n_K$ such that 
+there is a positive integer $n=n_K$ such that 
 $f_n(k)=f_m(k)$ for any $k\in K$ and $m\ge n$.
 \item For any point $w\in W$ there is a point $v\in V$ such that $f_n(v)=w$ for all large $n$.
 \end{enumerate}
@@ -3378,11 +3446,12 @@ Note that for two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Si
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{No knots}.} 
 \textit{No $C^0$-knots.}
-Observe that it is possible to draw any knot tight keeping it smoothly embedded all the time.
+Observe that it is possible to draw tight arbitrary knot 
+while keeping it smoothly embedded all the time including the last moment.
 
-%\begin{wrapfigure}{r}{50mm}
+%\begin{wrapfigure}{r}{50 mm}
 \begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/knot(1)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/knot(1)}
 %\lbl[trw]{8,5;$p_{-1}{=}q_0$}
 \end{lpic}
 \end{center}
@@ -3394,8 +3463,8 @@ This problem was suggested by Greg Kuperberg, see \cite{One-step problems in geo
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{o}{37mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/Simple-stabilization(1)}
+\begin{wrapfigure}{o}{37 mm}
+\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Simple-stabilization(1)}
 \lbl[]{8.7,8.3;{\color{white} $K_1$}}
 \lbl[]{28.7,8.3;{\color{white} $K_2$}}
 \end{lpic}
@@ -3405,7 +3474,7 @@ This problem was suggested by Greg Kuperberg, see \cite{One-step problems in geo
 \textit{Simple stabilization.}
 The example can be guessed from the diagram.
 
-\parit{Caomments.} 
+\parit{Comments.} 
 I learned this problem 
 in my analysis class taught by 
 Maria Goluzina.
@@ -3415,10 +3484,10 @@ Maria Goluzina.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Isotropy}.}
 \textit{Isotropy.}
-Fix a hoemeomrphism $\phi\:K_1\to K_2$.
+Fix a homeomorphism $\phi\:K_1\to K_2$.
 
 By Tietze extension theorem,
-the hoemeomrphisms $\phi\:K_1\to K_2$ and $\phi^{-1}\:K_2\to K_1$ can be extended to a continuous maps,
+the homeomorphisms $\phi\:K_1\to K_2$ and $\phi^{-1}\:K_2\to K_1$ can be extended to a continuous maps,
 say $f\:\RR^m\to \RR^m$ and $g\:\RR^m\to \RR^m$ correspondingly.
 
 Consider the homeomorphisms
@@ -3431,7 +3500,7 @@ h_2(x,y)&=(x-g(y),y),
 h_3(x,y)&=(y,-x).
 \end{align*}
 
-It remains to prove that each homeomorphism $h_i$ is isotopic to the indentity map and
+It remains to prove that each homeomorphism $h_i$ is isotopic to the identity map and
 \[h=h_3\circ h_2\circ h_1.\] 
 
 \parit{Comments.}
@@ -3439,75 +3508,6 @@ The problem is due to Victor Klee,
 see \cite{klee}.
 Problem \ref{mono-homotopy} is closely related.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Complicated circle}.} 
-\textit{Complicated circle.}
-Acontinuous function $f\:[0,1]\to [0,1]$
-will be called $\eps$-crooked 
-if $f(0)=0$, $f(1)=1$ 
-and for any segment $[a,b]\subset [0,1]$ 
-one can choose $a\le x\le y\le b$ 
-such that
-\[|f(y)-f(a)|\le\eps\ \ \text{and}\ \ |f(x)-f(b)|\le\eps.\]
-
-A seuence of $\tfrac1n$-crooked maps can be constructed recurcevely. 
-Guess the construction from the diagram.
-
-%\begin{wrapfigure}{r}{50mm}
-\begin{center}
-\begin{lpic}[t(-0mm),b(4mm),r(0mm),l(0mm)]{pics/crooked(1)}
-\lbl[t]{8,0;$\eps=\tfrac12$}
-\lbl[t]{33,0;$\eps=\tfrac13$}
-\lbl[t]{57,0;$\eps=\tfrac14$}
-\lbl[t]{80,0;$\eps=\tfrac15$}
-\end{lpic}
-\end{center}
-%\end{wrapfigure}
-
-Start with the unit circle, 
-$\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
-Construct recursevly a sequence of simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
-Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
-and 
-\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
-for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
-
-\begin{wrapfigure}{o}{46mm}
-%\begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/circrooked(1)}
-\lbl[tr]{35,33;$\gamma_0$}
-\lbl[bl]{38,36;$\gamma_1$}
-\end{lpic}
-%\end{center}
-\end{wrapfigure}
-
-On the diagram you see an attempt to draw the first iteration.
-
-Denote by $D$ the union of all discs bounded by $\gamma_n$.
-Show that $D$ is homeomorphic to an open disc 
-and for the right coice of the $\eps_n$ the set $D$ is bounded and its
-bondary contains no simple curves.
-
-
-\parit{Comments.} The proof repeats the construction of pseudoarc 
-given by Bronis\l{}aw Knaster in \cite{knaster}.
-Let us list few problems which can be solved the same way.
-\begin{itemize}
-\item Construct three disjointed non-empty open sets in $\RR$ which have the same boundary.
-\item Construct three open discs in $\RR^2$ which have the same boundary.
-(This examples are called \emph{lakes of Wada};
-these are disjoint open discs in the plane which have identical boundary.   
-This example described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
-\item Construct a Cantor set in $\RR^3$ with non simply connected complement. 
-(This example was is called  \emph{Antoine's necklace};
-it is constructed in \cite{antoine}.)
-\item Construct an open 3-dimensional manifold which is contractible, 
-but not homeomorphic to $\RR^3$. 
-(This example is called \emph{Whitehead manifold},
-see \cite{whitehead}.)
-\end{itemize}
-For more advanced examples seach check Dogbone space and Casson handle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Homeomorphism of cube}.} 
@@ -3532,9 +3532,9 @@ Consider $\RR^m$ with polar coordinates $(u,r)$, where $u\in\mathbb{S}^{m-1}$ an
 Let $\Phi\:\RR^m\to\RR^m$
 is defined by $\Phi(u,r)=(u,\phi(r))$.
 
-\begin{wrapfigure}{o}{46mm}
+\begin{wrapfigure}{o}{46 mm}
 %\begin{center}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/Phi(1)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
 \end{lpic}
 %\end{center}
 \end{wrapfigure}
@@ -3561,7 +3561,7 @@ Instead of the discrete group of motions of Euclidean space,
 he use a discrete group of motions of hyperbolic space in the Poincare model.
 Say, assume we repeat the same argument if instead of cube we have a Coxeter polytope in the hyperbolic space.
 Then the constructed map 
-coinsides with the identity on the absolute and therefore the last ``shrinking'' step in the proof above is not needed.
+coincides with the identity on the absolute and therefore the last ``shrinking'' step in the proof above is not needed.
 Moreover, if the original homeomorphism is bi-Lipschitz then the construction also produce a bi-Lipschitz homeomorphism;
 this is the main advantage of Sullivan's construction.
   
@@ -3593,7 +3593,7 @@ It remains to check that $h$ is continues
 and induces an isomorphism of all the homotopy groups.
 
 \parit{Comments.}
-In a similar facion, one can construct a finite topological space $F$ for given simplicial complex $K$ 
+In a similar fashion, one can construct a finite topological space $F$ for given simplicial complex $K$ 
 such that 
 there is a weak homotopy equivalence $K\to F$.
 Both constructions are due to Pavel Alexandrov, 
@@ -3691,7 +3691,7 @@ The alternative end of proof appears in \cite{panov-petrunin}.
 
 The patch construction above was introduced by 
 Aleksandr Alexandrov
-in his proof of convex embeddabilty of polyhedrons;
+in his proof of convex embeddability of polyhedrons;
 the earliest reference we have found is
 \cite{alexandrov1948}*{VI, \S7}.
 
@@ -3756,7 +3756,7 @@ Redefine the map $f$ inside $\Omega$ so that it remains piecewise liner length-p
 The same proof works in all dimensions;
 it was given by Ulrich Brehm in \cite{brehm}.
 The same proof was rediscovered by Arseniy Akopyan and Alexey Tarasov in \cite{akopyan-tarasov},
-сee also \cite{petrunin-yashinsky}.
+see also \cite{petrunin-yashinsky}.
 
 The problem is closely related to Kirszbraun's theorem \cite{kirszbraun},
 which was reproved by Frederick Valentine in \cite{valentine};
@@ -3776,11 +3776,6 @@ assume a polyhedral surface $T$ minimize the area but not saddle.
 Prove that 
 one can move one of the vertices of $T$ in such a way that the lengths of all edges starting at this vertex decrease.
 
-\begin{wrapfigure}{o}{21mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/tent}
-\end{lpic}
-\end{wrapfigure}
-
 Prove that if, 
 by this deformation, 
 the area does not decease 
@@ -3788,6 +3783,11 @@ then there are two adjusted triangles in the triangulation,
 say $\triangle pxy$ and $\triangle qxy$
 such that 
 \[\measuredangle \hinge pxy+\measuredangle \hinge qxy> \pi.\]
+
+\begin{wrapfigure}{r}{21 mm}
+\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/tent}
+\end{lpic}
+\end{wrapfigure}
 
 Finally show that in this case exchanging triangles $\triangle pxy$ and $\triangle qxy$
 to the triangles $\triangle pxq$ and $\triangle pyq$
@@ -3798,16 +3798,16 @@ That is, $T$ is not area minimizing, a contradiction.
 \parit{Comments.}
 This problem is discussed in my paper \cite{petrunin-monthly}.
 
-For general polyhedral surface, the deformation which decrease the legths of all edges may not decrease the area.
-Moreover, the surface which minimize the area among all surfaces with fixed  triagulation may be not saddle. 
+For general polyhedral surface, the deformation which decrease the lengths of all edges may not decrease the area.
+Moreover, the surface which minimize the area among all surfaces with fixed  triangulation may be not saddle. 
 An example of such surface can be seen on the picture.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{o}{22mm}
+\begin{wrapfigure}{o}{22 mm}
 %\begin{center}
-\begin{lpic}[t(-4mm),b(1mm),r(0mm),l(0mm)]{pics/Convex-triangulation(1)}
+\begin{lpic}[t(-4 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
 \end{lpic}
 %\end{center}
 \end{wrapfigure}
@@ -3840,7 +3840,7 @@ Note that
 \[W_{i,j}=\set{x\in\RR^m}{f_i(x)=f_j(x)}\]
 is a hyperplane for any pair $i\ne j$.
 
-The subset $P_{i,j}=P\cap W_{i,j}$ satisfies the same asumtions as $P$, but lies in a hyperplane.
+The subset $P_{i,j}=P\cap W_{i,j}$ satisfies the same assumptions as $P$, but lies in a hyperplane.
 Since $m$ is minimal, we get that $P_{i,j}$ is a polytope for any pair $i,j$.
 
 Consider Voronoi domains 
@@ -3927,13 +3927,13 @@ one can push $\gamma_i$ aside so it does not longer pass through $v_7$, but rema
 Cut $\TT^2$ along $\gamma_1$ and $\gamma_2$.
 In the obtained quadrilateral, connect $v_5$ to $v_7$ by a minimizing geodesic and cut along it.
 This way we obtain an annulus with flat metric.
-Look at the neighborhood of the boundary components and show that the anulus can and can not be isometrically immersed into the plane;
+Look at the neighborhood of the boundary components and show that the annulus can and can not be isometrically immersed into the plane;
 this is a contradiction.
 
-\begin{wrapfigure}{o}{20mm}
+\begin{wrapfigure}{r}{20 mm}
 %\begin{center}
-\begin{lpic}[t(-0
-mm),b(-4mm),r(0mm),l(0mm)]{pics/57-triangulation(1)}
+\begin{lpic}[t(-4
+ mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3956,12 +3956,12 @@ and Ernest Jucovi\v{c}, in \cite{jendrol-jucovich},
 their proof is combinatorial.
 The solution described above was given by Rostislav Matveyev
 in his lectures \cite{matveyev}.
-A complex-analytic proof was found by Ivan Izmestiev, Robert Kusner, G{\"u}nter Rote, Boris Springborn and John Sullivan in \cite{izmestiev-rote-springborn-kusner}. 
+A complex-analytic proof was found by Ivan Izmestiev, Robert Kusner, G\"unter Rote, Boris Springborn and John Sullivan in \cite{izmestiev-rote-springborn-kusner}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Unique geodesics imply CAT}.} 
 \textit{Unique geodesics imply $\mathrm{CAT}(0)$.}
-Uniqueness of geodesics implies that $P$ is contractable.
+Uniqueness of geodesics implies that $P$ is contractible.
 In particular, $P$ is simply connected.
 
 It remains to prove that $P$ is locally $\mathrm{CAT}(0)$;
@@ -3982,7 +3982,7 @@ The later leads to a contradiction.
 \parit{Comments.}
 The existence of geodesic $\gamma$ was proved by Brian Bowditch in \cite{bowditch};
 a simpler proof can be found in the book 
-by Stephanie Alexandr, Vitali Kapovitch and me, see \cite{akp}.
+by Stephanie Alexander, Vitali Kapovitch and me, see \cite{akp}.
 
 
 
@@ -4005,7 +4005,7 @@ An example of that type can be found among 3-simplexes.
 \textit{Box in a box.}
 Let $\Pi$ be a parallelepiped
 with dimensions $a$, $b$ and $c$.
-Denote by $v(r)$ the volume of  $r$-neighborhoodsof $\Pi$,
+Denote by $v(r)$ the volume of  $r$-neighborhoods of $\Pi$,
  
 Note that for all positive $r$ we have
 \[v(r)=w_3+w_2\cdot r+w_1\cdot r^2+w_0\cdot r^3,\leqno({*})\]
@@ -4032,7 +4032,7 @@ The problem was discussed by Alexander Shen in \cite{shen}.
 A formula analogous to $({*})$
 holds for arbitrary convex body $B$ in arbitrary dimension $m$.
 The coefficient $w_i(B)$ in the polynomial with different normalization constants 
-uppear under different names most commonly
+appear under different names most commonly
 \emph{intrinsic volume} and
 \emph{quermassintegral}.
 They also can be defined as the average 
@@ -4097,7 +4097,7 @@ It remains to apply well ordering principle.
 
 \parit{Comments.}
 The following problem look similar but far more involved;
-a soulution follows from the proof that a square can not be cuted into triangles of equal area given by Paul Monsky in \cite{monsky}.
+a solution follows from the proof that a square can not be cut into triangles of equal area given by Paul Monsky in \cite{monsky}.
 
 {\it Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that each line meets exactly two of these sets.
 }
@@ -4170,7 +4170,7 @@ Show that the following homotopy is monotonic
 This homotopy was discovered by Ralph Alexander in \cite{ralexander}.
 It has number of applications, 
 one of the most beautiful is the given 
-by K{\'a}roly Bezdek 
+by K\'aroly Bezdek 
 and Robert Connelly \cite{bezdek-connelly} 
 in their proof of 
 Kneser--Poulsen  
