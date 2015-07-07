@@ -79,10 +79,19 @@ see also \cite{ovsienko-tabachnikov}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%???+PIC
+\begin{wrapfigure}{o}{30 mm}
+%\begin{center}
+\begin{lpic}[t(-2 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
+\lbl[b]{25,11;$\partial F$}
+\lbl[l]{25,5,;{\small $T$}}
+\lbl[tr]{6,24;{\small $z_0$}}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
+
 \parbf{\ref{moon-in-puddle}.}
 \textit{The moon in the puddle.}
-Consider the {\it cut locus} $W$
+Consider the {\it cut locus} $T$
 of $F$ with respect to $\partial F$;
 it is defined as the closure
 of the set of points $x\in F$ 
@@ -90,16 +99,16 @@ such that there are two or more points in $\partial F$ which minimize distance t
 
 Note that after a small perturbation
 of $\partial F$ we may assume that
-$W$ is a graph embedded in
+$T$ is a graph embedded in
 $F$ with finite number of edges.
 
-Note that $W$ is a
+Note that $T$ is a
 deformation retract of $F$.
-The retraction can be obtained by moving each point $y\in F\setminus W$ to $W$
+The retraction can be obtained by moving each point $y\in F\setminus T$ to $T$
 along the geodesic from the closest point to $y$ on $\partial F$ which pass through $y$.
 
-In particular, $W$ is a tree.
-Therefore $W$  has
+In particular, $T$ is a tree.
+Therefore $T$  has
 at least two end vertices;
 Denote one of them by $z$.
 
@@ -312,8 +321,8 @@ it is constructed in \cite{antoine}.)
 For more advanced examples check 
 Whitehead manifold, 
 Dogbone space, 
-Casson handle
-and  problem~\ref{Conic neighborhood}.
+Casson handle,
+and  Problem~\ref{Conic neighborhood}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{o}{40 mm}
@@ -432,7 +441,7 @@ Draw a chord of outer curve which is tangent to the inner curve at $x_u$;
 denote by $r=r(u)$ and $l=l(u)$ the lengths of this chord at the right and left from $x_u$.
 
 \begin{wrapfigure}{o}{51 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tangent-eq-sol(1)}
+\begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tangent-eq-sol(1)}
 \lbl[tr]{20,5;$u$}
 \lbl[rt]{18,15;$r$}
 \lbl[rt]{26,6;$l$}
@@ -769,7 +778,7 @@ in other words the image of the map
 lies in $\CC^*=\CC\backslash\{0\}$.
 
 \begin{wrapfigure}{o}{44 mm}
-\begin{lpic}[t(-2 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
+\begin{lpic}[t(-0 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
 \lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
 \lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
 \lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
@@ -1039,9 +1048,9 @@ take the point $p$ as the image of the center $\bar B^m$
 and take the surfaces $\Sigma_t$ as the restrictions of the  embedding to the spheres;
 the existence of the immersion follows from the Morse lemma.
 
-\begin{wrapfigure}{o}{23 mm}
+\begin{wrapfigure}[6]{o}{23 mm}
 %\begin{center}
-\begin{lpic}[t(-2 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/ass(1)}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/ass(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -1306,8 +1315,9 @@ Burkhard Wilking,
 see \cite{wilking-2003}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{kleiner-hopf}.} 
-\textit{Positive curvature and symmetry; prerequisite.}
+\parbf{\ref{kleiner-hopf}.}
+\textit{Positive curvature and symmetry.}\\
+\textit{Prerequisite.}
 Let $X$ and $Y$ be metric spaces.
 An onto map $f\:X\to Y$ is called \emph{submetry} if it is short and 
 for any $x\in X$ and $y\in Y$ there is $x'\in X$ such that 
@@ -1419,7 +1429,8 @@ the later was shown by Brian White in \cite{white}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{scalar-curv}.} 
-\textit{Curvature vs. injectivity radius; prerequisite.}
+\textit{Curvature vs. injectivity radius.}\\
+\textit{Prerequisite.}
 The solution use a corollary from Liouville's theorem 
 which states that geodesic flow on the tangent bundle to a Riemannina manifold preserves the volume form.
 
@@ -1803,9 +1814,9 @@ An alternative solution of this problem can be build on almost splitting theorem
 Fix $r_0>0$.
 Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
 
- \begin{wrapfigure}[5]{o}{30 mm}
+ \begin{wrapfigure}{o}{30 mm}
 %\begin{center}
-\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
 \lbl[t]{9.5,8;$p$}
 \lbl[t]{28,2;$q$}
 \lbl[b]{10,20;$\partial B(p,r)$}
@@ -1926,7 +1937,8 @@ The Morse-style is based on the idea of Mikhael Gromov, see \cite{gromov-SGMC}*{
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{gromomorphic-curves}.} 
-\textit{Minimal foliation; prerequisite.}
+\textit{Minimal foliation.}\\
+\textit{Prerequisite.}
 The solution requires pseudo-holomorphic curves 
  introduced by Mikhael Gromov in \cite{gromov-pseudoholomorphic}.
 
@@ -1971,7 +1983,8 @@ see \cite{honda}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Volume and convexity}.} 
-\textit{Volume and convexity; prerequisite.}
+\textit{Volume and convexity.}\\
+\textit{Prerequisite.}
 The solution use a corollary from Liouville's theorem 
 which states that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form.
 
@@ -2106,7 +2119,7 @@ Assume contrary; that is, there is a point $p\in M$
 such that the image of normal exponential map to $N$
  does not touch $\eps$-neighborhood of $p$.
 
-\begin{wrapfigure}[6]{o}{25 mm}
+\begin{wrapfigure}[7]{r}{25 mm}
 \begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
 \end{lpic}
 \end{wrapfigure}
@@ -2222,19 +2235,19 @@ The problem follows since the curvature tensor can be expressed in terms of metr
 was given by Hermann Weyl in \cite{weyl}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Disc}.} 
-\textit{Disc.}
-Show that given a positive integer $n$ one can construct a tree $T$ embedded into the disc such that any homotopy of the boundary of the disc to a point pass through a curve which intersects $n$ different edges.
-(For the tree on the diagram $n=3$.)
-
 {
 \begin{wrapfigure}[9]{o}{33 mm}
 %\begin{center}
-\begin{lpic}[t(-3 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
 \end{wrapfigure}
+
+\parbf{\ref{Disc}.} 
+\textit{Disc.}
+Show that given a positive integer $n$ one can construct a tree $T$ embedded into the disc such that any homotopy of the boundary of the disc to a point pass through a curve which intersects $n$ different edges.
+(For the tree on the diagram $n=3$.)
 
 Fix small $\eps>0$, say $\eps=\tfrac1{10}$.
 Consider the disc with embedded tree $T$ as above.
@@ -2419,7 +2432,8 @@ introduced by Vitali Milman.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Bounded curvature}.}
-\textit{Bounded curvature; prerequisite.}
+\textit{Bounded curvature.}\\
+\textit{Prerequisite.}
 The solution requires Novikov theorem on on  the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$ for
 $m\ge 5$. 
 A detailed proof of this theorem can be found in \cite{nabutovsky-NovThm}.
@@ -2737,7 +2751,8 @@ see \cite{BIS}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{sub-Riemannian}.} 
-\textit{Sub-Riemannian sphere; prerequisite.}
+\textit{Sub-Riemannian sphere.}\\
+\textit{Prerequisite.}
 It will be hard to solve the problem without knowing proof of Nash--Kuiper theorem on length preserving $C^1$-embeddings.
 The original papers of John Nash \cite{nash} 
 and Nicolaas Kuiper \cite{kuiper} are very readable.
@@ -2932,7 +2947,8 @@ Namely they show that if any pair of points in a geodesic metric space $X$ can b
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{hom-near-QI}.} 
-\textit{A homeomorphism near quasi-isometry; prerequisite.}
+\textit{A homeomorphism near quasi-isometry.}\\
+\textit{Prerequisite.}
 The solution requires a corollary of the theorem  proved by Laurence Siebenmann in \cite{siebenmann}.
 It states that if $V_1, V_2\subset\RR^m$ are open
 and the two embedding $f_1\:V_1\to\RR^m$ and $f_2\:V_2\to\RR^m$ 
@@ -3301,6 +3317,15 @@ Pass to the metric cover $\tilde W$ of $W$
 such that  $\pi_1(\tilde W,\tilde p)=G$ 
 for a lift $\tilde p$ of $p$.
 
+\begin{wrapfigure}{o}{18 mm}
+%\begin{center}
+\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/ball-in-group(1)}
+\lbl[t]{8.5,7;$\tilde p$}
+\lbl[t]{8.5,-2;{\small $\bar B(\tilde p,2+\tfrac12)$}}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
+
 Fix sufficiently large integer $n$ and consider doubling of the closed ball $\bar B(\tilde p,n+\frac12)$ in its boundary.
 Let us denote the obtained doubling by $Z_n$ and set $G_n=\pi(Z_n,\tilde p)$.
 
@@ -3313,8 +3338,6 @@ therefore $G_n$ has finite order in $F$.
 It remains to show that that 
 \[G=\bigcap_{n>k} G_n,\]
 where $k$ is the maximal length of word in the generating set of $G$.
-
-%???+PIC
  
 \parit{Comments.} 
 Originally the problem was solved by Marshall Hall in \cite{hall}.
@@ -3412,9 +3435,9 @@ see \cite{gromov-almost-flat}.
 \textit{Immersed disks.}
 Both circles on the picture bound essentially different discs.
 
-\begin{wrapfigure}[5]{o}{46 mm}
+\begin{wrapfigure}[5]{r}{46 mm}
 %\begin{center}
-\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
+\begin{lpic}[t(-7 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3429,7 +3452,7 @@ The second example was given by Daniel Bennequin in \cite{bennequin}.
 
 \begin{wrapfigure}[6]{r}{19 mm}
 %\begin{center}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -3438,8 +3461,8 @@ The second example was given by Daniel Bennequin in \cite{bennequin}.
 An easier problem would be to construct two essentially different immersions of annuli with the same boundary curves; a solution is shown on the picture.
 
 %???IS NOT IT OBVIOUS???
-In \cite{shor-van wyk}, it was conjectured that 
-if an immersed circle bounds an immersed disc with at most two layers at each point then this disc is essentially unique. (Milnor's example has 3 layers in the middle.)
+%In \cite{shor-van wyk}, it was conjectured that 
+%if an immersed circle bounds an immersed disc with at most two layers at each point then this disc is essentially unique. (Milnor's example has 3 layers in the middle.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3603,6 +3626,12 @@ that is,
 \[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
 
+\begin{wrapfigure}{o}{46 mm}
+%\begin{center}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
+\end{lpic}
+%\end{center}
+\end{wrapfigure}
 
 Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
 $\phi(r)=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
@@ -3610,13 +3639,6 @@ $\phi(r)=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
 Consider $\RR^m$ with polar coordinates $(u,r)$, where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
 Let $\Phi\:\RR^m\to\RR^m$
 is defined by $\Phi(u,r)=(u,\phi(r))$.
-
-\begin{wrapfigure}{o}{46 mm}
-%\begin{center}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
-\end{lpic}
-%\end{center}
-\end{wrapfigure}
 
 Set 
 \[
@@ -3864,7 +3886,7 @@ such that
 \[\measuredangle \hinge pxy+\measuredangle \hinge qxy> \pi.\]
 
 \begin{wrapfigure}{r}{21 mm}
-\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/tent}
+\begin{lpic}[t(-8 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/tent}
 \end{lpic}
 \end{wrapfigure}
 
@@ -4154,8 +4176,15 @@ The real curve $\sigma$ forms the fixed point set of $\Sigma$ by complex conjuga
 Prove that each connected component of $\sigma$ adds $1$ to the genus of $\Sigma$.
 Hence the result follows.
 
-\parit{Comment.}
-This problem was suggested by Greg Kuperberg, see \cite{One-step problems in geometry}.
+\parit{Comment.} 
+The inequality was originally proved by Axel Harnack by a different method,
+see \cite{harnack}.
+The idea of complexification is likely due to Felix Klein.
+This problem formed the background to Hilbert's 16th problem,
+see \cite{hilbert-problems}. 
+
+
+
 
 
 
@@ -4283,7 +4312,8 @@ see \cite{One-step problems in geometry}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Right-angled polyhedron}.} 
-\textit{Right-angled polyhedron; prerequisite.}
+\textit{Right-angled polyhedron.}\\
+\textit{Prerequisite.}
 Before coming into proof read 
 about \hyperref[Dehn--Sommerville equations]{\emph{Dehn--Sommerville equations}}
 on page \pageref{Dehn--Sommerville equations}.
