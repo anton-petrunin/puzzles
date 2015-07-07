@@ -41,7 +41,7 @@ ISBN-10: 1506028594
 
 \ 
 
-\parbf{For problem solvers.} The meaning of signs next to number of the problem:
+The meaning of signs next to number of the problem:
 \begin{itemize}
 \item[$\circ$] --- easy problem;%\easy
 \item[$*$] --- the solution requires at least two ideas;%\hard
@@ -49,23 +49,20 @@ ISBN-10: 1506028594
 \item[$\sharp$] --- there are interesting solutions based on different ideas.%\many
 \end{itemize}
 
-\parbf{For problem makers.}
-This collection is under permanent development.
-If you have suitable problems or corrections please e-mail it to me.
 
-
-\parbf{Many thanks.} I want to thank everyone sharing the problems.
+\parbf{Acknowledgments.} 
 Very special thanks to 
 Christopher Croke,
 Bogdan Georgiev,
 Jouni Luukkainen,
-Alexander Lytchak
-Rostislav Matveyev, 
+Alexander Lytchak,
+Rostislav Matve\-yev, 
 Peter Petersen, 
 Idzhad Sabitov,
 Serge Tabachnikov 
 as well as the students in my classes for their interest in this list and for correcting number of mistakes.
-I'm also thankful to everyone who took part in the discussion of this list on \href{http://mathoverflow.net/questions/8247}{math\textit{overflow}}.
+I'm also thankful to everyone who shared the problems
+and/or took part in the discussion of this list on \href{http://mathoverflow.net/questions/8247}{math\textit{overflow}}.
 
 
 
@@ -77,10 +74,6 @@ I'm also thankful to everyone who took part in the discussion of this list on \h
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Curves}
 
-\comment{It should be sufficient to know
-definition of curvature of curve.
-}
-
 \begin{pr}{}{Geodesic for birds}\label{liberman}
 Let $f\:\RR^2\to\RR$ be a $\ell$-Lipschitz function.
 Let $W\subset \RR^3$ be the epigraph of $f$;
@@ -89,20 +82,19 @@ $$W=\set{(x,y,z)\in\RR^3}{z\ge f(x,y)}.$$
 Equip $W$ with the induced intrinsic metric.
 
 Show that any \hyperref[Geodesic]{\emph{geodesic}} in $W$ 
- has  \hyperref[Variation of turn]{\emph{variation of turn}} at most $2\cdot\ell$. 
+ has  \hyperref[Total curvature]{\emph{total curvature}} at most $2\cdot\ell$. 
 \end{pr}
 
 \begin{pr}{}{Spiral}\label{spiral}
 Let $\gamma$ be a plane curve with strictly monotonic curvature
 function. 
-Prove that $\gamma$ has no self-intersections.
-
-(In other words, if you drive on the plane and turn the steering wheel to the right all the time then you can not come back to the same place.)
+Prove that $\gamma$ has no self-intersections.%
+\footnote{In other words, if you drive on the plane and turn the steering wheel to the right all the time then you can not come back to the same place.}
 \end{pr}
 
 {\begin{wrapfigure}[5]{o}{27 mm}
 %\begin{center}
-\begin{lpic}[t(-11 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle(1)}
+\begin{lpic}[t(-12 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle(1)}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -110,20 +102,34 @@ Prove that $\gamma$ has no self-intersections.
 
 \begin{pr}{}{The moon in the puddle}\label{moon-in-puddle}
 A smooth closed \hyperref[Simple curve]{\emph{simple}} plane curve with curvature less than $1$ bounds a figure $F$. 
-Prove that $F$ contains a disc or radius $1$.
+Prove that $F$ contains a disc or radius~$1$.
 \end{pr}
 
+
+
 \begin{pr}{\many}{A curve in a sphere}\label{curve-in-S^2} 
-Prove that any closed curve on unit sphere which intersects every equator has length at least $2\cdot\pi$.
+Show that any closed curve on the unit sphere which intersects every equator has length at least $2\cdot\pi$.
 \end{pr}
 
 }
 
-\begin{pr}{\many}{A spring in a tin}\label{A spring in a tin} Let $\alpha$ be a closed smooth immersed curve
+
+
+\begin{pr}{\many}{A spring in a tin}\label{A spring in a tin} 
+Let $\alpha$ be a closed smooth immersed curve
 inside a unit disc. 
 Prove that the average absolute curvature of $\alpha$ is at least $1$, with
 equality if and only if $\alpha$ is the unit circle possibly traversed more than once.
 \end{pr}
+
+\begin{pr}{\easy}{Surrounded area}\label{Surrounded area}
+Let $\gamma_1,\gamma_2\:\mathbb S^1\to\RR^2$ be two simple closed plane curves.
+Assume 
+\[|\gamma_1(v)-\gamma_1(w)|\le|\gamma_2(v)-\gamma_2(w)|\]
+for any $v,w\in \mathbb S^1$.
+Show that the area surrounded by $\gamma_1$ does not exceed the area surrounded by $\gamma_2$. 
+\end{pr}
+
 
 \begin{pr}{\easy}{Convex figures}\label{Convex figures}
 Consider the set of all convex figures $\mathfrak{C}$
@@ -164,9 +170,9 @@ and $H_1(f(\mathbb{S}^1))$ can be disjointed from $B$ by a plane.
 \end{pr}
 
 \begin{pr}{}{Linked circles}\label{linked-circles}
-Suppose that $\alpha$ and $\beta$ are disjoint linked Jordan curves in $\RR^3$
-which lie at a distance $1$ from each other.
-Show that the length of $\alpha$ is at least $2\cdot\pi$.
+Suppose that two linked  simple closed curves in $\RR^3$
+lie at a distance at least $1$ from each other.
+Show that the length of each curve is at least $2\cdot\pi$.
 \end{pr}
 
 
@@ -189,17 +195,6 @@ Show that there is a chord of the outer curve, which is tangent to the inner cur
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Surfaces}
-
-\comment{For the most of problems in this section 
-it is enough to know
-definitions of curvature of curves,
-second fundamental form,
-Gauss curvature of surfaces,
-Gauss--Bonnet theorem.
-To solve Problem~\ref{Two discs}, 
-it is better to know Hairy Ball theorem.
-}
-
 
 \begin{pr}{\easy}{Convex hat}\label{Convex hat}
 Let $\Sigma$ be a smooth closed convex surface 
@@ -225,6 +220,34 @@ one \emph{can not see}  $q$ from $p_t$;
 that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from $q$.
 \end{pr}
 
+\begin{pr}{}{Corkscrew geodesic}\label{Corkscrew geodesic}
+Given a line $\ell$ in $\RR^3$
+construct a closed convex body $K$  
+with a minimizing geodesic $\sigma\:[a,b]\to\partial K$ in the surface of $K$ 
+which \emph{rotates 1000 times} around $\ell$; 
+that is, if $\phi(t)$ is continuous azimuth-function of $\sigma(t)$ in the cylindrical coordinates with axis at $\ell$ then $|\phi(b)-\phi(a)|=2000\cdot\pi$.
+\end{pr}
+
+{
+
+\begin{wrapfigure}{r}{21 mm}
+\begin{lpic}[t(-8 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{pr}{}{Long geodesic}\label{Long geodesic}
+Assume that the surface of convex body $B$ in $\RR^3$
+admits an arbitrary long closed simple geodesic.
+Show that $B$ is a tetrahedron with equal opposite sides.
+\end{pr}
+
+}
+
+\begin{pr}{}{Simple geodesic}\label{Simple geodesic}
+Let $\Sigma$ be a complete unbounded convex surface in $\mathbb R^3$.
+Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-intersections.
+\end{pr}
+
 
 \begin{pr}{}{A minimal surface}%
 \label{min-surf}
@@ -241,9 +264,9 @@ and $\Omega$ be an neighborhood of $\gamma$ in $T$.
 
 %PIC???
 
-Assume $\Omega'$ is an smooth surface which is path isometric to $\Omega$ and sufficiently close to $\Omega$
-and $\gamma'$ is the image of $\gamma$ in $\Omega$.
-Show that $\gamma'$ is a congruent to $\gamma$.
+Assume $\iota\:\Omega\to\RR^3$ 
+is a smooth length-preserving embedding which is sufficiently close to the identity map.
+Show that $\iota(\gamma)$ is a congruent to $\gamma$.
 \end{pr}
 
 
@@ -270,23 +293,15 @@ such that
 \begin{aligned}
 &z-i&&\text{if}&&\Re(z)\le -1,
 \\
-&z+i&&\text{if}&&\Re(z)\le 1.
+&z+i&&\text{if}&&\Re(z)\ge 1.
 \end{aligned}
 \right.
 \] 
-which $i\cdot \ZZ$-invariant; that is
-$f(z+i)=f(z)+i$ for any $z\in\CC$.
+and $f(z+i)=f(z)+i$ for any $z\in\CC$.
 
 Show that $f$ has a fixed point.
 \end{pr}
 
-\begin{pr}{\easy}{Surrounded area}\label{Surrounded area}
-Let $\gamma_1,\gamma_2\:\mathbb S^1\to\RR^2$ be two simple closed plane curves.
-Assume 
-\[|\gamma_1(v)-\gamma_1(w)|\le|\gamma_2(v)-\gamma_2(w)|\]
-for any $v,w\in \mathbb S^1$.
-Show that the area surrounded by $\gamma_1$ does not exceed the area surrounded by $\gamma_2$. 
-\end{pr}
 
 \begin{pr}{}{Periodic asymptote}\label{Asymptotic geodesic}
 Let $\Sigma$ be a smooth surface with non-positive curvature
@@ -310,53 +325,11 @@ which have a common closed smooth curve $\gamma$.
 Show that there is a pair of points  $p_1\in \Sigma_1$ and $p_2\in \Sigma_2$ with parallel tangent planes.
 \end{pr}
 
-\begin{pr}{}{Simple geodesic}\label{Simple geodesic}
-Let $\Sigma$ be a complete unbounded convex surface in $\mathbb R^3$.
-Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-intersections.
-\end{pr}
-
-
-\begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
-\end{lpic}
-\end{wrapfigure}
-
-\begin{pr}{}{Long geodesic}\label{Long geodesic}
-Assume that the surface of convex body $B$ in $\RR^3$
-admits an arbitrary long closed simple geodesic.
-Show that $B$ is a tetrahedron with equal opposite sides.
-\end{pr}
-
-\begin{pr}{}{Corkscrew geodesic}\label{Corkscrew geodesic}
-Given a line $\ell$ in $\RR^3$
-construct a closed convex body $K$  
-with a minimizing geodesic $\sigma\:[a,b]\to\partial K$ in the surface of $K$ 
-which \emph{rotates 1000 times} around $\ell$; 
-that is, if $\phi(t)$ is continuous azimuth-function of $\sigma(t)$ in the cylindrical coordinates with axis at $\ell$ then $|\phi(b)-\phi(a)|=2000\cdot\pi$.
-\end{pr}
 
 
 
 \chapter{Comparison geometry}
 
-\comment{For most of the problems it is enough to know second variation formula. 
-Knowledge of  
-O'Neil formula, 
-Gauss formula, 
-Gauss--Bonnet formula, 
-Toponogov's comparison theorem, 
-Soul theorem, 
-Toponogov's splitting theorems 
-and Synge's lemma 
-also might help.
-We suggest to solve problem~\ref{Immersed surface}
-before solving problem~\ref{Immersed ball}.
-To solve problem~\ref{kleiner-hopf}, 
-it is better know that the quotient of positively curved Riemannian manifold 
-by an isometry group is a positively curved Alexandrov space.
-Problem \ref{scalar-curv} requires Liouville's theorem for geodesic flow.
-Problem~\ref{hS=>S} requires a Bochner type formula.
-}
 
 \begin{pr}{\easy}{Geodesic hypersurface}\label{Geodesic hypersurface}
 Prove that if a compact connected positively curved manifold $M$ admits a totally geodesic embedded hypersurface then $M$ or its double cover is homeomorphic to the sphere.
@@ -372,7 +345,8 @@ compact hypersurface in $M$ is embedded.
 Prove that any immersed locally convex
 hypersurface $\iota\:\Sigma\looparrowright M$
 in a compact positively curved manifold $M$ of dimension $m\ge 3$, is the boundary of an immersed ball. 
-I.e., there is an immersion of a closed ball $\bar B^m\looparrowright M$ such that the induced immersion of its boundary $\partial \bar B^m\looparrowright M$ gives $\iota$.
+That is, there is an immersion of a closed ball $f\:\bar B^m\looparrowright M$ and a diffeomorphism $h\:\Sigma\to\partial \bar B^m$
+such that $\iota=f\circ h$.
 \end{pr}
 
 \begin{pr}{}{Almgren's inequalities}\label{almgren} 
@@ -420,7 +394,7 @@ Prove that $\iota$ is an embedding.
 
 
 \begin{pr}{\thm}{Positive curvature and symmetry}\label{kleiner-hopf} 
-Prove that effective isometric $S^1$-action 
+Prove that effective isometric $\mathbb S^1$-action 
 on a $4$-dimensional positively curved closed Riemannian manifold  
 has at most $3$ isolated fixed points.
 \end{pr}
@@ -487,18 +461,19 @@ Gromov--Hausdorff limit of
 Riemannian $m$-dimensional manifolds $(M_n,g_n)$ such that $\Ric_{g_n}\z\ge C$ for some fixed constant $C\in\RR$.
 \end{pr}
 
-\begin{pr}{}{Curvature hollow}\label{Curvature hollow}
-Construct a Riemannian metric $g$ on $\RR^3$ 
-which is Euclidean outside of an open bounded set $\Omega$ 
-and scalar curvature of $g$ is negative in $\Omega$.
-\end{pr}
 
 \begin{pr}{}{Area of spheres}\label{Area of spheres}
 Let $M$ be a complete non-compact Riemannian manifold manifold 
 with non-negative Ricci curvature and $p\in M$.
 Then there is $\eps>0$ such that 
-$$\area\partial B(p,r)>\eps$$
+$$\area\left[\partial B(p,r)\right]>\eps$$
 for all sufficiently large $r$.
+\end{pr}
+
+\begin{pr}{}{Curvature hollow}\label{Curvature hollow}
+Construct a Riemannian metric $g$ on $\RR^3$ 
+which is Euclidean outside of an open bounded set $\Omega$ 
+and scalar curvature of $g$ is negative in $\Omega$.
 \end{pr}
 
 
@@ -529,11 +504,7 @@ have positive sign.
 
 \chapter{Curvature free differential geometry}
 
-\comment{A solution of problem \ref{gromomorphic-curves} relies on Gromov's pseudo-holomorphic curves. The problem \ref{Volume and convexity} uses Liouville's theorem for geodesic flow.
-A solution of the problem \ref{short-homotopy} use a curve shortening process.
-To solve problem \ref{Bounded curvature}, one needs to know Novikov theorem on  the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$ for
-$m\ge 5$.
-}
+
 
 \begin{pr}{\thm}{Minimal foliation}\label{gromomorphic-curves} 
 Consider $\mathbb{S}^2\times \mathbb{S}^2$ equipped with a Riemannian metric $g$ 
@@ -555,6 +526,12 @@ convex function. Prove that $M$ has infinite volume.
 \begin{pr}{}{Besikovitch inequality}\label{Besikovitch inequality}
 Let $g$ be a Riemannian metric on a $m$-dimensional cube $Q=[0,1]^m$ such that any curve connecting opposite faces has length $\ge 1$. 
 Prove that $\vol(Q,g)\ge 1$ and equality holds if and only if $(Q,g)$ is isometric to the unit cube.
+\end{pr}
+
+\begin{pr}{}{Sasaki metric}\label{pr:Sasaki metric}
+Consider the tangent bundle $\T \mathbb{S}^2$ 
+equipped with \hyperref[Sasaki metric]{Sasaki metric} $\hat g$ induced by a Riemannian metric $g$ on $\mathbb{S}^2$.
+Show that $(\T \mathbb{S}^2, \hat g)$ lies on bounded Gromov--Hausdorff distance to the ray.
 \end{pr}
 
 \begin{pr}{}{Distant involution}\label{Distant involution}
@@ -620,7 +597,7 @@ such that any null-homotopy of the boundary in $(\mathbb D,g)$
 has a curve of length at least $L$.
 \end{pr}
 
-\begin{pr}{\thm}{Shortening homotopy}\label{short-homotopy}
+\begin{pr}{}{Shortening homotopy}\label{short-homotopy}
 Let $M$ be a compact Riemannian manifold with diameter $D$.
 Assume that for some $L>D$,
 there are no geodesic loops in $M$
@@ -638,22 +615,23 @@ such that
 \begin{pr}{}{Convex hypersurface}\label{Convex hypersurface}
 Let $M$ be a hypersurface 
 in a closed Riemannian $m$-dimensional manifold $W$.
-Assume $M$ is geodesic and convex;
-denote by $r$ the injectivity radius of $M$.
+Assume $M$ is geodesic and convex
+and its injectivity radius is at least $1$.
 Show that there is a point in $W$  which lies on the distance at least  
-$\frac{r}{2\cdot(m+1)}$ from $M$.
+$\frac{1}{2\cdot(m+1)}$ from $M$.
 \end{pr}
 
 \begin{pr}{}{Almost constant function}\label{Almost constant function}
-Assume $0<\eps<1$ is given.
+Assume $\eps>0$ is given.
 Show that there is a positive integer $m$ such that
 for any closed $m$-dimensional Riemannian manifold $M$
-and any smooth $1$-Lipschitz function $f\:M\z\to\RR$ the following holds.
-
-For a random unit-speed geodesic $\gamma$ in $M$ 
-the probability that 
+and any smooth $1$-Lipschitz function $f\:M\to\RR$ the following holds.
+\begin{itemize}
+\item For a random unit-speed geodesic $\gamma$ in $M$ 
+the event 
 \[|f\circ\gamma(0)-f\circ\gamma(1)|>\eps\]
-is at most $\eps$.
+happens with probability at most $\eps$.
+\end{itemize}
 Here \emph{random} means that $\gamma'(0)$ takes the random value in the unit tangent bundle of $M$ for the natural choice of distribution.
 \end{pr}
 
@@ -673,8 +651,9 @@ by a continuous family of metrics $g_t$ where $t\in[0,1]$.
 Show that there is a metric $g_1$ 
 such that 
 for any family $g_t$ as above
-\[\vol(g_t)>\Phi(\vol(g_1))\]
-for some $t\in [0,1]$.
+\[\max_{t\in[0,1]}\{\vol(g_t)\}
+>
+\Phi(\vol(g_1)).\]
 \end{pr}
 
 
@@ -684,11 +663,6 @@ for some $t\in [0,1]$.
 
 \chapter{Metric geometry}
 
-\comment{The necessary definitions can be found in \cite{bbi}. 
-It is very hard to do \ref{compact} without using Kuratowski embedding.
-To do problem  \ref{sub-Riemannian} you should be familiar with the proof of Nash--Kuiper theorem.
-For the problem \ref{two2one} you have to know Rademacher's theorem on differentiability of Lipschitz maps.
-To solve the problem \ref{hom-near-QI} one has to know theorems on deformation of homeomorphisms.}
 
 \begin{pr}{\easy}{Non-contracting map}\label{Noncontracting map}
 Let $K$  be a compact metric space and
@@ -700,13 +674,13 @@ Prove that $f$ is an isometry.
 
 
 
-\begin{pr}{\thm}{Embedding of a compact}\label{compact} 
+\begin{pr}{}{Embedding of a compact}\label{compact} 
 Prove that any compact metric space 
 is isometric to 
 a subset of a compact \hyperref[Length-metric space]{\emph{length-metric spaces}}.
 \end{pr}
 
-\begin{pr}{\easy}{Metric compactification}\label{Metric compactification}
+\begin{pr}{\easy}{Horo-compactification}\label{Horo-compactification}
 Let $X$ be a metric space.
 Denote by $C(X,\RR)$ the space of continuous real-valued functions on $X$ equipped with compact open topology.
 
@@ -799,9 +773,9 @@ Show that $\rho$ is induced by a norm on $\RR^m$.
 Let $f\:\RR^m\to\RR^m$ be a \hyperref[Quasi-isometry]{\emph{quasi-isometry}}.
 Show that there is a (bi-Lipschitz) homeomorphism 
 $h\:\RR^m\to\RR^m$ on a bounded distance from $f$;
-that is, there is a real constant $C$ such that
+that is, there is 
 $$|f(x)-h(x)|\le C$$
-for any $x\in\RR^m$.
+for any $x\in\RR^m$ and a real constant $C$.
 \end{pr}
 
 \begin{pr}{}{A family of sets with no section}\label{hausdorff-section} 
@@ -812,11 +786,7 @@ that is, there is no continuous
 map $c\:[0,1]\to \mathbb{S}^1$ such that $c(t)\in C_t$ for any $t$.
 \end{pr}
 
-\begin{pr}{}{Sasaki metric}\label{pr:Sasaki metric}
-Consider the tangent bundle $\T \mathbb{S}^2$ 
-equipped with \hyperref[Sasaki metric]{Sasaki metric} $\hat g$ induced by a Riemannian metric $g$ on $\mathbb{S}^2$.
-Show that $(\T \mathbb{S}^2, \hat g)$ lies on bounded Gromov--Hausdorff distance to the ray.
-\end{pr}
+
 
 
 
@@ -902,7 +872,7 @@ Assume $P$ is \hyperref[PL-homeomorphism]{\emph{PL-homeomorphic}} to $\RR^m$.
 Show that $\Gamma$ is generated by rotations  around subspaces of codimension $2$.
 \end{pr}
 
-\begin{pr}{\easy}{Subgroups of free group}\label{Subgroups of free group}
+\begin{pr}{\easy}{Subgroups of free group}\label{Subgroups of free group} 
 Show that every finitely generated subgroup of the free group 
 is an intersection of subgroups of finite index.
 \end{pr}
@@ -913,8 +883,8 @@ Show that the fundamental group $\pi_1(M,p)$
 is generated by the homotopy classes of loops with length at most $2\cdot\diam M$.
 \end{pr}
 
-\begin{pr}{}{Short basis}\label{Short basis}
-Let $M$ be a complete connected non-negatively curved Riemannian manifold.
+\begin{pr}{}{Number of generators}\label{Number of generators}
+Let $M$ be a complete connected Riemannian manifold with non-negative sectional curvature.
 Show that the minimal number of generators of the fundamental group $\pi_1 M$
 can be bounded above in terms of $\dim M$.
 \end{pr}
@@ -924,6 +894,7 @@ can be bounded above in terms of $\dim M$.
 \begin{pr}{}{Immersed disks}\label{Immersed disks} 
 Construct two \emph{essentially different} smooth immersions of the disk 
 into the plane which coincide near the boundary. 
+
 Two immersions $f_1,f_2\:D\looparrowright \RR^2$ are called essentially different 
 if there is no diffeomorphism $h\:D\z\to D$ such that
 $f_1=f_2\circ h$.
@@ -933,9 +904,14 @@ $f_1=f_2\circ h$.
 Prove that any composition of \hyperref[Dehn twist]{\emph{positive Dehn twists}} of $\Sigma$ is not homotopic to identity \emph{rel} boundary.
 \end{pr}
 
-\begin{pr}{\many}{Function with no critical points}\label{Function with no critical points}
-Given $n\ge 2$, construct a smooth function $f$ defined on a neighborhood of closed unit ball $B^m$ in $\RR^m$ which has no critical points and which can not be presented in the form $\ell\circ\phi$, 
-where $\ell\:\RR^m\to\RR$ is a linear function and $\phi\:B^m\to\RR^m$ is a smooth embedding.
+\begin{pr}{}{Function with no critical points}\label{Function with no critical points}
+Given $m\ge 2$, construct a smooth function $f\:\RR^m\to \RR$ 
+with no critical points in the unit ball $B^m$ 
+such that the restriction $f|_{B^m}$ does not factor through a linear function;
+that is $f|_{B^m}$ can not be presented as a composition
+$\ell\circ\phi$,
+where $\ell\:\RR^m\to\RR$ is a linear function 
+and $\phi\:B^m\to\RR^m$ is a smooth embedding.
 \end{pr}
 
 \begin{pr}{}{Conic neighborhood}\label{Conic neighborhood}  
@@ -957,7 +933,7 @@ $K_1$ is not homeomorphic to $K_2$, but $K_1\times[0,1]$ is homeomorphic to $K_2
 \end{pr}
 
 \begin{pr}{}{Isotropy}\label{Isotropy}
-Let $K_1$ and $K_2$ be compact subsets of the coordinate subspace $\RR^m$ of $\RR^{2\cdot m}$.
+Let $K_1$ and $K_2$ be compact subsets of the coordinate subspace $\RR^m$ in $\RR^{2\cdot m}$.
 Show that there is a homeomorphism 
 \[h\:\RR^{2\cdot m}\z\to \RR^{2\cdot m}\] 
 such that $K_2=h(K_1)$.
@@ -975,9 +951,8 @@ Extend $h$ to a homeomorphism $f\:\RR^m\to\RR^m$ which coincides with the identi
 
 \begin{pr}{\easy}{Finite topological space}\label{Finite topological space}
 Given a finite topological space $F$ 
-construct a finite simplicial complex admits a weak homotopy equivalence  
-to a finite topological space, 
-and the other way around. 
+construct a finite simplicial complex $K$
+whic admits a weak homotopy equivalence  $K\to F$. 
 \end{pr}
 
 \begin{pr}{\easy}{Dense homeomorphism}\label{Dense homeomorphism}
@@ -1000,8 +975,6 @@ Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations
 \chapter{Piecewise linear geometry}
 
 
-\comment{Before solving problem \ref{conic neighborhoods}, it is better to learn what is Delaunay triangulation.}
-
 
 \begin{pr}{}{Triangulation of 3-sphere}\label{4-poly}
 Construct a triangulation of $\mathbb{S}^3$ 
@@ -1019,12 +992,12 @@ Show that $A$ is congruent to $B$.
 
 
 \begin{pr}{}{Folding problem} \label{Folding problem}
-Let $P$ be a compact $m$-dimensional 
+Let $P$ be a compact $2$-dimensional 
 \hyperref[Polyhedral space]{\emph{polyhedral}}
 \hyperref[Polyhedral space]{\emph{space}}. 
 Construct a 
 \hyperref[Piecewise distance preserving map]{\emph{piecewise distance preserving map}} 
-$f\:P\to \RR^m$.
+$f\:P\to \RR^2$.
 \end{pr}
 
 \begin{pr}{}{Piecewise linear extension} \label{iso-kirzhbraun}
@@ -1044,16 +1017,16 @@ The area of the polyhedral disc is defined as the sum of areas of the images of 
 Consider the  class of polyhedral discs glued from $n$ triangles in $\RR^3$ 
 with fixed broken line as the boundary.
 Let $\Sigma_n$ be a surface of minimal area in this class.
-Show that $\Sigma_n$ is a \hyperref[Saddle surface]{\emph{saddle surface}}.
+Show that $\Sigma_n$ is  \hyperref[Saddle surface]{\emph{saddle}}.
 \end{pr}
 
 
 \begin{pr}{}{Coherent triangulation}\label{Coherent triangulation} 
 A triangulation of a convex polygon is called coherent if there is a convex function which is linear on each triangle and changes the gradient if you come trough any edge of the triangulation.
-Find a non-convex triangulation of triangle.
+Find a non-coherent triangulation of triangle.
 \end{pr}
 
-\begin{pr}{\thm}{Characterization of polytope}
+\begin{pr}{}{Characterization of polytope}
 \label{conic neighborhoods}
 Let $P$ be a compact subset of the Euclidean space.
 Assume for every point $x\in P$
@@ -1101,17 +1074,14 @@ does not have a closed simple geodesic.
 
 \chapter{Discrete geometry}
 
-\comment{One of the solutions of \ref{box-in-box} uses mixed volumes.
-In order to solve problem \ref{Harnack}, it is better to know what is the genus of complex curve of degree $d$.
-To solve problem \ref{2pts-on-line} one has to use axiom of choice.
-In order to solve problem \ref{Right-angled polyhedron},
-it is better to know \hyperref[Dehn--Sommerville equations]{\emph{Dehn--Sommerville equations}}, see an outline on page \pageref{Dehn--Sommerville equations}.}
 
 
 \begin{pr}{}{Box in a box}\label{box-in-box} 
 Assume that a parallelepiped with sizes $a,b,c$ 
 lies inside another with parallelepiped sizes $a',b',c'$. 
-Show that $a'+b'+c'\ge a+b+c$.
+Show that 
+\[a'+b'+c'\ge a+b+c.\]
+
 \end{pr}
 
 %\begin{pr}{\hard}{Besicovitch's set}\label{Besicovitch's set}
@@ -1129,25 +1099,21 @@ Prove that there is an isotopy in the space of such collections of circles
 which moves all of them into great circles.
 \end{pr}
 
-\begin{pr}{\thm}{Harnack's circles}\label{Harnack}
+\begin{pr}{}{Harnack's circles}\label{Harnack}
 Prove that a smooth algebraic curve of degree $d$ in $\RP^2$ consists of at most $n=\tfrac12\cdot(d^2-3\cdot d+4)$ connected components.
 \end{pr}
 
-\begin{pr}{\thm}{Two points on each line}\label{2pts-on-line}
+\begin{pr}{}{Two points on each line}\label{2pts-on-line}
 Construct a set in the Euclidean plane, which intersect each line at exactly 2 points. 
 \end{pr}
 
-\begin{pr}{\easy}{Bodies with the same of shadows}\label{Bodies with the same of shadows}
-Two convex bodies $K_1$ and $K_2$ in Euclidean 3-space are said to have the same shadows if any shape which can appear as an orthogonal projection of $K_1$ can also appear as an orthogonal projection of $K_2$ and the other way around.
 
-Construct two non-congruent convex bodies $K_1$ and $K_2$ which have the same shadows.
-\end{pr}
 
 
 
 \begin{pr}{\easy}{Kissing number}\label{pr:Kissing number}
 Show that for any convex body $W$ in $\RR^m$
-$$\mathop{\rm kiss}W\ge \mathop{\rm kiss}B,$$
+$$\mathop{\rm kiss}W\ge \mathop{\rm kiss}B^m,$$
 where $\mathop{\rm kiss}W$ denotes the \hyperref[Kissing number]{\emph{kissing number}}
 of $W$ and $B$ denotes the unit ball in $\RR^m$.
 \end{pr}

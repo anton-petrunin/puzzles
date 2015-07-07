@@ -10,7 +10,7 @@ Consider a geodesic
 \[t\mapsto(x(t),y(t),z(t))\] 
 in $W$;
 assume it is defined in the interval $\II\subset \RR$.
-Let us denote by $\phi$ the variation of turn;
+Let us denote by $\phi$ the total curvature;
 it is a measure on $\II$.
 We need to estimate $\phi(\II)$.
 
@@ -42,7 +42,7 @@ The problem is due to David Berg, \cite{berg}.
 The main observation (the concavity of the function $s\mapsto z$)
 is called \emph{Liberman’s lemma}; 
 it was used earlier 
-to bound on the variation of turn 
+to bound on the total curvature
 of a geodesic on a convex surface,
 see \cite{liberman}.
 
@@ -213,6 +213,24 @@ The proof was given by Jeffrey Lagarias
 and Thomas Richardson in \cite{lagarias-richardson}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Surrounded area}.}
+\textit{Surrounded area.}
+Denote by $C_1$ and $C_2$ the compact regions bounded by $\gamma_1$ and $\gamma_2$ correspondingly.
+
+By Kirszbraun theorem, 
+any short map $X\to \RR^2$ defined on $X\subset \RR^2$
+can be extended to a short map on whole $\RR^2$.
+In particular there is a short map $f\:\RR^2\to\RR^2$ 
+such that $f(\gamma_2(v))=f(\gamma_1(v))$ for any $v\in\mathbb S^1$.
+
+Note that $f(C_2)\supset C_1$.
+Whence the statement follows.
+
+\parit{Comments.}
+The Kirszbraun theorem appears in his thesis (\cite{kirszbraun}) 
+and reproved later by Frederick Valentine in \cite{valentine}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Convex figures}.}
 \textit{Convex figures.}
 Consider the set $\Omega_n$ of all convex figures $F\subset\RR^2$ 
@@ -373,6 +391,8 @@ see \cite{zeb}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{linked-circles}.}
 \textit{Linked circles.} 
+Denote the linked circels by $\alpha$ and $\beta$.
+
 Fix a point $x\in\alpha$. 
 Note that one can find another point $x'\in\alpha$ such that the interval 
 $[xx']$ intersects $\beta$, say at the point $z$. 
@@ -508,6 +528,99 @@ This  observation was used by Anatoliy Milka
 to generalize Alexandrov's comparison theorem for convex surfaces, see \cite{milka-geod}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Corkscrew geodesic}.}
+\textit{Corkscrew geodesic.}
+An example can be found among the surfaces of convex polyhedrons 
+such that the non-degenerate intersections with horizontal planes are triangles with parallel sides.
+
+The polyhedron $K$ should look like a vertical needle. 
+On the surface of $K$ there three broken lines, formed by the corresponding vertices of triangle.
+The polyhedron can be made in such a way that any minimizing geodesic from the top of $K$ to its bottom
+has to cross these lines in the cyclic order at nearly each edge, and the number of edges can be made arbitrary large. 
+(The projection of geodesic spirals around the origin.)
+
+\parit{Comments.} This construction is due to 
+Imre B\'ar\'any, 
+Krystyna Kuiperberg 
+and Tudor Zamfirescu,
+see
+\cite{imre-kuiperberg-zamfirescu}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Long geodesic}.}
+\textit{Long geodesic.}
+Denote by $a$ the area of the surface.
+
+Cut the surface along a long closed simple geodesic $\gamma$.
+We get two discs with non-negative curvature and large perimeter, 
+say $\ell$.
+Note that the area of each disc is bounded above by $a$.
+
+Choose one of the discs $D$ and equip it with intrinsic metric.
+Note that $D$ is non-negatively curved in the sense of Alexandrov.
+Denote by $p$ and $q$ be the points in $D$ which lie on the maximal distance from each other.
+
+Fix $\eps>0$.
+Fix a geodesic $[pq]$ in $D$.
+Show that if $\ell$ is large enough in terms of $\eps$ 
+the distance from any point in $D$ to $[pq]$ is at most $\eps$
+and the curvature of $\eps$-neighborhood of $p$ in $D$
+is at least $\pi-\eps$.
+
+By Gauss--Bonnet formula the total curvature of $\Sigma$ is $4\cdot\pi$.
+Since $\eps>0$ is arbitrary, we get that there are 4 point in $\Sigma$, each with curvature $\pi$
+and remaining part of $\Sigma$ is flat.
+
+\begin{wrapfigure}{o}{21 mm}
+\begin{lpic}[t(-3 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
+\end{lpic}
+\end{wrapfigure}
+
+It remains to show that any surface with this property is isometric to the surface of tetrahedron with equal opposite edges.
+To do this cut $\Sigma$ along three geodesics which connect one singular point to the remaining three,
+develop the obtained flat surface on the plane and think (also look at the diagram).
+
+\parit{Comments.}
+The problem was suggested by Arseniy Akopyan.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Simple geodesic}.} 
+\textit{Simple geodesic.}
+Let $\gamma$ be a two-sided infinite geodesic in $\Sigma$.
+The following is the key statement in the proof.
+
+\parbf{Claim.}
+{\it The geodesic $\gamma$ contains at most one simple loop.}
+\medskip
+
+To prove the claim use the following observations.
+\begin{itemize}
+\item The total curvature $\omega$ of $\Sigma$ can not exceed $2\cdot\pi$.
+\item If $\phi$ is the angle at the base of a simple geodesic loop then the total curvature surrounded by the loop equals to $\pi+\phi$.
+\end{itemize}
+
+Once the claim is proved, note that if a geodesic $\gamma$ has a self-intersection
+then it contains a simple loop.
+From above there is only one such loop;
+it cuts a disc from $\Sigma$ 
+and can go around it either clockwise or counterclockwise.
+This way we divide all the self-intersecting geodesics 
+into two sets which we will call \emph{clockwise} and \emph{counterclockwise}.
+
+Note that the geodesic $t\mapsto \gamma(t)$ is clockwise 
+if and only if 
+$t\mapsto \gamma(-t)$
+is counterclockwise.
+The sets of clockwise and counterclockwise are open and the space of geodesics is connected. 
+It follows that there are geodesics which neither clockwise nor counterclockwise;
+by the definition, these geodesics have no self-intersections.
+
+\parit{Comment.}
+This idea is due to 
+Victor Bangert, 
+see \cite{bangert}*{Cor. 2}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{min-surf}.} 
 \textit{A minimal surface.}
 Without loss of generality we may assume that the sphere is centered at $0\in\RR^3$.
@@ -568,12 +681,11 @@ and Robert Osserman in \cite{alexander-osserman} and \cite{alexander-hoffman-oss
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{half-torus}.} 
 \textit{Half-torus.}
-Let $K$ be the convex hull of $\Omega'$.
+Let $K$ be the convex hull of $\Omega'=\iota(\Omega)$.
 Consider the boundary curve $\gamma'$ of $\partial K\cap \Omega'$ in $\Omega'$.
 
 First note that the Gauss curvature of $\Omega'$ has to vanish at the points of $\gamma'$;
-in other words, $\gamma'$ is the image of $\gamma$ 
-under the length-preserving map.
+in other words, $\gamma'=\iota(\gamma)$.
 Indeed since $\gamma'$ lies on convex part, 
 the Gauss curvature at the points of $\gamma'$ has to be non-negative. 
 On the other hand $\gamma'$ bounds a flat disc in $\partial K$;
@@ -657,7 +769,7 @@ in other words the image of the map
 lies in $\CC^*=\CC\backslash\{0\}$.
 
 \begin{wrapfigure}{o}{44 mm}
-\begin{lpic}[t(-7 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
+\begin{lpic}[t(-2 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
 \lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
 \lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
 \lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
@@ -701,25 +813,6 @@ These two statements contradict each other.
 \parit{Comments.}
 The problem was proposed by Henri Poincar\'e in \cite{poincare}
 and solved by George Birkhoff in \cite{birkhoff}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Surrounded area}.}
-\textit{Surrounded area.}
-Denote by $C_1$ and $C_2$ the compact regions bounded by $\gamma_1$ and $\gamma_2$ correspondingly.
-
-By Kirszbraun theorem, 
-any short map $X\to \RR^2$ defined on $X\subset \RR^2$
-can be extended to a short map on whole $\RR^2$.
-In particular there is a short map $f\:\RR^2\to\RR^2$ 
-such that $f(\gamma_2(v))=f(\gamma_1(v))$ for any $v\in\mathbb S^1$.
-
-Note that $f(C_2)\supset C_1$.
-Whence the statement follows.
-
-\parit{Comments.}
-The Kirszbraun theorem appears in his thesis (\cite{kirszbraun}) 
-and reproved later by Frederick Valentine in \cite{valentine}.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -821,98 +914,11 @@ Such examples can be found among ruled surfaces, see \cite{three-discs}.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Simple geodesic}.} 
-\textit{Simple geodesic.}
-Let $\gamma$ be a two-sided infinite geodesic in $\Sigma$.
-The following is the key statement in the proof.
 
-\parbf{Claim.}
-{\it The geodesic $\gamma$ contains at most one simple loop.}
-\medskip
 
-To prove the claim use the following observations.
-\begin{itemize}
-\item The total curvature $\omega$ of $\Sigma$ can not exceed $2\cdot\pi$.
-\item If $\phi$ is the angle at the base of a simple geodesic loop then the total curvature surrounded by the loop equals to $\pi+\phi$.
-\end{itemize}
 
-Once the claim is proved, note that if a geodesic $\gamma$ has a self-intersection
-then it contains a simple loop.
-From above there is only one such loop;
-it cuts a disc from $\Sigma$ 
-and can go around it either clockwise or counterclockwise.
-This way we divide all the self-intersecting geodesics 
-into two sets which we will call \emph{clockwise} and \emph{counterclockwise}.
 
-Note that the geodesic $t\mapsto \gamma(t)$ is clockwise 
-if and only if 
-$t\mapsto \gamma(-t)$
-is counterclockwise.
-The sets of clockwise and counterclockwise are open and the space of geodesics is connected. 
-It follows that there are geodesics which neither clockwise nor counterclockwise;
-by the definition, these geodesics have no self-intersections.
 
-\parit{Comment.}
-This idea is due to 
-Victor Bangert, 
-see \cite{bangert}*{Cor. 2}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Long geodesic}.}
-\textit{Long geodesic.}
-Denote by $a$ the area of the surface.
-
-Cut the surface along a long closed simple geodesic $\gamma$.
-We get two discs with non-negative curvature and large perimeter, 
-say $\ell$.
-Note that the area of each disc is bounded above by $a$.
-
-Choose one of the discs $D$ and equip it with intrinsic metric.
-Note that $D$ is non-negatively curved in the sense of Alexandrov.
-Denote by $p$ and $q$ be the points in $D$ which lie on the maximal distance from each other.
-
-Fix $\eps>0$.
-Fix a geodesic $[pq]$ in $D$.
-Show that if $\ell$ is large enough in terms of $\eps$ 
-the distance from any point in $D$ to $[pq]$ is at most $\eps$
-and the curvature of $\eps$-neighborhood of $p$ in $D$
-is at least $\pi-\eps$.
-
-By Gauss--Bonnet formula the total curvature of $\Sigma$ is $4\cdot\pi$.
-Since $\eps>0$ is arbitrary, we get that there are 4 point in $\Sigma$, each with curvature $\pi$
-and remaining part of $\Sigma$ is flat.
-
-\begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-3 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
-\end{lpic}
-\end{wrapfigure}
-
-It remains to show that any surface with this property is isometric to the surface of tetrahedron with equal opposite edges.
-To do this cut $\Sigma$ along three geodesics which connect one singular point to the remaining three,
-develop the obtained flat surface on the plane and think (also look at the diagram).
-
-\parit{Comments.}
-The problem was suggested by Arseniy Akopyan.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Corkscrew geodesic}.}
-\textit{Corkscrew geodesic.}
-An example can be found among the surfaces of convex polyhedrons 
-such that the non-degenerate intersections with horizontal planes are triangles with parallel sides.
-
-The polyhedron $K$ should look like a vertical needle. 
-On the surface of $K$ there three broken lines, formed by the corresponding vertices of triangle.
-The polyhedron can be made in such a way that any minimizing geodesic from the top of $K$ to its bottom
-has to cross these lines in the cyclic order at nearly each edge, and the number of edges can be made arbitrary large. 
-(The projection of geodesic spirals around the origin.)
-
-\parit{Comments.} This construction is due to 
-Imre B\'ar\'any, 
-Krystyna Kuiperberg 
-and Tudor Zamfirescu,
-see
-\cite{imre-kuiperberg-zamfirescu}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1301,7 +1307,33 @@ see \cite{wilking-2003}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{kleiner-hopf}.} 
-\textit{Positive curvature and symmetry.}
+\textit{Positive curvature and symmetry; prerequisite.}
+Let $X$ and $Y$ be metric spaces.
+An onto map $f\:X\to Y$ is called \emph{submetry} if it is short and 
+for any $x\in X$ and $y\in Y$ there is $x'\in X$ such that 
+\[f(x')=y\ \ \text{and}\ \  |x-x'|_X=|f(x)-y|_Y.\]
+Here is a general statement required in the proof.
+
+\begin{itemize}
+\item If $f\:X\to Y$ is a  submetry
+and $X$ is an Alexandrov space with curvature $\ge \kappa$ 
+then $Y$ 
+is also an Alexandrov space with curvature $\ge \kappa$.
+\end{itemize}
+
+Note that if  $G$ is a compact subgroup of isometries of a metric space $X$ then the quotient map $X\to X/G$ is a submetry,
+assuming that the orbit space $X/G$ equipped with Hausdorff metric on the orbits.
+
+Complete Riemannian manifold with sectional curvature $\ge \kappa$ are Alexandrov spaces.
+
+The following statement follows from the one above 
+and it can be used directly in the solution.
+\begin{itemize}
+\item If $(M,g)$ is a Riemannian manifold with sectional curvature $\ge 1$ which admits a continuous isometric action of $\mathbb S^1$ then $(M,g)/\mathbb S^1$ is an Alexandrov space with curvature $\ge 1$.
+\end{itemize}
+For more on Alexandrov Geometry, see \cite{akp}. 
+
+\parit{Solution.}
 Let $M$ be a 4-dimensional Riemannian manifold with isometric $\mathbb{S}^1$-action.
 Consider the quotient space $X=M/\mathbb{S}^1$.
 
@@ -1387,7 +1419,11 @@ the later was shown by Brian White in \cite{white}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{scalar-curv}.} 
-\textit{Curvature vs. injectivity radius.}
+\textit{Curvature vs. injectivity radius; prerequisite.}
+The solution use a corollary from Liouville's theorem 
+which states that geodesic flow on the tangent bundle to a Riemannina manifold preserves the volume form.
+
+\parit{Solution.}
 We will show that if the injectivity radius of the manifold $(M,g)$ is at least $\pi$
 then the average of sectional curvatures on $(M,g)$ is at most $1$.
 This is equivalent to the problem.
@@ -1758,29 +1794,7 @@ has strict local minimum.
 An alternative solution of this problem can be build on almost splitting theorem proved by  Jeff Cheeger and Tobias Colding in \cite{cheeger-colding}.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Curvature hollow}.} 
-\textit{Curvature hollow.}
-Construct a metric that the connected sum
-$M=\RR^3\#\mathbb{S}^2\times\mathbb{S}^1$ admits a metric which is flat outside a compact set and has non positive scalar curvature.
-Further, note that such metric can be constructed in such a way that it has a closed geodesic $\gamma$ with trivial holonomy and with constant negative curvature in its a tubular neighborhood.
 
-Cut the tubular neighborhood $D^2\times \mathbb{S}^1$ of $\gamma$, 
-prepare a metric $g$ on $\mathbb{S}^1\times D^2$ with negative scalar curvature which 
-is identical to the original metric near the boundary.
-The needed patch $(\mathbb{S}^1\times D^2,g)$ can be found among wrap products $\mathbb{S}^1\times_f D^2$.
-
-Note that after the surgery we get a manifold diffeomorphic to $\RR^3$ with the required metric.
-
-\parit{Comments.}
-This construction was given by Joachim Lohkamp in \cite{lohkamp},
-he describes there yet an other equally simple construction.
-In fact this  constructions produce 
-$\mathbb{S}^1$-invariant hollows 
-with negative Ricci curvature.
-
-On the other hand there are no hollows with positive scalar curvature;
-the later equivalent to the Positive Mass Conjecture.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1812,6 +1826,30 @@ we get that volume growth of $M$ is at least linear and in particular it has inf
 The later was proved independently 
 by Eugenio Calabi 
 and Shing-Tung Yau, see \cite{calabi} and \cite{yau-ricci}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Curvature hollow}.} 
+\textit{Curvature hollow.}
+Construct a metric that the connected sum
+$M=\RR^3\#\mathbb{S}^2\times\mathbb{S}^1$ admits a metric which is flat outside a compact set and has non positive scalar curvature.
+Further, note that such metric can be constructed in such a way that it has a closed geodesic $\gamma$ with trivial holonomy and with constant negative curvature in its a tubular neighborhood.
+
+Cut the tubular neighborhood $D^2\times \mathbb{S}^1$ of $\gamma$, 
+prepare a metric $g$ on $\mathbb{S}^1\times D^2$ with negative scalar curvature which 
+is identical to the original metric near the boundary.
+The needed patch $(\mathbb{S}^1\times D^2,g)$ can be found among wrap products $\mathbb{S}^1\times_f D^2$.
+
+Note that after the surgery we get a manifold diffeomorphic to $\RR^3$ with the required metric.
+
+\parit{Comments.}
+This construction was given by Joachim Lohkamp in \cite{lohkamp},
+he describes there yet an other equally simple construction.
+In fact this  constructions produce 
+$\mathbb{S}^1$-invariant hollows 
+with negative Ricci curvature.
+
+On the other hand there are no hollows with positive scalar curvature;
+the later equivalent to the Positive Mass Conjecture.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Flat coordinate planes}.} 
@@ -1888,7 +1926,11 @@ The Morse-style is based on the idea of Mikhael Gromov, see \cite{gromov-SGMC}*{
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{gromomorphic-curves}.} 
-\textit{Minimal foliation.}
+\textit{Minimal foliation; prerequisite.}
+The solution requires pseudo-holomorphic curves 
+ introduced by Mikhael Gromov in \cite{gromov-pseudoholomorphic}.
+
+\parit{Solution.}
 First show that there is a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$;
 that is, a 2-form $\omega$ such that $d\omega=0$ and $\star\omega=\omega$,
 where $\star$ denotes the Hodge star operator.
@@ -1916,8 +1958,7 @@ and $\mathrm{J}$ is its pseudo-complex structure.
 It remains to take the re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
 so that vertical and horizontal spheres will form pseudo-holomorphic curves in the homology classes of $\mathbb{S}^2\times x$ and $x\times \mathbb{S}^2$.
  
-\parit{Comments.} The pseudo-holomorphic curves (sometimes called \emph{gromomorphic curves}) 
-were introduced by Mikhael Gromov in \cite{gromov-pseudoholomorphic}.
+\parit{Comments.} 
 For general metric the form $\omega$ might vanish at some points;
 if the metric is generic then it happens on disjoint circles,
 see \cite{honda}.
@@ -1930,25 +1971,32 @@ see \cite{honda}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Volume and convexity}.} 
-\textit{Volume and convexity.}
+\textit{Volume and convexity; prerequisite.}
+The solution use a corollary from Liouville's theorem 
+which states that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form.
+
+\parit{Solution.}
 Assume contrary; that is, there is a complete Riemannian manifold $M$
 with finite volume which admits a convex function $f$.
 
 Denote by $\tau\:\U M\to M$ the unit tangent bundle over $M$. 
-Clearly $\vol \U M$ is finite.
+Clearly $\vol (\U M)$ is finite.
 
 Note that 
-there is a nonempty bounded open set $U\subset \U M$
-such that $df(u)>\eps$ for any $u\in U$ and some fixed $\eps>0$.
+there is a nonempty bounded open set $\Omega\subset \U M$
+such that $df(u)>\eps$ for any $u\in \Omega$ and some fixed $\eps>0$.
 
 Denote by $\phi^t$ the geodesic flow on $\U M$.
-Given $u\in U$,
+By Liouville's theorem 
+\[\vol[\phi^t(\Omega)]=\vol\Omega\] 
+for any $t$.
+
+Given $u\in \Omega$,
 consider the function $h\:t\mapsto f\circ\tau\circ\phi^t(u)$.
 Note that $h'(t)>\eps$ for any $t\ge 0$.
-
-Prove that there is an infinite sequence of positive reals $t_1,t_2,\dots$
+It follows that there is an infinite sequence of positive reals $t_1,t_2,\dots$
 such that 
-$$\phi^{t_i}(U)\cap\phi^{t_j}(U)=\emptyset$$ 
+$$\phi^{t_i}(\Omega)\cap\phi^{t_j}(\Omega)=\emptyset$$ 
 if $i\ne j$.
 The later implies that $\vol \U M=\infty$,
 a contradiction.
@@ -1992,11 +2040,31 @@ Assume a metric $g$ on $\RR^m$ coincides with Euclidean outside of a bounded set
 assume further that any geodesic which comes into $K$ goes out from $K$ the same way as if the metric would be Euclidean everywhere. 
 Show that $g$ is flat.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{pr:Sasaki metric}.} 
+\textit{Sasaki metric.}
+Show that there is a constant $\ell$
+such that for any two unit tangent vectors $v\in\T_p\mathbb{S}^2$ 
+and $w\in T_q\mathbb{S}^2$
+there is a path 
+$\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
+such that 
+\[\length \gamma\le \ell\] 
+and
+$w$ is the parallel transformation of $v$ along $\gamma$.
+
+Note that once it is proved, 
+it follows that diameter of the set of all vectors of fixed length in $\T \mathbb{S}^2$ has diameter at most $\ell$;
+in particular the map $\T\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
+preserves the distance with the maximal error $\ell$.
+Hence the result follows.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{32 mm}
+\begin{wrapfigure}{r}{32 mm}
 %\begin{center}
-\begin{lpic}[t(-3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/tripod}
+\begin{lpic}[t(-5 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/tripod}
 %\lbl[b]{24,41;x}
 \end{lpic}
 %\end{center}
@@ -2287,7 +2355,7 @@ choose a point $v'\in M$ on the distance $\le h$.
 Note that if $v$ and $w$ are the vertices of one simplex then
 \[|v'-w'|_M<2\cdot h+\eps.\]
 
-If $\tfrac{r}{2\cdot(m+1)}>h$, take $\eps<\tfrac{r}{2\cdot(m+1)}-h$.
+If $\tfrac{1}{2\cdot(m+1)}>h$, take $\eps<\tfrac{1}{2\cdot(m+1)}-h$.
 Let us extend the map $v\mapsto v'$ 
 to a continuous 
 map $W\to M$.
@@ -2351,7 +2419,12 @@ introduced by Vitali Milman.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Bounded curvature}.}
-\textit{Bounded curvature.}
+\textit{Bounded curvature; prerequisite.}
+The solution requires Novikov theorem on on  the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$ for
+$m\ge 5$. 
+A detailed proof of this theorem can be found in \cite{nabutovsky-NovThm}.
+
+\parit{Solution.}
 The one parameter family of metrics $g_t$
 can be found among the metrics of the type 
 \[g_t=a(t)\cdot g_0+b(t)\cdot g_1,\]
@@ -2361,13 +2434,14 @@ In order to keep the bounds on the curvature and injectivity radius,
 the functions $a$ and $b$
 suppose to take huge values in the middle of interval.
 
-To prove the second part of theorem, notice that if such metric would not exist, it would be an algorithm to recognize $\mathbb S^5$ among $5$-dimensional manifolds.
+To prove the second part of theorem, notice that if such metric would not exist, 
+it would be an algorithm to recognize $\mathbb S^5$ among $5$-dimensional manifolds.
 The later is impossible by Novikov theorem.
 
 \parit{Comments.}
 Instead of function $\Phi$ one can take any Turing computable function.
 The problem is due to Alexander Nabutovsky, see \cite{nabutovsky-Disconnectedness}.
-A detailed proof of Novikov theorem can be found in \cite{nabutovsky-NovThm}
+
 
 \section*{Metric geometry}
 
@@ -2418,7 +2492,7 @@ It follows that $(\ell_n)$ is a constant sequence.
 In particular 
 \[|x_0-y_0|_K=\ell_0=\ell_1=|f(x_0)-f(y_0)|_K\]
 for any pair of points $(x_0,y_0)$ in $K$.
-I.e., $f$ is distance preserving, in particular injective.
+That is, $f$ is distance preserving, in particular injective.
 
 From $({*})$, we also get that $f(K)$ is everywhere dense.
 Since $K$ is compact $f\:K\to K$ is surjective. Hence the result follows.
@@ -2454,8 +2528,8 @@ was described by Maurice Fr\'echet
 in the same paper he introduced metric spaces, see \cite{frechet}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Metric compactification}.}
-\textit{Metric compactification.}
+\parbf{\ref{Horo-compactification}.}
+\textit{Horo-compactification.}
 Take $X$ to be the set of non-negative integers with the metric $\rho$ defined as 
 $\rho(m,n)=m+n$ for $m\ne n$.
 
@@ -2663,7 +2737,12 @@ see \cite{BIS}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{sub-Riemannian}.} 
-\textit{Sub-Riemannian sphere.}
+\textit{Sub-Riemannian sphere; prerequisite.}
+It will be hard to solve the problem without knowing proof of Nash--Kuiper theorem on length preserving $C^1$-embeddings.
+The original papers of John Nash \cite{nash} 
+and Nicolaas Kuiper \cite{kuiper} are very readable.
+
+\parit{Solution.}
 Prove that there is a non-decreasing sequence of Riemannian metric tensors
 $g_0\le g_1\le ...$ such that the induced metrics converge to the given sub-Riemannian metrics.
 The metric $g_0$ can be assumed to be a metric on round sphere.
@@ -2681,9 +2760,6 @@ the sequence $h_n$ converges, say to $h_\infty$,
 and the metric induced by $h_\infty$ coincides with the given sub-Riemannian metric.
 
 \parit{Comments.} 
-The original papers of John Nash \cite{nash} 
-and Nicolaas Kuiper \cite{kuiper} are very readable.
-
 The problem appeared 
 on this list first rediscovered later by Enrico Le Donne in \cite{le-donne}.
 Similar construction described in the the lecture notes by Allan Yashinski and me \cite{petrunin-yashinsky} 
@@ -2693,6 +2769,12 @@ Yet my paper \cite{petrunin-paths} is closely relevant.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{two2one}.} 
 \textit{Length-preserving map.}
+The solution uses Rademacher's theorem,
+which states that any Lipschitz function $f\:\RR^n\to\RR$ 
+is differentiable almost everywhere.
+The Rademacher's theorem appears in \cite{rademacher}.%; see also ???. 
+
+\parit{Solution.}
 Assume there is a length-preserving map $f\:\RR^2\to \RR$.
 
 Note that $f$ is Lipschitz.
@@ -2706,7 +2788,7 @@ $\alpha\:t\mapsto x+t\cdot u$, $t\in[0,1]$ can be expressed as the integral
 It follows that $|d_xf(v)|=|v|$ for almost all $x,v\in\RR^2$;
 in particular $d_xf$ is defined and has rank 2 at some point $x$, a contradiction.  
 
-\parit{Comment.} The Rademacher's theorem appears in \cite{rademacher}.
+\parit{Comment.} 
 The idea above can be also used to solve the following problem.
 
 {\it Assume $\rho$ is a metric on $\RR^2$ 
@@ -2850,7 +2932,22 @@ Namely they show that if any pair of points in a geodesic metric space $X$ can b
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{hom-near-QI}.} 
-\textit{A homeomorphism near quasi-isometry.}
+\textit{A homeomorphism near quasi-isometry; prerequisite.}
+The solution requires a corollary of the theorem  proved by Laurence Siebenmann in \cite{siebenmann}.
+It states that if $V_1, V_2\subset\RR^m$ are open
+and the two embedding $f_1\:V_1\to\RR^m$ and $f_2\:V_2\to\RR^m$ 
+are sufficiently close to each other 
+on the overlap $U=V_1\cap V_2$ then
+there is an embedding $f$ defined on an open set $W'$
+which is slightly smaller than $W=V_1\cup V_2$
+and such that $f$ is sufficiently close to each $f_1$ and $f_2$ at the points where they are defined.
+
+The  bi-Lipschitz version requires 
+an analogous statement in the category of bi-Lipschitz embeddings;
+it was proved by
+Dennis Sullivan in \cite{sullivan}.
+
+\parit{Solution.}
 Let $M\ge 1$ and $A\ge 0$.
 Define $(M,A)$-quasi-isometry
 as a map $f\:X\to Y$ between metric spaces $X$ and $Y$ such that for any $x,y\in X$,
@@ -2884,13 +2981,12 @@ $B(p_n,R)$, construct a $[\tfrac1M,M]$-bi-Lipschitz map $h_n\:B(p_n,R)\to \RR^m$
 
 The maps $h_n$ are $2\cdot \eps\cdot R$ close to each other on the overlaps of their domains of definition.
 This makes possible to deform slightly each $h_n$ so that they agree on the overlaps.
-This can be done by Siebenmann' Theorem, see \cite{siebenmann}.
-If instead you apply Sullivan's theorem, you get a bi-Lipschitz homeomorphism $h\:\RR^m\to\RR^m$,
-see \cite{sullivan}.
+This can be done by Siebenmann's Theorem.
+If instead you apply Sullivan's theorem, you get a bi-Lipschitz homeomorphism $h\:\RR^m\to\RR^m$.
 
 
 \parit{Comments.}
-The problem was suggested by Dmiti Burago.
+The problem was suggested by Dmitri Burago.
 
 
 
@@ -2919,24 +3015,6 @@ It is instructive to check that any Hausdorff continuous family of closed sets i
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{pr:Sasaki metric}.} 
-\textit{Sasaki metric.}
-Show that there is a constant $\ell$
-such that for any two unit tangent vectors $v\in\T_p\mathbb{S}^2$ 
-and $w\in T_q\mathbb{S}^2$
-there is a path 
-$\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
-such that 
-\[\length \gamma\le \ell\] 
-and
-$w$ is the parallel transformation of $v$ along $\gamma$.
-
-Note that once it is proved, 
-it follows that diameter of the set of all vectors of fixed length in $\T \mathbb{S}^2$ has diameter at most $\ell$;
-in particular the map $\T\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
-preserves the distance with the maximal error $\ell$.
-Hence the result follows.
 
 \section*{Actions and coverings}
 
@@ -3211,10 +3289,11 @@ a complete classification of such actions was also obtained in \cite{lange}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Subgroups of free group}.} 
 \textit{Subgroups of free group.}
-Let $G$ be a finitely generated subgroup of free group with $m$ generators, further denoted by $F_m$.
+Let $G$ be a finitely generated subgroup of free group $F$.
+Note that we can assume that $F$ has finite number, say $m$, generators. 
 
-Let $W$ be the wedge sum of $n$ circles, 
-so  $\pi_1(W,p)=F_m$.
+Let $W$ be the wedge sum of $m$ circles, 
+so  $\pi_1(W,p)=F$.
 Equip $W$ with the length-metric 
 such that each circle has unit length.
 
@@ -3226,9 +3305,9 @@ Fix sufficiently large integer $n$ and consider doubling of the closed ball $\ba
 Let us denote the obtained doubling by $Z_n$ and set $G_n=\pi(Z_n,\tilde p)$.
 
 Prove that $Z_n$ is a metric covering of $W$;
-it makes possible to consider $G_n$ as a subgroup of $F_m$.
+it makes possible to consider $G_n$ as a subgroup of $F$.
 By construction, $Z_n$ is compact;
-therefore $G_n$ has finite order in $F_m$.
+therefore $G_n$ has finite order in $F$.
 
 
 It remains to show that that 
@@ -3279,8 +3358,8 @@ Mikhael Gromov,
 see \cite{gromov-MetStr}*{Prop. 3.22}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Short basis}.}
-\textit{Short basis.}
+\parbf{\ref{Number of generators}.}
+\textit{Number of generators.}
 Consider universal Riemannian cover $\tilde M$ of $M$.
 Note that $\tilde M$ is non-negatively curved and
 $\pi_1M$ acts by isometries on $\tilde M$.
@@ -4104,29 +4183,15 @@ a solution follows from the proof that a square can not be cut into triangles of
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{Bodies with the same of shadows}.} 
-\textit{Bodies with the same of shadows.}
-Let $B$ be the unit ball in $\RR^3$ centered at the origin.
 
-Fix small $\eps>0$.
-Consider two bodies 
-\begin{align*}
-B''&=\set{(x,y,z)\in B}{x\le 1-\eps,\  y\le 1-\eps},
-\\ 
-B'''&=\set{(x,y,z)\in B}{x\le 1-\eps,\  y\le 1-\eps,\  z\le 1-\eps}.
-\end{align*}
-Prove that $B''$ and $B'''$ have the same shadows.
-
-\parit{Comments.} The question was asked by Joel Hamkins and answered by Sergei Ivanov, see \cite{hamkins}.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{pr:Kissing number}.} 
 \textit{Kissing number.}
-Let $m=\mathop{\rm kiss} B$
-and $B_1,B_2,\dots, B_m$ the the copies of $B$ 
+Let $n=\mathop{\rm kiss} B^m$
+and $B_1,B_2,\dots, B_n$ the the copies of $B$ 
 which touch $B$ and have no common interior points.
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
 Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
@@ -4218,11 +4283,12 @@ see \cite{One-step problems in geometry}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Right-angled polyhedron}.} 
-\textit{Right-angled polyhedron.}
+\textit{Right-angled polyhedron; prerequisite.}
 Before coming into proof read 
 about \hyperref[Dehn--Sommerville equations]{\emph{Dehn--Sommerville equations}}
 on page \pageref{Dehn--Sommerville equations}.
 
+\parit{Solution.}
 Let $P$ be a right-angled hyperbolic polyhedron of dimension $m$.
 Note that $P$ is simple; that is, exactly $m$ facets meet at each vertex of $P$.
 

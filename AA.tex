@@ -1,3 +1,99 @@
+\begin{pr}{\easy}{Bodies with the same of shadows}\label{Bodies with the same of shadows}
+Two convex bodies $K_1$ and $K_2$ in Euclidean 3-space are said to have the same shadows if any shape which can appear as an orthogonal projection of $K_1$ can also appear as an orthogonal projection of $K_2$ and the other way around.
+
+Construct two non-congruent convex bodies $K_1$ and $K_2$ which have the same shadows.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Bodies with the same of shadows}.} 
+\textit{Bodies with the same of shadows.}
+Let $B$ be the unit ball in $\RR^3$ centered at the origin.
+
+Fix small $\eps>0$.
+Consider two bodies 
+\begin{align*}
+B''&=\set{(x,y,z)\in B}{x\le 1-\eps,\  y\le 1-\eps},
+\\ 
+B'''&=\set{(x,y,z)\in B}{x\le 1-\eps,\  y\le 1-\eps,\  z\le 1-\eps}.
+\end{align*}
+Prove that $B''$ and $B'''$ have the same shadows.
+
+\parit{Comments.} The question was asked by Joel Hamkins and answered by Sergei Ivanov, see \cite{hamkins}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\comment{For the most of problems in this section 
+it is enough to know
+definitions of curvature of curves,
+second fundamental form,
+Gauss curvature of surfaces,
+Gauss--Bonnet theorem.
+To solve Problem~\ref{Two discs}, 
+it is better to know Hairy Ball theorem.
+}
+
+\comment{For most of the problems it is enough to know second variation formula. 
+Knowledge of  
+O'Neil formula, 
+Gauss formula, 
+Gauss--Bonnet formula, 
+Toponogov's comparison theorem, 
+Soul theorem, 
+Toponogov's splitting theorems 
+and Synge's lemma 
+also might help.
+We suggest to solve problem~\ref{Immersed surface}
+before solving problem~\ref{Immersed ball}.
+To solve problem~\ref{kleiner-hopf}, 
+it is better know that the quotient of positively curved Riemannian manifold 
+by an isometry group is a positively curved Alexandrov space.
+Problem \ref{scalar-curv} requires Liouville's theorem for geodesic flow.
+}
+
+\comment{A solution of problem \ref{gromomorphic-curves} relies on Gromov's pseudo-holomorphic curves. The problem \ref{Volume and convexity} uses Liouville's theorem for geodesic flow.
+A solution of the problem \ref{short-homotopy} use a curve shortening process.
+To solve problem \ref{Bounded curvature}, one needs to know Novikov theorem on  the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$ for
+$m\ge 5$.
+}
+
+\comment{The necessary definitions can be found in \cite{bbi}. 
+It is very hard to do \ref{compact} without using Kuratowski embedding.
+To do problem  \ref{sub-Riemannian} you should be familiar with the proof of Nash--Kuiper theorem.
+For the problem \ref{two2one} you have to know Rademacher's theorem on differentiability of Lipschitz maps.
+To solve the problem \ref{hom-near-QI} one has to know theorems on deformation of homeomorphisms.}
+
+\comment{One of the solutions of \ref{box-in-box} uses mixed volumes.
+In order to solve problem \ref{Harnack}, it is better to know what is the genus of complex curve of degree $d$.
+To solve problem \ref{2pts-on-line} one has to use axiom of choice.
+In order to solve problem \ref{Right-angled polyhedron},
+it is better to know \hyperref[Dehn--Sommerville equations]{\emph{Dehn--Sommerville equations}}, see an outline on page \pageref{Dehn--Sommerville equations}.}
+
+
+\comment{Before solving problem \ref{conic neighborhoods}, it is better to learn what is Delaunay triangulation.}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -702,7 +798,7 @@ The composition $f_2\circ f_1\:A\to B$ is 1-Lipshitz, in particular area nonexpa
 \begin{pr}{\thm}{Flexible convex polyhedron}\label{Flexible convex polyhedron}
 Show that no triangulation of the surface of a convex polyhedron in $\mathbb R^3$ 
 can be flexible.
-I.e., given a convex polyhedral surface with a triangulation $\mathcal T$, one can not move the vertexes of $\mathcal T$ continuously in such a way that one triangle in $\mathcal T$ is in a fixed
+That is, given a convex polyhedral surface with a triangulation $\mathcal T$, one can not move the vertexes of $\mathcal T$ continuously in such a way that one triangle in $\mathcal T$ is in a fixed
 and 
 all the edges of $\mathcal T$ have fixed length.
 \sign{\cite{connelly}}
