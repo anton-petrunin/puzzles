@@ -10,6 +10,29 @@
 \usepackage[integrals]{wasysym} 
 \usepackage{xfrac}
 
+\hyphenation{Kirsz-braun}
+
+%\usepackage{amsrefs}
+%The reference from library.bit, comment previous line
+\usepackage[russian,english]{babel}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+autolang=other, 
+doi=false,
+url=false,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\small}
+\addbibresource{library.bib}
+
+
 %LIST STILES
 \renewcommand{\@listI}{%
 \leftmargin=25pt
@@ -49,7 +72,7 @@
 \def\RR{\mathbb{R}}%  
 \def\TT{\mathbb{T}}%
 \def\T{\mathrm{T}}%
-\def\U{\mathrm{U}}%
+\def\UU{\mathrm{U}}%
 \def\ZZ{\mathbb{Z}}% 
 \def\QQ{\mathbb{Q}}% 
 \def\II{\mathbb{I}}%

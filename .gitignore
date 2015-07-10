@@ -14,3 +14,7 @@ lib/*
 */*.zip
 .*
 !/.gitignore
+*.bbl
+*.bcf
+*.blg
+*.xml
