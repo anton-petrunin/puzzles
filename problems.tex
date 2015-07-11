@@ -23,6 +23,8 @@ Orthodox Geometry}
 \date{}
 \maketitle
 
+
+
 \null\vfill\noindent{\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/by-sa(0.5)}\end{lpic} This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.}
 
 \ 
@@ -36,16 +38,22 @@ ISBN-13: 978-1506028590
 ISBN-10: 1506028594 
 }
 
-%\begin{abstract}
-%This collection is oriented to graduate students who want to learn fast simple tricks in geometry.
-%\end{abstract}
-
 \tableofcontents
 
 \newpage
 
+I am collecting these problems for fun, 
+but they might be used to improve 
+the problem solving skills in geometry.
+Every problem has a short elegant solution ---
+this gives a hint which was not available
+when it was solved for the first time.
+
+
 \parbf{Acknowledgments.} 
-Here is an incomplete list of people who helped me
+I want to thank everyone who helped me;
+here is an incomplete list:
+Stephanie Alexander,
 Christopher Croke,
 Bogdan Georgiev,
 Jouni Luukkainen,
@@ -53,8 +61,7 @@ Alexander Lytchak,
 Rostislav Matve\-yev, 
 Peter Petersen, 
 Idzhad Sabitov,
-Serge Tabachnikov 
-I want to thank all of them an apologize for those who is forgotten.
+Serge Tabachnikov.
 Let me also thank  the students in my classes 
 and everyone who took part in the discussion of this list on \href{http://mathoverflow.net/questions/8247}{math\textit{overflow}}.
 
@@ -405,8 +412,9 @@ Prove that $\iota$ is an embedding.
 \end{pr}
 
 
+
 \begin{pr}{\thm}{Positive curvature and symmetry}\label{kleiner-hopf} 
-Prove that effective isometric $\mathbb S^1$-action 
+Prove that any effective isometric $\mathbb S^1$-action 
 on a $4$-dimensional positively curved closed Riemannian manifold  
 has at most $3$ isolated fixed points.
 \end{pr}
@@ -693,11 +701,11 @@ a subset of a compact \hyperref[Length-metric space]{\emph{length-metric spaces}
 \end{pr}
 
 \begin{pr}{\easy}{Horo-compactification}\label{Horo-compactification}
-Given a metric space $X$,
-denote by $C(X,\RR)$ the space of continuous real-valued functions on $X$ 
-equipped with compact open topology.
+Denote by $C(X,\RR)$ the space of continuous real-valued functions 
+on a metric space $X$.
+Equip $C(X,\RR)$ with the compact open topology.
 
-Fix a point $z_0$.
+Fix a point $z_0\in X$.
 Given a point $z\in X$, let $f_z\in C(X,\RR)$ be the function defined as 
 \[f_z(x)=|z-x|_X-|z-x_0|_X.\]
 Let $F_X\:X\to C(X,\RR)$ be the map 
@@ -855,7 +863,8 @@ Show that fundamental group of $X{\times} X/\ZZ_2$ is commutative.
 %\end{center}
 \end{wrapfigure}
 
-\begin{pr}{\easy}{Sierpinski triangle}\label{Sierpinski triangle} Find the homeomorphism group of Sierpinski triangle.
+\begin{pr}{\easy}{Sierpinski triangle}\label{Sierpinski triangle} 
+Find the homeomorphism group of Sierpinski triangle.
 \end{pr}
 
 \begin{pr}{}{Latices in a Lie group}\label{Boys and girls in a Lie group}
@@ -878,7 +887,7 @@ M$.
 }
 
 \begin{pr}{\easy}{Piecewise Euclidean quotient}\label{Piecewise Euclidean quotient}
-Let $\Gamma$ be a finite subgroup of $\SO(m)$.
+Let $\Gamma<\SO(m)$ be a finite subgroup.
 Denote by $P$ the quotient $\RR^m/\Gamma$ equipped with induced
 \hyperref[Polyhedral space]{\emph{polyhedral metric}}.
 Assume $P$ is \hyperref[PL-homeomorphism]{\emph{PL-homeomorphic}} to $\RR^m$.
@@ -1155,7 +1164,7 @@ Show that in all sufficiently large dimensions, there is no compact convex hyper
 
 \include{solutions}
 \include{dictionary}
-%\include{bib}
+
 \sloppy
 \printbibliography[heading=bibintoc]
 \fussy
