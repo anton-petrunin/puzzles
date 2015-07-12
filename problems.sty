@@ -14,10 +14,13 @@
 
 %\usepackage{amsrefs}
 %The reference from library.bit, comment previous line
-\usepackage[russian,english]{babel}
+\usepackage[russian,
+german,
+english]{babel}
 \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[
+sorting=none,
 bibencoding=auto,
 backend=biber,
 maxnames=10,
@@ -32,6 +35,8 @@ isbn=false]{biblatex}
 \renewbibmacro{in:}{}
 \renewcommand*{\bibfont}{\small}
 \addbibresource{library.bib}
+
+
 
 
 %LIST STILES

@@ -325,8 +325,12 @@ $A(x)$, $[A,B](x)$, $[A,[B,C]](x)$, $[A,[B,[C,D]]](x),\dots$ where all vector fi
 Let $\gamma\:[a,b]\to\RR^m$ be a curve.
 The total curvature of $\gamma$ is defined as supremum of sum of external angles for broken lines inscribed in $\gamma$. 
 Namely, 
-$$\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},$$
+\[\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},\]
 where $\alpha_i=\pi-\measuredangle \hinge{\gamma(t_{i})}{\gamma(t_{i-1})}{\gamma(t_{i+1})}$.
+
+If $\gamma$ is smooth and parametrized by the arc length 
+then its total curvature equals to
+\[\int\limits_a^b|\gamma''(t)|\cdot dt.\]
 
 \item{\bf Warped product.}
 \refstepcounter{thm}

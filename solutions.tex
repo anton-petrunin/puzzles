@@ -3,47 +3,7 @@
 
 \section*{Curves}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{liberman}.} 
-\textit{Geodesic for birds.}
-Consider a geodesic 
-\[t\mapsto(x(t),y(t),z(t))\] 
-in $W$;
-assume it is defined in the interval $\II\subset \RR$.
-Let us denote by $\phi$ the total curvature;
-it is a measure on $\II$.
-We need to estimate $\phi(\II)$.
 
-Denote by $s=s(t)$ the natural parameter of the plane curve \[t\mapsto (x(t),y(t)).\]
-
-Prove that the function $f\:s\mapsto z$ is concave.
-
-Given a semi-open interval $\mathbb J=(a,b]\subset \II$,
-set
-$\mu(\mathbb J)=f^+(a)-f^+(b)$,
-where $f^+$ denotes right derivatives.
-The function $\mu$ extends to a measure which could be also written as
-\[\mu=\tfrac{dz^2}{d^2s}\cdot ds.\]
-if $\tfrac{dz^2}{d^2s}$ understood in the sense of distribution.
- 
-Note that $|\tfrac{dz}{ds}|\le \ell$.
-In particular $\mu(\II)\le 2\cdot\ell$.
-
-Further note that $\phi\le \sqrt{1+\ell^2}\cdot\mu$.
-In particular, 
-$$\phi(\II)\le 2\cdot\ell\cdot\sqrt{1+\ell^2}.$$
-
-A straightforward improvement of these estimates gives 
-$$\phi(\II)\le 2\cdot\ell.$$
-This bound is optimal, check a both side infinite geodesic on the graph of  \[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
-
-\parit{Comments.}
-The problem is due to David Berg, \cite{berg}.
-The main observation (the concavity of the function $s\mapsto z$)
-is called \emph{Liberman’s lemma}; 
-it was used earlier 
-to bound on the total curvature
-of a geodesic on a convex surface \cite[see][]{liberman}.
 
 
 
@@ -53,11 +13,8 @@ of a geodesic on a convex surface \cite[see][]{liberman}.
 Without loss of generality we may assume that the curvature of $\gamma$ decreases in $t$.
 
 \begin{wrapfigure}{o}{25 mm}
-%\begin{center}
 \begin{lpic}[t(-2 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/kneser-log(1)}
-%\lbl[b]{24,41;x}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 Let $z(t)$ be the center of osculating circle at $\gamma(t)$
@@ -79,13 +36,11 @@ see also \cite{ovsienko-tabachnikov}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{o}{28 mm}
-%\begin{center}
 \begin{lpic}[t(-2 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
 \lbl[t]{21,10;$\partial F$}
 \lbl[br]{8.5,30,;{\small $T$}}
 \lbl[tr]{6,4;{\small $z_0$}}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 \parbf{\ref{moon-in-puddle}.}
@@ -268,7 +223,8 @@ such that
 A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
 Guess the construction from the diagram.
 
-%\begin{wrapfigure}{r}{50 mm}
+
+
 \begin{center}
 \begin{lpic}[t(-0 mm),b(4 mm),r(0 mm),l(0 mm)]{pics/crooked(1)}
 \lbl[t]{8,0;$\eps=\tfrac12$}
@@ -277,7 +233,7 @@ Guess the construction from the diagram.
 \lbl[t]{80,0;$\eps=\tfrac15$}
 \end{lpic}
 \end{center}
-%\end{wrapfigure}
+
 
 Start with the unit circle, 
 $\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
@@ -288,12 +244,10 @@ and
 for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
 
 \begin{wrapfigure}{o}{46 mm}
-%\begin{center}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/circrooked(1)}
 \lbl[tr]{35,33;$\gamma_0$}
 \lbl[bl]{38,36;$\gamma_1$}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 On the diagram you see an attempt to draw the first iteration.
@@ -317,17 +271,20 @@ This example described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
 (This example was is called  \emph{Antoine's necklace};
 it is constructed in \cite{antoine}.)
 \end{itemize}
-For more advanced examples check 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{o}{40 mm}
+\begin{lpic}[t(-2 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
+\end{lpic}
+\end{wrapfigure}
+
+\noindent For more advanced examples check 
 Whitehead manifold, 
 Dogbone space, 
 Casson handle,
 and  Problem~\ref{Conic neighborhood}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{40 mm}
-\begin{lpic}[t(-5 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
-\end{lpic}
-\end{wrapfigure}
+
 \parbf{\ref{Fat curve}.}
 \textit{Fat curve.} 
 Modify your favorite space filling curve 
@@ -592,6 +549,48 @@ develop the obtained flat surface on the plane and think (also look at the diagr
 The problem was suggested by Arseniy Akopyan.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{liberman}.} 
+\textit{Geodesic for birds.}
+Consider a geodesic 
+\[t\mapsto(x(t),y(t),z(t))\] 
+in $W$;
+assume it is defined in the interval $\II\subset \RR$.
+Let us denote by $\phi$ the total curvature;
+it is a measure on $\II$.
+We need to estimate $\phi(\II)$.
+
+Denote by $s=s(t)$ the natural parameter of the plane curve \[t\mapsto (x(t),y(t)).\]
+
+Prove that the function $f\:s\mapsto z$ is concave.
+
+Given a semi-open interval $\mathbb J=(a,b]\subset \II$,
+set
+$\mu(\mathbb J)=f^+(a)-f^+(b)$,
+where $f^+$ denotes right derivatives.
+The function $\mu$ extends to a measure which could be also written as
+\[\mu=\tfrac{dz^2}{d^2s}\cdot ds.\]
+if $\tfrac{dz^2}{d^2s}$ understood in the sense of distribution.
+ 
+Note that $|\tfrac{dz}{ds}|\le \ell$.
+In particular $\mu(\II)\le 2\cdot\ell$.
+
+Further note that $\phi\le \sqrt{1+\ell^2}\cdot\mu$.
+In particular, 
+$$\phi(\II)\le 2\cdot\ell\cdot\sqrt{1+\ell^2}.$$
+
+A straightforward improvement of these estimates gives 
+$$\phi(\II)\le 2\cdot\ell.$$
+This bound is optimal, check a both side infinite geodesic on the graph of  \[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
+
+\parit{Comments.}
+The problem is due to David Berg, \cite{berg}.
+The main observation (the concavity of the function $s\mapsto z$)
+is called \emph{Liberman’s lemma}; 
+it was used earlier 
+to bound on the total curvature
+of a geodesic on a convex surface \cite[see][]{liberman}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Simple geodesic}.} 
 \textit{Simple geodesic.}
 Let $\gamma$ be a two-sided infinite geodesic in $\Sigma$.
@@ -763,20 +762,6 @@ which do not admit a foliation by geodesics.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{\ref{The last problem of Poincare}.} 
-\textit{The last problem of Poincar\'e.}
-Set 
-\begin{align*}
-H_+&=\set{z\in\CC}{\Re(z)\ge 1},
-\\
-H_-&=\set{z\in\CC}{\Re(z)\le -1}.
-\end{align*}
-
-Assume $f$ has no fixed points;
-in other words the image of the map 
-\[\phi\:z\mapsto f(z)-z\] 
-lies in $\CC^*=\CC\backslash\{0\}$.
-
 \begin{wrapfigure}{o}{44 mm}
 \begin{lpic}[t(-0 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
 \lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
@@ -791,6 +776,21 @@ lies in $\CC^*=\CC\backslash\{0\}$.
 \lbl{3,3;$H_-$}
 \end{lpic}
 \end{wrapfigure}
+
+\parbf{\ref{The last problem of Poincare}.} 
+\textit{The last problem of Poincar\'e.}
+Set 
+\begin{align*}
+H_+&=\set{z\in\CC}{\Re(z)\ge 1},
+\\
+H_-&=\set{z\in\CC}{\Re(z)\le -1}.
+\end{align*}
+
+Assume $f$ has no fixed points;
+in other words the image of the map 
+\[\phi\:z\mapsto f(z)-z\] 
+lies in $\CC^*=\CC\backslash\{0\}$.
+
 
 Fix $\eps>0$ such that $|f(z)-z|>\eps$ for any $z\in\CC$.
 Note that the map 
@@ -1049,11 +1049,8 @@ and take the surfaces $\Sigma_t$ as the restrictions of the  embedding to the sp
 the existence of the immersion follows from the Morse lemma.
 
 \begin{wrapfigure}[6]{o}{24 mm}
-%\begin{center}
 \begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/ass(1)}
-%\lbl[b]{24,41;x}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 \textit{Comments.}
@@ -1645,7 +1642,7 @@ Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^v=p_{-1}$.
 Fix large integer $N$ and set $w_n=(1-\tfrac nN)\cdot v_{n\cdot r}$
 and $q_n=p_n^{w_n}$.
 
-%\begin{wrapfigure}{r}{50 mm}
+
 \begin{center}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/perelman(1)}
 \lbl[trw]{8,5;$p_{-1}{=}q_0$}
@@ -1663,7 +1660,7 @@ and $q_n=p_n^{w_n}$.
 \lbl[b]{35.2,26,90;{\small $\exp_{p_3} (w_3)$}}
 \end{lpic}
 \end{center}
-%\end{wrapfigure}
+
 
 From $({*}{*}{*})$, there is a constant $C$ independent of $N$ such that
 \[|q_k-q_{k+1}|<r+\tfrac C{N^2}\cdot\delta^2.\]
@@ -1814,14 +1811,12 @@ An alternative solution of this problem can be build on almost splitting theorem
 Fix $r_0>0$.
 Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
 
- \begin{wrapfigure}{o}{30 mm}
-%\begin{center}
+\begin{wrapfigure}{o}{30 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
-\lbl[t]{9.5,8;$p$}
-\lbl[t]{28,2;$q$}
-\lbl[b]{10,20;$\partial B(p,r)$}
+\lbl[t]{9.5,8.5;$p$}
+\lbl[t]{28,2.5;$q$}
+\lbl[b]{10,20.5;$\partial B(p,r)$}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 Note that any minimizing geodesic from $q$ to a point in $B(p,r_0)$
@@ -2078,12 +2073,9 @@ Hence the result follows.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{32 mm}
-%\begin{center}
+\begin{wrapfigure}{r}{31 mm}
 \begin{lpic}[t(-5 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/tripod}
-%\lbl[b]{24,41;x}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 \parbf{\ref{Distant involution}.} 
@@ -2238,12 +2230,9 @@ was given by Hermann Weyl in \cite{weyl}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}[9]{o}{33 mm}
-%\begin{center}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
-%\lbl[b]{24,41;x}
+\begin{wrapfigure}[8]{o}{33 mm}
+\begin{lpic}[t(-7 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 \parbf{\ref{Disc}.} 
@@ -2544,10 +2533,10 @@ in the same paper he introduced metric spaces \cite[see][]{frechet}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Horo-compactification}.}
 \textit{Horo-compactification.}
-Take $X$ to be the set of non-negative integers with the metric $\rho$ defined as 
+For the first part of problem, take $X$ to be the set of non-negative integers with the metric $\rho$ defined as 
 $\rho(m,n)=m+n$ for $m\ne n$.
 
-Assume $F_X$ is not an embedding.
+Now assume $X$ is geodesic and $F_X$ is not an embedding.
 Then there is a sequence of points $z_1,z_2,\dots$ 
 and a point $z_\infty$,
 such that $f_{z_n}\to f_{z_\infty}$ in $C(X,\RR)$
@@ -2555,7 +2544,7 @@ as $n\to \infty$,
 while $|z_n-z_\infty|_X>\eps$ 
 for some fixed $\eps>0$ and all $n$.
 
-If $X$ is geodesic we can choose $\bar z_n$ on the a geodesic $[z_\infty z_n]$ such that $|z_\infty-z_n'|=\eps$.
+Choose $\bar z_n$ on the a geodesic $[z_\infty z_n]$ such that $|z_\infty-z_n'|=\eps$.
 Note that 
 \begin{align*}
 f_{z_n}(z_\infty)-f_{z_n}(\bar z_n)&=\eps
@@ -2572,15 +2561,17 @@ the closure of $F_X(X)$ in $C(X,\RR)$;
 note that $\bar X$ is compact.
 That is, $F_X$ is an embedding 
 then $\bar X$ forms a compactification of $X$,
-which is called \emph{metric compactification}.
+which is called \emph{horo-compactification}.
 The complement 
 $\partial_\infty X=\bar X\backslash F_X(X)$ 
-is called \emph{metric absolute} of $X$.
-
+is called \emph{horo-absolute} of $X$.
 The compactification
 and absolute
 was introduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
-The problem above was suggested by Linus Kramer.
+
+I learned this problem from Linus Kramer and Alexander Lytchak;
+the example was also mentioned in the lectures of Anders Karlsson
+and attributed to Uri Bader \cite[see][2.3]{karlsson}.
 
 
 
@@ -2661,7 +2652,7 @@ The problem was discussed it a talk by Nikita Zinoviev around 2004.
 Consider a chain of disjoint circles $c_0,\dots,c_n$ in $\RR^3$;
 that is, $c_i$ and $c_{i-1}$ are linked for each $i$. 
 
-%\begin{wrapfigure}{o}{50 mm}
+
 \begin{center}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/chain(1)}
 \lbl[t]{5,0;$c_0$}
@@ -2670,7 +2661,7 @@ that is, $c_i$ and $c_{i-1}$ are linked for each $i$.
 \lbl[t]{54,0;$c_n$}
 \end{lpic}
 \end{center}
-%\end{wrapfigure}
+
 
 Assume that $\RR^3$ is equipped with a length-metric $\rho$,
 such that the total length of the circles is $\ell$
@@ -3139,11 +3130,8 @@ Moreover, show that one can assume  each vertex of $\Gamma_n$ has degree 3
 and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
 \begin{wrapfigure}{o}{27 mm}
-%\begin{center}
 \begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/fig8(1)}
-%\lbl[b]{24,41;x}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 It remains to approximate $\Gamma_n$ by finite coverings of $(\Phi,d/n)$.
@@ -3329,12 +3317,10 @@ such that  $\pi_1(\tilde W,\tilde p)=G$
 for a lift $\tilde p$ of $p$.
 
 \begin{wrapfigure}{o}{18 mm}
-%\begin{center}
 \begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/ball-in-group(1)}
 \lbl[t]{8.5,7;$\tilde p$}
 \lbl[t]{8.5,-2;{\small $\bar B(\tilde p,2+\tfrac12)$}}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 Fix sufficiently large integer $n$ and consider doubling of the closed ball $\bar B(\tilde p,n+\frac12)$ in its boundary.
@@ -3444,12 +3430,9 @@ in his paper on almost flat manifolds \cite[see][]{gromov-almost-flat}.
 \textit{Immersed disks.}
 Both circles on the picture bound essentially different discs.
 
-\begin{wrapfigure}[5]{r}{46 mm}
-%\begin{center}
-\begin{lpic}[t(-7 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
-%\lbl[b]{24,41;x}
+\begin{wrapfigure}[6]{r}{46 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 It is a good exercise to count the essentially different discs in these examples. 
@@ -3459,16 +3442,12 @@ It is a good exercise to count the essentially different discs in these examples
 The first example is generally attributed to John Milnor.
 The second example was given by Daniel Bennequin in \cite{bennequin}.
 
-\begin{wrapfigure}[6]{r}{19 mm}
-%\begin{center}
-\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
-%\lbl[b]{24,41;x}
-\end{lpic}
-%\end{center}
-\end{wrapfigure}
-
 An easier problem would be to construct two essentially different immersions of annuli with the same boundary curves; a solution is shown on the picture.
 
+\begin{wrapfigure}[6]{r}{19 mm}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
+\end{lpic}
+\end{wrapfigure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Positive Dehn twist}.} 
@@ -3557,13 +3536,12 @@ Note that for two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Si
 Observe that it is possible to draw tight arbitrary knot 
 while keeping it smoothly embedded all the time including the last moment.
 
-%\begin{wrapfigure}{r}{50 mm}
+
 \begin{center}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/knot(1)}
-%\lbl[trw]{8,5;$p_{-1}{=}q_0$}
 \end{lpic}
 \end{center}
-%\end{wrapfigure}
+
 
 \parit{Comment.}
 This problem was suggested by Greg Kuperberg \cite[see][]{One-step}.
@@ -3631,11 +3609,9 @@ that is,
 \[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
 
-\begin{wrapfigure}{o}{46 mm}
-%\begin{center}
+\begin{wrapfigure}{o}{47 mm}
 \begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
@@ -3889,10 +3865,6 @@ say $\triangle pxy$ and $\triangle qxy$
 such that 
 \[\measuredangle \hinge pxy+\measuredangle \hinge qxy> \pi.\]
 
-\begin{wrapfigure}{r}{21 mm}
-\begin{lpic}[t(-8 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/tent}
-\end{lpic}
-\end{wrapfigure}
 
 Finally show that in this case exchanging triangles $\triangle pxy$ and $\triangle qxy$
 to the triangles $\triangle pxq$ and $\triangle pyq$
@@ -3904,17 +3876,15 @@ That is, $T$ is not area minimizing, a contradiction.
 This problem is discussed in my paper \cite{petrunin-monthly}.
 
 For general polyhedral surface, the deformation which decrease the lengths of all edges may not decrease the area.
-Moreover, the surface which minimize the area among all surfaces with fixed  triangulation may be not saddle. 
-An example of such surface can be seen on the picture.
+Moreover, the surface which minimize the area among all surfaces with fixed  triangulation might be not saddle;
+try to construct such example.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 \begin{wrapfigure}{o}{22 mm}
-%\begin{center}
-\begin{lpic}[t(-4 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
+\begin{lpic}[t(-5 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 \parbf{\ref{Coherent  triangulation}.}
@@ -4037,12 +4007,9 @@ Look at the neighborhood of the boundary components and show that the annulus ca
 this is a contradiction.
 
 \begin{wrapfigure}{r}{20 mm}
-%\begin{center}
 \begin{lpic}[t(-4
  mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
-%\lbl[b]{24,41;x}
 \end{lpic}
-%\end{center}
 \end{wrapfigure}
 
 \parit{Comments.}
