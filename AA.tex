@@ -1,3 +1,25 @@
+%\begin{pr}{\hard}{Besicovitch's set}\label{Besicovitch's set}
+%Show that one can cut a unit plane disc along a finite number of radii into sectors and then move each sector by a parallel translation in such a way that their union have arbitrary small area.
+%\sign{\cite{besicovitch}}
+%\end{pr}
+
+
+
+
+
+
+
+The following well known folklore problem is relevant
+(it looks like a problem in calculus, but in fact it is geometry).
+
+\begin{itemize}
+\item \textit{ 
+A cowboy is at the bottom of a mountain of frictionless ice in the shape of a perfect cone with a circular base. 
+So, he throws up his lasso which slips neatly over the top of the cone, he pulls it tight and starts to climb. If the mountain is very steep, with a narrow angle at the top, there is no problem; the lasso grips tight and up he goes. On the other hand if the mountain is very flat, with a very shallow angle at the top, the lasso slips off as soon as the cowboy pulls on it. 
+What is the critical angle at which the cowboy can no longer climb the ice-mountain?}
+\end{itemize}
+
+
 \begin{pr}{\easy}{Bodies with the same of shadows}\label{Bodies with the same of shadows}
 Two convex bodies $K_1$ and $K_2$ in Euclidean 3-space are said to have the same shadows if any shape which can appear as an orthogonal projection of $K_1$ can also appear as an orthogonal projection of $K_2$ and the other way around.
 
@@ -28,7 +50,29 @@ Prove that $B''$ and $B'''$ have the same shadows.
 
 
 
+\begin{pr}{}{Disc and 2-sphere}\label{2-sphere is far from a ball}
+Show that there is no sequence of Riemannian metrics on
+$\mathbb{S}^2$ which converge in Gromov--Hausdorff topology to the unit disc.
+\end{pr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{2-sphere is far from a ball}.} 
+\textit{Disc and 2-sphere.}
+Assume contrary, let $(\mathbb{S}^2,g)$ is sufficiently close to $B^2$.
 
+Choose a closed simple curve $\gamma$ in $\mathbb{S}^2$ which is close to the boundary of $B^2$.
+Choose two points $p_1$ and $p_2$ in $\mathbb{S}^2$ 
+on the opposite sides of $\gamma$ which are sufficiently close to the center of $B^2$.
+
+On one had $p_1$ and $p_2$ have to be close in $\mathbb{S}^2$.
+On the other hang, to get from $p_1$ to $p_2$ in $\mathbb{S}^2$,
+one has to cross $\gamma$.
+Hence the distance from $p_1$ to $p_2$ in $\mathbb{S}^2$ has to be about $2$,
+a contradiction.
+
+\parit{Comments.}
+In fact if $X$ is a Gromov--Hausdorff limit of $(\mathbb{S}^2,g_n)$
+then any point $x_0\in X$ either admits a neighborhood homeomorphic to $\RR^2$ or it is a cut point;
+that is $X\backslash\{x_0\}$ is disconnected \cite[see][3.32]{gromov-MetStr}.
 
 
 
@@ -836,7 +880,7 @@ Note that from the equation $({*}{*})$ it follows that $w_i$ restricted to the v
 i.e., 
 \[\<v_i-v_j,w_i-w_j\>=0\]
 for any edge $[v_iv_j]$ of the polyhedron.
-The later contradicts Dehn's theorem on the infinetesimal rigidity of simplicial polyhedron. 
+The latter contradicts Dehn's theorem on the infinetesimal rigidity of simplicial polyhedron. 
 
 \bibitem[R.~Connelly]{connelly}\textit{The rigidity of certain cabled frameworks and the second-order rigidity of arbitrarily triangulated convex surfaces.} Adv. in Math. 37 (1980), no. 3, 272--299.
 
