@@ -1483,7 +1483,10 @@ Set
 q(U,V)&=\ell''(0).
 \end{align*}
 Note that
-\[q(U,V)=\int\limits_{0}^\pi [(\cos t)^2-K(U_t,V_t)\cdot (\sin t)^2]\cdot dt,\leqno({*})\]
+$$q(U,V)
+=
+\int\limits_{0}^\pi [(\cos t)^2-K(U_t,V_t)\cdot (\sin t)^2]\cdot dt,
+\leqno({*})$$
 where $K(U,V)$ denotes the sectional curvature 
 in the direction spanned by $U$ and $V$. 
 
@@ -1538,7 +1541,8 @@ in fact,
 for any $\eps>0$,
 there are metrics $g$ on $\mathbb{S}^3$ 
 with $K_g\le \eps$ and $\diam(\mathbb{S}^3,g)\le 1$; 
-this example was originally constructed by Mikhael Gromov in \cite{gromov-almost-flat} and a simplified proof was given by 
+this example was originally constructed by Mikhael Gromov in \cite{gromov-almost-flat}; 
+a simplified proof was given by 
 Peter Buser
 and Detlef Gromoll in \cite{buser-gromoll}.
 
@@ -3441,8 +3445,9 @@ Construct a sequence of elements $a_1,a_2,\dots\in \pi_1M$ the following way:
 \item and so on.
 \end{enumerate}
 
-Note that the sequence terminates at $n$-th step if the 
-$(a_1,a_2,\dots,a_n)$ form a generating system.
+Note that the sequence terminates at $n$-th step 
+if 
+$(a_1,\dots,a_n)$ forms a generating system.
 By construction, we have
 \begin{align*}
 |a_j\cdot a_i^{-1}|&\ge |a_j|\ge |a_i|
@@ -3530,7 +3535,7 @@ Hence the statement follows.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Function with no critical points}.} 
 \textit{Function with no critical points.}
-Construct an immersion 
+First construct an immersion 
 $\psi\:B^m\z\looparrowright\RR^m$ such that 
 \[\ell\circ\phi\ne\ell\circ\psi\]
 for any embedding  $\phi\:B^m\to\RR^m$.
@@ -4347,20 +4352,36 @@ The problem was suggested by Greg Kuperberg \cite[see][]{One-step}.
 \parbf{\ref{Right and acute triangles}.}
 \textit{Right and acute triangles.}
 Denote by $K$ the convex hull of $\{x_1,\z\dots,x_n\}$.
-Show that for any $x\in K$
-any triangle $\triangle x_ix_jx$ 
-is either right or acute.
-In particular each $x_i$ is a vertex of $K$.
+Without loss of generality we can assume that $K$ is nondegenrate polytope. Prove the following claim.
+
+\parbf{Claim.}
+{\it For any distinct $x_i$ and $x_j$
+and any interior point $z$ in $K$
+we have 
+\[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\]}
+\medskip
 
 Denote by $h_i$ the homothety with center at $x_i$ and coefficient $\tfrac12$.
 Set $K_i=h_i(K)$.
 
-Show that for any $i$ and $j$ the polyhedrons $K_i$ and $K_j$ have no common interior points. 
+Let us show that $K_i$ and $K_j$ have no comon interior point.
+Assume contry; that is $z=h_i(z_i)=h_j(z_j)$;
+for some interior points $z_i$ and $z_j$ in $K$.
+Note that 
+\[
+\measuredangle\hinge{x_i}{x_j}{z_i}
++
+\measuredangle\hinge{x_j}{x_i}{z_j}
+=
+\pi,
+\]
+which contradicts the claim.
 
 Note that $K_i\subset K$ for any $i$;
 it follows that 
 \begin{align*}
-\tfrac m{2^n}\cdot \vol K&=\sum_i\vol K_i\le
+\tfrac m{2^n}\cdot \vol K
+&=\sum_{i=1}^m\vol K_i\le
 \\
 &\le\vol K.
 \end{align*}
@@ -4370,6 +4391,10 @@ Hence the result follows.
 and solved by Ludwig Danzer and Branko Gr\"unbaum in \cite{danzer-guenbaum}.
 Grigori Preleman noticed that the same proof works for a similar problem for Alexandrov space \cite[see][]{perelman-Erdos};
 the later led to interesting connections to the crystallographic groups \cite[see][]{lebedeva}.
+
+The upper bound for the number of points with only acute triangles grows exponentially with $m$;
+the later was shown by Paul Erd\H{o}s and Zolt\'an F\"uredi in \cite{erdos-fueredi};
+the proof use so called \emph{probabilistic method}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
