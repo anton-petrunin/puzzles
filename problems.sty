@@ -12,8 +12,6 @@
 
 \hyphenation{Kirsz-braun}
 
-%\usepackage{amsrefs}
-%The reference from library.bit, comment previous line
 \usepackage[russian,
 german,
 english]{babel}
@@ -34,7 +32,7 @@ isbn=false]{biblatex}
 \AtEveryBibitem{\clearlist{language}}
 \AtEveryBibitem{\clearlist{note}}
 \renewbibmacro{in:}{}
-%\renewcommand*{\bibfont}{\small}
+\renewcommand*{\bibfont}{\small}
 \addbibresource{library.bib}
 
 
