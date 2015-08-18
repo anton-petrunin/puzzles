@@ -2470,8 +2470,7 @@ introduced by Vitali Milman.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Bounded curvature}.}
-\textit{Bounded curvature.}\\
-\textit{Prerequisite.}
+\textit{Bounded curvature; prerequisite.}
 The solution requires Novikov theorem on on  the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$ for
 $m\ge 5$. 
 A detailed proof of this theorem can be found in \cite{nabutovsky-NovThm}.
@@ -2492,6 +2491,7 @@ The latter is impossible by Novikov theorem.
 
 \parit{Comments.}
 Instead of function $\Phi$ one can take any Turing computable function.
+The statement still holds without the condition.
 The problem is due to Alexander Nabutovsky \cite[see][]{nabutovsky-Disconnectedness}.
 
 
@@ -3476,10 +3476,23 @@ Hence the result follows.
 \parit{Comments.} This construction introduced by Mikhael Gromov 
 in his paper on almost flat manifolds \cite[see][]{gromov-almost-flat}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Equations in the group}.} 
+Set 
+\[f(x)=x\cdot g_1\cdot x\cdot g_2\cdots x\cdot g_n.\]
+Note that $f$ is homotopic to the map 
+\[h\:x\mapsto x^n.\]
+It remains to note that degree of $h$ is not zero.
+
+\parit{Comments.} 
+The idea of solution is due to Gerstenhaber and Rothaus 
+\cite[see][]{gerstenhaber-rothaus}.
+In fact $\deg h=n^k$, where $k$ is the rank of $G$;
+it was proved by Hopf in \cite{hopf}.
+
 \section*{Topology}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \parbf{\ref{Immersed disks}.} 
 \textit{Immersed disks.}
 Both circles on the picture bound essentially different discs.
@@ -4027,7 +4040,16 @@ The cone $K$ over $P$ is a polyhedral space with natural complex structure;
 that is, one can cut simplices from $\CC^2$ and the glue the cone from them in such a way that complex structures will agree along the gluings.
 Moreover the cone $K$ can be holomorphically parametrized by $\CC^2$ in such a way that its singular set becomes an algebraic curve $z^p=w^q$ in some $(z,w)$-coordinates of $\CC^2$.
 
+\begin{wrapfigure}[5]{o}{20 mm}
+\begin{lpic}[t(-8 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/thurston(1)}
+\end{lpic}
+\end{wrapfigure}
 
+There is also a Euclidean polyhedral metrics on $\mathbb S^3$ 
+with singularity formed by Borromean rings.
+It can be obtained by gluing each face of cube to it self
+along the reflections in the middle lines shown on the picture. 
+This construction is due to William Thurston \cite[see][]{thurston}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Triangulation of a torus}.} 
