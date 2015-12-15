@@ -274,20 +274,21 @@ This example described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
 \item {\it Construct a Cantor set in $\RR^3$ with non simply connected complement.}
 (This example was is called  \emph{Antoine's necklace};
 it is constructed in \cite{antoine}.)
+\item {\it Construct an open set in $\RR^3$ with fundamental group isomorpphic to the additive group of rational numbers.}
 \end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{40 mm}
-\begin{lpic}[t(-2 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
-\end{lpic}
-\end{wrapfigure}
-
-\noindent For more advanced examples check 
+For more advanced examples check 
 Whitehead manifold, 
 \emph{Dogbone space}, 
 \emph{Casson handle},
 and  Problem~\ref{Conic neighborhood}.
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{o}{40 mm}
+\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
+\end{lpic}
+\end{wrapfigure}
 
 \parbf{\ref{Fat curve}.}
 \textit{Fat curve.} 
@@ -303,6 +304,11 @@ the 8th iteration is on the diagram.
 \parit{Comments.} 
 The existence of such curves was observed 
 by William Osgood in \cite{osgood}.
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Rectifiable curve}.}
@@ -503,11 +509,13 @@ to generalize Alexandrov's comparison theorem for convex surfaces \cite[see][]{m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Corkscrew geodesic}.}
 \textit{Corkscrew geodesic.}
-An example can be found among the surfaces of convex polyhedrons 
-such that the non-degenerate intersections with horizontal planes are triangles with parallel sides.
+An example can be found among the surfaces of convex polyhedrons look like a vertical needle. 
 
-The polyhedron $K$ should look like a vertical needle. 
-On the surface of $K$ there are three broken lines, 
+One can assume that 
+the non-degenerate intersections of such polyhedron, say $K$,
+with horizontal planes are triangles with parallel sides.
+
+On the surface of $K$ there are three almost vertical broken lines, 
 formed by the corresponding vertices of triangles.
 The polyhedron can be made in such a way that any minimizing geodesic from the top of $K$ to its bottom
 has to cross these lines in the cyclic order at nearly each edge, and the number of edges can be made arbitrary large. 
@@ -766,31 +774,14 @@ Note that a geodesic on $T$ is either a meridian
 or it intersects meridians transversally.
 No closed curve of these types can be contractible. 
 
+
+
+
 \parit{Comments.} I know this problem 
 from the book of Mikhael Gromov \cite[see][]{gromov-MetStr},
 where it is attributed to Y. Colin de Verdi\`ere.
 I am not aware of any solutions 
 which do not admit a foliation by geodesics.
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{44 mm}
-\begin{lpic}[t(-0 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
-\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
-\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
-\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
-\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
-\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
-\lbl[l]{37,19;{\small $\check\gamma(n)$}}
-\lbl[b]{21.5,35.5;$0$}
-\lbl[br]{33.5,35.5;$1$}
-\lbl{40,3;$H_+$}
-\lbl{3,3;$H_-$}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{\ref{The last problem of Poincare}.} 
 \textit{The last problem of Poincar\'e.}
@@ -811,6 +802,22 @@ Fix $\eps>0$ such that $|f(z)-z|>\eps$ for any $z\in\CC$.
 Note that the map 
 \[\check f\:z\mapsto f(z)+\eps\]
 is area preserving and has no fixed points.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{o}{44 mm}
+\begin{lpic}[t(-0 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
+\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
+\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
+\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
+\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
+\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
+\lbl[l]{37,19;{\small $\check\gamma(n)$}}
+\lbl[b]{21.5,35.5;$0$}
+\lbl[br]{33.5,35.5;$1$}
+\lbl{40,3;$H_+$}
+\lbl{3,3;$H_-$}
+\end{lpic}
+\end{wrapfigure}
 
 Prove that for some positive integer $n$,
 there is a curve 
@@ -4112,6 +4119,42 @@ their proof is combinatorial.
 The solution described above was given by Rostislav Matveyev
 in his lectures \cite[see][]{matveyev}.
 A complex-analytic proof was found by Ivan Izmestiev, Robert Kusner, G\"unter Rote, Boris Springborn and John Sullivan in \cite{izmestiev-rote-springborn-kusner}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Geodesic loop}.} 
+\textit{Geodesic loop.}
+Assume such loop exists; denote it by $\gamma$ and let $v$ be its base point.
+
+Denote by $\xi$ and $\zeta$ the directions of exit and the entrance of the loop.
+Let $\alpha$ be the angle between $\xi$ and $\zeta$
+measured in the tangent cone to $\Sigma$ at $v$.
+
+The curvature of one vertex of $\Sigma$, say $\kappa$, is defined as $2\cdot\pi-\theta$, where $\theta$ is total angle around the vertex.
+For tetrahedron, octahedron, cube, icosahedron and dodecahedron 
+$\kappa$ is
+$\pi$, $\tfrac23\cdot\pi$ , $\tfrac12\cdot\pi$, $\tfrac13\cdot\pi$ and $\tfrac15\cdot\pi$ correspondingly.
+
+By Gauss--Bonnet formula $\alpha$ 
+is a multiple of $\kappa$ modulo $\pi$.
+
+
+For tetrahedron, octahedron, cube and icosahedron, 
+it follows that there is a rotational symmetry of $K$ which fix $v$ and sends $\xi$ to $\zeta$.
+(In the case of tetrahedron, this rotation is the identity map; that is $\xi=\zeta$.)
+The later leads to a contradiction.
+
+For the dodecahedron such loop exists;
+its development shown on the diagram.
+(The vertexes of a cube inscribed in the dodecahedron are circled.)
+
+\begin{center}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/geodesic-loop(1)}
+\end{lpic}
+\end{center}
+
+
+\parit{Comments.} 
+The problem suggested by Jaros{\l}aw K\k{e}dra.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{\ref{Unique geodesics imply CAT}.} 
