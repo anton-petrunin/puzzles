@@ -1861,8 +1861,8 @@ An alternative solution of this problem can be build on almost splitting theorem
 Fix $r_0>0$.
 Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
 
-\begin{wrapfigure}{o}{30 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
+\begin{wrapfigure}{r}{30 mm}
+\begin{lpic}[t(0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
 \lbl[t]{9.5,8.5;$p$}
 \lbl[t]{28,2.5;$q$}
 \lbl[b]{10,20.5;$\partial B(p,r)$}
@@ -1874,7 +1874,7 @@ has to cross $\partial B(p,r)$.
 By volume comparison, we get that 
 \[\vol B(p,r_0)\le C_m\cdot r_0\cdot \area \partial B(p,r),\]
 where $C_m$ is a constant depending only on the dimension $m=\dim M$,
-say one can take $C_m=10^m$.
+say one can take $C_m\z=10^m$.
 
 \parit{Comments.}
 Applying the coarea formula, 
@@ -2178,7 +2178,7 @@ Following this curve for sufficient time brings us to $p$;
 that is, $p\in N$, a contradiction.
 
 \begin{wrapfigure}[7]{r}{25 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
+\begin{lpic}[t(-7 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
 \end{lpic}
 \end{wrapfigure}
 
@@ -2283,7 +2283,7 @@ was given by Hermann Weyl in \cite{weyl}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}[9]{o}{33 mm}
+\begin{wrapfigure}[9]{r}{33 mm}
 \begin{lpic}[t(-5 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
 \end{lpic}
 \end{wrapfigure}
@@ -3505,7 +3505,7 @@ it was proved by Heinz Hopf in \cite{hopf}.
 Both circles on the picture bound essentially different discs.
 
 \begin{wrapfigure}[6]{r}{46 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
+\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
 \end{lpic}
 \end{wrapfigure}
 
@@ -3929,9 +3929,15 @@ the proof of Brehm uses the same idea.
 Start with you favorite convex polyhedron $K$.
 Assume that the interior of $K$ contains the origin $0\in\RR^3$.
 
-Remove from $K$ the interior of $K'=\tfrac12\cdot K$.
+Remove from $K$ the interior of $K'=\lambda\cdot K$ for positive $\lambda<1$.
 
-Note that one can drill from each vertex of $K$ a cylindrical polyhedral tunnels to the corresponding vertex $K'$
+\begin{wrapfigure}{r}{37 mm}
+\begin{lpic}[t(-0
+ mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/octahedron-with-holes(1)}
+\end{lpic}
+\end{wrapfigure}
+
+Note that one can drill from each vertex of $K$ a polyhedral tunnel to the corresponding vertex $K'$
 so that the surface of obtained nonconvex polytope is a solution.
 
 \parit{Comments.}
@@ -3941,13 +3947,13 @@ which is isometric to a flat torus.
 It follows from very general result of Burgo and Zalgaller \cite[see][]{burago-zalgaller:pl}.
 They show in particular that any short smooth embedding of flat torus in $\RR^3$ can be approximated by piecewise linear isometric embedding.
 
-\begin{wrapfigure}{o}{20 mm}
+\begin{wrapfigure}{r}{20 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/cylinder(1)}
 \end{lpic}
 \end{wrapfigure}
 
 The following construction is more direct;
-it is a bent version of so called \emph{Schwarz boot} \cite[][see]{schwarz}.
+it is a bent version of so called \emph{Schwarz boot} \cite[][see]{schwarz1890definition}.
 Start with an isometric piecewise linear embedding 
 of cylinder as shown on the diagram;
 the top and bottom curves are triangles and their planes meet at angle the angle $\tfrac\pi n$ for a positive integer $n$.
@@ -3990,8 +3996,8 @@ try to construct such example.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{o}{22 mm}
-\begin{lpic}[t(-5 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
+\begin{wrapfigure}{r}{22 mm}
+\begin{lpic}[t(-7 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -4077,7 +4083,7 @@ The cone $K$ over $P$ is a polyhedral space with natural complex structure;
 that is, one can cut simplices from $\CC^2$ and the glue the cone from them in such a way that complex structures will agree along the gluings.
 Moreover the cone $K$ can be holomorphically parametrized by $\CC^2$ in such a way that its singular set becomes an algebraic curve $z^p=w^q$ in some $(z,w)$-coordinates of $\CC^2$.
 
-\begin{wrapfigure}[5]{o}{20 mm}
+\begin{wrapfigure}[5]{r}{20 mm}
 \begin{lpic}[t(-8 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/thurston(1)}
 \end{lpic}
 \end{wrapfigure}
@@ -4125,11 +4131,6 @@ This way we obtain an annulus with flat metric.
 Look at the neighborhood of the boundary components and show that the annulus can and cannot be isometrically immersed into the plane;
 this is a contradiction.
 
-\begin{wrapfigure}{r}{20 mm}
-\begin{lpic}[t(-4
- mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
-\end{lpic}
-\end{wrapfigure}
 
 \parit{Comments.}
 There are flat metrics on the torus with 
@@ -4138,6 +4139,12 @@ which have the total angles $\tfrac53\cdot\pi$ and $\tfrac73\cdot\pi$.
 Such example can be obtained by identifying the the hexagon on the picture  according to the arrows.
 But the holonomy group of the obtained torus is generated by the rotation by angle $\tfrac\pi6$. 
 In particular, the observation is necessary in the proof.
+
+\begin{wrapfigure}{r}{20 mm}
+\begin{lpic}[t(-4
+ mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
+\end{lpic}
+\end{wrapfigure}
 
 The same argument shows that 
 holonomy group of flat torus with exactly two singular points with total angle $2\cdot(1\pm \tfrac1n)\cdot\pi$ has more than $n$ elements.
@@ -4157,21 +4164,18 @@ Assume such loop exists; denote it by $\gamma$ and let $v$ be its base point.
 
 Denote by $\xi$ and $\zeta$ the directions of exit and the entrance of the loop.
 Let $\alpha$ be the angle between $\xi$ and $\zeta$
-measured in the tangent cone to $\Sigma$ at $v$.
+measured in the tangent cone to the surface of cube at $v$.
 
-The curvature of one vertex of $\Sigma$, say $\kappa$, is defined as $2\cdot\pi-\theta$, where $\theta$ is total angle around the vertex.
-For tetrahedron, octahedron, cube, icosahedron and dodecahedron 
-$\kappa$ is
-$\pi$, $\tfrac23\cdot\pi$ , $\tfrac12\cdot\pi$, $\tfrac13\cdot\pi$ and $\tfrac15\cdot\pi$ correspondingly.
+Prove that $\alpha=\tfrac\pi2$.
+To do this you can use Gauss--Bonnet theorem or unfolding.
 
-By Gauss--Bonnet formula $\alpha$ 
-is a multiple of $\kappa$ modulo $\pi$.
-
-
-For tetrahedron, octahedron, cube and icosahedron, 
-it follows that there is a rotational symmetry of $K$ which fix $v$ and sends $\xi$ to $\zeta$.
-(In the case of tetrahedron, this rotation is the identity map; that is $\xi=\zeta$.)
+It follows that there is a rotational symmetry of cube which fix $v$ and sends $\xi$ to $\zeta$.
 The later leads to a contradiction.
+
+\parit{Comments.}
+The same holds for tetrahedron, octahedron and icosahedron.
+In this case $\alpha$ is a multiple of $\tfrac\pi3$;
+it implies existence of rotational symmetry of which fix $v$ and sends $\xi$ to $\zeta$ and leads to a contradiction the same way.
 
 For the dodecahedron such loop exists;
 its development shown on the diagram.
@@ -4182,8 +4186,6 @@ its development shown on the diagram.
 \end{lpic}
 \end{center}
 
-
-\parit{Comments.} 
 The problem suggested by Jaros{\l}aw K\k{e}dra.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
