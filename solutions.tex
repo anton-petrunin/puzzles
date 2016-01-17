@@ -3558,12 +3558,19 @@ Hence the statement follows.
 \parit{Comments.} The problem was suggested by Rostislav Matveyev.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{r}{24 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/no-critical-points()}
+\end{lpic}
+\end{wrapfigure}
+
+
 \parbf{\ref{Function with no critical points}.} 
 \textit{Function with no critical points.}
-First construct an immersion 
+Construct an immersion 
 $\psi\:B^m\z\looparrowright\RR^m$ such that 
 \[\ell\circ\phi\ne\ell\circ\psi\]
-for any embedding  $\phi\:B^m\to\RR^m$.
+for any embedding  $\phi\:B^m\to\RR^m$. 
+(The two-dimensional case can be quessed from the picture.)
 
 It remains to note that the composition $f=\ell\circ\psi$ has no critical points.
 
@@ -3691,7 +3698,7 @@ for any $x\in\RR^m$.
 \end{wrapfigure}
 
 Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
-$\phi(r)=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
+$\phi(r)\z=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
 
 Consider $\RR^m$ with polar coordinates $(u,r)$, where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
 Let $\Phi\:\RR^m\to\RR^m$
@@ -3749,7 +3756,7 @@ we can assume that $f_0\preccurlyeq \dots\preccurlyeq f_m$.
 Set $h\:k\mapsto f_0$;
 it defines a map $K\to F$.
 
-It remains to check that $h$ is continues 
+It remains to check that $h$ is continuous 
 and induces an isomorphism of all the homotopy groups.
 
 \parit{Comments.}
@@ -3776,7 +3783,37 @@ Show that $h$ solves the problem.
 \parit{Comments.} 
 The problem was mentioned by Frederic Le Rox \cite[see][]{rox}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{\ref{Simple path}.}
+\textit{Simple path.}
+Let $\alpha$ be a path joining $p$ to $q$.
 
+Passing to a subinterval if necessary,
+we can assume that $\alpha(t)\ne p,q$ for $t\ne0,1$.
+
+An open set in $[0,1]$ will be called \emph{suitable}
+if for any connected component $(a,b)$ of $\Omega$ we have $\alpha(a)=\alpha(b)$.
+Show that there is a maximal suitable open set $\Omega$;
+that $\Omega$ is suitable and it is not a subset of any other suitable set.
+
+Define $\beta(t)=\alpha(a)$ for any $t$ in a connected component $(a,b)\subset\Omega$.
+
+It remains to reparametrize $\beta$ to make it injective.
+
+\parit{Altrnative solution.}
+Note that one can assume that $X$ coincides with the image of $\alpha$.
+In particular it is connected, locally connected and compact.
+
+Any such space admits a length metric.
+This statement was conjectured by Karl Menger in \cite{menger}
+and proved independently 
+by R. H. Bing  \cite[see][]{bing-length-0, bing-length-1} 
+and Edwin Moise \cite[see][]{moise}.
+
+It remains to consider a geodesic path from $p$ to $q$.
+
+\parit{Comments.}
+The problem suggested by Alexander Lytchak.
 
 \section*{Piecewise linear geometry}
 
@@ -3785,7 +3822,7 @@ The problem was mentioned by Frederic Le Rox \cite[see][]{rox}.
 \parbf{\ref{4-poly}.} 
 \textit{Triangulation of 3-sphere.}
 Choose 100 distinct points $x_1,x_2,\z\dots,x_{100}$
-on the curve 
+on the {}\emph{moment curve} 
 \[\gamma\:t\mapsto (t,t^2,t^3,t^4)\] 
 in $\RR^4$.
 Let $P$ be the convex hull of $\{x_1,x_2,\z\dots,x_{100}\}$.
