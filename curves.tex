@@ -1,0 +1,659 @@
+\chapter{Curves}
+
+
+Recall that a \index{curve}\emph{curve} is a continuous map defined on real interval
+and 
+a \index{closed curve}\emph{closed curve} is a continuous map defined on a circle.
+If the map is injective then the curve is called \index{simple curve}\emph{simple}.
+
+In this chapter we consider only plane and spherical curves.
+We assume that the reader is familiar with related definitions including 
+length of curve 
+and its curvature.
+The necessary material is covered in a the first couple of lectures 
+of a standard introduction to differential geometry, 
+see \cite[][\S26--27]{hilbert-cohn-vossen}
+or  
+\cite[][Chapter 1]{toponogov-curves-and-surfaces}.
+
+\medskip
+
+We give a practice problem with a solution, 
+after that you are on your own.
+
+\subsection*{Spiral}
+
+The following problem states that 
+if you drive on the plane and turn the steering wheel to the right all the time,
+then you will not be able to come back to the same place.
+
+\begin{pr}{}{Problem}\label{spiral}
+Assume $\gamma$ is a smooth regular plane curve with strictly monotonic curvature. 
+Show that $\gamma$ has no self-intersections.
+\end{pr}
+
+\parit{Solution.}
+Without loss of generality we may assume that the curve is parametrized by its length and its
+curvature decreases.
+
+Let $z(t)$ be the center of osculating circle at $\gamma(t)$
+and $r(t)$ is its radius.
+That is 
+\begin{align*}
+z(t)&=\gamma(t)+\tfrac{\ddot\gamma(t)}{|\ddot\gamma(t)|^2},
+&
+r(t)&=\tfrac{1}{|\ddot\gamma(t)|}.
+\end{align*}
+
+\begin{wrapfigure}{o}{25 mm}
+\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/kneser-log(1)}
+\end{lpic}
+\end{wrapfigure}
+
+Straightforward calculations show that
+\[|\dot z(t)|\le \dot r(t).\]
+It follows that the osculating discs are nested;
+that is, 
+$D_{t_1}\supset D_{t_0}$ for $t_1>t_0$.
+Hence the result follows.\qeds
+
+This problem gives a continuous analog of the Leibniz's test for alternating series.
+It was considered by Peter Tait in \cite{tait}
+and later rediscovered by Adolf Kneser in \cite{kneser};
+see also \cite{ovsienko-tabachnikov}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+
+\begin{wrapfigure}[6]{r}{27 mm}
+\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle(1)}
+\lbl{14.5,22.5;$F$}
+\end{lpic}
+\end{wrapfigure}
+
+\subsection*{The moon in the puddle}
+
+\begin{pr}{}{The moon in the puddle}\label{moon-in-puddle}
+A smooth closed simple plane curve with curvature less than $1$ bounds a figure $F$. 
+Prove that $F$ contains a disc of radius~$1$.
+\end{pr}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{A spring in a tin}
+
+\begin{pr}{\many}{A spring in a tin}\label{A spring in a tin} 
+Let $\alpha$ be a closed smooth immersed curve
+inside a unit disc. 
+Prove that the average absolute curvature of $\alpha$ is at least $1$, with
+equality if and only if $\alpha$ is the unit circle possibly traversed more than once.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{A curve in a sphere}
+\label{A curve in a sphere}
+
+\begin{pr}{\many}{A curve in a sphere} 
+Show that if a closed curve on the unit sphere intersects every equator then it has length at least $2\cdot\pi$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+
+\begin{wrapfigure}{r}{30 mm}
+\begin{lpic}[t(2 mm),b(-1 mm),r(0 mm),l(0 mm)]{pics/tangent-eq(1)}
+\end{lpic}
+\end{wrapfigure}
+
+\subsection*{Oval in oval}
+
+
+\begin{pr}{}{Oval in oval}\label{Oval in oval} 
+Consider two closed smooth strictly convex planar curves, one inside the other. 
+Show that there is a chord of the outer curve, which is tangent to the inner curve at its midpoint.
+\end{pr}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Capture a sphere in a knot\hard}
+
+The following problem states that one can not capture a sphere in a knot.
+
+The precice formulation use the notion of smooth isotopy of knots;
+that is, one parameter of embeddings 
+\[f_t\:\mathbb{S}^1\z\to \RR^3,\ \  t\in[0,1]\] 
+such that the map $[0,1]\times \mathbb{S}^1\to\RR^3$ is smooth.
+
+
+\begin{pr}{}{Capture a sphere in a knot}\label{Capture a sphere in a knot}
+Let $B$ be the closed unit ball in $\RR^3$
+and $f\:\mathbb{S}^1\z\to \RR^3\backslash B$ be a knot.
+Show that there is a smooth isotopy 
+$$f_t\:\mathbb{S}^1\to \RR^3\backslash B,\ \ \ t\in [0,1],$$ 
+such that $f_0=f$,
+the length of $f_t$ does not increase in $t$
+and $f_1(\mathbb{S}^1)$ can be separated from $B$ by a plane.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Linked circles}
+
+\begin{pr}{}{Linked circles}\label{linked-circles}
+Suppose that two linked  simple closed curves in $\RR^3$
+lie at a distance at least $1$ from each other.
+Show that the length of each curve is at least $2\cdot\pi$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Surrounded area}
+
+\begin{pr}{\easy}{Surrounded area}\label{Surrounded area}
+Let $\gamma_1,\gamma_2\:\mathbb S^1\to\RR^2$ be two simple closed plane curves.
+Assume 
+\[|\gamma_1(v)-\gamma_1(w)|\le|\gamma_2(v)-\gamma_2(w)|\]
+for any $v,w\in \mathbb S^1$.
+Show that the area surrounded by $\gamma_1$ does not exceed the area surrounded by $\gamma_2$. 
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Fat curve}
+
+\begin{pr}{\easy}{Fat curve}\label{Fat curve}
+Construct a simple plane curve with positive Lebesgue measure.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Crooked circle}
+
+\begin{pr}{}{Crooked circle}\label{Crooked circle} 
+Construct 
+a bounded open disc in $\RR^2$ 
+such that 
+its boundary contains no simple curve.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Rectifiable curve}
+
+In the following problem we use the notion of 
+\index{Hausdorff measure}\emph{Hausdorff measure} for the compact subsets in the plane.
+Fix a compact set $X\subset\RR^2$ and $\alpha>0$.
+Given $\delta>0$ consider the value
+\[h(\delta)=\inf\left\{\,\sum_i(\diam X_i)^\alpha\,\right\}\]
+where the infimum is taken for all coverings of $X$ by $\{X_i\}$
+such that $\diam X_i<\delta$ for each $i$.
+
+Note that the function $\delta\mapsto h(\delta)$ does is not decreasing in $\delta$.
+In particular, the limit $h$ of $h(\delta)$ as $\delta\to0$ is defined, possibly infinite.
+This value $h$ is called $\alpha$-dimensional Hausdorff measure of $X$.
+
+\begin{pr}{}{Rectifiable curve}\label{Rectifiable curve}
+Assume $X$ is a compact connected set in $\RR^2$
+with finite 1-dimensional Hausdorff measure. 
+Show that $X$ can be represented as the image of a rectifiable curve.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Typical convex functions}
+
+Recall that \index{G-delta set}\emph{G-delta set} is defined as a countable intersection of open sets.
+According to \index{Baire category theorem}\emph{Baire category theorem}, 
+in a complete metric spaces,
+any intersection of countable collection of dense open set 
+has to be dense.
+
+In particular, in a complete metric spaces, 
+the intersection of a finite or countable collection of G-delta dense sets is also G-delta dense. 
+The later means that G-delta dense sets contains {}\emph{most} of the points of a complete metric space. 
+This is the meaning of the word {}\emph{most} used in the following problem.
+
+\begin{pr}{\easy}{Typical convex functions}\label{Most of the convex functions}
+Consider the space of continuous convex functions defined on $[0,1]$,
+equipped with the metric induced by sup norm.
+
+Show that most of these functions have vanishing the second derivative at any point where it is defined.
+\end{pr}
+
+
+\section*{Semisolutions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\parbf{The moon in the puddle.}
+Consider the {\it cut locus} $T$
+of $F$ with respect to $\partial F$;
+it is defined as the closure
+of the set of points $x\in F$ 
+such that there are two or more points in $\partial F$ which minimize distance to $x$.
+
+\begin{wrapfigure}{o}{28 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
+\lbl[t]{21,10;$\partial F$}
+\lbl[br]{8.5,30,;{\small $T$}}
+\lbl[tr]{6,4;{\small $z_0$}}
+\end{lpic}
+\end{wrapfigure}
+
+Note that after a small perturbation
+of $\partial F$ we may assume that
+$T$ is a graph embedded in
+$F$ with finite number of edges.
+
+Note that $T$ is a
+deformation retract of $F$.
+The retraction can be obtained by moving each point $y\in F\setminus T$ to $T$
+along the geodesic from the closest point to $y$ on $\partial F$ which pass through $y$.
+
+In particular, $T$ is a tree.
+Therefore $T$  has
+at least two end vertices;
+Denote one of them by $z$.
+
+Prove that the disc of radius $1$ centered at $z$ lies completely in $F$.\qeds
+
+The problem discussed by German Pestov and Vla\-di\-mir Ionin in \cite{pestov-ionin}.
+An other solution via curve shortening flow 
+was given by Konstantin Pankrashkin in  \cite{pankrashkin}.
+The statement still holds if the curve fails to be smooth at one point.
+A spherical version of the later statement 
+was used by Dmitri Panov and me 
+in \cite{panov-petrunin-ramification}.
+
+The 3-dimensional analog of this statement does not hold.
+Namely, there is a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
+with all the principle curvatures between $-1$ and $1$
+such that it does not surround a ball of radius 1.
+Such example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
+\cite[the Bing's house constructed in][will do the job]{bing}.
+Similar constructions were given by Vladimir
+Lagunov in \cite{lagunov-2}.
+
+A similar argument shows that
+for any point $p\in (\mathbb S^2,g)$ there is a minimizing geodesic $[pq]$ with conjugate ends.
+On the other hand, 
+for $(\mathbb S^3,g)$ this is not true.
+In fact, 
+there are Riemannian metrics on $\mathbb{S}^3$ 
+without minimizing geodesics with conjugate ends,
+yet more restrictive example is given in \cite{buser-gromoll}.
+
+
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{A spring in a tin.}
+Let $\alpha$ be a closed curve in the unit disc;
+denote by $\ell$ its length.
+
+Let us equip the plane with complex coordinates so that $0$ is the center of the unit disc.
+We can assume that $\alpha$ equipped with $\ell$-periodic parametrization by length.
+
+Consider the curve $\beta(t)=t-\tfrac{\alpha(t)}{\dot\alpha(t)}$.
+Note that 
+\[\beta(t+\ell)=\beta(t)+\ell\] 
+for any $t$.
+In particular 
+\[\length (\beta|_{[0,\ell]}) 
+\ge 
+|\beta(\ell)-\beta(0)|
+=
+\ell.\]
+
+Note that 
+\begin{align*}
+|\dot\beta(t)|&=|\tfrac{\alpha(t)\cdot\ddot\alpha(t)}{\dot\alpha(t)^2}|\le
+\\
+&\le|\ddot\alpha(t)|.
+\end{align*}
+Since $|\ddot\alpha(t)|$ is the curvature of $\alpha$ at $t$,
+we get the result.\qeds
+
+The statement was originally proved 
+by Istv\'an F\'ary in \cite{fary};
+number of different proofs are discussed by Serge Tabachnikov in \cite{tabachnikov}.
+
+If instead of a disc, 
+we have a region bounded by closed convex curve $\gamma$, 
+then it is still true that the average curvature of $\alpha$ is at least as big as average curvature of $\gamma$. 
+The proof was given by Jeffrey Lagarias
+and Thomas Richardson in \cite{lagarias-richardson}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{A curve in a sphere.} 
+We give two solutions, both by contradiction.
+Assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intersects each equator.
+Let us present two solutions.
+
+\parit{A solution with the Crofton formula.}
+Note that we can assume that $\alpha$ is a broken line.
+
+Given a unit vector $u$ denote by $e_u$ the equator with pole at $u$.
+Let $k(u)$ the number of intersections
+of the $\alpha$ and $e_u$.
+
+Note that for almost all $u\in \mathbb{S}^2$, the value $k(u)$ is even.
+Since each equator intersects $\alpha$, we get $k(u)\ge 2$ for almost all $u$.
+
+Then we get
+\begin{align*}
+2\cdot\ell&=\tfrac14\cdot\int\limits_{\mathbb{S}^2}k(u)\cdot\, d_u\area\ge 
+\\
+&\ge\tfrac12\cdot\area\mathbb{S}^2=
+\\
+&=2\cdot\pi.
+\end{align*}
+The first identity above is called \index{Crofton formula}\emph{Crofton formula}.
+To prove this identity, consider a curve formed by on geodesic segment
+and
+then sum up the obtained identities for all segments in $\alpha$.\qeds
+
+\parit{A solution by symmetry.}
+Let $\check\alpha$ be a sub-arc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$.  
+Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$.  
+
+Let $r$ be a point of intersection of $\alpha$ with the equator with pole at $z$.  
+Without loss of generality we may assume that $r\in\check\alpha$. 
+
+The arc $\check\alpha$ together with its reflection in $z$ 
+form a closed curve of length $2\cdot \ell$ 
+that passes through $r$ and its antipodal point $r^{*}$.
+Therefore 
+\[\ell=\length \check\alpha\ge |r-r^{*}|_{\mathbb S^2}=\pi.\]
+Here $|r-r^{*}|_{\mathbb S^2}$ 
+denotes the angle metric in the sphere $\mathbb S^2$.\qeds
+
+
+The problem was suggested by Nikolai Nadirashvili.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Oval in oval.}
+Show that the chord which minimizes (or maximizes) the ratio, 
+in which it divides the bigger oval, 
+solves the problem.\qeds
+
+\begin{wrapfigure}{o}{51 mm}
+\begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tangent-eq-sol(1)}
+\lbl[tr]{20,5;$u$}
+\lbl[rt]{18,15;$r$}
+\lbl[rt]{26,6;$l$}
+\lbl[bl]{25,10;$x_u$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Alternative solution.}
+Given a unit vector $u$, denote by $x_u$ the point on the inner curve
+with outer normal vector $u$.
+Draw a chord of outer curve which is tangent to the inner curve at $x_u$;
+denote by $r=r(u)$ and $l=l(u)$ the lengths of this chord at the right and left from $x_u$.
+
+
+Arguing by contradiction, assume $r(u)\ne l(u)$ for any $u\in\mathbb{S}^1$.
+Since the functions $r$ and $l$ are continuous,
+we can assume that 
+$$r(u)>l(u)\ \ \text{for any}\ \ u\in\mathbb{S}^1.\leqno{({*})}$$
+
+Prove that
+each of the following two integrals 
+\begin{align*}
+\tfrac12\cdot\int\limits_{\mathbb{S}^1}r^2(u)\cdot du
+\quad\text{and}\quad
+\tfrac12\cdot\int\limits_{\mathbb{S}^1}l^2(u)\cdot du
+\end{align*}
+gives 
+the area between the curves.
+In particular, 
+the integrals are equal to each other. 
+The latter contradicts $({*})$.\qeds
+
+
+
+This is a problem of Serge Tabachnikov \cite[see][]{tabachnikob-mi}.
+A closely related, so called {}\emph{equal tangents problem} is discussed by the same author in \cite{tabachnikov-tan}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Capture a sphere in a knot.}
+We can assume that the knot is given by a diagram on the the sphere.
+
+Fix a M\"obius transformation $\mathbb{S}^2\to\mathbb{S}^2$ which is not an isometry.
+Denote by $u$ its conformal factor. 
+Since the M\"obius transformation preserves total area, 
+we get 
+$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u^2=1.$$ 
+Therefore, 
+$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u<1.$$ 
+It follows that after a suitable rotation of $\mathbb{S}^2$, 
+the length of the knot decreases.
+
+The same way one gets 
+a continuous one parameter family of M\"obius transformations which moves the knot in a hemisphere 
+and allows the ball to escape. \qeds
+
+
+This is a problem of Zarathustra Brady, 
+the given solution is based on the idea of David Eppstein \cite[see][]{zeb}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Linked circles.} 
+Denote the linked circels by $\alpha$ and $\beta$.
+
+Fix a point $x\in\alpha$. 
+Note that one can find another point $x^{*}\in\alpha$ such that the interval 
+$[xx^{*}]$ intersects $\beta$, say at the point $z$. 
+Otherwise we can move each point of $\alpha$ along the line segment to $x$.
+This deformation of $\alpha$ will not cross $\beta$;
+the latter contradicts that $\alpha$ and $\beta$ are linked. 
+
+
+Consider the curve $\alpha^{*}$ which is the central projection of $\alpha$ 
+from $z$ onto the unit sphere around $z$;
+clearly
+$$\length \alpha\ge \length\alpha^{*}.$$
+
+Note that $\alpha^{*}$ passes through two antipodal points of the sphere;
+therefore 
+$$\length \alpha^{*}\ge 2\cdot\pi.$$
+Hence the result follows.\qeds
+
+
+This is the simplest case of so called \index{Gehring's problem}\emph{Gehring's problem}. 
+The solution above was given by Michael Edelstein and Binyamin Schwarz in \cite{edelstein-schwatz};
+later the same solution was rediscovered few times.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Surrounded area.}
+Denote by $C_1$ and $C_2$ the compact regions bounded by $\gamma_1$ and $\gamma_2$ correspondingly.
+
+By Kirszbraun theorem, 
+any short map $X\to \RR^2$ defined on $X\subset \RR^2$
+can be extended to a short map on the whole $\RR^2$.
+In particular, there is a short map $f\:\RR^2\to\RR^2$ 
+such that $f(\gamma_2(v))=f(\gamma_1(v))$ for any $v\in\mathbb S^1$.
+
+Note that $f(C_2)\supset C_1$.
+Whence the statement follows.\qeds
+
+
+The Kirszbraun theorem appears in his thesis \cite[see][]{kirszbraun}
+and reproved later by Frederick Valentine in \cite{valentine}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{r}{40 mm}
+\begin{lpic}[t(-5 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
+\end{lpic}
+\end{wrapfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Fat curve.}
+To solve the problem, you can modify your favorite space filling curve 
+keeping its area nearly the same 
+and removing the self-intersections.
+
+It works for the \index{Sierpi\'nski curve}\emph{Sierpi\'nski curve} 
+which can be constructed as a limit of 
+recursively defined sequence of curves;
+the 8th iteration is on the diagram.\qeds 
+
+The existence of such curves was observed 
+by William Osgood in \cite{osgood}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Crooked circle.}
+A continuous function $f\:[0,1]\to [0,1]$
+will be called $\eps$-crooked 
+if $f(0)=0$, $f(1)=1$ 
+and for any segment $[a,b]\subset [0,1]$ 
+one can choose $a\le x\le y\le b$ 
+such that
+\[|f(y)-f(a)|\le\eps\ \ \text{and}\ \ |f(x)-f(b)|\le\eps.\]
+
+A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
+Guess the construction from the diagram.
+
+
+
+\begin{center}
+\begin{lpic}[t(-0 mm),b(4 mm),r(0 mm),l(0 mm)]{pics/crooked(1)}
+\lbl[t]{8,0;$\eps=\tfrac12$}
+\lbl[t]{33,0;$\eps=\tfrac13$}
+\lbl[t]{57,0;$\eps=\tfrac14$}
+\lbl[t]{80,0;$\eps=\tfrac15$}
+\end{lpic}
+\end{center}
+
+
+Start with the unit circle, 
+$\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
+Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
+Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
+and 
+\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
+for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
+
+\begin{wrapfigure}{o}{46 mm}
+\begin{lpic}[t(-2 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/circrooked(1)}
+\lbl[tr]{35,33;$\gamma_0$}
+\lbl[bl]{38,36;$\gamma_1$}
+\end{lpic}
+\end{wrapfigure}
+
+On the diagram you see an attempt to draw the first iteration.
+
+Denote by $D$ the union of all discs bounded by $\gamma_n$.
+Show that $D$ is homeomorphic to an open disc 
+and for the right choice of the $\eps_n$ the set $D$ is bounded and its
+boundary contains no simple curves.\qeds
+
+
+The proof repeats the construction of pseudo-arc 
+given by Bronis\l{}aw Knaster in \cite{knaster}.
+Let us list a few problems which can be solved the same way.
+\begin{itemize}
+\item {\it Construct three disjoint non-empty open sets in $\RR$ which have the same boundary.}
+\item {\it Construct three open discs in $\RR^2$ which have the same boundary.}
+(This example are called \index{lakes of Wada}\emph{lakes of Wada}; it is  described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
+\item {\it Construct a Cantor set in $\RR^3$ with non simply connected complement.}
+(This example was is called  \index{Antoine's necklace}\emph{Antoine's necklace};
+it is constructed in \cite{antoine}.)
+\item {\it Construct an open set in $\RR^3$ with fundamental group isomorpphic to the additive group of rational numbers.}
+\end{itemize}
+For more advanced examples check 
+Whitehead manifold, 
+\emph{Dogbone space}, 
+\emph{Casson handle};
+see also the problem ``Conic neighborhood'' on page \pageref{Conic neighborhood}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Rectifiable curve.}
+The 1-dimensional Hausdorff measure will be denoted as $\mathcal{H}_1$. 
+
+Set $L=\mathcal{H}_1(K)$.
+Without loss of generality, we may assume that $K$ has diameter $1$.
+
+Assume that $0<\eps<\tfrac12$.
+Prove that 
+\[\mathcal{H}_1(B(x,\eps)\cap K)\ge\eps\leqno(*)\]
+for any $x\in K$.
+
+Let $x_1,\dots, x_n$ be a maximal set of points in $K$ such that 
+\[|x_i-x_j|\z\ge\eps\] for all $i\ne j$. 
+From $(*)$ we have $n\le2\cdot L/\eps$.
+
+Construct a curve $\gamma_\eps$ such that (1) $\gamma_\eps$ is passing through all $x_i$, (2) $\length\gamma_\eps\le10\cdot L$ and (3) $\gamma_\eps$ lies in $\eps$-neighborhood of $K$.
+We can assume that $\gamma_\eps$ is parametrized by length.
+
+The needed curve can be obtained by passing to 
+a partial limit of $\gamma_\eps$
+ as $\eps\to 0$. \qeds
+
+
+This problem was given by Kenneth Falconer
+in his book \cite[Exercise 3.5 in][]{falconer}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Typical convex functions.}
+Denote by $\mathfrak{F}$ the space of convex all functions defined on $[0,1]$ with the sup-norm.
+Note that $\mathfrak{F}$ is a complete metric space.
+
+Prove that if a function $f\in\mathfrak{F}$ has nonzero derivative at some point then there is $\eps>0$ such that
+\[|f-g|> \frac{\eps}{n^{23}}\]
+if $g\in\mathfrak{F}$  can be presented as a maximum of $n$ linear functions.
+
+Note that there is a countable set of piecewise linear convex $g_1,g_2,\dots$ functions which is everywhere dense in $\mathfrak{F}$.
+Denote by $n_i$ the number of linear intervals of $g_i$.
+For any positive integer $k$,
+consider the set $\Omega_k\subset\mathfrak{F}$ defined as 
+\[\Omega_k
+=
+\set{|f-g_i|<\frac1{k\cdot n_i^{23}}}{\text{for some}\ i}.\]
+
+From above we get that if the second derivative of $f$ does not vanishing at some point then $f\notin\Omega_k$ for large $k$. 
+
+Note that $\Omega_k$ is open and everywhere dense in $\mathfrak{F}$.
+Therefore 
+\[\Omega=\bigcap_k\Omega_k\]
+is a G-delta dense set.
+Hence the statement follows.\qeds
+  
+
+
+This problem states that typical convex functions is very far from what we used to work with.
+
+This is a typical answer for such question --- typicaly we do not see the typical objects.
+For example, according to the result of 
+Bernd Kirchheim, 
+Emanuele Spadaro  
+and 
+L{\'a}szl{\'o} Sz{\'e}kelyhidi proved in \cite{KSS}
+a typical 1-Lipschitz maps from the plane to itself preserves the length of all curves.
+The same way one could show that the typical open discs in the plane contain no simple curves in their boundary, 
+although the construction of one such is not trivial, 
+see ``Crooked circle'' above.
+
+More similar problems are surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
+
+
+
+
+
+
+

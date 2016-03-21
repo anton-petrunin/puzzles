@@ -2,73 +2,9 @@
 
 \begin{description}
 
-\item{\bf Asymptotic line}\refstepcounter{thm}\label{Asymptotic line} on the surface $\Sigma\subset \RR^3$
-is a curve always tangent to an \emph{asymptotic direction} of $\Sigma$; 
-that is, the direction in which the normal curvature of $\Sigma$ is zero.
 
-\item{\bf Busemann function.}\refstepcounter{thm}\label{Busemann function} 
-Let $X$ be a metric space
-and $\gamma$ is a ray in $X$; 
-that is, $\gamma\:[0, \infty)\to X$ is a \hyperref[Geodesic]{\emph{minimizing unit-speed geodesic}}.
 
-The Busemann function $b_\gamma\:X\to\RR$ is defined by
-$$b_\gamma(p)=\lim_{t\to\infty}\left(|p-\gamma(t)|_X-t\right).$$
-From the triangle inequality, 
-the expression under the limit is non-increasing in $t$; 
-therefore  the limit above is defined for any $p$.
 
-\item{\bf Curvature operator.}\refstepcounter{thm}\label{Curvature operator}
-The Riemannian curvature tensor $R$
-can be viewed as an operator $\text{\bf R}$ on the space of tangent bi-vectors $\bigwedge^2 \T$;
-it is uniquely defined by identity
-$$\langle\mathbf{R}(X\wedge Y),V\wedge W\rangle
-=
-\langle R(X,Y)V,W\rangle,$$
-The operator $\mathbf{R}\:\bigwedge^2 \T\to \bigwedge^2 \T$ is called \emph{curvature operator} and it is said to be \emph{positive definite} if
-$\langle\mathbf{R}(\phi),\phi\rangle>0$ for all non zero
-bi-vector $\phi\in\bigwedge^2 \T$.
-
-\item{\bf Dehn twist.}\refstepcounter{thm}\label{Dehn twist}
-Let $\Sigma$ be a surface and $\gamma\:\RR/\ZZ\to\Sigma$ be non-contractible closed \hyperref[Simple curve]{\emph{simple curve}}.
-Let $U_\gamma$ be a neighborhood of $\gamma$ which admits a homeomorphism $h\:U_\gamma\to \RR/\ZZ\times (0,1)$.
-Dehn twist along $\gamma$ is a homeomorphism $f\:\Sigma\to\Sigma$
-which is identity outside of $U_\gamma$ and 
-such that
-$$h\circ f\circ h^{-1}\:(x,y)\mapsto(x+y,y).$$
-
-If $\Sigma$ is oriented 
-and $h$ is orientation preserving,
-then the Dehn twist described above is called \emph{positive}.
-
-\item{\bf Dehn--Sommerville equations}\refstepcounter{thm}\label{Dehn--Sommerville equations}.
-Assume $P$ is a \emph{simple} Euclidean $m$-dimensional polyhedron;
-that is, every vertex of $P$ exactly $m$ facets are meeting.
-Denote by $f_k$ the number of $k$-dimensional faces of $P$;
-the array of integers $(f_0,f_1,\dots f_m)$ is called $f$-vector of $P$.
-
-Fix an order of the vertices $v_1,v_2,\dots v_{f_0}$
-of $P$ so that for some linear function $\ell$, we have $\ell(v_i)>\ell(v_j)\ \Leftrightarrow\ i<j$.
-The \emph{index} of the vertex $v_i$ 
-is defined as the number of edges $[v_iv_j]$ such that $j<i$. 
-The number of vertices of given index $k$ will be denoted as $h_k$.
-The array of integers $(h_0,h_1,\dots h_m)$ is called $h$-vector of $P$.
-Clearly $h_0=h_m=1$ and $h_k\ge 0$ for all $k$.
-
-Each $k$-face of $P$ contains unique vertex which maximize $\ell$;
-if the vertex has index $i$,
-then $i\ge k$ and
-then it is the maximal vertex for exactly $\tfrac{i!}{k!\cdot (i-k)!}$
-faces of dimension $k$.
-This observation can be packed in the following polynomial identity 
-\[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
-
-Note that the identity above implies that $h$-vector does not depend on the choice of order of the vertices.
-In particular, the $h$ vector is the same for the reversed order;
-that is
-\[h_k=h_{m-k}\]
-for any $k$.
-These identities are called Dehn--Sommerville equations.
-It gives the complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
 
 \item{\bf Doubling}\refstepcounter{thm}\label{Doubling} 
 of a metric space $V$ in a closed subset $A\subset V$
@@ -101,17 +37,6 @@ and the metric is defined by cosine rule;
 that is,
 $$|(x,a)-(y,b)|^2_K=a^2+b^2-2\cdot a\cdot b\cdot\!\cos|x-y|_\Sigma.$$
 
-\item{\bf Energy functional.}\refstepcounter{thm}\label{Energy functional} Let $F$ be a smooth map from a closed Riemannian manifold $M$ to a Riemannian manifold $N$.
-Then energy functional of $F$ is defined as
-\[E(F)=\int\limits_M |d_xF|^2\cdot d_x\vol_M.\]
-If $(a_{i,j})$ denote the components 
-of the differential $d_xF$ 
-written in the orthonormal bases in $\T_xM$ and $\T_{F(x)}N$,
-then 
-\[|d_xF|^2=\sum_{i,j}a_{i,j}^2.\]
-
-\item{\bf Equidistant subsets.}\refstepcounter{thm}\label{Equidistant subsets} 
-Two subsets $A$ and $B$ in a metric space $X$ are called equidistant if the distance function $\dist_A\:X\to\RR$ is constant on $B$ and $\dist_B$ is constant on $A$.
 
 \item{\bf Exponential map.}\refstepcounter{thm}\label{Exponential map} 
 Let $(M,g)$ be a Riemannian manifold;
@@ -126,12 +51,6 @@ The restriction of $\exp$ to the $\T_p$ is called \emph{exponential map at} $p$ 
 Given a smooth submanifold $S\subset M$;
 denote by $\mathrm{N} S$ the normal bundle over $S$.
 The restriction of $\exp$ to $\mathrm{N} S$ is called \emph{normal exponential map} of $S$ and denoted as $\exp_S$. 
-
-\item{\bf G-delta set}\refstepcounter{thm}\label{G-delta set} is a countable intersection of open sets.
-
-Clearly dense G-delta set has to be a countable intersection of dense open sets.
-According to Baire category theorem, the converse also holds in complete metric spaces and  locally compact Hausdorff space.
-That is a countable intersection of dense open set is dense.
 
 \item{\bf Geodesic.}\refstepcounter{thm}\label{Geodesic}  
 Let $X$ be a metric space and $\II$ be a real interval.
@@ -156,94 +75,32 @@ is the group of $3\times3$ upper triangular matrices of the form
 under the operation of matrix multiplication. The elements $a$, $b$ and $c$ usually assumed to be real,
 but they can be taken from any commutative ring with identity.
 
-\item{\bf Kissing number.}\refstepcounter{thm}\label{Kissing number}
-Let  $W_0$ be a convex body in $\RR^m$.
-The kissing number of $W_0$ is the maximal integer $k$ such that there are $k$ bodies $W_1,W_2,\dots,W_k$ such that each $W_i$ is congruent to $W_0$,
-for each $i$ we have $W_i\cap W_0\not=\emptyset$ and have no pair $W_i,W_j$ has common interior points.
 
 \item{\bf  Length-metric space.}\refstepcounter{thm}\label{Length-metric space} 
-A complete metric space $X$ is called {\it length-metric space}  if the distance between any pair of points in $X$ is equal to the infimum of lengths of curves connecting these points. 
+A complete metric space $X$ is called \emph{length space}  if the distance between any pair of points in $X$ is equal to the infimum of lengths of curves connecting these points. 
 
-\item{\bf Macro-dimension.}\refstepcounter{thm}\label{Macro-dimension}
-Let $X$ be a locally compact metric space $a>0$ and $m$ is an integer.
-We say that the macro-dimension  of $X$ at the scale $a$ is at most $m$
-if there is a continuous map $f$ from $X$ to an $m$-dimensional simplicial complex $K$
-such that for any $k\in K$ the inverse image $f^{-1}(\{k\})$ has diameter less than $a$.
 
-If macro-dimension of $X$ at the scale $a$ is at most $m$,
-but not at most $m-1$, 
-we say that $m$ is the macro-dimension of $X$ at the scale $a$.
-
-Equivalently, the macro-dimension of $X$ on scale $a$ can be defined as 
-the least integer $m$ such that $X$ admits an open covering with diameter of each set less than $a$ 
-and such that each point in $X$ is covered by at most $m+1$ sets in the cover.
 
 
 \item{\bf Length-preserving map.}\refstepcounter{thm}\label{Length-preserving map} 
 A continuous map $f\:X\to Y$ between 
-\hyperref[Length-metric space]{\emph{length-metric spaces}} 
+length spaces 
 $X$ and $Y$ is a length-preserving map if for any path $\alpha\:[0,1]\to X$, we have 
 $$\length(\alpha)=\length(f\circ\alpha).$$
 
-\item{\bf Minimal surface.}\refstepcounter{thm}\label{Minimal surface} 
-Let $\Sigma$ be a $k$-dimensional smooth surface in
-a Riemannian manifold $M$
-and $\T=\T\,\Sigma$ and $\mathrm{N}=\mathrm{N}\,\Sigma$ correspondingly tangent and normal bundle.
-Let $s\:\T\otimes \T\to \mathrm{N}$ denotes the \hyperref[Second fundamental form]{\emph{second fundamental form}} of $\Sigma$.
-Let  $e_i$ is an orthonormal basis for $\T_x$, 
-set $H_x=\sum_i s(e_i,e_i)\in \mathrm{N}_x$; 
-it is the mean curvature vector at $x\in \Sigma$. 
 
-We say that $\Sigma$ is \emph{minimal} if $H\equiv 0$.
-
-\item{\bf Nil-manifolds}\refstepcounter{thm}\label{Nil-manifolds} form the minimal class of manifolds which includes a point, and has the following property:  
-the total space of any principle $\mathbb{S}^1$-bundle over a nil-manifold is a nil-manifold. 
-
-Any nil-manifold is diffeomorphic to the quotient of a connected nilpotent Lie group by a lattice.
-
-The celebrated Gromov's theorem states that almost flat manifolds admit a finite cover by a nil-manifold.
 
 \item{\bf Path}\refstepcounter{thm}\label{Path} --- continuous map from the real interval $[0,1]$ into a topological space. 
 
-\item{\bf Polyhedral space}\refstepcounter{thm}\label{Polyhedral space}
-is a complete length-metric space which admits a finite triangulation 
-such that each simplex is globally isometric to a simplex in a Euclidean space.
-
-A point in a polyhedral space is called \emph{regular} if it has a neighborhood isometric to an open set in a Euclidean space;
-otherwise it called \emph{singular}.
-
-Often finiteness of the triangulation is relaxed to \emph{local finiteness}.
-
-If one exchange Euclidean space to sphere or hyperbolic space,
-one gets definition of \emph{spherical} and correspondingly \emph{hyperbolic polyhedral spaces}.
-To define regular/singular points in spherical or hyperbolic space,
-one has to exchange in the above definition Euclidean space to unit sphere or hyperbolic space with curvature $-1$.
 
 
-\item{\bf Polynomial volume growth.}\refstepcounter{thm}\label{Polynomial volume growth} A Riemannian manifold $M$ has polynomial volume growth if for some (and therefore any) $p\in M$, 
-we have 
-$$\vol B(p,r)\z\le C\cdot (r^k+1),$$ 
-where $B(p,r)$ is the ball in $M$ and  $C$, $k$ are real constants.
 
 \item{\bf Proper metric space.}
 \refstepcounter{thm}\label{Proper metric space} 
 A metric space $X$ is called \emph{proper} if any closed bounded set in $X$ is compact.
 
-\item{\bf Piecewise distance preserving map.}%
-\refstepcounter{thm}%
-\label{Piecewise distance preserving map} 
-Let $P$ and $Q$ be polyhedral spaces, a map $f\:P\to Q$ is called piecewise linear isometry if there is a triangulation $\mathcal{T}$ of $P$ such that at any simplex $\Delta\in \mathcal{T}$ the restriction $f|_\Delta$ is distance preserving.
 
-\item{\bf  PL-homeomorphism}\refstepcounter{thm}\label{PL-homeomorphism} or {\bf piecewise linear homeomorphism}.
 
-A map $h\:P\z\to Q$ between polyhedral spaces $P$ and $Q$ is called PL-homeomorphism if it is a homeomorphism and both spaces $P$ and $Q$ admit triangulations such that each simplex of $P$ is mapped to a simplex of $Q$ by an affine map.
-
-\item{\bf  Quasi-isometry.}\refstepcounter{thm}\label{Quasi-isometry} A map $f\:X\to Y$ is called a quasi-isometry if there is a positive real constant $C$ such that $f(X)$ is a $C$-net in $Y$ and
-$$\tfrac{1}{C}\cdot|x-y|_X-C
-\le 
-|f(x)-f(y)|_Y\le C\cdot|x-y|_X+C.$$
-
-Note that a quasi-isometry is not assumed to be continuous, for example any map between compact metric spaces is a quasi-isometry.
 
 \item{\bf Saddle surface.}\refstepcounter{thm}\label{Saddle surface} A smooth surface $\Sigma$ in $\RR^3$ is saddle 
 (correspondingly strictly saddle) 
@@ -255,33 +112,15 @@ A surface $\Sigma$ in $\RR^m$ is saddle if the restriction $\ell|_\Sigma$ of any
 One can generalize it further to an arbitrary ambient space, using  convex functions instead of linear functions in the above definition.
 
 
-\item{\bf Sasaki metric.}\label{Sasaki metric}
-Let $(M,g)$ be a Riemannian manifold.
-The Sasaki metric is the most natural choice of metric on the tangent space $\T M$.
-It is uniquely defined by the following properties:
-\begin{enumerate}[(i)]
-\item The natural projection $\tau\:\T M\to M$ is a Riemannian submersion.
-\item The metric on each tangent space $\T_p\subset \T M$ is the Euclidean metric induced by $g$.
-\item Assume $\gamma(t)$ is a curve in $M$ and $v(t)\in\T_{\gamma(t)}$ is a parallel vector field along $\gamma$. 
-Note that $v(t)$ forms a curve in $\T M$ 
-and $\T_{\gamma(t)}M$ forms a submanifold in $\T M$.
-For the Sasaki metric, we have $\dot v(t)\perp \T_{\gamma(t)}M$ for any $t$.
-\end{enumerate}
 
-A more constructive way to describe Sasaki metric is given by identifying 
-$\T_u[\T M]$ for any $u\in \T_p M$ with the direct sum of so called vertical and horizontal vectors $\T_p M\oplus \T_p M$.
-The projection of this splitting defined by the differential of $\tau$
-and the Levi-Civita connection.
-Then $\T_u[\T M]$ is equipped with the metric  defined as 
-\[\hat g(X,Y)=g(X^V,Y^V)+g(X^H,Y^H),\]
-where $X^V,X^H\in\T_pM$ denotes the vertical and horizontal components of $X\in\T_u[\T M]$.
 
 \item{\bf Second fundamental form.}\refstepcounter{thm}\label{Second fundamental form} 
-Assume $f\:M\looparrowright \RR^m$ be an immersion of smooth manifold $M$.
-Given a point $p\in M$ denote by $\T_p$ and $\mathrm{N}_p=\T_p^\bot$
-the tangent and normal spaces of $L$ at $p$.
-The second fundamental form for $f$ at $p\in M$ is defined as $$s(v,w)=(\nabla_v w)^\bot,\eqno({*})$$ 
-where $(\nabla_v w)^\bot$ denotes the orthogonal projection of covariant derivative $\nabla_v w$ onto the normal bundle.
+
+
+\item{\bf Short map}\refstepcounter{thm}\label{Short map} --- the same as 1-Lipschitz 
+or distance non-expanding map.
+
+==========
 
 Assume $\gamma_v\:\RR\to M$ is a geodesic with tangent vector $v\in \T_p$;
 that is, such that $\gamma_v(0)=p$ and $\gamma'(0)=v$.
@@ -291,68 +130,5 @@ Then
 This property can be also used to define second fundamental form via the identity
 $$s(v,w)=\tfrac 12\cdot[s(v+w,v+w)-s(v,v)-s(w,w)].$$
 
-The formula $({*})$ can be used to define the second fundamental form for smooth immersions from into Riemannian manifold.
-
-\item{\bf Short map}\refstepcounter{thm}\label{Short map} --- the same as 1-Lipschitz 
-or distance non-expanding map.
-
-\item{\bf Simple curve}\refstepcounter{thm}\label{Simple curve} --- an image of a continuous injective map of a real segment or a circle in a topological space.
-
-\item{\bf Sub-Riemannian metric.}\refstepcounter{thm}\label{Sub-Riemannian metric}
-Let $(M,g)$ is a Riemannian manifold.
-
-Assume that in the tangent bundle $\T M$ 
-a choice of sub-bundle $H$ is given;
-the sub-bundle $H$ which will be called  \emph{horizontal distribution}.
-The tangent vectors which lie in $H$ will be called \emph{horizontal}.
-A piecewise smooth curve will be called \emph{horizontal}
-if all its tangent vectors are horizontal.
-
-The sub-Riemannian distance between points $x$ and $y$ is defined as infimum of lengths of horizontal curves connecting $x$ to $y$.
-
-Alternatively, the distance can be defined as a limit of Riemannian distances 
-for the metrics 
-\[g_\lambda(X,Y)=g(X^H,Y^H)+\lambda\cdot g(X^V,Y^V)\] 
-as $\lambda\to \infty$,
-where $X^H$ denotes the horizontal part of $X$;
-that is, the orthogonal projection of $X$ to $H$
-and $X^V$ denotes the vertical part of $X$;
-so, $X^V+X^H=X$.
-
-One usually adds a condition which ensure that any curve in $M$ can be arbitrary well approximated by a horizontal curve with the same endpoints.
-(In particular this ensures that the distance will not take infinite values.)
-The most common condition is so called  \emph{complete non-integrability};
-it means that for any $x\in M$, 
-one can choose a basis in $T_xM$
-from the vectors of the following type:
-$A(x)$, $[A,B](x)$, $[A,[B,C]](x)$, $[A,[B,[C,D]]](x),\dots$ where all vector fields $A,B,C,D, \dots$ are horizontal.
-
-
-\item{\bf Total curvature.}
-\refstepcounter{thm}\label{Total curvature} 
-Let $\gamma\:[a,b]\to\RR^m$ be a curve.
-The total curvature of $\gamma$ is defined as supremum of sum of external angles for broken lines inscribed in $\gamma$. 
-Namely, 
-\[\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},\]
-where $\alpha_i=\pi-\measuredangle \hinge{\gamma(t_{i})}{\gamma(t_{i-1})}{\gamma(t_{i+1})}$.
-
-If $\gamma$ is smooth and parametrized by the arc length, 
-then its total curvature equals to
-\[\int\limits_a^b|\gamma''(t)|\cdot dt.\]
-
-\item{\bf Warped product.}
-\refstepcounter{thm}
-\label{def:Warped product} 
-Let $(M,g)$ and $(N,h)$ be Riemannian manifolds 
-and $f$ be a smooth positive function defined on $M$.
-Consider the product manifold $W\z=M\times N$.
-Given a tangent vector 
-$X\z\in \T_{(p,q)} W
-\z=\T_p M\times \T_p N$ denote by 
-$X_M\z\in \T M$ and $X_N\z\in \T N$ its projections.
-Let us equip $W$ with the Riemannian metric defined as
-\[s(X,Y)=g(X_M,Y_M)+f^2\cdot h(X_N,Y_N).\]
-The obtained Riemannian manifold $(W,s)$ is called warped product of $M$ and $N$ with respect to $f\:M\to \RR$;
-it can be written as  $(W,g)\z=(N,h)\times_f(M,g)$.
 
 \end{description}

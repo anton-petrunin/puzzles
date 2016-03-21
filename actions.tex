@@ -1,0 +1,584 @@
+\csname @openrightfalse\endcsname
+\chapter{Actions and coverings}
+
+In this chapter we consider isometric actions and metric coverings.
+Given a covering $f\:\tilde X\to X$  of the lenght-metric space $X$,
+one can consider the induced length-metric on $\tilde X$
+defining length of curve $\alpha$ in $X$ as the length of the composition $f\circ\alpha$.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Bounded orbit}
+
+Recall that a metric space is called \index{proper metric space}\emph{proper} if all its bounded closed sets are compact.
+
+\begin{pr}{}{Bounded orbit}\label{Bounded orbit} Let $X$ be a 
+proper metric space 
+and $\iota\:X\to X$ is an isometry.
+Assume that for some $x\in X$, the the sequence $x_n\z=\iota^n(x)$, $n\in\ZZ$ has a converging subsequence.
+Prove that $x_n$ is bounded.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parit{Semisolution.}
+Note that we can assume that the orbit $x_n=\iota^n(x)$ is dense in $X$;
+otherwise pass to the closure of this orbit.
+In particular, we can choose a finite number of positive integers values $n_1$, $n_2,\dots,n_k$
+such that the points $x_{n_1}$, $x_{n_2},\dots,x_{n_k}$ form a $\tfrac1{10}$-net in $B(x_0,10)$,
+that is, for any $x\in B(x_0,10)$ there is $x_{n_i}$ such that
+\[|x-x_{n_i}|<\tfrac1{10}.\]
+
+Prove that that 
+if $x_m\in B(x_0,1)$, 
+then $x_{m+n_i}\in B(x_0,1)$ for some $i\in\{1,\dots,k\}$.
+
+Set $N=\max_i\{n_i\}$.
+It follows 
+that among any $N$ elements in a row $x_{i+1},\dots x_{i+N}$
+there is at least one in $B(x_0,1)$.
+In particular, $N$ isometric copies of $B(x_0,1)$ cover whole $X$.
+Hence the result follows.\qeds
+
+The problem is due to Aleksander Ca{\l}ka's \cite[see][]{calka}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Finite action}
+
+\begin{pr}{}{Finite action}\label{Finite action}
+Show that for any nontrivial continuous action of a finite group on the unit sphere
+there is an orbit which does not lie in the interior of a hemisphere.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+
+\begin{wrapfigure}[3]{r}{28 mm}
+\begin{lpic}[t(-5 mm),b(-5 mm),r(0 mm),l(0 mm)]{pics/figure-eight(1)}
+\end{lpic}
+\end{wrapfigure}
+
+\subsection*{Covers of figure eight}
+
+
+Let us define \index{figure eight}\emph{figure eight} as the
+length space which
+is obtained by gluing together all four ends of two unit segments.
+
+}
+
+\begin{pr}{}{Covers of figure eight}\label{figure-eight-1}
+Prove that any compact length spaces $K$ 
+can be presented as a Gromov--Hausdorff limit of a sequence of
+metric covers  
+\[(\widetilde \Phi_n, \tilde d/n)\to(\Phi,d/n),\]
+where $(\Phi,d)$ denotes the figure eight.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Diameter of \textit{m}-fold cover\hard}
+
+\begin{pr}{\hard}{Diameter of \textit{m}-fold cover}\label{m-fold-cover}
+Let $X$ be a length space
+and $\tilde X$ be a connected $m$-fold cover of $X$ 
+equipped with the induced intrinsic metric.
+Show that
+$$\diam\tilde X\le m\cdot \diam X.$$
+\end{pr}
+
+From the diagam below you could guess an example of 5-fold cover with diameter of the total space exactly 5 times diameter of the target.
+
+\begin{center}
+\begin{lpic}[t(0mm),b(0 mm),r(0 mm),l(0 mm)]{pics/5-fold(1)}
+\lbl[t]{49,4.5;$\to$}
+\end{lpic}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Symmetric square\easy}
+
+Let $X$ be a topological space.
+Note that $X{\times} X$ admits a natural $\ZZ_2$-action by $(x,y)\mapsto (y,x)$.
+The quotient  space $X{\times} X/\ZZ_2$ is called \index{symmetric square}\emph{symmetric square} of $X$.
+
+\begin{pr}{\easy}{Symmetric square}\label{Symmetric square} 
+Show that symmetric square 
+of any path connected topological space 
+has commutative the fundamental group.
+\end{pr}
+
+{
+
+\begin{wrapfigure}[4]{r}{21 mm}
+\begin{lpic}[t(2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/sierpinski-triangle(1)}
+\end{lpic}
+\end{wrapfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Sierpi\'nski gasket\easy}
+
+To construct Sierpi\'nski gasket, start with a solid  equilateral triangle, subdivide it into four smaller congruent equilateral triangles and remove the iterior of the central one.
+Repeat this procedure recuresevly for each of the remaining solid triangles.
+
+}
+
+\begin{pr}{\easy}{Sierpi\'nski triangle}\label{Sierpinski triangle} 
+Find the homeomorphism group of the Sierpi\'nski gasket.
+\end{pr}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Lattices in a Lie group}
+
+\begin{pr}{}{Lattices in a Lie group}\label{Boys and girls in a Lie group}
+Let $L$ and $M$ be two discrete subgroups
+of a connected Lie group $G$ and $h$ be a left
+invariant metric on $G$.
+Equip the groups $L$ and $M$ 
+with the induced left invariant metric from $G$.
+Assume $L\backslash G$ and $M\backslash G$ are compact and moreover
+$$\vol(L\backslash (G,h))
+=
+\vol(M\backslash (G,h)).$$
+Prove that there is a bi-Lipschitz one-to-one mapping
+(not necessarily a homomorphism)
+\[f\:L
+\to
+M.\]
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Piecewise Euclidean quotient\easy}
+
+Note that the quaotent of Euclidean space by a finite subgroup is a \index{polyhedral space}\emph{polyhedral space} as it defiend on page \pageref{piecewise linear map};
+on the same page you find the definition of piecewise linear homeomorphism.
+
+
+\begin{pr}{\easy}{Piecewise Euclidean quotient}\label{Piecewise Euclidean quotient}
+Let $\Gamma$ be a finite subgroup of $\SO(m)$.
+Denote by $P$ the quotient $\RR^m/\Gamma$ equipped with induced
+polyhedral metric.
+Assume $P$ admits a piecewise linear homeomorphism to $\RR^m$.
+Show that $\Gamma$ is generated by rotations  around subspaces of codimension $2$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Subgroups of the free group\easy}
+
+\begin{pr}{\easy}{Subgroups of the free group}\label{Subgroups of free group} 
+Show that every finitely generated subgroup of the free group 
+is an intersection of subgroups of finite index.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Lengths of generators of the fundamental group\easy}
+
+\begin{pr}{\easy}{Lengths of generators of the fundamental group}\label{Lengths of generators of the fundamental group}
+Let $M$ be a compact Riemannian manifold and $p\in M$.
+Show that the fundamental group $\pi_1(M,p)$
+is generated by the homotopy classes of loops with length at most $2\cdot\diam M$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Number of generators}
+
+\begin{pr}{}{Number of generators}\label{Number of generators}
+Let $M$ be a complete connected Riemannian manifold with non-negative sectional curvature.
+Show that the minimal number of generators of the fundamental group $\pi_1 M$
+can be bounded above in terms of the dimension of $M$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Equations in the group\easy}
+
+\begin{pr}{\easy}{Equations in the group}\label{Equations in the group}
+Assume $G$ is a compact connected Lie group and $n$ is a positive integer.
+Show that given a collection of elements $g_1,g_2\dots,g_n\in G$
+the equation 
+\[x\cdot g_1\cdot x\cdot g_2\cdots x\cdot g_n=1\]
+has a solution $x\in G$.
+\end{pr}
+
+\section*{Semisolutions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Finite action.}
+Without loss of generality, we may assume that the action is generated by a nontrivial homeomorphism 
+\[a\:\mathbb{S}^m\to\mathbb{S}^m\] 
+and $a^p=\id_{\mathbb{S}^m}$ for some prime $p$.
+
+Assume that any $a$-orbit lies in an open hemisphere.
+Then 
+\[h(x)=\sum_{n=1}^p a^n\cdot x\ne0\]
+for any $x\in\mathbb{S}^m$.
+
+Consider the map $f\:\mathbb{S}^m\to\mathbb{S}^m$ 
+defined as  $f(x)=\tfrac{h(x)}{|h(x)|}$.
+Note that 
+\begin{enumerate}[(i)]
+\item if $a(x)=x$, then $f(x)=x$;
+\item\label{f(x)=f(a(x))} $f(x)=f\circ a(x)$ for any $x\in\mathbb{S}^m$.
+\end{enumerate}
+
+Prove that $f$ is homotopic to the identity; 
+in particular 
+\[\deg f=1.\leqno({*})\]
+
+Fix $x\in \mathbb{S}^m$ such that $a(x)\ne x$.
+Note that $a$ acts without fixed points 
+on the inverse image $W=f^{-1}(V)$ 
+of a small open neighborhood $V\ni x$.
+Therefore the quotient map $\theta\:W\to W'=W/\ZZ_p$ is a $p$-fold covering.
+From  (\ref{f(x)=f(a(x))}),
+the restriction $f|_W$ factors through $\theta$;
+that is
+there is $f'\:W'\to V$ such that
+$f|_W=f'\circ\theta$.
+
+Assume $p\ne 2$.
+Show that $f'$ and $\theta$ have well defined degrees and 
+\[\deg f\equiv\deg \theta\cdot\deg f'\pmod p\]
+Since $\theta$ is a $p$-fold covering, we have $\deg \theta\equiv0\pmod p$.
+Therefore
+\[\deg f\equiv 0\pmod p.\leqno({*}{*})\]
+
+Finally observe that $({*})$ contradicts $({*}{*})$.
+
+In the case $p=2$ the same proof works, 
+but the degrees have to be defined only modulo $2$.\qeds
+
+Along the same lines one can get a lower bound for the maximal diameter of orbit for any nontrivial actions of finite groups on a Riemannian manifold.
+
+Applying the problem to a conjugate action, one gets that 
+if a fixed point set of a finite group action $F\acts \mathbb{S}^m$
+has nonempty interior, 
+then the action is trivial.
+The same holds for any connected manifold;
+it was proved by Max Newman in \cite{newman}.
+
+The Newman's theorem was used by Deane Montgomery in \cite{montgomery} 
+to show that 
+\emph{if $h$ is a homeomorphism of a connected manifold $M$ 
+such that each $h$-orbit is finite,
+then $h^n=\id_M$ for some positive integer $n$}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Covers of figure eight.}
+First show that any compact metric space can be presented as a limit of a sequence of finite metric graphs $\Gamma_n$.
+Moreover, show that one can assume  each vertex of $\Gamma_n$ has degree 3 
+and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
+
+\begin{wrapfigure}{o}{27 mm}
+\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/fig8(1)}
+\end{lpic}
+\end{wrapfigure}
+
+It remains to approximate $\Gamma_n$ by finite coverings of $(\Phi,d/n)$.
+Guess this part  
+from the following picture; it shows the needed approximation of the doted graph.\qeds
+
+
+The same idea works if instead of figure eight, we have any compact length space $X$ which admits a map $X\to\Phi$
+which is surjective on fundamental groups.
+Such spaces $X$ can be found among compact hyperbolic manifolds of any dimension $\ge 2$.
+All this due to Vedrin Sahovic \cite[see][]{sahovic}.
+
+A similar idea was used later to show that any group can appear as a fundamental group of underlying space of 3-dimensional hyperbolic orbifold \cite[see][]{panov-petrunin-telescopic}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Diameter of \textit{m}-fold cover.}
+Fix points $\tilde p,\tilde q\in\tilde M$.
+Let  
+$\tilde\gamma\:[0,1]\to \tilde M$ be a minimizing geodesic from $\tilde p$ to $\tilde q$. 
+
+We need to show that 
+\[\length \tilde\gamma\le m\cdot diam(M).\]
+Suppose the contrary.
+
+Denote by $p,q$ and $\gamma$ the projections to $M$ of $\tilde p,\tilde q$ and $\tilde \gamma$. 
+Represent $\gamma$
+as joint of $m$ paths of equal length,
+\[\gamma=\gamma_1{*}\dots{*}\gamma_m,\] 
+so
+\[\length(\gamma_i)=\length(\gamma)/m>\diam(M).\] 
+
+Let $\sigma_i$ be a minimizing geodesic in $M$ connecting the endpoints of $\gamma_i$. 
+Note that 
+\[\length\sigma_i\le \diam M< \length\gamma_i.\] 
+
+Consider $m+1$ paths $\alpha_0,\dots,\alpha_m$ defined as 
+\[\alpha_i=\sigma_1{*}\dots{*}\sigma_i{*}\gamma_{i+1}{*}\dots{*}\gamma_m.\]
+
+Consider their liftings $\tilde\alpha_0,\dots,\tilde\alpha_m$ 
+with $\tilde q$ as the endpoint.
+Note that two curves, say $\alpha_i$ and $\alpha_j$ for $i<j$, 
+have the same starting point in $\tilde M$.
+
+Consider the path
+\[\beta=\gamma_1{*}\dots{*}\gamma_i{*}\sigma_{i+1}{*}\dots{*}\sigma_j{*}\gamma_{j+1}{*}\dots{*}\gamma_m.\]
+Prove that there is lift $\tilde\beta$ of $\beta$ 
+which connects $\tilde p$ to $\tilde q$ in $\tilde M$.
+Clearly $\length \beta<\length \gamma$, a contradiction.
+\qeds
+
+The question was asked by Alexander  Nabutovsky
+and answered by Sergei Ivanov \cite[see][]{ivanov}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Symmetric square.}
+Let $\Gamma=\pi_1 X$ and $\Delta=\pi_1((X\times X)/\ZZ_2)$.
+Consider the homomorphism $\phi\:\Gamma\times \Gamma\to \Delta$
+induced by the projection $X\times X\to (X\times X)/\ZZ_2$.
+
+Prove that the restrictions $\phi|_{\Gamma\times \{1\}}$ and $\phi|_{\{1\}\times\Gamma}$
+are onto.
+
+It remains to note that 
+$$\phi(\alpha,1)\phi(1,\beta)=\phi(1,\beta)\phi(\alpha,1)$$
+for any $\alpha$ and $\beta$ in $\Gamma$.
+\qeds
+
+ 
+The problem was suggested by Rostislav Matveyev.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Sierpi\'nski gasket.}
+Denote the Sierpi\'nski gasket by $\triangle$.
+
+Let us show that any homeomorphism of $\triangle$ is also its isometry.
+Therefore the group homeomorphisms is the symmetric group $S_3$. 
+
+Let $\{x,y,z\}$ be a 3-point set in $\triangle$ such that $\triangle \backslash\{x,y,z\}$ has 3 connected components.
+Prove that there is unique choice for the set $\{x,y,z\}$ and 
+it is formed by the midpoints of its big sides.
+
+It follows that any homeomorphism of $\triangle$ permutes the set $\{x,y,z\}$.
+
+A similar argument shows that this permutation  uniquely describes the homeomorphism.
+\qeds
+
+The problem was suggested by Bruce Kliener.
+The homeomorphism group of Sierpi\'nski carpet is much bigger,
+it is instructive to describe this group.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Latices in a Lie group.}
+Denote by $V_\ell$ and $W_m$
+the Voronoi domain of for each $\ell\in L$ and $m\in M$ correspondingly;
+that is,
+\[V_\ell=\set{g\in G}{|g-\ell|_G\le|g-\ell'|\ \text{for any}\ \ell'\in L}\]
+\[W_m=\set{g\in G}{|g-m|_G\le|g-m'|\ \text{for any}\ m'\in M}\]
+
+Note that for any $\ell\in L$ and $m \in M$ we have
+\[\begin{aligned}
+\vol V_\ell&=\vol(L\backslash (G,h))=
+\\
+&=\vol(M\backslash (G,h))=
+\\
+&=\vol W_m.
+\end{aligned}
+\leqno({*})
+\]
+
+Consider the bipartite graph $\Gamma$ with vertices formed by the elements of $L$ and $M$
+such that $\ell\in L$ is adjacent  to $m \in M$ if and only if $V_\ell\cap W_m\ne\emptyset$.
+
+By $({*})$ the graph $\Gamma$ satisfies the condition in the marriage theorem ---
+any subset in $L$ has at least that many neighbors in $M$ and the other way around.
+Therefore there is a bijection $f\: L\to M$ such that 
+\[V_\ell\cap W_{f(\ell)}\ne\emptyset\] for any $\ell\in L$. 
+
+It remains to notice that $f$ is bi-Lipschitz.
+\qeds
+
+The problem is due to 
+Dmitri Burago 
+and Bruce Kleiner \cite[see][]{burago-kleiner}. 
+For a finitely generated group $G$  
+it is not known if $G$ and $G\times \ZZ_2$ can fail to be bi-Lipschitz.
+(The groups are assumed to be equipped with word metric.)
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Piecewise Euclidean quotient.}
+Note that the group $\Gamma$ serves as holonomy group of the quotient space $P=\RR^m/\Gamma$ with the induced polyhedral metric.
+More precisely, one can identify $\RR^m$ with the tangent space of a regular point $x_0$ of $P$ in such a way that
+for any $\gamma\in\Gamma$ there is a loop $\ell$ in $P$ which pass only through regular points and has the holonomy $\gamma$.
+
+Fix $\gamma\in\Gamma$. 
+Let $\ell$ be the corresponding loop.
+Since $P$ is simply connected, we can shrink $\ell$ by a disc.
+By general position argument we can assume that the disc 
+only pass through simplices of codimension $0$, $1$ and $2$
+and intersect the simplices of codimension $2$ transversely.
+
+In other words, $\ell$ can be presented as a product of 
+loops such that each loop goes around a single simplex of codimension $2$ and comes back.
+The holonomy for each of these loops is a rotation around a hyperplane.
+Hence the result follows.
+\qeds
+
+The converse to the problem also holds;
+it was proved by Christian Lange in \cite{lange},
+his proof based earlier results of 
+Marina Mikhailova \cite[see][]{mikhailova}.
+
+Note that the cone over spherical suspension over Poincar\'e sphere is homeomorphic to $\RR^5$ and it is quotient of $\RR^5$ by a finite subgroup of $\SO(5)$. 
+Therefore, 
+if one exchanges ``piecewise linear homeomorphism'' to ``homeomorphism'' in the formulation, 
+then the answer is different; 
+a complete classification of such actions was also obtained in \cite{lange}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Subgroups of free group.}
+Let $F$ be a free group;
+note that we can assume that $F$ has finite number, say $m$, generators.
+
+Fix a finitely generated subgroup $G$ of free group $F$.
+
+Let $W$ be the wedge sum of $m$ circles, 
+so  $\pi_1(W,p)=F$.
+Equip $W$ with the length-metric 
+such that each circle has unit length.
+
+Pass to the metric cover $\tilde W$ of $W$ 
+such that  $\pi_1(\tilde W,\tilde p)=G$ 
+for a lift $\tilde p$ of $p$.
+
+\begin{wrapfigure}{r}{18 mm}
+\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/ball-in-group(1)}
+\lbl[t]{8.5,7;$\tilde p$}
+\lbl[t]{8.5,-2;{\small $\bar B(\tilde p,2+\tfrac12)$}}
+\end{lpic}
+\end{wrapfigure}
+
+Fix sufficiently large integer $n$ and consider doubling of the closed ball $\bar B(\tilde p,n+\frac12)$ in its boundary.
+Let us denote the obtained doubling by $Z_n$ and set $G_n=\pi(Z_n,\tilde p)$.
+
+Prove that $Z_n$ is a metric covering of $W$;
+it makes possible to consider $G_n$ as a subgroup of $F$.
+By construction, $Z_n$ is compact;
+therefore $G_n$ has finite order in $F$.
+
+
+It remains to show that that 
+\[G=\bigcap_{n>k} G_n,\]
+where $k$ is the maximal length of word in the generating set of $G$.
+\qeds
+
+Originally the problem was solved by Marshall Hall in \cite{hall}.
+The proof presented here is close to the solution of John Stalings in \cite{stallings};
+see also \cite{wilton}.
+
+The same idea can be used to solve many other problems; here are some examples.
+\begin{itemize}
+\item {\it Show that subgroups of free groups are free.}
+\item {\it Show that two elements of the free groups $u$ and $v$ commute 
+if and only if they are both powers of
+the some element $w$.}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Lengths of generators of the fundamental group.}
+Choose a length minimizing loop $\gamma$ 
+which represents a given element $a\in\pi_1M$.
+
+Fix $\eps>0$.
+Represent $\gamma$ 
+as a joint 
+\[\gamma=\gamma_1{*}\dots{*}\gamma_n\]
+of paths with $\length\gamma_i<\eps$ for each $i$.
+ 
+Denote by $p=p_0,p_1,\dots, p_n=p$ the endpoints of these arcs.
+Connect $p$ to $p_i$ by a minimizing geodesic $\sigma_i$.
+Note that $\gamma$ is homotopic to a product of loops
+\[\alpha_i=\sigma_{i-1}{*}\gamma_i{*}\sigma_{i-1}\]
+and $\length \alpha_i<2\cdot\diam M+\eps$ for each $i$.
+
+It remains to show that for sufficiently small $\eps>0$
+any loop with length less than $2\cdot\diam M+\eps$ 
+is homotopic to a loop with length at most $2\cdot\diam M$.
+\qeds
+
+The statement is due to 
+Mikhael Gromov \cite[Prop. 3.22 in][]{gromov-MetStr}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Number of generators.}
+Consider universal Riemannian cover $\tilde M$ of $M$.
+Note that $\tilde M$ is non-negatively curved and
+$\pi_1M$ acts by isometries on $\tilde M$.
+
+Fix $p\in \tilde M$.
+Given  $a\in \pi_1M$,
+set 
+\[|a|=|p- a\cdot p|_{\tilde M}.\]
+Construct a sequence of elements $a_1,a_2,\dots\in \pi_1M$ the following way:
+\begin{enumerate}[(i)]
+\item Choose $a_1\in\pi_1M$ so that $|a_1|$ takes the minimal value.
+\item Choose $a_2\in\pi_1M\backslash\langle a_1 \rangle$ so that $|a_2|$ takes the minimal value.
+\item Choose $a_3\in\pi_1M\backslash\langle a_1,a_2 \rangle$ so that $|a_2|$ takes the minimal value.
+\item and so on.
+\end{enumerate}
+
+Note that the sequence terminates at $n$-th step 
+if 
+$(a_1,\dots,a_n)$ forms a generating system.
+By construction, we have
+\begin{align*}
+|a_j\cdot a_i^{-1}|&\ge |a_j|\ge |a_i|
+\intertext{for any $j>i$. 
+Set $p_i=a_i\cdot p$.
+Note that}
+|p_j-p_i|_{\tilde M}
+&=|a_j\cdot a_i^{-1}|\ge
+\\
+&\ge |a_j|=
+\\
+&=|p_j-p|_{\tilde M}\ge
+\\
+&\ge|a_i|=
+\\
+&=|p_i-p|_{\tilde M}.
+\intertext{By Toponogov comparison theorem we get}
+\measuredangle \hinge p{p_i}{p_j}&\ge \tfrac\pi3.
+\end{align*}
+That is, the directions from $p$ to all $p_i$ lie on the angle at least $\tfrac\pi3$ from each other.
+
+Therefore the number of $p_i$ can be bounded in terms of the dimension of $M$.
+Hence the result follows.
+\qeds
+
+This construction introduced by Mikhael Gromov 
+in his paper on almost flat manifolds \cite[see][]{gromov-almost-flat}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Equations in the group.} 
+Set 
+\[f(x)=x\cdot g_1\cdot x\cdot g_2\cdots x\cdot g_n.\]
+Note that $f$ is homotopic to the map 
+\[h\:x\mapsto x^n.\]
+It remains to note that degree of $h$ is not zero.
+\qeds
+
+The idea of solution is due to Murray Gerstenhaber and Oscar Rothaus 
+\cite[see][]{gerstenhaber-rothaus}.
+In fact $\deg h=n^k$, where $k$ is the rank of $G$;
+it was proved by Heinz Hopf in \cite{hopf}.

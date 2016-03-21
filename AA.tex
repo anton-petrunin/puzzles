@@ -1,3 +1,65 @@
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Thin triangles\easy}
+
+A triangle in a metric space is defined as three minimizing  geodesics connecting three distinct points.
+A model triangle is defined as a flat triangle with the same side lengths.
+If the distance between any two points in the triangle is less or equal to the distance between corresponding points in 
+A triangle is called thin if the distance between any pair of
+
+
+\begin{pr}{\easy}{Unique geodesics imply $\mathrm{CAT}(0)$}\label{Unique geodesics imply CAT}
+Let $P$ be a polyhedral space.
+Assume that any two points in $P$ 
+are connected by unique geodesic.
+Show that $P$ is a $\mathrm{CAT}(0)$ space.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Unique geodesics imply $\mathrm{CAT}(0)$.}
+Uniqueness of geodesics implies that $P$ is contractible.
+In particular, $P$ is simply connected.
+
+It remains to prove that $P$ is locally $\mathrm{CAT}(0)$;
+equivalently, the space of directions $\Sigma_p$
+at any point $p\in P$ is  a $\mathrm{CAT}(1)$ space.
+
+We can assume that the statement holds in all dimensions less than $\dim P$. 
+In particular, $\Sigma_p$ is locally $\mathrm{CAT}(1)$.
+If $\Sigma_p$ is not $\mathrm{CAT}(1)$,
+then it contains a periodic geodesic $\gamma$ of length $\ell<2\cdot\pi$,
+such that any arc of $\gamma$ of length $\tfrac\ell2$ is length minimizing.
+
+Consider two points $x$ and $y$
+in the tangent cone of $p$
+in directions $\gamma(0)$ and $\gamma(\tfrac\ell2)$.
+Show that there are two distinct minimizing geodesics between $x$ and $y$.
+The latter leads to a contradiction.
+\qeds
+
+The existence of geodesic $\gamma$ was proved by Brian Bowditch in \cite{bowditch};
+a simpler proof can be found in the book 
+by Stephanie Alexander, Vitali Kapovitch and me \cite[see][]{akp}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{pr}{\thm}{Convex space-filling}\label{Convex space-filling}
 Construct a curve $f\:[0,1]\to \RR^2$
 such that 

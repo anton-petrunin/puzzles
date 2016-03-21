@@ -1,0 +1,1321 @@
+\csname @openrightfalse\endcsname
+\chapter{Comparison geometry}
+
+In this chapter we consider Riemannian manifolds with curvature bounds.
+
+This chapter is the very demanding;
+we assume that the reader is familiar with the 
+main definitions in the subject,
+including Jacobi fields, 
+Shape operator and second fundamental form, 
+equations of Riccati and Jacobi,
+comparison theorems and Morse theory.
+The classical book \cite{cheeger-ebin} by Cheeger and Ebin covers all the  necessary  material.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Geodesic immersion\hard}
+
+\begin{pr}{\hard}{Geodesic immersion}
+\label{Geodesic immersion}
+Let $M$ be a simply connected positively curved Riemannian manifold and $\iota\:N\looparrowright M$ be a totally geodesic immersion.
+Assume that 
+\[\dim N>\tfrac 12\cdot \dim M.\]
+Prove that $\iota$ is an embedding.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parit{Semisolution.}
+Set $n=\dim N$, $m=\dim M$.
+
+Fix a smooth increasing strictly concave function $\phi$.
+Consider the function $f=\phi\circ\dist_N$.
+
+Note that if $f$ is smooth at some point $x\in M$ 
+then $\Hess_xf$, the Hessian of $f$ at $x$, 
+has at least $n+1$ negative eigenvalues.
+
+Moreover, at any point $x\notin \iota(N)$ the same holds in the barrier sense.
+That is, there is a smooth function $h$ defined on $M$
+such that $h(x)=f(x)$, $h(y)\ge f(y)$ for any $y$
+and $\Hess_xh$ has at least $n+1$ negative eigenvalues.
+
+Use that $m< 2\cdot n$ and the described property to prove the following
+analog of Morse lemma for $f$.
+
+\parbf{Claim.}
+{\it Given $x\notin \iota(N)$ there is a neighborhood $U\ni x$ such that the set 
+\[U_-=\set{z\in U}{f(z)<f(x)}\] is simply connected.}
+
+\medskip
+
+Since $M$ is simply connected,
+any closed curve in $\iota(N)$
+can be contracted by a disc, say $s_0\:\mathbb D\to M$.
+
+Applying the claim, one can construct an $f$-decreasing homotopy starting at $s_0$.
+That is,
+there is an homotopy $s_t\:\mathbb D\to M$, $t\in [0,1]$ 
+such that $s_t(\partial \mathbb D)\subset \iota(N)$ for any $t$ 
+and $s_1(\mathbb D)\subset \iota(N)$.
+It follows that $\iota(N)$ is simply connected.
+
+Finally note that if $\iota\:N\to M$ has a self-intersection,
+then the image
+$\iota(N)$ is not simply connected.
+Hence the result follows.\qeds
+
+
+The statement was proved by 
+Fuquan Fang, 
+S\'ergio Mendon\c{c}a 
+and Xiaochun Rong in \cite{FMR}.
+The main idea was discovered by 
+Burkhard Wilking \cite[see][]{wilking-2003}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Geodesic hypersurface}
+\begin{pr}{\easy}{Geodesic hypersurface}\label{Geodesic hypersurface}
+Prove that 
+if a compact connected positively curved manifold $M$ admits a totally geodesic embedded hypersurface,
+then $M$ or its double cover is homeomorphic to the sphere.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{If convex, then embedded}
+
+\begin{pr}{}{If convex, then embedded}\label{If convex then embedded} 
+Let $M$ be a complete simply connected Riemannian manifold 
+with non-positive curvature 
+and dimension at least $3$.
+Prove that any immersed locally convex
+compact hypersurface in $M$ is embedded.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Immersed ball\hard}
+
+\begin{pr}{\hard}{Immersed ball}\label{Immersed ball}
+Prove that any immersed locally convex
+hypersurface $\iota\:\Sigma\looparrowright M$
+in a compact positively curved manifold $M$ of dimension $m\ge 3$, is the boundary of an immersed ball. 
+That is, there is an immersion of a closed ball $f\:\bar B^m\looparrowright M$ and a diffeomorphism $h\:\Sigma\to\partial \bar B^m$
+such that $\iota=f\circ h$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Minimal surface in the sphere}
+
+\label{minimal surface}
+A  smooth $n$-dimensional surface $\Sigma$ in
+an $m$-dimensional Riemannian manifold $M$ is called minimal
+if it locally minimized the $n$-dimensional area;
+that is, sufficiently small regions of $\Sigma$ do not admit area decreasing deformations with fixed boundary.
+
+The minimal surfaces can be also defined via mean curvature vector as follows.
+Let $\T=\T\,\Sigma$ and $\mathrm{N}=\mathrm{N}\,\Sigma$ correspondingly tangent and normal bundle.
+Let $s$ denotes the second fundamental form of $\Sigma$;
+it is a quadratic from on $\T$ with values in $\mathrm{N}$.
+Let  $e_i$ is an orthonormal basis for $\T_x$, 
+set 
+$$H_x=\sum_i s(e_i,e_i)\in \mathrm{N}_x;$$ 
+it is the mean curvature vector at $x\in \Sigma$. 
+We say that $\Sigma$ is \index{minimal surface}\emph{minimal} if $H\equiv 0$.
+
+\begin{pr}{}{Minimal surface in the sphere}\label{almgren} 
+Let $\Sigma$ be a closed $n$-dimensional 
+minimal surface
+in $\mathbb{S}^m$.
+Prove that
+$\vol_n \Sigma\ge \vol_n \mathbb{S}^n$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Hypercurve}
+
+The Riemannian curvature tensor $R$
+can be viewed as an operator $\text{\bf R}$ on the space of tangent bi-vectors $\bigwedge^2 \T$;
+it is uniquely defined by identity
+$$\langle\mathbf{R}(X\wedge Y),V\wedge W\rangle
+=
+\langle R(X,Y)V,W\rangle,$$
+The operator $\mathbf{R}\:\bigwedge^2 \T\to \bigwedge^2 \T$ is called \index{curvature operator}\emph{curvature operator} and it is said to be {}\emph{positive definite} if
+$\langle\mathbf{R}(\phi),\phi\rangle>0$ for all non zero
+bi-vector $\phi\in\bigwedge^2 \T$.
+
+
+\begin{pr}{}{Hypercurve}\label{codim=2}
+Let $M^m\hookrightarrow \RR^{m+2}$ be a closed smooth $m$-dimensional
+submanifold and let  $g$ be the  induced Riemannian metric on $M^m$.
+Assume that sectional curvature of $g$ is positive.
+Prove that the curvature operator of $g$ is positive definite.
+\end{pr}
+
+The second fundamental form for manifolds of arbitrary codimension
+which we are about to describe 
+might help to solve this problem.
+
+Assume $M$ is a smooth submanifold in $\RR^m$.
+Given a point $p\in M$ denote by $\T_p$ and $\mathrm{N}_p=\T_p^\bot$
+the tangent and normal spaces of $M$ at $p$.
+The \index{second fundamental form}\emph{second fundamental form} of $M$ at $p$ is defined as $$s(X,Y)=(\nabla_X Y)^\bot,$$ 
+where $(\nabla_X Y)^\bot$ denotes the orthogonal projection of covariant derivative $\nabla_X Y$ onto the normal bundle.
+
+The curvature tensor of $M$ can be found from the second fundamental form using the following  formula
+\[\langle R(X,Y)Y,X\rangle=\langle s(X,X),s(Y,Y)\rangle-\langle s(X,Y),s(X,Y)\rangle,\]
+which is direct generalization of the formula for Gauss curvature of surface.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Horosphere}
+
+We say that a Riemannian manifold has negatively pinched sectional curvature, if its sectional curvature at any point in any sectional direction lies in  $[-a^2, -b^2]$, for fixed constants $a>b>0$.
+
+Let $M$ be a complete Riemannian manifold
+and $\gamma$ is a ray in $M$; 
+that is, $\gamma\:[0, \infty)\to M$ is a minimizing unit-speed geodesic.
+
+The \index{Busemann function}\emph{Busemann function} $b_\gamma\:M\to\RR$ is defined by
+$$b_\gamma(p)=\lim_{t\to\infty}\left(|p-\gamma(t)|_X-t\right).$$
+From the triangle inequality, 
+the expression under the limit is non-increasing in $t$; 
+therefore  the limit above is defined for any $p$.
+
+A \index{horosphere}\emph{horosphere} in $M$ is defined as a level set of a Busemann function
+in $M$.
+
+We say that a complete Riemannian manifold $M$ has \index{polynomial volume growth}\emph{polynomial volume growth} if for some (and therefore any) $p\in M$, 
+we have 
+$$\vol B(p,r)_M\z\le C\cdot (r^k+1),$$ 
+where $B(p,r)_M$ is the ball in $M$ and  $C$, $k$ are real constants.
+
+\begin{pr}{}{Horosphere}\label{Horosphere} Let $M$ be a complete simply connected manifold with negatively pin\-ched sectional curvature. 
+And let $\Sigma\subset M$ be an horosphere in $M$.
+ Prove that
+$\Sigma$ with the induced intrinsic metric 
+has polynomial volume growth.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Minimal spheres}
+
+
+Recall that two subsets $A$ and $B$ in a metric space $X$ are called \index{equidistant sets}\emph{equidistant} if the distance function $\dist_A\:X\to\RR$ is constant on $B$ and $\dist_B$ is constant on $A$.
+
+The minimal surfaces are defined on page \pageref{minimal surface}.
+
+\begin{pr}{}{Minimal spheres}\label{Minimal spheres}
+Show that a 
+$4$-dimensional
+compact 
+positively curved 
+Riemannian manifold 
+cannot contain infinite number of  mutually
+ equidistant minimal 2-spheres.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Positive curvature and symmetry\thm}
+
+\begin{pr}{\thm}{Positive curvature and symmetry}\label{kleiner-hopf} 
+Assume $\mathbb S^1$ acts isometrically on a $4$-dimensional positively curved closed Riemannian manifold.
+Show that the action 
+has at most $3$ isolated fixed points.
+\end{pr}
+
+Let us give some background material which can help to solve the problem. 
+
+Let $X$ and $Y$ be metric spaces.
+An onto map $f\:X\to Y$ is called \index{submetry}\emph{submetry} if it is short and 
+for any $x\in X$ and $y\in Y$ there is $x'\in X$ such that 
+\[f(x')=y\ \ \text{and}\ \  |x-x'|_X=|f(x)-y|_Y.\]
+Here is a general statement required in the proof.
+
+\begin{itemize}
+\item If $f\:X\to Y$ is a  submetry
+and $X$ is an Alexandrov space with curvature $\ge \kappa$, 
+then $Y$ 
+is also an Alexandrov space with curvature $\ge \kappa$.
+\end{itemize}
+
+Note that 
+if  $G$ is a compact subgroup of isometries of a metric space $X$, 
+then the quotient map $X\to X/G$ is a submetry,
+assuming that the orbit space $X/G$ equipped with the Hausdorff metric on the orbits.
+
+Complete Riemannian manifold with sectional curvature $\ge \kappa$ are Alexandrov spaces.
+
+The following statement follows from the one above 
+and it can be used directly in the solution.
+\begin{itemize}
+\item If $(M,g)$ is a Riemannian manifold with sectional curvature $\ge 1$ which admits a continuous isometric action of $\mathbb S^1$, 
+then $(M,g)/\mathbb S^1$ is an Alexandrov space with curvature $\ge 1$.
+\end{itemize}
+For more on Alexandrov Geometry, see \cite{akp}.\qeds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Energy minimizer}
+
+Let $F$ be a smooth map from a closed Riemannian manifold $M$ to a Riemannian manifold $N$.
+Then energy functional of $F$ is defined as
+\[E(F)=\int\limits_M |d_xF|^2\cdot d_x\vol_M.\]
+If $(a_{i,j})$ denote the components 
+of the differential $d_xF$ 
+written in the orthonormal bases of the tangent spaces $\T_xM$ and $\T_{F(x)}N$,
+then 
+\[|d_xF|^2=\sum_{i,j}a_{i,j}^2.\]
+
+\begin{pr}{}{Energy minimizer}\label{Energy minimizer}
+Show that the identity map on $\RP^m$ is 
+energy
+minimizing in its homotopy class.
+Here we assume that $\RP^m$ is equipped with canonical metric.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Curvature vs. injectivity radius\thm}
+
+\begin{pr}{\thm}{Curvature vs. injectivity radius}\label{scalar-curv} 
+Let $(M,g)$ be a closed 
+Riemannian $m$-dimensional manifold.
+Assume average of sectional curvatures of $(M,g)$ is $1$. 
+Show that the injectivity radius of $(M,g)$ is at most $\pi$.
+\end{pr}
+
+A solution use a corollary of Liouville's theorem 
+which states that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Almost flat manifold}
+
+\emph{Nil-manifolds} form the minimal class of manifolds which includes a point, and has the following property:  
+the total space of any principle $\mathbb{S}^1$-bundle over a nil-manifold is a nil-manifold. 
+
+Th nil-manifold can be also defined as the quotients of a connected nilpotent Lie group by a lattice.
+
+A compact Riemannian manifold $M$ is called $\eps$-flat if its sectional curvature at all points in all directions lie in the interval $[-\eps,\eps]$. 
+
+The main theorem of Gromov in \cite{gromov-almost-flat}, 
+states that for any positive integer $n$ there is $\eps>0$ such that any $\eps$-flat compact $n$-dimensional manifold with diameter at most $1$ admits a finite cover by a nil-manifold.
+A more detailed proof can be found in \cite{buser-karcher}
+and a more precise statement can be found in \cite{ruh}.
+
+\begin{pr}{}{Almost flat manifold}\label{almost-flat}
+Given $\eps>0$ construct a compact Riemannian manifold $M$ of sufficiently large dimension which admits a Riemannian metric with diameter $\le 1$ and sectional
+curvature $|K|<\eps$,
+but does not admit a finite covering by a nil-manifold.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Approximation of quotient}
+
+\begin{pr}{}{}
+Let $(M,g)$ be a compact Riemannian manifold 
+and $G$ is a compact Lie group acting by isometries on $(M,g)$.
+Construct a sequence of metrics $g_n$ on a fixed manifold $N$ such that $(N,g_n)$ converges to the quotient space $(M,g)/G$ in the sense of Gromov--Hausdorff.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Polar points\many}
+
+\begin{pr}{\many}{Polar points}\label{milka-polar} 
+Let $M$ be a compact Riemannian manifold with sectional curvature $\ge 1$ and $\dim M\ge 2$. 
+Prove that for any point $p\in M$ there is a point $p^*\in M$ such that 
+\[|p-x|_M+|x-p^*|_M\le \pi\]
+for any $x\in M$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Isometric section\hard}
+
+\begin{pr}{\hard}{Isometric section}\label{Isometric section}
+Let $M$ and $W$ be compact Riemannian manifolds,
+$\dim W>\dim M$
+and $s\:W\to M$ be a Riemannian submersion.
+Assume that $W$ has positive sectional curvature.
+Show that $s$ does not admit an isometric section;
+that is, there is no isometric embedding $\iota\:M\hookrightarrow W$ such that $s\circ\iota(p)=p$ for any $p\in M$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Warped product}
+
+Let $(M,g)$ and $(N,h)$ be Riemannian manifolds 
+and $f$ be a smooth positive function defined on $M$.
+Consider the product manifold $W\z=M\times N$.
+Given a tangent vector 
+$X\z\in \T_{(p,q)} W
+\z=\T_p M\times \T_p N$ denote by 
+$X_M\z\in \T M$ and $X_N\z\in \T N$ its projections.
+Let us equip $W$ with the Riemannian metric defined as
+\[s(X,Y)=g(X_M,Y_M)+f^2\cdot h(X_N,Y_N).\]
+The obtained Riemannian manifold $(W,s)$ is called \index{warped product}\emph{warped product} of $M$ and $N$ with respect to $f\:M\to \RR$;
+it can be written as  $(W,g)\z=(N,h)\times_f(M,g)$.
+
+\begin{pr}{}{Warped product}\label{Warped product}
+Assume $M$ is an oriented 3-dimensional Riemannian manifold with positive scalar curvature 
+and $\Sigma\subset M$ is an oriented smooth hypersurface which is area minimizing in its homology class.
+
+Show that there is a positive smooth function $f\:\Sigma\to \RR$
+such that the warped product $\mathbb S^1\times_f \Sigma$
+has positive scalar curvature;
+here $\Sigma$ is equipped with the Riemannian metric
+induced from $M$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{No approximation\many}
+
+\begin{pr}{\many}{No approximation}\label{No approximation}
+Prove that 
+if $p\not=2$,
+then $\RR^m$ 
+equipped with the metric induced by the $\ell^p$-norm 
+cannot be a
+Gromov--Hausdorff limit of
+$m$-dimensional Riemannian manifolds $(M_n,g_n)$ with $\Ric_{g_n}\z\ge C$ for some fixed constant $C\in\RR$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Area of spheres}
+
+\begin{pr}{}{Area of spheres}\label{Area of spheres}
+Let $M$ be a complete non-compact Riemannian manifold 
+with non-negative Ricci curvature and $p\in M$.
+Then there is $\eps>0$ such that 
+$$\area\left[\partial B(p,r)\right]>\eps$$
+for all sufficiently large $r$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Curvature hollow}
+
+\begin{pr}{}{Curvature hollow}\label{Curvature hollow}
+Construct a Riemannian metric on $\RR^3$ 
+which is Euclidean outside of an open bounded set $\Omega$ 
+and with negative scalar curvature in $\Omega$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Flat coordinate planes}
+
+\begin{pr}{}{Flat coordinate planes}\label{Flat coordinate planes}
+Let $g$ be a Riemannian metric on $\RR^3$,
+such that the coordinate planes $x=0$, $y=0$ and $z=0$ are flat and totally geodesic.
+Assume the sectional curvature of $g$ is either non-negative or non-positive.
+Show that in both cases $g$ is flat. 
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Two-convexity\many}
+
+An open subset $V$ with smooth boundary in the Euclidean space  
+is called \index{two-convex set}\emph{two-convex} if at most one principle curvatures in the outward direction to $V$ is negative.
+
+Equivalently $V$ is two-convex if for any closed plane curve $\gamma$ in $V$ which is contactable in $V$ 
+the plane region bounded by $\gamma$ belongs to $V$.
+
+\begin{pr}{\many}{Two-convexity}\label{Two-convexity}
+Let $K$ be a closed set bounded by a smooth surface
+in $\RR^4$.
+Assume $K$ contains two coordinate planes $$\{(x,y,0,0)\in\RR^4\}\ \ 
+\text{and}
+\ \ \{(0,0,z,t)\in\RR^4\}$$
+in its interior 
+and also belongs to the closed $1$-neighborhood of these two planes.
+
+Show that the complement of $K$ cannot be two-convex.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Semisolutions}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Geodesic hypersurface.}
+Assume $\Sigma$ is a totally geodesic embedded hypersurface in $M$.
+Without loss of generality, we can assume that $\Sigma$ is connected.
+
+The complement $M\backslash\Sigma$ has one or two connected components.
+First let us show that if the number of connected components is two, 
+then $M$ is homeomorphic to sphere.
+
+By cutting $M$ along $\Sigma$ 
+we get two manifolds, say $M_1$ and $M_2$,
+with geodesic boundaries. 
+Prove that the distance functions to the boundary 
+$f_1\:M_1\to\mathbb{R}$ and $f_2\:M_2\to\mathbb{R}$ are strictly convex in the interiors of the manifolds.
+
+Smooth the functions $f_i$ keeping them convex; 
+this can be done by applying Greene--Wu Theorem \cite[see Thm. 2 in][]{greene-wu}.
+In particular each $f_i$ has singe critical point which is its maximum.
+
+Applying Morse lemma, we get that each manifold $M_i$ is homeomorphic to a ball; 
+hence $M$ 
+is homeomorphic to the sphere.
+
+If $M\backslash\Sigma$ is connected,
+passing to a double cover of $M$,
+we reduce the problem to the case which already has been considered.\qeds
+
+The problem was suggested by Peter Petersen.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{If convex, then embedded.}
+Observe first that any closed embedded locally convex hypersurface in a non-positively curved simply connected complete manifold bounds a convex region.
+
+
+Let $\Sigma$ be an immersed locally convex hypersurface in $M$.
+Set 
+\[m=\dim \Sigma=\dim M-1\]
+
+Given a point in $p$ on $\Sigma$ 
+denote by $p_r$ the point on distance $r$ from $p$
+which lies on the geodesic starting from $p$ in the outer normal direction to $\Sigma$.
+For fixed $r\ge 0$,
+the points $p_r$ sweep an immersed locally convex hypersurface which we denote by $\Sigma_r$.
+
+Fix $z\in \Sigma$.
+Denote by $S_r$ the sphere of radius $r$ centered at $z$.
+Note that $S_r$ is diffeomorphic to $m$-dimensional sphere.
+
+Denote by $d$ the diameter of $\Sigma$.
+Note that for all $r>0$
+any point on $\Sigma_r$
+lies on a distance at most $d$ from $S_r$.
+Conclude that for large $r$ the closest point projection $\phi_r\:\Sigma_r\to S_r$ is an immersion.
+
+
+Since $\Sigma$ is connected
+and $m\ge 2$, it follows that $\phi_r$ is a diffeomorphism for all large $r$.
+
+By the observation above, $\Sigma_r$ bounds a convex region for all large $r$.
+By an open-closed argument, the same holds for all $r\ge 0$.
+Hence the result follows.\qeds
+
+The problem is due to Stephanie Alexander \cite[see][]{alexander}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Immersed ball.}
+Equip $\Sigma$ with the induced intrinsic metric.
+Denote by $\kappa$ the lower bound for principle curvatures of $\Sigma$.
+Note that we can assume that $\kappa>0$.
+
+Fix sufficiently small $\eps=\eps(M,\kappa)>0$.
+Given $p\in \Sigma$ consider the lift $\tilde h_p\:B(p,\eps)\to \T_{h(p)}$ along the exponential map $\exp_{h(p)}\:\T_{h(p)}\to M$.
+More precisely:
+\begin{enumerate}
+\item Connect each point $q\in B(p,\eps)\subset \Sigma$ to $p$
+by a minimizing geodesic  path $\gamma_q\:[0,1]\to \Sigma$
+\item Consider the lifting $\tilde\gamma_q$ in $\T_{h(p)}$; 
+that is the curve such that $\tilde\gamma_q(0)=0$ and $\exp_{h(p)}\circ\tilde\gamma_q(t)=\gamma_q(t)$ for any $t\in[0,1]$.
+ \item Set $\tilde h(q)=\tilde\gamma_q(1)$.
+\end{enumerate}
+
+Show that all the hypersurfaces $\tilde h_p(B(p,\eps))\subset \T_{h(p)}$ has principle curvatures at least $\tfrac\kappa2$.
+
+Use the same idea as in the solution of ``Immersed surface'' [page ~\pageref{Immersed surface}] to show that 
+one can fix $\delta\z=\delta(M,\kappa)>0$ such that the restriction of $\tilde h_p|_{B(p,\delta)}$ is injective.
+Conclude that the restriction $h|_{B(p,\delta)}$ is injective for any $p\in\Sigma$.
+
+Now consider locally equidistant surfaces $\Sigma_t$ in the inward direction for small $t$. 
+The principle curvatures of $\Sigma_t$ remain at least $\kappa$ in the barrier sense.
+By the same argument as above, any $\delta$-ball in $\Sigma_t$
+is embedded.
+
+Applying open-closed argument we get a one parameter family of locally convex locally equidistant surfaces $\Sigma_t$
+for defined in a maximal interval $[0,a)$
+and 
+the surface $\Sigma_a$ degenerates to a point, say $p$. 
+
+To construct the immersion $\partial \bar B^m\looparrowright M$,
+take the point $p$ as the image of the center $\bar B^m$ 
+and take the surfaces $\Sigma_t$ as the restrictions of the  embedding to the spheres;
+the existence of the immersion follows from the Morse lemma.\qeds
+
+\begin{wrapfigure}[5]{r}{20 mm}
+\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/ass(1)}
+\end{lpic}
+\end{wrapfigure}
+
+As you see from the picture, 
+the analogous statement does not hold in the two-dimensional case.
+
+The proof presented above was indicated in the lectures of Mikhael Gromov \cite[see][]{gromov-SGMC};
+the proof was written rigorously by Jost Eschenburg in \cite{eschenburg}.
+
+A variation of Gromov's proof 
+was obtained independently by Ben Andrews in \cite{andrews}.
+Instead of equidistant deformation, 
+he uses a so called \index{inverse mean curvature flow}\emph{inverse mean curvature flow};
+this way he has to perform some calculations to show that convexity survives in the flow, 
+but he does not have to worry about non-smoothness of the hypersurfaces. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Minimal surface in the sphere.}
+Fix a  geodesic $n$-dimensional sphere $\mathbb{S}^n$ in $\mathbb{S}^m$.
+
+Given $r\in (0,\tfrac\pi2]$,
+denote by $U_r$ and $\tilde U_r$ the tubular $r$-neighborhood 
+of $\Sigma$ and $\mathbb{S}^n$ in $\mathbb{S}^m$ correspondingly.
+
+Prove that $U_{\frac\pi2}\supset\mathbb{S}^m$.
+Then it follows that
+\[U_{\frac\pi2}=\tilde U_{\frac\pi2}=\mathbb{S}^m.
+\leqno({*})\]
+
+Prove that for any $x\in \partial U_r$ we have
+\[H_r(x)\ge \tilde H_r,\] 
+where $H_r(x)$ denotes the mean curvature of $\partial U_r$  at a point $x$
+and $\tilde H_r$ is the mean curvature of $\partial\tilde U_r$.
+
+Set 
+\begin{align*}
+a(r)&=\vol_{m-1} \partial U_r,
+&
+\tilde a(r)&=\vol_{m-1} \partial\tilde U_r,
+\\
+v(r)&=\vol_m U_r,
+&
+\tilde v(r)&=\vol_m \tilde U_r.
+\intertext{by the coarea formula,}
+\tfrac d{dr} v(r)&\aall a(r),
+&
+\tfrac d{dr}\tilde v(r)&=\tilde a(r).
+\end{align*}
+Note that
+\begin{align*}\tfrac d{dr}a(r)&\le \int\limits_{\partial U_r} H_r(x)\cdot d_x\vol_{m-1}\le
+\\
+&\le a(r)\cdot \tilde H_r
+\end{align*}
+and
+\begin{align*}
+\tfrac d{dr}\tilde a(r)
+&= \tilde a(r)\cdot \tilde H_r.
+\intertext{It follows that}
+\frac {v''(r)}{v(r)}&\le \frac {\tilde v''(r)}{\tilde v(r)}
+\end{align*}
+for almost all $r$. 
+Therefore
+\[v(r)\le\frac{\area\Sigma}{\area \mathbb{S}^n}\cdot \tilde v(r)\]
+
+for any $r>0$.
+
+According to $({*})$,
+\[v(\tfrac\pi2)=\tilde v(\tfrac\pi2)=\vol\mathbb{S}^m.\]
+Whence the result follows.\qeds
+
+This problem is the most geometric part of the isoperimetric inequality proved by Frederick Almgren in \cite{almgren}.
+The argument is similar to 
+the proof of isometric inequality for manifolds with positive Ricci curvature
+given by Mikhael Gromov in \cite{gromov-apendix}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Hypercurve.}
+Fix $p\in M$.
+Denote by $s$ 
+the second fundamental form of $M$ at $p$;
+it is a symmetric bi-linear form on the tangent space $\T_pM$ of $M$ with values in the normal space $\mathrm{N}_pM$ to $M$.
+Note that the normal space $\mathrm{N}_pM$ is two-dimensional.
+
+Prove that if the sectional curvature of $M$ is positive, 
+then
+\[\<s(X,X),s(Y,Y)\> > 0\leqno({*})\]
+for any pair of nonzero vectors $X,Y\in\T_pM$.
+
+Show that $({*})$ implies that there is an orthonormal basis $e_1,e_2$ in $\mathrm{N}_pM$ 
+such that the real-valued quadratic forms 
+\begin{align*}
+s_1(X,X)&=\<s(X,X),e_1\>,
+&
+s_2(X,X)&=\<s(X,X),e_2\>
+\end{align*}
+are positive definite.
+
+Note that the curvature operators $R_1$ and $R_2$, 
+defined by the following identity
+\[R_{i}(X\wedge Y), V\wedge W\rangle 
+=s_i(X,W)\cdot s_i(Y,V)-s_i(X,V)\cdot s_i(Y,W),\]
+ are positive.
+Finally, note that $R_{1}+R_{2}$ is the curvature operator of $M$ at $p$.\qeds
+
+The problem is due to Alan Weinstein \cite[see][]{weinstein}.
+Note that from \cite{micallef-moore}/\cite{boehm-wilking} it follows that
+that the universal cover of $M$ is homeomorphic/diffeomorphic to a standard sphere.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Horosphere.}
+Set 
+$m=\dim \Sigma=\dim M-1$.
+
+Let $b\:M\to\RR$ be the Busemann function such that $\Sigma=b^{-1}(\{0\})$.
+Set  $\Sigma_r=b^{-1}(\{r\})$, so $\Sigma_0=\Sigma$.
+
+Let us equip each $\Sigma_r$ with induced Riemannian metric.
+Note that all $\Sigma_r$ have bounded curvature.
+In particular, the unit ball in $\Sigma_r$ has volume bounded above by a universal constant, say $v_0$.
+ 
+
+Given $x\in \Sigma$ denote by $\gamma_x$ 
+the unit-speed geodesic
+such that $\gamma_x(0)=x$ and $b(\gamma_x(t))=t$ for any $t$.
+Consider the map $\phi_{r}\:\Sigma\to\Sigma_r$ defined as
+$\phi_r\:x\mapsto \gamma_x(r)$.
+
+Notice that $\phi_r$ is a bi-Lipschitz map with the Lipschitz constants $e^{a\cdot r}$ and $e^{b\cdot r}$.
+In particular, the ball of radius $R$ in $\Sigma$ is mapped by $\phi_r$
+to a ball of radius $e^{a\cdot r}\cdot R$ in $\Sigma_r$.
+Therefore
+\[\vol_m B(x,R)_\Sigma\le e^{m\cdot b\cdot r}\cdot \vol_m B(x,e^{a\cdot r}\cdot R)_{\Sigma_r}\]
+for any $R,r>0$.
+Taking $e^{a\cdot r}\cdot R=1$, we get
+\[\vol_m B(x,R)_\Sigma\le v_0\cdot R^{m\cdot \frac ba}.\]
+\qedsf
+
+The problem was suggested by Vitali Kapovitch.
+
+There are examples of horospheres as above with degree of polynomial growth higher than $m$.
+For example, consider the horosphere $\Sigma$ in the
+the complex hyperbolic space 
+of real dimension $4$.
+Clearly $m=\dim \Sigma=3$, but the degree of its volume growth is $4$.
+
+In this case $\Sigma$ is isometric to the Heisenberg group defined below Twith a left-invariant metric.
+It is a good exercise to show that any such metric has volume  growth of degree $4$.
+
+Heisenberg group
+is the group of $3\times3$ upper triangular matrices of the form
+\[\begin{pmatrix}
+ 1 & a & c\\
+ 0 & 1 & b\\
+ 0 & 0 & 1\\
+\end{pmatrix}\]
+under the operation of matrix multiplication. 
+                                                      
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Minimal spheres.}
+Choose a pair of sufficiently close minimal spheres $\Sigma$ and $\Sigma'$,
+say assume that the distance $a$ between $\Sigma$ and $\Sigma'$ is strictly smaller than the injectivity radius of the manifold.
+Note that in this case there is a bijection $\Sigma\to \Sigma'$, which will be denoted by $p\mapsto p'$ such that the distance $|p-p'|=a$ for any $p\in\Sigma$.
+
+Let $\iota_p\:\T_p\to\T_{p'}$ be the parallel translation along the (necessary unique) minimizing geodesic from $p$ to $p'$.
+Use the hairy ball theorem 
+to show that there is a pair $(p,p')$ such that $\iota_p(\T_p\Sigma)=\T_{p'}\Sigma'$.
+
+Consider pairs of unit-speed geodesics $\alpha$ and $\alpha'$ 
+in $\Sigma$ and $\Sigma'$  
+which start at $p$ and $p'$ correspondingly
+and go in the parallel directions, say $\nu$ and $\nu'$. 
+Set $\ell_\nu(t)=|\alpha(t)-\alpha'(t)|$.
+
+Use the second variation formula to show that $\ell_\nu''(0)$ has negative average for all tangent directions $\nu$ to $\Sigma$ at $p$. 
+In particular $\ell_\nu''(0)<0$ for a pair $\alpha$ and $\alpha'$ as above.
+It follows that there are points $v\in\Sigma$ near $p$ 
+and $v'\in\Sigma'$ near $p'$
+such that 
+\[|v-v'|<|p-p'|;\]
+the latter leads to a contradiction.\qeds
+
+It seems pleasurable that a 
+compact 
+positively curved 
+4-dimensional manifold
+cannot contain a pair of equidistant spheres.
+The argument above implies that the distance between such a pair has to exceed the injectivity radius of the manifold.
+
+{\sloppy 
+The problem was suggested by Dmitri Burago.
+Here is a short list of classical problems with similar solutions:
+\begin{itemize}
+\item Synge's problem \cite[see][]{synge}.
+\begin{itemize}
+ \item {\it Any compact even-dimensional orientable manifold with positive sectional curvature is
+simply connected.}
+\end{itemize}
+\item Frankel's problems \cite[see][]{frankel}.
+\begin{itemize}
+\item {\it Any two compact minimal hypersurfaces in a Riemannian manifold with positive Ricci curvature must intersect.}
+\item {\it Assume $\Sigma_1$ and $\Sigma_2$ be two compact geodesic submanifolds in a manifold with positive sectional curvature $M$ and 
+\[\dim \Sigma_1+\dim \Sigma_2\ge \dim M.\] 
+Show that $\Sigma_1\cap\Sigma_2\ne\emptyset$.}
+\end{itemize}
+\item Bochner's problem \cite[see][]{bochner}.
+\begin{itemize}
+\item{\it  Let $(M,g)$ be a closed Riemannian manifold with negative Ricci curvature.
+Prove that $(M,g)$ does not admit an isometric $\mathbb{S}^1$-action.}
+\end{itemize}
+\end{itemize}
+The problem ``Geodesic immersion'' on page \pageref{Geodesic immersion} can be considered as further development of the same idea.
+
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Positive curvature and symmetry.}
+Let $M$ be a 4-dimensional Riemannian manifold with isometric $\mathbb{S}^1$-action.
+Consider the quotient space $X=M/\mathbb{S}^1$.
+Note that $X$ is a positively curved 3-dimensional Alexandrov space.
+In particular the angle $\measuredangle\hinge xyz$ between any two geodesics $[xy]$ and $[xz]$ is defined
+and for any non-degenerate triangle $[xyz]$ 
+formed by the minimizing geodesics $[xy]$, $[yz]$ and $[zx]$  in $X$ we have
+\[\measuredangle\hinge xyz+\measuredangle\hinge yzx+\measuredangle\hinge zxy> \pi.
+\leqno({*})\]
+
+Assume $p\in X$ corresponds to a fixed point of $\mathbb{S}^1$-action.
+Show that 
+for any three geodesics $[px]$, $[py]$ and $[pz]$ in $X$ we have
+\[\measuredangle\hinge pxy+\measuredangle\hinge pyz+\measuredangle\hinge pzx\le \pi.\leqno({*}{*})\]
+and
+\[\measuredangle\hinge pxy, \measuredangle\hinge pyz, \measuredangle\hinge pzx\le \tfrac\pi2.\leqno({*}{*}{*})\]
+
+Arguing by contradiction,
+assume that there are 4 fixed points $q_1$, $q_2$, $q_3$ and $q_4$.
+Connect each pair $q_i\ne q_j$ by a minimizing geodesic $[q_iq_j]$.
+
+Denote by $\omega$ the sum of all 12 angles of the type  $\measuredangle\hinge{q_i}{q_j}{q_k}$.
+By $({*}{*}{*})$, each triangle $\triangle q_iq_jq_k$ is non-degenerate.
+Therefore by $({*})$, we have
+\[\omega>4\cdot\pi.\]
+Applying $({*}{*})$ at each vertex $q_i$, we have 
+\[\omega\le 4\cdot\pi,\]
+a contradiction.\qeds
+
+
+The problem is due to 
+Wu-Yi Hsiang 
+and Bruce Kleiner 
+\cite[see][]{hsiang-kleiner}.
+The connection of this proof to Alexandrov geometry was noticed by Karsten Grove in \cite{grove}.
+An interesting new twist of this idea 
+is given by 
+Karsten Grove 
+and Burkhard Wilking 
+in  \cite{grove-wilking}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Energy minimizer.}
+Denote by $\mathcal{U}$ the unit tangent bundle over $\RP^m$
+and $\mathcal{L}$ the space of projective lines in $\ell\:\RP^1\to \RP^m$.
+The spaces $\mathcal{U}$ and $\mathcal{L}$ 
+have dimensions $2\cdot m-1$ 
+and $2\cdot(m-1)$
+correspondingly.
+
+
+According to Liouville's theorem, the identity
+\[\int\limits_{\mathcal{U}}f(v)\cdot d_v\vol_{2\cdot m-1}
+=
+\int\limits_{\mathcal{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} f(\ell'(t))\cdot dt\]
+holds for any integrable function $f\:\mathcal{U}\to\RR$.
+
+Let $F\:\RP^m\to\RP^m$ be a smooth map.
+Note that up to a multiplicative constant,
+the energy of $F$ can be expressed the following way
+\[\int\limits_{\mathcal{U}} |dF(v)|^2\cdot d_v\vol_{2m-1}
+=
+\int\limits_{\mathcal{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} |[d(F\circ \ell)](t)|^2\cdot dt.\]
+
+The result follows since
+\[\int\limits_{\RP^1} |[d(F\circ \ell)](t)|^2\cdot dt\ge \pi\]
+for any line $\ell\:\RP^1\to \RP^m$.\qeds
+
+
+The problem is due to Christopher Croke \cite[see][]{croke-energy}. 
+He uses the same idea to show that the identity map on $\CP^m$ is energy minimizing in its homotopy class.
+For $\mathbb S^m$, an analogous statement does not hold if $m\ge 3$.
+In fact, 
+if a closed Riemannian manifold $M$ 
+has dimension at least 3 
+and $\pi_1M=\pi_2M=0$,
+then the identity map on $M$ is homotopic 
+to a map with arbitrary small energy;
+the latter was shown by Brian White in \cite{white}.
+
+The same idea is used to prove Loewner's inequality on the volume in of $\RP^m$ with metric conformally equivalent to the canonical one \cite[see][]{gromov-filling}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Curvature vs. injectivity radius.}
+We will show that 
+if the injectivity radius of the manifold $(M,g)$ is at least $\pi$,
+then the average of sectional curvatures on $(M,g)$ is at most $1$.
+This is equivalent to the problem.
+
+Fix a point $p\in M$ and two orthonormal vectors $U,V\in\T_p M$.
+Consider the geodesic $\gamma$ in $M$ such that $\dot\gamma(0)=U$.
+
+Set $U_t=\dot\gamma(t)\in \T_{\gamma(t)}$ 
+and let $V_t\in \T_{\gamma(t)}$ be the parallel translation of $V=V_0$ along $\gamma$.
+
+
+Consider the field $W_t=\sin t\cdot V_t$ on $\gamma$.
+Set 
+\begin{align*}
+\gamma_\tau(t)&=\exp_{\gamma(t)} (\tau\cdot W_t),
+\\
+\ell(\tau)&=\length(\gamma_\tau|_{[0,\pi]}),
+\\
+q(U,V)&=\ell''(0).
+\end{align*}
+Note that
+$$q(U,V)
+=
+\int\limits_{0}^\pi [(\cos t)^2-K(U_t,V_t)\cdot (\sin t)^2]\cdot dt,
+\leqno({*})$$
+where $K(U,V)$ is the sectional curvature 
+in the direction spanned by $U$ and $V$. 
+
+Since any geodesics of length $\pi$ is minimizing,
+we get $q(U,V)\ge0$ for any pair of orthonormal vectors $U$ and $V$.
+It follows that average value of the right hand side in $({*})$ is non-negative.
+
+By Liouville's theorem, while taking the average of $({*})$, we can switch the order of integrals;
+therefore  
+\[0\le \tfrac\pi2\cdot(1-\bar{K}),\]
+where $\bar{K}$ denotes the average of sectional curvatures on $(M,g)$.
+Hence the result follows.\qeds
+
+Liouville's theorem has a number of similar applications,
+one of the most beautiful is the sharp isoperimetric inequality for 
+4-dimensional Hadamard manifolds;
+it was proved by Christopher Croke in \cite{croke-4d},
+see also \cite{croke-eigenvalue}.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Almost flat manifold.}
+First prove that for given $\eps>0$, 
+there is big enough $m$ and $m\times m$ integer matrix 
+$A$ such that all its eigenvalues are $\eps$-close to $1$. 
+
+Consider $(m+1)$-dimensional manifold $S$ obtained from $\TT^m\times [0,1]$ by gluing $\TT^m\times 0$ to $\TT^m\times 1$ along the map given by $A$.
+
+Show that $S$ does not admit a finite cover by a nill-manifold.
+
+Assuming that $\eps$ is small,
+show that $S$ admits a metric with curvature and diameter sufficiently small.\qeds
+
+\label{page-sol:almost-flat}
+This example was constructed 
+by Galina Guzhvina in \cite{guzhvina}.
+
+It is expected that for small enough $\eps>0$,
+a Riemannian manifold $(M,g)$ of any dimension 
+with  $\diam(M,g)\le 1$ and $|K_g|\le \eps$ cannot be simply connected,
+here $K_g$ denotes the sectional curvature of $g$.
+It is not true if instead one asks only have $K_g\le \eps$;
+in fact, 
+for any $\eps>0$,
+there are metrics $g$ on $\mathbb{S}^3$ 
+with $K_g\le \eps$ and $\diam(\mathbb{S}^3,g)\le 1$; 
+this example was originally constructed by Mikhael Gromov in \cite{gromov-almost-flat}; 
+a simplified proof was given by 
+Peter Buser
+and Detlef Gromoll in \cite{buser-gromoll}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Approximation of quotient.}
+Note that $G$ admits an embedding into a compact connected Lie group $H$, say we can assume $H=\SO(n)$, for large enough $n$.
+
+Fix a $\kappa\le 0$ such that the curvature bound of $(M,g)$ is bounded below by $\kappa$.
+
+The bi-invariant metric $h$ on $H$ is nonnegatively curved.
+Therefore for any positive integer $n$ the product $(H,\tfrac1n\cdot h)\times (M,g)$ is a Riemannina manifold with  curvature bounded below by $\kappa$.
+
+The diagonal action of $G$ on $(H,\tfrac1n\cdot h)\times (M,g)$ is        isometric and free. 
+Therefore 
+the quotient $(H,\tfrac1n\cdot h)\times (M,g)/G$
+is a Riemannian manifold, say $(N,g_n)$.
+By O'Nail's formula, $(N,g_n)$ has curvature bounded below by $\kappa$.
+
+Clearly, $(N,g_n)$ converge to $(M,g)/G$ as $n\to \infty$.\qeds
+
+Some times this construction is called \index{Cheeger's trick}\emph{Cheeger's trick},
+although it was used before Cheeger.
+The earliest use of this construction  
+I found \cite{GKM}, where it was used to show that Berger's spheres have positive curvature.
+This trick is used to construct most of the known examples of positively and non-negatively curved manifolds
+ \cite[see][]{cheeger,aloff-wallach,gromoll-meyer,eschenburg-spaces,bazajkin}.
+ 
+The quotient space  $(M,g)/G$ has dinite dimension and curvature bounded below in the sense of Alexandrov. 
+It is expected that not all spaces with this property admit approximation by Riemannina manifolds with curvature bounded below,
+some partial results are discussed in \cite{pwz,kapovitch}.
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Polar points.}
+Fix a unit-speed geodesic $\gamma$ such that $\gamma(0)=p$.
+Set $p^*=\gamma(\pi)$.
+
+Prove that $p^*$ is a solution.\qeds
+
+\parit{Alternative proof.} 
+Assume the contrary;
+that is, for any $x\in M$ there is a point $x'$ such that 
+\[|x-x'|_g+|p-x'|_g>\pi.\]
+
+Show that there is a continuous map $x\mapsto x'$
+such that the above inequality holds for any $x$.
+
+Fix sufficiently small $\eps>0$.
+Prove that the set $W_\eps=M\backslash B(p,\eps)$ 
+is homeomorphic to a ball 
+and the map $x\mapsto x'$ sends $W_\eps$ into itself.
+
+By Brouwer's fixed-point theorem, $x=x'$ for some $x$.
+In this case 
+\[|x-x'|_g+|p-x'|_g\le \pi,\]
+a contradiction.\qeds
+ 
+The problem is due to Anatoliy Milka \cite[see][]{milka-poly}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Isometric section.}
+Arguing by contradiction, 
+assume $\iota\: M\z\to W$ is an isometric section.
+It makes possible to treat $M$ as a submanifold in $W$.
+
+Given $p\in M$,
+denote by $\mathrm{N}^1_pM$ the sphere of unit normal vectors to $M$ at $p$.
+Given $v\in \mathrm{N}^1_p$ and real value $k$,
+set 
+\[p^{k\cdot v}=s\circ\exp_{p} (k\cdot v).\]
+Note that 
+\[p^{0\cdot v}=p\ \ \text{for any}\ \  p\in M\ \ \text{and}\ \ v\in \mathrm{N}^1_p.\leqno({*})\]
+
+Fix sufficiently small $\delta>0$.
+By Rauch comparison, 
+if $w\in \mathrm{N}^1_q$ 
+is the parallel translation of $v\in \mathrm{N}^1_q$ 
+along a minimizing geodesic from $p$ to $q$ in $M$,
+then 
+\[|p^{k\cdot v}-q^{k\cdot w}|_M<|p-q|_M
+\leqno({*}{*})\]
+assuming $|k|\le \delta$.
+The same comparison implies that 
+\[|p^{k\cdot v}-q^{k'\cdot w}|_M^2<|p-q|_M^2+ (k-k')^2
+\leqno({*}{*}{*})\]
+assuming $|k|,|k'|\le \delta$.
+
+Choose $p$ and $v \in \mathrm{N}^1_p$ so that $r=|p-p^{\delta\cdot v}|$ 
+takes the maximal possible value.
+From $({*}{*})$ it follows that $r>0$.
+
+Let $\gamma$ be the extension of the unit-speed minimizing geodesic from $p_v$ to $p$;
+denote by $v_t$ the parallel translation of $v$ to $\gamma(t)$ along $\gamma$. 
+
+We can choose the parameter of $\gamma$ so that $p=\gamma(0)$, $p^v=\gamma(-r)$.
+Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^v=p_{-1}$. 
+Fix large integer $N$ and set $w_n=(1-\tfrac nN)\cdot v_{n\cdot r}$
+and $q_n=p_n^{w_n}$.
+
+
+\begin{center}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/perelman(1)}
+\lbl[trw]{8,5;$p_{-1}{=}q_0$}
+\lbl[tr]{14,5;$p_0$}
+\lbl[tl]{15,5;$q_1$}
+\lbl[tr]{24,5;$p_1$}
+\lbl[tl]{26,5;$q_2$}
+\lbl[tr]{34.5,5;$p_2$}
+\lbl[tl]{36.5,5;$q_3$}
+\lbl[tr]{45,5;$p_3$}
+\lbl[tl]{47.2,5;$q_4$}
+\lbl[tr]{55.5,5;$p_4$}
+\lbl[b]{64,8;$M$}
+\lbl[t]{64,5;$\dots$}
+\lbl[b]{35.2,26,90;{\small $\exp_{p_3} (w_3)$}}
+\end{lpic}
+\end{center}
+
+
+From $({*}{*}{*})$, there is a constant $C$ independent of $N$ such that
+\[|q_k-q_{k+1}|<r+\tfrac C{N^2}\cdot\delta^2.\]
+Therefore 
+\[|q_{k+1}-p_{k+1}|>|q_k-p_k|-\tfrac C{N^2}\cdot\delta^2.\]
+By induction, we get 
+\[|q_N-p_N|>r-\tfrac C{N}\cdot\delta^2.\]
+Since $N$ is large we get
+\[|q_N-p_N|>0.\]
+By $({*})$ we get $q_N=p_N^0=p_N$, a contradiction.\qeds
+
+
+This proof is the core of the solution of Soul conjecture
+by Grigori Perelman \cite[see][]{perelman}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Warped product.}
+Given $x\in \Sigma$, denote by $\nu_x$ the normal vector to $\Sigma$ at $x$ which agrees with the orientations of $\Sigma$ and $M$.
+Denote by $\kappa_x$ the non-negative principle curvature of $\Sigma$ at $x$;
+since $\Sigma$ is minimal the other principle curvature has to be $-\kappa_x$.
+
+Consider the warped product $W=\mathbb S^1\times_f\Sigma$ for some positive smooth function $f\:\Sigma\to \RR$.
+Assume that a point $y\in W$ projects to a point $x\in\Sigma$.
+Straightforward computations show that
+\begin{align*}
+\Sc_W(y)
+&=\Sc_\Sigma(x)-2\cdot\frac{\Delta f(x)}{f(x)}=
+\\
+&=\Sc_M(x)-2\cdot\Ric(\nu_x)-2\cdot\kappa_x^2-2\cdot\frac{\Delta f(x)}{f(x)}.
+\end{align*}
+Consider linear operator $L$ on the space of smooth functions on $\Sigma$ defined as 
+\[(Lf)(x)= -[\Ric(\nu_x)+\kappa_x^2]\cdot f(x)-(\Delta f)(x)\]
+It is sufficient to find a smooth function $f$ on $\Sigma$ such that
+\[f(x)>0 \ \ \text{and}\ \ (Lf)(x)\ge 0\leqno({*})\]
+for any $x\in \Sigma$.
+
+
+Fix a smooth function $f\:\Sigma\to \RR$.
+Extend the field $f(x)\cdot\nu_x$
+on $\Sigma$ to a smooth field, say $v$, on whole $M$.
+Denote by $\iota_t$ the flow along $v$ for time $t$ and set $\Sigma_t=\iota_t(\Sigma)$.
+
+\parit{Informal end of proof.}
+Denote by $H_t(x)$ the mean curvature of $\Sigma_t$ at $\iota_t(x)$.
+Note that the value $(Lf)(x)$ is the derivative of
+the function $t\mapsto H_t(x)$  at $t=0$.
+
+Therefore the condition $({*})$
+means that we can push $\Sigma$ into one of its sides 
+so that its mean curvature does not increase in the first order.
+Since $\Sigma$ is area minimizing,
+the existence of such push follows;
+read further if you are not convinced.\qeds
+
+\parit{Formal end of proof.}
+Denote by $\delta(f)$ the second variation of area of $\Sigma_t$;
+that is consider the area function $a(t)=\area\Sigma_t$ 
+and set $\delta(f)=a''(0)$.
+Direct calculations show that
+\begin{align*}
+\delta(f)
+&=
+\int\limits_{\Sigma} 
+\left(-[\Ric(\nu_x)+\kappa_x^2]\cdot f^2(x)+|\nabla f(x)|^2\right)\cdot d_x\area=
+\\
+&=\int\limits_{\Sigma} 
+(Lf)(x)\cdot f(x)\cdot d_x\area.\end{align*}
+Since $\Sigma$ is area minimizing we get 
+\[\delta(f)\ge 0\leqno({*}{*})\] for any $f$.
+
+Choose a function $f$ which minimize $\delta(f)$ among all the functions such that $\int_\Sigma f^2(x)\cdot d_x\area=1$.
+Note that $f$ an eigenfunction 
+for the linear operator $L$;
+in particular $f$ is smooth.
+Denote by $\lambda$ the eigenvalue of $f$;
+by $({*}{*})$,
+$\lambda\ge 0$.
+
+Show that $f(x)>0$ at any $x$.
+Since $Lf=\lambda\cdot f$, the inequalities $({*})$ follow.\qeds
+
+
+The problem is due to Mikhael Gromov and Blaine Lawson \cite[see][]{gromov-lawson}.
+Earlier, Shing-Tung  Yau and Richard Schoen showed that the same assumptions 
+imply existence of conformal factor on $\Sigma$ which makes it positively curved.
+Both statement are used 
+to proof that $\TT^3$ does not admit a metric with positive scalar curvature;
+the original proof is given in \cite{schoen-yau}.
+
+Both statements admit straightforward generalization to higher dimensions
+and they can be used to show non existence metric with positive scalar curvature on $\TT^m$ with $m\le 7$.
+For $m=8$, the proof stops to work 
+since in this dimension the area minimizing hypersurfaces might have singularities.
+For example, 
+any domain in the cone in $\RR^8$
+defined by the identity
+\[x^2_1+x^2_2+x^2_3+x^2_4=x^2_5+x^2_6+x^2_7+x^2_8\]
+is area minimizing among the hypersurfaces with the same boundary.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{No approximation.}
+Fix an increasing function $\phi\:(0,r)\to \RR$
+such that 
+\[\phi''+(n-1)\cdot(\phi')^2+C=0.\]
+
+Note that if $\Ric_{g_n}\ge C$, 
+then the function 
+$x\mapsto\phi(|p-x|_{g_n})$ is subharmonic.
+In follows that, 
+for arbitrary array of points $p_i$ 
+and positive reals $\lambda_i$ the function $f_n\:M_n\to \RR$
+defined by the formula
+$$f(x)=\sum_i\lambda_i\cdot\phi(|p_i-x|_M)$$
+is subharmonic.
+In particular $f_n$ cannot admit a local minima in $M_n$.
+
+Passing the limit as $n\to \infty$, we get that any function $f\:\mathbb{R}^m\to\mathbb{R}$
+of the form 
+$$f(x)=\sum_i\lambda_i\cdot\phi(|p_i-x|_{\ell_p})$$
+does not admit a local minima in $\mathbb{R}^m$.
+
+Arrive to a contradiction
+by showing that if $p\ne 2$,
+then there is an array
+points $p_i$ and positive reals $\lambda_i$
+such that the function 
+$$f(x)=\sum_i\lambda_i\cdot\phi(|p_i-x|_{\ell_p})$$
+has strict local minimum.\qeds
+
+The argument given here is very close to the proof of Abresch--Gromoll inequality in \cite{abresch-gromoll}.
+An alternative solution of this problem can be build on almost splitting theorem proved by  Jeff Cheeger and Tobias Colding in \cite{cheeger-colding}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Area of spheres.}
+Fix $r_0>0$.
+Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
+
+\begin{wrapfigure}{r}{30 mm}
+\begin{lpic}[t(0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
+\lbl[t]{9.5,8.5;$p$}
+\lbl[t]{28,2.5;$q$}
+\lbl[b]{10,20.5;$\partial B(p,r)$}
+\end{lpic}
+\end{wrapfigure}
+
+Note that any minimizing geodesic from $q$ to a point in $B(p,r_0)$
+has to cross $\partial B(p,r)$.
+By volume comparison, we get that 
+\[\vol B(p,r_0)\le C_m\cdot r_0\cdot \area \partial B(p,r),\]
+where $C_m$ is a constant depending only on the dimension $m=\dim M$,
+say one can take $C_m\z=10^m$.\qeds
+
+
+Applying the coarea formula, 
+we get that volume growth of $M$ 
+is at least linear and in particular it has infinite volume.
+The latter was proved independently 
+by Eugenio Calabi 
+and Shing-Tung Yau \cite[see][]{calabi,yau-ricci}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Curvature hollow.}
+Construct a metric that the connected sum
+$\RR^3\#\mathbb{S}^2\times\mathbb{S}^1$
+which is flat outside a compact set and has non positive scalar curvature.
+Further, note that such metric can be constructed in such a way that it has a closed geodesic $\gamma$ with trivial holonomy and with constant negative curvature in its a tubular neighborhood.
+
+Let us cut tubular neighborhood $\mathbb{D}^2\times \mathbb{S}^1$ of $\gamma$ and glue in $\mathbb{S}^1\times \mathbb{D}^2$ with the swapped factors. 
+Note that after this surgery we get $\RR^3$.
+
+It remains to construct a metric $g$ on $\mathbb{S}^1\times \mathbb{D}^2$ with negative scalar curvature which 
+is identical to the original metric on the neighborhood  of $\gamma$ near its boundary.
+The needed metric $(\mathbb{S}^1\times \mathbb{D}^2,g)$ can be found among wrap products $\mathbb{S}^1\times_f \mathbb{D}^2$.
+\qeds
+
+
+This construction was given by Joachim Lohkamp in \cite{lohkamp},
+he describes there yet an other equally simple construction.
+In fact,
+this  constructions produce 
+$\mathbb{S}^1$-invariant hollows 
+with negative Ricci curvature.
+
+On the other hand there are no hollows with positive scalar curvature;
+the latter is equivalent to the Positive Mass Conjecture.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Flat coordinate planes.}
+Fix $\eps>0$ such that there is unique geodesic between any two points on distance $<\eps$ from the origin of $\RR^3$.
+
+Consider three points $a$, $b$ and $c$ 
+on the coordinate lines which are $\eps$-close 
+to the origin.
+
+Prove that the angles of the triangle $\triangle abc$
+coincide with its model angles.
+It follows that there is a flat geodesic triangle in $(\RR^3,g)$ with vertex at $a$, $b$ and $c$.
+
+Use the family of constructed flat triangles 
+to show that at any $x$ point in the $\tfrac\eps{10}$-neighborhood of the origin
+the sectional curvature 
+vanish in an open set of sectional directions.
+The latter implies that the curvature is identically zero 
+in this neighborhood.
+
+Moving the origin and apply the same argument we get that the curvature is identically zero everywhere.
+Hence the result follows. 
+\qeds
+
+This problem appears in the paper of Dmitri Panov and me \cite[see][]{panov-petrunin}; 
+it is based on a lemma discovered by Sergei Buyalo in \cite{buyalo}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Two-convexity.}
+\textit{Morse-style solution.}
+Equip $\RR^4$ with coordinates $(x,y,z,t)$.
+
+Consider a generic linear function $\ell\:\RR^4\to\RR$
+which is close to the sum of coordinates $x+y+z+t$.
+Note that $\ell$
+has non-degenerate critical points on $\partial K$ and all its critical values are different.
+
+Consider the sets 
+$$W_s=\set{w\in \RR^4\backslash K}{\ell(w)<s}.$$
+Note that $W_{-1000}$ contains a closed curve, say $\alpha$, 
+which is contactable in $\RR^4\backslash K$, 
+but not constructable in the set $W_{-1000}$.
+
+Set $s_0$ to be the infimum of the values $s$ such that
+the $\alpha$ is contactable in $W_s$.
+
+Note that $s_0$ is a critical value of $\ell$ on $\partial K$;
+denote by $p_0$ the corresponding critical point.
+By 2-convexity of $\RR^4\backslash K$,
+the index of $p_0$ has to be at most $1$.
+On the other hand, since the disc hangs at this point,
+its index has to be at least $2$,
+ a contradiction.\qeds
+
+\parit{Alexandrov-style proof.}
+Fix a constant metric $g$ on $\RR^4$.
+According to the main result of Alexander Bishop and Berg in \cite{ABB}, $X_g=(\RR^4\backslash (\Int K),g)$ has non-positive curvature in the sense of Alexandrov.
+In particular the universal cover of $\tilde X_g$ of $X_g$ is a $\CAT[0]$ space.
+
+By rescaling $g$ and passing to the limit we obtain that universal Riemannian cover $Z_g$ of $(\RR^4,g)$ branching in the coordinate planes is a $\CAT[0]$ space.
+Show that $Z_g$ is $\CAT[0]$ space if and only if the two planes are orthogonal with respect to $g$;
+the latter leads to a contradiction.\qeds
+
+The Morse-style proof is based on the idea described by Mikhael Gromov in \cite[][\S\textonehalf]{gromov-SGMC}.
+
+Note that the closed $1$-neighborhood of these two planes has two-convex complement, but the boundary of this neighborhood is not smooth.

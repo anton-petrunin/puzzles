@@ -1,0 +1,471 @@
+\csname @openrightfalse\endcsname
+\chapter{Topology}
+
+In this chapter we consider geometrical problems with strong topological flavor.
+A typical introductory course in topology, say \cite{kosniowski},
+contains all the necessary material.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Isotropy}
+
+Recall that an isotopy is a continuous one parameter family of embeddings.
+
+\begin{pr}{}{Isotropy}\label{Isotropy}
+Let $K_1$ and $K_2$ be homeomorphic compact subsets of the coordinate subspace $\RR^m$ in $\RR^{2\cdot m}$.
+Show that there is a homeomorphism 
+\[h\:\RR^{2\cdot m}\z\to \RR^{2\cdot m}\] 
+such that $K_2=h(K_1)$.
+Moreover, $h$ can be chosen to be isotopic to the identity map.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parit{Semisolution.}
+Fix a homeomorphism $\phi\:K_1\to K_2$.
+
+By Tietze extension theorem,
+the homeomorphisms $\phi\:K_1\to K_2$ and $\phi^{-1}\:K_2\to K_1$ can be extended to a continuous maps,
+say $f\:\RR^m\to \RR^m$ and $g\:\RR^m\to \RR^m$ correspondingly.
+
+Consider the homeomorphisms
+$h_1, h_2, h_3\:\RR^m\times\RR^m\to\RR^m\times\RR^m$ defined the following way
+\begin{align*}
+h_1(x,y)&=(x,y+f(x)),
+\\
+h_2(x,y)&=(x-g(y),y),
+\\ 
+h_3(x,y)&=(y,-x).
+\end{align*}
+
+It remains to prove that each homeomorphism $h_i$ is isotopic to the identity map and we have $K_2=h(K_1)$ for
+\[h=h_3\circ h_2\circ h_1.\]
+\qedsf 
+
+The problem is due to Victor Klee \cite[see][]{klee}.
+The problem ``Monotonic homotopy'' on page \pageref{mono-homotopy} is closely related.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Immersed disks}
+
+Two immersions $f_1,f_2\:D\looparrowright \RR^2$ are called \index{essentially different immersions}\emph{essentially different} 
+if there is no diffeomorphism $h\:D\z\to D$ such that
+$f_1=f_2\circ h$.
+
+\begin{pr}{}{Immersed disks}\label{Immersed disks} 
+Construct two essentially different smooth immersions of the disk 
+into the plane which coincide near the boundary. 
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Positive Dehn twist}
+
+
+Let $\Sigma$ be a surface and $\gamma\:\RR/\ZZ\to\Sigma$ be non-contractible closed simple curve.
+Let $U_\gamma$ be a neighborhood of $\gamma$ which admits a homeomorphism $h\:U_\gamma\to \RR/\ZZ\times (0,1)$.
+\index{Dehn twist}\emph{Dehn twist} along $\gamma$ is a homeomorphism $f\:\Sigma\to\Sigma$
+which is identity outside of $U_\gamma$ and 
+such that
+$$h\circ f\circ h^{-1}\:(x,y)\mapsto(x+y,y).$$
+
+If $\Sigma$ is oriented 
+and $h$ is orientation preserving,
+then the Dehn twist described above is called \index{positive Dehn twist}\emph{positive}.
+
+\begin{pr}{\easy}{Positive Dehn twist}\label{Positive Dehn twist} Let $\Sigma$ be an oriented surface with non empty boundary.
+Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to identity rel. boundary.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Function with no critical points}
+
+\begin{pr}{}{Function with no critical points}\label{Function with no critical points}
+Given an integer $m\ge 2$, 
+construct a smooth function $f\:\RR^m\to \RR$ 
+with no critical points in the unit ball $B^m$ 
+such that the restriction $f|_{B^m}$ does not factor through a linear function;
+that is, 
+$f|_{B^m}$ cannot be presented as a composition
+$\ell\circ\phi$,
+where $\ell\:\RR^m\to\RR$ is a linear function 
+and $\phi\:B^m\to\RR^m$ is a smooth embedding.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Conic neighborhood}
+\label{Conic neighborhood}
+
+Let $p$ be a point in a topological space $X$.
+We say that an open neighborhood $U\ni p$ is \index{conic neighborhood}\emph{conic}
+if there is a homeomorphism from a cone
+to $U$ which sends its vertex to $p$.
+
+\begin{pr}{}{Conic neighborhood}  
+Show that any two conic neighborhoods of one point are homeomorphic to each other.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Unknots}
+
+\begin{pr}{}{Unknots}\label{No knots}
+Prove that the set of smooth embeddings $f\:\mathbb{S}^1\z\to\RR^3$ equipped with the $C^0$-topology 
+forms a connected space.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Stabilization}
+
+\begin{pr}{}{Stabilization}\label{Simple stabilization}
+Construct two compact subsets $K_1, K_2\subset\RR^2$ such that
+$K_1$ is not homeomorphic to $K_2$, but $K_1\times[0,1]$ is homeomorphic to $K_2\z\times[0,1]$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Homeomorphism of cube}
+
+\begin{pr}{}{Homeomorphism of cube}\label{Homeomorphism of cube}
+Let $\square^m$ be a cube in $\RR^m$.
+Assume that a homeomorphism $h\:\square^m\to\square^m$ sends each face of $\square^m$ to itself.
+Extend $h$ to a homeomorphism $f\:\RR^m\to\RR^m$ which coincides with the identity map outside of a bounded set.    
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Finite topological space\easy}
+
+
+\begin{pr}{\easy}{Finite topological space}\label{Finite topological space}
+Given a finite topological space $F$ 
+construct a finite simplicial complex $K$
+which admits a weak homotopy equivalence  $K\to F$. 
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Dense homeomorphism\easy}
+
+\begin{pr}{\easy}{Dense homeomorphism}\label{Dense homeomorphism}
+Let $\mathcal{H}$ be the set of all homeomorphisms $\mathbb {S}^2\to\mathbb {S}^2$ 
+equipped with the $C^0$-metric.
+Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations $a\circ h\circ a^{-1}$ for all $a\in\mathcal{H}$ form a dense set in $\mathcal{H}$.
+ 
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Simple path\easy}
+
+
+\begin{pr}{\easy}{Simple path}\label{Simple path}
+Let $p$ and $q$ be distinct points in Hausdorff topological space $X$.
+Assume $p$ and $q$ are jointed by a path.
+Show that they can be jointed by a simple path;
+that is there is an injective continuous map $\beta\:[0,1]\to X$
+such that $\beta(0)=p$ and $\beta(1)=q$.
+\end{pr}
+
+
+
+
+
+
+
+
+
+\section*{Semisolutions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Immersed disks.}
+Both circles on the picture bound essentially different discs.
+
+{
+
+\begin{wrapfigure}[6]{r}{46 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
+\end{lpic}
+\end{wrapfigure}
+
+It is a good exercise to count the discs in these examples. 
+(The answers are 2 and  5 correspondingly.) 
+\qeds
+
+The first example is generally attributed to John Milnor.
+The second example was given by Daniel Bennequin in \cite{bennequin}.
+
+}
+
+\begin{wrapfigure}[6]{r}{19 mm}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
+\end{lpic}
+\end{wrapfigure}
+
+An easier problem would be to construct two essentially different immersions of annuli with the same boundary curves; a solution is shown on the picture.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Positive Dehn twist.}
+Consider the universal covering 
+$\tilde\Sigma\to\Sigma$.
+The surface $\tilde \Sigma$ comes with the orientation induced from $\Sigma$.
+
+Note that we may assume that $\tilde\Sigma$ has infinite number of boundary components.
+
+Fix a point $x_0$ on the boundary of $\tilde \Sigma$.
+Given other points $y$ and $z$ we will write
+$y\prec z$ if $z$ lies on the left side from one (and therefore any) simple curve from $x_0$ to $y$ in $\tilde\Sigma$.
+Note that  $\prec$ defines a linear order on $\partial\tilde\Sigma\backslash\{x_0\}$.
+We will write $y\preceq z$ 
+if $y\prec z$ or $y=z$.
+
+\begin{center}
+\begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn()}
+\lbl[t]{13,6;$x_0$}
+\lbl[bl]{23,24;$y$}
+\lbl[br]{4,20;$z$}
+\lbl[]{33,12;$\tilde \Sigma$}
+\end{lpic} 
+\end{center}
+
+Note that any homeomorphism $h\:\Sigma\to\Sigma$ which is identity on the boundary
+lifts to unique homeomorphism $\tilde h\:\tilde \Sigma\to\tilde\Sigma$ 
+is such a way that $\tilde h(x_0)=x_0$.
+
+Assume $h$ is positive Dehn twist.
+Show that 
+$y\preceq \tilde h(y)$ for any  $y\in\partial\tilde\Sigma\backslash\{x_0\}$
+and there is a point $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$
+such that $y_0\prec \tilde h(y_0)$.
+
+Note that the latter property is a homotopy invariant 
+and it survives under compositions of maps.
+Hence the statement follows.
+
+\parit{Comments.} The problem was suggested by Rostislav Matveyev.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{r}{24 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/no-critical-points()}
+\end{lpic}
+\end{wrapfigure}
+
+
+\parbf{Function with no critical points.}
+Construct an immersion 
+$\psi\:B^m\z\looparrowright\RR^m$ such that 
+\[\ell\circ\phi\ne\ell\circ\psi\]
+for any embedding  $\phi\:B^m\to\RR^m$. 
+(The two-dimensional case can be quessed from the picture.)
+
+It remains to note that the composition $f=\ell\circ\psi$ has no critical points.\qeds
+
+The problem was suggested by Petr Pushkar.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Conic neighborhood.}
+Let $V$ and $W$ be two conic neighborhoods of $p$.
+Without loss of generality, we may assume that the closure of $V$ lies in $W$.
+
+We will need to construct a sequence of embeddings $f_n\:V\to W$
+such that 
+\begin{enumerate}[(i)]
+\item 
+For any compact set $K\subset V$ 
+there is a positive integer $n=n_K$ such that 
+$f_n(k)=f_m(k)$ for any $k\in K$ and $m\ge n$.
+\item For any point $w\in W$ there is a point $v\in V$ such that $f_n(v)=w$ for all large $n$.
+\end{enumerate}
+
+Note that once such sequence is constructed, $f\:V\to W$ defined as $f(v)=f_n(v)$ for all large values of $n$ gives the needed homeomorphism.
+
+The sequence $f_n$ can be constructed recursively, setting
+\[f_{n+1}=\Psi_n\circ f_n\circ \Phi_n,\]
+where $\Phi_n\:V\to V$ 
+and $\Psi_n\:W\to W$ 
+are homeomorphisms
+of the form 
+\[\Phi_n(x)=\phi_n(x)\cdot x\quad \Phi_n(x)=\psi_n(x)\cdot x,\]
+where $\phi_n\:V\to \RR_+$, $\psi_n\:W\to \RR_+$ are suitable continuous functions 
+and 
+``$\cdot$'' denotes the ``multiplication'' in the cone structures of $V$ and $W$ correspondingly.\qeds
+
+
+The problem is due to Kyung Whan Kwun \cite[see][]{kwun}.
+
+Note that for two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Sigma_2)$ might be homeomorphic while $\Sigma_1$ and $\Sigma_2$ are not.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Unknots.}
+Observe that it is possible to draw tight arbitrary knot 
+while keeping it smoothly embedded all the time including the last moment.\qeds
+
+
+\begin{center}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/knot(1)}
+\end{lpic}
+\end{center}
+
+
+This problem was suggested by Greg Kuperberg \cite[see][]{One-step}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\begin{wrapfigure}{o}{37 mm}
+\begin{lpic}[t(0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Simple-stabilization(1)}
+\lbl[]{8.7,8.3;{\color{white} $K_1$}}
+\lbl[]{28.7,8.3;{\color{white} $K_2$}}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Simple stabilization.}
+The example can be guessed from the diagram.\qeds
+
+
+I learned this problem 
+in my analysis class taught by 
+Maria Goluzina.
+
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Homeomorphism of cube.}
+Let us extend the homeomorphism $h$ to whole $\RR^m$ by reflecting the cube in its facets.
+We get a homeomorphism say $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any $x\in\square^m$ and 
+\[\tilde h\circ\gamma=\gamma\circ \tilde h\]
+for any motion $\gamma\:\RR^m\to\RR^m$ in the group generated by the reflections in the facets of the cube.
+
+Without loss of generality, we may assume that the cube $\square^m$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
+In this case $\tilde h$ has \index{displacement}\emph{displacement} at most $2$;
+that is, 
+\[|\tilde h(x)-x|\le 2\]
+for any $x\in\RR^m$.
+
+\begin{wrapfigure}[10]{o}{47 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
+\end{lpic}
+\end{wrapfigure}
+
+Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
+$\phi(r)\z=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
+
+Consider $\RR^m$ with polar coordinates $(u,r)$, where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
+Let $\Phi\:\RR^m\to\RR^m$
+is defined by $\Phi(u,r)=(u,\phi(r))$.
+
+Set 
+\[
+f(x)=\left[
+\begin{aligned}
+&x&&\text{if}\ |x|\ge 2
+\\
+&\Phi\circ \tilde h \circ \Phi^{-1}(x)&&\text{if}\ |x|< 2
+\end{aligned}
+\right.
+\]
+Prove that $f\:\RR^m\to\RR^m$ is a solution.
+\qeds
+
+The problem is a stripped from the proof of Robion Kirby in \cite{kirby}.
+The condition that face is mapped to face can be removed and 
+instead of homeomorphism one can take an embedding which is close enough to the identity.
+
+An interesting twist to this idea was given by Dennis Sullivan in \cite{sullivan}.
+Instead of the discrete group of motions of Euclidean space,
+he use a discrete group of motions of hyperbolic space in the Poincare model.
+Say, assume we repeat the same argument if instead of cube we have a Coxeter polytope in the hyperbolic space.
+Then the constructed map 
+coincides with the identity on the absolute and therefore the last ``shrinking'' step in the proof above is not needed.
+Moreover, 
+if the original homeomorphism is bi-Lipschitz,
+then the construction also produce a bi-Lipschitz homeomorphism;
+this is the advantage.
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Finite topological space.}
+Given a point $p\in F$,
+denote by $O_p$ the minimal open set in $F$ containing $p$. 
+Note that we can assume that $F$ connected and is $T_0$;
+that is $O_p=O_q$ if and only if $p=q$.
+
+Let us write $p\preccurlyeq q$ 
+if $O_p\subset O_q$.
+The relation $\preccurlyeq$ is a partial order on $F$.
+
+Let us construct a simplicial complex $K$ 
+by taking $F$ as the set of its vertices
+and saying that a collection of vertices form a simplex 
+if they can form a an increasing sequence with respect to $\preccurlyeq$.
+
+Given $k\in K$,
+consider the minimal simplex $(f_0,\dots,f_m)\ni k$;
+we can assume that $f_0\preccurlyeq \dots\preccurlyeq f_m$.
+Set $h\:k\mapsto f_0$;
+it defines a map $K\to F$.
+
+It remains to check that $h$ is continuous 
+and induces an isomorphism of all the homotopy groups.
+\qeds
+
+In a similar fashion, one can construct a finite topological space $F$ for given simplicial complex $K$ 
+such that 
+there is a weak homotopy equivalence $K\to F$.
+Both constructions are due to Pavel Alexandrov, 
+\cite[see][]{alexandrov-finite,mccord}.
+
+\parbf{Dense homeomorphism.}
+Note that there is countable set of homeomorphisms $h_1,h_2,\dots$ which is dense in $\mathcal{H}$
+such that
+each $h_n$ fix all the points outside an open round disc, say $D_n$.
+
+Choose a countable disjoint collection of round discs $D_n'$
+and consider the homeomorphism $h\:\mathbb S^2\to \mathbb S^2$
+which fix all the points outside of $\bigcup_nD'_n$ and
+for each $n$,
+the restriction $h|_{D_n'}$ is conjugate to $h_n|_{D_n}$. 
+
+Show that $h$ solves the problem.
+\qeds
+
+The problem was mentioned by Frederic Le Rox \cite[see][]{rox}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Simple path.}
+Let $\alpha$ be a path joining $p$ to $q$.
+
+Passing to a subinterval if necessary,
+we can assume that $\alpha(t)\ne p,q$ for $t\ne0,1$.
+
+An open set in $[0,1]$ will be called {}\emph{suitable}
+if for any connected component $(a,b)$ of $\Omega$ we have $\alpha(a)=\alpha(b)$.
+Show that there is a maximal suitable open set $\Omega$;
+that $\Omega$ is suitable and it is not a subset of any other suitable set.
+
+Define $\beta(t)=\alpha(a)$ for any $t$ in a connected component $(a,b)\subset\Omega$.
+
+It remains to reparametrize $\beta$ to make it injective.
+\qeds
+
+The problem inspired by a Lemma 7.13 
+proved by 
+Alexander Lytchak
+and Stefan Wenger in \cite{lytchak-wenger}
+
+A more involved solution goes the following way:
+Note that one can assume that $X$ coincides with the image of $\alpha$.
+In particular it is connected, locally connected and compact.
+
+Any such space admits a length metric.
+This statement was conjectured by Karl Menger in \cite{menger}
+and proved independently 
+by R. H. Bing  \cite[see][]{bing-length-0, bing-length-1} 
+and Edwin Moise \cite[see][]{moise}.
+
+It remains to consider a geodesic path from $p$ to $q$.
