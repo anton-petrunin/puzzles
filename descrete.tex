@@ -60,14 +60,13 @@ which intersects each line at exactly 2 points.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}[7]{r}{27 mm}
 \begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/kiss(1)}
-\lbl[]{12,11;{\color{white} $W_0$}}
-\lbl[]{8,18;{\color{white} $W_1$}}
-\lbl[]{17,18;{\color{white} $W_2$}}
-\lbl[]{20,11;{\color{white} $W_3$}}
-\lbl[]{17,4;{\color{white} $W_4$}}
-\lbl[]{8,4;{\color{white} $W_5$}}
-\lbl[]{4,11;{\color{white} $W_6$}}
-
+\lbl[]{12.5,11;{\color{white} $W_0$}}
+\lbl[]{8.5,18;{\color{white} $W_1$}}
+\lbl[]{16.5,18;{\color{white} $W_2$}}
+\lbl[]{20.5,11;{\color{white} $W_3$}}
+\lbl[]{16.5,4;{\color{white} $W_4$}}
+\lbl[]{8.5,4;{\color{white} $W_5$}}
+\lbl[]{4.5,11;{\color{white} $W_6$}}
 \end{lpic}
 \end{wrapfigure}
 
@@ -75,7 +74,7 @@ which intersects each line at exactly 2 points.
 
 
 Let  $W_0$ be a convex body in $\RR^m$.
-We say that $k$ is the kissing number of $W_0$ (briefly $k=\mathop{\rm kiss}W_0$)
+We say that $k$ is the \index{kissing number}\emph{kissing number} of $W_0$ (briefly $k=\mathop{\rm kiss}W_0$)
 if $k$ the maximal integer such that there are $k$ bodies $W_1,W_2,\dots,W_k$ such that each $W_i$ is congruent to $W_0$,
 $W_i\cap W_0\not=\emptyset$ for each $i$ 
 and have no pair $W_i,W_j$ has common interior points.
@@ -129,6 +128,8 @@ be a collection of points such that any triangle $\triangle x_ix_jx_k$ is right 
 Show that $n\le 2^m$.
 \end{pr}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Right-angled polyhedron\thm}
 
@@ -167,6 +168,23 @@ that is
 for any $k$.
 These identities are called Dehn--Sommerville equations.
 It gives the complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Balls without gaps}
+\label{Balls without gaps}
+\begin{pr}{}{Gaps between balls}
+Let $B_1,\dots,B_n$ be the balls  
+of radii $r_1,\dots,r_n$ 
+in a Euclidean space.
+Assume that no hyperplane divides the balls into two
+non-empty sets without intersecting at least one of the balls. 
+Show that the balls
+$B_1,\dots,B_n$ can be covered by a ball of radius
+$r=r_1+\dots+r_n$.
+
+\end{pr}
+
+
 
 \section*{Semisolutions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -300,7 +318,6 @@ Charles Halberg,
 Eugene Levin 
 and Ernst Straus 
 in \cite{halberg-levin-straus}.
-
 It is expected that the same inequality holds for the orientation-preserving version of kissing number.
 
 
@@ -484,7 +501,17 @@ In 4-dimensional case, an example of a bonded right-angled hyperbolic polyhedron
 can be found among regular \index{120-cells}\emph{120-cells} --- the 4-dimensional brothers of dodecahedra.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Balls without gaps.} 
+Assume that each ball has the mass proportional to its radius.
+Denote by $z$  the center of mass of the balls.
 
+Show that all balls lie in the ball $B(z,r)$.
+\qeds
 
+The statement was conjectured by Paul Erd\H{o}s.
+The solution is given by Adolph and Ruth Goodmans in
+\cite{goodman-goodman}.
+A variation was given later by Hugo Hardwiger in \cite{hadwiger}.
 
 
