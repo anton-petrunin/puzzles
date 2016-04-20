@@ -156,6 +156,26 @@ that is, there is no periodic geodesic $\delta$ such that the distance from $\ga
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Saddle surface}
+\label{Saddle surface}
+
+Recall that a smooth surface $\Sigma$ in $\RR^3$
+is called \index{saddle surface}\emph{saddle} if its principle curvatures have opposite signs at each point.
+
+\begin{pr}{}{Saddle surface}
+Let $\Sigma$ be a saddle surface in $\RR^3$
+homeomorphic to a disc.
+Assume that othonormal projection to $(x,y)$-plane
+maps the boundary of $\Sigma$
+injectively to convex closed curve.
+Show that the othonormal projection to $(x,y)$-plane is injective on whole $\Sigma$.
+\end{pr}
+
+In other words, you need to show that $\Sigma$ is formed by a graph $z=f(x,y)$ for a function $f$ defined on a convex figure in the $(x,y)$-plane.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Asymptotic line}
 
 Recall that \index{asymptotic line}\emph{asymptotic line} on the smooth surface $\Sigma\subset \RR^3$
@@ -495,6 +515,27 @@ it is originated from a discussion with
 Keith Burns, 
 Michael Brin 
 and Yakov Pesin.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Saddle surface.}
+First note that for any plane $\Pi$,
+every connected component of the intersection $\Pi\cap\Sigma$ is homeomorphic to a tree.
+Moreover the endpoints of such tree lie in the boundary of $\Sigma$.
+
+If $\Sigma$ is not a graph then there is a point $p\in\Sigma$ with vertical tangent plane, say $\Pi$.
+Note that the intersection $\Pi\cap\Sigma$ has cross-point at $p$.
+Hence $\Pi\cap\Sigma$ has to have at least $4$ end-points.
+
+On the other hand, since the boundary of $\Sigma$ projects injectively to a closed convex curve in $(x,y)$-plane,
+the intersection of $\Pi\cap\partial \Sigma$ has at most 2 points,
+a contradiction.\qeds
+
+One can show the same for generalized saddle surfaces,
+that not necessary smooth surfaces which contain no closed simple plane curves.
+The geometry of these surfaces is far from being understood,
+in particular it is not known in general, if the induced intrinsic metric on such surface homeomorphic to the disc have non-positive curvature in the sense of Alexandrov (that is, it satisfies the $\mathrm{CAT}(0)$ inequality). 
+The latter problem was solved for graphs by Samuil Shefel, see \cite{shefel}.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Asymptotic line.}
