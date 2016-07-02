@@ -5,7 +5,7 @@
 This chapter we consider mostly Riemannian manifolds without curvature bounds.
 
 The reader should be familiar with main technique including 
-some simplectic geometry, in particular that geodesic flow preserves the volume on the tangent bungle. 
+some symplectic geometry, in particular that geodesic flow preserves the volume on the tangent bungle. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Besikovitch inequality}
@@ -119,6 +119,14 @@ Show that $(\T \mathbb{S}^2, \hat g)$ lies on bounded Gromov--Hausdorff distance
 Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\mathbb{S}^3\z\to\mathbb{S}^3$ such that $\vol (\mathbb{S}^3,g)$ is arbitrary small and 
 \[|x\z-\iota(x)|_g>1\]
  for any $x\in\mathbb{S}^3$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Two-systol}
+
+\begin{pr}{} Construct a Riemannian metric $g$ on the 3-dimensional torus $\TT^3$ such that $\vol(\TT^3,g)=1$
+and \[\area S\ge 1000\]
+for any closed surface $S$ in $\TT^3$ which does not bound.
 \end{pr}
 
 
@@ -257,20 +265,20 @@ Here {}\emph{random} means that $\gamma'(0)$ takes the random value in the unit 
 
 Denote by $\mathcal{R}$ the space of 
 all Riemannian metrics on $\mathbb S^5$
-with absolute value of sectional curvature at most $1$,
-and injectivity radius at least $1$.
+with absolute value of sectional curvature $\le1$,
+and injectivity radius $\ge1$.
 
 It is easy to see that any metric $g_1\in \mathcal{R}$ 
 can be connected to the canonical metric $g_0$ on $\mathbb S^5$
-by a continuous family of metrics $g_t$ where $t\in[0,1]$.
-The one parameter family of metrics $g_t$
+by a continuous family of metrics $g_t\in \mathcal{R}$ where $t\in[0,1]$.
+In fact, the one parameter family of metrics $g_t$
 can be found among the metrics of the type 
 \[g_t=a(t)\cdot g_0+b(t)\cdot g_1,\]
 where $a,b\:[0,1]\to\RR$
 are smooth functions such that $a(0)=1=b(1)$ and $a(1-s)=0=b(s)$ for $s\le \tfrac13$.
 In order to keep the bounds on the curvature and injectivity radius,
 the functions $a$ and $b$
-suppose to take huge values in the middle of interval.
+have to take huge values in the middle of interval.
 
 \begin{pr}{\thm}{Bounded curvature}\label{Bounded curvature}
 Fix a fast growing function, say
@@ -287,7 +295,6 @@ for any family $g_t$ as above
 The solution requires Novikov theorem on the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$  for
 $m\ge 5$. 
 A detailed proof of this theorem can be found in \cite{nabutovsky-NovThm}.
-
 
 \section*{Semisolutions}
 
@@ -396,21 +403,21 @@ Hence the result follows.
 \end{wrapfigure}
 
 \parbf{Distant involution.}
-Given $\eps>0$, construct a disc $D$ in the plane with 
-$$\length\partial D<10\ \ \text{and}\ \ \area D<\eps$$
+Given $\eps>0$, construct a disc $\Delta$ in the plane with 
+$$\length\partial \Delta<10\ \ \text{and}\ \ \area \Delta<\eps$$
 which admits an continuous involution $\iota$ such that 
 $$|\iota(x)-x|\ge 1$$ 
-for any $x\in\partial D$.
-An example of $D$ can be guessed from the picture. 
+for any $x\in\partial \Delta$.
+An example of $\Delta$ can be guessed from the picture. 
 
-Take the product $D\times D\subset \RR^4$;
+Take the product $\Delta\times \Delta\subset \RR^4$;
 it is homeomorphic to the 4-ball.
 Note that 
-$$\vol_3[\partial(D\times D)]=2\cdot\area D\cdot\length \partial D<20\cdot\eps.$$
-The boundary $\partial(D\times D)$ homeomorphic to $\mathbb{S}^3$
+$$\vol_3[\partial(\Delta\times \Delta)]=2\cdot\area \Delta\cdot\length \partial \Delta<20\cdot\eps.$$
+The boundary $\partial(\Delta\times \Delta)$ homeomorphic to $\mathbb{S}^3$
 and the restriction of the involution $(x,y)\mapsto (\iota(x),\iota(y))$ has the needed property.
 
-It remains to smooth $\partial(D\times D)$.
+It remains to smooth $\partial(\Delta\times \Delta)$.
 \qeds
 
 This example is given by Christopher Croke in \cite{croke}.
@@ -420,7 +427,23 @@ It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
 Note that according to systolic inequality, 
 the involution $\iota$ above cannot be made isometric \cite[see][]{gromov-filling}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Two-systol.}
+Consider the unit cube with three not intersecting cylindrical tunnels  
+between the pairs of opposite faces.
 
+In each tunnel, shrink the metric in the direction of the vertical direction  and expand it in the horizontal directions while keeping the volume the same.
+
+More precisely, if $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\times [0,1]$ so that $(x,y)$-plane is parallel to the base
+then the new metric is 
+\[g=\phi\cdot (dx)^2+\phi\cdot (dy)^2+\frac1{\phi^2}\cdot (dz)^2,\]
+where $\phi=\phi(x,y)$ is a function on $\DD$ which takes huge values around the center and identically 1 near the boundary of $\DD$.
+
+Gluing the opposite faces of the cube, we obtain a 3-dimensional torus with a smooth Riemannian metric.
+It remains to show that for the right choice of function $\phi$, this construction gives the needed example.
+\qeds
+
+I learned this problem from Dmirti Burago. 
 
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -442,7 +465,7 @@ that is, $p\in N$, a contradiction.
 \qeds
 
 \begin{wrapfigure}[7]{r}{25 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
+\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
 \end{lpic}
 \end{wrapfigure}
 
