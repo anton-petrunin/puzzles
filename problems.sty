@@ -120,6 +120,13 @@ isbn=false]{biblatex}
 \def\Tor{\operatorname{\rm Tor}}
 \newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
 
+\newcommand{\asterism}{\smash{%
+\raisebox{-.5ex}{%
+\setlength{\tabcolsep}{.5pt}%
+\begin{tabular}{@{}cc@{}}%
+\multicolumn2c*\\[-1.7ex]*&*%
+\end{tabular}}}}
+
 \def\:{\colon}
 \newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right|\,{#2}\,\right\}}
 
