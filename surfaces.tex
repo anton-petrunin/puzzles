@@ -479,7 +479,8 @@ This problem is discussed in the lectures of Mikhael Gromov \cite[see \S$\tfrac1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Periodic asymptote.}
 Assume the contrary.
-Passing to a finite cover, we can assume that the asymptote has no self intersections.
+
+Passing to a finite cover, we can ensure that the asymptote has no self intersections.
 In this case 
 the restriction $\gamma|_{[a,\infty)}$  
 has no self-intersections, 
@@ -496,19 +497,26 @@ form infinite minimizing geodesics in $\triangle$.
 Consider the Buseman function $f$ for $\gamma_+$;
 denote by $\ell(t)$ the length of the level curve $f^{-1}(t)$.
 Let $-\kappa(t)$  be the total curvature of the suplevel set $f^{-1}([t,\infty))$.  
-Note that for all large $t$ we have
-\[\ell'(t)=\kappa(t)
-\ \ \text{and}\ \ 
-\kappa'(t)\le C\cdot \ell(t)^4,\] 
-where $C$ is a fixed constant;
-it depends on the bound on forth derivative of Gauss curvature on the surface.
-The latter implies that there is $\eps>0$ such that
+From Gauss--Bonnet formula,
+\[\ell'(t)=\kappa(t).\leqno({*}{*})\]
+
+The level curve $f^{-1}(t)$ can be parametrized by a unit speed curve, say $\theta_t\:[0,\ell(t)]\to \triangle$.
+By coarea formula we have
+\[\kappa'(t)
+=
+-\int\limits_0^{\ell(t)} K_{\theta_t(\tau)}\cdot d\tau,
+\]
+where $K_x$ denotes the Gauss curvature of $\Sigma$ at the point $x$.
+Since $K_{\theta_t(0)}=K_{\theta_t(\ell_t)}=0$ and the surface is smooth,
+there is a constant $C$ such that $|K_{\theta_t(\tau)}|\le C\cdot \ell(t)^2$ for all $t$, $\tau$.
+Therefore
+\[\kappa'(t)\le C\cdot \ell(t)^3 \leqno(\asterism)\]
+
+Together, $({*}{*})$ and $(\asterism)$ imply that there is $\eps>0$ such that
 \[\ell(t)\ge \frac\eps{t-a}\]
 for any large $t$.
-In particular,
-\[\int\limits_a^\infty\ell(t)=\infty.\]
 By the coarea formula we get 
-\[\area\triangle=\infty;\]
+\[\area\triangle=\int\limits_a^\infty\ell(t)=\infty;\]
 the latter contradicts $(*)$.\qeds
 
 I've learned the problem from 
@@ -682,21 +690,6 @@ I am not aware of any solutions
 which do not admit a foliation by geodesics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{44 mm}
-\begin{lpic}[t(-4 mm),b(6 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
-\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
-\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
-\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
-\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
-\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
-\lbl[l]{37,19;{\small $\check\gamma(n)$}}
-\lbl[b]{21.5,35.5;$0$}
-\lbl[br]{33.5,35.5;$1$}
-\lbl{40,3;$H_+$}
-\lbl{3,3;$H_-$}
-\end{lpic}
-\end{wrapfigure}
-
 \parbf{The last problem of Poincar\'e.}
 Set 
 \begin{align*}
@@ -716,6 +709,21 @@ Note that the map
 \[\check f\:z\mapsto f(z)+\eps\]
 is area preserving and has no fixed points.
 
+\begin{wrapfigure}{r}{44 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
+\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
+\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
+\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
+\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
+\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
+\lbl[l]{37,19;{\small $\check\gamma(n)$}}
+\lbl[b]{21.5,35.5;$0$}
+\lbl[br]{33.5,35.5;$1$}
+\lbl{40,3;$H_+$}
+\lbl{3,3;$H_-$}
+\end{lpic}
+\end{wrapfigure}
+
 Prove that for some positive integer $n$,
 there is a curve 
 \[\check \gamma\:[0,n]\to \CC\]
@@ -724,11 +732,14 @@ and
 $\check f\circ\check\gamma(t)=\check\gamma(t+1)$
 for any $t\z\in [0,n-1]$.
 
-Repeat the same construction for the function $\hat f(z)=f(z)-\eps$ and obtain a curve $\hat \gamma\:[0,n]\to \CC$ starting in $H_+$ and ending in $H_-$.
+Repeat the same construction for the function 
+\[\hat f(z)=f(z)-\eps\] 
+and obtain a curve 
+\[\hat \gamma\:[0,m]\to \CC\] starting in $H_+$ and ending in $H_-$.
 
 Connect $\check\gamma(n)$ to $\hat \gamma(0)$ by a curve in $H_+$ 
 and 
-$\hat\gamma(n)$ to  $\check\gamma(0)$ by a curve in $H_-$.
+$\hat\gamma(m)$ to  $\check\gamma(0)$ by a curve in $H_-$.
 Denote by $\sigma$ the obtained loop.
 
 Prove that
@@ -736,6 +747,8 @@ Prove that
 \item The loop $\phi\circ\sigma$ has to be null-homotopic in $\CC^*$.
 \item The loop $\phi\circ\sigma$ is a generator of $\pi_1\CC^*$.
 \end{itemize}
+
+\noindent
 These two statements contradict each other. \qeds
 
 
