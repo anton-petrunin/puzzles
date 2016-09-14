@@ -10,7 +10,7 @@ In this chapter we consider only plane and spherical curves.
 We assume that the reader is familiar with related definitions including 
 length of curve 
 and its curvature.
-The necessary material is covered in a the first couple of lectures 
+The necessary material is covered in the first couple of lectures 
 of a standard introduction to differential geometry, 
 see \cite[][\S26--27]{hilbert-cohn-vossen}
 or  
@@ -61,6 +61,8 @@ This problem gives a continuous analog of the Leibniz's test for alternating ser
 It was considered by Peter Tait in \cite{tait}
 and later rediscovered by Adolf Kneser in \cite{kneser};
 see also \cite{ovsienko-tabachnikov}.
+
+It is instructive to check that 3-dimensional analog does not hold.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
@@ -119,16 +121,16 @@ Show that there is a chord of the outer curve, which is tangent to the inner cur
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Capture a sphere in a knot\hard}
 
-The following problem states that one can not capture a sphere in a knot.
-
-The precice formulation use the notion of smooth isotopy of knots;
+The following formulation use the notion of smooth isotopy of knots;
 that is, one parameter of embeddings 
 \[f_t\:\mathbb{S}^1\z\to \RR^3,\ \  t\in[0,1]\] 
 such that the map $[0,1]\times \mathbb{S}^1\to\RR^3$ is smooth.
 
 
 \begin{pr}{}{Capture a sphere in a knot}\label{Capture a sphere in a knot}
-Let $B$ be the closed unit ball in $\RR^3$
+Show that one can not capture a sphere in a knot.
+
+More precisely, let $B$ be the closed unit ball in $\RR^3$
 and $f\:\mathbb{S}^1\z\to \RR^3\backslash B$ be a knot.
 Show that there is a smooth isotopy 
 $$f_t\:\mathbb{S}^1\to \RR^3\backslash B,\ \ \ t\in [0,1],$$ 
@@ -186,14 +188,14 @@ Given $\delta>0$ consider the value
 where the infimum is taken for all coverings of $X$ by $\{X_i\}$
 such that $\diam X_i<\delta$ for each $i$.
 
-Note that the function $\delta\mapsto h(\delta)$ does is not decreasing in $\delta$.
+Note that the function $\delta\mapsto h(\delta)$ is not decreasing in $\delta$.
 In particular, the limit $h$ of $h(\delta)$ as $\delta\to0$ is defined, possibly infinite.
 This value $h$ is called $\alpha$-dimensional Hausdorff measure of $X$.
 
 \begin{pr}{}{Rectifiable curve}\label{Rectifiable curve}
 Let $X\subset \RR^2$ be a compact connected set
 with finite 1-dimensional Hausdorff measure. 
-Show that $X$ can be represented as the image of a rectifiable curve.
+Show that $X$ is an image of rectifiable curve.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -245,12 +247,13 @@ $F$ with finite number of edges.
 Note that $T$ is a
 deformation retract of $F$.
 The retraction can be obtained by moving each point $y\in F\setminus T$ to $T$
-along the geodesic from the closest point to $y$ on $\partial F$ which pass through $y$.
+along the line segment from $y$ to $T$ 
+which extends behind $y$ the (necessary unique) shortest segment from $y$ to $\partial F$.
 
 In particular, $T$ is a tree.
 Therefore $T$  has
 at least two end vertices;
-Denote one of them by $z$.
+denote one of them by $z$.
 
 Prove that the disc of radius $1$ centered at $z$ lies completely in $F$.\qeds
 
@@ -284,10 +287,9 @@ Related examples discussed after the hint for ``Almost flat manifold'', page \pa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{A spring in a tin.}
-Let $\alpha$ be a closed curve in the unit disc;
-denote by $\ell$ its length.
+Denote by $\ell$ the length of $\alpha$.
 
-Let us equip the plane with complex coordinates so that $0$ is the center of the unit disc.
+Equip the plane with complex coordinates so that $0$ is the center of the unit disc.
 We can assume that $\alpha$ equipped with $\ell$-periodic parametrization by length.
 
 Consider the curve $\beta(t)=t-\tfrac{\alpha(t)}{\dot\alpha(t)}$.
@@ -323,9 +325,8 @@ and Thomas Richardson in \cite{lagarias-richardson}, see also \cite{nazarov-petr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{A curve in a sphere.} 
-We give two solutions, both by contradiction.
-Assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intersects each equator.
-Let us present two solutions.
+Let us present two solutions, both by contradiction.
+We assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intersects each equator.
 
 \parit{A solution with the Crofton formula.}
 Note that we can assume that $\alpha$ is a broken line.
@@ -346,9 +347,10 @@ Then we get
 &=2\cdot\pi.
 \end{align*}
 The first identity above is called \index{Crofton formula}\emph{Crofton formula}.
-To prove this identity, consider a curve formed by on geodesic segment
-and
-then sum up the obtained identities for all segments in $\alpha$.\qeds
+(Prove this formula first for a curve formed by one geodesic segment,
+summing up we get it for broken lines
+and by approximation it holds for all curves.)
+\qeds
 
 \parit{A solution by symmetry.}
 Let $\check\alpha$ be a sub-arc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$.  
@@ -357,7 +359,7 @@ Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$.
 Let $r$ be a point of intersection of $\alpha$ with the equator with pole at $z$.  
 Without loss of generality we may assume that $r\in\check\alpha$. 
 
-The arc $\check\alpha$ together with its reflection in $z$ 
+The arc $\check\alpha$ together with its reflection in the point $z$ 
 form a closed curve of length $2\cdot \ell$ 
 that passes through $r$ and its antipodal point $r^{*}$.
 Therefore 
@@ -441,23 +443,34 @@ the given solution is based on the idea of David Eppstein \cite[see][]{zeb}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Linked circles.} 
-Denote the linked circels by $\alpha$ and $\beta$.
+Denote the linked circles by $\alpha$ and $\beta$. %???+PIC
 
 Fix a point $x\in\alpha$. 
-Note that one can find another point $x^{*}\in\alpha$ such that the interval 
-$[xx^{*}]$ intersects $\beta$, say at the point $z$. 
+Note that one can find another point $y\in\alpha$ such that the interval 
+$[xy]$ intersects $\beta$, say at the point $z$. 
 Otherwise we can move each point of $\alpha$ along the line segment to $x$.
 This deformation of $\alpha$ will not cross $\beta$;
 the latter contradicts that $\alpha$ and $\beta$ are linked. 
 
+\begin{wrapfigure}{r}{54 mm}
+\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/gehring(1)}
+\lbl[br]{4,31;$x$}
+\lbl[l]{37.3,12;$y$}
+\lbl[rw]{29,19;$z$}
+\lbl[bl]{12.2,3.2;$\alpha$}
+\lbl[br]{49,11;$\beta$}
+\lbl[bl]{18,11;$\alpha^{*}$}
+\end{lpic}
+\end{wrapfigure}
 
 Consider the curve $\alpha^{*}$ which is the central projection of $\alpha$ 
-from $z$ onto the unit sphere around $z$;
-clearly
+from $z$ onto the unit sphere around $z$.
+Clearly
 $$\length \alpha\ge \length\alpha^{*}.$$
 
-Note that $\alpha^{*}$ passes through two antipodal points of the sphere;
-therefore 
+Note that $\alpha^{*}$ passes through two antipodal points of the sphere,
+one corresponds to $x$ and the other to $y$.
+Therefore 
 $$\length \alpha^{*}\ge 2\cdot\pi.$$
 Hence the result follows.\qeds
 
