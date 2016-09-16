@@ -6,7 +6,6 @@ and
 a \index{closed curve}\emph{closed curve} is a continuous map defined on a circle.
 If the map is injective then the curve is called \index{simple curve}\emph{simple}.
 
-In this chapter we consider only plane and spherical curves.
 We assume that the reader is familiar with related definitions including 
 length of curve 
 and its curvature.
@@ -36,6 +35,11 @@ Show that $\gamma$ has no self-intersections.
 Without loss of generality we may assume that the curve is parametrized by its length and its
 curvature decreases.
 
+\begin{wrapfigure}{o}{25 mm}
+\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/kneser-log(1)}
+\end{lpic}
+\end{wrapfigure}
+
 Let $z(t)$ be the center of osculating circle at $\gamma(t)$
 and $r(t)$ is its radius.
 That is 
@@ -44,11 +48,6 @@ z(t)&=\gamma(t)+\tfrac{\ddot\gamma(t)}{|\ddot\gamma(t)|^2},
 &
 r(t)&=\tfrac{1}{|\ddot\gamma(t)|}.
 \end{align*}
-
-\begin{wrapfigure}{o}{25 mm}
-\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/kneser-log(1)}
-\end{lpic}
-\end{wrapfigure}
 
 Straightforward calculations show that
 \[|\dot z(t)|\le \dot r(t).\]
@@ -152,7 +151,8 @@ Show that the length of each curve is at least $2\cdot\pi$.
 \subsection*{Surrounded area}
 
 \begin{pr}{\easy}{Surrounded area}\label{Surrounded area}
-Let $\gamma_1,\gamma_2\:\mathbb S^1\to\RR^2$ be two simple closed plane curves.
+Consider two simple closed plane curves  
+$\gamma_1,\gamma_2\:\mathbb S^1\to\RR^2$.
 Assume 
 \[|\gamma_1(v)-\gamma_1(w)|\le|\gamma_2(v)-\gamma_2(w)|\]
 for any $v,w\in \mathbb S^1$.
@@ -180,8 +180,8 @@ its boundary contains no simple curve.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Rectifiable curve}
 
-In the following problem we use the notion of 
-\index{Hausdorff measure}\emph{Hausdorff measure} for the compact subsets in the plane.
+For the following problem we need the notion of 
+\index{Hausdorff measure}\emph{Hausdorff measure}.
 Fix a compact set $X\subset\RR^2$ and $\alpha>0$.
 Given $\delta>0$ consider the value
 \[h(\delta)=\inf\left\{\,\sum_i(\diam X_i)^\alpha\,\right\}\]
@@ -189,7 +189,7 @@ where the infimum is taken for all coverings of $X$ by $\{X_i\}$
 such that $\diam X_i<\delta$ for each $i$.
 
 Note that the function $\delta\mapsto h(\delta)$ is not decreasing in $\delta$.
-In particular, the limit $h$ of $h(\delta)$ as $\delta\to0$ is defined, possibly infinite.
+In particular, the there is a (possibly infinite) limit, say $h$, of $h(\delta)$ as $\delta\to0$.
 This value $h$ is called $\alpha$-dimensional Hausdorff measure of $X$.
 
 \begin{pr}{}{Rectifiable curve}\label{Rectifiable curve}
@@ -213,10 +213,10 @@ The later means that G-delta dense sets contains {}\emph{most} of the points of 
 This is the meaning of the word {}\emph{most} used in the following problem.
 
 \begin{pr}{\easy}{Typical convex functions}\label{Most of the convex functions}
-Consider the space of continuous convex functions defined on $[0,1]$,
-equipped with the metric induced by sup norm.
+Consider the space of convex $1$-Lipschitz functions defined on $[0,1]$,
+equipped with the metric induced by sup-norm.
 
-Show that most of these functions have vanishing the second derivative at any point where it is defined.
+Show that most of these functions have vanishing the second derivative at every point where it is defined.
 \end{pr}
 
 
@@ -488,8 +488,8 @@ later the same solution was rediscovered few times.
 Let $C_1$ and $C_2$ be the compact regions bounded by $\gamma_1$ and $\gamma_2$ correspondingly.
 
 By Kirszbraun theorem, 
-any short map $X\to \RR^2$ defined on $X\subset \RR^2$
-can be extended to a short map on the whole $\RR^2$.
+any 1-Lipschitz map $X\to \RR^2$ defined on $X\subset \RR^2$
+can be extended to a 1-Lipschitz map on the whole $\RR^2$.
 In particular, there is a short map $f\:\RR^2\to\RR^2$ 
 such that $f(\gamma_2(v))=f(\gamma_1(v))$ for any $v\in\mathbb S^1$.
 
@@ -498,18 +498,21 @@ Whence the statement follows.\qeds
 
 
 The Kirszbraun theorem appears in his thesis \cite[see][]{kirszbraun}
-and reproved later by Frederick Valentine in \cite{valentine}.
+and redicovered later by Frederick Valentine in \cite{valentine}.
+An interesting survey is given by 
+Ludwig Danzer, Branko Gr{\"u}nbaum  and Victor Klee
+in \cite{danzer-grunbaum-klee}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{r}{40 mm}
-\begin{lpic}[t(-5 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
 \end{lpic}
 \end{wrapfigure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Fat curve.}
-To solve the problem, you can modify your favorite space filling curve 
+Modify your favorite space filling curve 
 keeping its area nearly the same 
 and removing the self-intersections.
 
@@ -518,8 +521,8 @@ which can be constructed as a limit of
 recursively defined sequence of curves;
 the 8th iteration is on the diagram.\qeds 
 
-The existence of such curves was observed 
-by William Osgood in \cite{osgood}.
+It seems that the existence of such curves was first observed 
+by William Osgood \cite[see][]{osgood}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -547,8 +550,9 @@ Guess the construction from the diagram.
 \end{center}
 
 
-Start with the unit circle, 
+Now, start with the unit circle, 
 $\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
+Fix a sequence of positive numbers $\eps_n$ which converges to zero very fast. 
 Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
 Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
 and 
@@ -569,14 +573,14 @@ Show that $D$ is homeomorphic to an open disc
 and for the right choice of the $\eps_n$ the set $D$ is bounded and its
 boundary contains no simple curves.\qeds
 
-
-The proof repeats the construction of pseudo-arc 
+Our proof repeats the construction of pseudo-arc 
 given by Bronis\l{}aw Knaster in \cite{knaster}.
-Let us list a few problems which can be solved the same way.
+This construction is ubiquitous;
+here are few problems which use it:
 \begin{itemize}
 \item {\it Construct three disjoint non-empty open sets in $\RR$ which have the same boundary.}
 \item {\it Construct three open discs in $\RR^2$ which have the same boundary.}
-(This example are called \index{lakes of Wada}\emph{lakes of Wada}; it is  described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
+(These discs are called \index{lakes of Wada}\emph{lakes of Wada}; it is  described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
 \item {\it Construct a Cantor set in $\RR^3$ with non simply connected complement.}
 (This example was is called  \index{Antoine's necklace}\emph{Antoine's necklace};
 it is constructed in \cite{antoine}.)
@@ -599,10 +603,9 @@ The 1-dimensional Hausdorff measure will be denoted as $\mathcal{H}_1$.
 Set $L=\mathcal{H}_1(K)$.
 Without loss of generality, we may assume that $K$ has diameter $1$.
 
-Assume that $0<\eps<\tfrac12$.
 Prove that 
 \[\mathcal{H}_1(B(x,\eps)\cap K)\ge\eps\leqno(*)\]
-for any $x\in K$.
+for any $x\in K$ and $0<\eps<\tfrac12$.
 
 Let $x_1,\dots, x_n$ be a maximal set of points in $K$ such that 
 \[|x_i-x_j|\z\ge\eps\] for all $i\ne j$. 
@@ -611,19 +614,18 @@ From $(*)$ we have $n\le2\cdot L/\eps$.
 Construct a curve $\gamma_\eps$ such that (1) $\gamma_\eps$ is passing through all $x_i$, (2) $\length\gamma_\eps\le10\cdot L$ and (3) $\gamma_\eps$ lies in $\eps$-neighborhood of $K$.
 We can assume that $\gamma_\eps$ is parametrized by length.
 
-The needed curve can be obtained by passing to 
-a partial limit of $\gamma_\eps$
- as $\eps\to 0$. \qeds
+The needed curve can be obtained as 
+a partial limit of $\gamma_\eps$. \qeds
 
 
-This problem was given by Kenneth Falconer
-\cite[see Exercise 3.5 in his book][]{falconer}.
+This is a problem of Kenneth Falconer
+\cite[see Exercise 3.5 in][]{falconer}.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Typical convex functions.}
-Denote by $\mathfrak{F}$ the space of convex all functions defined on $[0,1]$ with the sup-norm.
+Denote by $\mathfrak{F}$ the space of all convex 1-Lipschitz functions defined on $[0,1]$ with the sup-norm.
 Note that $\mathfrak{F}$ is a complete metric space.
 
 Prove that if a function $f\in\mathfrak{F}$ has nonzero derivative at some point then there is $\eps>0$ such that
@@ -661,7 +663,7 @@ The same way one could show that the typical open discs in the plane contain no 
 although the construction of one such is not trivial, 
 see ``Crooked circle'' above.
 
-More similar problems are surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
+More problems of that type are surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 
 
 

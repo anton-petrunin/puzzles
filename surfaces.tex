@@ -1,16 +1,12 @@
 \csname @openrightfalse\endcsname
 \chapter{Surfaces}
 
-In this chapter we consider mostly {}\emph{smooth surfaces} in the Euclidean space. 
-Once we consider an {}\emph{abstract surfaces} that is  two-dimensional Riemannian manifold.
-
-We assume that the reader is familiar with related definitions
+We assume that the reader is familiar with smooth surfaces and the related definitions
 including intrinsic metric, 
 geodesics,
-convex and saddle surfaces, 
-normal, principle and 
-Gauss curvatures.
-A typical introductory course in differential geometry should cover all necessary background material, 
+convex and saddle surfaces
+and different types of curvature.
+An introductory course in differential geometry should cover all necessary background material, 
 say \cite[][\S28--29]{hilbert-cohn-vossen}
 or  
 \cite{toponogov-curves-and-surfaces}.
@@ -18,7 +14,17 @@ or
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\begin{wrapfigure}{r}{25 mm}
+\begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/convex-hat(1)}
+\lbl{15,8.6;$\Sigma$}
+\lbl[w]{5,18.6;$\Delta$}
+\end{lpic}
+\end{wrapfigure}%change???
+
+
 \subsection*{Convex hat}
+
 
 \begin{pr}{\easy}{Problem}\label{Convex hat}
 Let $\Sigma$ be a smooth closed convex surface 
@@ -31,6 +37,8 @@ if the ends of a minimizing geodesic in $\Sigma$
 lie in $\Delta$,
 then whole geodesic lies in $\Delta$.
 \end{pr}
+
+}
 
 
 \parit{Solution.}
@@ -64,19 +72,6 @@ where $\dot\gamma(t)$ denotes the velocity vector of $\gamma$ at $t$.
 Show that for any $t\in (0,\ell)$,
 one {}\emph{cannot see}  $q$ from $p_t$;
 that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from $q$.
-\end{pr}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Corkscrew geodesic}
-
-\begin{pr}{}{Corkscrew geodesic}\label{Corkscrew geodesic}
-Given a line $\ell$ in $\RR^3$
-construct a closed convex body $K$  
-with a minimizing geodesic $\sigma\:[a,b]\to\partial K$ in the surface of $K$ 
-which {}\emph{rotates 1000 times} around $\ell$; 
-that is, 
-if $\phi(t)$ is a continuous azimuth-function of $\sigma(t)$ in the cylindrical coordinates with axis at $\ell$,
-then $|\phi(b)-\phi(a)|\z=2000\cdot\pi$.
 \end{pr}
 
 {
@@ -137,7 +132,7 @@ Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-inters
 \label{Immersed surface}
 
 \begin{pr}{}{Immersed surface}
-Let $\Sigma$ be an immersed surface in $\RR^3$ with strictly positive Gauss curvature and nonempty boundary $\partial\Sigma$.
+Let $\Sigma$ be an connected immersed surface in $\RR^3$ with strictly positive Gauss curvature and nonempty boundary $\partial\Sigma$.
 Assume $\partial\Sigma$ lies in a plane $\Pi$
 and whole $\Sigma$ lies on one side from $\Pi$.
 Prove that $\Sigma$ is an embedded disc.
@@ -166,14 +161,13 @@ We say that $\Sigma$ is \emph{saddle} if it saddle at all points.
 \begin{pr}{}{Saddle surface}
 Let $\Sigma$ be a saddle surface in $\RR^3$
 homeomorphic to a disc.
-Assume that othonormal projection to $(x,y)$-plane
+Assume that orthogonal projection to $(x,y)$-plane
 maps the boundary of $\Sigma$
 injectively to convex closed curve.
 Show that the othonormal projection to $(x,y)$-plane is injective on whole $\Sigma$.
+
+In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a convex figure in the $(x,y)$-plane.
 \end{pr}
-
-In other words, you need to show that $\Sigma$ is formed by a graph $z=f(x,y)$ for a function $f$ defined on a convex figure in the $(x,y)$-plane.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -183,14 +177,14 @@ The saddle surfaces are defined in the previous problem.
 
 Recall that \index{asymptotic line}\emph{asymptotic line} on the smooth surface $\Sigma\subset \RR^3$
 is a curve always tangent to an \index{asymptotic direction}\emph{asymptotic direction} of $\Sigma$; 
-that is, the direction in which the normal curvature of $\Sigma$ is zero.
+that is, a direction with vanishing normal curvature.
 
 \begin{pr}{}{Asymptotic line}\label{asymptotic-line}
 Let $\Sigma\subset \RR^3$ be the graph $z\z=f(x,y)$
 of smooth function $f$ 
 and $\gamma$ be a closed smooth asymptotic line in $\Sigma$.
 Assume $\Sigma$ is saddle in a neighborhood of $\gamma$.
-Prove that the projection of $\gamma$ to the $x y$-plane cannot be star-shaped.
+Show that the projection of $\gamma$ to the $(x, y)$-plane cannot be star-shaped.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -285,20 +279,19 @@ Show that there is a pair of points  $p_1\in \Sigma_1$ and $p_2\in \Sigma_2$ wit
 \section*{Semisolutions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unbended geodesic.}
+Prove that for any $x\in\Sigma$ the the function  
+\[t\mapsto |x - p_t|\] is non-decreasing.
+
 Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
-
-Prove that for any $x\in\Sigma$ the distance $|x - p_t|$ is non-decreasing in $t$.
-
-Use the latter statement, to prove the same for $|x - p_t|_W$,
+Use the statement above, to prove the function 
+\[t\mapsto |x - p_t|_W\]
+is non-decreasing,
 where $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
 
 Prove that 
-\[|q - p|_W=|q - p|_\Sigma\] 
-for any $p,q\in\Sigma$.
-
-
-Conclude that the distance $|q - p_t|_W=|q - p|_\Sigma$
+\[|q - p_t|_W=|q - p|_W=|q - p|_\Sigma.\] 
 for any $t$.
+
 It follows that the curve 
 $$\gamma_t(\tau)=\left[
 \begin{aligned}
@@ -311,29 +304,11 @@ is a minimizing geodesic from $p_t$ to $q$ in the intrinsic metric of $W$.
 
 If $q$ is visible from $p_t$ for some $t$ then the line segment $[qp_t]$ intersects $\Sigma$ only at $q$.
 From above, 
-$\gamma_t$  coincides with the line segment $[qp_t]$ which is impossible.\qeds
+$\gamma_t$  coincides with the line segment $[qp_t]$.
+On the other hand $\gamma(t)$ lies on $\gamma_t$, a contradiction.\qeds
 
 This  observation was used by Anatoliy Milka
-to generalize Alexandrov's comparison theorem for convex surfaces \cite[see][]{milka-geod}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Corkscrew geodesic.}
-An example can be found among the surfaces of convex polyhedrons look like a vertical needle. 
-
-One can assume that 
-the non-degenerate intersections of such polyhedron, say $K$,
-with horizontal planes are triangles with parallel sides.
-
-On the surface of $K$ there are three almost vertical broken lines, 
-formed by the corresponding vertices of triangles.
-The polyhedron can be made in such a way that any minimizing geodesic from the top of $K$ to its bottom
-has to cross these lines in the cyclic order at nearly each edge, and the number of edges can be made arbitrary large. 
-(The projection of geodesic spirals around the origin.)\qeds
-
-The construction is due to 
-Imre B\'ar\'any, 
-Krystyna Kuiperberg 
-and Tudor Zamfirescu \cite[see][]{imre-kuiperberg-zamfirescu}.
+to prove a comparison theorem for convex surfaces \cite[see][]{milka-geod}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Long geodesic.}
@@ -344,20 +319,42 @@ We get two discs with non-negative curvature and large perimeter,
 say $\ell$.
 Note that the area of each disc is bounded above by $a$.
 
-Choose one of the discs $D$ and equip it with the intrinsic metric.
-Note that $D$ is non-negatively curved in the sense of Alexandrov.
-Denote by $p$ and $q$ be the points in $D$ which lie at the maximal distance from each other.
 
-Fix $\eps>0$.
-Fix a geodesic $[pq]$ in $D$.
-Show that if $\ell$ is large enough in terms of $\eps$,
-then 
-the distance from any point in $D$ to $[pq]$ is at most $\eps$
-and the curvature of $\eps$-neighborhood of $p$ in $D$
-is at least $\pi-\eps$.
+Choose one of the discs, say  $D$.
+Equip $D$ with the intrinsic metric further denoted as $|{*}-{*}|_D$.
+Denote by $p$ and $q$ be the points on the boundary $\partial D=\gamma$
+which lie at the maximal distance from each other.
+These points divide $\gamma$ in two arcs, say $\gamma_1$ and $\gamma_2$.
 
-By Gauss--Bonnet formula the total curvature of $\Sigma$ is $4\cdot\pi$.
-Since $\eps>0$ is arbitrary, we get that there are 4 point in $\Sigma$, each with curvature $\pi$
+\begin{center}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
+\lbl{47,3.5;$D$}
+\lbl[r]{0,3;$p$}
+\lbl[l]{73,3;$q$}
+\lbl[b]{27,8;$x$}
+\lbl[t]{28,-0.3;$y$}
+\lbl[l]{28.5,3.8;{\small $<\delta$}}
+\lbl[b]{43,7;$\gamma_1$}
+\lbl[t]{43,0;$\gamma_2$}
+\end{lpic}
+\end{center}
+
+Fix $\delta>0$.
+Show that if $\ell$ is large enough in terms of $\delta$,
+then for any point $x\in\gamma_1$
+there is a point $y\in\gamma_2$ such that $|x-y|_D<\delta$.
+
+Fix $\eps>0$ and assume that $\delta$ above is very small in terms of $\eps$.
+Use the latter statement to cut from $D$ two geodesic lenses with diameter at most $\eps$,
+with the sum of angles at least $\pi-\eps$,
+one is containing $p$ and the other $q$. 
+
+Do the same for the other disc.
+We obtain 4 nonoverlapping lenses in $\Sigma$ with diameter at most $\eps$.
+
+By Gauss--Bonnet formula, each lens has total curvature at least $\pi-\eps$ 
+and the total curvature of $\Sigma$ is $4\cdot\pi$.
+Since $\eps>0$ is arbitrary, we get that there are 4 points in $\Sigma$, each with curvature $\pi$
 and the remaining part of $\Sigma$ is flat.
 
 \begin{wrapfigure}{o}{21 mm}
@@ -368,7 +365,8 @@ and the remaining part of $\Sigma$ is flat.
 It remains to show that any surface with this property 
 is isometric to the surface of a tetrahedron with equal opposite edges.
 To do this cut $\Sigma$ along three geodesics which connect one singular point to the remaining three,
-develop the obtained flat surface on the plane and think (also look at the diagram).\qeds
+develop the obtained flat surface on the plane and think;
+also look at the diagram.\qeds
 
 The problem was suggested by Arseniy Akopyan.
 
@@ -416,18 +414,32 @@ to bound the total curvature
 of a geodesic on a convex surface \cite[see][]{liberman}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Simple geodesic.}
+\begin{wrapfigure}{o}{41 mm}
+\begin{lpic}[t(-3 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/bangert(1)}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Simple geodesic.} 
+Look at two combinatoric types of self intersections shown on the diagram.
+One of them can and the other can not appear as self intersections of geodesic on an unbounded convex surface.
+Try to determine which is which before reading further.
+
+\medskip
+
 Let $\gamma$ be a two-sided infinite geodesic in $\Sigma$.
 The following is the key statement in the proof.
 
-\parit{Claim.}
-The geodesic $\gamma$ contains at most one simple loop.
+
+
+
+\parbf{Claim.}
+\textit{The geodesic $\gamma$ contains at most one simple loop.}
 \medskip
 
 To prove the claim use the following observations.
 \begin{itemize}
 \item The integral curvature $\omega$ of $\Sigma$ cannot exceed $2\cdot\pi$.
-\item If $\phi$ is the angle at the base of a simple geodesic loop then the integral curvature surrounded by the loop equals to $\pi+\phi$.
+\item If $\phi$ is the angle at the base of a simple geodesic loop then the integral curvature surrounded by the loop equals to $\pi+\phi$; in particular there are no obtuse loops.
 \end{itemize}
 
 Once the claim is proved, 
@@ -456,11 +468,11 @@ Victor Bangert \cite[see Cor. 2 in][]{bangert}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Immersed surface.}
 Let $\ell$ be a linear function which vanishes on $\Pi$ 
-and is positive in $\Sigma$.
+and is positive on $\Sigma$.
 
-Let $z$ be a point of maximum of $\ell$ on $\Sigma$;
-set $s_0=\ell(z)$.
-Given $s<s_0$, denote by $\Sigma_s$ the connected component of $z$ in $\Sigma\cap\ell^{-1}([s,s_0])$.
+Let $z_0$ be a point of maximum of $\ell$ on $\Sigma$;
+set $s_0=\ell(z_0)$.
+Given $s<s_0$, denote by $\Sigma_s$ the connected component of $z_0$ in $\Sigma\cap\ell^{-1}([s,s_0])$.
 Note that for all $s$ sufficiently close to $s_0$
 we have
 \begin{itemize}
@@ -527,12 +539,13 @@ Keith Burns,
 Michael Brin 
 and Yakov Pesin.
 
+Here is its motivation.
 Assume $\Sigma$ be a closed surface with non-positive curvature which is not flat.
 The space $\Gamma$ of all unit speed geodesics $\gamma\:\RR\to\Sigma$ can be identified with the unit tangent bundle $\UU\Sigma$. 
 In particular $\Gamma$ comes with a natural choice of measure.
 Denote by $\Gamma_0\subset \Gamma$ the set of geodesics which run in the set of zero curvature all the time.
 It is expected that $\Gamma_0$ has vanishing measure.
-In all known examples $\Gamma_0$ contains only periodic geodesics in only finitely many homotopy classes, see \cite{hertz}.
+In all known examples $\Gamma_0$ contains only periodic geodesics in only finitely many homotopy classes \cite[read more in][]{hertz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Saddle surface.}
@@ -547,7 +560,7 @@ Since the boundary of $\Sigma$ projects injectively to a closed convex curve in 
 the intersection of $\Pi\cap\partial \Sigma$ has at most 2 points,
 a contradiction --- these are the only endpoints of the tree $\Pi\cap\Sigma$.
 
-It follows that $\Pi\cap\Sigma$ is a curve; the late contradicts that it has cross-point at $p$.\qeds
+It follows that $\Pi\cap\Sigma$ has no cross-points, a contradiction.\qeds
 
 The proof above is based of the observation 
 that for any plane $\Pi$,
@@ -561,7 +574,7 @@ see \cite{shefel} and references there in.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Asymptotic line.}
 Arguing by contradiction, assume that the projection $\bar\gamma$
-of $\gamma$ on $x y$-plane is star shaped with respect to the origin.
+of $\gamma$ on $(x, y)$-plane is star shaped with respect to the origin.
 
 Consider the function 
 $$h(t)=(d_{\bar\gamma(t)}f)(\gamma(t)).$$
@@ -572,7 +585,7 @@ The problem is discussed by Dmitri Panov in \cite{panov-curves}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{A minimal surface.}
-Without loss of generality we may assume that the sphere is centered at $0\in\RR^3$.
+Without loss of generality we may assume that the sphere is centered at the origin of $\RR^3$.
 
 Consider the restriction $h$ of the function $x\mapsto |x|^2$ to the surface $\Sigma$.
 Prove that $\Delta_\Sigma h\le 4$ and apply the divergence theorem for $\nabla_\Sigma h$.
@@ -614,7 +627,7 @@ and we only know the distance, say $r$,
 from the center to $\Sigma$,
 then the optimal bound is $\pi\cdot(1-r^2)$.
 It was conjectured for about 40 years and proved by Simon Brendle and Pei-Ken Hung in \cite{brende-hung};
-their proof is quite elementary.
+their proof is based on a similar idea and quite elementary.
 Earlier Herbert Alexander, 
 David Hoffman
 and Robert Osserman 
@@ -640,13 +653,13 @@ therefore its integral intrinsic curvature has to be $2{\cdot}\pi$.
 If the Gauss curvature is positive at some point of $\gamma'$, 
 then total intrinsic curvature of $\gamma'$ has to be $<2{\cdot}\pi$, a contradiction.
 
-Now prove that $\gamma'$ is an asymptotic line.
-(Assume that the asymptotic direction goes transversely to $\gamma'(t)$ and conclude $\gamma(t)\notin\partial K$.)
+Prove that $\gamma'$ is an asymptotic line.
+(Hint: assume that the asymptotic direction goes transversely to $\gamma'(t)$ and conclude $\gamma(t)\notin\partial K$.)
 
 Without loss of generality, we can assume that the length of $\gamma$ is $2{\cdot}\pi$ and its intrinsic curvature is $1$ at all points.
 Therefore, as the space curve,
 $\gamma'$ has to be a curve with constant curvature $1$ and it should be closed.
-Any such curve is congruent to a flat circle.\qeds
+Any such curve is congruent to a unit circle.\qeds
 
 It is not known if $\Omega'$ is congruent to $\Omega$.
 
@@ -683,11 +696,11 @@ No closed curve of these types can be contractible.\qeds
 
 
 
- I know this problem 
+I learned this problem 
 from the book of Mikhael Gromov \cite[see][]{gromov-MetStr},
 where it is attributed to Y. Colin de Verdi\`ere.
 I am not aware of any solutions 
-which do not admit a foliation by geodesics.
+which would produce a generic example.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{The last problem of Poincar\'e.}
@@ -752,8 +765,8 @@ Prove that
 These two statements contradict each other. \qeds
 
 
-The problem was proposed by Henri Poincar\'e \cite[see][]{poincare}
-and solved by George Birkhoff in \cite{birkhoff}.
+The question was asked by Henri Poincar\'e \cite[see][]{poincare}
+and answered by George Birkhoff in \cite{birkhoff}.
 
 
 
