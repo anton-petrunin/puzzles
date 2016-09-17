@@ -2,10 +2,9 @@
 \chapter{Curvature free differential geometry}
 \chaptermark{Curvature free}
 
-This chapter we consider mostly Riemannian manifolds without curvature bounds.
-
-The reader should be familiar with main technique including 
-some symplectic geometry, in particular that geodesic flow preserves the volume on the tangent bungle. 
+The reader should be familiar 
+with the notion of smooth manifold, 
+Riemannian metric and symplectic form.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Besikovitch inequality}
@@ -23,7 +22,7 @@ Set
 \[A_i=\set{(x_1,x_2,\dots,x_m)\in[0,1]^m}{x_i=0}.\]
 
 Consider functions $f_i\:[0,1]^m\to\RR$ defined by
-$f_i(x)=\dist_{A_i}x$.
+$f_i(x)=\dist_{A_i}(x)$.
 Note that 
 the map $\bm{f}\:([0,1]^m,g)\to\RR^m$
 defined as
@@ -57,12 +56,12 @@ The minimal surface in Riemannian manifolds are defined on page \pageref{minimal
 Consider $\mathbb{S}^2\times \mathbb{S}^2$ equipped with a Riemannian metric $g$ 
 which is $C^\infty$-close to the product metric. 
 Prove that there is a conformally equivalent metric $\lambda\cdot g$ and re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
-such that each sphere $\mathbb{S}^2\times x$ and $y\times \mathbb{S}^2$ forms a minimal surface 
+such that each sphere $x\times\mathbb{S}^2$ and $\mathbb{S}^2\times y$ forms a minimal surface 
 in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \end{pr}
 
 
-The solution requires pseudo-holomorphic curves 
+The expected solution requires pseudo-holomorphic curves 
  introduced by Mikhael Gromov in \cite{gromov-pseudoholomorphic}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,8 +76,8 @@ $M$ be a complete Riemannian manifold which admits a non-constant
 convex function. Prove that $M$ has an infinite volume.
 \end{pr}
 
-The Liouville's theorem 
-which states that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form should help to solve this problem.
+The Liouville's theorem should help to solve this problem;
+it states that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,9 +90,8 @@ It is uniquely defined by the following properties:
 \item The natural projection $\tau\:\T M\to M$ is a Riemannian submersion.
 \item The metric on each tangent space $\T_p\subset \T M$ is the Euclidean metric induced by $g$.
 \item Assume $\gamma(t)$ is a curve in $M$ and $v(t)\in\T_{\gamma(t)}$ is a parallel vector field along $\gamma$. 
-Note that $v(t)$ forms a curve in $\T M$ 
-and $\T_{\gamma(t)}M$ forms a submanifold in $\T M$.
-For the Sasaki metric, we have $\dot v(t)\perp \T_{\gamma(t)}M$ for any $t$.
+Note that $v(t)$ forms a curve in $\T M$.
+For the Sasaki metric, we have the curve $\dot v(t)$ is perpendicular to the fiber $\T_{\gamma(t)}$ for any $t$.
 \end{enumerate}
 
 A more constructive way to describe Sasaki metric is given by identifying 
@@ -109,7 +107,8 @@ where $X^V,X^H\in\T_pM$ denotes the vertical and horizontal components of $X\in\
 \begin{pr}{}{Sasaki metric}\label{pr:Sasaki metric}
 Consider the tangent bundle $\T \mathbb{S}^2$ 
 equipped with Sasaki metric $\hat g$ induced by a Riemannian metric $g$ on $\mathbb{S}^2$.
-Show that $(\T \mathbb{S}^2, \hat g)$ lies on bounded Gromov--Hausdorff distance to the ray.
+Show that, in the sense of Gromov--Hausdorff,
+the space $(\T \mathbb{S}^2, \hat g)$ lies on bounded distance to the ray $\RR_+$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -132,6 +131,8 @@ for any closed surface $S$ in $\TT^3$ which does not bound.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Normal exponential map\easy}
+
+\label{page:Normal exponential map}
 
 Let $(M,g)$ be a Riemannian manifold;
 denote by $\T M$ the tangent bundle over $M$ and by $\T_p=\T_pM$ the tangent space at point $p\in M$.
@@ -232,13 +233,17 @@ such that
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \subsection*{Convex hypersurface}
 
+Recall that a subset $K$ of Riemanninan manifold is called \index{convex set in Riemannian manifold}\emph{convex} if every minimizing geodesic connecting two  points in $K$ completely lies in $K$. 
+
 \begin{pr}{}{Convex hypersurface}\label{Convex hypersurface}
-Let $M$ be a hypersurface 
+Let $M$ be a totally geodesic hypersurface 
 in a closed Riemannian $m$-dimensional manifold $W$.
-Assume $M$ is geodesic and convex
-and its injectivity radius is at least $1$.
+Assume that the injectivity radius of $M$ is at least $1$
+and it forms a convex set in $W$.
 Show that there is a point in $W$  which lies on a distance at least  
 $\frac{1}{2\cdot(m+1)}$ from $M$.
 \end{pr}
@@ -257,11 +262,11 @@ the event
 \[|f\circ\gamma(0)-f\circ\gamma(1)|>\eps\]
 happens with probability at most $\eps$.
 \end{itemize}
-Here {}\emph{random} means that $\gamma'(0)$ takes the random value in the unit tangent bundle of $M$ for the natural choice of distribution.
+Here {}\emph{random} means that $\gamma'(0)$ takes the random value in the unit tangent bundle of $M$ for the natural choice of probability distribution.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Bounded curvature}
+\subsection*{Bounded geometry}
 
 Denote by $\mathcal{R}$ the space of 
 all Riemannian metrics on $\mathbb S^5$
@@ -292,7 +297,7 @@ for any family $g_t$ as above
 \Phi(\vol(g_1)).\]
 \end{pr}
 
-The solution requires Novikov theorem on the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$  for
+The expected solution requires Novikov theorem on the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$  for
 $m\ge 5$. 
 A detailed proof of this theorem can be found in \cite{nabutovsky-NovThm}.
 
@@ -326,7 +331,7 @@ In particular $\lambda_p\ne0$ for any $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 It follows that $\omega$ defines symplectic structure on $\mathbb{S}^2\times\mathbb{S}^2$
 and $\mathrm{J}$ is its pseudo-complex structure.
 It remains to take the re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
-so that vertical and horizontal spheres will form pseudo-holomorphic curves in the homology classes of $\mathbb{S}^2\times x$ and $x\times \mathbb{S}^2$.
+so that vertical and horizontal spheres will form pseudo-holomorphic curves in the homology classes of $x\times \mathbb{S}^2$ and $\mathbb{S}^2\times y$.
 \qeds
  
 \parit{Comments.} 
@@ -417,15 +422,15 @@ $$\vol_3[\partial(\Delta\times \Delta)]=2\cdot\area \Delta\cdot\length \partial 
 The boundary $\partial(\Delta\times \Delta)$ homeomorphic to $\mathbb{S}^3$
 and the restriction of the involution $(x,y)\mapsto (\iota(x),\iota(y))$ has the needed property.
 
-It remains to smooth $\partial(\Delta\times \Delta)$.
+It remains to smooth the boundary $\partial(\Delta\times \Delta)$.
 \qeds
 
 This example is given by Christopher Croke in \cite{croke}.
 
 It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
 
-Note that according to systolic inequality, 
-the involution $\iota$ above cannot be made isometric \cite[see][]{gromov-filling}.
+By systolic inequality \cite[see][]{gromov-filling}, 
+the involution $\iota$ above cannot be made isometric.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{r}{29 mm}
@@ -486,14 +491,9 @@ which sets can be avoided by such images.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Symplectic squeezing in the torus.}
-Equip $\RR^4$ with $(x_1,y_1,x_2,y_2)$-coordinates
-so that 
-\[\omega=dx_1\wedge dy_1+dx_2\wedge dy_2\]
-is the symplectic form. 
-
 The embedding will be given as a composition of a linear symplectomorphism $\lambda$ 
 with the quotient map $\phi\:\RR^4\to \TT^2\times\RR^2$ by the integer $(x_1,y_1)$-lattice.
-Clearly $\phi\circ\lambda$ preserves the symplectic structure,
+The composition $\phi\circ\lambda$ allways preserves the symplectic structure;
 it remains to find $\lambda$ such that the restriction $\phi\circ\lambda|_\Omega$
 is injective.
 
@@ -516,7 +516,7 @@ This construction is given
 by Larry Guth in \cite{guth-symplectic}
 and attributed to Leonid Polterovich.
 
-Note that according to the Gromov's non-squeezing theorem in \cite{gromov-pseudoholomorphic}, 
+Note that according to the Gromov's non-squeezing theorem \cite[see][]{gromov-pseudoholomorphic}, 
 an analogous statement with $\CC\times \DD$ as the target does not hold, here $\DD\subset \CC$ is the open disc with the induced symplectic structure.
 In particular, it shows that
 the projection of $\lambda(\Omega)$ as above 
@@ -541,21 +541,25 @@ It remains to prove that any local isometry between complete connected Riemannia
 \parbf{Volume of tubular neighborhoods.}
 Let us denote by $\mathrm{N} M$ and $\T M$ the normal and tangent bundle of $M$ in $\RR^m$.
 
-Consider the normal exponential map $\exp_M\:\mathrm{N} M\to\RR^m$
-and denote by $J_V$ its Jacobian at $V\in \mathrm{N}_pM$.
+Consider the normal exponential map $\exp_M\:\mathrm{N} M\to\RR^m$ [defined on page~\pageref{page:Normal exponential map}]
+and denote by $J_V$ its Jacobian at $V\in \mathrm{N}_p=\mathrm{N}_pM$.
 Note that for all small $\eps>0$, we have
-\[\vol B_\eps(M)=\int\limits_M d_p\vol_m\cdot\int\limits_{B(0,r)_{\mathrm{N}_pM}}J_V\cdot d_V\vol_{n-m}.\leqno{({*})}\]
+\[\vol B_\eps(M)=\int\limits_M d_p\vol_m\cdot\int\limits_{B(0,r)_{\mathrm{N}_p}}J_V\cdot d_V\vol_{n-m},\leqno{({*})}\]
+where $B(0,r)_{\mathrm{N}_p}$ denotes the ball in $\mathrm{N}_p$
 
 Set $m=\dim M$.
 Given $p\in M$, 
 denote by $s_p\:\T_p\times \T_p\to \mathrm{N}_p$
-the second fundamental form of $M$.
+the second fundamental form of $M$ [defined on page~\pageref{page:second fundamental form}].
 Recall that the curvature tensor of $M$ at $p$ can be expressed the following way
 \[R_p(X\wedge Y), V\wedge W\rangle 
 =\langle s_p(X,W), s_p(Y,V)\rangle-\langle s_p(X,V), s_p(Y,W)\rangle.\]
 
 Given $V\in \mathrm{N}_p M$,
-express $J_V$ in terms of $\<s_p(X,Y),V\>$.
+express $J_V$ in terms of 
+$|V|$, 
+the dimension $m$
+and the real-valued quadratic form  $s_V(X,Y)=\<s_p(X,Y),V\>$.
 Show that for small $r$ the integral
 \[v(r)=\int\limits_{B(0,r)_{\mathrm{N}_pM}}J_V\cdot d_V\vol_{n-m}\]
 is a polynomial 
@@ -598,7 +602,7 @@ have product metrics.
 \item Any vertical segment $x\times[0,1]$ has length $\tfrac 12$.
 \item One of the boundary component has length $\eps$.
 \item The other boundary component has length $2\cdot m\cdot \eps$, 
-where $m$ is the number of edges in $T$.
+where $m$ is the number of edges in the tree $T$.
 \end{itemize}
 Equip $T$ with a length-metric so that each edge has length $\eps$
 and glue the long boundary component of the cylinder to $T$ by piecewise isometry so that the resulting space is homeomorphic to disc and the tree corresponds to it-self.
@@ -629,20 +633,30 @@ Choose $t_0\in [0,1]$ such that
 \[\length\left(\gamma_0|_{[0,t_0]}\right)=L+\delta\]
 Let $\sigma$ be a minimizing geodesic from $\gamma(t_0)$
 to $p$.
-Note that $\gamma_0$ is homotopic to the joint 
+Note that $\gamma_0$ is homotopic to the concatenation 
 \[\gamma_0'=\gamma_0|_{[0,t_0]}*\sigma*\bar\sigma*\gamma|_{[t_0,1]},\]
 where $\bar\sigma$ denotes the backward parametrization of $\sigma$.
 
+
+\begin{wrapfigure}{o}{36 mm}
+\begin{lpic}[t(-1 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/shortening-homotopy(1)}
+\lbl[bl]{32,20;$\gamma(t_0)$}
+\lbl[t]{21,0;$p$}
+\lbl[l]{27,10;$\sigma$}
+\lbl[lt]{9,17;$\lambda_1$}
+\end{lpic}
+\end{wrapfigure}
+
 Consider the loop $\lambda_0$ at $p$
-formed by joint of $\gamma|_{[0,t_0]}$ and $\sigma$.
+formed by the concatenation of $\gamma|_{[0,t_0]}$ and $\sigma$.
 Applying a curve shortening process to $\lambda_0$, 
-we get a curve shortening homotopy $\lambda_t$
+we get a  homotopy $\lambda_t$
 rel. its ends 
 from the loop $\lambda_0$ to a geodesic loop $\lambda_1$ at $p$.
 From above, 
 \[\length\lambda_1\le L-D.\]
 
-The joint $\gamma_t=\lambda_t*\bar\sigma*\gamma|_{[t_0,1]}$
+The concatenation $\gamma_t=\lambda_t*\bar\sigma*\gamma|_{[t_0,1]}$
 is a homotopy
 from $\gamma_0'$ to an other curve $\gamma_1$.
 From the construction it is clear that 
@@ -659,7 +673,7 @@ and
 \\ &=\ell_0 -\delta.
 \end{align*}
 Repeating the procedure few times we get we get curves $\gamma_2$, $\gamma_3,\dots,\gamma_n$
-joint by the needed homotopies so that 
+connected by the needed homotopies so that 
 $\ell_{i+1}\le\ell_i-\delta$ and $\ell_n< L+\delta$,
 where $\ell_i=\length\gamma_i$.
 
@@ -677,6 +691,14 @@ by Florent Balachev, Christopher Croke and Mikhail Katz \cite[see][]{balacheff-c
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Convex hypersurface.}
+Let us define the cone construction.
+Let $\Delta$ be a simplex and $\Delta_v$ facet of $\Delta$ opposite to the vertex $v$.
+Assume $f_v\:\Delta_v\to M$ is a map and $x\in M$ such that $f_v(\Delta_v)\subset B(x,1)$.
+Given $w\in \Delta_v$ denote by $\gamma_w$ the (necessary unique) minimizing geodesic path from $x$ to  $f_v(w)$.
+Then the map $f\:\Delta\to M$ defined as 
+\[f\:(1-t)\cdot v+t\cdot w\mapsto \gamma_w(t)\] 
+is called \index{cone over map}\emph{cone over $f_v$} with vertex $x$. 
+
 Let $h$ be the maximal distance from points in $W$ to $M$.
 
 Fix a fine triangulation of $W$ 
@@ -696,7 +718,7 @@ if $v$ and $w$ are the vertices of one simplex,
 then
 \[|v'-w'|_M<2\cdot h+\eps.\]
 
-If $\tfrac{1}{2\cdot(m+1)}>h$, take $\eps<\tfrac{1}{2\cdot(m+1)}-h$.
+If $\tfrac{1}{2\cdot(m+1)}>h$, fix $\eps<\tfrac{1}{2\cdot(m+1)}-h$.
 Let us extend the map $v\mapsto v'$ 
 to a continuous 
 map $W\to M$.
@@ -704,7 +726,7 @@ The map is already defined on $\tau_0$.
 Using the cone construction we can extend it to $\tau_1$;
 we can do this since the distance between vertices in one simplex are below injectivity radius of $M$.
 Repeat the cone construction recursively, to extend the map to $\tau_2,\dots,\tau_{m+1}=\tau$;
-some distance estimates are needed here.
+the distance estimates are needed in this construction.
 
 It follows that fundamental class of $M$ vanish in the homology ring of $M$, 
 a contradiction. 
@@ -760,13 +782,13 @@ of so called
 introduced by Vitali Milman.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Bounded curvature.}
+\parbf{Bounded geometry.}
 Show that there is an algorithm to estimate the Gromov--Hausdorff distance between two Riemannian manifolds given in any reasonable way.
 
 Show that if two manifolds with bounded curvature are sufficiently close to each other then they are diffeomorphic.
 
 Now assume contrary;
-that is for any metric $g_1\in \mathcal{R}$ there is a path $g_t$ in $\mathcal{R}$
+that is, for any metric $g_1\in \mathcal{R}$ there is a path $g_t$ in $\mathcal{R}$
 connecting the canonical metric $g_0$ to $g_1$ such that 
 \[\vol g_t\le \Phi(\vol g_1).\]
 
