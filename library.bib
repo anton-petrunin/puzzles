@@ -1,12 +1,12 @@
 %RU
 
 @book{alexandrov1948,
-    AUTHOR = {Александров, А. Д.},
-     TITLE = {Внутренняя геометрия выпуклых поверхностей},
- PUBLISHER = {ОГИЗ, М.-Л.},
-      YEAR = {1948},
-     pagetotal = {387},
-   MRCLASS = {52.0X},
+AUTHOR = {Александров, А. Д.},
+TITLE = {Внутренняя геометрия выпуклых поверхностей},
+PUBLISHER = {ОГИЗ, М.-Л.},
+YEAR = {1948},
+%pagetotal = {387},
+MRCLASS = {52.0X},
 language={russian},
 hyphenation={russian}
 }
@@ -200,7 +200,7 @@ hyphenation={russian}
       NOTE = {Revised reprint of the 1975 original},
  PUBLISHER = {AMS Chelsea Publishing, Providence, RI},
       YEAR = {2008},
-     PAGES = {x+168},
+     %PAGES = {x+168},
       ISBN = {978-0-8218-4417-5},
    MRCLASS = {53C20},
   MRNUMBER = {2394158},
@@ -212,7 +212,7 @@ hyphenation={russian}
       NOTE = {Thirty lectures on classic mathematics},
  PUBLISHER = {American Mathematical Society, Providence, RI},
       YEAR = {2007},
-     PAGES = {xvi+463},
+     %PAGES = {xvi+463},
       ISBN = {978-0-8218-4316-1},
    MRCLASS = {00A05 (00A08 51-02)},
   MRNUMBER = {2350979},
@@ -227,7 +227,7 @@ MRREVIEWER = {Rade {\v{Z}}ivaljevi{\'c}},
       NOTE = {Translated by P. Nem{\'e}nyi},
  PUBLISHER = {Chelsea Publishing Company, New York, N. Y.},
       YEAR = {1952},
-     PAGES = {ix+357},
+     %PAGES = {ix+357},
    MRCLASS = {48.0X},
   MRNUMBER = {0046650},
 }
@@ -239,7 +239,7 @@ MRREVIEWER = {Rade {\v{Z}}ivaljevi{\'c}},
               With the editorial assistance of Vladimir Y. Rovenski},
  PUBLISHER = {Birkh\"auser Boston, Inc., Boston, MA},
       YEAR = {2006},
-     PAGES = {xiv+206},
+     %PAGES = {xiv+206},
    MRCLASS = {53-01 (53A04 53A05 53C45)},
   MRNUMBER = {2208981},
 MRREVIEWER = {Wolfgang K{\"u}hnel},
@@ -580,13 +580,18 @@ url={math.bard.edu/~mbelk/}
     Zbl = {1021.52012}
 }
 
-@Misc{bing,
-    Author = {R. H. {Bing}},
-    Title = {{Some aspects of the topology of 3-manifolds related to the Poincar\'e conjecture.}},
-    Year = {1964},
-    Language = {English},
-    HowPublished = {{Lect. on Modern Math. 2, 93-128 (1964).}},
-    Zbl = {0126.39104}
+
+@incollection {bing,
+    AUTHOR = {Bing, R. H.},
+     TITLE = {Some aspects of the topology of {$3$}-manifolds related to the
+              {P}oincar\'e conjecture},
+ BOOKTITLE = {Lectures on modern mathematics, {V}ol. {II}},
+     PAGES = {93--128},
+ PUBLISHER = {Wiley, New York},
+      YEAR = {1964},
+   MRCLASS = {54.78},
+  MRNUMBER = {0172254},
+MRREVIEWER = {A. H. Wallace},
 }
 
 @article {bing-length-0,
@@ -749,17 +754,17 @@ MRREVIEWER = {Steen Markvorsen},
     VOLUME = {81},
  PUBLISHER = {Soci\'et\'e Math\'ematique de France, Paris},
       YEAR = {1981},
-     PAGES = {148},
+     %PAGES = {148},
    MRCLASS = {53C30 (57R15)},
   MRNUMBER = {619537 (83m:53070)},
 MRREVIEWER = {K. Grove},
 }
 
-@Book{bbi,
+@book{bbi,
     Author = {D. {Burago} and Yu. {Burago} and S. {Ivanov}},
     Title = {{A course in metric geometry.}},
     ISBN = {0-8218-2129-6/hbk},
-    pagetotal = {xiv + 415},
+    %pagetotal = {xiv + 415},
     Year = {2001},
     Publisher = {Providence, RI: American Mathematical Society (AMS)},
     Language = {English},
@@ -767,11 +772,11 @@ MRREVIEWER = {K. Grove},
     Zbl = {0981.51016}
 }
 
-@Book{burago-zalgaller,
+@book{burago-zalgaller,
     Author = {Yu. {Burago} and V. {Zalgaller}},
     Title = {{Geometric inequalities.}},
     ISBN = {3-540-13615-0},
-    pagetotal = {xiv + 331},
+    %pagetotal = {xiv + 331},
     Year = {1988},
     Publisher = {Berlin etc.: Springer-Verlag},
     Language = {English},
@@ -784,7 +789,7 @@ MRREVIEWER = {K. Grove},
      TITLE = {A first course in algebraic topology},
  PUBLISHER = {Cambridge University Press, Cambridge-New York},
       YEAR = {1980},
-     PAGES = {viii+269},
+     %PAGES = {viii+269},
    MRCLASS = {57-01 (55-01)},
   MRNUMBER = {586943},
 MRREVIEWER = {Jo{\v{z}}e Vrabec},
@@ -1090,14 +1095,18 @@ MRREVIEWER = {L. M. Kelly},
     Zbl = {0594.53034}
 }
 
-@Misc{falconer,
-    Author = {K. J. {Falconer}},
-    Title = {{The geometry of fractal sets.}},
-    Year = {1985},
-    Language = {English},
-    HowPublished = {{Cambridge Tracts in Mathematics, 85. Cambridge etc.: Cambridge University Press. XIV, 162 p. (1985).}},
-    MSC2010 = {28A75 28-02},
-    Zbl = {0587.28004}
+@book {falconer,
+    AUTHOR = {Falconer, K. J.},
+     TITLE = {The geometry of fractal sets},
+    SERIES = {Cambridge Tracts in Mathematics},
+    VOLUME = {85},
+ PUBLISHER = {Cambridge University Press, Cambridge},
+      YEAR = {1986},
+     %PAGES = {xiv+162},
+      ISBN = {0-521-25694-1; 0-521-33705-4},
+   MRCLASS = {28-02 (28A99 60J65)},
+  MRNUMBER = {867284},
+MRREVIEWER = {K. E. Hirst},
 }
 
 @Article{FMR,
@@ -1243,14 +1252,14 @@ MRREVIEWER = {L. M. Kelly},
 MRREVIEWER = {P. Erd{\"o}s},
 }
 
-@Book{GKZ,
+@book{GKZ,
     AUTHOR = {Gelfand, I. M. and Kapranov, M. M. and Zelevinsky, A. V.},
      TITLE = {Discriminants, resultants and multidimensional determinants},
     SERIES = {Modern Birkh\"auser Classics},
       NOTE = {Reprint of the 1994 edition},
  PUBLISHER = {Birkh\"auser Boston, Inc., Boston, MA},
       YEAR = {2008},
-     pagetotal = {x+523},
+     %pagetotal = {x+523},
       ISBN = {978-0-8176-4770-4},
    MRCLASS = {14N05 (13D25 14M25 15A15 52B20)},
   MRNUMBER = {2394437 (2009a:14065)},
@@ -1291,7 +1300,7 @@ MRREVIEWER = {P. Erd{\"o}s},
 
 @article {green,
     AUTHOR = {Green, L. W.},
-     TITLE = {A theorem of {E}. {H}opf},
+     TITLE = {A theorem of {E}. {H}opf\,},
    JOURNAL = {Michigan Math. J.},
   FJOURNAL = {The Michigan Mathematical Journal},
     VOLUME = {5},
@@ -1309,7 +1318,7 @@ AUTHOR = {Gromoll, D. and Klingenberg, W. and Meyer, W.},
     SERIES = {Lecture Notes in Mathematics, No. 55},
  PUBLISHER = {Springer-Verlag, Berlin-New York},
       YEAR = {1968},
-     PAGES = {vi+287},
+     %PAGES = {vi+287},
    MRCLASS = {53.72},
   MRNUMBER = {0229177 (37 \#4751)},
 MRREVIEWER = {J. W. Smith},
@@ -1414,7 +1423,8 @@ MRREVIEWER = {M. Rees},
     ISBN = {3-540-12177-3},
     Year = {1986},
     Language = {English},
-    HowPublished = {{Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge, Bd. 9. Berlin etc.: Springer-Verlag. ix+363 pp.; DM 148.00 (1986).}},
+    Publisher ={Berlin etc.: Springer-Verlag.},
+    %HowPublished = {{Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge, Bd. 9. Berlin etc.: Springer-Verlag. ix+363 pp.; DM 148.00 (1986).}},
     MSC2010 = {53-02 53C42 58-02 58J99 32C99 35A99},
     Zbl = {0651.53001}
 }
@@ -1435,12 +1445,12 @@ MRREVIEWER = {M. Rees},
     Zbl = {0820.53035}
 }
 
-@Book{gromov-MetStr,
+@book{gromov-MetStr,
     Author = {M. {Gromov}},
     Title = {{Metric structures for Riemannian and non-Riemannian spaces.}},
     Edition = {3rd printing},
     ISBN = {978-0-8176-4582-3/pbk},
-    pagetotal = {xx + 585},
+    %pagetotal = {xx + 585},
     Year = {2007},
     Publisher = {Basel: Birkh\"auser},
     Language = {English},
@@ -1631,7 +1641,7 @@ hyphenation={german}
     Zbl = {1071.58002}
 }
 
-@article {hopf,
+@article {hopf-conjugate,
     AUTHOR = {Hopf, E.},
      TITLE = {Closed surfaces without conjugate points},
    JOURNAL = {Proc. Nat. Acad. Sci. U. S. A.},
@@ -1995,14 +2005,6 @@ AUTHOR = {Liberman, J.},
   MRNUMBER = {0010994 (6,100g)},
 }
 
-@Article{lytchak-wenger,
-Author={Lytchak, A. and Wenger, S.},
-Title ={Intrinsic structure of minimal discs in metric spaces},
-JOURNAL ={preprint},
-YEAR = {2016}
-}
-
-
 @Article{micallef-moore,
     Author = {M. {Micallef} and J. {Moore}},
     Title = {{Minimal two-spheres and the topology of manifolds with positive curvature on totally isotropic two-planes.}},
@@ -2178,7 +2180,7 @@ hyphenation={german}
       NOTE = {With an appendix by M. Gromov},
  PUBLISHER = {Springer-Verlag, Berlin},
       YEAR = {1986},
-     PAGES = {viii+156},
+     %PAGES = {viii+156},
       ISBN = {3-540-16769-2},
    MRCLASS = {46B20 (52A22 53C21 60B11)},
   MRNUMBER = {856576}
@@ -2246,11 +2248,11 @@ hyphenation={german}
     Zbl = {34.0533.02}
 }
 
-@Book{ovsienko-tabachnikov,
+@book{ovsienko-tabachnikov,
     Author = {V. {Ovsienko} and S. {Tabachnikov}},
     Title = {{Projective differential geometry old and new. From the Schwarzian derivative to the cohomology of diffeomorphism groups.}},
     ISBN = {0-521-83186-5},
-    pagetotal = {xi + 249},
+    %pagetotal = {xi + 249},
     Year = {2005},
     Publisher = {Cambridge: Cambridge University Press},
     Language = {English},
@@ -2424,13 +2426,26 @@ MRREVIEWER = {Zhongmin Shen},
        URL = {http://dx.doi.org/10.4169/amer.math.monthly.122.03.264},
 }
 
+@article{petrunin-yashinsky,
+    AUTHOR = {Petrunin, A. and Yashinski, A.},
+     TITLE = {Piecewise isometric mappings},
+   JOURNAL = {St. Petersburg Math. J.},
+    VOLUME = {27},
+      YEAR = {2016},
+    NUMBER = {1},
+     PAGES = {155--175},
+      ISSN = {0234-0852},
+   MRCLASS = {53C45 (26A16)},
+  MRNUMBER = {3443270},
+}
+
 @book {pogorelov,
     AUTHOR = {Pogorelov, A.},
      TITLE = {Hilbert's fourth problem},
  PUBLISHER = {V. H. Winston \& Sons, Washington, D.C.; A Halsted Press Book,
               John Wiley \& Sons, New York-Toronto, Ont.-London},
       YEAR = {1979},
-     pagetotal = {vi+97},
+     %pagetotal = {vi+97},
       ISBN = {0-470-26735-6},
    MRCLASS = {53C70 (51K05)},
   MRNUMBER = {550440 (80j:53066)},
@@ -2511,7 +2526,7 @@ hyphenation={german}
 @thesis{sahovic,
     Author = {V. {\v Sahovi\'c}},
     Title = {{Approximations of Riemannian manifolds with linear curvature constraints.}},
-    Pagetotal = {62},
+    %Pagetotal = {62},
     Year = {2009},
     type = {Thesis},
     institution={Univ. M\"unster, },
@@ -2678,7 +2693,7 @@ date={1991}
       NOTE = {Edited by Silvio Levy},
  PUBLISHER = {Princeton University Press, Princeton, NJ},
       YEAR = {1997},
-     PAGES = {x+311},
+     %PAGES = {x+311},
       ISBN = {0-691-08304-5},
    MRCLASS = {57M50 (53A35 57M25 57M60 57N10)},
   MRNUMBER = {1435975 (97m:57016)},
@@ -2812,7 +2827,7 @@ MRREVIEWER = {Athanase Papadopoulos},
      TITLE = {Mathematical puzzles: a connoisseur's collection},
  PUBLISHER = {A K Peters, Ltd., Natick, MA},
       YEAR = {2004},
-     PAGES = {xii+163},
+     %PAGES = {xii+163},
       ISBN = {1-56881-201-9},
    MRCLASS = {00A08 (00A07)},
   MRNUMBER = {2034896},
@@ -2978,6 +2993,23 @@ language={german},
    hyphenation={german}
 }
 
+@article {witten,
+    AUTHOR = {Witten, Edward},
+     TITLE = {A new proof of the positive energy theorem},
+   JOURNAL = {Comm. Math. Phys.},
+  FJOURNAL = {Communications in Mathematical Physics},
+    VOLUME = {80},
+      YEAR = {1981},
+    NUMBER = {3},
+     PAGES = {381--402},
+      ISSN = {0010-3616},
+     CODEN = {CMPHAY},
+   MRCLASS = {83C99 (58G25)},
+  MRNUMBER = {626707},
+MRREVIEWER = {Andrzej Trautman},
+       URL = {http://projecteuclid.org/euclid.cmp/1103919981},
+}
+
 
 
 %Web
@@ -3068,6 +3100,14 @@ eprint        = "1307.4875",
 primaryClass  = "math.GN"
 }
 
+@online{lytchak-wenger,
+Author={Lytchak, A. and Wenger, S.},
+Title ={Intrinsic structure of minimal discs in metric spaces},
+   archivePrefix = "arXiv",
+     eprint        = "1602.06755",
+     primaryClass  = "math.DG",
+}
+
 
 @article {menger,
     AUTHOR = {Menger, K.},
@@ -3084,20 +3124,6 @@ primaryClass  = "math.GN"
   MRNUMBER = {1512479},
        DOI = {10.1007/BF01448840},
        URL = {http://dx.doi.org/10.1007/BF01448840},
-}
-
-%???
-@article{petrunin-yashinsky,
-    AUTHOR = {Petrunin, A. and Yashinski, A.},
-     TITLE = {Piecewise isometric mappings},
-   JOURNAL = {St. Petersburg Math. J.},
-    VOLUME = {27},
-      YEAR = {2016},
-    NUMBER = {1},
-     PAGES = {155--175},
-      ISSN = {0234-0852},
-   MRCLASS = {53C45 (26A16)},
-  MRNUMBER = {3443270},
 }
 
 @online{panov-petrunin-ramification,

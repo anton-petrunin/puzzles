@@ -146,7 +146,7 @@ The restriction of $\exp$ to the $\T_p$ is called \index{exponential map}\emph{e
 
 Given a smooth submanifold $S\subset M$;
 denote by $\mathrm{N} S$ the normal bundle over $S$.
-The restriction of $\exp$ to $\mathrm{N} S$ is called \index{normal exponential map}\emph{normal exponential map} of $S$ and denoted as $\exp_S$.
+The restriction of $\exp$ to $\mathrm{N} S$ is called {}\emph{normal exponential map} of $S$ and denoted as $\exp_S$.
 
 \begin{pr}{\easy}{Normal exponential map}\label{Normal exponential map}
 Let $M,N$ be complete connected Riemannian manifolds.
@@ -195,8 +195,8 @@ Show that $f$ is a diffeomorphism.
 \begin{pr}{}{Volume of tubular neighborhoods}\label{Volume of tubular neighborhoods}
 Assume $M$ and $M'$ be isometric closed smooth submanifolds in $\RR^m$.
 Show that for all small $r$ we have
-$$\vol B_r(M)=\vol B_r(M'),$$
-where $B_r(M)$ denotes the $r$-neighborhood of $M$.
+$$\vol B(M,r)=\vol B(M',r),$$
+where $B(M,r)$ denotes the $r$-neighborhood of $M$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -238,7 +238,7 @@ such that
 
 \subsection*{Convex hypersurface}
 
-Recall that a subset $K$ of Riemanninan manifold is called \index{convex set in Riemannian manifold}\emph{convex} if every minimizing geodesic connecting two  points in $K$ completely lies in $K$. 
+Recall that a subset $K$ of Riemanninan manifold is called \index{convex set}\emph{convex} if every minimizing geodesic connecting two  points in $K$ completely lies in $K$. 
 
 \begin{pr}{}{Convex hypersurface}\label{Convex hypersurface}
 Let $M$ be a totally geodesic hypersurface 
@@ -320,8 +320,8 @@ $\mathrm{J}_p\circ\mathrm{J}_p =-\id$
 and 
 $\omega(X,Y)=\lambda_p\cdot g(X,\mathrm{J}_pY)$ for any $X,Y\in \T_p$.
 
-Consider canonical symplectic form $\omega_0$ on $\mathbb{S}^2\times\mathbb{S}^2$;
-that is sum of pullbacks of volume forms on $\mathbb{S}^2$  
+Consider the canonical symplectic form $\omega_0$ on $\mathbb{S}^2\times\mathbb{S}^2$;
+that is, the sum of pullbacks of the volume forms on $\mathbb{S}^2$  
 for the two projections $\mathbb{S}^2\times\mathbb{S}^2\to \mathbb{S}^2$.
 Note that for the canonical metric on $\mathbb{S}^2\times\mathbb{S}^2$,
 the form $\omega_0$ is harmonic and self-dual. 
@@ -335,7 +335,7 @@ It remains to take the re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
 so that vertical and horizontal spheres will form pseudo-holomorphic curves in the homology classes of $x\times \mathbb{S}^2$ and $\mathbb{S}^2\times y$.
 \qeds
  
-\parit{Comments.} 
+ 
 For general metric the form $\omega$ might vanish at some points;
 if the metric is generic,
 then it happens on disjoint circles \cite[see][]{honda}.
@@ -536,7 +536,7 @@ In particular $(M,h)$ is complete and the map $f\:(M,h)\to N$ is a local isometr
 
 It remains to prove that any local isometry between complete connected Riemannian manifolds of the same dimension if a covering map.\qeds 
 
-%???\parit{Comments.} 
+%???
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Volume of tubular neighborhoods.}
@@ -544,8 +544,8 @@ Let us denote by $\mathrm{N} M$ and $\T M$ the normal and tangent bundle of $M$ 
 
 Consider the normal exponential map $\exp_M\:\mathrm{N} M\to\RR^m$ [defined on page~\pageref{page:Normal exponential map}]
 and denote by $J_V$ its Jacobian at $V\in \mathrm{N}_p=\mathrm{N}_pM$.
-Note that for all small $\eps>0$, we have
-\[\vol B_\eps(M)=\int\limits_M d_p\vol_m\cdot\int\limits_{B(0,r)_{\mathrm{N}_p}}J_V\cdot d_V\vol_{n-m},\leqno{({*})}\]
+Note that for all small $r>0$, we have
+\[\vol B(M,r)=\int\limits_M d_p\vol_m\cdot\int\limits_{B(0,r)_{\mathrm{N}_p}}J_V\cdot d_V\vol_{n-m},\leqno{({*})}\]
 where $B(0,r)_{\mathrm{N}_p}$ denotes the ball in $\mathrm{N}_p$
 
 Set $m=\dim M$.

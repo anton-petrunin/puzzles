@@ -1,10 +1,14 @@
 \csname @openrightfalse\endcsname
 \chapter{Actions and coverings}
 
-In this chapter we consider isometric actions and metric coverings.
-Given a covering $f\:\tilde X\to X$  of the lenght-metric space $X$,
+In this chapter we consider isometric actions and coverings.
+
+We often use the following construction.
+Given a covering 
+\[f\:\tilde X \to X\]
+of the length-metric space $X$,
 one can consider the induced length-metric on $\tilde X$
-defining length of curve $\alpha$ in $X$ as the length of the composition $f\circ\alpha$.
+defining length of curve $\alpha$ in $X$ as the length of the composition $f\circ\alpha$; the obtained metric space $\tilde X$ is called \index{metric covering}\emph{metric covering} of $X$.
 
 
 
@@ -24,8 +28,8 @@ Prove that $x_n$ is bounded.
 \parit{Semisolution.}
 Note that we can assume that the orbit $x_n=\iota^n(x)$ is dense in $X$;
 otherwise pass to the closure of this orbit.
-In particular, we can choose a finite number of positive integers values $n_1$, $n_2,\dots,n_k$
-such that the points $x_{n_1}$, $x_{n_2},\dots,x_{n_k}$ form a $\tfrac1{10}$-net in $B(x_0,10)$,
+In particular, we can choose a finite number of positive integer values $n_1$, $n_2,\dots,n_k$
+such that the points $x_{n_1}$, $x_{n_2},\dots,x_{n_k}$ form a $\tfrac1{10}$-net in the ball $B(x_0,10)$,
 that is, for any $x\in B(x_0,10)$ there is $x_{n_i}$ such that
 \[|x-x_{n_i}|<\tfrac1{10}.\]
 
@@ -34,8 +38,7 @@ if $x_m\in B(x_0,1)$,
 then $x_{m+n_i}\in B(x_0,1)$ for some $i\z\in\{1,\dots,k\}$.
 
 Set $N=\max_i\{n_i\}$.
-It follows 
-that among any $N$ elements in a row $x_{i+1},\dots x_{i+N}$
+Note that among any $N$ elements in a row $x_{i+1},\dots x_{i+N}$
 there is at least one in $B(x_0,1)$.
 In particular, $N$ isometric copies of $B(x_0,1)$ cover whole $X$.
 Hence the result follows.\qeds
@@ -62,13 +65,13 @@ there is an orbit which does not lie in the interior of a hemisphere.
 
 
 Let us define \index{figure eight}\emph{figure eight} as the
-length space which
+length-metric space which
 is obtained by gluing together all four ends of two unit segments.
 
 }
 
 \begin{pr}{}{Covers of figure eight}\label{figure-eight-1}
-Prove that any compact length spaces $K$ 
+Prove that any compact length-metric spaces $K$ 
 can be presented as a Gromov--Hausdorff limit of a sequence of
 metric covers  
 \[(\widetilde \Phi_n, \tilde d/n)\to(\Phi,d/n),\]
@@ -80,7 +83,7 @@ where $(\Phi,d)$ denotes the figure eight.
 \subsection*{Diameter of \textit{m}-fold cover\hard}
 
 \begin{pr}{\hard}{Diameter of \textit{m}-fold cover}\label{m-fold-cover}
-Let $X$ be a length space
+Let $X$ be a length-metric space
 and $\tilde X$ be a connected $m$-fold cover of $X$ 
 equipped with the induced intrinsic metric.
 Show that
@@ -153,7 +156,7 @@ M.\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Piecewise Euclidean quotient}
 
-Note that the quaotent of Euclidean space by a finite subgroup is a \index{polyhedral space}\emph{polyhedral space} as it defiend on page \pageref{piecewise linear map};
+Note that the quotient of Euclidean space by a finite subgroup is a {}\emph{polyhedral space} as it defined on page \pageref{piecewise linear map};
 on the same page you find the definition of piecewise linear homeomorphism.
 
 
@@ -212,7 +215,7 @@ and $a^p=\id_{\mathbb{S}^m}$ for some prime $p$.
 Assume that any $a$-orbit lies in an open hemisphere.
 Then 
 \[h(x)=\sum_{n=1}^p a^n\cdot x\ne0\]
-for any $x\in\mathbb{S}^m$.
+for any $x\in\mathbb{S}^m$; here we consider $\mathbb{S}^m$ as the unit sphere in $\mathbb{R}^{m+1}$.
 
 Consider the map $f\:\mathbb{S}^m\to\mathbb{S}^m$ 
 defined as  $f(x)=\tfrac{h(x)}{|h(x)|}$.
@@ -227,13 +230,13 @@ in particular
 \[\deg f=1.\leqno({*})\]
 
 Fix $x\in \mathbb{S}^m$ such that $a(x)\ne x$.
-Note that $a$ acts without fixed points 
+Show that $a$ acts without fixed points 
 on the inverse image $W=f^{-1}(V)$ 
 of a small open neighborhood $V\ni x$.
 Therefore the quotient map $\theta\:W\to W'=W/\ZZ_p$ is a $p$-fold covering.
 From  (\ref{f(x)=f(a(x))}),
 the restriction $f|_W$ factors through $\theta$;
-that is
+that is,
 there is $f'\:W'\to V$ such that
 $f|_W=f'\circ\theta$.
 
@@ -251,8 +254,8 @@ but the degrees have to be defined only modulo $2$.\qeds
 
 Along the same lines one can get a lower bound for the maximal diameter of orbit for any nontrivial actions of finite groups on a Riemannian manifold.
 
-Applying the problem to a conjugate action, one gets that 
-if a fixed point set of a finite group action $F\acts \mathbb{S}^m$
+Applying the problem to the conjugate actions, 
+one gets that if a fixed point set of a finite group acting on a sphere
 has nonempty interior, 
 then the action is trivial.
 The same holds for any connected manifold;
@@ -268,7 +271,7 @@ then $h^n=\id_M$ for some positive integer $n$}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Covers of figure eight.}
 First show that any compact metric space can be presented as a limit of a sequence of finite metric graphs $\Gamma_n$.
-Moreover, show that one can assume  each vertex of $\Gamma_n$ has degree 3 
+Further, show that one can assume  each vertex of $\Gamma_n$ has degree 3 
 and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
 \begin{wrapfigure}{o}{27 mm}
@@ -278,10 +281,10 @@ and the length of each edge in $\Gamma_n$ is multiple of $\tfrac 1n$.
 
 It remains to approximate $\Gamma_n$ by finite coverings of $(\Phi,d/n)$.
 Guess this part  
-from the following picture; it shows the needed approximation of the doted graph.\qeds
+from the picture; it shows the needed approximation of the doted graph.\qeds
 
 
-The same idea works if instead of figure eight, we have any compact length space $X$ which admits a map $X\to\Phi$
+The same idea works if instead of figure eight, we have any compact length-metric space $X$ which admits a map $X\to\Phi$
 which is surjective on fundamental groups.
 Such spaces $X$ can be found among compact hyperbolic manifolds of any dimension $\ge 2$.
 All this due to Vedrin Sahovic \cite[see][]{sahovic}.
@@ -296,10 +299,10 @@ A similar idea was used later to show that any group can appear as a fundamental
 \parbf{Diameter of \textit{m}-fold cover.}
 Fix points $\tilde p,\tilde q\in\tilde M$.
 Let  
-$\tilde\gamma\:[0,1]\to \tilde M$ be a minimizing geodesic from $\tilde p$ to $\tilde q$. 
+$\tilde\gamma\:[0,1]\to \tilde M$ be a minimizing geodesic path from $\tilde p$ to $\tilde q$. 
 
 We need to show that 
-\[\length \tilde\gamma\le m\cdot diam(M).\]
+\[\length \tilde\gamma\le m\cdot \diam M.\]
 Suppose the contrary.
 
 Denote by $p,q$ and $\gamma$ the projections to $M$ of $\tilde p,\tilde q$ and $\tilde \gamma$. 
@@ -307,13 +310,13 @@ Represent $\gamma$
 as the concatenation of $m$ paths of equal length,
 \[\gamma=\gamma_1{*}\dots{*}\gamma_m,\] 
 so
-\[\length(\gamma_i)=\length(\gamma)/m>\diam(M).\] 
+\[\length\gamma_i=\frac{\length\gamma}m>\diam M.\] 
 
 Let $\sigma_i$ be a minimizing geodesic in $M$ connecting the endpoints of $\gamma_i$. 
 Note that 
 \[\length\sigma_i\le \diam M< \length\gamma_i.\] 
 
-Consider $m+1$ paths $\alpha_0,\dots,\alpha_m$ defined as 
+Consider $m+1$ paths $\alpha_0,\dots,\alpha_m$ defined as the concatenations 
 \[\alpha_i=\sigma_1{*}\dots{*}\sigma_i{*}\gamma_{i+1}{*}\dots{*}\gamma_m.\]
 
 Consider their liftings $\tilde\alpha_0,\dots,\tilde\alpha_m$ 
@@ -321,7 +324,7 @@ with $\tilde q$ as the endpoint.
 Note that two curves, say $\alpha_i$ and $\alpha_j$ for $i<j$, 
 have the same starting point in $\tilde M$.
 
-Consider the path
+Consider the concatenation
 \[\beta=\gamma_1{*}\dots{*}\gamma_i{*}\sigma_{i+1}{*}\dots{*}\sigma_j{*}\gamma_{j+1}{*}\dots{*}\gamma_m.\]
 Prove that there is lift $\tilde\beta$ of $\beta$ 
 which connects $\tilde p$ to $\tilde q$ in $\tilde M$.
@@ -339,7 +342,8 @@ Let $\Gamma=\pi_1 X$ and $\Delta=\pi_1((X\times X)/\ZZ_2)$.
 Consider the homomorphism $\phi\:\Gamma\times \Gamma\to \Delta$
 induced by the projection $X\times X\to (X\times X)/\ZZ_2$.
 
-Prove that the restrictions $\phi|_{\Gamma\times \{1\}}$ and $\phi|_{\{1\}\times\Gamma}$
+Note that $\phi(\alpha,1)=\phi(1,\alpha)$ for any $\alpha\in \Gamma$.
+Show that the restrictions $\phi|_{\Gamma\times \{1\}}$ and $\phi|_{\{1\}\times\Gamma}$
 are onto.
 
 It remains to note that 
@@ -379,8 +383,8 @@ it is instructive to describe this group.
 Denote by $V_\ell$ and $W_m$
 the Voronoi domain of for each $\ell\in L$ and $m\in M$ correspondingly;
 that is,
-\[V_\ell=\set{g\in G}{|g-\ell|_G\le|g-\ell'|\ \text{for any}\ \ell'\in L}\]
-\[W_m=\set{g\in G}{|g-m|_G\le|g-m'|\ \text{for any}\ m'\in M}\]
+\[V_\ell=\set{g\in G}{|g-\ell|_G\le|g-\ell'|_G\ \text{for any}\ \ell'\in L}\]
+\[W_m=\set{g\in G}{|g-m|_G\le|g-m'|_G\ \text{for any}\ m'\in M}\]
 
 Note that for any $\ell\in L$ and $m \in M$ we have
 \[\begin{aligned}
@@ -442,19 +446,21 @@ Note that the cone over spherical suspension over Poincar\'e sphere is homeomorp
 Therefore, 
 if one exchanges ``piecewise linear homeomorphism'' to ``homeomorphism'' in the formulation, 
 then the answer is different; 
-a complete classification of such actions was also obtained in \cite{lange}.
+a complete classification of such actions is given in \cite{lange}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Subgroups of free group.}
 Let $F$ be a free group;
 note that we can assume that $F$ has finite number, say $m$, generators.
 
-Fix a finitely generated subgroup $G$ of free group $F$.
+
 
 Let $W$ be the wedge sum of $m$ circles, 
 so  $\pi_1(W,p)=F$.
 Equip $W$ with the length-metric 
 such that each circle has unit length.
+
+Fix a finitely generated subgroup $G$ in $F$.
 
 Pass to the metric cover $\tilde W$ of $W$ 
 such that  $\pi_1(\tilde W,\tilde p)=G$ 
@@ -473,7 +479,7 @@ Let us denote the obtained doubling by $Z_n$ and set $G_n=\pi(Z_n,\tilde p)$.
 Prove that $Z_n$ is a metric covering of $W$;
 it makes possible to consider $G_n$ as a subgroup of $F$.
 By construction, $Z_n$ is compact;
-therefore $G_n$ has finite order in $F$.
+therefore $G_n$ has finite index in $F$.
 
 
 It remains to show that 
@@ -522,7 +528,7 @@ Mikhael Gromov \cite[Prop. 3.22 in][]{gromov-MetStr}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Number of generators.}
-Consider universal Riemannian cover $\tilde M$ of $M$.
+Consider the universal Riemannian cover $\tilde M$ of $M$.
 Note that $\tilde M$ is non-negatively curved and
 $\pi_1M$ acts by isometries on $\tilde M$.
 
@@ -530,7 +536,9 @@ Fix $p\in \tilde M$.
 Given  $a\in \pi_1M$,
 set 
 \[|a|=|p- a\cdot p|_{\tilde M}.\]
-Construct a sequence of elements $a_1,a_2,\dots\in \pi_1M$ the following way:
+
+Consider the so called \index{short basis}\emph{short basis} in $\pi_1M$;
+that is, a sequence of elements $a_1,a_2,\dots\in \pi_1M$ defined the following way:
 \begin{enumerate}[(i)]
 \item Choose $a_1\in\pi_1M$ so that $|a_1|$ takes the minimal value.
 \item Choose $a_2\in\pi_1M\backslash\langle a_1 \rangle$ so that $|a_2|$ takes the minimal value.
@@ -562,23 +570,24 @@ Note that}
 \end{align*}
 That is, the directions from $p$ to all $p_i$ lie on the angle at least $\tfrac\pi3$ from each other.
 
-Therefore the number of $p_i$ can be bounded in terms of the dimension of $M$.
+Therefore the number of points $p_i$ can be bounded in terms of the dimension of $M$.
 Hence the result follows.
 \qeds
 
-This construction introduced by Mikhael Gromov 
-in his paper on almost flat manifolds \cite[see][]{gromov-almost-flat}.
+This construction introduced by Mikhael Gromov \cite[see][]{gromov-almost-flat}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Equations in the group.} 
-Set 
+Consider the map $f\:G\to G$ defined as
 \[f(x)=x\cdot g_1\cdot x\cdot g_2\cdots x\cdot g_n.\]
 Note that $f$ is homotopic to the map 
 \[h\:x\mapsto x^n.\]
-It remains to note that degree of $h$ is not zero.
+Show that  the map $h\:G\to G$ has nonzero degree.
+
+It follows that both maps $f,h$ are onto and the result follows.
 \qeds
 
-The idea of solution is due to Murray Gerstenhaber and Oscar Rothaus 
+The idea of this solution is due to Murray Gerstenhaber and Oscar Rothaus 
 \cite[see][]{gerstenhaber-rothaus}.
-In fact $\deg h=n^k$, where $k$ is the rank of $G$;
-it was proved by Heinz Hopf in \cite{hopf}.
+In fact the degree of $g$ is $n^k$, where $k$ is the rank of $G$;
+the latter was proved by Heinz Hopf \cite[see][]{hopf}.

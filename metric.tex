@@ -2,14 +2,14 @@
 \chapter{Metric geometry}
 
 In this chapter, we consider metric spaces.
-All the nececary material could be found in the first three chapters of the textbook \cite{bbi} by Dmitry Burago, Yuri  Burago and Sergei Ivanov. 
+All the necessary material could be found in the first three chapters of the textbook \cite{bbi}. 
 
 Let us fix few standard notations.
 \begin{itemize}
 \item The distance between two points $x$ and $y$ in a metric space $X$
 will be denoted as 
 \[|x-y|_X.\]
-\item A metric space $X$ is called \index{length space}\emph{length space} if for any $\eps>0$ two points $x,y\in X$ can be connected by curve $\alpha$
+\item A metric space $X$ is called {}\emph{length-metric space} if for any $\eps>0$ two points $x,y\in X$ can be connected by curve $\alpha$
 such that
 \[\length\alpha<|x-y|_X+\eps.\]
 In this case the metric on $X$ is called \index{length-metric}\emph{length-metric}.
@@ -21,7 +21,7 @@ In this case the metric on $X$ is called \index{length-metric}\emph{length-metri
 \begin{pr}{}{Embedding of a compact}\label{compact} 
 Prove that any compact metric space 
 is isometric to 
-a subset of a compact length spaces.
+a subset of a compact length-metric spaces.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,7 +37,7 @@ is a distance preserving embedding.
 
 Denote by $W$ the linear convex hull of the image $\phi(K)\subset B(K)$ 
 with the metric induced from $B(K)$.
-It remains to show that $W$ forms a compact length space.
+It remains to show that $W$ forms a compact length-metric space.
 \qeds
 
 The map $\phi$ is called \index{Kuratowski embedding}\emph{Kuratowski embedding},
@@ -80,7 +80,7 @@ then $\bar X$ forms a compactification of $X$,
 which is called \index{horocompactification}\emph{horocompactification}.
 The complement 
 $\partial_\infty X=\bar X\backslash F_X(X)$ 
-is called \index{horoabsolute}\emph{horoabsolute} of $X$.
+is called {}\emph{horoabsolute} of $X$.
 The compactification
 and absolute
 was introduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
@@ -89,7 +89,7 @@ was introduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
 \begin{pr}{\easy}{Horo-compactification}\label{Horo-compactification}
 Construct a proper metric space $X$
 such that $F_X$ is not an embedding.
-Show that there are no such examples among proper length spaces.
+Show that there are no such examples among proper length-metric spaces.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -289,7 +289,7 @@ map $c\:[0,1]\to \mathbb{S}^1$ such that $c(t)\in C_t$ for any $t$.
 \subsection*{Spaces with isometric balls}
 
 \begin{pr}{}{Spaces with isometric balls}
-Construct a pair of locally compact length spaces $X$ and $Y$ 
+Construct a pair of locally compact length-metric spaces $X$ and $Y$ 
 which are not isometric,
 but for some fixed points $x_0\in X$,  $y_0\in Y$ and any radius $R$
 the ball $B(x_0,R)$ in $X$ is 
@@ -408,7 +408,7 @@ to get a genuine Riemannian metric with needed property.\qeds
 
 This construction is a stripped version of the theorem of Steven Ferry and Boris Okunin \cite[see][]{ferry-okun}.
 The theorem states that Riemannian metrics on a smooth closed manifold $M$ with $\dim M\ge 3$ 
-can approximate given compact length space $X$ 
+can approximate given compact length-metric space $X$ 
 if and only if 
 there is a continuous map $M\to X$
 which is surjective on the fundamental groups. 
@@ -419,7 +419,7 @@ $\mathbb{S}^2$ which converge to the unit disc in the sense of Gromov--Hausdorff
 In fact, 
 if $X$ is a limit of $(\mathbb{S}^2,g_n)$,
 then any point $x_0\in X$ either admits a neighborhood homeomorphic to $\RR^2$ or it is a cut point;
-that is $X\backslash\{x_0\}$ is disconnected \cite[see 3.32 in][]{gromov-MetStr}.
+that is, $X\backslash\{x_0\}$ is disconnected \cite[see 3.32 in][]{gromov-MetStr}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Macro-dimension.}

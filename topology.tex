@@ -47,7 +47,7 @@ The problem ``Monotonic homotopy'' on page \pageref{mono-homotopy} is closely re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Immersed disks}
 
-Two immersions $f_1,f_2\:D\looparrowright \RR^2$ are called \index{essentially different immersions}\emph{essentially different} 
+Two immersions $f_1,f_2\:D\looparrowright \RR^2$ are called {}\emph{essentially different} 
 if there is no diffeomorphism $h\:D\z\to D$ such that
 $f_1=f_2\circ h$.
 
@@ -69,9 +69,10 @@ $$h\circ f\circ h^{-1}\:(x,y)\mapsto(x+y,y).$$
 
 If $\Sigma$ is oriented 
 and $h$ is orientation preserving,
-then the Dehn twist described above is called \index{positive Dehn twist}\emph{positive}.
+then the Dehn twist described above is called {}\emph{positive}.
 
-\begin{pr}{\easy}{Positive Dehn twist}\label{Positive Dehn twist} Let $\Sigma$ be an oriented surface with non empty boundary.
+\begin{pr}{\easy}{Positive Dehn twist}\label{Positive Dehn twist} 
+Let $\Sigma$ be an compact oriented surface with non empty boundary.
 Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to identity rel. boundary.
 \end{pr}
 
@@ -157,7 +158,7 @@ Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations
 Let $p$ and $q$ be distinct points in Hausdorff topological space $X$.
 Assume $p$ and $q$ are connected by a path.
 Show that they can be connected by a simple path;
-that is there is an injective continuous map $\beta\:[0,1]\z\to X$
+that is, there is an injective continuous map $\beta\:[0,1]\z\to X$
 such that $\beta(0)=p$ and $\beta(1)=q$.
 \end{pr}
 
@@ -192,8 +193,7 @@ It is a good exercise to count the discs in these examples.
 (The answers are 2 and  5 correspondingly.) 
 \qeds
 
-The first example is generally attributed to John Milnor.
-The second example was given by Daniel Bennequin in \cite{bennequin}.
+The existence of examples of that type is generally attributed to John Milnor \cite[see][]{bennequin}.
 
 }
 
@@ -211,21 +211,19 @@ Consider the universal covering
 $\tilde\Sigma\to\Sigma$.
 The surface $\tilde \Sigma$ comes with the orientation induced from $\Sigma$.
 
-Note that we may assume that $\tilde\Sigma$ has infinite number of boundary components.
-
 Fix a point $x_0$ on the boundary of $\tilde \Sigma$.
 Given other points $y$ and $z$ we will write
-$y\prec z$ if $z$ lies on the left side from one (and therefore any) simple curve from $x_0$ to $y$ in $\tilde\Sigma$.
+$y\prec z$ if $z$ lies on the left side from one simple curve from $x_0$ to $y$ in $\tilde\Sigma$.
 Note that  $\prec$ defines a linear order on $\partial\tilde\Sigma\backslash\{x_0\}$.
 We will write $y\preceq z$ 
 if $y\prec z$ or $y=z$.
 
 \begin{center}
 \begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn()}
-\lbl[t]{13,6;$x_0$}
-\lbl[bl]{23,24;$y$}
+\lbl[t]{13,5;$x_0$}
+\lbl[bl]{23,23;$y$}
 \lbl[br]{4,20;$z$}
-\lbl[]{33,12;$\tilde \Sigma$}
+\lbl[]{33,8;$\tilde \Sigma$}
 \end{lpic} 
 \end{center}
 
@@ -242,8 +240,9 @@ such that $y_0\prec \tilde h(y_0)$.
 Note that the latter property is a homotopy invariant 
 and it survives under compositions of maps.
 Hence the statement follows.
+\qeds
 
-\parit{Comments.} The problem was suggested by Rostislav Matveyev.
+The problem was suggested by Rostislav Matveyev.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{r}{24 mm}
@@ -257,7 +256,7 @@ Construct an immersion
 $\psi\:B^m\z\looparrowright\RR^m$ such that 
 \[\ell\circ\phi\ne\ell\circ\psi\]
 for any embedding  $\phi\:B^m\to\RR^m$. 
-(The two-dimensional case can be quessed from the picture.)
+The two-dimensional case can be guessed from the picture.
 
 It remains to note that the composition $f=\ell\circ\psi$ has no critical points.\qeds
 
@@ -300,14 +299,14 @@ Note that for two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Si
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unknots.}
-Observe that it is possible to draw tight arbitrary knot 
-while keeping it smoothly embedded all the time including the last moment.\qeds
-
 
 \begin{center}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/knot(1)}
 \end{lpic}
 \end{center}
+
+Observe that it is possible to draw tight arbitrary knot 
+while keeping it smoothly embedded all the time including the last moment.\qeds
 
 
 This problem was suggested by Greg Kuperberg \cite[see][]{One-step}.
@@ -316,7 +315,7 @@ This problem was suggested by Greg Kuperberg \cite[see][]{One-step}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 \begin{wrapfigure}{o}{37 mm}
-\begin{lpic}[t(0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Simple-stabilization(1)}
+\begin{lpic}[t(-3 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Simple-stabilization(1)}
 \lbl[]{8.7,8.3;{\color{white} $K_1$}}
 \lbl[]{28.7,8.3;{\color{white} $K_2$}}
 \end{lpic}
@@ -339,8 +338,8 @@ Maria Goluzina.
 \parbf{Homeomorphism of cube.}
 Let us extend the homeomorphism $h$ to whole $\RR^m$ by reflecting the cube in its facets.
 We get a homeomorphism say $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any $x\in\square^m$ and 
-\[\tilde h\circ\gamma=\gamma\circ \tilde h\]
-for any motion $\gamma\:\RR^m\to\RR^m$ in the group generated by the reflections in the facets of the cube.
+\[\tilde h\circ\gamma=\gamma\circ \tilde h,\]
+where $\gamma$ is a reflection through the facets of the cube.
 
 Without loss of generality, we may assume that the cube $\square^m$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
 In this case $\tilde h$ has \index{displacement}\emph{displacement} at most $2$;
@@ -348,17 +347,20 @@ that is,
 \[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
 
-\begin{wrapfigure}[10]{o}{47 mm}
-\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
+\begin{wrapfigure}[12]{o}{47 mm}
+\begin{lpic}[t(-7 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
 \end{lpic}
 \end{wrapfigure}
 
 Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
-$\phi(r)\z=r$ for any $r\le 1$ and $\sup_r\phi(r)=2$.
+\[\phi(r)\z=r\] 
+for any $r\le 1$ and 
+\[\sup\{\phi(r)\}=2.\]
 
-Consider $\RR^m$ with polar coordinates $(u,r)$, where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
-Let $\Phi\:\RR^m\to\RR^m$
-is defined by $\Phi(u,r)=(u,\phi(r))$.
+Equip $\RR^m$ with the polar coordinates $(u,r)$, 
+where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
+Consider the open embedding $\Phi\:\RR^m\hookrightarrow\RR^m$
+defined as $\Phi(u,r)=(u,\phi(r))$.
 
 Set 
 \[
@@ -370,10 +372,11 @@ f(x)=\left[
 \end{aligned}
 \right.
 \]
-Prove that $f\:\RR^m\to\RR^m$ is a solution.
+
+It remains to show that $f\:\RR^m\to\RR^m$ is a solution.
 \qeds
 
-The problem is a stripped from the proof of Robion Kirby in \cite{kirby}.
+The problem is a stripped from a proof of Robion Kirby \cite[see][]{kirby}.
 The condition that face is mapped to face can be removed and 
 instead of homeomorphism one can take an embedding which is close enough to the identity.
 
@@ -385,7 +388,7 @@ Then the constructed map
 coincides with the identity on the absolute and therefore the last ``shrinking'' step in the proof above is not needed.
 Moreover, 
 if the original homeomorphism is bi-Lipschitz,
-then the construction also produce a bi-Lipschitz homeomorphism;
+then the construction also produce a bi-Lipschitz homeomorphism ---
 this is the advantage.
   
 
@@ -394,7 +397,7 @@ this is the advantage.
 Given a point $p\in F$,
 denote by $O_p$ the minimal open set in $F$ containing $p$. 
 Note that we can assume that $F$ connected and is $T_0$;
-that is $O_p=O_q$ if and only if $p=q$.
+that is, $O_p=O_q$ if and only if $p=q$.
 
 Let us write $p\preccurlyeq q$ 
 if $O_p\subset O_q$.
@@ -403,7 +406,7 @@ The relation $\preccurlyeq$ is a partial order on $F$.
 Let us construct a simplicial complex $K$ 
 by taking $F$ as the set of its vertices
 and saying that a collection of vertices form a simplex 
-if they can form a an increasing sequence with respect to $\preccurlyeq$.
+if they can form an increasing sequence with respect to $\preccurlyeq$.
 
 Given $k\in K$,
 consider the minimal simplex $(f_0,\dots,f_m)\ni k$;
@@ -463,7 +466,7 @@ A more involved solution goes the following way:
 Note that one can assume that $X$ coincides with the image of $\alpha$.
 In particular it is connected, locally connected and compact.
 
-Any such space admits a length metric.
+Any such space admits a length-metric.
 This statement was conjectured by Karl Menger in \cite{menger}
 and proved independently 
 by R.~H.~Bing  \cite[see][]{bing-length-0, bing-length-1} 
