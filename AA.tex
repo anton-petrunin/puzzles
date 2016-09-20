@@ -1,3 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Characterization of polytope}
+
+\begin{pr}{}{Characterization of polytope}
+\label{conic neighborhoods}
+Let $P$ be a compact subset of the Euclidean space.
+Assume for every point $x\in P$
+there is a cone $K_x$ with a tip at $x$ and $\eps>0$
+such that 
+$$B(x,\eps)\cap P
+=
+B(x,\eps)\cap K_x.$$
+Show that $P$ is a polytope; 
+that is, $P$ is a union of finite collection of simplices.
+\end{pr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Characterization of polytope.}
+Arguing by contradiction, let us assume that $P\subset \RR^m$
+is a counterexample and $m$ takes minimal possible value.
+
+Choose a finite cover $B_1,B_2,\dots B_n$ of $K$,
+where $B_i=B(z_i,\eps_i)$ 
+and $B_i\cap P=B_i\cap K_i$, 
+where $K_i$ is a cone with the tip at $z_i$.
+
+For each $i$, consider function $f_i(x)=|z_i-x|^2-\eps_i^2$.
+Note that
+\[W_{i,j}=\set{x\in\RR^m}{f_i(x)=f_j(x)}\]
+is a hyperplane for any pair $i\ne j$.
+
+The subset $P_{i,j}=P\cap W_{i,j}$ satisfies the same assumptions as $P$, but lies in a hyperplane.
+Since $m$ is minimal, we get that $P_{i,j}$ is a polytope for any pair $i,j$.
+
+Consider Voronoi domains 
+\[V_{i}=\set{x\in\RR^m}{f_i(x)\ge f_j(x) \ \text{for any}\ j}.\]
+Note that $P\cap V_i$ is formed by the points which lie on the segments from $z_i$ to a point in  $P\cap \partial V_i$.
+
+The statement follows since $\partial V_i$ is covered by the hyperplanes $W_{i,j}$.
+\qeds
+
+This problem is mentioned 
+by Nina Lebedeva and me in \cite{lebedeva-petrunin}.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -770,7 +821,7 @@ Cut $\Pi$ along a geodesic $[pq]$
 and patch the hole 
 so that in the obtained polyhedral space, say $\Pi'$, 
 the points $p$ and $q$ become regular and yet an other singular point apears in the patch. 
-The patch is obtained by doubling a triangle in two sides.
+The patch is obtained by doubling a triangle along  two sides.
 This way we can remove all singular points with positive curvature except one.
 
 A similar procedure gives a way to 
