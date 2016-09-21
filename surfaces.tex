@@ -96,7 +96,7 @@ Show that $B$ is a tetrahedron with equal opposite sides.
 \subsection*{Geodesics for birds}
 
 Let $\gamma\:[a,b]\to\RR^m$ be a curve.
-The \index{total curvature}\emph{total curvature} of $\gamma$ is defined as supremum of sum of external angles for broken lines inscribed in $\gamma$. 
+The \index{total curvature}\emph{total curvature} of $\gamma$ is defined as the least upper bound of sum of external angles for broken lines inscribed in $\gamma$. 
 Namely, 
 \[\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},\]
 where $\alpha_i=\pi-\measuredangle \hinge{\gamma(t_{i})}{\gamma(t_{i-1})}{\gamma(t_{i+1})}$.
@@ -164,7 +164,7 @@ homeomorphic to a disc.
 Assume that orthogonal projection to $(x,y)$-plane
 maps the boundary of $\Sigma$
 injectively to convex closed curve.
-Show that the othonormal projection to $(x,y)$-plane is injective on whole $\Sigma$.
+Show that the orthogonal projection to $(x,y)$-plane is injective on whole $\Sigma$.
 
 In particular, $\Sigma$ is a graph $z=f(x,y)$ for a function $f$ defined on a convex figure in the $(x,y)$-plane.
 \end{pr}
@@ -350,7 +350,7 @@ with the sum of angles at least $\pi-\eps$,
 one is containing $p$ and the other $q$. 
 
 Do the same for the other disc.
-We obtain 4 nonoverlapping lenses in $\Sigma$ with diameter at most $\eps$.
+We obtain 4 non-overlapping lenses in $\Sigma$ with diameter at most $\eps$.
 
 By Gauss--Bonnet formula, each lens has total curvature at least $\pi-\eps$ 
 and the total curvature of $\Sigma$ is $4\cdot\pi$.
@@ -463,7 +463,7 @@ by the definition, these geodesics have no self-intersections.\qeds
 
 
 This idea is due to 
-Victor Bangert \cite[see Cor. 2 in][]{bangert}.
+Victor Bangert \cite[see Corollary 2 in][]{bangert}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Immersed surface.}
@@ -506,9 +506,9 @@ Note that
 and both sides $\gamma_\pm$ 
 form infinite minimizing geodesics in $\triangle$.
 
-Consider the Buseman function $f$ for $\gamma_+$;
+Consider the Busemann function $f$ for $\gamma_+$;
 denote by $\ell(t)$ the length of the level curve $f^{-1}(t)$.
-Let $-\kappa(t)$  be the total curvature of the suplevel set $f^{-1}([t,\infty))$.  
+Let $-\kappa(t)$  be the total curvature of the sup-level set $f^{-1}([t,\infty))$.  
 From Gauss--Bonnet formula,
 \[\ell'(t)=\kappa(t).\leqno({*}{*})\]
 
@@ -564,8 +564,8 @@ It follows that $\Pi\cap\Sigma$ has no cross-points, a contradiction.\qeds
 
 The proof above is based of the observation 
 that for any plane $\Pi$,
-each connected componenet of $\Pi\cap\Sigma$ is simply connected.
-One can define saddle surfaces as arbitrary (non necessarily smooth) surface which satifies this condition.
+each connected component of $\Pi\cap\Sigma$ is simply connected.
+One can define saddle surfaces as arbitrary (non necessarily smooth) surface which satisfies this condition.
 The geometry of these surfaces is far from being understood,
 Samuil Shefel has number of beautiful results about them, 
 see \cite{shefel} and references there in.
