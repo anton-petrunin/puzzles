@@ -10,23 +10,23 @@ No special prerequisite is needed.
 \begin{pr}{\easy}{Round circles in $\mathbb{S}^3$}\label{Round circles}
 Suppose that you have a finite collection of pairwise linked round circles in the unit 3-sphere, 
 not necessarily all of the same radius. 
-Prove that there is an isotopy in the space of such collections of circles 
+Prove that there is an isotopy of the collection of circles 
 which moves all of them into great circles.
 \end{pr}
 
 
 \parit{Semisolution.}
-For each circle consider the containing it plane in $\RR^4$.
+For each circle consider the plane containing it.
 Note that the circles are linked 
 if and only if 
-the corresponding planes intersect at a single point inside $\mathbb{S}^3$.
+the corresponding planes intersect at a single point inside the unit sphere $\mathbb{S}^3\subset \RR^4$.
 
 Take the intersection of the planes with the sphere of radius $R\ge 1$,
 rescale and pass to the limit as $R\to\infty$.  
 This way we get needed isotopy.\qeds
 
 The problem was discussed 
-in the thesis of Genevieve Walsh \cite[see][]{walsh}.
+by Genevieve Walsh in \cite{walsh}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Box in a box}
@@ -60,12 +60,12 @@ which intersects each line at exactly 2 points.
 \begin{wrapfigure}[7]{r}{27 mm}
 \begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/kiss(1)}
 \lbl[]{12.5,11;{\color{white} $W_0$}}
-\lbl[]{8.5,18;{\color{white} $W_1$}}
-\lbl[]{16.5,18;{\color{white} $W_2$}}
-\lbl[]{20.5,11;{\color{white} $W_3$}}
-\lbl[]{16.5,4;{\color{white} $W_4$}}
-\lbl[]{8.5,4;{\color{white} $W_5$}}
-\lbl[]{4.5,11;{\color{white} $W_6$}}
+\lbl[]{8.5,18;$W_1$}
+\lbl[]{16.5,18;$W_2$}
+\lbl[]{20.5,11;$W_3$}
+\lbl[]{16.5,4;$W_4$}
+\lbl[]{8.5,4;$W_5$}
+\lbl[]{4.5,11;$W_6$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -74,13 +74,14 @@ which intersects each line at exactly 2 points.
 
 Let  $W_0$ be a convex body in $\RR^m$.
 We say that $k$ is the \index{kissing number}\emph{kissing number} of $W_0$ (briefly $k=\mathop{\rm kiss}W_0$)
-if $k$ the maximal integer such that there are $k$ bodies $W_1,W_2,\dots,W_k$ such that each $W_i$ is congruent to $W_0$,
-$W_i\cap W_0\not=\emptyset$ for each $i$ 
-and have no pair $W_i,W_j$ has common interior points.
+if $k$ the maximal integer such that there are $k$ bodies $W_1,W_2,\dots,W_k$ such that 
+(1) each $W_i$ is congruent to $W_0$,
+(2) $W_i\cap W_0\not=\emptyset$ for each $i$ 
+and (3) no pair $W_i,W_j$ has common interior points.
 
 }
 
-Say, as you may guess from the diagram, the kissing number of round disc in the plane is $6$.
+As you may guess from the diagram, the kissing number of round disc in the plane is $6$.
 
 \begin{pr}{\easy}{Kissing number}\label{pr:Kissing number}
 Show that for any convex body $W_0$ in $\RR^m$
@@ -95,9 +96,9 @@ where $B$ denotes the unit ball in $\RR^m$.
 \begin{pr}{}{Monotonic homotopy} 
 Let $F$ be a finite set and $h_0,h_1\: F\to\RR^m$ be two maps.
 Consider $\RR^m$ as a subspace of $\RR^{2\cdot m}$.
-Show that there is a homotopy  $h_t\:F\z\to\RR^{2\cdot m}$ from $h_0$ to $h_1$ such that for any $x,y\in F$ the function 
+Show that there is a homotopy  $h_t\:F\z\to\RR^{2\cdot m}$ from $h_0$ to $h_1$ such that  the function 
 \[t\z\mapsto |h_t(x)-h_t(y)|\] 
-is monotonic.
+is monotonic for any $x,y\in F$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -132,8 +133,10 @@ Show that $n\le 2^m$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Right-angled polyhedron\thm}
 
+A polyhedron is called {}\emph{right-angled} if all its dihedral angles are right.
+
 \begin{pr}{\thm}{Right-angled polyhedron}\label{Right-angled polyhedron}
-Show that in all sufficiently large dimensions, there is no compact convex hyperbolic polyhedron with right dihedral angles. 
+Show that in all sufficiently large dimensions, there is no compact convex hyperbolic right-angled polyhedron. 
 \end{pr}
 
 Let us give a short summary of Dehn--Sommerville equations 
@@ -147,7 +150,7 @@ the array of integers $(f_0,f_1,\dots f_m)$ is called $f$-vector of $P$.
 Fix an order of the vertices $v_1,v_2,\dots v_{f_0}$
 of $P$ so that for some linear function $\ell$, we have $\ell(v_i)>\ell(v_j)\ \Leftrightarrow\ i<j$.
 The \index{index of vertex}\emph{index} of the vertex $v_i$ 
-is defined as the number of edges $[v_iv_j]$ such that $j<i$. 
+is defined as the number of edges $[v_iv_j]$ such that $i<j$. 
 The number of vertices of given index $k$ will be denoted as $h_k$.
 The array of integers $(h_0,h_1,\dots h_m)$ is called $h$-vector of $P$.
 Clearly $h_0=h_m=1$ and $h_k\ge 0$ for all $k$.
@@ -208,11 +211,9 @@ Assume $\Pi'$ be an other parallelepiped
 with dimensions $a'$, $b'$ and $c'$.
 For the volume $v'(r)$ the volume of  $r$-neighborhoods of $\Pi'$ we have a formula similar $({*})$.
 
-Note that 
-if $\Pi\subset \Pi'$,
+If $\Pi\subset \Pi'$,
 then $v(r)\le v'(r)$ for any $r$.
-Checking this inequality for $r\to\infty$,
-we get 
+For $r\to\infty$, these inequalities imply
 \[a+b+c\le a'+b'+c'.\]
 \qedsf
 
@@ -237,7 +238,7 @@ Further generalizations lead to so called \index{mixed volumes}\emph{mixed volum
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Harnack's circles.}
-Let $\sigma\subset \RP^2$ be a smooth algebraic curve of degree $d$.
+Let $\sigma\subset \RP^2$ be a algebraic curve of degree $d$.
 Consider the complexification $\Sigma\subset \CP^2$ of $\sigma$.
 Without loss of generality, we may assume that $\Sigma$ is regular.
 
@@ -251,11 +252,13 @@ we get that
 The real curve $\sigma$ forms the fixed point set in $\Sigma$ 
 by the complex conjugation. 
 Use it to show that $\Sigma\backslash\sigma$ has at most 2 connected components.
+
+It follows that each connected component of $\sigma$ adds at least one to the genus of $\Sigma$.
 Hence the result follows.
 \qeds
  
 The inequality was originally proved 
-by Axel Harnack with a different method \cite[see][]{harnack}.
+by Axel Harnack using a different method \cite[see][]{harnack}.
 The idea to use complexification is due to Felix Klein \cite[see][]{klein}.
 This problem formed the background to Hilbert's 16th problem \cite[see][]{hilbert-problems}. 
 
@@ -279,8 +282,9 @@ Therefore we can choose a point on $\ell$ and add it to $X$ so that the remainin
 It remains to apply well ordering principle.
 \qeds
 
+This problem has endless list of variations.
 The following problem look similar but far more involved;
-a solution follows from the proof that a square cannot be cut into triangles of equal area given by Paul Monsky in \cite{monsky}.
+a solution follows from the proof that a square cannot be cut into triangles of equal area given given by Paul Monsky in \cite{monsky}.
 
 \begin{itemize}
 \item {\it Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that each line meets exactly two of these sets.}
@@ -295,9 +299,22 @@ a solution follows from the proof that a square cannot be cut into triangles of 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{wrapfigure}{o}{32 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kiss-sol(1)}
+\lbl[]{16,15;{\color{white} $W_0$}}
+\lbl[]{10,24;$W_1$}
+\lbl[]{21,24;$W_2$}
+\lbl[]{26,15;$W_3$}
+\lbl[]{21,7;$W_4$}
+\lbl[]{11,5;$W_5$}
+\lbl[]{6,14;$W_6$}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{Kissing number.}
-Let $n=\mathop{\rm kiss} B^m$
-and $B_1,B_2,\dots, B_n$ the copies of $B$ 
+Fix $m$ and set $n=\mathop{\rm kiss} B$.
+Let $B_1,B_2,\dots, B_n$ the copies of the ball $B$  
 which touch $B$ and have no common interior points.
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
 Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
@@ -317,7 +334,7 @@ Charles Halberg,
 Eugene Levin 
 and Ernst Straus 
 in \cite{halberg-levin-straus}.
-It is expected that the same inequality holds for the orientation-preserving version of kissing number.
+It is not known if the same inequality holds for the orientation-preserving version of kissing number.
 
 
 
@@ -363,14 +380,14 @@ that is, the set
 \[V_{\bm{q}}=\set{(x_1,x_2,\dots,x_m)\in\mathbb{S}^{m-1}}{q_i\cdot x_i\ge 0\ \text{for each}\ i}.\]
 
 Consider the set $\mathcal{A}\subset\mathbb{S}^{m-1}$
-formed by the union of all the sets $V_{\bm{q}}$ for $\bm{q}\in A$.
+formed by the union of all the sets $V_{\bm{q}}$ for black $\bm{q}$.
 Note that 
 \[\vol_{m-1}\mathcal{A}=\tfrac12\cdot\vol_{m-1}\mathbb{S}^{m-1}\]
 and 
 \[\vol_{m-2}\partial\mathcal{A}
 =
 \tfrac k{2^{m-1}}\cdot\vol_{m-2}\mathbb{S}^{m-2},\]
-where $k$ is the number of edges of the cube with one end in $A$ and the other in $B$.
+where $k$ is the number of edges of the cube with one end black and the other in white.
 
 It remains to  show that 
 \[\vol_{m-2}\partial\mathcal{A}
@@ -378,26 +395,27 @@ It remains to  show that
 The latter follows from the isoperimetric inequality for $\mathbb{S}^m$. 
 \qeds
 
-The problem was suggested by Greg Kuperberg \cite[see][]{One-step}.
+The problem was suggested by Greg Kuperberg.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Geodesic loop.}
-Assume such loop exists; denote it by $\gamma$ and let $v$ be its base point.
+Assume such loop exists; denote it by $\gamma$ and let $v$ be its base vertex.
 
 Denote by $\xi$ and $\zeta$ the directions of exit and the entrance of the loop.
 Let $\alpha$ be the angle between $\xi$ and $\zeta$
 measured in the tangent cone to the surface of cube at $v$.
 
 Prove that $\alpha=\tfrac\pi2$.
-To do this you can use Gauss--Bonnet theorem or unfolding.
+To do this you can use Gauss--Bonnet theorem;
+alternatively, you may look at the unfolding of $\gamma$ on the plane.
 
-It follows that there is a rotational symmetry of cube which fix $v$ and sends $\xi$ to $\zeta$.
+It follows that there is a rotational symmetry of cube with order 3 which fix $v$ and sends $\xi$ to $\zeta$.
 The later leads to a contradiction.
 \qeds
 
 For the surface of a higher dimensional cube,
 the same idea provides existence of symmetry of the cube which fix $v$ and swaps $\xi$ and $\zeta$.
-From this point one can arrive to a contradiction, but the work is harder that above.
+From this point one can arrive to a contradiction, but it is harder.
 
 The same statement holds for tetrahedron, octahedron and icosahedron.
 In this case $\alpha$ is a multiple of $\tfrac\pi3$;
@@ -417,22 +435,29 @@ The problem suggested by Jaros{\l}aw K\k{e}dra.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right and acute triangles.}
 Denote by $K$ the convex hull of $\{x_1,\z\dots,x_n\}$.
-Without loss of generality we can assume that $K$ is nondegenrate polytope. Prove the following claim.
-\qeds
-
-For any distinct $x_i$ and $x_j$
+Without loss of generality we can assume that $K$ is nondegenrate polytope. 
+Note that for any distinct $x_i$ and $x_j$
 and any interior point $z$ in $K$
 we have 
 \[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\]
 
-\medskip
-
 Denote by $h_i$ the homothety with center at $x_i$ and coefficient $\tfrac12$.
 Set $K_i=h_i(K)$.
 
+\begin{wrapfigure}{r}{31 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/acute-triangles(1)}
+\lbl[t]{2,-1;$x_i$}
+\lbl[t]{20,-1;$x_j$}
+\lbl[b]{13,9;$z$}
+\lbl[t]{25,17;$z_i$}
+\lbl[t]{7.4,17;$z_j$}
+\lbl[b]{15,17;$K$}
+\end{lpic}
+\end{wrapfigure}
+
 Let us show that $K_i$ and $K_j$ have no comon interior point.
 Assume contrary; 
-that is, $z=h_i(z_i)=h_j(z_j)$;
+that is, \[z=h_i(z_i)=h_j(z_j);\]
 for some interior points $z_i$ and $z_j$ in $K$.
 Note that 
 \[
@@ -447,8 +472,8 @@ which contradicts the claim.
 Note that $K_i\subset K$ for any $i$;
 it follows that 
 \begin{align*}
-\tfrac m{2^n}\cdot \vol K
-&=\sum_{i=1}^m\vol K_i\le
+\tfrac n{2^m}\cdot \vol K
+&=\sum_{i=1}^n\vol K_i\le
 \\
 &\le\vol K.
 \end{align*}
