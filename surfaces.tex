@@ -96,8 +96,8 @@ Show that $B$ is a tetrahedron with equal opposite sides.
 \subsection*{Geodesics for birds}
 
 Let $\gamma\:[a,b]\to\RR^m$ be a curve.
-The \index{total curvature}\emph{total curvature} of $\gamma$ is defined as the least upper bound of sum of external angles for broken lines inscribed in $\gamma$. 
-Namely, 
+The \index{total curvature}\emph{total curvature} of $\gamma$ is defined as the least upper bound of sum of external angles for broken lines inscribed in $\gamma$.
+Namely, it is
 \[\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},\]
 where $\alpha_i=\pi-\measuredangle \hinge{\gamma(t_{i})}{\gamma(t_{i-1})}{\gamma(t_{i+1})}$.
 
@@ -105,7 +105,8 @@ If $\gamma$ is smooth and parametrized by the arc length,
 then its total curvature equals to
 \[\int\limits_a^b|\ddot\gamma(t)|\cdot dt.\]
 
-The \index{geodesic}\emph{geodesics} in the following problem are defined as the curves locally minimizing the length.
+The \index{geodesic}\emph{geodesics} in the following problem are defined as the curves locally minimizing the length;
+that is, a sufficiently short arc of the curve containing the given value of parameter is length minimizing.
 
 \begin{pr}{}{Geodesics for birds}\label{liberman}
 Let $f\:\RR^2\to\RR$ be a $\ell$-Lipschitz function.
@@ -373,7 +374,7 @@ The problem was suggested by Arseniy Akopyan.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Geodesics for birds.}
 Consider a geodesic 
-\[t\mapsto(x(t),y(t),z(t))\] 
+\[\gamma\:t\mapsto(x(t),y(t),z(t))\] 
 in $W$;
 assume it is defined in the interval $\II\subset \RR$.
 Let us denote by $\phi$ the total curvature;
@@ -382,11 +383,15 @@ We need to estimate $\phi(\II)$.
 
 Denote by $s=s(t)$ the natural parameter of the plane curve \[t\mapsto (x(t),y(t)).\]
 
-Prove that the function $f\:s\mapsto z$ is concave.
+Note that the function $f\:s\mapsto z$ is concave.
+Indeed, if this is not the case then 
+one can shorten $\gamma$ by pushing it up in arbitrary small neighborhood of some interior value $t_0$ in $\II$.
+In particular, $\gamma$ is not locally length minimizing in $W$, 
+a contradiction.
 
 Given a semi-open interval $\mathbb J=(a,b]\subset \II$,
 set
-$\mu(\mathbb J)=f^+(a)\z-f^+(b)$,
+\[\mu(\mathbb J)=f^+(a)\z-f^+(b),\]
 where $f^+$ denotes right derivatives.
 The function $\mu$ extends to a measure which could be also written as
 \[\mu=\tfrac{dz^2}{d^2s}\cdot ds.\]
@@ -402,14 +407,16 @@ $$\phi(\II)\le 2\cdot\ell\cdot\sqrt{1+\ell^2}.$$
 
 A straightforward improvement of these estimates gives 
 $$\phi(\II)\le 2\cdot\ell.$$
-This bound is optimal, check a both side infinite geodesic on the graph of  
-\[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
 \qedsf
 
-The problem is due to David Berg \cite[see][]{berg}.
+This bound is optimal, check a both side infinite geodesic on the graph of  
+\[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
+
+The problem is due to David Berg \cite[see][]{berg}
+the same bound for convex $\ell$-Lipschitz surfaces was proved earlier by Vladimir Usov in \cite{usov}.
 The main observation (the concavity of the function $s\mapsto z$)
 is called \index{Liberman’s lemma}\emph{Liberman’s lemma}; 
-it was used earlier 
+it was used yet earlier 
 to bound the total curvature
 of a geodesic on a convex surface \cite[see][]{liberman}.
 
@@ -549,18 +556,24 @@ In all known examples $\Gamma_0$ contains only periodic geodesics in only finite
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Saddle surface.}
-If $\Sigma$ is not a graph then there is a point $p\in\Sigma$ with vertical tangent plane, say $\Pi$.
+Denote by $\Sigma^\circ$ the interior of $\Sigma$.
+Fix a plane $\Pi$. 
+Note that the intersection $\Pi\cap \Sigma^\circ$ 
+locally  looks like a curve or two curves intersecting transversally;
+in the latter case $\Pi$ is tangent to $\Sigma^\circ$ at the cross-point.
+
+Further note that $\Pi\cap \Sigma^\circ$ has no cycle.
+Otherwise $\Sigma$ fails to be saddle at the point of the disc surrounded by the cycle which maximize the distance to $\Pi$.
+
+Note that if $\Sigma$ is not a graph then there is a point $p\in\Sigma$ with vertical tangent plane;
+denote it by $\Pi$.
 Note that the intersection $\Pi\cap\Sigma$ has cross-point at $p$.
 
-Show that for any plane $\Pi$,
-every connected component of the intersection $\Pi\cap\Sigma$ is homeomorphic to a tree.
-Moreover the endpoints of this tree lie in the boundary of $\Sigma$.
-
 Since the boundary of $\Sigma$ projects injectively to a closed convex curve in $(x,y)$-plane,
-the intersection of $\Pi\cap\partial \Sigma$ has at most 2 points,
-a contradiction --- these are the only endpoints of the tree $\Pi\cap\Sigma$.
+the intersection of $\Pi\cap\partial \Sigma$ has at most 2 points --- these are the only endpoints of $\Pi\cap\Sigma$.
 
-It follows that $\Pi\cap\Sigma$ has no cross-points, a contradiction.\qeds
+It follows that the connected component of $p$ in $\Pi\cap\Sigma$ is a tree 
+with a vertex of degree 4 at $p$ and at most two end-points, a contradiction.\qeds
 
 The proof above is based of the observation 
 that for any plane $\Pi$,
@@ -699,8 +712,7 @@ No closed curve of these types can be contractible.\qeds
 I learned this problem 
 from the book of Mikhael Gromov \cite[see][]{gromov-MetStr},
 where it is attributed to Y. Colin de Verdi\`ere.
-I am not aware of any solutions 
-which would produce a generic example.
+I am not not know any generic metric of that type.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{The last problem of Poincar\'e.}

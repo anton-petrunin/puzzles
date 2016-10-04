@@ -59,22 +59,32 @@ into the plane which coincide near the boundary.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Positive Dehn twist}
 
+\begin{wrapfigure}{o}{47 mm}
+\begin{lpic}[t(-7 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/dehn-twist(1)}
+\lbl[b]{24,15;$h$}
+\lbl{24,14;$\longrightarrow$}
+\end{lpic}
+\end{wrapfigure}
 
-Let $\Sigma$ be a surface and $\gamma\:\RR/\ZZ\to\Sigma$ be non-contractible closed simple curve.
-Let $U_\gamma$ be a neighborhood of $\gamma$ which admits a homeomorphism $h\:U_\gamma\to \RR/\ZZ\times (0,1)$.
-\index{Dehn twist}\emph{Dehn twist} along $\gamma$ is a homeomorphism $f\:\Sigma\z\to\Sigma$
+
+Let $\Sigma$ be a surface and $\gamma\:\RR/\ZZ\z\to\Sigma$ be non-contractible closed simple curve.
+Let $U_\gamma$ be a neighborhood of $\gamma$ which admits a homeomorphism $\iota\:U_\gamma\to \RR/\ZZ\times (0,1)$.
+\index{Dehn twist}\emph{Dehn twist} along $\gamma$ is a homeomorphism $h\:\Sigma\z\to\Sigma$
 which is identity outside of $U_\gamma$ and 
 such that
-$$h\circ f\circ h^{-1}\:(x,y)\mapsto(x+y,y).$$
+$$\iota\circ h\circ \iota^{-1}\:(x,y)\mapsto(x+y,y).$$
 
 If $\Sigma$ is oriented 
-and $h$ is orientation preserving,
+and $\iota$ is orientation preserving,
 then the Dehn twist described above is called {}\emph{positive}.
 
 \begin{pr}{\easy}{Positive Dehn twist}\label{Positive Dehn twist} 
 Let $\Sigma$ be an compact oriented surface with non empty boundary.
 Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to identity rel. boundary.
+
+In other words, any product of positive Dehn twists is nontrivial in the mapping class group of $\Sigma$.
 \end{pr}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Function with no critical points}
@@ -168,7 +178,12 @@ such that $\beta(0)=p$ and $\beta(1)=q$.
 
 
 
+{
 
+\begin{wrapfigure}{r}{46 mm}
+\begin{lpic}[t(7 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
+\end{lpic}
+\end{wrapfigure}
 
 \section*{Semisolutions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,37 +197,34 @@ such that $\beta(0)=p$ and $\beta(1)=q$.
 \parbf{Immersed disks.}
 Both circles on the picture bound essentially different discs.
 
-{
-
-\begin{wrapfigure}[6]{r}{46 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
-\end{lpic}
-\end{wrapfigure}
 
 It is a good exercise to count the discs in these examples. 
 (The answers are 2 and  5 correspondingly.) 
 \qeds
 
-The existence of examples of that type is generally attributed to John Milnor \cite[see][]{bennequin}.
-
 }
 
-\begin{wrapfigure}[6]{r}{19 mm}
+{
+\begin{wrapfigure}{r}{19 mm}
 \begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
 \end{lpic}
 \end{wrapfigure}
 
+The existence of examples of that type is generally attributed to John Milnor \cite[see][]{bennequin}.
+
+
 An easier problem would be to construct two essentially different immersions of annuli with the same boundary curves; a solution is shown on the picture.
 
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Positive Dehn twist.}
-Consider the universal covering 
-$\tilde\Sigma\to\Sigma$.
+Consider the universal metric covering 
+$f\:\tilde\Sigma\z\to\Sigma$.
 The surface $\tilde \Sigma$ comes with the orientation induced from $\Sigma$.
 
-Fix a point $x_0$ on the boundary of $\tilde \Sigma$.
-Given other points $y$ and $z$ we will write
+Fix a point $x_0$ on the boundary $\partial \tilde \Sigma$.
+Given two other points $y$ and $z$ in $\partial \tilde \Sigma$ we will write
 $y\prec z$ if $z$ lies on the left side from one simple curve from $x_0$ to $y$ in $\tilde\Sigma$.
 Note that  $\prec$ defines a linear order on $\partial\tilde\Sigma\backslash\{x_0\}$.
 We will write $y\preceq z$ 
@@ -228,24 +240,32 @@ if $y\prec z$ or $y=z$.
 \end{center}
 
 Note that any homeomorphism $h\:\Sigma\to\Sigma$ which is identity on the boundary
-lifts to unique homeomorphism $\tilde h\:\tilde \Sigma\to\tilde\Sigma$ 
-is such a way that $\tilde h(x_0)=x_0$.
+lifts to the unique homeomorphism $\tilde h\:\tilde \Sigma\to\tilde\Sigma$ 
+such that $\tilde h(x_0)=x_0$.
 
-Assume $h$ is positive Dehn twist.
-Show that 
-$y\preceq \tilde h(y)$ for any  $y\in\partial\tilde\Sigma\backslash\{x_0\}$
-and there is a point $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$
-such that $y_0\prec \tilde h(y_0)$.
+\parbf{Claim.}
+Assume $h$ is a positive Dehn twist about closed curve $\gamma$.
+Then $\tilde h(y)\preceq y$ for any $y\in\partial\tilde\Sigma\backslash\{x_0\}$
+and $\tilde h(y_0)\prec y_0$ for some $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$.
 
-Note that the latter property is a homotopy invariant 
+Moreover, $\tilde h(y_0)\prec y_0$ if any path from $x_0$ to $y_0$ has to cross $f^{-1}(\gamma)$.
+
+\medskip
+
+Note that the main property in the claim is a homotopy invariant 
 and it survives under compositions of maps.
-Hence the statement follows.
+Therefore the problem is solved once we prove the claim.
+The latter is left to the reader.
 \qeds
 
 The problem was suggested by Rostislav Matveyev.
 
+The statement does not hold
+for surfaces without boundary.
+It is instructive to find a counterexample.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{24 mm}
+\begin{wrapfigure}{o}{24 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/no-critical-points()}
 \end{lpic}
 \end{wrapfigure}

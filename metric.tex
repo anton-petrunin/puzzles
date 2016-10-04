@@ -81,9 +81,8 @@ which is called \index{horocompactification}\emph{horocompactification}.
 The complement 
 $\partial_\infty X=\bar X\backslash F_X(X)$ 
 is called {}\emph{horoabsolute} of $X$.
-The compactification
-and absolute
-was introduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
+
+This construction was introduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
 
 
 \begin{pr}{\easy}{Horocompactification}\label{Horocompactification}
@@ -359,12 +358,14 @@ a students in my MASS class at Penn State, Fall 2011.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Horo-compactification.}
+\parbf{Horocompactification.}
 For the first part of the problem, take $X$ to be the set of non-negative integers with the metric $\rho$ defined as 
 \[\rho(m,n)=m+n\] 
 for $m\ne n$.
 
-Now assume $X$ is geodesic and $F_X$ is not an embedding.
+\medskip
+
+Now assume $X$ is proper length space  and $F_X$ is not an embedding.
 Then there is a sequence of points $z_1,z_2,\dots$ 
 and a point $z_\infty$,
 such that $f_{z_n}\to f_{z_\infty}$ in $C(X,\RR)$
@@ -372,7 +373,8 @@ as $n\to \infty$,
 while $|z_n-z_\infty|_X>\eps$ 
 for some fixed $\eps>0$ and all $n$.
 
-Choose $\bar z_n$ on the a geodesic $[z_\infty z_n]$ such that $|z_\infty-\bar z_n|=\eps$.
+Note that any pair of points in $X$ can be connected by a minimizing geodesic.
+Choose $\bar z_n$ on a geodesic $[z_\infty z_n]$ such that $|z_\infty-\bar z_n|=\eps$.
 Note that 
 \begin{align*}
 f_{z_n}(z_\infty)-f_{z_n}(\bar z_n)&=\eps
@@ -380,7 +382,15 @@ f_{z_n}(z_\infty)-f_{z_n}(\bar z_n)&=\eps
 f_{z_\infty}(z_\infty)-f_{z_n}(\bar z_n)&=-\eps
 \end{align*}
 for any $n$.
-In particular $f_{z_n}\not\to f_{z_\infty}$ in $C(X,\RR)$,
+
+Since $X$ is proper, we can pass to a subsequence of $z_n$ so that the sequence  $\bar z_n$ converges,
+say to $\bar z_\infty$.
+From the identities above, it follows that
+\[f_{z_n}(\bar z_\infty)\not\to f_{z_\infty}(\bar z_\infty)
+\quad
+\text{or}
+\quad 
+f_{z_n}(z_\infty)\not\to f_{z_\infty}( z_\infty),\]
 a contradiction.\qeds
 
 I learned this problem from Linus Kramer and Alexander Lytchak;

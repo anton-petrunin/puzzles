@@ -351,14 +351,22 @@ try to construct such example.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{r}{22 mm}
+\begin{wrapfigure}{r}{32 mm}
 \begin{lpic}[t(-7 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
+\lbl[br]{10,8;$x$}
+\lbl[t]{21,6.5;$y$}
+\lbl[l]{16.5,17.5;$z$}
 \end{lpic}
 \end{wrapfigure}
 
 \parbf{Coherent triangulation.} 
-Look at the diagram and think.
-\qeds
+An example shown on the diagram.
+
+Assume it is coherent and $f$ is the corresponding piecewise linear convex function.
+Without loss of generality we can assume that $f$ vanish on the boundary of big triangle.
+Arrive to a contradiction by showing 
+\[f(x)>f(y)>f(z)>f(x).\]
+\qedsf
 
 The problem was discussed by 
 Israel Gelfand, 
