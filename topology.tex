@@ -67,12 +67,15 @@ into the plane which coincide near the boundary.
 \end{wrapfigure}
 
 
-Let $\Sigma$ be a surface and $\gamma\:\RR/\ZZ\z\to\Sigma$ be non-contractible closed simple curve.
-Let $U_\gamma$ be a neighborhood of $\gamma$ which admits a homeomorphism $\iota\:U_\gamma\to \RR/\ZZ\times (0,1)$.
+Let $\Sigma$ be a surface and 
+\[\gamma\:\RR/\ZZ\z\to\Sigma\] 
+be non-contractible closed simple curve.
+Let $U_\gamma$ be a neighborhood of $\gamma$ which admits a parametrization 
+\[\iota\:\RR/\ZZ\times (0,1)\to U_\gamma.\]
 \index{Dehn twist}\emph{Dehn twist} along $\gamma$ is a homeomorphism $h\:\Sigma\z\to\Sigma$
 which is identity outside of $U_\gamma$ and 
 such that
-$$\iota\circ h\circ \iota^{-1}\:(x,y)\mapsto(x+y,y).$$
+\[\iota^{-1}\circ h\circ \iota\:(x,y)\mapsto(x+y,y).\]
 
 If $\Sigma$ is oriented 
 and $\iota$ is orientation preserving,
@@ -219,23 +222,23 @@ An easier problem would be to construct two essentially different immersions of 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Positive Dehn twist.}
-Consider the universal metric covering 
+Consider the universal covering 
 $f\:\tilde\Sigma\z\to\Sigma$.
 The surface $\tilde \Sigma$ comes with the orientation induced from $\Sigma$.
 
 Fix a point $x_0$ on the boundary $\partial \tilde \Sigma$.
 Given two other points $y$ and $z$ in $\partial \tilde \Sigma$ we will write
-$y\prec z$ if $z$ lies on the left side from one simple curve from $x_0$ to $y$ in $\tilde\Sigma$.
-Note that  $\prec$ defines a linear order on $\partial\tilde\Sigma\backslash\{x_0\}$.
-We will write $y\preceq z$ 
-if $y\prec z$ or $y=z$.
+$z\succ y$ if $y$ lies on the right side from one simple curve from $x_0$ to $z$ in $\tilde\Sigma$.
+Note that  $\succ $ defines a linear order on $\partial\tilde\Sigma\backslash\{x_0\}$.
+We will write $z \succeq y$ 
+if $z\succ y$ or $z=y$.
 
 \begin{center}
 \begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn()}
-\lbl[t]{13,5;$x_0$}
-\lbl[bl]{23,23;$y$}
-\lbl[br]{4,20;$z$}
-\lbl[]{33,8;$\tilde \Sigma$}
+\lbl[t]{13,1.5;$x_0$}
+\lbl[bl]{23,20;$y$}
+\lbl[br]{4,17;$z$}
+\lbl[]{33,5;$\tilde \Sigma$}
 \end{lpic} 
 \end{center}
 
@@ -245,17 +248,46 @@ such that $\tilde h(x_0)=x_0$.
 
 \parbf{Claim.}
 Assume $h$ is a positive Dehn twist about closed curve $\gamma$.
-Then $\tilde h(y)\preceq y$ for any $y\in\partial\tilde\Sigma\backslash\{x_0\}$
-and $\tilde h(y_0)\prec y_0$ for some $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$.
-
-Moreover, $\tilde h(y_0)\prec y_0$ if any path from $x_0$ to $y_0$ has to cross $f^{-1}(\gamma)$.
+Then $ y\succeq \tilde h(y)$ for any $y\in\partial\tilde\Sigma\backslash\{x_0\}$
+and $y_0\succ\tilde h(y_0)$ for some $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$.
 
 \medskip
 
-Note that the main property in the claim is a homotopy invariant 
+Note that the property in the claim is a homotopy invariant 
 and it survives under compositions of maps.
-Therefore the problem is solved once we prove the claim.
-The latter is left to the reader.
+Therefore the problem follows from the claim.
+
+If $\Sigma$ is not an annulus,
+then by uniformization theorem, we can assume that $\Sigma$ has  hyperbolic metric and geodesic boundary; 
+the lifted metric on $\tilde\Sigma$ has the same properties.
+Further we can assume that (1) $\gamma$ is a closed geodesic,
+(2) the parametrization $\iota\:\RR/\ZZ\times (0,1)\to U_\gamma$ is rotationally symmetric 
+and (3) for any $u\in \RR/\ZZ$ the arc $\iota(u\times (0,1))$ is a geodesic perpendicular to $\gamma$. 
+
+Consider the polar coordinates $(\phi,\rho)$ on $\tilde\Sigma$ with the origin at $x_0$;
+since $x_0$ lies on the boundary, the angle coordinate $\phi$ is defined in $[0,\pi]$. 
+Show that 
+\[\phi(x)\ge \phi\circ\tilde h(x)\]
+for any $x\ne x_0$ 
+and if the geodesic $[x_0x]$ crosses $f^{-1}(U_\gamma)$ then 
+\[\phi(x)> \phi\circ\tilde h(x).\]
+In particular the claim follows. 
+
+\begin{center}
+\begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn-annulus(1)}
+\lbl[t]{54.5,-.5;$x_0$}
+\lbl[r]{7,13.5;{\small $x$}}
+\lbl[r]{36.5,13.5;{\small $\tilde h(x)$}}
+\lbl[]{17,4.5;$\tilde \Sigma$}
+\lbl[]{7,9.5;{\small $f^{-1}(U_\gamma)$}}
+\lbl[b]{60,10;{\small $f^{-1}(\gamma)$}}
+\lbl[b]{56,5.5,-10;{\tiny $\phi(x)$}}
+\end{lpic} 
+\end{center}
+
+
+If $\Sigma$ is an annulus, then the same argument works except we have to choose a flat metric on $\Sigma$.
+In this case $\tilde \Sigma$ is a strip between two parallel lines in the plane, see the diagram.
 \qeds
 
 The problem was suggested by Rostislav Matveyev.
