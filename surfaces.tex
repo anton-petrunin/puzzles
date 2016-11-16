@@ -49,10 +49,14 @@ Denote by $\hat\gamma$ the curve formed by $\gamma\cap \Delta$
 and the reflection on $\gamma\backslash\Delta$ in $\Pi$.
 Note 
 \[\length\hat\gamma=\length\gamma\]
-and $\hat\gamma$ runs partly inside and partly outside of the surface, but does not get inside of $\Sigma$.
+and $\hat\gamma$ runs partly along $\Sigma$ 
+and partly outside of $\Sigma$, 
+but does not get inside $\Sigma$.
 
 Denote by $\bar\gamma$ the closest point projection of $\hat\gamma$ on $\Sigma$.
-The curve $\bar\gamma$ lies in $\Sigma$ has the same ends as $\gamma$.
+Since $\Sigma$ is convex, the closest point projection shrinks the length of $\gamma$.
+Therefore 
+the curve $\bar\gamma$ lies in $\Sigma$ has the same ends as $\gamma$.
 
 It remains to note that 
 \[\length\bar\gamma<\length\gamma;\]
@@ -62,9 +66,9 @@ the latter leads to a contradiction.\qeds
 \subsection*{Unbended geodesic}
 
 \begin{pr}{}{Unbended geodesic}\label{Unbended geodesic}
-Let $\Sigma$ be a smooth closed convex surface 
+Let $\Sigma$ be a smooth closed strictly convex surface 
 in $\RR^3$ 
-and $\gamma\:[0,\ell]\z\to \Sigma$ be a unit speed minimizing geodesic in $\Sigma$.
+and $\gamma\:[0,\ell]\z\to \Sigma$ be a unit-speed minimizing geodesic in $\Sigma$.
 Set $p=\gamma(0)$, $q=\gamma(\ell)$ and 
 $$p_t=\gamma(t)-t\cdot\dot\gamma(t),$$ 
 where $\dot\gamma(t)$ denotes the velocity vector of $\gamma$ at $t$.
@@ -84,13 +88,47 @@ that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Long geodesic}
 
+Recall that a closed curve 
+ called \index{simple closed curve}\emph{simple} if it is given by an injective map from the circle to the space.
+
 \begin{pr}{}{Long geodesic}\label{Long geodesic}
 Assume that the surface of convex body $B$ in $\RR^3$
-admits an arbitrary long closed simple geodesic.
+admits an arbitrary long simple closed geodesic.
 Show that $B$ is a tetrahedron with equal opposite sides.
 \end{pr}
 
 }
+
+Let us mention couple of theorems about intrinsic metric on convex surfaces which should help to solve this problem.
+These theorems can be proved easily for smooth or polyhedral surfaces
+and then the general case can be done by approximation.
+A very short but comprehensive introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}.
+
+On a convex surface (not necessary smooth) one could define 
+so
+called \index{curvature measure}\emph{curvature measure} which we denote further by $\kappa$.
+It is the (necessary unique) non-negative measure such that for any triangle $\triangle$, we have
+\[\kappa(\triangle)=\alpha+\beta+\gamma-\pi,\] 
+where $\alpha$, $\beta$ and $\gamma$ are the angles of $\triangle$, measured in the intrinsic metric of the surface.
+
+For curvature measure, an analog of Gauss--Bonnet formula holds;
+in particular
+\[\kappa(\Sigma)=4\cdot\pi\]
+for any closed surface $\Sigma$.
+
+%???+PIC
+
+Further, given a triangle $\triangle$ in a metric space,
+its model triangle $\tilde \triangle$ is defined as a triangle in the plane with the same side lengths.
+The angles $\tilde\alpha$, $\tilde\beta$ and $\tilde\gamma$ of the model triangle are called \index{model angle}\emph{model angle}
+of triangle.
+The comparison theorem states that for any triangle in a surface with non-negative curvature measure its model angles do not exceed the actual angles; that is,
+\[\tilde\alpha\le \alpha,\quad
+\tilde\beta\le\beta,\quad
+\tilde\gamma\le\gamma.\]
+The same holds for the area; that is,
+\[\area\tilde\triangle\le \area\triangle.\]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Geodesics for birds}
@@ -280,28 +318,33 @@ Show that there is a pair of points  $p_1\in \Sigma_1$ and $p_2\in \Sigma_2$ wit
 \section*{Semisolutions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unbended geodesic.}
-Prove that for any $x\in\Sigma$ the the function  
-\[t\mapsto |x - p_t|\] is non-decreasing.
+Denote by $W$ the closed unbounded set formed by $\Sigma$ and its exterior points.
+Here is the key observation:
+\emph{the concatenation of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ forms a minimizing geodesic in the intrinsic metric induced on $W$}.
+Try to prove it before reading further.
 
-Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
-Use the statement above, to prove the function 
-\[t\mapsto |x - p_t|_W\]
-is non-decreasing,
+%???+PIC
+
+\medskip
+
+Let $\Pi_t$ be the tangent plane to $\Sigma$ at $\gamma(t)$;
+set $\alpha(t)=p_t$.
+Note that $\dot\alpha(t)$ is perpendicular to $\Pi_t$
+and it points to the half-space opposite from $\Sigma$.
+
+It follows that for any $x\in\Sigma$ the the function  
+\[t\mapsto |x - p_t|
+\quad\text{and therefore}\quad
+t\mapsto |x - p_t|_W\] are non-decreasing,
 where $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
 
-Prove that 
-\[|q - p_t|_W=|q - p|_W=|q - p|_\Sigma.\] 
+On the other hand, by construction 
+\[|q - p_t|_W\le |q - p|_\Sigma;\] 
+therefore, from above 
+\[|q - p_t|_W= |q - p|_\Sigma\]
 for any $t$.
 
-It follows that the curve 
-$$\gamma_t(\tau)=\left[
-\begin{aligned}
-&(\tau-t)\cdot\dot\gamma(\tau)&&\text{if}&&\tau< t;
-\\
-&\gamma(\tau)&&\text{if}&&\tau> t.
-\end{aligned}
-\right.$$
-is a minimizing geodesic from $p_t$ to $q$ in the intrinsic metric of $W$. 
+It follows that the concatenation, say $\gamma_t$, of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ forms a minimizing geodesic from $p_t$ to $q$ in the intrinsic metric of $W$. 
 
 If $q$ is visible from $p_t$ for some $t$ then the line segment $[qp_t]$ intersects $\Sigma$ only at $q$.
 From above, 
@@ -313,48 +356,95 @@ to prove a comparison theorem for convex surfaces \cite[see][]{milka-geod}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Long geodesic.}
-Denote by $a$ the area of the surface.
+By cutting the surface $\partial B$ along a sufficiently long closed simple geodesic,
+we get two discs with.
+The key step is to show that each of these discs 
+is long and thin.
 
-Cut the surface along a long closed simple geodesic $\gamma$.
-We get two discs with non-negative curvature and large perimeter, 
-say $\ell$.
-Note that the area of each disc is bounded above by $a$.
+\medskip
+
+Choose one of the discs, say $D$;
+equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
 
 
-Choose one of the discs, say  $D$.
-Equip $D$ with the intrinsic metric further denoted as $|{*}-{*}|_D$.
-Denote by $p$ and $q$ be the points on the boundary $\partial D=\gamma$
-which lie at the maximal distance from each other.
-These points divide $\gamma$ in two arcs, say $\gamma_1$ and $\gamma_2$.
+Since $\partial B$ has non-negative curvature in the sense of Alexandrov,
+so is $D$.
+Choose a pair of points $p$ and $q$ on $\partial D$ which maximize the distance.
+Clearly,
+\[|x-p|_D,|x-q|_D\le |p-q|_D\] 
+for any other point $x\in D$.
+By comparison, 
+\[\measuredangle[x\,^p_q]\ge \tfrac\pi3.\leqno({*})\]
+
+
+
+\begin{wrapfigure}{r}{28 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-diam(1)}
+\lbl[r]{0,8;$p$}
+\lbl[l]{28,8;$q$}
+\lbl[b]{10,16;$\gamma_1(t)$}
+\lbl[l]{12,9,-60;$\ge\tfrac\pi3$}
+\end{lpic}
+\end{wrapfigure}
+
+The points $p$ and $q$ divide $\partial D$ into two arcs,
+say $\gamma_1$ and $\gamma_2$;
+let us parametrize them by arclength from $p$ to $q$. 
+Then by $({*})$
+\[\tfrac{d}{dt}\left(|x-\gamma_i(t)|_D-|x-\gamma_i(t)|_D\right)
+\ge
+\tfrac12.\]
+In particular
+\[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
+That is, if the geodesic was long 
+then $D$ has large diameter.
+
+Choose two points $x\in \gamma_1$ and $y\in\gamma_2$ sufficiently close to $p$ such that $|x-q|_D=|y-q|_D$.
+By comparison 
+\[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \partial B.\]
+It follows that 
+\[\begin{aligned}|x-y|_D&\le\frac{2\cdot \area[\tilde\triangle(xyq)]}{|q-x|_D}
+\le 
+\\
+&\le 
+\frac{100\cdot \area[\partial B]}{\length\partial D}.
+\end{aligned}
+\leqno({*}{*})\]
+
+Cut from $D$ the loon $L_p$ with $p$ along a minimizing geodesic $[xy]$.
+Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
+By comparison these $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
+and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
+Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)$.
+In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is almost $\pi$.
+
+Fix $\eps>0$.
+By $({*})$, 
+if $\length[\partial D]$ is long enough,
+we can find choose a loop $L_p$ with diameter at most $\eps$,
+such that curvature $L_p$ is at least $\pi-\eps$.
+
+Using the same construction for $p$ and $q$ in the disc $D$,
+and for the other disc,
+we get four loons in $\partial B$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
 
 \begin{center}
 \begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
-\lbl{47,3.5;$D$}
-\lbl[r]{0,3;$p$}
-\lbl[l]{73,3;$q$}
-\lbl[b]{27,8;$x$}
-\lbl[t]{28,-0.3;$y$}
-\lbl[l]{28.5,3.8;{\small $<\delta$}}
-\lbl[b]{43,7;$\gamma_1$}
-\lbl[t]{43,0;$\gamma_2$}
+\lbl{42,5;$D$}
+\lbl{10,5;$L_p$}
+\lbl[r]{0,5;$p$}
+\lbl[l]{72.5,5;$q$}
+\lbl[b]{17,10.5;$x$}
+\lbl[t]{19,-.5;$y$}
+\lbl[b]{43,10.5;$\gamma_1$}
+\lbl[t]{43,-.5;$\gamma_2$}
 \end{lpic}
 \end{center}
 
-Fix $\delta>0$.
-Show that if $\ell$ is large enough in terms of $\delta$,
-then for any point $x\in\gamma_1$
-there is a point $y\in\gamma_2$ such that $|x-y|_D<\delta$.
 
-Fix $\eps>0$ and assume that $\delta$ above is very small in terms of $\eps$.
-Use the latter statement to cut from $D$ two geodesic lenses with diameter at most $\eps$,
-with the sum of angles at least $\pi-\eps$,
-one is containing $p$ and the other $q$. 
-
-Do the same for the other disc.
-We obtain 4 non-overlapping lenses in $\Sigma$ with diameter at most $\eps$.
 
 By Gauss--Bonnet formula, each lens has total curvature at least $\pi-\eps$ 
-and the total curvature of $\Sigma$ is $4\cdot\pi$.
+and the total curvature of $\partial B$ is $4\cdot\pi$.
 Since $\eps>0$ is arbitrary, we get that there are 4 points in $\Sigma$, each with curvature $\pi$
 and the remaining part of $\Sigma$ is flat.
 
@@ -394,7 +484,7 @@ set
 \[\mu(\mathbb J)=f^+(a)\z-f^+(b),\]
 where $f^+$ denotes right derivatives.
 The function $\mu$ extends to a measure which could be also written as
-\[\mu=\tfrac{dz^2}{d^2s}\cdot ds.\]
+\[\mu=\tfrac{d^2z}{ds^2}\cdot ds.\]
 if $\tfrac{dz^2}{d^2s}$ understood in the sense of distribution.
  
 Note that $|\tfrac{dz}{ds}|\le \ell$.
@@ -469,11 +559,11 @@ which are, neither clockwise, nor counterclockwise;
 by the definition, these geodesics have no self-intersections.\qeds
 
 
-This idea is due to Stephan Cohn-Vossen, \cite[see Satz 7 in][]{convossen};
-generalizations were obtained by 
-V??? Streltsov and Alexandr Alexandrov \cite[in][]{streltsov-alexandrov}
-and by
-Victor Bangert \cite[in][]{bangert}.
+The problem is due to Stephan Cohn-Vossen, \cite[Satz 9]{convossen};
+generalizations were obtained in \cite{streltsov-alexandrov} by 
+Vladimir Streltsov and Alexandr Alexandrov
+and in \cite{bangert}
+by Victor Bangert.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Immersed surface.}
@@ -522,7 +612,7 @@ Let $-\kappa(t)$  be the total curvature of the sup-level set $f^{-1}([t,\infty)
 From Gauss--Bonnet formula,
 \[\ell'(t)=\kappa(t).\leqno({*}{*})\]
 
-The level curve $f^{-1}(t)$ can be parametrized by a unit speed curve, say $\theta_t\:[0,\ell(t)]\to \triangle$.
+The level curve $f^{-1}(t)$ can be parametrized by a unit-speed curve, say $\theta_t\:[0,\ell(t)]\to \triangle$.
 By coarea formula we have
 \[\kappa'(t)
 =
@@ -551,7 +641,7 @@ and Yakov Pesin.
 
 Here is its motivation.
 Assume $\Sigma$ be a closed surface with non-positive curvature which is not flat.
-The space $\Gamma$ of all unit speed geodesics $\gamma\:\RR\to\Sigma$ can be identified with the unit tangent bundle $\UU\Sigma$. 
+The space $\Gamma$ of all unit-speed geodesics $\gamma\:\RR\to\Sigma$ can be identified with the unit tangent bundle $\UU\Sigma$. 
 In particular $\Gamma$ comes with a natural choice of measure.
 Denote by $\Gamma_0\subset \Gamma$ the set of geodesics which run in the set of zero curvature all the time.
 It is expected that $\Gamma_0$ has vanishing measure.
@@ -619,14 +709,12 @@ This observation was used in the proof
 that the minimal disc bounded by a simple closed curve with total curvature $\le 4\cdot\pi$ 
 is necessarily embedded.
 It was proved by 
-Tobias Ekholm, 
-Brian White
-and Daniel Wienholtz
-in \cite{EWW};
+;
 an amusing simplification and generalization
 was obtained by 
 Stephan Stadler. %???REF
-This result also implies the result of John Milnor that any embedded circle of total curvature at most $4\cdot\pi$ is unknot \cite[see][]{milnor}.
+This result also implies that any embedded circle of total curvature at most $4\cdot\pi$ is unknot.
+The latter was proved inependently by Istv{\'a}n F{\'a}ry \cite[in][]{fary-knot} and  John Milnor \cite[in][]{milnor}.
 
 Note that if we assume in addition that the surface is a disc,
 then the statement holds for any saddle surface. 

@@ -31,18 +31,21 @@ Assume $\gamma$ is a smooth regular plane curve with strictly monotonic curvatur
 Show that $\gamma$ has no self-intersections.
 \end{pr}
 
-\parit{Solution.}
-Without loss of generality we may assume that the curve is parametrized by its length and its
-curvature decreases.
-
 \begin{wrapfigure}{o}{25 mm}
-\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/kneser-log(1)}
+\begin{lpic}[t(-4 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/kneser-log(1)}
 \end{lpic}
 \end{wrapfigure}
 
+%???DONE
+\parit{Solution.}
+The trick is to show that the osculating circles of $\gamma$ are nested.
+
+Without loss of generality we may assume that the curve is parametrized by its length and its
+curvature decreases.
+
 Let $z(t)$ be the center of osculating circle at $\gamma(t)$
 and $r(t)$ is its radius.
-That is 
+Note that 
 \begin{align*}
 z(t)&=\gamma(t)+\tfrac{\ddot\gamma(t)}{|\ddot\gamma(t)|^2},
 &
@@ -51,8 +54,9 @@ r(t)&=\tfrac{1}{|\ddot\gamma(t)|}.
 
 Straightforward calculations show that
 \[|\dot z(t)|\le \dot r(t).\]
-It follows that the osculating discs are nested;
-that is, 
+Dentote by $D_t$ the osculating disc of $\gamma$ at $\gamma(t)$;
+it has center at $z(t)$ and radius $r(t)$.
+It follows that 
 $D_{t_1}\supset D_{t_0}$ for $t_1>t_0$.
 Hence the result follows.\qeds
 
@@ -159,18 +163,14 @@ for any $v,w\in \mathbb S^1$.
 Show that the area surrounded by $\gamma_1$ does not exceed the area surrounded by $\gamma_2$. 
 \end{pr}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Fat curve}
-
-\begin{pr}{\easy}{Fat curve}\label{Fat curve}
-Construct a simple plane curve with positive Lebesgue measure.
-\end{pr}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Crooked circle}
 
-\begin{pr}{}{Crooked circle}\label{Crooked circle} 
+\label{Crooked circle}
+
+\begin{pr}{}{Crooked circle} 
 Construct 
 a bounded open disc in $\RR^2$ 
 such that 
@@ -225,19 +225,38 @@ Show that most of these functions have vanishing the second derivative at every 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \parbf{The moon in the puddle.}
-Consider the {\it cut locus} $T$
-of $F$ with respect to $\partial F$;
-it is defined as the closure
+In the proof we will use \emph{cut locus}
+of $F$ with respect to its boundary\footnote{Also called \emph{medial axis}.};
+it will be further denoted as $T$.
+The cut locus can be defined as the closure
 of the set of points $x\in F$ 
 such that there are two or more points in $\partial F$ which minimize distance to $x$.
 
-\begin{wrapfigure}{o}{28 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
+
+
+For each point $x\in T$, consider the subset $X\subset\partial F$ which lies on the minimal distance from $F$.
+If $X$ is not connected then we say that $x$ is a \emph{cut point};
+equivalently it means that for any sufficiently small neighborhood $U\ni x$, 
+the complement $U\backslash T$ has at least two connected components.
+If $X$ is connected 
+then we say that $x$ is a \emph{focal point};
+equivalently it means that the osculating circle to $\partial F$ at any point of $X$ centered at $x$.
+
+
+\begin{wrapfigure}{r}{28 mm}
+\begin{lpic}[t(-3 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
 \lbl[t]{21,10;$\partial F$}
 \lbl[br]{8.5,30,;{\small $T$}}
-\lbl[tr]{6,4;{\small $z_0$}}
+\lbl[tr]{6,3;{\small $z$}}
 \end{lpic}
 \end{wrapfigure}
+
+The trick is to show that $T$ contains a focal point, say $z$.
+Since $\partial F$ has curvature of at most $1$, the radius of any osculating circle has radius at lest $1$.
+Hence $z$ lies on the distance at least $1$ from $\partial F$
+and the statement will follow.
+
+\medskip
 
 Note that after a small perturbation
 of $\partial F$ we may assume that
@@ -246,16 +265,17 @@ $F$ with finite number of edges.
 
 Note that $T$ is a
 deformation retract of $F$.
-The retraction can be obtained by moving each point $y\in F\setminus T$ to $T$
-along the line segment from $y$ to $T$ 
-which extends behind $y$ the (necessary unique) shortest segment from $y$ to $\partial F$.
+The retraction $F\to T$ can be obtained the following way:
+(1) given a point $x\in F\setminus T$,
+consider 
+be the (necessary unique) point $\hat x\in \partial F$ which minimize the distance $|x-\hat x|$ and
+(2) move $x$ along the extension of the line segment $[\hat x x]$ behind $x$ until it hits $T$.
 
 In particular, $T$ is a tree.
 Therefore $T$  has
-at least two end vertices;
-denote one of them by $z$.
-
-Prove that the disc of radius $1$ centered at $z$ lies completely in $F$.\qeds
+an end vertex say $z$.
+The point $z$ is focal since there is arbitrary small neighborhood $U$ of $z$ such that the complement $U\backslash T$ is connected.
+\qeds
 
 The problem discussed by German Pestov and Vla\-di\-mir Ionin in \cite{pestov-ionin}.
 An other solution via curve shortening flow 
@@ -287,8 +307,13 @@ Related examples discussed after the hint for ``Almost flat manifold'', page \pa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{A spring in a tin.}
-Denote by $\ell$ the length of $\alpha$.
+To solve this problem,
+you should imagine that you travel on a train along the curve $\alpha(t)$
+and watch the position of the center of the disc in the frame of your wagon.
 
+\medskip
+
+Denote by $\ell$ the length of $\alpha$.
 Equip the plane with complex coordinates so that $0$ is the center of the unit disc.
 We can assume that $\alpha$ equipped with $\ell$-periodic parametrization by length.
 
@@ -346,10 +371,11 @@ Then we get
 \\
 &=2\cdot\pi.
 \end{align*}
+
 The first identity above is called \index{Crofton formula}\emph{Crofton formula}.
-(Prove this formula first for a curve formed by one geodesic segment,
+Prove this formula first for a curve formed by one geodesic segment,
 summing up we get it for broken lines
-and by approximation it holds for all curves.)
+and by approximation it holds for all curves.
 \qeds
 
 \parit{A solution by symmetry.}
@@ -369,6 +395,17 @@ denotes the angle metric in the sphere $\mathbb S^2$.\qeds
 
 
 The problem was suggested by Nikolai Nadirashvili.
+It is nearly equivalent to the following: 
+\begin{itemize}
+\item Show that total curvature of any closed smooth regular space curve is at least $2\cdot\pi$.
+\end{itemize}
+A way more advanced problem is to show that any embedded circle of total curvature at most $4\cdot\pi$ is unknot.
+It was solved independently by Istv{\'a}n F{\'a}ry \cite[in][]{fary-knot} and  John Milnor \cite[in][]{milnor}. 
+Later many interesting generalizations and refinements were found including a generalization to singular spaces 
+by Stephanie Alexander and Richard Bishop  \cite[in][]{alexander-bishop:knot} and the
+theorem on embedded minimal disc proved by Tobias Ekholm, 
+Brian White
+and Daniel Wienholtz \cite[in][]{EWW}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -382,9 +419,12 @@ The problem was suggested by Nikolai Nadirashvili.
 \end{wrapfigure}
 
 \parbf{Oval in oval.}
-Show that the chord which minimizes (or maximizes) the ratio, 
-in which it divides the bigger oval, 
-solves the problem.\qeds
+Choose the a chord which minimizes (or maximizes) the ratio, 
+in which it divides the bigger oval.
+If the chord is not divided into equal parts, then you can rotate it slightly
+to decrease the ratio.
+Hence the problem follows.
+\qeds
 
 
 \parit{Alternative solution.}
@@ -421,19 +461,22 @@ A closely related, so called {}\emph{equal tangents problem} is discussed by the
 \parbf{Capture a sphere in a knot.}
 We can assume that the knot is given by a diagram on the sphere.
 
-Fix a M\"obius transformation $\mathbb{S}^2\to\mathbb{S}^2$ which is not an isometry.
-Denote by $u$ its conformal factor. 
-Since the M\"obius transformation preserves total area, 
+Fix a M\"obius transformation 
+$m\:\mathbb{S}^2\to\mathbb{S}^2$ which close to identity and not a rotation.
+Denote by $u$ the conformal factor of $m$. 
+Since the area is preserved, 
 we get 
 $$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u^2=1.$$ 
 Therefore, 
 $$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u<1.$$ 
-It follows that after a suitable rotation of $\mathbb{S}^2$, 
-the length of the knot decreases.
 
-The same way one gets 
-a continuous one parameter family of M\"obius transformations which moves the knot in a hemisphere 
-and allows the ball to escape. \qeds
+It follows that after a suitable rotation of $\mathbb{S}^2$, 
+the map $m$ decrease the length of the knot.
+
+Iterate this construction and pass to the limit as $m\to\id$.
+This way you get a continuous one parameter family of M\"obius transformations which moves the knot in a hemisphere.
+Therefore it allows the ball to escape. 
+\qeds
 
 
 This is a problem of Zarathustra Brady, 
@@ -448,8 +491,8 @@ Denote the linked circles by $\alpha$ and $\beta$. %???+PIC
 Fix a point $x\in\alpha$. 
 Note that one can find another point $y\in\alpha$ such that the interval 
 $[xy]$ intersects $\beta$, say at the point $z$. 
-Otherwise we can move each point of $\alpha$ along the line segment to $x$.
-This deformation of $\alpha$ will not cross $\beta$;
+Otherwise we can move each point of $\alpha$ along the line segment to $x$ ---
+this deformation of $\alpha$ will not cross $\beta$;
 the latter contradicts that $\alpha$ and $\beta$ are linked. 
 
 \begin{wrapfigure}{o}{54 mm}
@@ -504,25 +547,7 @@ Ludwig Danzer, Branko Gr{\"u}nbaum  and Victor Klee
 in \cite{danzer-grunbaum-klee}.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{40 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/serpinski-cemetery(1)}
-\end{lpic}
-\end{wrapfigure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Fat curve.}
-Modify your favorite space filling curve 
-keeping its area nearly the same 
-and removing the self-intersections.
-
-It works for the \index{Sierpi\'nski curve}\emph{Sierpi\'nski curve} 
-which can be constructed as a limit of 
-recursively defined sequence of curves;
-the 8th iteration is on the diagram.\qeds 
-
-It seems that the existence of such curves was first observed 
-by William Osgood \cite[see][]{osgood}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -535,11 +560,6 @@ one can choose $a\le x\le y\le b$
 such that
 \[|f(y)-f(a)|\le\eps\ \ \text{and}\ \ |f(x)-f(b)|\le\eps.\]
 
-A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
-Guess the construction from the diagram.
-
-
-
 \begin{center}
 \begin{lpic}[t(-0 mm),b(4 mm),r(0 mm),l(0 mm)]{pics/crooked(1)}
 \lbl[t]{8,0;$\eps=\tfrac12$}
@@ -549,15 +569,8 @@ Guess the construction from the diagram.
 \end{lpic}
 \end{center}
 
-
-Now, start with the unit circle, 
-$\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
-Fix a sequence of positive numbers $\eps_n$ which converges to zero very fast. 
-Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\to\RR^2$.
-Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
-and 
-\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
-for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
+A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
+Guess the construction from the diagram.
 
 \begin{wrapfigure}{o}{46 mm}
 \begin{lpic}[t(-2 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/circrooked(1)}
@@ -566,17 +579,25 @@ for some $\eps_n$-crooked function $f_n\:[0,1]\to[0,1]$.
 \end{lpic}
 \end{wrapfigure}
 
-On the diagram you see an attempt to draw the first iteration.
+Now, start with the unit circle, 
+$\gamma_0(t)=(\cos \tfrac{t}{2\cdot\pi},\sin \tfrac{t}{2\cdot\pi})$.
+Fix a sequence of positive numbers $\eps_n$ which converges to zero very fast. 
+Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\z\to\RR^2$.
+Such that $\gamma_{n+1}$ runs outside of the disc bounded by $\gamma_n$
+and 
+\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
+for some $\eps_n$-crooked function $f_n$.
+(On the diagram you see an attempt to draw the first iteration.)
 
 Denote by $D$ the union of all discs bounded by $\gamma_n$.
-Show that $D$ is homeomorphic to an open disc 
-and for the right choice of the $\eps_n$ the set $D$ is bounded and its
-boundary contains no simple curves.\qeds
+Clearly $D$ is homeomorphic to an open disc.
+For the right choice of the sequence $\eps_n$, 
+the set $D$ is bounded and by construction its boundary contains no simple curves.\qeds
 
-Our proof repeats the construction of pseudo-arc 
-given by Bronis\l{}aw Knaster in \cite{knaster}.
-This construction is ubiquitous;
-here are few problems which use it:
+The proof use so called on \emph{pseudo-arc} 
+constructed by Bronis\l{}aw Knaster in \cite{knaster}.
+The construction is similar to the construction of the Cantor set.
+Here are few similar problems:
 \begin{itemize}
 \item {\it Construct three disjoint non-empty open sets in $\RR$ which have the same boundary.}
 \item {\it Construct three open discs in $\RR^2$ which have the same boundary.}
@@ -603,7 +624,7 @@ The 1-dimensional Hausdorff measure will be denoted as $\mathcal{H}_1$.
 Set $L=\mathcal{H}_1(K)$.
 Without loss of generality, we may assume that $K$ has diameter $1$.
 
-Prove that 
+Since $K$ is connected, we get 
 \[\mathcal{H}_1(B(x,\eps)\cap K)\ge\eps\leqno(*)\]
 for any $x\in K$ and $0<\eps<\tfrac12$.
 
@@ -611,11 +632,16 @@ Let $x_1,\dots, x_n$ be a maximal set of points in $K$ such that
 \[|x_i-x_j|\z\ge\eps\] for all $i\ne j$. 
 From $(*)$ we have $n\le2\cdot L/\eps$.
 
-Construct a curve $\gamma_\eps$ such that (1) $\gamma_\eps$ is passing through all $x_i$, (2) $\length\gamma_\eps\le10\cdot L$ and (3) $\gamma_\eps$ lies in $\eps$-neighborhood of $K$.
-We can assume that $\gamma_\eps$ is parametrized by length.
+Note that there is a tree $T_\eps$ with the vertices $x_1,\dots, x_n$ and straight edges with length at most $2\cdot\eps$ each.
+Therefore the total length of $T_\eps$ is below $2\cdot n\cdot\eps\le 4\cdot L$.
+By construction $T_\eps$ is $\eps$-close to $K$ in the Hausdorff metric.
 
-The needed curve can be obtained as 
-a partial limit of $\gamma_\eps$. \qeds
+Note that there is a closed curve $\gamma_\eps$ which image is $T_\eps$ and its length twice the length twice the total length of $T_\eps$;
+that is, 
+\[\length\gamma_\eps\le 8\cdot L.\]
+
+Passing to a partial limit of $\gamma_\eps$ as $\eps\to 0$,
+we get the needed curve. \qeds
 
 
 This is a problem of Kenneth Falconer
@@ -628,17 +654,17 @@ This is a problem of Kenneth Falconer
 Denote by $\mathfrak{F}$ the space of all convex 1-Lipschitz functions defined on $[0,1]$ with the sup-norm.
 Note that $\mathfrak{F}$ is a complete metric space.
 
-Prove that if a function $f\in\mathfrak{F}$ has nonzero derivative at some point then there is $\eps>0$ such that
-\[|f-g|> \frac{\eps}{n^{23}}\]
-if $g\in\mathfrak{F}$  can be presented as a maximum of $n$ linear functions.
+Note that if a function $f\in\mathfrak{F}$ has nonzero second derivative at some point then there is $\eps>0$ such that
+\[|f-g|> \frac{\eps}{n^{100}}\]
+for any piecewise linear function $g\in\mathfrak{F}$ which is made from at most $n$ linear functions.
 
-Note that there is a countable set of piecewise linear convex functions $g_1,g_2,\dots$ which is everywhere dense in $\mathfrak{F}$.
+Fix a countable set of piecewise linear convex functions $g_1,g_2,\dots$ which is dense in $\mathfrak{F}$.
 Denote by $n_i$ the number of linear intervals of $g_i$.
 For any positive integer $k$,
 consider the set $\Omega_k\subset\mathfrak{F}$ defined as 
 \[\Omega_k
 =
-\set{|f-g_i|<\frac1{k\cdot n_i^{23}}}{\text{for some}\ i}.\]
+\set{|f-g_i|<\frac1{k\cdot n_i^{100}}}{\text{for some}\ i}.\]
 
 From above we get that if the second derivative of $f$ does not vanishing at some point then $f\notin\Omega_k$ for large $k$. 
 
@@ -648,7 +674,7 @@ Therefore
 is a G-delta dense set.
 Hence the statement follows.\qeds
   
-
+It worth to note that the second derivative of a convex function is defined almost everywhere.
 
 This problem states that typical convex functions is very far from what we used to work with.
 
@@ -660,8 +686,8 @@ and
 L{\'a}szl{\'o} Sz{\'e}kelyhidi proved in \cite{KSS}
 a typical 1-Lipschitz maps from the plane to itself preserves the length of all curves.
 The same way one could show that the typical open discs in the plane contain no simple curves in their boundary, 
-although the construction of one such is not trivial, 
-see ``Crooked circle'' above.
+although the construction of a concrete example is not trivial;
+see ``Crooked circle'', page \pageref{Crooked circle}.
 
 More problems of that type are surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 
