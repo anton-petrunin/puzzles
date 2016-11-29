@@ -7,7 +7,7 @@ geodesics,
 convex and saddle surfaces
 and different types of curvature.
 An introductory course in differential geometry should cover all necessary background material, 
-say \cite[][\S28--29]{hilbert-cohn-vossen}
+for example \cite[][\S28--29]{hilbert-cohn-vossen}
 or  
 \cite{toponogov-curves-and-surfaces}.
 
@@ -54,29 +54,46 @@ and partly outside of $\Sigma$,
 but does not get inside $\Sigma$.
 
 Denote by $\bar\gamma$ the closest point projection of $\hat\gamma$ on $\Sigma$.
-Since $\Sigma$ is convex, the closest point projection shrinks the length of $\gamma$.
+Since $\Sigma$ is convex, the closest point projection shrinks the length.
 Therefore 
-the curve $\bar\gamma$ lies in $\Sigma$ has the same ends as $\gamma$.
-
-It remains to note that 
-\[\length\bar\gamma<\length\gamma;\]
-the latter leads to a contradiction.\qeds
+the curve $\bar\gamma$ lies in $\Sigma$, 
+it has the same ends as $\gamma$
+and
+\[\length\bar\gamma<\length\gamma.\]
+The latter leads to a contradiction.\qeds
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+
+\begin{wrapfigure}[10]{r}{39 mm}
+\begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/unbend(1)}
+\lbl[r]{8.5,26;$p$}
+\lbl[r]{9,31;$p_t$}
+\lbl[l]{33.5,25;$q$}
+\lbl[t]{25,26;$\gamma(t)$}
+\lbl{20,10;$\Sigma$}
+\end{lpic}
+\end{wrapfigure}
+
 \subsection*{Unbended geodesic}
 
 \begin{pr}{}{Unbended geodesic}\label{Unbended geodesic}
 Let $\Sigma$ be a smooth closed strictly convex surface 
 in $\RR^3$ 
 and $\gamma\:[0,\ell]\z\to \Sigma$ be a unit-speed minimizing geodesic in $\Sigma$.
-Set $p=\gamma(0)$, $q=\gamma(\ell)$ and 
+Set $p\z=\gamma(0)$, $q=\gamma(\ell)$ and 
 $$p_t=\gamma(t)-t\cdot\dot\gamma(t),$$ 
 where $\dot\gamma(t)$ denotes the velocity vector of $\gamma$ at $t$.
-
-Show that for any $t\in (0,\ell)$,
-one {}\emph{cannot see}  $q$ from $p_t$;
-that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from $q$.
 \end{pr}
+
+}
+\vskip-\medskipamount
+\textit{Show that for any $t\in (0,\ell)$,
+one {}\emph{cannot see}  $q$ from $p_t$;
+that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from $q$.}
+
+
 
 {
 
@@ -89,10 +106,10 @@ that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from 
 \subsection*{Long geodesic}
 
 Recall that a closed curve 
- called \index{simple closed curve}\emph{simple} if it is given by an injective map from the circle to the space.
+ called \index{simple closed curve}\emph{simple} if it has no self-intersections.
 
 \begin{pr}{}{Long geodesic}\label{Long geodesic}
-Assume that the surface of convex body $B$ in $\RR^3$
+Assume that the surface $\Sigma$ of a convex body $B$ in $\RR^3$
 admits an arbitrary long simple closed geodesic.
 Show that $B$ is a tetrahedron with equal opposite sides.
 \end{pr}
@@ -114,7 +131,7 @@ where $\alpha$, $\beta$ and $\gamma$ are the angles of $\triangle$, measured in 
 For curvature measure, an analog of Gauss--Bonnet formula holds;
 in particular
 \[\kappa(\Sigma)=4\cdot\pi\]
-for any closed surface $\Sigma$.
+for any closed convex surface $\Sigma$ in $\RR^3$
 
 %???+PIC
 
@@ -319,45 +336,49 @@ Show that there is a pair of points  $p_1\in \Sigma_1$ and $p_2\in \Sigma_2$ wit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unbended geodesic.}
 Denote by $W$ the closed unbounded set formed by $\Sigma$ and its exterior points.
-Here is the key observation:
-\emph{the concatenation of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ forms a minimizing geodesic in the intrinsic metric induced on $W$}.
+Fix $t\in (0,\ell)$ and consider the concatenation $\gamma_t$ of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$.
+The key step in the proof is to show the following:
+\begin{itemize}
+ \item[$({*})$] The curve $\gamma_t$ is a minimizing geodesic in the intrinsic metric induced on $W$
+\end{itemize}
 Try to prove it before reading further.
 
 %???+PIC
 
 \medskip
 
-Let $\Pi_t$ be the tangent plane to $\Sigma$ at $\gamma(t)$;
-set $\alpha(t)=p_t$.
-Note that $\dot\alpha(t)$ is perpendicular to $\Pi_t$
-and it points to the half-space opposite from $\Sigma$.
+Let $\Pi_t$ be the tangent plane to $\Sigma$ at $\gamma(t)$.
+Consider the curve $\alpha(t)=p_t$.
+Note that $\alpha(t)\in\Pi_t$,
+$\dot\alpha(t)\perp\Pi_t$
+and $\dot\alpha(t)$ points to the side of $\Pi_t$ opposite from $\Sigma$ for any $t$.
 
-It follows that for any $x\in\Sigma$ the the function  
+It follows that for any $x\in\Sigma$ the function  
 \[t\mapsto |x - p_t|
-\quad\text{and therefore}\quad
-t\mapsto |x - p_t|_W\] are non-decreasing,
-where $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
+\quad\text{and, therefore,}\quad
+t\mapsto |x - p_t|_W\] are non-decreasing;
+here $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
 
 On the other hand, by construction 
 \[|q - p_t|_W\le |q - p|_\Sigma;\] 
 therefore, from above 
 \[|q - p_t|_W= |q - p|_\Sigma\]
 for any $t$.
+Whence $(*)$ follows.
 
-It follows that the concatenation, say $\gamma_t$, of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ forms a minimizing geodesic from $p_t$ to $q$ in the intrinsic metric of $W$. 
-
-If $q$ is visible from $p_t$ for some $t$ then the line segment $[qp_t]$ intersects $\Sigma$ only at $q$.
+Assume $q$ is visible from $p_t$ for some $t$;
+that is, the line segment $[qp_t]$ intersects $\Sigma$ only at $q$.
 From above, 
 $\gamma_t$  coincides with the line segment $[qp_t]$.
 On the other hand $\gamma(t)$ lies on $\gamma_t$, a contradiction.\qeds
 
 This  observation was used by Anatoliy Milka
-to prove a comparison theorem for convex surfaces \cite[see][]{milka-geod}.
+to prove a generalization of comparison theorem for convex surfaces \cite[see][]{milka-geod}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Long geodesic.}
-By cutting the surface $\partial B$ along a sufficiently long closed simple geodesic,
-we get two discs with.
+By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
+we get two discs.
 The key step is to show that each of these discs 
 is long and thin.
 
@@ -367,12 +388,12 @@ Choose one of the discs, say $D$;
 equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
 
 
-Since $\partial B$ has non-negative curvature in the sense of Alexandrov,
+Since $\Sigma$ has non-negative curvature in the sense of Alexandrov,
 so is $D$.
-Choose a pair of points $p$ and $q$ on $\partial D$ which maximize the distance.
+Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
 Clearly,
 \[|x-p|_D,|x-q|_D\le |p-q|_D\] 
-for any other point $x\in D$.
+for any other point $x\in\partial D$.
 By comparison, 
 \[\measuredangle[x\,^p_q]\ge \tfrac\pi3.\leqno({*})\]
 
@@ -401,55 +422,55 @@ then $D$ has large diameter.
 
 Choose two points $x\in \gamma_1$ and $y\in\gamma_2$ sufficiently close to $p$ such that $|x-q|_D=|y-q|_D$.
 By comparison 
-\[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \partial B.\]
+\[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
 It follows that 
-\[\begin{aligned}|x-y|_D&\le\frac{2\cdot \area[\tilde\triangle(xyq)]}{|q-x|_D}
+\[\begin{aligned}|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
 \le 
 \\
 &\le 
-\frac{100\cdot \area[\partial B]}{\length\partial D}.
+100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
 \end{aligned}
 \leqno({*}{*})\]
 
-Cut from $D$ the loon $L_p$ with $p$ along a minimizing geodesic $[xy]$.
+Cut from $D$ along a minimizing geodesic $[xy]$
+and consider part (a loon) $L_p$ with the point $p$ in it.
 Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
-By comparison these $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
+By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
 and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
 Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)$.
 In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is almost $\pi$.
 
 Fix $\eps>0$.
-By $({*})$, 
-if $\length[\partial D]$ is long enough,
-we can find choose a loop $L_p$ with diameter at most $\eps$,
+If $\length[\partial D]$ is long enough,
+by $({*})$, 
+we can find a loon $L_p$ with diameter at most $\eps$,
 such that curvature $L_p$ is at least $\pi-\eps$.
 
 Using the same construction for $p$ and $q$ in the disc $D$,
 and for the other disc,
-we get four loons in $\partial B$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
+we get four loons in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
 
 \begin{center}
 \begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
-\lbl{42,5;$D$}
-\lbl{10,5;$L_p$}
-\lbl[r]{0,5;$p$}
-\lbl[l]{72.5,5;$q$}
-\lbl[b]{17,10.5;$x$}
-\lbl[t]{19,-.5;$y$}
-\lbl[b]{43,10.5;$\gamma_1$}
-\lbl[t]{43,-.5;$\gamma_2$}
+\lbl{46,6;$D$}
+\lbl{6,6;$L_p$}
+\lbl[r]{0,6;$p$}
+\lbl[l]{92.5,6;$q$}
+\lbl[b]{19,11.5;$x$}
+\lbl[t]{12.5,.5;$y$}
+\lbl[b]{46,12;$\gamma_1$}
+\lbl[t]{46,-.5;$\gamma_2$}
+\lbl[tr]{16.5,9;{\small $\alpha$}}
+\lbl[br]{12.5,4.5;{\small $\beta$}}
 \end{lpic}
 \end{center}
 
-
-
-By Gauss--Bonnet formula, each lens has total curvature at least $\pi-\eps$ 
-and the total curvature of $\partial B$ is $4\cdot\pi$.
-Since $\eps>0$ is arbitrary, we get that there are 4 points in $\Sigma$, each with curvature $\pi$
+By Gauss--Bonnet formula, the total curvature of $\Sigma$ is $4\cdot\pi$.
+Since $\eps>0$ is arbitrary, we get that there are four singular points in $\Sigma$, each with curvature $\pi$
 and the remaining part of $\Sigma$ is flat.
 
 \begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-6 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
+\begin{lpic}[t(-4 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -560,10 +581,11 @@ by the definition, these geodesics have no self-intersections.\qeds
 
 
 The problem is due to Stephan Cohn-Vossen, \cite[Satz 9]{convossen};
-generalizations were obtained in \cite{streltsov-alexandrov} by 
-Vladimir Streltsov and Alexandr Alexandrov
-and in \cite{bangert}
-by Victor Bangert.
+generalizations were obtained  by 
+Vladimir Streltsov and Alexandr Alexandrov 
+\cite[in][]{streltsov-alexandrov} 
+and 
+by Victor Bangert \cite[in][]{bangert}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Immersed surface.}
@@ -806,6 +828,23 @@ where it is attributed to Y. Colin de Verdi\`ere.
 I am not not know any generic metric of that type.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{wrapfigure}{r}{44 mm}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
+\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
+\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
+\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
+\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
+\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
+\lbl[l]{37,19;{\small $\check\gamma(n)$}}
+\lbl[b]{21.5,35.5;$0$}
+\lbl[br]{33.5,35.5;$1$}
+\lbl{40,3;$H_+$}
+\lbl{3,3;$H_-$}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{The last problem of Poincar\'e.}
 Set 
 \begin{align*}
@@ -825,20 +864,6 @@ Note that the map
 \[\check f\:z\mapsto f(z)+\eps\]
 is area preserving and has no fixed points.
 
-\begin{wrapfigure}{r}{44 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
-\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
-\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
-\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
-\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
-\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
-\lbl[l]{37,19;{\small $\check\gamma(n)$}}
-\lbl[b]{21.5,35.5;$0$}
-\lbl[br]{33.5,35.5;$1$}
-\lbl{40,3;$H_+$}
-\lbl{3,3;$H_-$}
-\end{lpic}
-\end{wrapfigure}
 
 Prove that for some positive integer $n$,
 there is a curve 
