@@ -150,15 +150,16 @@ The same holds for the area; that is,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Geodesics for birds}
 
-Let $\gamma\:[a,b]\to\RR^m$ be a curve.
+Let $\gamma\:[a,b]\to\RR^3$ be a curve.
 The \index{total curvature}\emph{total curvature} of $\gamma$ is defined as the least upper bound of sum of external angles for broken lines inscribed in $\gamma$.
 Namely, it is
 \[\sup\set{\sum_{i=1}^{n-1}\alpha_i}{a=t_0<t_1<\dots<t_n=b},\]
 where $\alpha_i=\pi-\measuredangle \hinge{\gamma(t_{i})}{\gamma(t_{i-1})}{\gamma(t_{i+1})}$.
 
-If $\gamma$ is smooth and parametrized by the arc length, 
+If $\gamma$ is smooth, and parametrized by the arc length, 
 then its total curvature equals to
-\[\int\limits_a^b|\ddot\gamma(t)|\cdot dt.\]
+\[\int\limits_a^b|\ddot\gamma(t)|\cdot dt,\]
+the value $|\ddot\gamma(t)|$ is the curvature of $\gamma$ at $\gamma(t)$.
 
 The \index{geodesic}\emph{geodesics} in the following problem are defined as the curves locally minimizing the length;
 that is, a sufficiently short arc of the curve containing the given value of parameter is length minimizing.
@@ -182,6 +183,20 @@ Show that any geodesic in $W$
 Let $\Sigma$ be a complete unbounded convex surface in $\mathbb R^3$.
 Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-intersections.
 \end{pr}
+
+Let us review couple of statements about Gauss curvature  which might help to solve the problem.
+
+If $\Sigma$ is a convex surface in $\RR^3$ then its Gauss curvature is nonnegative.
+
+Assume that a simply connected region $\Omega$ in a surface $\Sigma$ is bounded by a closed broken geodesic $\gamma$.
+Denote by $\kappa(\Omega)$ the integral of Gauss curvaure along $\Omega$.
+
+For any point $p\in\Sigma$ consider outer unit normal vector $n(p)\in\mathbb{S}^2$.
+Then 
+\[\kappa(\Omega)=\area[n(\Omega)]=2\cdot\pi-\sigma(\gamma),\]
+where $\sigma(\gamma)$ denotes the sum of the signed exterior angles of $\gamma$.
+In particular,  $\sigma\le2\cdot\pi$.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Immersed surface}
@@ -480,7 +495,8 @@ To do this cut $\Sigma$ along three geodesics which connect one singular point t
 develop the obtained flat surface on the plane and think;
 also look at the diagram.\qeds
 
-The problem was suggested by Arseniy Akopyan.
+I learned the problem from Arseniy Akopyan,
+the case of polyhedra was solved by Vladimir Protasov in \cite{protasov}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Geodesics for birds.}
@@ -530,6 +546,7 @@ is called \index{Liberman’s lemma}\emph{Liberman’s lemma};
 it was used yet earlier 
 to bound the total curvature
 of a geodesic on a convex surface \cite[see][]{liberman}.
+This lemma is often useful when it comes geodesics on convex surfaces are considered.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{o}{41 mm}
@@ -557,6 +574,20 @@ The following is the key statement in the proof.
 To prove the claim use the following observations.
 \begin{itemize}
 \item The integral curvature $\omega$ of $\Sigma$ cannot exceed $2\cdot\pi$.
+\end{itemize}
+Indeed, since $\Sigma$ is unbounded we can choose a sequence of points $x_n\in\Sigma$ which diverge to infinity.
+Fix a point $p\in \Sigma$.
+Consider the sequence of the line segments $[px_n]$.
+Note that its partial limit is a half-line starting from $p$ which lies in the convex region bounde by $\Sigma$.
+
+Consider a coordinate system with this this half-line as the positive half of $z$-axis. 
+In these coordinates $\Sigma$ is described as a graph $z=f(x,y)$ for a cnvex function $f$.
+In particular the outer normal vectors to $\Sigma$ point in the south hemisphere.
+Therefore the area of spherical image of $\Sigma$ is at most $2\cdot\pi$.
+As it was mentioned above this area counsides with the integral of Gauss curvature along $\Sigma$.
+
+
+\begin{itemize}
 \item If $\phi$ is the angle at the base of a simple geodesic loop then the integral curvature surrounded by the loop equals to $\pi+\phi$; in particular there are no obtuse loops.
 \end{itemize}
 
@@ -718,7 +749,7 @@ Without loss of generality we may assume that the sphere is centered at the orig
 Consider the restriction $h$ of the function $x\mapsto |x|^2$ to the surface $\Sigma$.
 Prove that $\Delta_\Sigma h\le 4$ and apply the divergence theorem for $\nabla_\Sigma h$.
 It follows that the function
-\[f\:r\mapsto \frac{\area(\Sigma\cap B(0,r))}{r^2}
+\[f\:r\mapsto \frac{\area[\Sigma\cap B(0,r)]}{r^2}
 \]
 is non-decreasing in the interval $(0,1)$.
 Hence the result follows.\qeds
