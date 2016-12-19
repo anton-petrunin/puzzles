@@ -1,4 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{The last problem of Poincar\'e\hard}
 
+\begin{pr}{\hard}{The last problem of Poincar\'e}\label{The last problem of Poincare}
+Let $f\:\CC\to \CC$ be an area preserving homeomorphism
+such that 
+\[f(z)
+=
+\left[
+\begin{aligned}
+&z-i&&\text{if}&&\Re(z)\le -1,
+\\
+&z+i&&\text{if}&&\Re(z)\ge 1.
+\end{aligned}
+\right.
+\] 
+and $f(z+i)=f(z)+i$ for any $z\in\CC$.
+
+Show that $f$ has a fixed point.
+\end{pr}
+
+\parbf{The last problem of Poincar\'e.}
+Set 
+\begin{align*}
+H_+&=\set{z\in\CC}{\Re(z)\ge 1},
+\\
+H_-&=\set{z\in\CC}{\Re(z)\le -1}.
+\end{align*}
+
+Assume $f$ has no fixed points;
+in other words the image of the map 
+\[\phi\:z\mapsto f(z)-z\] 
+lies in $\CC^*=\CC\backslash\{0\}$.
+
+\begin{wrapfigure}{r}{44 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
+\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
+\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
+\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
+\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
+\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
+\lbl[l]{37,19;{\small $\check\gamma(n)$}}
+\lbl[b]{21.5,35.5;$0$}
+\lbl[br]{33.5,35.5;$1$}
+\lbl{40,3;$H_+$}
+\lbl{3,3;$H_-$}
+\end{lpic}
+\end{wrapfigure}
+
+
+Fix $\eps>0$ such that $|f(z)-z|>\eps$ for any $z\in\CC$.
+Note that the map 
+\[\check f\:z\mapsto f(z)+\eps\]
+is area preserving and has no fixed points.
+
+
+Prove that for some positive integer $n$,
+there is a curve 
+\[\check \gamma\:[0,n]\to \CC\]
+which starts in $H_-$, ends in $H_+$
+and 
+$\check f\circ\check\gamma(t)=\check\gamma(t+1)$
+for any $t\z\in [0,n-1]$.
+
+Repeat the same construction for the function 
+\[\hat f(z)=f(z)-\eps\] 
+and obtain a curve 
+\[\hat \gamma\:[0,m]\to \CC\] starting in $H_+$ and ending in $H_-$.
+
+Connect $\check\gamma(n)$ to $\hat \gamma(0)$ by a curve in $H_+$ 
+and 
+$\hat\gamma(m)$ to  $\check\gamma(0)$ by a curve in $H_-$.
+Denote by $\sigma$ the obtained loop.
+
+Prove that
+\begin{itemize}
+\item The loop $\phi\circ\sigma$ has to be null-homotopic in $\CC^*$.
+\item The loop $\phi\circ\sigma$ is a generator of $\pi_1\CC^*$.
+\end{itemize}
+
+\noindent
+These two statements contradict each other. \qeds
+
+
+The question was asked by Henri Poincar\'e \cite[see][]{poincare}
+and answered by George Birkhoff in \cite{birkhoff}.
 
 
 

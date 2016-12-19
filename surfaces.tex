@@ -5,7 +5,7 @@ We assume that the reader is familiar with smooth surfaces and the related defin
 including intrinsic metric, 
 geodesics,
 convex and saddle surfaces
-and different types of curvature.
+as well as different types of curvature.
 An introductory course in differential geometry should cover all necessary background material; 
 see for example \cite[][\S28--29]{hilbert-cohn-vossen}
 or  
@@ -158,7 +158,7 @@ The same holds for the area; that is,
 
 Let $\gamma\:[a,b]\to\RR^3$ be a curve.
 The \index{total curvature}\emph{total curvature} of $\gamma$ is defined as the integral of its curvature.
-That is, if $t$ is the natural parameter, the total curvature of $\gamma$ is
+That is, if $t$ is the natural parameter, then total curvature of $\gamma$ equals to 
 \[\int\limits_a^b|\ddot\gamma(t)|\cdot dt,\]
 the vector $\ddot\gamma(t)$ is called \index{curvature vector}\emph{curvature vector} and its magnitude $|\ddot\gamma(t)|$ is the \index{curvature}\emph{curvature} of $\gamma$ at time $t$.
 The above definition has sense for $C^{1,1}$ smooth curves,
@@ -179,8 +179,9 @@ Show that any geodesic in $W$
  has  total curvature at most $2\cdot\ell$. 
 \end{pr}
 
-Any geodesic in the problem forms a $C^{1,1}$ curve in $\RR^3$.
-This is an easy in real analysis which can be taken as granted.
+Actually, a geodesic as in the problem is a $C^{1,1}$ curve;
+in particular the formula for total curvature mentioned above makes sense for such geodesic.
+This is an easy exercise in real analysis which can be also taken as granted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Simple geodesic}
@@ -325,26 +326,6 @@ Give an example of a non-flat metric
 on the $2$-torus such that it has no contractible geodesics.
 \end{pr}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{The last problem of Poincar\'e\hard}
-
-\begin{pr}{\hard}{The last problem of Poincar\'e}\label{The last problem of Poincare}
-Let $f\:\CC\to \CC$ be an area preserving homeomorphism
-such that 
-\[f(z)
-=
-\left[
-\begin{aligned}
-&z-i&&\text{if}&&\Re(z)\le -1,
-\\
-&z+i&&\text{if}&&\Re(z)\ge 1.
-\end{aligned}
-\right.
-\] 
-and $f(z+i)=f(z)+i$ for any $z\in\CC$.
-
-Show that $f$ has a fixed point.
-\end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Two discs}
@@ -557,27 +538,27 @@ Hence
 
 The statement holds for general $\ell$-Lischitz function,
 not necessary smooth.
-The given bound is optimal, check a both side infinite geodesic on the graph of  
+The given bound is optimal, the equality is reached for both side infinite geodesic on the graph of  
 \[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
 
 The problem is due to David Berg \cite[see][]{berg}
 the same bound for convex $\ell$-Lipschitz surfaces was proved earlier by Vladimir Usov in \cite{usov}.
-The main observation $({*})$
+The observation $({*})$
 is called \index{Liberman’s lemma}\emph{Liberman’s lemma}; 
 it was used yet earlier 
 to bound the total curvature
 of a geodesic on a convex surface \cite[see][]{liberman}.\footnote{It was a part of the thesis of Joseph Liberman, defended couple of months before his death in the WWII.}
-This lemma is often useful when it comes geodesics on convex surfaces are considered.
+This lemma is often useful when geodesics on convex surfaces are considered.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{41 mm}
-\begin{lpic}[t(-5 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/bangert(1)}
+\begin{wrapfigure}{o}{36 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/bangert(1)}
 \end{lpic}
 \end{wrapfigure}
 
 \parbf{Simple geodesic.} 
 Look at two combinatoric types of self intersections shown on the diagram.
-One of the curves can and the other can not appear as self intersections of geodesic on an unbounded convex surface.
+One of the types can and the other can not appear as self intersections of geodesic on an unbounded convex surface.
 Try to determine which is which before reading further.
 
 \medskip
@@ -617,10 +598,10 @@ Now assume $({*})$ does not hold, so a geodesic has two simple loops.
 Note that the discs bounded by loops  have to overlap,
 otherwise the curvature of $\Sigma$ will axceed $2\cdot\pi$.
 But if they overlap then it is easy to show that the curve also contains a concave loop, 
-which contradicts the observation above.
+which contradicts the observation above.%
+\footnote{This observation implies that the right picture on the diagram above can not be realized by a geodesic.}
 
-Note that, 
-if a geodesic $\gamma$ has a self-intersection,
+If a geodesic $\gamma$ has a self-intersection,
 then it contains a simple loop.
 From $({*})$, there is only one such loop;
 it cuts a disc from $\Sigma$ 
@@ -634,8 +615,8 @@ $t\mapsto \gamma(-t)$
 is counterclockwise.
 The sets of clockwise and counterclockwise are open and the space of geodesics is connected. 
 It follows that there are geodesics 
-which are, neither clockwise, nor counterclockwise;
-by the definition, these geodesics have no self-intersections.\qeds
+which are, neither clockwise, nor counterclockwise.
+These geodesics have no self-intersections.\qeds
 
 
 The problem is due to Stephan Cohn-Vossen, \cite[Satz 9]{convossen};
@@ -895,83 +876,6 @@ where it is attributed to Y. Colin de Verdi\`ere.
 I do not know any generic metric of that type.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{wrapfigure}{r}{44 mm}
-\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/birkhoff(1)}
-\lbl[r]{33,44.5;{\small $\hat\gamma(0)$}}
-\lbl[r]{31,57.5;{\small $\hat\gamma(1)$}}
-\lbl[rb]{6.5,63;{\small $\hat\gamma(n)$}}
-\lbl[l]{10.3,28.3;{\small $\check\gamma(0)$}}
-\lbl[l]{12.4,18.6;{\small $\check\gamma(1)$}}
-\lbl[l]{37,19;{\small $\check\gamma(n)$}}
-\lbl[b]{21.5,35.5;$0$}
-\lbl[br]{33.5,35.5;$1$}
-\lbl{40,3;$H_+$}
-\lbl{3,3;$H_-$}
-\end{lpic}
-\end{wrapfigure}
-
-\parbf{The last problem of Poincar\'e.}
-Set 
-\begin{align*}
-H_+&=\set{z\in\CC}{\Re(z)\ge 1},
-\\
-H_-&=\set{z\in\CC}{\Re(z)\le -1}.
-\end{align*}
-
-Assume $f$ has no fixed points;
-in other words the image of the map 
-\[\phi\:z\mapsto f(z)-z\] 
-lies in $\CC^*=\CC\backslash\{0\}$.
-
-
-Fix $\eps>0$ such that $|f(z)-z|>\eps$ for any $z\in\CC$.
-Note that the map 
-\[\check f\:z\mapsto f(z)+\eps\]
-is area preserving and has no fixed points.
-
-
-Prove that for some positive integer $n$,
-there is a curve 
-\[\check \gamma\:[0,n]\to \CC\]
-which starts in $H_-$, ends in $H_+$
-and 
-$\check f\circ\check\gamma(t)=\check\gamma(t+1)$
-for any $t\z\in [0,n-1]$.
-
-Repeat the same construction for the function 
-\[\hat f(z)=f(z)-\eps\] 
-and obtain a curve 
-\[\hat \gamma\:[0,m]\to \CC\] starting in $H_+$ and ending in $H_-$.
-
-Connect $\check\gamma(n)$ to $\hat \gamma(0)$ by a curve in $H_+$ 
-and 
-$\hat\gamma(m)$ to  $\check\gamma(0)$ by a curve in $H_-$.
-Denote by $\sigma$ the obtained loop.
-
-Prove that
-\begin{itemize}
-\item The loop $\phi\circ\sigma$ has to be null-homotopic in $\CC^*$.
-\item The loop $\phi\circ\sigma$ is a generator of $\pi_1\CC^*$.
-\end{itemize}
-
-\noindent
-These two statements contradict each other. \qeds
-
-
-The question was asked by Henri Poincar\'e \cite[see][]{poincare}
-and answered by George Birkhoff in \cite{birkhoff}.
-
-
-
- 
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Two discs.}
 Choose a continuous map $h\:\Sigma_1\to \Sigma_2$
