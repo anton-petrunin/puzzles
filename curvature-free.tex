@@ -92,7 +92,7 @@ It is uniquely defined by the following properties:
 \item The metric on each tangent space $\T_p\subset \T M$ is the Euclidean metric induced by $g$.
 \item Assume $\gamma(t)$ is a curve in $M$ and $v(t)\in\T_{\gamma(t)}$ is a parallel vector field along $\gamma$. 
 Note that $v(t)$ forms a curve in $\T M$.
-For the Sasaki metric, we have the curve $\dot v(t)$ is perpendicular to the fiber $\T_{\gamma(t)}$ for any $t$.
+For the Sasaki metric, we have the curve $v'(t)$ is perpendicular to the fiber $\T_{\gamma(t)}$ for any $t$.
 \end{enumerate}
 
 A more constructive way to describe Sasaki metric is given by identifying 
@@ -755,17 +755,17 @@ Note that
 \begin{align*}
 |f\circ \gamma(1)-f\circ\gamma(0)|
 &=
-\left|\int\limits_0^1df(\dot\gamma(t))\cdot dt\right|\le \\
-&\le \int\limits_0^1\left|df(\dot\gamma(t))\right|\cdot dt.
+\left|\int\limits_0^1df(\gamma'(t))\cdot dt\right|\le \\
+&\le \int\limits_0^1\left|df(\gamma'(t))\right|\cdot dt.
 \end{align*}
 
-Assume $\dot\gamma(0)$
+Assume $\gamma'(0)$
 takes random value in $\UU M$.
-By Liouville's theorem, the same holds for $\dot\gamma(t)$
+By Liouville's theorem, the same holds for $\gamma'(t)$
 for any fixed $t$.
 Therefore
 the expected value of
-\[\int\limits_0^1|df(\dot\gamma(t))|\cdot dt\]
+\[\int\limits_0^1|df(\gamma'(t))|\cdot dt\]
 is at most $\delta_m$.
 
 By Markov's inequality,

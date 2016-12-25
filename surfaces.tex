@@ -47,7 +47,7 @@ Let $\gamma$ be a minimizing geodesic with the ends in $\Delta$.
 Assume $\gamma\backslash\Delta\ne\emptyset$.
 Denote by $\hat\gamma$ the curve formed by $\gamma\cap \Delta$ 
 and the reflection on $\gamma\backslash\Delta$ in $\Pi$.
-Note 
+Note that
 \[\length\hat\gamma=\length\gamma\]
 and $\hat\gamma$ runs partly along $\Sigma$ 
 and partly outside of $\Sigma$, 
@@ -84,8 +84,8 @@ Let $\Sigma$ be a smooth closed strictly convex surface
 in $\RR^3$ 
 and $\gamma\:[0,\ell]\z\to \Sigma$ be a unit-speed minimizing geodesic in $\Sigma$.
 Set $p\z=\gamma(0)$, $q=\gamma(\ell)$ and 
-$$p_t=\gamma(t)-t\cdot\dot\gamma(t),$$ 
-where $\dot\gamma(t)$ denotes the velocity vector of $\gamma$ at $t$.
+$$p_t=\gamma(t)-t\cdot\gamma'(t),$$ 
+where $\gamma'(t)$ denotes the velocity vector of $\gamma$ at $t$.
 \end{pr}
 
 }
@@ -94,8 +94,35 @@ where $\dot\gamma(t)$ denotes the velocity vector of $\gamma$ at $t$.
 one {}\emph{cannot see}  $q$ from $p_t$;
 that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from $q$.}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Simple geodesic}
 
 
+\begin{pr}{}{Simple geodesic}\label{Simple geodesic}
+Let $\Sigma$ be a complete unbounded convex surface in $\mathbb R^3$.
+Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-intersections.
+\end{pr}
+
+Let us review couple of statements from \cite[][\S28]{hilbert-cohn-vossen}
+about Gauss curvature which might help to solve the problem.
+
+If $\Sigma$ is a convex surface in $\RR^3$ then its Gauss curvature is nonnegative.
+
+Assume that a simply connected region $\Omega$ in a surface $\Sigma$ is bounded by a closed broken geodesic $\gamma$.
+Denote by $\kappa(\Omega)$ the integral of Gauss curvaure along $\Omega$.
+
+For any point $p\in\Sigma$ consider outer unit normal vector $n(p)\in\mathbb{S}^2$.
+Then 
+\begin{align*}
+\kappa(\Omega)&=\area[n(\Omega)]
+\intertext{and by Gauss--Bonnet formula}
+\kappa(\Omega)&=2\cdot\pi-\sigma(\gamma),
+\end{align*}
+where $\sigma(\gamma)$ denotes the sum of the signed exterior angles of $\gamma$.
+In particular,  $|\sigma(\gamma)|\le2\cdot\pi$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 
 \begin{wrapfigure}{r}{21 mm}
@@ -103,7 +130,6 @@ that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from 
 \end{lpic}
 \end{wrapfigure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Long geodesic}
 
 Recall that a closed curve 
@@ -156,14 +182,14 @@ The same holds for the area; that is,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Geodesics for birds}
 
-Let $\gamma\:[a,b]\to\RR^3$ be a curve.
 The \index{total curvature}\emph{total curvature} of $\gamma$ is defined as the integral of its curvature.
-That is, if $t$ is the natural parameter, then total curvature of $\gamma$ equals to 
-\[\int\limits_a^b|\ddot\gamma(t)|\cdot dt,\]
-the vector $\ddot\gamma(t)$ is called \index{curvature vector}\emph{curvature vector} and its magnitude $|\ddot\gamma(t)|$ is the \index{curvature}\emph{curvature} of $\gamma$ at time $t$.
+That is, if a curve $\gamma\:[a,b]\to\RR^3$ has unit speed parametrization, 
+then the total curvature of $\gamma$ equals to 
+\[\int\limits_a^b|\gamma''(t)|\cdot dt,\]
+the vector $\gamma''(t)$ is called \index{curvature vector}\emph{curvature vector} and its magnitude $|\gamma''(t)|$ is the \index{curvature}\emph{curvature} of $\gamma$ at time $t$.
 The above definition has sense for $C^{1,1}$ smooth curves,
-that is if $\ddot\gamma(t)$ is locally Lipschitz;
-in this case the curvature $|\ddot\gamma(t)|$ defined almost everywhere.
+that is if $\gamma'(t)$ is locally Lipschitz;
+in this case the curvature $|\gamma''(t)|$ defined almost everywhere.
 
 The \index{geodesic}\emph{geodesics} in the following problem are defined as the curves locally minimizing the length;
 that is, a sufficiently short arc of the curve containing the given value of parameter is length minimizing.
@@ -179,35 +205,9 @@ Show that any geodesic in $W$
  has  total curvature at most $2\cdot\ell$. 
 \end{pr}
 
-Actually, a geodesic as in the problem is a $C^{1,1}$ curve;
-in particular the formula for total curvature mentioned above makes sense for such geodesic.
+Actually, geodesics as in the problem are $C^{1,1}$-smooth;
+in particular, the formula for total curvature mentioned above makes sense.
 This is an easy exercise in real analysis which can be also taken as granted.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Simple geodesic}
-
-
-\begin{pr}{}{Simple geodesic}\label{Simple geodesic}
-Let $\Sigma$ be a complete unbounded convex surface in $\mathbb R^3$.
-Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-intersections.
-\end{pr}
-
-Let us review couple of statements about Gauss curvature  which might help to solve the problem.
-
-If $\Sigma$ is a convex surface in $\RR^3$ then its Gauss curvature is nonnegative.
-
-Assume that a simply connected region $\Omega$ in a surface $\Sigma$ is bounded by a closed broken geodesic $\gamma$.
-Denote by $\kappa(\Omega)$ the integral of Gauss curvaure along $\Omega$.
-
-For any point $p\in\Sigma$ consider outer unit normal vector $n(p)\in\mathbb{S}^2$.
-Then 
-\begin{align*}
-\kappa(\Omega)&=\area[n(\Omega)]
-\intertext{and by Gauss--Bonnet formula}
-\kappa(\Omega)&=2\cdot\pi-\sigma(\gamma),
-\end{align*}
-where $\sigma(\gamma)$ denotes the sum of the signed exterior angles of $\gamma$.
-In particular,  $|\sigma(\gamma)|\le2\cdot\pi$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -341,12 +341,13 @@ Show that there is a pair of points  $p_1\in \Sigma_1$ and $p_2\in \Sigma_2$ wit
 \section*{Semisolutions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unbended geodesic.}
-Denote by $W$ the closed unbounded set formed by $\Sigma$ and its exterior points.
-Fix $t\in (0,\ell)$ and consider the concatenation $\gamma_t$ of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$.
-The key step in the proof is to show the following:
+Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
+Fix $t\in (0,\ell)$;
+denote by $\gamma_t$ the concatenation of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$.
+The key step is to show the following:
 \medskip
 \begin{itemize}
- \item[$({*})$] The curve $\gamma_t$ is a minimizing geodesic in the intrinsic metric induced on $W$
+ \item[$({*})$] The curve $\gamma_t$ is a minimizing geodesic in the intrinsic metric induced on $W$.
 \end{itemize}
 \medskip
 Try to prove it before reading further.
@@ -359,8 +360,8 @@ Let $\Pi_t$ be the tangent plane to $\Sigma$ at $\gamma(t)$.
 Consider the curve $\alpha(t)=p_t$.
 Note that for any $t$ we have 
 $\alpha(t)\in\Pi_t$,
-$\dot\alpha(t)\perp\Pi_t$
-and $\dot\alpha(t)$ points to the side of $\Pi_t$ opposite from $\Sigma$.
+$\alpha'(t)\perp\Pi_t$
+and $\alpha'(t)$ points to the side of $\Pi_t$ opposite from $\Sigma$.
 
 It follows that for any $x\in\Sigma$ the function  
 \[t\mapsto |x - p_t|
@@ -384,175 +385,8 @@ On the other hand $\gamma_t$ contains $\gamma(t)\in\Sigma$, a contradiction.\qed
 This problem is based on an observation used by Anatoliy Milka in the proof of his (beautiful) generalization of comparison theorem for convex surfaces \cite[see][]{milka-geod}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Long geodesic.}
-By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
-we get two discs.
-The key step is to show that each of these discs 
-is long and thin.
-
-\medskip
-
-Let $D$ be one of these discs.
-Equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
-
-
-Since $\Sigma$ has non-negative curvature in the sense of Alexandrov,
-so does $D$.
-Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
-Clearly,
-\[|x-p|_D,|x-q|_D\le |p-q|_D\] 
-for any other point $x\in\partial D$.
-By comparison, 
-\[\measuredangle[x\,^p_q]\ge \tfrac\pi3.\leqno({*})\]
-
-
-
-\begin{wrapfigure}{r}{28 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-diam(1)}
-\lbl[r]{0,8;$p$}
-\lbl[l]{28,8;$q$}
-\lbl[b]{10,16;$\gamma_1(t)$}
-\lbl[l]{12,9,-60;$\ge\tfrac\pi3$}
-\end{lpic}
-\end{wrapfigure}
-
-The points $p$ and $q$ divide $\partial D$ into two arcs,
-say $\gamma_1$ and $\gamma_2$;
-let us parametrize them by arclength from $p$ to $q$. 
-Then by $({*})$
-\[\tfrac{d}{dt}\left(|x-\gamma_i(t)|_D-|x-\gamma_i(t)|_D\right)
-\ge
-\tfrac12.\]
-In particular
-\[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
-That is, if the geodesic was long 
-then $D$ has large diameter.
-
-Choose two points $x\in \gamma_1$ and $y\in\gamma_2$ sufficiently close to $p$ such that $|x-q|_D=|y-q|_D$.
-By comparison 
-\[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
-It follows that 
-\[\begin{aligned}|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
-\le 
-\\
-&\le 
-100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
-\end{aligned}
-\leqno({*}{*})\]
-
-Cut $D$ along a minimizing geodesic $[xy]$ into two loons.
-Denote by $L_p$ the loon with the point $p$ in it.
-Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
-By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
-and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
-Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)$.
-In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is $\pi$ or just a little less.
-
-Fix $\eps>0$.
-If $\length[\partial D]$ is long enough,
-by $({*})$, 
-we can find a loon $L_p$ with diameter at most $\eps$,
-such that curvature $L_p$ is at least $\pi-\eps$.
-
-Using the same construction for $p$ and $q$ in the disc $D$,
-and for the two points in the other disc,
-we get four loons in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
-
-\begin{center}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
-\lbl{46,6;$D$}
-\lbl{6,6;$L_p$}
-\lbl[r]{0,6;$p$}
-\lbl[l]{92.5,6;$q$}
-\lbl[b]{19,11.5;$x$}
-\lbl[t]{12.5,.5;$y$}
-\lbl[b]{46,12;$\gamma_1$}
-\lbl[t]{46,-.5;$\gamma_2$}
-\lbl[tr]{16.5,9;{\small $\alpha$}}
-\lbl[br]{12.5,4.5;{\small $\beta$}}
-\end{lpic}
-\end{center}
-
-By Gauss--Bonnet formula, the total curvature of $\Sigma$ is $4\cdot\pi$.
-Since $\eps>0$ is arbitrary, we get that there are four singular points in $\Sigma$, each with curvature $\pi$
-and the remaining part of $\Sigma$ is flat.
-
-\begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-4 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
-\end{lpic}
-\end{wrapfigure}
-
-It remains to show that any surface with this property 
-is isometric to the surface of a tetrahedron with equal opposite edges.
-To do this cut $\Sigma$ along three geodesics which connect one singular point to the remaining three,
-develop the obtained flat surface on the plane and think;
-also look at the diagram.\qeds
-
-I learned the problem from Arseniy Akopyan,
-the case of polyhedra was solved by Vladimir Protasov in \cite{protasov}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Geodesics for birds.}
-Fix a unit-speed geodesic in $W$, say
-\[\gamma\:t\mapsto(x(t),y(t),z(t)).\]
-We can assume that $\gamma$ is defined on a closed interval $[0,a]$.
-The key step is to show the following:
-\medskip
-\begin{itemize}
-\item[$({*})$] The function $t\mapsto z$ is concave.
-\end{itemize}
-
-\medskip
-
-Parametrize the plane curve $t\mapsto (x(t),y(t))$ by arclength $s$
-and reparametrize $\gamma$ by $s$.
-
-%???+PIC
-
-Note that the function $s\mapsto z$ is concave.
-If not, one could shorten $\gamma$ by moving its points up, in the direction of $z$-axis, and keeping its ends fixed.
-Moreover, this deformation can be performed in an arbitrary small neighborhood of some point on $\gamma$.
-After the deformation, the curve still lies in $W$.
-The latter contradicts that $\gamma$ locally length minimizing.
-
-Note that concavity of $s\mapsto z$ is equivalent to the concavity of $t\mapsto z$.
-Hence $({*})$ follows.
-
-Since $f$ is smooth, 
-the curve $\gamma(t)$ is $C^{1,1}$; 
-that is, its first derivative $\gamma'(t)$ is Lipschitz.
-It follows that second derivative $\gamma''(t)$ is defined almost everywhere.
-
-Since $z(t)$ is concave, we have $z''(t)\le 0$.
-Since $f$ is $\ell$-Lipschitz, $z(t)$ is $\tfrac{\ell}{\sqrt{1+\ell^2}}$-Lipschitz.
-It follows that 
-\[\int\limits_0^a |z''(t)|\le 2\cdot\tfrac{\ell}{\sqrt{1+\ell^2}}.\]
-
-The curvature vector $\gamma''(t)$ is perpendicular to the surface.
-Since the surface has slope at most $\ell$,
-we get 
-\[|\gamma''(t)|\le |z''(t)|\cdot\sqrt{1+\ell^2}.\]
-Hence 
-\[\int\limits_0^a |\gamma''(t)|\le 2\cdot\ell.\]
-\qedsf
-
-The statement holds for general $\ell$-Lischitz function,
-not necessary smooth.
-The given bound is optimal, the equality is reached for both side infinite geodesic on the graph of  
-\[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
-
-The problem is due to David Berg \cite[see][]{berg}
-the same bound for convex $\ell$-Lipschitz surfaces was proved earlier by Vladimir Usov in \cite{usov}.
-The observation $({*})$
-is called \index{Liberman’s lemma}\emph{Liberman’s lemma}; 
-it was used yet earlier 
-to bound the total curvature
-of a geodesic on a convex surface \cite[see][]{liberman}.\footnote{It was a part of the thesis of Joseph Liberman, defended couple of months before his death in the WWII.}
-This lemma is often useful when geodesics on convex surfaces are considered.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{o}{36 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/bangert(1)}
+\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/bangert(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -625,6 +459,182 @@ Vladimir Streltsov and Alexandr Alexandrov
 \cite[in][]{streltsov-alexandrov} 
 and 
 by Victor Bangert \cite[in][]{bangert}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Long geodesic.}
+By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
+we get two discs.
+The key step is to show that each of these discs 
+is long and thin.
+
+\medskip
+
+Let $D$ be one of these discs.
+Equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
+
+
+Since $\Sigma$ has non-negative curvature in the sense of Alexandrov,
+so does $D$.
+Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
+Clearly,
+\[|x-p|_D,|x-q|_D\le |p-q|_D\] 
+for any other point $x\in\partial D$.
+By comparison, 
+\[\measuredangle[x\,^p_q]\ge \tfrac\pi3.\leqno({*})\]
+
+
+
+\begin{wrapfigure}{r}{28 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-diam(1)}
+\lbl[r]{0,8;$p$}
+\lbl[l]{28,8;$q$}
+\lbl[b]{10,16;$\gamma_1(t)$}
+\lbl[l]{12,9,-60;$\ge\tfrac\pi3$}
+\end{lpic}
+\end{wrapfigure}
+
+The points $p$ and $q$ divide $\partial D$ into two arcs,
+say $\gamma_1$ and $\gamma_2$;
+let us parametrize them by arclength from $p$ to $q$. 
+Then by $({*})$
+\[\tfrac{d}{dt}\left(|x-\gamma_i(t)|_D-|x-\gamma_i(t)|_D\right)
+\ge
+\tfrac12.\]
+In particular
+\[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
+In particular, if $\partial D$ is long 
+then $D$ has large diameter.
+
+Choose two points $x\in \gamma_1$ and $y\in\gamma_2$ sufficiently close to $p$ such that $|x-q|_D=|y-q|_D$.
+By comparison 
+\[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
+It follows that 
+\[\begin{aligned}|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
+\le 
+\\
+&\le 
+100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
+\end{aligned}
+\leqno({*}{*})\]
+
+Cut $D$ along a minimizing geodesic $[xy]$ into two lenses.
+Denote by $L_p$ the lens with the point $p$ in it.
+Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
+By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
+and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
+Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)$.
+In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is $\pi$ or just a little less.
+
+Fix $\eps>0$.
+If $\length[\partial D]$ is long enough,
+by $({*})$, 
+we can find a lens $L_p$ with diameter at most $\eps$,
+such that curvature $L_p$ is at least $\pi-\eps$.
+
+Using the same construction for $p$ and $q$ in the disc $D$,
+and for the two points in the other disc,
+we get four lenses in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
+
+\begin{center}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
+\lbl{46,6;$D$}
+\lbl{6,6;$L_p$}
+\lbl[r]{0,6;$p$}
+\lbl[l]{92.5,6;$q$}
+\lbl[b]{19,11.5;$x$}
+\lbl[t]{12.5,.5;$y$}
+\lbl[b]{46,12;$\gamma_1$}
+\lbl[t]{46,-.5;$\gamma_2$}
+\lbl[tr]{16.5,9;{\small $\alpha$}}
+\lbl[br]{12.5,4.5;{\small $\beta$}}
+\end{lpic}
+\end{center}
+
+By Gauss--Bonnet formula, the total curvature of $\Sigma$ is $4\cdot\pi$.
+Since $\eps>0$ is arbitrary, we get that there are four singular points in $\Sigma$, each with curvature $\pi$
+and the remaining part of $\Sigma$ is flat.
+
+\begin{wrapfigure}{o}{21 mm}
+\begin{lpic}[t(-4 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
+\end{lpic}
+\end{wrapfigure}
+
+It remains to show that any surface with this property 
+is isometric to the surface of a tetrahedron with equal opposite edges.
+To do this cut $\Sigma$ along three geodesics which connect one singular point to the remaining three,
+develop the obtained flat surface on the plane and think;
+also look at the diagram.\qeds
+
+I learned the problem from Arseniy Akopyan,
+the case of polyhedra was solved by Vladimir Protasov in \cite{protasov}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Geodesics for birds.}
+Fix a unit-speed geodesic in $W$, say
+\[\gamma\:t\mapsto(x(t),y(t),z(t)).\]
+We can assume that $\gamma$ is defined on a closed interval $[a,b]$.
+The key step is to show the following:
+\medskip
+\begin{itemize}
+\item[$({*})$] The function $t\mapsto z$ is concave.
+\end{itemize}
+
+\medskip
+
+Parametrize the plane curve $t\mapsto (x(t),y(t))$ by arclength $s$
+and reparametrize $\gamma$ by $s$.
+
+\begin{center}
+\begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/liberman(1)}
+\lbl[t]{25,8;$s$}
+\lbl[r]{1,27;$z$}
+\lbl[r]{36,27;$z$}
+\lbl[bl]{55.5,3.5;$x$}
+\lbl[rb]{53,16;$y$}
+\lbl[br]{62,22;$\gamma$}
+\end{lpic}
+\end{center}
+
+Note that the function $s\mapsto z$ is concave.
+If not, one could shorten $\gamma$ by moving its points up, in the direction of $z$-axis, and keeping its ends fixed.
+Moreover, this deformation can be performed in an arbitrary small neighborhood of some point on $\gamma$.
+After the deformation, the curve still lies in $W$.
+The latter contradicts that $\gamma$ locally length minimizing.
+
+Finally note that concavity of $s\mapsto z$ is equivalent to the concavity of $t\mapsto z$.
+Hence $({*})$ follows.
+
+Since $f$ is smooth, 
+the curve $\gamma(t)$ is $C^{1,1}$; 
+that is, its first derivative $\gamma'(t)$ is Lipschitz.
+It follows that second derivative $\gamma''(t)$ is defined almost everywhere.
+
+Since $z(t)$ is concave, we have $z''(t)\le 0$.
+Since $f$ is $\ell$-Lipschitz, $z(t)$ is $\tfrac{\ell}{\sqrt{1+\ell^2}}$-Lipschitz.
+It follows that 
+\[\int\limits_a^b |z''(t)|\le 2\cdot\tfrac{\ell}{\sqrt{1+\ell^2}}.\]
+
+The curvature vector $\gamma''(t)$ is perpendicular to the surface.
+Since the surface has slope at most $\ell$,
+we get 
+\[|\gamma''(t)|\le |z''(t)|\cdot\sqrt{1+\ell^2}.\]
+Hence 
+\[\int\limits_a^b |\gamma''(t)|\le 2\cdot\ell.\]
+\qedsf
+
+The statement holds for general $\ell$-Lischitz function,
+not necessary smooth.
+The given bound is optimal, the equality is reached for both side infinite geodesic on the graph of  
+\[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
+
+The problem is due to David Berg \cite[see][]{berg}
+the same bound for convex $\ell$-Lipschitz surfaces was proved earlier by Vladimir Usov in \cite{usov}.
+The observation $({*})$
+is called \index{Liberman’s lemma}\emph{Liberman’s lemma}; 
+it was used yet earlier 
+to bound the total curvature
+of a geodesic on a convex surface \cite[see][]{liberman}.\footnote{It was a part of the thesis of Joseph Liberman, defended couple of months before his death in the WWII.}
+This lemma is often useful when geodesics on convex surfaces are considered.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Immersed surface.}

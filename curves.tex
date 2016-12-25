@@ -48,13 +48,13 @@ Let $z(t)$ be the center of osculating circle at $\gamma(t)$
 and $r(t)$ is its radius.
 Note that 
 \begin{align*}
-z(t)&=\gamma(t)+\tfrac{\ddot\gamma(t)}{|\ddot\gamma(t)|^2},
+z(t)&=\gamma(t)+\tfrac{\gamma''(t)}{|\gamma''(t)|^2},
 &
-r(t)&=\tfrac{1}{|\ddot\gamma(t)|}.
+r(t)&=\tfrac{1}{|\gamma''(t)|}.
 \end{align*}
 
 Straightforward calculations show that
-\[|\dot z(t)|\le \dot r(t).\]
+\[|z'(t)|\le r'(t).\]
 Dentote by $D_t$ the osculating disc of $\gamma$ at $\gamma(t)$;
 it has center at $z(t)$ and radius $r(t)$.
 It follows that 
@@ -339,7 +339,7 @@ Denote by $\ell$ the length of $\alpha$.
 Equip the plane with complex coordinates so that $0$ is the center of the unit disc.
 We can assume that $\alpha$ equipped with $\ell$-periodic parametrization by length.
 
-Consider the curve $\beta(t)=t-\tfrac{\alpha(t)}{\dot\alpha(t)}$.
+Consider the curve $\beta(t)=t-\tfrac{\alpha(t)}{\alpha'(t)}$.
 Note that 
 \[\beta(t+\ell)=\beta(t)+\ell\] 
 for any $t$.
@@ -352,11 +352,11 @@ In particular
 
 Note that 
 \begin{align*}
-|\dot\beta(t)|&=|\tfrac{\alpha(t)\cdot\ddot\alpha(t)}{\dot\alpha(t)^2}|\le
+|\beta'(t)|&=|\tfrac{\alpha(t)\cdot\alpha''(t)}{\alpha'(t)^2}|\le
 \\
-&\le|\ddot\alpha(t)|.
+&\le|\alpha''(t)|.
 \end{align*}
-Since $|\ddot\alpha(t)|$ is the curvature of $\alpha$ at $t$,
+Since $|\alpha''(t)|$ is the curvature of $\alpha$ at $t$,
 we get the result.\qeds
 
 The statement was originally proved 
