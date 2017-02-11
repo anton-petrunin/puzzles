@@ -77,9 +77,9 @@ a contradiction.\qeds
 \end{lpic}
 \end{wrapfigure}
 
-\subsection*{Unbended geodesic}
+\subsection*{Involute of geodesic}
 
-\begin{pr}{}{Unbended geodesic}\label{Unbended geodesic}
+\begin{pr}{}{Involute of  geodesic}\label{Involute of  geodesic}
 Let $\Sigma$ be a smooth closed strictly convex surface 
 in $\RR^3$ 
 and $\gamma\:[0,\ell]\z\to \Sigma$ be a unit-speed minimizing geodesic in $\Sigma$.
@@ -122,61 +122,7 @@ where $\sigma(\gamma)$ denotes the sum of the signed exterior angles of $\gamma$
 In particular,  $|\sigma(\gamma)|\le2\cdot\pi$.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{
 
-\begin{wrapfigure}{r}{21 mm}
-\begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
-\end{lpic}
-\end{wrapfigure}
-
-\subsection*{Long geodesic}
-
-Recall that a closed curve 
- called \index{simple closed curve}\emph{simple} if it has no self-intersections.
-
-\begin{pr}{}{Long geodesic}\label{Long geodesic}
-Assume that the surface $\Sigma$ of a convex body $B$ in $\RR^3$
-admits an arbitrary long simple closed geodesic.
-Show that $B$ is a tetrahedron with equal opposite sides.
-\end{pr}
-
-}
-
-A tetrahedron with equal opposite edges is called \emph{isosceles} it has many interesting properties.
-
-Let us mention couple of theorems about intrinsic metric on convex surfaces which should help to solve this problem.
-These theorems can be proved easily for smooth or polyhedral surfaces
-and then the general case can be done by approximation.
-A very short but comprehensive introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}.
-
-On a convex surface (not necessary smooth) one could define 
-so
-called \index{curvature measure}\emph{curvature measure} which we denote further by $\kappa$.
-It is the (necessary unique) non-negative measure such that for any triangle $\triangle$, we have
-\[\kappa(\triangle)=\alpha+\beta+\gamma-\pi,\] 
-where $\alpha$, $\beta$ and $\gamma$ are the angles of $\triangle$, measured in the intrinsic metric of the surface.
-
-For curvature measure, an analog of Gauss--Bonnet formula holds;
-in particular for any closed convex surface $\Sigma$ in $\RR^3$
-\[\kappa(\Sigma)=4\cdot\pi\]
-and 
-if a closed geodesic cuts a disc $D$ from $\Sigma$ then
-\[\kappa(D)=2\cdot\pi.\]
-
-
-%???+PIC
-
-Further, given a triangle $\triangle$ in a metric space,
-its model triangle $\tilde \triangle$ is defined as a triangle in the plane with the same side lengths.
-The angles $\tilde\alpha$, $\tilde\beta$ and $\tilde\gamma$ of the model triangle are called \index{model angle}\emph{model angle}
-of triangle.
-The comparison theorem states that for any triangle in a surface with non-negative curvature measure its model angles do not exceed the actual angles; that is,
-\[\tilde\alpha\le \alpha,\quad
-\tilde\beta\le\beta,\quad
-\tilde\gamma\le\gamma.\]
-The same holds for the area; that is,
-\[\area\tilde\triangle\le \area\triangle.\]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -340,7 +286,7 @@ Show that there is a pair of points  $p_1\in \Sigma_1$ and $p_2\in \Sigma_2$ wit
 
 \section*{Semisolutions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Unbended geodesic.}
+\parbf{Involute of  geodesic.}
 Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
 Fix $t\in (0,\ell)$;
 denote by $\gamma_t$ the concatenation of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$.
@@ -386,7 +332,7 @@ This problem is based on an observation used by Anatoliy Milka in the proof of h
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}{o}{36 mm}
-\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/bangert(1)}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/bangert(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -460,113 +406,6 @@ Vladimir Streltsov and Alexandr Alexandrov
 and 
 by Victor Bangert \cite[in][]{bangert}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Long geodesic.}
-By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
-we get two discs.
-The key step is to show that each of these discs 
-is long and thin.
-
-\medskip
-
-Let $D$ be one of these discs.
-Equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
-
-
-Since $\Sigma$ has non-negative curvature in the sense of Alexandrov,
-so does $D$.
-Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
-Clearly,
-\[|x-p|_D,|x-q|_D\le |p-q|_D\] 
-for any other point $x\in\partial D$.
-By comparison, 
-\[\measuredangle[x\,^p_q]\ge \tfrac\pi3.\leqno({*})\]
-
-
-
-\begin{wrapfigure}{r}{28 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-diam(1)}
-\lbl[r]{0,8;$p$}
-\lbl[l]{28,8;$q$}
-\lbl[b]{10,16;$\gamma_1(t)$}
-\lbl[l]{12,9,-60;$\ge\tfrac\pi3$}
-\end{lpic}
-\end{wrapfigure}
-
-The points $p$ and $q$ divide $\partial D$ into two arcs,
-say $\gamma_1$ and $\gamma_2$;
-let us parametrize them by arclength from $p$ to $q$. 
-Then by $({*})$
-\[\tfrac{d}{dt}\left(|x-\gamma_i(t)|_D-|x-\gamma_i(t)|_D\right)
-\ge
-\tfrac12.\]
-In particular
-\[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
-In particular, if $\partial D$ is long 
-then $D$ has large diameter.
-
-Choose two points $x\in \gamma_1$ and $y\in\gamma_2$ sufficiently close to $p$ such that $|x-q|_D=|y-q|_D$.
-By comparison 
-\[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
-It follows that 
-\[\begin{aligned}|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
-\le 
-\\
-&\le 
-100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
-\end{aligned}
-\leqno({*}{*})\]
-
-Cut $D$ along a minimizing geodesic $[xy]$ into two lenses.
-Denote by $L_p$ the lens with the point $p$ in it.
-Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
-By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
-and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
-Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)$.
-In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is $\pi$ or just a little less.
-
-Fix $\eps>0$.
-If $\length[\partial D]$ is long enough,
-by $({*})$, 
-we can find a lens $L_p$ with diameter at most $\eps$,
-such that curvature $L_p$ is at least $\pi-\eps$.
-
-Using the same construction for $p$ and $q$ in the disc $D$,
-and for the two points in the other disc,
-we get four lenses in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
-
-\begin{center}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
-\lbl{46,6;$D$}
-\lbl{6,6;$L_p$}
-\lbl[r]{0,6;$p$}
-\lbl[l]{92.5,6;$q$}
-\lbl[b]{19,11.5;$x$}
-\lbl[t]{12.5,.5;$y$}
-\lbl[b]{46,12;$\gamma_1$}
-\lbl[t]{46,-.5;$\gamma_2$}
-\lbl[tr]{16.5,9;{\small $\alpha$}}
-\lbl[br]{12.5,4.5;{\small $\beta$}}
-\end{lpic}
-\end{center}
-
-By Gauss--Bonnet formula, the total curvature of $\Sigma$ is $4\cdot\pi$.
-Since $\eps>0$ is arbitrary, we get that there are four singular points in $\Sigma$, each with curvature $\pi$
-and the remaining part of $\Sigma$ is flat.
-
-\begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-4 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
-\end{lpic}
-\end{wrapfigure}
-
-It remains to show that any surface with this property 
-is isometric to the surface of a tetrahedron with equal opposite edges.
-To do this cut $\Sigma$ along three geodesics which connect one singular point to the remaining three,
-develop the obtained flat surface on the plane and think;
-also look at the diagram.\qeds
-
-I learned the problem from Arseniy Akopyan,
-the case of polyhedra was solved by Vladimir Protasov in \cite{protasov}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Geodesics for birds.}
@@ -584,8 +423,14 @@ The key step is to show the following:
 Parametrize the plane curve $t\mapsto (x(t),y(t))$ by arclength $s$
 and reparametrize $\gamma$ by $s$.
 
+Note that the function $s\mapsto z$ is concave.
+If not, one could shorten $\gamma$ by moving its points up, in the direction of $z$-axis, and keeping its ends fixed.
+Moreover, this deformation can be performed in an arbitrary small neighborhood of some point on $\gamma$.
+After the deformation, the curve still lies in $W$.
+The latter contradicts that $\gamma$ locally length minimizing.
+
 \begin{center}
-\begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/liberman(1)}
+ \begin{lpic}[t(-2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/liberman(1)}
 \lbl[t]{25,8;$s$}
 \lbl[r]{1,27;$z$}
 \lbl[r]{36,27;$z$}
@@ -594,12 +439,6 @@ and reparametrize $\gamma$ by $s$.
 \lbl[br]{62,22;$\gamma$}
 \end{lpic}
 \end{center}
-
-Note that the function $s\mapsto z$ is concave.
-If not, one could shorten $\gamma$ by moving its points up, in the direction of $z$-axis, and keeping its ends fixed.
-Moreover, this deformation can be performed in an arbitrary small neighborhood of some point on $\gamma$.
-After the deformation, the curve still lies in $W$.
-The latter contradicts that $\gamma$ locally length minimizing.
 
 Finally note that concavity of $s\mapsto z$ is equivalent to the concavity of $t\mapsto z$.
 Hence $({*})$ follows.

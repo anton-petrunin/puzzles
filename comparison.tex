@@ -3,10 +3,8 @@
 
 In this chapter we consider Riemannian manifolds with curvature bounds.
 
-This chapter is the very demanding;
-we assume that the reader is familiar with the 
-main definitions in the subject,
-including Jacobi fields, 
+This chapter is very demanding;
+we assume that the reader is familiar with  Jacobi fields, 
 Shape operator and second fundamental form, 
 equations of Riccati and Jacobi,
 comparison theorems and Morse theory.
@@ -14,6 +12,8 @@ The classical book \cite{cheeger-ebin} covers all the  necessary  material.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Geodesic immersion\hard}
+
+An isometric immesion $\iota\:N\looparrowright M$ from one Riemannian manifold to an other is called \index{totally geodesic}\emph{totally geodesic} if it maps any geodesic in $N$ to a geodesic in $M$.
 
 \begin{pr}{\hard}{Geodesic immersion}
 \label{Geodesic immersion}
@@ -42,19 +42,22 @@ and $\Hess_xh$ has at least $n+1$ negative eigenvalues.
 Use that $m< 2\cdot n$ and the described property to prove the following
 analog of Morse lemma for $f$.
 
-\parbf{Claim.}
-{\it Given $x\notin \iota(N)$ there is a neighborhood $U\ni x$ such that the set 
-\[U_-=\set{z\in U}{f(z)<f(x)}\] is simply connected.}
-
 \medskip
+\begin{itemize}
+\item[$({*})$]
+Given $x\notin \iota(N)$ there is a neighborhood $U\ni x$ such that the set 
+\[U_-=\set{z\in U}{f(z)<f(x)}\] is simply connected.
+\end{itemize}
+\medskip
+%???why
 
 Since $M$ is simply connected,
 any closed curve in $\iota(N)$
 can be contracted by a disc, say $s_0\:\mathbb D\to M$.
 
-Applying the claim, one can construct an $f$-decreasing homotopy starting at $s_0$.
+Applying the claim $({*})$, one can construct an $f$-decreasing homotopy which starts at $s_0$ and ends in $\iota(N)$.
 That is,
-there is an homotopy $s_t\:\mathbb D\to M$, $t\in [0,1]$ 
+a homotopy $s_t\:\mathbb D\to M$, $t\in [0,1]$ 
 such that $s_t(\partial \mathbb D)\subset \iota(N)$ for any $t$ 
 and $s_1(\mathbb D)\subset \iota(N)$.
 It follows that $\iota(N)$ is simply connected.
@@ -74,7 +77,8 @@ Burkhard Wilking \cite[see][]{wilking-2003}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Geodesic hypersurface}
-Recall that a submanifold of a Riemannian manifold is called \index{totally geodesic}\emph{totally geodesic} if any geodesic on the submanifold with its induced Riemannian metric is also a geodesic on the ambient Riemannian manifold.
+
+The totally geodesic embedding is defined before the previous problem.
 
 \begin{pr}{\easy}{Geodesic hypersurface}\label{Geodesic hypersurface}
 Assume a compact connected positively curved manifold $M$ has a totally geodesic embedded hypersurface.
@@ -89,8 +93,32 @@ Let $M$ be a complete simply connected Riemannian manifold
 with non-positive curvature 
 and dimension at least $3$.
 Prove that any immersed locally convex
-compact hypersurface in $M$ is embedded.
+compact hypersurface $\Sigma$ in $M$ is embedded.
 \end{pr}
+
+Let us summarize some statements about complete simply connected Riemannian manifolds 
+with non-positive curvature; assume $M$ is such a manifold.
+
+By Cartan--Hadamard theorem, for any point $p\in M$
+the exponential map $\exp_p\:\T_p\to M$ is a diffeomorphism.
+In particular $M$ is diffeomorphic to the Euclidean space of the same dimension.
+In particular, any geodesic in $M$ is minimizing,
+and any two points in $M$ are connected by unique minimizing geodesic,
+
+Further, $M$ is a $\CAT[0]$ space; that is, it satisfies a global angle comparison which we are about to describe.
+Assume $[xyz]$ is a triangle in $M$;
+that is, three distinct points connected pairwise by geodesics.
+Consider its model triangle $[\tilde x\tilde y\tilde z]$ in the Euclidean plane;
+that is a triangle with the coresponding side lengths as in $[xyz]$.
+Then each angle in $[xyz]$ can not axceed the corresponding angle in $[\tilde x\tilde y\tilde z]$.
+This inequality can be written as
+\[\tilde\measuredangle(y\,^x_z)\ge\measuredangle\hinge yxz,\]
+where $\measuredangle\hinge yxz$ denotes the angle of the hinge $\hinge yxz$ formed by two geodesics $[yx]$ and $[yz]$ 
+and $\tilde\measuredangle(y\,^x_z)$ denotes the corresponding angle in the model triangle $[\tilde x\tilde y\tilde z]$.
+
+From this comparison it follows that any connected closed locally convex sets in $M$ is globally convex.
+In particular, if $\Sigma$ is embedded then it bounds a convex set.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Immersed ball\hard}
@@ -117,10 +145,13 @@ Let $\T=\T\,\Sigma$ and $\mathrm{N}=\mathrm{N}\,\Sigma$ correspondingly tangent 
 Let $s$ denotes the second fundamental form of $\Sigma$;
 it is a quadratic from on $\T$ with values in $\mathrm{N}$,
 see the remark after problem ``Hypercurve'' below. 
-Let  $e_i$ is an orthonormal basis for $\T_x$, 
+Given an orthonormal basis $(e_i)$ in $\T_x$, 
 set 
-$$H_x=\sum_i s(e_i,e_i)\in \mathrm{N}_x.$$ 
-$H_x$ is the mean curvature vector at $x\in \Sigma$. 
+$$H_x=\sum_i s(e_i,e_i)\in \mathrm{N}_x.$$
+The vector $H_x$ lies in the normal space $\mathrm{N}_x$
+and it does not depend on the choice of orthonormal basis $(e_i)$.
+This vector $H_x$ is called the mean curvature vector at $x\in \Sigma$. 
+
 We say that $\Sigma$ is \index{minimal surface}\emph{minimal} if $H\equiv 0$.
 
 \begin{pr}{}{Minimal surface in the sphere}\label{almgren} 
@@ -418,32 +449,55 @@ Show that the complement of $K$ is not two-convex.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Geodesic hypersurface.}
-Assume $\Sigma$ is a totally geodesic embedded hypersurface in $M$.
+Let $\Sigma$ be the totally geodesic embedded hypersurface in the positively curved manifold $M$.
 Without loss of generality, we can assume that $\Sigma$ is connected.%
 \footnote{In fact, by Frankel's theorem [see page \ref{page:frankel}] $\Sigma$ is connected.}
 
 The complement $M\backslash\Sigma$ has one or two connected components.
 First let us show that if the number of connected components is two, 
-then $M$ is homeomorphic to sphere.
+then $M$ is homeomorphic to a sphere.
 
 By cutting $M$ along $\Sigma$ 
-we get two manifolds, say $M_1$ and $M_2$,
-with geodesic boundaries. 
-Denote by $f_1$ and $f_2$ the distance functions to the boundary on $M_1$ and $M_2$.
-Prove that  
-$f_i$ is strictly convex in the interior of $M_i$.
+we get two manifolds
+with geodesic boundaries.
+It is sufficient to show that each of them is homeomorphic to a Euclidean ball.
 
-Smooth the functions $f_i$ keeping them convex; 
-this can be done by applying Greene--Wu Theorem \cite[see Theorem~2 in][]{greene-wu}.
-After the smoothing, each $f_i$ has single critical point which is its maximum.
+Fix one of these manifolds, and denote it by $N$;
+denote by $f\:N\z\to\RR$ the distance functions to the boundary $\partial N$.
+By Riccati equation $\Hess f\le 0$ at any smooth point,
+and for any point the same holds in the barrier sense.
+It follows that $f$ is concave.
 
-Applying Morse lemma, we get that each manifold $M_i$ is homeomorphic to a ball; 
-hence $M$ 
-is homeomorphic to the sphere.
+Note that $f$ is smooth in a small neighborhood of $\partial N$.
+Given $\eps>0$, set
+\[N_\eps=\set{x\in N}{f(x)\ge \eps}.\]
+Note that for all small $\eps>0$, the set $N_\eps$ is a convex subset of $N$ with smooth boundary
+which is diffeomorphic to whole $N$.
 
-If $M\backslash\Sigma$ is connected,
-passing to a double cover of $M$,
-we reduce the problem to the case which already has been considered.\qeds
+Take strictly concave increasing function, say $\phi(x)=\ln x$.
+It is easy to check that $\Hess (\phi\circ f_i)< 0$ in the interior of $N$.
+In other words $\phi\circ f_i$ is stritly concave in the interior of $N$.
+
+Fix small $\eps>0$ an smooth $\phi\circ f$ in a neigborhood of $N_\eps$ keeping it concave. 
+This can be done by applying the smoothing theorem of Greene and Wu \cite[see Theorem~2 in][]{greene-wu}.
+
+After the smoothing, the obtained strictly concave function, say $h$ has single critical point which is its maximum.
+In particular by Morse lemma, we get that if the set  
+\[N'_s=\set{x\in N}{h(x)\ge s}\]
+is not empty and lies in $N_\eps$ then it is diffeomorphic to a Euclidean ball.
+
+For appropriately chousen smoothng, a set $N'_s$ can be made arbitrary close to $N_\eps$;
+moreover, its boundary $\partial N'_s$ can be made arbitrary close in the $C^\infty$-metric to $\partial N_\eps$.
+It follows that $N_\eps$ as well as $N$ are diffeomorphic to a Euclidean ball.
+This finishes the proof of the first case.
+
+Now assume $M\backslash\Sigma$ is connected.
+In this case there is a double cover $\tilde M$ of $M$
+which induce a double cover $\tilde\Sigma$ of $\Sigma$
+and so that $\tilde M$ contains a geodesic hypersurface $\tilde\Sigma$ which divides $\tilde M$ into two connected components. 
+From the case which already has been considered, $\tilde M$ is homeomorphic to a sphere;
+hence the second case follows.
+\qeds
 
 The problem was suggested by Peter Petersen.
 
@@ -451,34 +505,48 @@ The problem was suggested by Peter Petersen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{If convex, then embedded.}
-Observe first that any closed embedded locally convex hypersurface in a non-positively curved simply connected complete manifold bounds a convex region.
-
-
-Let $\Sigma$ be an immersed locally convex hypersurface in $M$.
 Set 
 \[m=\dim \Sigma=\dim M-1\]
 
 Given a point in $p$ on $\Sigma$ 
 denote by $p_r$ the point on distance $r$ from $p$
 which lies on the geodesic starting from $p$ in the outer normal direction to $\Sigma$.
-For fixed $r\ge 0$,
+Note that for fixed $r\ge 0$,
 the points $p_r$ sweep an immersed locally convex hypersurface which we denote by $\Sigma_r$.
 
-Fix $z\in \Sigma$.
-Denote by $S_r$ the sphere of radius $r$ centered at $z$.
-Note that $S_r$ is diffeomorphic to $m$-dimensional sphere.
 
-Denote by $d$ the diameter of $\Sigma$.
-Note that for all $r>0$
+
+\begin{wrapfigure}{r}{54 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(3 mm),l(0 mm)]{pics/sigma-r(1)}
+\lbl[br]{21,27;$\Sigma$}
+\lbl[rb]{10,42;$\Sigma_r$}
+%\lbl[l]{14,19;$S_r$}
+\lbl[bl]{31,25;$p$}
+\lbl[l]{50.8,25;$p_r$}
+%\lbl[b]{16,41.4;$x$}
+\lbl[t]{31.5,15.5;$z$}
+%\lbl[r]{18.5,34;{\small $\phi_r(x)$}}
+\end{lpic}
+\end{wrapfigure}
+
+Fix $z\in M$. 
+Denote by $d$ the maximal distance from $z$ to the points in $\Sigma$.
+Note that 
 any point on $\Sigma_r$
-lies on a distance at most $d$ from $S_r$.
-Conclude that for large $r$ the closest point projection $\phi_r\:\Sigma_r\to S_r$ is an immersion.
+lies on a distance at least $r-d$ from $z$.
 
+By comparison, 
+\[\sin\measuredangle\hinge{p_r}zp\le \tfrac dr.\]
+In particular, for large $r$, 
+each infinite geodesic starting at $z$ intersects $\Sigma_r$ transversally.
 
-Since $\Sigma$ is connected
-and $m\ge 2$, it follows that $\phi_r$ is a diffeomorphism for all large $r$.
+The space of geodesics starting from $z$ is homeomorphic to $\mathbb{S}^m$.
+Therefore the map which send a point $x\in \Sigma_r$ to a geodesic from $z$ thru $x$ induce a local diffeomorphism $\phi_r\:\Sigma_r\to\mathbb{S}^m$.
 
-By the observation above, $\Sigma_r$ bounds a convex region for all large $r$.
+Since $\Sigma_r$ is connected and $m\ge 2$, it follows that $\phi_r$ is a diffeomorphism.
+Therefore $\Sigma_r$ is star-shaped with center at $z$.
+In particular embedded and bounds a convex region (see the discussion after the formulation).
+
 By an open-closed argument, the same holds for all $r\ge 0$.
 Hence the result follows.\qeds
 

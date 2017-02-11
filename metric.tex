@@ -57,6 +57,18 @@ be a non-contracting map.
 Prove that $f$ is an isometry.
 \end{pr}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Finite-whole extension}
+
+\begin{pr}{}{Finite-whole extension}\label{Finite-whole extension}
+Let $X$ and $Y$ be metric spaces, 
+$Y$ is compact,
+$A\subset X$ and $f\:A\to Y$ be a short map.
+Assume that for any finite set $F\subset X$ there is a short map $F \to Y$
+which agrees with $f$ in $F\cap A$.
+Show that there is a short map $X\to  Y$ which agrees with $f$ on $A$.
+\end{pr}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Horocompactification\easy}
@@ -356,6 +368,39 @@ The proof presented here is not standard,
 it was given by Travis Morrison, 
 a students in my MASS class at Penn State, Fall 2011.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Finite-whole extension.}
+Given a finite set $F\subset X$,
+denote by $\mathfrak{S}_F$ the set of all short maps $h\: F\to Y$ which agree with $f$ in $F\cap A$.
+For $x\in F$, consider the set
+\[K(F,x)=\set{h(x)\in Y}{h\in \mathfrak{S}_F}.\]
+
+By assumption  
+\[K(F,x)\ne\emptyset\leqno{({*})}\] 
+for any finite set $F\subset X$ and $x\in F$.
+Further, note that $K(F,x)$ is closed and
+\[K(F',x)\supset K(F,x)\leqno{({*}{*})}\]
+for any other finite set $F'$ such that 
+$x\in F'\subset F$.
+
+Without loss of generality we can assume that $A$ is a maximal set with respect to inclusion which satisfies the assumptions of the lemma. 
+(It follows that $A$ is closed subset of $X$, but we will not use it.)
+
+Arguing by contradiction, assume $A\ne X$; fix $x\in X\backslash A$.
+Given $y\in Y$ there is a finite set $F\ni x$ such that $y\notin K(F,x)$.
+Or equivalently the intersection of all $K(F,x)$ for all finite sets $F$ including $x$ is empty.
+
+By finite intersection property, 
+we can choose a finite collection of finite sets $F_1,\dots F_n$ containing $x$ such that 
+\[K(F_1,x)\cap \dots\cap K(F_n,x)=\emptyset.\leqno{(\asterism)}\]
+
+Since the union $F=F_1\cup\dots\cup F_n$ is finite, $({*})$ and $({*}{*})$
+imply
+\[K(F_1,x)\cap \dots\cap K(F_n,x)\supset K(F,x)\ne \emptyset,\]
+which contradicts $(\asterism)$.
+\qeds
+
+This observation was used by Stephan Stadler and me \cite[in][]{petrunin-stadler}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Horocompactification.}
