@@ -50,6 +50,10 @@ in the same paper he introduced metric spaces \cite[see][]{frechet}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Non-contracting map\easy}
 
+A map $f\: X\to Y$ between metric spaces is called \index{non-contracting map}\emph{non-contracting} if
+\[|f(x)-f(x')|_Y\ge |x-x'|_X\]
+for any two points $x,x'\in X$.
+
 \begin{pr}{\easy}{Non-contracting map}\label{Noncontracting map}
 Let $K$  be a compact metric space and
 \[f\:K\z\to K\] 
@@ -60,13 +64,17 @@ Prove that $f$ is an isometry.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Finite-whole extension}
 
+A map $f\: X\to Y$ between metric spaces is called \index{non-expanding map}\emph{non-expanding} if
+\[|f(x)-f(x')|_Y\le |x-x'|_X\]
+for any two points $x,x'\in X$.
+
 \begin{pr}{}{Finite-whole extension}\label{Finite-whole extension}
 Let $X$ and $Y$ be metric spaces, 
 $Y$ is compact,
-$A\subset X$ and $f\:A\to Y$ be a short map.
-Assume that for any finite set $F\subset X$ there is a short map $F \to Y$
+$A\subset X$ and $f\:A\to Y$ be a non-expanding map.
+Assume that for any finite set $F\subset X$ there is a non-expanding map $F \to Y$
 which agrees with $f$ in $F\cap A$.
-Show that there is a short map $X\to  Y$ which agrees with $f$ on $A$.
+Show that there is a non-expanding map $X\to  Y$ which agrees with $f$ on $A$.
 \end{pr}
 
 

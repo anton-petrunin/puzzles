@@ -21,21 +21,34 @@ and equality holds if and only if $(Q,g)$ is isometric to the unit cube.
 Set 
 \[A_i=\set{(x_1,x_2,\dots,x_m)\in[0,1]^m}{x_i=0}.\]
 
-Consider functions $f_i\:[0,1]^m\to\RR$ defined by
-$f_i(x)=\dist_{A_i}(x)$.
-Note that 
-the map $\bm{f}\:([0,1]^m,g)\to\RR^m$
-defined as
-\[\bm{f}\:x\mapsto(f_1(x),f_2(x),\dots,f_m(x))\]
-is Lipschitz.
+Consider functions $f_i\:[0,1]^m\to\RR$ defined as
+$$f_i(x)=\max\{1,\dist_{A_i}(x)\}$$
+Note that each $f_i$ is $1$-Lipschitz, 
+in particular $|\nabla f|\le 1$ almost everywhere.
 
-Prove that Jacobian of  $\bm{f}$
-is at most $1$
-and $\bm{f}([0,1]^m)\supset [0,1]^m$.
-Therefore 
-\[\vol(Q,g)\ge \vol([0,1]^m)=1.\]
+Consider the map
+\[\bm{f}\:x\mapsto(f_1(x),f_2(x),\dots,f_m(x)).\]
+Notes that it maps $Q$ to it self
+and, moreover, it maps each face of $Q$ to it self.
+It follows that $\bm{f}\:Q\to Q$ is onto.
 
-The equality case is left for the reader.
+Assume $h$ is the canonical metric on the cube $Q$.
+Then 
+\[|\mathrm{J}(x)|=|\nabla_x f_1\wedge\dots\wedge\nabla_xf_m|\le 1,\]
+where $\mathrm{J}(x)$ denotes the Jcaobian of the map $f\:(Q,g)\to (Q,h)$.
+
+By the area formula, we get 
+\begin{align*}
+\vol(Q,g)
+&\ge \int\limits_Q|\mathrm{J}(x)|\cdot d_x\vol_g\ge
+\\
+&\ge\vol(Q,h)=\\
+&=1
+\end{align*}
+
+In the case of equality we have that $\<\nabla_x f_i,\nabla_x f_j\>=0$ for $i\ne j$ are 
+and $|\nabla_x f_i|=1$ almost everywhere.
+It follows then that the map $f\:(Q,g)\to (Q,h)$ is an isometry.
 \qeds
 
 The inequality was proved by Abram Besikovitch in \cite{besicovitch}.
@@ -61,8 +74,7 @@ in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \end{pr}
 
 
-The expected solution requires pseudo-holomorphic curves 
- introduced by Mikhael Gromov in \cite{gromov-pseudoholomorphic}.
+The expected solution requires pseudo-holomorphic curves introduced by Mikhael Gromov in \cite{gromov-pseudoholomorphic}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Volume and convexity\thm}
@@ -77,8 +89,8 @@ convex function.
 Prove that $M$ has an infinite volume.
 \end{pr}
 
-The Liouville's theorem should help to solve this problem;
-it states that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form.
+The expected solution use Liouville's theorem on phase volume.
+It implies in particular, that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,14 +104,15 @@ It is uniquely defined by the following properties:
 \item The metric on each tangent space $\T_p\subset \T M$ is the Euclidean metric induced by $g$.
 \item Assume $\gamma(t)$ is a curve in $M$ and $v(t)\in\T_{\gamma(t)}$ is a parallel vector field along $\gamma$. 
 Note that $v(t)$ forms a curve in $\T M$.
-For the Sasaki metric, we have the curve $v'(t)$ is perpendicular to the fiber $\T_{\gamma(t)}$ for any $t$.
+For the Sasaki metric, we have $v'(t)\perp \T_{\gamma(t)}$ for any $t$;
+that is, the curve $v(t)$ normally crosses the tangent spaces $\T_{\gamma(t)}\subset \T M$.
 \end{enumerate}
 
-A more constructive way to describe Sasaki metric is given by identifying 
+In other words, we identify the tangent space 
 $\T_u[\T M]$ for any $u\in \T_p M$ with the direct sum of so called vertical and horizontal vectors $\T_p M\oplus \T_p M$.
-The projection of this splitting defined by the differential of $\tau$
-and the Levi-Civita connection.
-Then $\T_u[\T M]$ is equipped with the metric  defined as 
+The projection of this splitting defined by the differential $d\tau\:\T\T M\to \T M$
+and we assume that a the velocity of a curve in $\T M$ formed by parallel field along a curve in $M$ is horizontal.
+Then $\T_u[\T M]$ is equipped with the metric $\hat g$ defined as 
 \[\hat g(X,Y)=g(X^V,Y^V)+g(X^H,Y^H),\]
 where $X^V,X^H\in\T_pM$ denotes the vertical and horizontal components of $X\in\T_u[\T M]$.
 
@@ -109,7 +122,7 @@ where $X^V,X^H\in\T_pM$ denotes the vertical and horizontal components of $X\in\
 Consider the tangent bundle $\T \mathbb{S}^2$ 
 equipped with Sasaki metric $\hat g$ induced by a Riemannian metric $g$ on $\mathbb{S}^2$.
 Show that, in the sense of Gromov--Hausdorff,
-the space $(\T \mathbb{S}^2, \hat g)$ lies on bounded distance to the ray $\RR_+$.
+the space $(\T \mathbb{S}^2, \hat g)$ lies on bounded distance to the ray $\RR_+=[0,\infty)$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,11 +137,15 @@ Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Two-systole}
 
-\begin{pr}{} Construct a Riemannian metric $g$ on the 3-dimensional torus $\TT^3$ such that $\vol(\TT^3,g)=1$
-and \[\area S\ge 1000\]
+\begin{pr}{} Given a big real number $L$,
+construct a Riemannian metric $g$ on the 3-dimensional torus $\TT^3$ such that $\vol(\TT^3,g)=1$
+and \[\area S\ge L\]
 for any closed surface $S$ in $\TT^3$ which does not bound.
 \end{pr}
 
+According to Gromov's systolic inequality \cite[see][]{gromov-filling}, the volume of $(\TT^3,g)$ can be bounded below in terms of its \emph{1-systole} defined to be the least length of a noncontractible loop in $(\TT^3,g)$.
+The lower bound on area of $S$ as in the problem is called 2-systole of $(\TT^3,g)$.
+Therefore the problem states that the systolic inequality does not have a direct 2-dimensional analog.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Normal exponential map\easy}
@@ -144,15 +161,15 @@ The map $\exp\:\T M\to M$ defined by $v\mapsto \gamma_v(1)$ is called exponentia
 
 The restriction of $\exp$ to the $\T_p$ is called \index{exponential map}\emph{exponential map at} $p$ and denoted as $\exp_p$.
 
-Given a smooth submanifold $S\subset M$;
-denote by $\mathrm{N} S$ the normal bundle over $S$.
-The restriction of $\exp$ to $\mathrm{N} S$ is called {}\emph{normal exponential map} of $S$ and denoted as $\exp_S$.
+Given a smooth submanifold $L\subset M$;
+denote by $\mathrm{N} L$ the normal bundle over $L$.
+The restriction of $\exp$ to $\mathrm{N} L$ is called {}\emph{normal exponential map} of $L$ and denoted as $\exp_L$.
 
 \begin{pr}{\easy}{Normal exponential map}\label{Normal exponential map}
-Let $M,N$ be complete connected Riemannian manifolds.
-Assume $N$ is immersed into $M$.
+Let $M,L$ be complete connected Riemannian manifolds.
+Assume $L$ is immersed into $M$.
 Show that the image  of the 
-normal exponential map of $N$ is dense in $M$.
+normal exponential map of $L$ is dense in $M$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,7 +210,7 @@ Show that $f$ is a diffeomorphism.
 \subsection*{Volume of tubular neighborhoods}
 
 \begin{pr}{}{Volume of tubular neighborhoods}\label{Volume of tubular neighborhoods}
-Assume $M$ and $M'$ be isometric closed smooth submanifolds in $\RR^m$.
+Assume $M$ and $M'$ be isometric closed smooth submanifolds in a Euclidean space.
 Show that for all small $r$ we have
 $$\vol B(M,r)=\vol B(M',r),$$
 where $B(M,r)$ denotes the $r$-neighborhood of $M$.
@@ -211,7 +228,7 @@ with
 \text{and}
 \ \ 
 \length \partial\mathbb D\le 1  \]
-such that any null-homotopy of the boundary in $(\mathbb D,g)$ 
+such that any null-homotopy of the $\partial\mathbb D$ in $(\mathbb D,g)$ 
 has a curve of length at least $L$.
 \end{pr}
 
@@ -233,6 +250,10 @@ such that
 \end{enumerate}
 \end{pr}
 
+It is not at all easy to find an example of a manifold  which satisfy the above condition for some $L$;
+they are found among the Zoll spheres
+by Florent Balachev, Christopher Croke and Mikhail Katz \cite[see][]{balacheff-croke-katz}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -252,73 +273,59 @@ $\frac{1}{2\cdot(m+1)}$ from $M$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Almost constant function}
 
+The unit tangent bundle $\UU M$ over a closed Riemannian manifold $M$
+admits a natural choice of volume.
+Let us equip $\UU M$ with the probability measure which is proportional to the volume.
+
+We say that a unit-speed geodesic $\gamma\:\RR\to M$ is \emph{random}
+if $\gamma'(0)$ takes the random value in $\UU M$.
+
 \begin{pr}{}{Almost constant function}\label{Almost constant function}
 Assume $\eps>0$ is given.
 Show that there is a positive integer $m$ such that
 for any closed $m$-dimensional Riemannian manifold $M$
 and any smooth $1$-Lipschitz function $f\:M\to\RR$ the following holds.
-\begin{itemize}
-\item For a random unit-speed geodesic $\gamma$ in $M$ 
+
+For a random unit-speed geodesic $\gamma$ in $M$ 
 the event 
 \[|f\circ\gamma(0)-f\circ\gamma(1)|>\eps\]
 happens with probability at most $\eps$.
-\end{itemize}
-Here {}\emph{random} means that $\gamma'(0)$ takes the random value in the unit tangent bundle of $M$ for the natural choice of probability distribution.
 \end{pr}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Bounded geometry}
 
-Denote by $\mathcal{R}$ the space of 
-all Riemannian metrics on $\mathbb S^5$
-with absolute value of sectional curvature $\le1$,
-and injectivity radius $\ge1$.
-
-It is easy to see that any metric $g_1\in \mathcal{R}$ 
-can be connected to the canonical metric $g_0$ on $\mathbb S^5$
-by a continuous family of metrics $g_t\in \mathcal{R}$ where $t\in[0,1]$.
-In fact, the one parameter family of metrics $g_t$
-can be found among the metrics of the type 
-\[g_t=a(t)\cdot g_0+b(t)\cdot g_1,\]
-where $a,b\:[0,1]\to\RR$
-are smooth functions such that $a(0)=1=b(1)$ and $a(1-s)=0=b(s)$ for $s\le \tfrac13$.
-In order to keep the bounds on the curvature and injectivity radius,
-the functions $a$ and $b$
-have to take huge values in the middle of interval.
-
-\begin{pr}{\thm}{Bounded curvature}\label{Bounded curvature}
-Fix a fast growing function, say
-\[\Phi(x)=1000^{1000\cdot (x+1000)}.\]
-
-Show that there is a metric $g_1$ 
-such that 
-for any family $g_t$ as above
-\[\max_{t\in[0,1]}\{\vol(g_t)\}
->
-\Phi(\vol(g_1)).\]
-\end{pr}
-
-The expected solution requires Novikov theorem on the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$  for
-$m\ge 5$. 
-A detailed proof of this theorem can be found in \cite{nabutovsky-NovThm}.
 
 \section*{Semisolutions}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Minimal foliation.}
-First show that there is a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$;
+First note that there is a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$;
 that is, a 2-form $\omega$ such that $d\omega=0$ and $\star\omega=\omega$,
 where $\star$ denotes the Hodge star operator.
+Indeed, fix a generic harmonic form $\phi$;
+the form $\star\phi$ is also harmonic.
+Since $\star\star\phi=\phi$,
+the form $\omega=\phi+\star\phi$ does the trick.
 
 Fix $p\in \mathbb{S}^2\times\mathbb{S}^2$.
-Use the identity $\star\omega_p=\omega_p$
-to show that
-there is a real number $\lambda_p$ and the isometry $\mathrm{J}_p\:\T_p\to\T_p$ 
-such that
-$\mathrm{J}_p\circ\mathrm{J}_p =-\id$ 
-and 
-$\omega(X,Y)=\lambda_p\cdot g(X,\mathrm{J}_pY)$ for any $X,Y\in \T_p$.
+We can use $g_p$ to identify tangent space $\T_p$ and the cotangent space $\T^*_p$.
+We can choose an orthonormal basis $e_1, e_2, e_3, e_4$ on $\T_p$ so that 
+\[\omega_p=\lambda_p\cdot e_1\wedge e_2+\lambda'_p\cdot  e_1\wedge e_2\]
+Since $\star\omega_p=\omega_p$, we have $\lambda_p=\lambda'_p$.
+Consider the rotation $\mathrm{J}_p\:\T_p\to\T_p$ defined by 
+\[ 
+e_1\mapsto e_2,
+\quad 
+e_2\mapsto -e_1,
+\quad 
+e_3\mapsto e_4,
+\quad 
+e_4\mapsto-e_3.\]
+Note that
+\[\mathrm{J}_p\circ\mathrm{J}_p =-\id
+\quad\text{and}\quad
+\omega(X,Y)=\lambda_p\cdot g(X,\mathrm{J}_pY)\] 
+for any two tangent vectors $X,Y\in \T_p$.
 
 Consider the canonical symplectic form $\omega_0$ on $\mathbb{S}^2\times\mathbb{S}^2$;
 that is, the sum of pullbacks of the volume forms on $\mathbb{S}^2$  
@@ -348,34 +355,39 @@ then it happens on disjoint circles \cite[see][]{honda}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Volume and convexity.}
-Assume the contrary; that is, there is a complete Riemannian manifold $M$
-with finite volume which admits a convex function $f$.
+We use the idea from the proof of Poincar\'e recurrence theorem.
 
+\medskip
+
+Let $M$ be a complete Riemannian manifold which admits a convex function $f$.
 Denote by $\tau\:\UU M\to M$ the unit tangent bundle over $M$. 
-Clearly $\vol (\UU M)$ is finite.
+Consider the function $F\:\UU M\to \RR$ defined as $F(u)=f\circ\tau(u)$.
 
 Note that 
 there is a nonempty bounded open set $\Omega\subset \UU M$
 such that $df(u)>\eps$ for any $u\in \Omega$ and some fixed $\eps>0$.
 
-Denote by $\phi^t$ the geodesic flow on $\UU M$.
-By Liouville's theorem 
+Denote by $\phi^t$ the geodesic flow for time $t$ on $\UU M$.
+By Liouville's theorem on phase volume, we have
 \[\vol[\phi^t(\Omega)]=\vol\Omega\] 
 for any $t$.
 
 Given $u\in \Omega$,
-consider the function $h\:t\mapsto f\circ\tau\circ\phi^t(u)$.
-Note that $h'(t)>\eps$ for any $t\ge 0$.
+consider the function 
+\[h_u\:t\mapsto F\circ\phi^t(u).\]
+Since $f$ is convex, we have $h'_u(t)>\eps$ for any $t\ge 0$.
+
 It follows that there is an infinite sequence of positive reals $t_1,t_2,\dots$
 such that 
+\[h_u(t_{i+1})>h_v(t_i)\]
+for any $u,v\in \Omega$.
+In particular, we have
 $$\phi^{t_i}(\Omega)\cap\phi^{t_j}(\Omega)=\emptyset$$ 
 if $i\ne j$.
-The latter implies that $\vol (\UU M)=\infty$,
-a contradiction.
+The latter implies that $\vol (\UU M)=\infty$;
+hence $\vol M=\infty$.
 \qeds
 
-The idea in the proof is the same as in 
-Poincar\'e recurrence theorem.
 
 The problem is due 
 to Richard Bishop and Barrett O'Neill \cite[see][]{bishop-oneill},
@@ -384,29 +396,37 @@ Shing-Tung Yau  in \cite{yau}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sasaki metric.}
-Show that there is a constant $\ell$
-such that for any two unit tangent vectors $v\in\T_p\mathbb{S}^2$ 
-and $w\in T_q\mathbb{S}^2$
+Fix a point $p\in\mathbb{S}^2$.
+Note that any rotation of the tangent space $\T_p=\T_p(\mathbb{S}^2,g)$
+appear as a holonomy of some loop at $p$;
+moreover the length of such loop can be bounded by some constant, say $\ell$.
+
+Indeed, fix a smooth homotopy $\gamma_t\:[0,1]\to \mathbb{S}^2$, $t\in[0,1]$ of loops based at $p$ 
+which sweeps out $\mathbb{S}^2$.
+By Gauss--Bonnet formula, the total curvature of $(\mathbb{S}^2,g)$ is $4\cdot\pi$.
+It follows that any rotation of $\T_p$ appears as a holonomy of $\gamma_t$ for some $t$.
+Therefore one can take 
+\[\ell=\max\set{\length\gamma_t}{t\in[0,1]}.\]
+
+Denote by $d$ the diameter of $(\mathbb{S}^2,g)$.
+From above it follows that for any two unit tangent vectors $v\in\T_p$ 
+and $w\in T_q$
 there is a path 
 $\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
 such that 
-\[\length \gamma\le \ell\] 
+\[\length \gamma\le \ell+d\] 
 and
 $w$ is the parallel transformation of $v$ along $\gamma$.
 
-Note that once it is proved, 
-it follows that diameter of the set of all vectors of fixed length in $\T \mathbb{S}^2$ has diameter at most $\ell$;
-in particular the map $\T\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
-preserves the distance with the maximal error $\ell$.
+In particular, the diameter of the set of all vectors of fixed length in $(\T \mathbb{S}^2,\hat g)$ has diameter at most $\ell+d$.
+Therefore the map $\T\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
+preserves the distance with the maximal error $\ell+d$.
 Hence the result follows.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{o}{31 mm}
-\begin{lpic}[t(-4 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/tripod}
-\end{lpic}
-\end{wrapfigure}
+
 
 \parbf{Distant involution.}
 Given $\eps>0$, construct a disc $\Delta$ in the plane with 
@@ -416,12 +436,17 @@ $$|\iota(x)-x|\ge 1$$
 for any $x\in\partial \Delta$.
 An example of $\Delta$ can be guessed from the picture. 
 
+\begin{wrapfigure}{o}{31 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/tripod}
+\end{lpic}
+\end{wrapfigure}
+
 Take the product $\Delta\times \Delta\subset \RR^4$;
 it is homeomorphic to the 4-ball.
 Note that 
 $$\vol_3[\partial(\Delta\times \Delta)]=2\cdot\area \Delta\cdot\length \partial \Delta<20\cdot\eps.$$
 The boundary $\partial(\Delta\times \Delta)$ homeomorphic to $\mathbb{S}^3$
-and the restriction of the involution $(x,y)\mapsto (\iota(x),\iota(y))$ has the needed property.
+and the restriction of the involution $(x,y)\z\mapsto (\iota(x),\iota(y))$ has the needed property.
 
 It remains to smooth the boundary $\partial(\Delta\times \Delta)$.
 \qeds
@@ -429,29 +454,38 @@ It remains to smooth the boundary $\partial(\Delta\times \Delta)$.
 This example is given by Christopher Croke in \cite{croke}.
 
 It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
-
-By systolic inequality \cite[see][]{gromov-filling}, 
+Note also, that according to Gromov's systolic inequality \cite[see][]{gromov-filling}, 
 the involution $\iota$ above cannot be made isometric.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \parbf{Two-systole.}
 Consider the unit cube with three not intersecting cylindrical tunnels  
 between the pairs of opposite faces.
 
 In each tunnel, shrink the metric long-wise and expand it  cross-wise while keeping the volume the same.
 
-More precisely, if $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\times [0,1]$ so that $(x,y)$-plane is parallel to the base
-then the new metric is 
-\[g=\phi\cdot (dx)^2+\phi\cdot (dy)^2+\frac1{\phi^2}\cdot (dz)^2,\]
-where $\phi=\phi(x,y)$ is a positive smooth function on $\DD$ which takes huge values around the center and equals to 1 near the boundary of $\DD$.
-
-\begin{wrapfigure}[8]{o}{29 mm}
-\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tunnels}
+\begin{wrapfigure}{o}{29 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/tunnels}
 \end{lpic}
 \end{wrapfigure}
 
+More precisely, assume $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\times [0,1]$ 
+then the new metric is 
+\[g=\phi\cdot [(dx)^2+ (dy)^2]+\frac1{\phi^2}\cdot (dz)^2,\]
+where $\phi=\phi(x,y)$ is a positive smooth function on $\DD$ which takes huge values around the center and equals to 1 near the boundary of $\DD$.
+
+
 Gluing the opposite faces of the cube, we obtain a 3-dimensional torus with a smooth Riemannian metric.
-It remains to show that for the right choice of function $\phi$, this construction gives the needed example.
+
+Since the surface $S$ does not bound in $\TT^3=\mathbb{S}^1\times\mathbb{S}^1\times\mathbb{S}^1$,
+one of the three coordinates projections $\TT^3\to\TT^2=\mathbb{S}^1\times\mathbb{S}^1$
+induce a map of non-zero degree $S\to\TT^2$.
+It follows that 
+\[\area S\ge  \area(\DD,\phi\cdot [(dx)^2+ (dy)^2]).\]
+Clearly for the right choice of function $\phi$, the right hand side can be taken bigger than the given number $L$.
+Hence the statement follows.
 \qeds
 
 I learned this problem from Dmirti Burago. 
@@ -460,32 +494,39 @@ I learned this problem from Dmirti Burago.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Normal exponential map.}
 Assume the contrary; that is, there is a point $p\in M$ 
-such that the image of normal exponential map to $N$
- does not touch $\eps$-neighborhood of $p$.
+such that the image of normal exponential map to $L$
+ does not intersect the ball $B(p,\eps)_M$; that is, no geodesic normal to $L$ crosses $B(p,\eps)_M$.
 
-Show that given $R>0$ there is $\delta>0$ such that 
-if $x\in N$ and $|p-x|_M<R$, 
-then there is a unit-speed curve in $N$
-which moves to $p$ with velocity at least $\delta$.
-(In fact, 
-the value $\delta$ depends on $\eps$, $R$ and the curvature bounds in $B(p,R)$.)
+Fix a positive real number $R$ such that $B(p,R)_M\cap L\ne \emptyset$.
+The sectional curvature of $M$ in the ball $B(p,R)$
+is bounded above by some constant, say $K$.
 
+Given $q\in L$, denote by $v_q$ the direction of a minimizing geodesic from $q$ to $p$.
+Note that $v_q\notin \mathrm{N}_qL$.
+Moreover there is $\delta=\delta(\eps,K,R)>0$ 
+such that for any point $q\in B(p,R)_M\cap L$,
+and any normal vector $u\in \mathrm{N}_qL$,
+we have 
+\[\measuredangle (v_q,u)>\delta.\]
+Otherwise the geodesic in the direction of $u$ would cross $B(p,\eps)_M$.
 
+It follows that starting at any point $q\in B(p,R)_M\cap L$ 
+one can construct a unit-speed curve in $L$
+which moves to $p$ with velocity at least $\sin\delta$.
 Following this curve for sufficient time brings us to $p$;
-that is, $p\in N$, a contradiction.
+that is, $p\in L$, a contradiction.
 \qeds
-
-The problem was suggested by Alexander Lytchak.
 
 \begin{wrapfigure}[7]{r}{25 mm}
 \begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
 \end{lpic}
 \end{wrapfigure}
 
+The problem was suggested by Alexander Lytchak.
+
 From the picture, you should guess an example of immersion 
 such that one point does not lie in the image of the corresponding normal exponential.
-It might be interesting to see in more details 
-which sets can be avoided by such images.
+It might be interesting to understand what type of subsets can be avoided by such images.
 
 
 
@@ -539,62 +580,40 @@ It remains to prove that any local isometry between complete connected Riemannia
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Volume of tubular neighborhoods.}
-Let us denote by $\mathrm{N} M$ and $\T M$ the normal and tangent bundle of $M$ in $\RR^m$.
+This problem is a direct corollary of the so called \emph{tube formula} given by Hermann Weyl in \cite{weyl}.
+It express the volume of $r$-neighborhood of $M$ as a polynomial $p(r)$;
+the coefficients of $p$, up to a multiplicative constant, the integrals along $M$ of so called Lipschitz--Killing curvatures --- certain scalars which can be expressed in terms of curvature tensor at the given point.
 
-Consider the normal exponential map $\exp_M\:\mathrm{N} M\to\RR^m$ [defined on page~\pageref{page:Normal exponential map}]
-and denote by $J_V$ its Jacobian at $V\in \mathrm{N}_p=\mathrm{N}_pM$.
-Note that for all small $r>0$, we have
-\[\vol B(M,r)=\int\limits_M d_p\vol_m\cdot\int\limits_{B(0,r)_{\mathrm{N}_p}}J_V\cdot d_V\vol_{n-m},\leqno{({*})}\]
-where $B(0,r)_{\mathrm{N}_p}$ denotes the ball in $\mathrm{N}_p$
-
-Set $m=\dim M$.
-Given $p\in M$, 
-denote by $s_p\:\T_p\times \T_p\to \mathrm{N}_p$
-the second fundamental form of $M$ [defined on page~\pageref{page:second fundamental form}].
-Recall that the curvature tensor of $M$ at $p$ can be expressed the following way
-\[R_p(X\wedge Y), V\wedge W\rangle 
-=\langle s_p(X,W), s_p(Y,V)\rangle-\langle s_p(X,V), s_p(Y,W)\rangle.\]
-
-Given $V\in \mathrm{N}_p M$,
-express $J_V$ in terms of 
-$|V|$, 
-the dimension $m$
-and the real-valued quadratic form  $s_V(X,Y)=\<s_p(X,Y),V\>$.
-Show that for small $r$ the integral
-\[v(r)=\int\limits_{B(0,r)_{\mathrm{N}_pM}}J_V\cdot d_V\vol_{n-m}\]
-is a polynomial 
-of $r$ and its coefficients can be expressed in terms of the curvature tensor $R_p$.
-
-It follows that the right hand side in $({*})$ can be expressed in terms of curvature tensor of $M$.
-The problem follows since the curvature tensor can be expressed in terms of metric tensor of $M$.\qeds
-
-
-The formula for volume of tubular neighborhood 
-was given by Hermann Weyl in \cite{weyl}.
+Many of professional geometers I know were surprised by this result, so I decided to include it here. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 \begin{wrapfigure}[9]{r}{33 mm}
-\begin{lpic}[t(-5 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
 \end{lpic}
 \end{wrapfigure}
 
 \parbf{Disc.}
-Show that given a positive integer $n$ one can construct a tree $T$ embedded into the disc such that any homotopy of the boundary of the disc to a point pass through a curve which intersects $n$ different edges.
-(For the tree on the diagram $n=3$.)
+The following claim is the key step in the proof.
+\begin{itemize}
+\item[$({*})$] Given a positive integer $n$ there is a tree $T_n$ embedded into the disc $\DD$ such that any null-homotopy of $\partial \DD$ passes through a curve which intersects $n$ different edges.
+\end{itemize}
 
-Fix small $\eps>0$, say $\eps=\tfrac1{10}$.
-Consider the disc with embedded tree $T$ as above.
-We will construct a metric on the disc 
-with diameter and length of its boundary below $1$
-such that 
-the distance between any two edges of $T$ of without common vertex 
+The proof of the claim can be done by induction on $n$; the base is trivial.
+Assuming we constructed $T_{n-1}$, the tree $T_n$ can be obtained by identifying three endpoints of three copies of $T_{n-1}$.
+
+
+Fix $\eps=\tfrac1{10}$ and large $n$.
+Let us construct a metric on the disc $\DD$ with the embedded tree $T_n$ as in $({*})$ such that
+its diameter and length of its boundary below $1$
+and  
+the distance between any two edges of $T_n$ of without common vertex 
 is at least $\eps$.
 
-To construct such a metric, 
-fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
-
 }
+
+Fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
+
 
 \begin{itemize}
 \item The $\eps$-neighborhoods of the boundary components 
@@ -602,18 +621,18 @@ have product metrics.
 \item Any vertical segment $x\times[0,1]$ has length $\tfrac 12$.
 \item One of the boundary component has length $\eps$.
 \item The other boundary component has length $2\cdot m\cdot \eps$, 
-where $m$ is the number of edges in the tree $T$.
+where $m$ is the number of edges in the tree $T_n$.
 \end{itemize}
-Equip $T$ with a length-metric so that each edge has length $\eps$
-and glue the long boundary component of the cylinder to $T$ by piecewise isometry so that the resulting space is homeomorphic to disc and the tree corresponds to it-self.
+Equip $T_n$ with a length-metric so that each edge has length $\eps$.
+Glue the long boundary component of the cylinder to $T_n$ by piecewise isometry 
+in such a way that the resulting space is homeomorphic to disc and the obtained embedding of $T_n$ in $\DD$ is the same as in the claim $({*})$.
 
 
+By $({*})$ and the construction, for any null-homotopy of the boundary 
+the least length is at least $\tfrac{\eps}{10}\cdot n=\tfrac{1}{100}\cdot n$.
+The obtained metric is not Riemannian, but is easy to smooth keeping this property.
 
-According to the first construction,
-for any null-homotopy of the boundary 
-the least length is at least $n\cdot\tfrac{\eps}{10}$.
-The obtained metric is not Riemannian, but is easy to smooth.
-Since $n$ is arbitrary the result follows.
+Since $n$ is large the result follows.
 \qeds
  
 This example was constructed by Sidney Frankel and Mikhail Katz in \cite{frankel-katz}.
@@ -638,9 +657,9 @@ Note that $\gamma_0$ is homotopic to the concatenation
 where $\bar\sigma$ denotes the backward parametrization of $\sigma$.
 
 
-\begin{wrapfigure}{o}{36 mm}
-\begin{lpic}[t(-1mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/shortening-homotopy(1)}
-\lbl[bl]{32,20;$\gamma(t_0)$}
+\begin{wrapfigure}{o}{37 mm}
+\begin{lpic}[t(-1mm),b(-0 mm),r(1 mm),l(0 mm)]{pics/shortening-homotopy(1)}
+\lbl[bl]{31.5,20;$\gamma(t_0)$}
 \lbl[t]{21,0;$p$}
 \lbl[l]{27,10;$\sigma$}
 \lbl[lt]{9,17;$\lambda_1$}
@@ -685,29 +704,28 @@ The problem is due to
 Alexander Nabutovsky 
 and Regina Rotman \cite[see][]{nabutovsky-rotman}.
 
-It is not at all easy to find an example of a manifold  which satisfy the above condition for some $L$;
-they are found among the Zoll spheres
-by Florent Balachev, Christopher Croke and Mikhail Katz \cite[see][]{balacheff-croke-katz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Convex hypersurface.}
-Let us define the {}\emph{cone construction}.
-Let $\Delta$ be a simplex and $\Delta_v$ facet of $\Delta$ opposite to the vertex $v$.
+First let us define the {}\emph{cone construction} of maps into $M$.
+
+Assume $\Delta$ be a simplex and $\Delta_v$ is its facet opposite to the vertex $v$.
 Assume $f_v\:\Delta_v\to M$ is a map and $x\in M$ such that $f_v(\Delta_v)\subset B(x,1)$.
-Given $w\in \Delta_v$ denote by $\gamma_w$ the (necessary unique) minimizing geodesic path from $x$ to  $f_v(w)$.
+Given $w\in \Delta_v$ denote by $\gamma_w$ the minimizing geodesic path from $x$ to  $f_v(w)$.
+(Since the injectivity radius of $M$ is at least $1$, the geodesic $\gamma_w$ is uniquely defined.)
 Then the map $f\:\Delta\to M$ defined as 
 \[f\:(1-t)\cdot v+t\cdot w\mapsto \gamma_w(t)\] 
-is called {}\emph{cone over $f_v$} with vertex $x$. 
+is called {}\emph{cone over $f_v$} with the vertex $x$. 
 
 Let $h$ be the maximal distance from points in $W$ to $M$.
 
-Fix a fine triangulation of $W$ 
-so that $M$ becomes a sub-complex.
-Say, let us assume that the diameter of each simplex in $\tau$ is less than 
-$\eps$.
-We can assume that $\tau$ is a barycentric subdivision of an other triangulation, so all the vertices of $\tau$ can be colored into colors $(0,\dots, m+1)$
+Fix a fine triangulation of $W$ so that $M$ becomes a sub-complex of $W$.
+We can assume that the diameter of each simplex in $\tau$ is less than any given
+$\eps>0$.
+Further, we can assume that all the vertices of $\tau$ can be colored into colors $(0,\dots, m+1)$
 in such a way that the vertices of each simplex 
-get different colors.
+get different colors;
+the latter can be acheaved by passing to the barycentric subdivision of $\tau$.
 Denote by $\tau_i$ the maximal $i$-dimensional sub-complex of $\tau$ 
 with all the vertices colored by $0,\dots, i$.
 
@@ -718,7 +736,8 @@ if $v$ and $w$ are the vertices of one simplex,
 then
 \[|v'-w'|_M<2\cdot h+\eps.\]
 
-If $\tfrac{1}{2\cdot(m+1)}>h$, fix $\eps<\tfrac{1}{2\cdot(m+1)}-h$.
+Assume $\tfrac{1}{2\cdot(m+1)}>h$.
+Apply above construction for $\eps<\tfrac{1}{2\cdot(m+1)}-h$.
 Let us extend the map $v\mapsto v'$ 
 to a continuous 
 map $W\to M$.
@@ -739,17 +758,21 @@ This problem is a stripped version of the bound on filling radius given by Mikha
 \parbf{Almost constant function.}
 Given a positive integer $m$,
 denote by $\delta_m$ 
-the expected value $|x_1|$ of a unit vector 
-$\bm{x}=(x_1,\dots,x_m)\z\in\RR^m$ 
+the expected value of $|x_1|$ for the random unit vector 
+$\bm{x}\z=(x_1,\dots,x_m)\z\in\RR^m$ 
 with respect to the uniform distribution.
 
 Observe that $\delta_m\to 0$ as $m\to\infty$.
+Indeed, from symmetry and Bunyakovsky inequality we get
+\[
+\tfrac1m=\tfrac1m\cdot\mathrm{E}(|\bm{x}|^2)
+=\mathrm{E}(x_1^2)\ge \mathrm{E}(|x_1|)^2=\delta_m^2.
+\]
 
-Equip the unit tangent bundle $\UU M$ of $M$ with the natural probability measure.
 Since $f$ is $1$-Lipschitz,
-for a random vector $v$ in $\UU M$,
-the  expected value of $|df(w)|$
-is at most $\delta_m$.
+\[\mathrm{E}(|df(w)|)\le\delta_m\]
+for a random vector $w$ in $\UU M$.
+
 
 Note that 
 \begin{align*}
@@ -761,7 +784,7 @@ Note that
 
 Assume $\gamma'(0)$
 takes random value in $\UU M$.
-By Liouville's theorem, the same holds for $\gamma'(t)$
+By Liouville's theorem on phase volume, the same holds for $\gamma'(t)$
 for any fixed $t$.
 Therefore
 the expected value of
@@ -777,35 +800,7 @@ Hence the result follows.
 
 I learned the problem from Mikhael Gromov.
 It gives an example in the Riemannian world
-of so called 
+of the so called 
 \index{concentration of measure}\emph{concentration of measure phenomenon}
 \cite[see][]{milman-schechtman,ledoux}.
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Bounded geometry.}
-Show that there is an algorithm to estimate the Gromov--Hausdorff distance between two Riemannian manifolds given in any reasonable way.
-
-Show that if two manifolds with bounded curvature are sufficiently close to each other then they are diffeomorphic.
-
-Now assume contrary;
-that is, for any metric $g_1\in \mathcal{R}$ there is a path $g_t$ in $\mathcal{R}$
-connecting the canonical metric $g_0$ to $g_1$ such that 
-\[\vol g_t\le \Phi(\vol g_1).\]
-
-If a 5-dimensional Riemannian manifold $M$ with curvature between $\pm1$ is diffeomorphic to $\mathbb{S}^5$ 
-then it can be described by a metric $g_1$ in $\mathcal{R}$.
-Let $g_t$ be the path as above.
-
-Construct a finite set $F\subset \mathcal{R}$ 
-which is sufficiently dense in the set of metrics in $\mathcal{R}$ with volume at most $\Phi(\vol g_1)$.
-The path $g_t$ as above can be approximated by a sequence of metrics from $F$.
-
-Using the algorithms above one can list all such sequences.
-It implies existence of algorithm 
-which recognize $\mathbb S^5$ among $5$-dimensional manifolds.
-The later contradicts Novikov theorem.
-\qeds
-
-Instead of function $\Phi$ one can take any Turing computable function.
-The problem and number of its generalizations 
-are due to Alexander Nabutovsky \cite[see][]{nabutovsky-Disconnectedness}.

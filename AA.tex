@@ -1,3 +1,165 @@
+
+
+
+
+
+Let us denote by $\mathrm{N} M$ and $\T M$ the normal and tangent bundle of $M$ in the Euclidean space $\RR^n$.
+Assume $m=\dim M$.
+
+Consider the normal exponential map $\exp_M\:\mathrm{N} M\to\RR^n$ [defined on page~\pageref{page:Normal exponential map}]. Denote by $J_v$ the Jacobian of $\exp_M$ at $v\in \mathrm{N}M$.
+Note that for all small $r>0$, we have
+\[\vol B(M,r)=\int\limits_M d_p\vol_m\cdot\int\limits_{B(0,r)_{\mathrm{N}_p}}J_v\cdot d_v\vol_{n-m},\]
+where $B(0,r)_{\mathrm{N}_p}$ denotes the ball in the fiber $\mathrm{N}_p\subset \mathrm{N} M$ at $p\in M$.
+
+Fix $p\in M$.
+Note that it is sufficient to show that following.
+\begin{itemize}
+\item[$({*})$] The integral
+\[V(r)=\int\limits_{B(0,r)_{\mathrm{N}_p}}J_v\cdot d_v\vol_{n-m}\]
+can be written in terms of $m$, $n$, $r$ and the Riemannian curvature tensor $R$ of $M$ at $p$.
+\end{itemize}
+In fact $V(r)$ is a polynomial in $r$ and its coefficient are up to a coefficient depending on $m$ and $n$ equal to the so called Lipschitz--Killing curvatures at $p$.
+
+Denote by $s\:\T_p\times \T_p\to \mathrm{N}_p$
+the second fundamental form of $M$ [defined on page~\pageref{page:second fundamental form}].
+Recall that the curvature tensor $R$ of $M$ at $p$ can be expressed the following way
+\[\langle R(X, Y) V, W\rangle 
+=\langle s(X,W), s(Y,V)\rangle-\langle s(X,V), s(Y,W)\rangle.\]
+
+Fix a orthonormal basis $e_1,\dots, e_{n-m}$ in $\mathrm{N}_p$.
+Consider the real-valued quadratic forms  $s_i(X,Y)=\<s_p(X,Y),e_i\>$.
+Consider the tensors $R_i$ defined as 
+\[\langle R_i(X, Y) V, W\rangle 
+=s_i(X,W)\cdot s_i(Y,V)-s_i(X,V)\cdot  s_i(Y,W).\]
+Note that 
+\[R=R_1+\dots+R_{n-m}.\leqno{({*}{*})}\]
+
+Assume $v=r\cdot e_i$ for some $r\in \RR$.
+Denote by $k_{1},\dots, k_{m}$ the eigenvalues of the real-valued quadratic form  $s_i(X,Y)$.
+By straightforward calculations we get 
+\begin{align*}
+J_{v}&=r^{n-m-1}\cdot(1+k_1\cdot r)\cdots(1+k_n\cdot r),
+\\
+J_{-v}&=r^{n-m-1}\cdot(1-k_1\cdot r)\cdots(1-k_n\cdot r).
+\end{align*}
+It follows that the sum $J_{v}+J_{-v}$ is a polynomial in $r$ and its coefficient 
+symmetric polynomials of $Q_j(k_1,\dots, k_n)$; more over each monomial of $Q_j$ is a product of even number of distinct $k_i$'s.
+Since each product $k_a\cdot k_b$ is the sectional curvature in the tensor $R_i$,
+we get that the coefficient $Q_j(k_1,\dots, k_n)$ can be expressed in terms of the tensor $R_i$.
+
+Using $({*}{*})$, we can sum up by $i$, we get that
+\[\sum_i(J_{r\cdot e_i}+J_{-r\cdot e_i})\]
+can be expressed in terms of $r$, $m$, $n$ and $R$.
+Taking average for all orthonormal frames $e_1,\dots, e_{n-m}$ in $\mathrm{N}_p$
+we get the needed claim.
+
+
+
+
+
+Show that for small $r$ the integral
+\[v(r)=\int\limits_{B(0,r)_{\mathrm{N}_pM}}J_V\cdot d_V\vol_{n-m}\]
+is a polynomial 
+of $r$ and its coefficients can be expressed in terms of the curvature tensor $R_p$.
+
+It follows that the right hand side in $({*})$ can be expressed in terms of curvature tensor of $M$.
+The problem follows since the curvature tensor can be expressed in terms of metric tensor of $M$.\qeds
+
+
+The formula for volume of tubular neighborhood 
+was given by Hermann Weyl in \cite{weyl}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Bounded geometry}
+
+Denote by $\mathcal{R}$ the space of 
+all Riemannian metrics on $\mathbb S^5$
+with absolute value of sectional curvature $\le1$,
+and injectivity radius $\ge1$.
+
+It is easy to see that any metric $g_1\in \mathcal{R}$ 
+can be connected to the canonical metric $g_0$ on $\mathbb S^5$
+by a continuous family of metrics $g_t\in \mathcal{R}$ where $t\in[0,1]$.
+In fact, the one parameter family of metrics $g_t$
+can be found among the metrics of the type 
+\[g_t=a(t)\cdot g_0+b(t)\cdot g_1,\]
+where $a,b\:[0,1]\to\RR$
+are smooth functions such that $a(0)=1=b(1)$ and $a(1-s)=0=b(s)$ for $s\le \tfrac13$.
+In order to keep the bounds on the curvature and injectivity radius,
+the functions $a$ and $b$
+have to take huge values in the middle of interval.
+
+\begin{pr}{\thm}{Bounded curvature}\label{Bounded curvature}
+Fix a fast growing function, say
+\[\Phi(x)=1000^{1000\cdot (x+1000)}.\]
+
+Show that there is a metric $g_1$ 
+such that 
+for any family $g_t$ as above
+\[\max_{t\in[0,1]}\{\vol(g_t)\}
+>
+\Phi(\vol(g_1)).\]
+\end{pr}
+
+The expected solution requires Novikov theorem on the algorithmic undecidability of the problem of recognition of the sphere $\mathbb S^m$  for
+$m\ge 5$. 
+A detailed proof of this theorem can be found in \cite{nabutovsky-NovThm}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Bounded geometry.}
+Show that there is an algorithm to estimate the Gromov--Hausdorff distance between two Riemannian manifolds given in any reasonable way.
+
+Show that if two manifolds with bounded curvature are sufficiently close to each other then they are diffeomorphic.
+
+Now assume contrary;
+that is, for any metric $g_1\in \mathcal{R}$ there is a path $g_t$ in $\mathcal{R}$
+connecting the canonical metric $g_0$ to $g_1$ such that 
+\[\vol g_t\le \Phi(\vol g_1).\]
+
+If a 5-dimensional Riemannian manifold $M$ with curvature between $\pm1$ is diffeomorphic to $\mathbb{S}^5$ 
+then it can be described by a metric $g_1$ in $\mathcal{R}$.
+Let $g_t$ be the path as above.
+
+Construct a finite set $F\subset \mathcal{R}$ 
+which is sufficiently dense in the set of metrics in $\mathcal{R}$ with volume at most $\Phi(\vol g_1)$.
+The path $g_t$ as above can be approximated by a sequence of metrics from $F$.
+
+Using the algorithms above one can list all such sequences.
+It implies existence of algorithm 
+which recognize $\mathbb S^5$ among $5$-dimensional manifolds.
+The later contradicts Novikov theorem.
+\qeds
+
+Instead of function $\Phi$ one can take any Turing computable function.
+The problem and number of its generalizations 
+are due to Alexander Nabutovsky \cite[see][]{nabutovsky-Disconnectedness}.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 
