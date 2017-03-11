@@ -7,58 +7,57 @@ with the notion of smooth manifold,
 Riemannian metric and symplectic form.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Distant involution}
+
+\begin{pr}{}{Distant involution}\label{Distant involution}
+Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\mathbb{S}^3\z\to\mathbb{S}^3$ such that $\vol (\mathbb{S}^3,g)$ is arbitrary small and 
+\[|x\z-\iota(x)|_g>1\]
+ for any $x\in\mathbb{S}^3$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\parit{Semisolution.}
+Given $\eps>0$, construct a disc $\Delta$ in the plane with 
+$$\length\partial \Delta<10\ \ \text{and}\ \ \area \Delta<\eps$$
+which admits an continuous involution $\iota$ such that 
+$$|\iota(x)-x|\ge 1$$ 
+for any $x\in\partial \Delta$.
+An example of $\Delta$ can be guessed from the picture. 
+
+\begin{wrapfigure}{o}{31 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/tripod}
+\end{lpic}
+\end{wrapfigure}
+
+Take the product $\Delta\times \Delta\subset \RR^4$;
+it is homeomorphic to the 4-ball.
+Note that 
+$$\vol_3[\partial(\Delta\times \Delta)]=2\cdot\area \Delta\cdot\length \partial \Delta<20\cdot\eps.$$
+The boundary $\partial(\Delta\times \Delta)$ homeomorphic to $\mathbb{S}^3$
+and the restriction of the involution $(x,y)\z\mapsto (\iota(x),\iota(y))$ has the needed property.
+
+It remains to smooth $\partial(\Delta\times \Delta)$ slightly.
+\qeds
+
+This example is given by Christopher Croke in \cite{croke}.
+
+It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
+Note also, that according to Gromov's systolic inequality \cite[see][]{gromov-filling}, 
+the involution $\iota$ above cannot be made isometric.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Besikovitch inequality}
 
 \begin{pr}{}{Besikovitch inequality}
 \label{Besikovitch inequality}
-Let $g$ be a Riemannian metric on an $m$-dimensional cube $Q\z=[0,1]^m$ such that any curve connecting opposite faces has length at least $1$. 
+Let $g$ be a Riemannian metric on an $m$-dimensional cube $Q$ such that any curve connecting opposite faces has length at least $1$. 
 Prove that $\vol(Q,g)\ge 1$, 
 and equality holds if and only if $(Q,g)$ is isometric to the unit cube.
 \end{pr}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parit{Semisolution.}
-Set 
-\[A_i=\set{(x_1,x_2,\dots,x_m)\in[0,1]^m}{x_i=0}.\]
 
-Consider functions $f_i\:[0,1]^m\to\RR$ defined as
-$$f_i(x)=\max\{1,\dist_{A_i}(x)\}$$
-Note that each $f_i$ is $1$-Lipschitz, 
-in particular $|\nabla f|\le 1$ almost everywhere.
-
-Consider the map
-\[\bm{f}\:x\mapsto(f_1(x),f_2(x),\dots,f_m(x)).\]
-Notes that it maps $Q$ to it self
-and, moreover, it maps each face of $Q$ to it self.
-It follows that $\bm{f}\:Q\to Q$ is onto.
-
-Assume $h$ is the canonical metric on the cube $Q$.
-Then 
-\[|\mathrm{J}(x)|=|\nabla_x f_1\wedge\dots\wedge\nabla_xf_m|\le 1,\]
-where $\mathrm{J}(x)$ denotes the Jcaobian of the map $f\:(Q,g)\to (Q,h)$.
-
-By the area formula, we get 
-\begin{align*}
-\vol(Q,g)
-&\ge \int\limits_Q|\mathrm{J}(x)|\cdot d_x\vol_g\ge
-\\
-&\ge\vol(Q,h)=\\
-&=1
-\end{align*}
-
-In the case of equality we have that $\<\nabla_x f_i,\nabla_x f_j\>=0$ for $i\ne j$ are 
-and $|\nabla_x f_i|=1$ almost everywhere.
-It follows then that the map $f\:(Q,g)\to (Q,h)$ is an isometry.
-\qeds
-
-The inequality was proved by Abram Besikovitch in \cite{besicovitch}.
-It has number applications in Riemannian geometry.
-For example using this inequality it is easy to solve the following problem.
-\begin{itemize}
-\item {\it Assume a metric $g$ on $\RR^m$ coincides with Euclidean outside of a bounded set $K$;
-assume further that any geodesic which comes into $K$ goes out from $K$ the same way as if the metric would be Euclidean everywhere. 
-Show that $g$ is flat.}
-\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Minimal foliation\thm}
@@ -97,10 +96,10 @@ It implies in particular, that geodesic flow on the tangent bundle to a Riemanni
 \subsection*{Sasaki metric}
 
 Let $(M,g)$ be a Riemannian manifold.
-The Sasaki metric is the most natural choice of metric on the tangent space $\T M$.
+The Sasaki metric is the most natural choice of Riemannian metric $\hat g$ on the total space of the tangent bundle $\tau\:\T M\to M$.
 It is uniquely defined by the following properties:
 \begin{enumerate}[(i)]
-\item The natural projection $\tau\:\T M\to M$ is a Riemannian submersion.
+\item The map $\tau\:(\T M,\hat g)\to (M,g)$ is a Riemannian submersion.
 \item The metric on each tangent space $\T_p\subset \T M$ is the Euclidean metric induced by $g$.
 \item Assume $\gamma(t)$ is a curve in $M$ and $v(t)\in\T_{\gamma(t)}$ is a parallel vector field along $\gamma$. 
 Note that $v(t)$ forms a curve in $\T M$.
@@ -125,14 +124,6 @@ Show that, in the sense of Gromov--Hausdorff,
 the space $(\T \mathbb{S}^2, \hat g)$ lies on bounded distance to the ray $\RR_+=[0,\infty)$.
 \end{pr}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Distant involution}
-
-\begin{pr}{}{Distant involution}\label{Distant involution}
-Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\mathbb{S}^3\z\to\mathbb{S}^3$ such that $\vol (\mathbb{S}^3,g)$ is arbitrary small and 
-\[|x\z-\iota(x)|_g>1\]
- for any $x\in\mathbb{S}^3$.
-\end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Two-systole}
@@ -140,7 +131,7 @@ Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\m
 \begin{pr}{} Given a big real number $L$,
 construct a Riemannian metric $g$ on the 3-dimensional torus $\TT^3$ such that $\vol(\TT^3,g)=1$
 and \[\area S\ge L\]
-for any closed surface $S$ in $\TT^3$ which does not bound.
+for any closed surface $S$ which does not bound in $\TT^3$.
 \end{pr}
 
 According to Gromov's systolic inequality \cite[see][]{gromov-filling}, the volume of $(\TT^3,g)$ can be bounded below in terms of its \emph{1-systole} defined to be the least length of a noncontractible loop in $(\TT^3,g)$.
@@ -161,7 +152,7 @@ The map $\exp\:\T M\to M$ defined by $v\mapsto \gamma_v(1)$ is called exponentia
 
 The restriction of $\exp$ to the $\T_p$ is called \index{exponential map}\emph{exponential map at} $p$ and denoted as $\exp_p$.
 
-Given a smooth submanifold $L\subset M$;
+Given a smooth immersion $L\to M$;
 denote by $\mathrm{N} L$ the normal bundle over $L$.
 The restriction of $\exp$ to $\mathrm{N} L$ is called {}\emph{normal exponential map} of $L$ and denoted as $\exp_L$.
 
@@ -185,7 +176,7 @@ be the standard symplectic form on $\RR^4$.
 Assume $\ZZ^2$ is the integer lattice in $(x_1,y_1)$ coordinate plane of $\RR^4$.
 
 Show that an arbitrary bounded domain $\Omega\subset (\RR^4,\omega)$
-admits a symplectic embedding into $(\RR^4,\omega)/\ZZ^2$. 
+admits a symplectic embedding into the quotient space $(\RR^4,\omega)/\ZZ^2$. 
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -296,10 +287,61 @@ happens with probability at most $\eps$.
 
 \section*{Semisolutions}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Besikovitch inequality.}
+Without loss of generality, we may assume  $Q=[0,1]^m$.
+Set 
+\[A_i=\set{(x_1,x_2,\dots,x_m)\in[0,1]^m}{x_i=0}.\]
+
+Consider functions $f_i\:[0,1]^m\to\RR$ defined as
+$$f_i(x)=\max\{1,\dist_{A_i}(x)\}$$
+Note that each $f_i$ is $1$-Lipschitz, 
+in particular $|\nabla f|\le 1$ almost everywhere.
+
+Consider the map
+\[\bm{f}\:x\mapsto(f_1(x),f_2(x),\dots,f_m(x)).\]
+Notes that it maps $Q$ to it self
+and, moreover, it maps each face of $Q$ to it self.
+It follows that the restriction $\bm{f}|_{\partial Q}\:\partial Q\to \partial Q$ has degree 1 and therefore 
+$\bm{f}\:Q\to Q$ is onto.
+
+Assume $h$ is the canonical metric on the cube $Q$.
+Then 
+\[|\mathrm{J}(x)|=|\nabla_x f_1\wedge\dots\wedge\nabla_xf_m|\le 1,\]
+where $\mathrm{J}(x)$ denotes the Jcaobian of the map $f\:(Q,g)\to (Q,h)$.
+
+By the area formula, we get 
+\begin{align*}
+\vol(Q,g)
+&\ge \int\limits_Q\frac1{|\mathrm{J}(x)|}\cdot d_x\vol_g\ge
+\\
+&\ge\vol(Q,h)=\\
+&=1
+\end{align*}
+
+In the case of equality we have that $\<\nabla_x f_i,\nabla_x f_j\>=0$ for $i\ne j$ are 
+and $|\nabla_x f_i|=1$ almost everywhere.
+It follows then that the map $f\:(Q,g)\to (Q,h)$ is an isometry.
+\qeds
+
+The inequality was proved by Abram Besikovitch in \cite{besicovitch}.
+It has number applications in Riemannian geometry.
+For example using this inequality it is easy to solve the following problem.
+\begin{itemize}
+\item {\it Assume a metric $g$ on $\RR^m$ coincides with Euclidean outside of a bounded set $K$;
+assume further that any geodesic which comes into $K$ goes out from $K$ the same way as if the metric would be Euclidean everywhere. 
+Show that $g$ is flat.}
+\end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Minimal foliation.}
-First note that there is a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$;
+The proof is based on the observation that a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$
+defines a symplectic structure compatible with $g$.
+
+\medskip
+
+Note that there is a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$;
 that is, a 2-form $\omega$ such that $d\omega=0$ and $\star\omega=\omega$,
 where $\star$ denotes the Hodge star operator.
 Indeed, fix a generic harmonic form $\phi$;
@@ -309,8 +351,8 @@ the form $\omega=\phi+\star\phi$ does the trick.
 
 Fix $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 We can use $g_p$ to identify tangent space $\T_p$ and the cotangent space $\T^*_p$.
-We can choose an orthonormal basis $e_1, e_2, e_3, e_4$ on $\T_p$ so that 
-\[\omega_p=\lambda_p\cdot e_1\wedge e_2+\lambda'_p\cdot  e_1\wedge e_2\]
+We can choose an $g_p$-orthonormal basis $e_1, e_2, e_3, e_4$ on $\T_p$ so that 
+\[\omega_p=\lambda_p\cdot e_1\wedge e_2+\lambda'_p\cdot  e_3\wedge e_4\]
 Since $\star\omega_p=\omega_p$, we have $\lambda_p=\lambda'_p$.
 Consider the rotation $\mathrm{J}_p\:\T_p\to\T_p$ defined by 
 \[ 
@@ -336,16 +378,20 @@ Since $g$ is close to the standard metric,
 we can assume that $\omega$ is close to $\omega_0$.
 In particular $\lambda_p\ne0$ for any $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 
-It follows that $\omega$ defines symplectic structure on $\mathbb{S}^2\times\mathbb{S}^2$
-and $\mathrm{J}$ is its pseudo-complex structure.
-It remains to take the re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
+It follows that $\mathrm{J}$ is a pseudo-complex structure for the symplectic form $\omega$ on $\mathbb{S}^2\times\mathbb{S}^2$.
+Further the Riemannian metric $g'=\lambda\cdot g$ is a  conformal to $g$ and $\omega(X,Y)=g'(X,\mathrm{J} Y)$ 
+for any two tangent vectors $X,Y$ at one point.
+Recall that in this case the $\mathrm{J}$-holomorphic curves are minimal with respect to $g'$;
+in fact, they are area minimizing in its homology class. 
+
+Take a re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
 so that vertical and horizontal spheres will form pseudo-holomorphic curves in the homology classes of $x\times \mathbb{S}^2$ and $\mathbb{S}^2\times y$.
+Hence the statement follows.
 \qeds
  
  
-For general metric the form $\omega$ might vanish at some points;
-if the metric is generic,
-then it happens on disjoint circles \cite[see][]{honda}.
+For general metric the form $\omega$ might vanish at some points.
+If the metric is generic, then it happens on disjoint circles \cite[see][]{honda}.
 
 
 
@@ -369,24 +415,25 @@ such that $df(u)>\eps$ for any $u\in \Omega$ and some fixed $\eps>0$.
 
 Denote by $\phi^t$ the geodesic flow for time $t$ on $\UU M$.
 By Liouville's theorem on phase volume, we have
-\[\vol[\phi^t(\Omega)]=\vol\Omega\] 
+\[\vol[\phi^t(\Omega)]=\vol\Omega\leqno{({*})}\] 
 for any $t$.
 
 Given $u\in \Omega$,
 consider the function 
-\[h_u\:t\mapsto F\circ\phi^t(u).\]
+$h_u(t)=F\circ\phi^t(u)$.
 Since $f$ is convex, we have $h'_u(t)>\eps$ for any $t\ge 0$.
 
-It follows that there is an infinite sequence of positive reals $t_1,t_2,\dots$
+It follows that there is an infinite sequence of times 
+\[0=t_0<t_1\z<t_2<\dots\]
 such that 
-\[h_u(t_{i+1})>h_v(t_i)\]
-for any $u,v\in \Omega$.
+\[h_v(t_{i-1})<h_u(t_{i})\]
+for any $u,v\in \Omega$ and $i$.
 In particular, we have
 $$\phi^{t_i}(\Omega)\cap\phi^{t_j}(\Omega)=\emptyset$$ 
 if $i\ne j$.
-The latter implies that $\vol (\UU M)=\infty$;
-hence $\vol M=\infty$.
-\qeds
+By $({*})$, the latter implies that $\vol (\UU M)=\infty$.
+Hence \[\vol M=\infty.\]
+\qedsf
 
 
 The problem is due 
@@ -425,37 +472,7 @@ Hence the result follows.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\parbf{Distant involution.}
-Given $\eps>0$, construct a disc $\Delta$ in the plane with 
-$$\length\partial \Delta<10\ \ \text{and}\ \ \area \Delta<\eps$$
-which admits an continuous involution $\iota$ such that 
-$$|\iota(x)-x|\ge 1$$ 
-for any $x\in\partial \Delta$.
-An example of $\Delta$ can be guessed from the picture. 
-
-\begin{wrapfigure}{o}{31 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/tripod}
-\end{lpic}
-\end{wrapfigure}
-
-Take the product $\Delta\times \Delta\subset \RR^4$;
-it is homeomorphic to the 4-ball.
-Note that 
-$$\vol_3[\partial(\Delta\times \Delta)]=2\cdot\area \Delta\cdot\length \partial \Delta<20\cdot\eps.$$
-The boundary $\partial(\Delta\times \Delta)$ homeomorphic to $\mathbb{S}^3$
-and the restriction of the involution $(x,y)\z\mapsto (\iota(x),\iota(y))$ has the needed property.
-
-It remains to smooth the boundary $\partial(\Delta\times \Delta)$.
-\qeds
-
-This example is given by Christopher Croke in \cite{croke}.
-
-It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
-Note also, that according to Gromov's systolic inequality \cite[see][]{gromov-filling}, 
-the involution $\iota$ above cannot be made isometric.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -501,7 +518,7 @@ Fix a positive real number $R$ such that $B(p,R)_M\cap L\ne \emptyset$.
 The sectional curvature of $M$ in the ball $B(p,R)$
 is bounded above by some constant, say $K$.
 
-Given $q\in L$, denote by $v_q$ the direction of a minimizing geodesic from $q$ to $p$.
+Given $q\in L$, denote by $v_q$ the direction of a minimizing geodesic $[qp]$.
 Note that $v_q\notin \mathrm{N}_qL$.
 Moreover there is $\delta=\delta(\eps,K,R)>0$ 
 such that for any point $q\in B(p,R)_M\cap L$,
@@ -542,7 +559,7 @@ Without loss of generality,
 we can assume that $\Omega$ is a ball centered at the origin.
 Choose an oriented 2-dimensional subspace $V$ subspace of $\RR^4$ 
 such that the integral of $\omega$ over 
-$\Omega\cap V$ is small positive number, say $\tfrac\pi4$. 
+$\Omega\cap V$ is a small positive number, say $\tfrac\pi4$. 
 
 Note that there is a linear symplectomorphism $\lambda$
  which maps planes parallel to $V$ to planes
@@ -574,7 +591,8 @@ Let $h$ be the pullback metric on $M$ for $f\:M\to N$.
 Clearly $h\ge g$.
 In particular $(M,h)$ is complete and the map $f\:(M,h)\to N$ is a local isometry. 
 
-It remains to prove that any local isometry between complete connected Riemannian manifolds of the same dimension if a covering map.\qeds 
+Note that any local isometry between complete connected Riemannian manifolds of the same dimension if a covering map.
+\qeds 
 
 %???
 
@@ -583,34 +601,42 @@ It remains to prove that any local isometry between complete connected Riemannia
 This problem is a direct corollary of the so called \emph{tube formula} given by Hermann Weyl in \cite{weyl}.
 It express the volume of $r$-neighborhood of $M$ as a polynomial $p(r)$;
 the coefficients of $p$, up to a multiplicative constant, the integrals along $M$ of so called Lipschitz--Killing curvatures --- certain scalars which can be expressed in terms of curvature tensor at the given point.
-
-Many of professional geometers I know were surprised by this result, so I decided to include it here. 
+ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{
-\begin{wrapfigure}[9]{r}{33 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
-\end{lpic}
-\end{wrapfigure}
+%\begin{wrapfigure}[9]{r}{33 mm}
+%\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/tree(1)}
+%\end{lpic}
+%\end{wrapfigure}
 
 \parbf{Disc.}
 The following claim is the key step in the proof.
 \begin{itemize}
-\item[$({*})$] Given a positive integer $n$ there is a tree $T_n$ embedded into the disc $\DD$ such that any null-homotopy of $\partial \DD$ passes through a curve which intersects $n$ different edges.
+\item[$({*})$] Given a positive integer $n$ there is a binary tree $T_n$ embedded into the disc $\DD$ such that any null-homotopy of $\partial \DD$ passes through a curve which intersects $n$ different edges.
 \end{itemize}
 
 The proof of the claim can be done by induction on $n$; the base is trivial.
 Assuming we constructed $T_{n-1}$, the tree $T_n$ can be obtained by identifying three endpoints of three copies of $T_{n-1}$.
 
+\begin{center}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/trees(1)}
+\lbl[tr]{2,6.5;$T_1$}
+\lbl[tr]{12,5.5;$T_2$}
+\lbl[tr]{23.5,4.5;$T_3$}
+\lbl[tr]{38,3.5;$T_4$}
+\lbl[l]{55,9;{\Large $\cdots$}}
+\end{lpic}
+\end{center}
 
-Fix $\eps=\tfrac1{10}$ and large $n$.
+
+Fix $\eps=\tfrac1{10}$ and a large integer $n$.
 Let us construct a metric on the disc $\DD$ with the embedded tree $T_n$ as in $({*})$ such that
 its diameter and length of its boundary below $1$
 and  
 the distance between any two edges of $T_n$ of without common vertex 
 is at least $\eps$.
 
-}
+
 
 Fix a metric on the cylinder $\mathbb S^1\times [0,1]$ such that
 
@@ -629,8 +655,8 @@ in such a way that the resulting space is homeomorphic to disc and the obtained 
 
 
 By $({*})$ and the construction, for any null-homotopy of the boundary 
-the least length is at least $\tfrac{\eps}{10}\cdot n=\tfrac{1}{100}\cdot n$.
-The obtained metric is not Riemannian, but is easy to smooth keeping this property.
+the least length exceeds $\tfrac{\eps}{10}\cdot n=\tfrac{1}{100}\cdot n$.
+The obtained metric is not Riemannian, but is easy to smooth while keeping this property.
 
 Since $n$ is large the result follows.
 \qeds
@@ -709,15 +735,24 @@ and Regina Rotman \cite[see][]{nabutovsky-rotman}.
 \parbf{Convex hypersurface.}
 First let us define the {}\emph{cone construction} of maps into $M$.
 
-Assume $\Delta$ be a simplex and $\Delta_v$ is its facet opposite to the vertex $v$.
-Assume $f_v\:\Delta_v\to M$ is a map and $x\in M$ such that $f_v(\Delta_v)\subset B(x,1)$.
-Given $w\in \Delta_v$ denote by $\gamma_w$ the minimizing geodesic path from $x$ to  $f_v(w)$.
+Assume $\Delta'$ be a simplex and $\Delta$ is its facet opposite to the vertex $v$.
+Assume $f\:\Delta\to M$ is a map and $x\in M$ such that $f(\Delta)\subset B(x,1)$.
+Given $w\in \Delta$ denote by $\gamma_w$ the minimizing geodesic path from $x$ to  $f(w)$.
 (Since the injectivity radius of $M$ is at least $1$, the geodesic $\gamma_w$ is uniquely defined.)
-Then the map $f\:\Delta\to M$ defined as 
-\[f\:(1-t)\cdot v+t\cdot w\mapsto \gamma_w(t)\] 
-is called {}\emph{cone over $f_v$} with the vertex $x$. 
+Then the map $f'\:\Delta'\to M$ defined as 
+\[f'\:(1-t)\cdot v+t\cdot w\mapsto \gamma_w(t)\] 
+is called {}\emph{cone over $f$} with the vertex $x$. 
 
-Let $h$ be the maximal distance from points in $W$ to $M$.
+One may start with a map $f_0\:\Delta_0\to M$ and iterate the cone construction for the vertices $x_1,\dots x_k$,
+to get a sequence of maps $f_i\:\Delta_i\to M$
+as far as $f_{i-1}(\Delta_{i-1})\subset B(x_i,1)$.
+Straightforward application of triangle inequality 
+shows that the latter conditions hold if 
+$f_0(\Delta_0)\subset B(x_i,s)$ for each $i$ and $s<\tfrac2{2+k}$.
+
+\medskip
+
+Now we coming back to the solution of the problem.
 
 Fix a fine triangulation of $W$ so that $M$ becomes a sub-complex of $W$.
 We can assume that the diameter of each simplex in $\tau$ is less than any given
@@ -729,6 +764,7 @@ the latter can be acheaved by passing to the barycentric subdivision of $\tau$.
 Denote by $\tau_i$ the maximal $i$-dimensional sub-complex of $\tau$ 
 with all the vertices colored by $0,\dots, i$.
 
+Let $h$ be the maximal distance from points in $W$ to $M$.
 For each vertex $v$ in $\tau$ 
 choose a point $v'\in M$ on the distance $\le h$.
 Note that 
@@ -736,16 +772,15 @@ if $v$ and $w$ are the vertices of one simplex,
 then
 \[|v'-w'|_M<2\cdot h+\eps.\]
 
-Assume $\tfrac{1}{2\cdot(m+1)}>h$.
-Apply above construction for $\eps<\tfrac{1}{2\cdot(m+1)}-h$.
-Let us extend the map $v\mapsto v'$ 
+Assume $\tfrac{2}{m+3}>h$.
+Let us apply the iterated cone construction described above construction for $\eps<\tfrac{2}{m+3}-h$ to get an extention of the map $v\mapsto v'$ 
 to a continuous 
 map $W\to M$.
 The map is already defined on $\tau_0$.
 Using the cone construction we can extend it to $\tau_1$;
 we can do this since the distance between vertices in one simplex are below injectivity radius of $M$.
-Repeat the cone construction recursively, to extend the map to $\tau_2,\dots,\tau_{m+1}=\tau$;
-the distance estimates are needed in this construction.
+Repeat the cone construction recursively, to extend the map to $\tau_2,\dots,\tau_{m+1}=\tau$.
+According to the estimates above the cone constructions are well defiend at each of the $m+1$ iterations.
 
 It follows that fundamental class of $M$ vanish in the homology ring of $M$, 
 a contradiction. 
@@ -788,8 +823,9 @@ By Liouville's theorem on phase volume, the same holds for $\gamma'(t)$
 for any fixed $t$.
 Therefore
 the expected value of
-\[\int\limits_0^1|df(\gamma'(t))|\cdot dt\]
-is at most $\delta_m$.
+\begin{align*}
+\mathrm{E}(|f\circ \gamma(1)-f\circ\gamma(0)|)\le \mathrm{E}\left(\int\limits_0^1|df(\gamma'(t))|\cdot dt\right)\le\delta_m.
+\end{align*}
 
 By Markov's inequality,
 the probability of the event 

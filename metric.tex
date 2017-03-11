@@ -8,7 +8,13 @@ Let us fix few standard notations.
 \begin{itemize}
 \item The distance between two points $x$ and $y$ in a metric space $X$
 will be denoted as 
-\[|x-y|_X.\]
+\[\dist_x(y),
+\quad
+|x-y|
+\quad\text{or}\quad
+|x-y|_X,
+\]
+the latter notation is used to emphasize that $x$ and $y$ are points in the space $X$.
 \item A metric space $X$ is called {}\emph{length-metric space} if for any $\eps>0$ two points $x,y\in X$ can be connected by curve $\alpha$
 such that
 \[\length\alpha<|x-y|_X+\eps.\]
@@ -27,20 +33,35 @@ a subset of a compact length-metric spaces.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parit{Semisolution.}
 Let $K$ be a compact metric space.
-Denote by $B(K)$ the space of bounded functions on $K$
+Denote by $B(K,\RR)$ the space of real-valued bounded functions on $K$
 equipped with sup-norm; 
 that is, 
-\[|f|=\sup_{x\in K}|f(x)|.\]
+\[|f|=\sup\set{|f(x)|}{x\in K}.\]
 
-Note that the map $\phi\:K\to B(K)$, defied by $x\mapsto \dist_x$
+Note that the map $K\to B(K,\RR)$, defied by $x\mapsto \dist_x$
 is a distance preserving embedding.
+The later follows since
+by triangle inequality we have
+\[|\dist_x(z)-\dist_y(z)|\le |x-y|_K\]
+and the equality holds for $z=x$.
 
-Denote by $W$ the linear convex hull of the image $\phi(K)\subset B(K)$ 
-with the metric induced from $B(K)$.
-It remains to show that $W$ forms a compact length-metric space.
+In other words we can (and will) consider $K$ as a subspace of $B(K,\RR)$ with the metric induced by sup-norm.
+
+Denote by $W$ the linear convex hull of the image $K$ in $B(K,\RR)$;
+that is $W$ is the intersection of all closed convex subsets containing $K$. 
+Equip $W$ with the metric induced by the sup-norm.
+
+Clearly $W$ is complete.
+Since $K$ is compact we can choose a finite $\eps$-net $K_\eps$ in $K$.
+Evidently convex hull $W_\eps$ of $K_\eps$ is compact and $W$ lies in the $\eps$-neighborhood of $W_\eps$.
+Therefore, $W$ admits a compact $\eps$-net for any $\eps>0$.
+That is $W$ is totally bounded and complete and therefore compact.
+
+Note that a line segments in $W$ are geodesics for the metric induced by sup-norm. 
+In particular $W$ is a compact length-metric space as required.
 \qeds
 
-The map $\phi$ is called \index{Kuratowski embedding}\emph{Kuratowski embedding},
+The map $x\mapsto \dist_x$ is called \index{Kuratowski embedding}\emph{Kuratowski embedding},
 it was constructed in \cite{kuratowski},
 although essentially the same map 
 was described by Maurice Fr\'echet 
@@ -83,9 +104,12 @@ Show that there is a non-expanding map $X\to  Y$ which agrees with $f$ on $A$.
 
 Let $X$ be a metric space.
 Denote by $C(X,\RR)$ the space of continuous real-valued functions
-equipped with the compact-open topology.
+equipped with the \emph{compact-open topology};
+that is, for any compact set $K\subset X$ and open set $U\subset \RR$
+the set of all continuous functions $f\: X\to \RR$ such that $f(K)\subset U$
+is declared to be open.
 
-Fix a point $z_0\in X$.
+Fix a point $x_0\in X$.
 Given a point $z\in X$, let $f_z\in C(X,\RR)$ be the function defined as 
 \[f_z(x)=|z-x|_X-|z-x_0|_X.\]
 Let $F_X\:X\to C(X,\RR)$ be the map 
@@ -102,12 +126,13 @@ The complement
 $\partial_\infty X=\bar X\backslash F_X(X)$ 
 is called {}\emph{horoabsolute} of $X$.
 
-This construction was introduced by Mikhael Gromov in \cite{gromov-hyperbolic}.
-
+The construction above is due to Mikhael Gromov \cite[see][]{gromov-hyperbolic}.
 
 \begin{pr}{\easy}{Horocompactification}\label{Horocompactification}
 Construct a proper metric space $X$
-such that $F_X$ is not an embedding.
+such that 
+\[F_X\:X\to C(X,\RR)\] 
+is not an embedding.
 Show that there are no such examples among proper length-metric spaces.
 \end{pr}
 
@@ -126,7 +151,9 @@ to the unit ball in $\RR^3$.
 Let $X$ be a locally compact metric space,
 $m$ is an integer
 and $a>0$.
-We say that the macro-dimension  of $X$ at the scale $a$ is at most $m$
+
+Following Mikhael Gromov \cite[see][]{gromov:macroscopic-dimension},
+we say that the macro-dimension  of $X$ at the scale $a$ is at most $m$
 if there is a continuous map $f$ from $X$ to an $m$-dimensional simplicial complex $K$
 such that for any $k\in K$ the inverse image $f^{-1}(\{k\})$ has diameter less than $a$.
 
@@ -180,10 +207,10 @@ and $X^V$ denotes the vertical part of $X$;
 so, $X^V+X^H=X$.
 
 One usually adds a condition which ensure that any curve in $M$ can be arbitrary well approximated by a horizontal curve with the same endpoints.
-(In particular this ensures that the distance will not take infinite values.)
+In particular this ensures that the distance will not take infinite values.
 The most common condition is so called  {}\emph{complete non-integrability};
 it means that for any $x\in M$, 
-one can choose a basis in $T_xM$
+one can choose a basis in $\T_xM$
 from the vectors of the following type:
 $A(x)$, $[A,B](x)$, $[A,[B,C]](x)$, $[A,[B,[C,D]]](x),\dots$ where all vector fields $A,B,C,D, \dots$ are horizontal.
 
@@ -232,7 +259,7 @@ set
 \[\rho(x,y)=\mu[B(x,\tfrac \pi2)\backslash B(y,\tfrac\pi2)].\]
 
 Show that $\rho$ is a length-metric on $\mathbb{S}^2$
-and moreover, geodesics in this metric formed by arcs of great circles.
+and moreover, the images of geodesics in this metric are arcs of great circles in $\mathbb{S}^2$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -249,6 +276,21 @@ Show that $\rho$ is induced by a norm on $\RR^m$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Hyperbolic space}
 
+Recall that a map $f\:X\to Y$ between metric spaces is called bi-Lipschitz if there if a constant $\eps>0$
+such that 
+\[\eps\cdot|x-y|_X\le|f(x)-f(y)|_Y\le\tfrac1\eps\cdot|x-y|_X.\]
+for any $x,y\in X$.
+
+
+\begin{pr}{}{Hyperbolic space}\label{Hyperbolic space}
+Construct a bi-Lipschitz map
+from the hyperbolic $3$-space 
+to the product of two hyperbolic planes.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{A homeomorphism near quasi-isometry\thm}
+
 A map $f\:X\to Y$ between metric spaces is called a \index{quasi-isometry}\emph{quasi-isometry} if there is a positive real constant $C$ such that $f(X)$ is a $C$-net in $Y$ and
 $$\tfrac{1}{C}\cdot|x-y|_X-C
 \le 
@@ -256,23 +298,11 @@ $$\tfrac{1}{C}\cdot|x-y|_X-C
 
 Note that a quasi-isometry is not assumed to be continuous, for example any map between compact metric spaces is a quasi-isometry.
 
-\begin{pr}{}{Hyperbolic space}\label{Hyperbolic space}
-Construct a quasi-isometry
-from the hyperbolic $3$-space 
-to a subset 
-of the product of two hyperbolic planes.
-\end{pr}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{A homeomorphism near quasi-isometry\thm}
-
-The quasi-isometry is defined few lines above.
-
 \begin{pr}{\thm}{A homeomorphism near quasi-isometry}\label{hom-near-QI} 
 Let $f\:\RR^m\to\RR^m$ be a quasi-isometry.
 Show that there is a (bi-Lipschitz) homeomorphism 
 $h\:\RR^m\to\RR^m$ on a bounded distance from $f$;
-that is, there is 
+that is, 
 $$|f(x)-h(x)|\le C$$
 for any $x\in\RR^m$ and a real constant $C$.
 \end{pr}
@@ -333,7 +363,7 @@ Since $K$ is compact,
 we can choose an increasing sequence of integers $n_k$
 such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
 converge.
-In particular, both of these sequences  are Cauchy;
+In particular, both of these sequences converge in itself;
 that is,
 \[
 |x_{n_i}-x_{n_j}|_K, |y_{n_i}-y_{n_j}|_K\to 0
@@ -357,7 +387,7 @@ x_{m_i}\to x_0\ \ \text{and}\ \ y_{m_i}\to y_0\ \ \text{as}\ \ i\to\infty.
 \leqno({*})\]
 
 Set \[\ell_n=|x_n-y_n|_K.\]
-Since $f$ is non-contracting, $(\ell_n)$ is a non-decreasing sequence.
+Since $f$ is non-contracting, the sequence $(\ell_n)$ is non-decreasing.
 
 By $({*})$,  $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
 It follows that $(\ell_n)$ is a constant sequence.
@@ -373,7 +403,7 @@ Since $K$ is compact $f\:K\to K$ is surjective. Hence the result follows.\qeds
 
 This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[see 7.3.30 in][]{bbi}.
 The proof presented here is not standard, 
-it was given by Travis Morrison, 
+I learned it from Travis Morrison, 
 a students in my MASS class at Penn State, Fall 2011.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -391,7 +421,8 @@ Further, note that $K(F,x)$ is closed and
 for any other finite set $F'$ such that 
 $x\in F'\subset F$.
 
-Without loss of generality we can assume that $A$ is a maximal set with respect to inclusion which satisfies the assumptions of the lemma. 
+Without loss of generality we can assume that $A$ is a maximal set;
+that is $f$ can not be extended to a bigger set in such a way that it satisfies the assumptions of the lemma. 
 (It follows that $A$ is closed subset of $X$, but we will not use it.)
 
 Arguing by contradiction, assume $A\ne X$; fix $x\in X\backslash A$.
@@ -418,15 +449,16 @@ for $m\ne n$.
 
 \medskip
 
-Now assume $X$ is proper length space  and $F_X$ is not an embedding.
-Then there is a sequence of points $z_1,z_2,\dots$ 
+The second part is proved by contradiction.
+Assume $X$ is proper length space  and $F_X$ is not an embedding;
+that is, there is a sequence of points $z_1,z_2,\dots$ 
 and a point $z_\infty$,
 such that $f_{z_n}\to f_{z_\infty}$ in $C(X,\RR)$
 as $n\to \infty$, 
 while $|z_n-z_\infty|_X>\eps$ 
 for some fixed $\eps>0$ and all $n$.
 
-Note that any pair of points in $X$ can be connected by a minimizing geodesic.
+Note that any pair of points $x,y\in X$ can be connected by a minimizing geodesic $[xy]$.
 Choose $\bar z_n$ on a geodesic $[z_\infty z_n]$ such that $|z_\infty-\bar z_n|=\eps$.
 Note that 
 \begin{align*}
@@ -436,8 +468,8 @@ f_{z_\infty}(z_\infty)-f_{z_n}(\bar z_n)&=-\eps
 \end{align*}
 for any $n$.
 
-Since $X$ is proper, we can pass to a subsequence of $z_n$ so that the sequence  $\bar z_n$ converges,
-say to $\bar z_\infty$.
+Since $X$ is proper, we can pass to a subsequence of $z_n$ so that the sequence  $\bar z_n$ converges;
+denote its limit by $\bar z_\infty$.
 From the identities above, it follows that
 \[f_{z_n}(\bar z_\infty)\not\to f_{z_\infty}(\bar z_\infty)
 \quad
@@ -485,36 +517,86 @@ then any point $x_0\in X$ either admits a neighborhood homeomorphic to $\RR^2$ o
 that is, $X\backslash\{x_0\}$ is disconnected \cite[see 3.32 in][]{gromov-MetStr}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Macro-dimension.}
-Choose a point $p\in M$,
-denote by $f$ the distance function from $p$.
+The following claim is a key to the proof.
+\begin{itemize}
+ \item[$({*})$] Let $a$ be a positive real number.
+ Assume that a closed curve $\gamma$ in a metric space $X$ can be sudivided into 4 arcs $\alpha$, $\beta$, $\alpha'$, and $\beta'$ in such a way that 
+ \begin{itemize}
+ \item $|x-x'|>a$ for any $x\in\alpha$ and $x'\in \alpha'$
+ and
+ \item $|y-y'|>a$ for any $y\in\beta$ and $y'\in \beta'$.
+ \end{itemize}
+ Then $\gamma$ is not contractable in its $\tfrac a2$-neighborhood.
+\end{itemize}
+The claim is proved the along the same lines as the Besikovitch inequality.
 
+\medskip
+
+
+Indeed, consider two functions of $X$ defined as
+\begin{align*}
+w_1(x)&=\max\{\,a,\dist_{\alpha}(x)\,\}
+\\
+w_2(x)&=\max\{\,a,\dist_{\beta}(x)\,\}
+\end{align*}
+and the map $\bm{w}\:X\to [0,a]\times[0,a]$, defined as 
+\[\bm{w}\:x\mapsto(w_1(x),w_2(x)).\]
+
+Note that 
+\begin{align*}
+\bm{w}(\alpha)&=0\times [0,a],
+&
+\bm{w}(\beta)&=[0,a]\times 0,
+\\
+\bm{w}(\alpha')&=a\times [0,a],
+&
+\bm{w}(\beta')&=[0,a]\times a,
+\end{align*} 
+Therefore, the composition $\bm{w}\circ\gamma$ is a degree 1 map 
+\[\mathbb{S}^1\to \partial([0,a]\times[0,a]).\] 
+It follows that if $h\:\DD\to X$ shrinks $\gamma$ then there is a point $z\in\DD$ such that 
+$\bm{w}\circ h(z)=(\tfrac a2,\tfrac a2)$.
+Therefore $h(z)$ lies on the distance at least $\tfrac a2$ from $\alpha$, $\beta$, $\alpha'$, $\beta'$
+and therefore from $\gamma$.
+Hence claim $({*})$ follows.
+
+Now fix a point $p\in M$.
 Let us cover $M$ by the connected components of the inverse images 
-$f^{-1}((n-1,n+1))$.
+$\dist_p^{-1}((n-1,n+1))$ for all integers $n$.
 Clearly any point in $M$ is covered by at most two such components.
 It remains to show that each of these components has diameter less than $100$.
 
-Assume the contrary; let $x$ and $y$ be two points in such connected component 
+\begin{wrapfigure}{r}{40 mm}
+\begin{lpic}[t(-6 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/pxy-tau(1)}
+\lbl[t]{2,0;$p$}
+\lbl[t]{35,0;$x$}
+\lbl[t]{24,0;$m$}
+\lbl[r]{.5,35;$y$}
+\lbl{23,28;$\tau$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume the contrary; let $x$ and $y$ be two points in one connected component 
 and $|x-y|_M\ge 100$.
 Connect $x$ to $y$ by a curve $\tau$ in the component.
 Consider the closed curve $\sigma$ formed by two geodesics $[px]$, $[py]$ and $\tau$.
+Let $f\:\DD\to M$ be a disc contracting $\sigma$.
 
-%%%???+PIC
 
-Prove that $\sigma$ can be divided into 4 arcs $\alpha$, $\beta$, $\gamma$ and $\delta$
-in such a way that the minimal distance from $\alpha$ to $\gamma$ as well as the minimal distance from $\beta$ to $\delta$ is at least $10$.
+Note that $|p-x|>49$.
+Therefore there is a point $m$ on $[px]$ such that $|m-x|=20$.
 
-Use the last statement to show that $\sigma$ 
-cannot be shrank 
-by a disc it its $1$-neighborhood;
-the latter contradicts the assumption.\qeds
+By triangle inequality, the subsdivision of $\sigma$ into the arcs $[pm]$, $[mx]$, $\tau$ and $[yp]$ satisfy the assumption of the claim $({*})$ for $a=10$.
+Hence the statement follows.\qeds
 
 The problem was discussed in a talk by Nikita Zinoviev around 2004.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{No Lipschitz embedding.}
-Consider a chain of disjoint circles $c_0,\dots,c_n$ in $\RR^3$;
+Consider a chain of circles $c_0,\dots,c_n$ in $\RR^3$;
 that is, $c_i$ and $c_{i-1}$ are linked for each $i$. 
 
 
@@ -531,7 +613,7 @@ that is, $c_i$ and $c_{i-1}$ are linked for each $i$.
 Assume that $\RR^3$ is equipped with a length-metric $\rho$,
 such that the total length of the circles is $\ell$
 and $U$ is an open set containing all the circles $c_i$.
-Note that for any Lipschitz homeomorphism $f\:(U,\rho)\to\RR^3$ the distance from $f(c_0)$ to $f(c_n)$ is less than $\ell$.
+Note that for any 1-Lipschitz embedding $f\:(U,\rho)\to\RR^3$ the distance from $f(c_0)$ to $f(c_n)$ is less than $\ell$.
 
 Let us show that the $\rho$-distance from $c_0$ to $c_n$ might be much larger than $\ell$.
 Fix a line segment $[ab]$ in $\RR^3$.
@@ -614,12 +696,11 @@ The metric $g_0$ can be assumed to be a metric on round sphere.
 Applying the construction as in Nash--Kuiper theorem,
 one can produce a sequence of smooth embeddings $h_n\:\mathbb{S}^m\to \RR^{m+1}$ with the induced metrics $g_n'$
 such that $|g_n'-g_n|\to 0$.
-
 Moreover, assume we assign a positive real number $\eps(h)$ for any smooth embedding $h\:\mathbb{S}^m\to\RR^{m+1}$.
 Then we can assume that 
 \[|h_{n+1}(x)-h_n(x)|<\eps(h_n)\] for any $x\in \mathbb{S}^m$ and $n$.
 
-Show that for a right choice of function $\eps(h_n)$,
+For a right choice of function $\eps(h_n)$,
 the sequence $h_n$ converges, say to $h_\infty$, 
 and the metric induced by $h_\infty$ coincides with the given sub-Riemannian metric.\qeds
 
@@ -630,7 +711,10 @@ Similar construction described in the lecture notes by Allan Yashinski and me \c
 which is aimed for undergraduate students. 
 Yet the results in \cite{petrunin-paths} are closely relevant.
 
-The same idea can be used to prove the following.
+The construction in the Nash--Kuiper embedding theorem
+can be used to prove some seemingly irrelevant statements.
+Here is one example based on the observation that Weyl curvature tensor 
+is vanishing on hypersurfaces in the Euclidean space.
 \begin{itemize}
 \item Let $M$ be a Riemannian manifold diffeomorphic to the $n$-sphere. 
 Show that there is a Riemannian manifold $M'$ arbitrary close to $M$ in Lipschitz metric and vanishing Weyl curvature tensor.
@@ -650,9 +734,14 @@ Note that $f$ is Lipschitz.
 Therefore by Rademacher's theorem, $f$ is differentiable almost everywhere.
 
 Fix a unit vector $u$.
-Prove that, for almost all $x$, the length of the path 
-$\alpha\:t\mapsto x+t\cdot u$ with $t\in[0,1]$ can be expressed as the integral
-\[\int\limits_0^1 (d_{\alpha(t)}f)(u) \cdot dt.\]
+Given $x\in\RR^2$,
+consider the curve $\alpha_x(t)\z=x+t\cdot u$ with $t\in [0,1]$.
+Note that for almost all $x$ we have
+\[\alpha'_x(t)=(d_{\alpha_x(t)}f)(u)\]
+for almost all $t$.
+It follows that 
+\[\length(f\circ\alpha_x)=\int\limits_0^1 |(d_{\alpha_x(t)}f)(u)| \cdot dt\]
+for almost all $x$.
 
 It follows that $|d_xf(v)|=|v|$ for almost all $x,v\in\RR^2$;
 in particular $d_xf$ is defined and has rank 2 at some point $x$, a contradiction. \qeds 
@@ -705,12 +794,11 @@ On the other hand, since $f_n$ is isometry and $f(a)=a$,
 we get $|f_n(0)|\le 2\cdot |a|$, a contradiction.
 \qeds
 
-
+The idea in the proof is due to  Jussi V\"ais\"al\"a's in \cite[see][]{vaisala}.
 The problem is a stripped version of Mazur--Ulam theorem proved in  \cite{mazur-ulam};
 it states that any isometry of $(\RR^m,\rho)$ to itself 
 is an affine map. 
 
-The idea in the proof is due to  Jussi V\"ais\"al\"a's in \cite[see][]{vaisala}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -744,7 +832,7 @@ which was the motivating example of his 4th problem \cite[see][]{hilbert-problem
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Straight geodesics.}
 From the uniqueness of straight segment between given points in $\RR^m$,
-it follows that any straight line in $\RR^m$ forms a geodesic in $(\RR^m,\rho)$.
+it follows that any straight line in $\RR^m$ is a geodesic in $(\RR^m,\rho)$.
 
 Set 
 \[\|\bm{v}\|_{\bm{x}}=\rho(\bm{x},(\bm{x}+\bm{v})).\]
@@ -754,7 +842,8 @@ Note that
 |\lambda|\cdot\|\bm{v}\|_{\bm{x}}\]
 for any $\bm{x},\bm{v}\in\RR^m$ and $\lambda\in\RR$.
 
-Prove that 
+Since $\rho$ is bi-Lipschitz to $|{*}-{*}|$,
+applying triangle inequality twice for the points $\bm{x}$, $\bm{x}+\lambda\cdot\bm{v}$, $\bm{x}'$ and $\bm{x}'+\lambda\cdot\bm{v}$, we get
 \[
 \|\lambda\cdot\bm{v}\|_{\bm{x}}
 -
@@ -799,9 +888,14 @@ where
      0&0&e^{x}
     \end{matrix}\right).\]
 
-Prove that the map $\RR^3\to \RR^4$ defined as
-$$(x,y,z)\mapsto (x,y,x,z)$$
-is a quasi-isometry from $(\RR^3,h)$ to its image in $(\RR^2,g)\times (\RR^2,g)$.\qeds
+Consider the map $\RR^3\to \RR^4$ defined as
+$$f\:(x,y,z)\mapsto (x,y,x,z),$$
+it has left inverse 
+$$h\:(x,y,x',z)\mapsto (\tfrac{x+x'}{2},y,z).$$
+Fix a tangent vector $v$ of $\HH^3$.
+Set $w=df(v)$ and so $v=dh(w)$.
+Direct calculations show that $|v|\le |w|\le 2\cdot |v|$.
+Hence the statement follows.\qeds
 
 
 In the proof we used that horosphere in the hyperbolic space is isometric to the Euclidean plane.
@@ -862,27 +956,30 @@ Identify $\mathbb{S}^1$ with $[0,1]/(0\sim 1)$.
 Given $t\in[0,\tfrac12]$,
 Consider the set $K_t\subset \mathbb{S}^1$
 formed by all possible sums $\sum_{n=1}^\infty a_n\cdot t^n$,
-where $a_i$ is $0$ or $1$.
+where $a_n$ is $0$ or $1$.
 
 Note that $K_{t}$ is a Cantor set and $K_{\frac12}=\mathbb{S}^1$.
 
-Denote by $\rho_\alpha\:\mathbb{S}^1\to\mathbb{S}^1$ 
-the rotation by angle $\alpha$.
+Denote by $\rho_t\:\mathbb{S}^1\to\mathbb{S}^1$ 
+the counterclockwise rotation by angle $\frac1{1-2\cdot t}$.
 Set 
 \[Z_t=\left[\begin{aligned}
-             Z_t&=\rho_{\frac1{1-2\cdot t}}(K_t)&&\text{if}\ t\in[0,\tfrac12),
+             Z_t&=\rho_t(K_t)&&\text{if}\ t\in[0,\tfrac12),
 \\
 Z_{t}&=\mathbb{S}^1&&\text{if}\ t=\tfrac12.
             \end{aligned}
 \right.
 \]
 
+Note that the Hausdorff distance from $K_t$ to $K_{\frac12}=\SS^1$ converges to $0$ as $t\to\tfrac12$.
+Therefore $Z_t$ is a continuous family.
 
-Prove that the family of sets $Z_t$
-is a continuous in the Hausdorff topology and it does not have a section.\qeds
+Any continuous section $z(t)\in Z_t$ for $t\in[0,\tfrac12)$ can be described as
+\[z(t)=\rho_t\left(\sum_{n=1}^\infty a_n\cdot t^n\right)\]
+for a fixed sequence $(a_n)$.
+None of these can be extended continuousely to $[0,\tfrac12]$.\qeds
 
- The problem is suggested by Stephan Stadler.
-
+The problem is suggested by Stephan Stadler.
 It is instructive to check that any Hausdorff continuous family of closed sets in $\RR$ admits a continuous section.
 
 \begin{wrapfigure}{r}{33 mm}
@@ -891,10 +988,22 @@ It is instructive to check that any Hausdorff continuous family of closed sets i
 \end{wrapfigure}
 
 \parbf{Spaces with isometric balls.} 
-Take the upper half-plane and cut it along a ``dyadic comb'' shown on the diagram. 
-Equip the obtained space with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
-(Few concentric balls in this metric are shown on the diagram.)
+The needed examples can be constructing from the upper half-plane
+by cutting it along a ``dyadic comb'' shown on the diagram
+and equipping the obtained space with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
+Few concentric balls in this metric are shown on the diagram.
 
-To construct a comb we have to make infinite number of decisions --- for each tooth size we have to decide on which side from the origin will be closest tooth of that size. 
+First let us describe the the comb precisely.
+Fix an infinite sequence $a_0,a_1,\dots$ of $0$ and $1$.
+Given an integer $k$ cut a the upper half-plane along the line segment from $(k,0)$ to $(k,2^{m+1})$ 
+if $m$ is the maiximal number such that 
+\[k\equiv a_0+2\cdot a_1+\dots+2^{m-1}\cdot a_{m-1}\pmod{2^{m}};\]
+If the equality holds for all $m$, cut the plane along the vertical half-plane from $(k,0)$.
 
-Show that the needed spaces $X$ and $Y$ can be obtained this way for a pair of different combs.
+Note that the resulting spaces meet the conditions for the point $(\tfrac12,0)$.
+
+Note yet that the resulting spaces for two sequences $(a_n)$ and $(a'_n)$ are isometric only in the following two cases 
+(1) if $a_n=a_n'$ for all large $n$ 
+and (2) if $a_n=1-a_n'$  for all large $n$.
+
+It is easy to find two sequences which do not have these identities for all large $n$.\qeds
