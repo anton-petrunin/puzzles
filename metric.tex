@@ -100,10 +100,10 @@ Show that there is a non-expanding map $X\to  Y$ which agrees with $f$ on $A$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Horocompactification\easy}
+\subsection*{Horo-compactification\easy}
 
 Let $X$ be a metric space.
-Denote by $C(X,\RR)$ the space of continuous real-valued functions
+Denote by $C(X,\RR)$ the space of continuous functions $X\to \RR$
 equipped with the \emph{compact-open topology};
 that is, for any compact set $K\subset X$ and open set $U\subset \RR$
 the set of all continuous functions $f\: X\to \RR$ such that $f(K)\subset U$
@@ -121,14 +121,14 @@ note that $\bar X$ is compact.
 That is, 
 if $F_X$ is an embedding, 
 then $\bar X$ forms a compactification of $X$,
-which is called \index{horocompactification}\emph{horocompactification}.
-The complement 
+which is called \index{horo-compactification}\emph{horo-compactification}.
+In this case, the complement 
 $\partial_\infty X=\bar X\backslash F_X(X)$ 
-is called {}\emph{horoabsolute} of $X$.
+is called {}\emph{horo-absolute} of $X$.
 
 The construction above is due to Mikhael Gromov \cite[see][]{gromov-hyperbolic}.
 
-\begin{pr}{\easy}{Horocompactification}\label{Horocompactification}
+\begin{pr}{\easy}{Horo-compactification}\label{Horocompactification}
 Construct a proper metric space $X$
 such that 
 \[F_X\:X\to C(X,\RR)\] 
@@ -146,30 +146,26 @@ to the unit ball in $\RR^3$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Macro-dimension\easy}
+\subsection*{Macroscopic dimension\easy}
 
 Let $X$ be a locally compact metric space,
 $m$ is an integer
 and $a>0$.
 
 Following Mikhael Gromov \cite[see][]{gromov:macroscopic-dimension},
-we say that the macro-dimension  of $X$ at the scale $a$ is at most $m$
-if there is a continuous map $f$ from $X$ to an $m$-dimensional simplicial complex $K$
-such that for any $k\in K$ the inverse image $f^{-1}(\{k\})$ has diameter less than $a$.
+we say that the \index{macroscopic dimension}\emph{macroscopic dimension}  of $X$ at the scale $a$ is $m$
+if $m$ is the least integer such that there is a continuous map $f$ from $X$ to an $m$-dimensional simplicial complex $K$
+such that for any $k\in K$ the inverse image $f^{-1}\{k\}$ has diameter less than $a$.
 
-If macro-dimension of $X$ at the scale $a$ is at most $m$,
-but not at most $m-1$, 
-we say that $m$ is the \index{macro-dimension}\emph{macro-dimension} of $X$ at the scale $a$.
-
-Equivalently, the macro-dimension of $X$ on scale $a$ can be defined as 
+Equivalently, the macroscopic dimension of $X$ on scale $a$ can be defined as 
 the least integer $m$ such that $X$ admits an open covering with diameter of each set less than $a$ 
 and such that each point in $X$ is covered by at most $m+1$ sets in the cover.
 
-\begin{pr}{\easy}{Macro-dimension}\label{macro-dimension} 
+\begin{pr}{\easy}{Macroscopic dimension}\label{macroscopic dimension} 
 Let $M$ be a simply connected Riemannian manifold with the following property: 
 any closed curve is null-homotopic 
 in its own  1-neighborhood. 
-Prove that the macro-dimension of $M$ on the scale $100$ is at most $1$.
+Prove that the macroscopic dimension of $M$ on the scale $100$ is at most $1$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,9 +173,8 @@ Prove that the macro-dimension of $M$ on the scale $100$ is at most $1$.
 
 \begin{pr}{\hard}{No short embedding}\label{weird-metric} 
 Construct a length-metric $d$ on $\RR^3$,
-such that for any open set $U\subset  \RR^3$,
-there is no Lipschitz embeddings $(U,d)\to \RR^3$,
-where $\RR^3$ equipped with the canonical metric.
+such that for any open set $U\subset \RR^3$,
+the subspace $(U,d)$ does not admit a Lipschitz embedding into 3-dimensional Euclidean space.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -206,13 +201,19 @@ that is, the orthogonal projection of $X$ to $H$
 and $X^V$ denotes the vertical part of $X$;
 so, $X^V+X^H=X$.
 
-One usually adds a condition which ensure that any curve in $M$ can be arbitrary well approximated by a horizontal curve with the same endpoints.
-In particular this ensures that the distance will not take infinite values.
-The most common condition is so called  {}\emph{complete non-integrability};
+In addition we need to add the a condition
+to ensures the following properties 
+\begin{itemize}
+\item The sub-Riemannian metric induce the original topology on the manifold; in particular, the distance cannot take infinite values.
+\item Any curve in $M$ can be arbitrary well approximated by a horizontal curve with the same endpoints.
+\end{itemize}
+The most common condition of this type is so called  {}\emph{complete non-integrability};
 it means that for any $x\in M$, 
-one can choose a basis in $\T_xM$
-from the vectors of the following type:
-$A(x)$, $[A,B](x)$, $[A,[B,C]](x)$, $[A,[B,[C,D]]](x),\dots$ where all vector fields $A,B,C,D, \dots$ are horizontal.
+one can choose a basis in its tangent space $\T_xM$
+from the vectors of the following type
+\[A(x),\  [A,B](x), [A,[B,C]](x), [A,[B,[C,D]]](x),\dots\] 
+where $[{*},{*}]$ denotes the Lie bracket 
+and all the vector fields $A,B,C,D, \dots$ are horizontal.
 
 \begin{pr}{\thm}{Sub-Riemannian sphere}\label{sub-Riemannian} 
 Prove that any sub-Riemannian metric 
@@ -291,10 +292,13 @@ to the product of two hyperbolic planes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{A homeomorphism near quasi-isometry\thm}
 
-A map $f\:X\to Y$ between metric spaces is called a \index{quasi-isometry}\emph{quasi-isometry} if there is a positive real constant $C$ such that $f(X)$ is a $C$-net in $Y$ and
-$$\tfrac{1}{C}\cdot|x-y|_X-C
+A map $f\:X\to Y$ between metric spaces is called a \index{quasi-isometry}\emph{quasi-isometry} if there is a  real constant $C>1$ such that 
+$$\tfrac{1}{C}\cdot|x-x'|_X-C
 \le 
-|f(x)-f(y)|_Y\le C\cdot|x-y|_X+C.$$
+|f(x)-f(x')|_Y\le C\cdot|x-x'|_X+C$$
+for any $x,x'\in X$ and $f(X)$ is a \index{net}\emph{$C$-net} in $Y$;
+that is for any $y\in Y$ there is $x\in X$ such that $|f(x)-y|_Y\le C$.
+
 
 Note that a quasi-isometry is not assumed to be continuous, for example any map between compact metric spaces is a quasi-isometry.
 
@@ -322,17 +326,15 @@ The  bi-Lipschitz version requires
 an analogous statement in the category of bi-Lipschitz embeddings;
 it was proved by
 Dennis Sullivan \cite[see][]{sullivan}.
-This result can be used to prove that the homeomorphism is bi-Lipschitz.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{A family of sets with no section}
+\subsection*{A family of sets with no section\easy}
 
 \begin{pr}{}{A family of sets with no section}\label{hausdorff-section} 
 Construct a family of closed sets $C_t\subset\mathbb{S}^1$, $t\z\in [0,1]$
 which is continuous in the Hausdorff topology, 
 but does not admit a {}\emph{section}.
-That is, there is no continuous 
-map $c\:[0,1]\to \mathbb{S}^1$ such that $c(t)\in C_t$ for any $t$.
+That is, there is no path $c\:[0,1]\to \mathbb{S}^1$ such that $c(t)\in C_t$ for any $t$.
 \end{pr}
 
 \subsection*{Spaces with isometric balls}
@@ -406,10 +408,19 @@ The proof presented here is not standard,
 I learned it from Travis Morrison, 
 a students in my MASS class at Penn State, Fall 2011.
 
+As an easy corollary one can get that any surjective short maps from compact metric space to it self is an isometry.
+The following problem due to Aleksander Ca{\l}ka \cite{calka:loc-isom};
+it is closely related but more involved. 
+\begin{itemize}
+ \item Show that any local isometry from a connected compact metric space to it self is a homeomorphism. 
+\end{itemize}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Finite-whole extension.}
 Given a finite set $F\subset X$,
-denote by $\mathfrak{S}_F$ the set of all short maps $h\: F\to Y$ which agree with $f$ in $F\cap A$.
+denote by $\mathfrak{S}_F$ the set of all short maps $h\: F\to Y$ which agree with $f$ on $F\cap A$.
 For $x\in F$, consider the set
 \[K(F,x)=\set{h(x)\in Y}{h\in \mathfrak{S}_F}.\]
 
@@ -442,7 +453,7 @@ which contradicts $(\asterism)$.
 This observation was used by Stephan Stadler and me \cite[in][]{petrunin-stadler}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Horocompactification.}
+\parbf{Horo-compactification.}
 For the first part of the problem, take $X$ to be the set of non-negative integers with the metric $\rho$ defined as 
 \[\rho(m,n)=m+n\] 
 for $m\ne n$.
@@ -489,11 +500,11 @@ and attributed to Uri Bader \cite[see 2.3 in][]{karlsson}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{A ball near a sphere.}
 Make fine burrows in the standard 3-ball which do not change its topology,
-but at the same time a come sufficiently close to any point in the ball.
+but at the same time come sufficiently close to any point in the ball.
 
 Consider the doubling of obtained ball along  its boundary.
-Clearly the obtained space is homeomorphic to $\mathbb{S}^3$.
-Prove that the burrows can be made 
+The obtained space is homeomorphic to $\mathbb{S}^3$.
+Note that the burrows can be made 
 so that it is sufficiently close to the original ball 
 in the Gromov--Hausdorff metric.
 
@@ -503,7 +514,7 @@ to get a genuine Riemannian metric with needed property.\qeds
 
 This construction is a stripped version of the theorem of Steven Ferry and Boris Okunin \cite[see][]{ferry-okun}.
 The theorem states that Riemannian metrics on a smooth closed manifold $M$ with $\dim M\ge 3$ 
-can approximate given compact length-metric space $X$ 
+can approximate the given compact length-metric space $X$ 
 if and only if 
 there is a continuous map $M\to X$
 which is surjective on the fundamental groups. 
@@ -518,7 +529,7 @@ that is, $X\backslash\{x_0\}$ is disconnected \cite[see 3.32 in][]{gromov-MetStr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Macro-dimension.}
+\parbf{Macroscopic dimension.}
 The following claim is a key to the proof.
 \begin{itemize}
  \item[$({*})$] Let $a$ be a positive real number.
@@ -530,7 +541,7 @@ The following claim is a key to the proof.
  \end{itemize}
  Then $\gamma$ is not contractable in its $\tfrac a2$-neighborhood.
 \end{itemize}
-The claim is proved the along the same lines as the Besikovitch inequality.
+The claim is proved the same way as the Besikovitch inequality.
 
 \medskip
 
@@ -560,7 +571,7 @@ It follows that if $h\:\DD\to X$ shrinks $\gamma$ then there is a point $z\in\DD
 $\bm{w}\circ h(z)=(\tfrac a2,\tfrac a2)$.
 Therefore $h(z)$ lies on the distance at least $\tfrac a2$ from $\alpha$, $\beta$, $\alpha'$, $\beta'$
 and therefore from $\gamma$.
-Hence claim $({*})$ follows.
+Hence the claim $({*})$ follows.
 
 Now fix a point $p\in M$.
 Let us cover $M$ by the connected components of the inverse images 
@@ -585,7 +596,7 @@ Consider the closed curve $\sigma$ formed by two geodesics $[px]$, $[py]$ and $\
 Let $f\:\DD\to M$ be a disc contracting $\sigma$.
 
 
-Note that $|p-x|>49$.
+Note that $|p-x|>40$.
 Therefore there is a point $m$ on $[px]$ such that $|m-x|=20$.
 
 By triangle inequality, the subsdivision of $\sigma$ into the arcs $[pm]$, $[mx]$, $\tau$ and $[yp]$ satisfy the assumption of the claim $({*})$ for $a=10$.
@@ -687,22 +698,53 @@ Dmitri Burago,
 Sergei Ivanov 
 and David Shoenthal \cite[see][]{BIS}.
 
+It is expected that any metric on $\RR^2$ admits local Lipschitz embeddings into the Euclidean plane.
+Also, it seems feasible that any metric on $\RR^3$ admits a local Lipschitz embedding into $\RR^4$.
+
+Note that $\mathbb{S}^3$ with any metric admits a Lipschitz map to the round 3-sphere.
+It is instructive to visualize this map for the metric as in the solution.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sub-Riemannian sphere.}
-Prove that there is a non-decreasing sequence of Riemannian metric tensors
-$g_0\le g_1\le ...$ such that the induced metrics converge to the given sub-Riemannian metrics.
-The metric $g_0$ can be assumed to be a metric on round sphere.
+By the definition, if $d$ is a sub-Riemannian metric on $\mathbb{S}^m$,
+then there is a non-decreasing sequence of Riemannian metric tensors
+$g_0< g_1<\dots$ such that their induced metrics $d_1<d_2<\dots$ converge to $d$.
+The metric $g_0$ can be assumed to be a metric on round sphere,
+so it is induced by an embedding $h_0\:\mathbb{S}^m\to \RR^{m+1}$.
 
 Applying the construction as in Nash--Kuiper theorem,
 one can produce a sequence of smooth embeddings $h_n\:\mathbb{S}^m\to \RR^{m+1}$ with the induced metrics $g_n'$
 such that $|g_n'-g_n|\to 0$.
-Moreover, assume we assign a positive real number $\eps(h)$ for any smooth embedding $h\:\mathbb{S}^m\to\RR^{m+1}$.
-Then we can assume that 
-\[|h_{n+1}(x)-h_n(x)|<\eps(h_n)\] for any $x\in \mathbb{S}^m$ and $n$.
+In particular, if we denote by $d'_n$ the metric corresponding to $g_n$, then $d'_n\to d$ an $n\to\infty$.
 
-For a right choice of function $\eps(h_n)$,
-the sequence $h_n$ converges, say to $h_\infty$, 
-and the metric induced by $h_\infty$ coincides with the given sub-Riemannian metric.\qeds
+Moreover, from the same construction it follows that
+if one choose $\eps_n>0$, depending on $h_n$,
+then we can assume that 
+\[|h_{n+1}(x)-h_n(x)|<\eps_n\] for any $x\in \mathbb{S}^m$.
+
+Let us introduce two conditions on the values $\eps_n$, called \emph{weak} and \emph{strong}.
+The weak condition states that $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ for any $n$.
+This ensures that the sequence of maps $h_n$ converges pointwise;
+denote its limit by $h_\infty$.
+
+Denote by $\bar d$ the length-metric induced by $h_\infty$.
+Note that $\bar d\le d$.
+The strong condition on $\eps_n$ will ensure that actually $\bar d=d$.
+
+Fix $n$ and assume that $h_n$ and therefore $\eps_{n-1}$ are constructed already.
+Set $\Sigma=h_n(\mathbb{S}^m)$
+and let $\Sigma_r$ be the tubular $r$-neighborhood of $\Sigma$.
+Equip $\Sigma$ and $\Sigma_r$ with the induced length-metrics.
+Since $\Sigma$ is a smooth hypersurface, we can choose $r_n\in(0,\eps_{n-1}]$ 
+so that the inclusion $\Sigma\hookrightarrow \Sigma_{r_n}$ preserves the distance up to the error $\tfrac1{2^n}$.
+Then the strong condition is $\eps_n< \tfrac12\cdot r_n$, 
+which is evidently stronger than the weak condition  $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ above.
+
+Note that if the sequence $h_n$ is constructed with the described choice of $\eps_n$,
+then $|h_\infty(x)-h_n(x)|<r_n$ for any $x\in\mathbb{S}^m$.
+Therefore $\bar d(x,y)+\tfrac1{2^n}\ge d_n(x,y)$ for any $n$ and $x,y\in \mathbb{S}^m$;
+hence $d'\ge d$ as required. 
+\qeds
 
 
 The problem appeared 
@@ -723,15 +765,11 @@ Show that there is a Riemannian manifold $M'$ arbitrary close to $M$ in Lipschit
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Length-preserving map.}
-Recall that according to Rademacher's theorem \cite{rademacher},
-any Lipschitz function $f\:\RR^n\to\RR$ 
-is differentiable almost everywhere.
-
-
-Assume there is a length-preserving map $f\:\RR^2\to \RR$.
+Assume contrary;
+let $f\:\RR^2\to \RR$ be a length-preserving map.
 
 Note that $f$ is Lipschitz.
-Therefore by Rademacher's theorem, $f$ is differentiable almost everywhere.
+Therefore by Rademacher's theorem \cite[see][]{rademacher}, $f$ is differentiable almost everywhere.
 
 Fix a unit vector $u$.
 Given $x\in\RR^2$,
@@ -743,8 +781,8 @@ It follows that
 \[\length(f\circ\alpha_x)=\int\limits_0^1 |(d_{\alpha_x(t)}f)(u)| \cdot dt\]
 for almost all $x$.
 
-It follows that $|d_xf(v)|=|v|$ for almost all $x,v\in\RR^2$;
-in particular $d_xf$ is defined and has rank 2 at some point $x$, a contradiction. \qeds 
+Therefore $|d_xf(v)|=|v|$ for almost all $x,v\in\RR^2$.
+In particular there is $x\in\RR^2$ such that the differential $d_xf$ is defined and has rank 2, a contradiction. \qeds 
 
 
 The idea above can be also used to solve the following problem.
@@ -794,10 +832,9 @@ On the other hand, since $f_n$ is isometry and $f(a)=a$,
 we get $|f_n(0)|\le 2\cdot |a|$, a contradiction.
 \qeds
 
-The idea in the proof is due to  Jussi V\"ais\"al\"a's in \cite[see][]{vaisala}.
-The problem is a stripped version of Mazur--Ulam theorem proved in  \cite{mazur-ulam};
-it states that any isometry of $(\RR^m,\rho)$ to itself 
-is an affine map. 
+The idea in the proof is due to  Jussi V\"ais\"al\"a's \cite[see][]{vaisala}.
+The problem is the main step in the proof of Mazur--Ulam  \cite[see][]{mazur-ulam},
+which states that any isometry of $(\RR^m,\rho)$ to itself is an affine map. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -889,16 +926,16 @@ where
     \end{matrix}\right).\]
 
 Consider the map $\RR^3\to \RR^4$ defined as
-$$f\:(x,y,z)\mapsto (x,y,x,z),$$
-it has left inverse 
+$$f\:(x,y,z)\mapsto (x,y,x,z);$$
+it has a left inverse 
 $$h\:(x,y,x',z)\mapsto (\tfrac{x+x'}{2},y,z).$$
 Fix a tangent vector $v$ of $\HH^3$.
 Set $w=df(v)$ and so $v=dh(w)$.
 Direct calculations show that $|v|\le |w|\le 2\cdot |v|$.
 Hence the statement follows.\qeds
+???
 
-
-In the proof we used that horosphere in the hyperbolic space is isometric to the Euclidean plane.
+In the proof we used that horo-sphere in the hyperbolic space is isometric to the Euclidean plane.
 This observation appears already in the book of Nikolai Lobachevsky \cite[see 34 in][]{lobachevsky}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -935,13 +972,13 @@ such that
 \[|f(x)-h(x)|<\eps\cdot R\]
 for any $x\in B(p,R)$.
 
-Now cover $\RR^m$ by balls
+Cover $\RR^m$ by balls
 $B(p_n,R)$, construct a $[\tfrac1M,M]$-bi-Lipschitz map $h_n\:B(p_n,R)\to \RR^m$ for each $n$.
 
 The maps $h_n$ are $2\cdot \eps\cdot R$ close to each other on the overlaps of their domains of definition.
 This makes possible to deform slightly each $h_n$ so that they agree on the overlaps.
 This can be done by Siebenmann's Theorem \cite{siebenmann}.
-If instead you apply Sullivan's theorem \cite{sullivan}, you get a bi-Lipschitz homeomorphism $h\:\RR^m\to\RR^m$.\qeds
+If instead you apply Sullivan's theorem \cite{sullivan}, you get a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.\qeds
 
 
 The problem was suggested by Dmitri Burago.
@@ -951,59 +988,53 @@ The problem was suggested by Dmitri Burago.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{A family of sets with no section.}
-Identify $\mathbb{S}^1$ with $[0,1]/(0\sim 1)$.
-Given $t\in[0,\tfrac12]$,
-Consider the set $K_t\subset \mathbb{S}^1$
-formed by all possible sums $\sum_{n=1}^\infty a_n\cdot t^n$,
-where $a_n$ is $0$ or $1$.
+\parbf{A family of sets with no section.} 
+Given $t\in (0,1]$ consider the real interval $\tilde C_t=[\tfrac 1t+t, \tfrac 1t+1]$.
+Denote by $C_t$ the image of $\tilde C_t$ under the covering map $\pi\:\RR\to \mathbb{S}^1=\RR/\ZZ$.
 
-Note that $K_{t}$ is a Cantor set and $K_{\frac12}=\mathbb{S}^1$.
+Set $C_0=\mathbb{S}^1$.
+Note that Hausdorff distance from $C_0$ to $C_t$ is $\tfrac t2$.
+Therefore $\{C_t\}_{t\in[0,1]}$ is a family of compact subsets in $\mathbb{S}^1$
+which is continuous in the sense of Hausdorff.
 
-Denote by $\rho_t\:\mathbb{S}^1\to\mathbb{S}^1$ 
-the counterclockwise rotation by angle $\frac1{1-2\cdot t}$.
-Set 
-\[Z_t=\left[\begin{aligned}
-             Z_t&=\rho_t(K_t)&&\text{if}\ t\in[0,\tfrac12),
-\\
-Z_{t}&=\mathbb{S}^1&&\text{if}\ t=\tfrac12.
-            \end{aligned}
-\right.
-\]
+Assume there is a continuous section $c(t)\in C_t$, for $t\in [0,1]$.
+Since $\pi$ is a covering map,
+we can lift the path $c$ to a path $\tilde c\:[0,1]\to \RR$ such that $\tilde c(t)\in \tilde C_t$ for any $t$.
+In particular $\tilde c(t)\to\infty$ as $t\to0$,
+a contradiction.\qeds
 
-Note that the Hausdorff distance from $K_t$ to $K_{\frac12}=\SS^1$ converges to $0$ as $t\to\tfrac12$.
-Therefore $Z_t$ is a continuous family.
-
-Any continuous section $z(t)\in Z_t$ for $t\in[0,\tfrac12)$ can be described as
-\[z(t)=\rho_t\left(\sum_{n=1}^\infty a_n\cdot t^n\right)\]
-for a fixed sequence $(a_n)$.
-None of these can be extended continuousely to $[0,\tfrac12]$.\qeds
 
 The problem is suggested by Stephan Stadler.
 It is instructive to check that any Hausdorff continuous family of closed sets in $\RR$ admits a continuous section.
 
-\begin{wrapfigure}{r}{33 mm}
-\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/comb(1)}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{Spaces with isometric balls.} 
-The needed examples can be constructing from the upper half-plane
+The needed examples can be constructed from the upper half-plane
 by cutting it along a ``dyadic comb'' shown on the diagram
 and equipping the obtained space with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
 Few concentric balls in this metric are shown on the diagram.
 
+\begin{wrapfigure}{o}{33 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/comb(1)}
+\end{lpic}
+\end{wrapfigure}
+
+\medskip
+
 First let us describe the the comb precisely.
-Fix an infinite sequence $a_0,a_1,\dots$ of $0$ and $1$.
+Fix an infinite sequence $a_0,a_1,\dots$ of zeros and ones.
 Given an integer $k$ cut a the upper half-plane along the line segment from $(k,0)$ to $(k,2^{m+1})$ 
-if $m$ is the maiximal number such that 
+if $m$ is the maximal number such that 
 \[k\equiv a_0+2\cdot a_1+\dots+2^{m-1}\cdot a_{m-1}\pmod{2^{m}};\]
 If the equality holds for all $m$, cut the plane along the vertical half-plane from $(k,0)$.
 
-Note that the resulting spaces meet the conditions for the point $(\tfrac12,0)$.
+Note that all the obtained spaces, independently from the sequence $(a_n)$, meet the conditions for the point $x_0=(\tfrac12,0)$.
 
 Note yet that the resulting spaces for two sequences $(a_n)$ and $(a'_n)$ are isometric only in the following two cases 
-(1) if $a_n=a_n'$ for all large $n$ 
-and (2) if $a_n=1-a_n'$  for all large $n$.
+\begin{itemize}
+\item if $a_n=a_n'$ for all large $n$, or
+\item if $a_n=1-a_n'$  for all large $n$.
+\end{itemize}
 
-It is easy to find two sequences which do not have these identities for all large $n$.\qeds
+It remains to produce two sequences which do not have these identities for all large $n$; 
+two random sequences do the job with probability 1.\qeds

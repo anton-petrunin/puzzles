@@ -54,7 +54,7 @@ the involution $\iota$ above cannot be made isometric.
 \label{Besikovitch inequality}
 Let $g$ be a Riemannian metric on an $m$-dimensional cube $Q$ such that any curve connecting opposite faces has length at least $1$. 
 Prove that $\vol(Q,g)\ge 1$, 
-and equality holds if and only if $(Q,g)$ is isometric to the unit cube.
+and the equality holds if and only if $(Q,g)$ is isometric to the unit cube.
 \end{pr}
 
 
@@ -68,7 +68,7 @@ The minimal surface in Riemannian manifolds are defined on page \pageref{minimal
 Consider $\mathbb{S}^2\times \mathbb{S}^2$ equipped with a Riemannian metric $g$ 
 which is $C^\infty$-close to the product metric. 
 Prove that there is a conformally equivalent metric $\lambda\cdot g$ and re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
-such that each sphere $x\times\mathbb{S}^2$ and $\mathbb{S}^2\times y$ forms a minimal surface 
+such that for any $x\in \mathbb{S}^2$, the spheres $x\times\mathbb{S}^2$ and $\mathbb{S}^2\times x$ are minimal surfaces 
 in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \end{pr}
 
@@ -89,7 +89,7 @@ Prove that $M$ has an infinite volume.
 \end{pr}
 
 The expected solution use Liouville's theorem on phase volume.
-It implies in particular, that geodesic flow on the tangent bundle to a Riemannian manifold preserves the volume form.
+It implies in particular, that geodesic flow on the unit tangent bundle to a Riemannian manifold preserves the volume.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -136,7 +136,7 @@ for any closed surface $S$ which does not bound in $\TT^3$.
 
 According to Gromov's systolic inequality \cite[see][]{gromov-filling}, the volume of $(\TT^3,g)$ can be bounded below in terms of its \emph{1-systole} defined to be the least length of a noncontractible loop in $(\TT^3,g)$.
 The lower bound on area of $S$ as in the problem is called 2-systole of $(\TT^3,g)$.
-Therefore the problem states that the systolic inequality does not have a direct 2-dimensional analog.
+Therefore the problem states that the Gromov's systolic inequality does not have a direct 2-dimensional analog.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Normal exponential map\easy}
@@ -202,7 +202,7 @@ Show that $f$ is a diffeomorphism.
 
 \begin{pr}{}{Volume of tubular neighborhoods}\label{Volume of tubular neighborhoods}
 Assume $M$ and $M'$ be isometric closed smooth submanifolds in a Euclidean space.
-Show that for all small $r$ we have
+Show that for all small $r>0$ we have
 $$\vol B(M,r)=\vol B(M',r),$$
 where $B(M,r)$ denotes the $r$-neighborhood of $M$.
 \end{pr}
@@ -219,8 +219,7 @@ with
 \text{and}
 \ \ 
 \length \partial\mathbb D\le 1  \]
-such that any null-homotopy of the $\partial\mathbb D$ in $(\mathbb D,g)$ 
-has a curve of length at least $L$.
+such that the boundary curve in $\mathbb D$ is not contractible in the class of closed curves with $g$-length less than $L$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,9 +256,10 @@ Let $M$ be a totally geodesic hypersurface
 in a closed Riemannian $m$-dimensional manifold $W$.
 Assume that the injectivity radius of $M$ is at least $1$
 and it forms a convex set in $W$.
-Show that there is a point in $W$  which lies on a distance at least  
-$\frac{1}{2\cdot(m+1)}$ from $M$.
+Show that the maximal distance from $M$ to the points of $W$ can be bounded below by a positive constant $\eps_m$ which depends only on $m$ (in fact, $\eps_m=\tfrac2{m+3}$ will do).
 \end{pr}
+
+Note that we did not make any assumption on the injectivity radius of $W$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Almost constant function}
@@ -291,9 +291,9 @@ happens with probability at most $\eps$.
 \parbf{Besikovitch inequality.}
 Without loss of generality, we may assume  $Q=[0,1]^m$.
 Set 
-\[A_i=\set{(x_1,x_2,\dots,x_m)\in[0,1]^m}{x_i=0}.\]
+\[A_i=\set{(x_1,x_2,\dots,x_m)\in Q}{x_i=0}.\]
 
-Consider functions $f_i\:[0,1]^m\to\RR$ defined as
+Consider functions $f_i\:Q\to\RR$ defined as
 $$f_i(x)=\max\{1,\dist_{A_i}(x)\}$$
 Note that each $f_i$ is $1$-Lipschitz, 
 in particular $|\nabla f|\le 1$ almost everywhere.
@@ -302,29 +302,31 @@ Consider the map
 \[\bm{f}\:x\mapsto(f_1(x),f_2(x),\dots,f_m(x)).\]
 Notes that it maps $Q$ to it self
 and, moreover, it maps each face of $Q$ to it self.
-It follows that the restriction $\bm{f}|_{\partial Q}\:\partial Q\to \partial Q$ has degree 1 and therefore 
+It follows that the restriction $\bm{f}|_{\partial Q}\:\partial Q\to \partial Q$ has degree one and therefore 
 $\bm{f}\:Q\to Q$ is onto.
 
 Assume $h$ is the canonical metric on the cube $Q$.
 Then 
 \[|\mathrm{J}(x)|=|\nabla_x f_1\wedge\dots\wedge\nabla_xf_m|\le 1,\]
-where $\mathrm{J}(x)$ denotes the Jcaobian of the map $f\:(Q,g)\to (Q,h)$.
+where $\mathrm{J}(x)$ denotes the Jacobian of the map $f\:(Q,g)\to (Q,h)$.
 
 By the area formula, we get 
 \begin{align*}
 \vol(Q,g)
-&\ge \int\limits_Q\frac1{|\mathrm{J}(x)|}\cdot d_x\vol_g\ge
+&\ge \int\limits_Q|\mathrm{J}(x)|\cdot d_x\vol_g\ge
 \\
 &\ge\vol(Q,h)=\\
 &=1
 \end{align*}
 
-In the case of equality we have that $\<\nabla_x f_i,\nabla_x f_j\>=0$ for $i\ne j$ are 
-and $|\nabla_x f_i|=1$ almost everywhere.
-It follows then that the map $f\:(Q,g)\to (Q,h)$ is an isometry.
+In the case of equality we have that $\<\nabla_x f_i,\nabla_x f_j\>=0$ for $i\ne j$ 
+and $|\nabla_x f_i|=1$ for almost all $x$.
+It follows then that the map 
+\[\bm{f}\:(Q,g)\z\to (Q,h)\] 
+is an isometry.
 \qeds
 
-The inequality was proved by Abram Besikovitch in \cite{besicovitch}.
+This inequality was proved by Abram Besikovitch in \cite{besicovitch}.
 It has number applications in Riemannian geometry.
 For example using this inequality it is easy to solve the following problem.
 \begin{itemize}
@@ -337,16 +339,16 @@ Show that $g$ is flat.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Minimal foliation.}
 The proof is based on the observation that a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$
-defines a symplectic structure compatible with $g$.
+without zeros defines a symplectic structure.
 
 \medskip
 
 Note that there is a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$;
 that is, a 2-form $\omega$ such that $d\omega=0$ and $\star\omega=\omega$,
 where $\star$ denotes the Hodge star operator.
-Indeed, fix a generic harmonic form $\phi$;
-the form $\star\phi$ is also harmonic.
-Since $\star\star\phi=\phi$,
+Indeed, fix a generic harmonic form $\phi$.
+Note that the form $\star\phi$ is also harmonic.
+Since $\star(\star\phi)=\phi$,
 the form $\omega=\phi+\star\phi$ does the trick.
 
 Fix $p\in \mathbb{S}^2\times\mathbb{S}^2$.
@@ -370,8 +372,8 @@ Note that
 for any two tangent vectors $X,Y\in \T_p$.
 
 Consider the canonical symplectic form $\omega_0$ on $\mathbb{S}^2\times\mathbb{S}^2$;
-that is, the sum of pullbacks of the volume forms on $\mathbb{S}^2$  
-for the two projections $\mathbb{S}^2\times\mathbb{S}^2\to \mathbb{S}^2$.
+that is, the sum of pullbacks of the volume form on $\mathbb{S}^2$  
+for the two coordinate projections $\mathbb{S}^2\times\mathbb{S}^2\to \mathbb{S}^2$.
 Note that for the canonical metric on $\mathbb{S}^2\times\mathbb{S}^2$,
 the form $\omega_0$ is harmonic and self-dual. 
 Since $g$ is close to the standard metric,
@@ -379,14 +381,13 @@ we can assume that $\omega$ is close to $\omega_0$.
 In particular $\lambda_p\ne0$ for any $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 
 It follows that $\mathrm{J}$ is a pseudo-complex structure for the symplectic form $\omega$ on $\mathbb{S}^2\times\mathbb{S}^2$.
-Further the Riemannian metric $g'=\lambda\cdot g$ is a  conformal to $g$ and $\omega(X,Y)=g'(X,\mathrm{J} Y)$ 
+The Riemannian metric $g'=\lambda\cdot g$ is a  conformal to $g$ and $\omega(X,Y)=g'(X,\mathrm{J} Y)$ 
 for any two tangent vectors $X,Y$ at one point.
-Recall that in this case the $\mathrm{J}$-holomorphic curves are minimal with respect to $g'$;
+In this case the $\mathrm{J}$-holomorphic curves are minimal with respect to $g'$;
 in fact, they are area minimizing in its homology class. 
 
-Take a re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
+It remains to re-parametrize $\mathbb{S}^2\times \mathbb{S}^2$
 so that vertical and horizontal spheres will form pseudo-holomorphic curves in the homology classes of $x\times \mathbb{S}^2$ and $\mathbb{S}^2\times y$.
-Hence the statement follows.
 \qeds
  
  
@@ -418,10 +419,11 @@ By Liouville's theorem on phase volume, we have
 \[\vol[\phi^t(\Omega)]=\vol\Omega\leqno{({*})}\] 
 for any $t$.
 
-Given $u\in \Omega$,
+Given $u\in \UU M$,
 consider the function 
 $h_u(t)=F\circ\phi^t(u)$.
-Since $f$ is convex, we have $h'_u(t)>\eps$ for any $t\ge 0$.
+Since $f$ is convex, so is $h_u$.
+Therefore $h'_u(t)>\eps$ for any $t\ge 0$ and $u\in\Omega$.
 
 It follows that there is an infinite sequence of times 
 \[0=t_0<t_1\z<t_2<\dots\]
@@ -430,7 +432,7 @@ such that
 for any $u,v\in \Omega$ and $i$.
 In particular, we have
 $$\phi^{t_i}(\Omega)\cap\phi^{t_j}(\Omega)=\emptyset$$ 
-if $i\ne j$.
+for $i\ne j$.
 By $({*})$, the latter implies that $\vol (\UU M)=\infty$.
 Hence \[\vol M=\infty.\]
 \qedsf
@@ -463,11 +465,11 @@ $\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
 such that 
 \[\length \gamma\le \ell+d\] 
 and
-$w$ is the parallel transformation of $v$ along $\gamma$.
+$w$ is the parallel transport of $v$ along $\gamma$.
 
-In particular, the diameter of the set of all vectors of fixed length in $(\T \mathbb{S}^2,\hat g)$ has diameter at most $\ell+d$.
+In particular, the diameter of the set of all vectors of fixed magnitude in $(\T \mathbb{S}^2,\hat g)$ has diameter at most $\ell+d$.
 Therefore the map $\T\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
-preserves the distance with the maximal error $\ell+d$.
+preserves the distance up to error $\ell+d$.
 Hence the result follows.
 
 
@@ -490,7 +492,7 @@ In each tunnel, shrink the metric long-wise and expand it  cross-wise while keep
 
 More precisely, assume $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\times [0,1]$ 
 then the new metric is 
-\[g=\phi\cdot [(dx)^2+ (dy)^2]+\frac1{\phi^2}\cdot (dz)^2,\]
+\[g=\phi\cdot [(dx)^2+ (dy)^2]+\tfrac1{\phi^2}\cdot (dz)^2,\]
 where $\phi=\phi(x,y)$ is a positive smooth function on $\DD$ which takes huge values around the center and equals to 1 near the boundary of $\DD$.
 
 
@@ -501,7 +503,7 @@ one of the three coordinates projections $\TT^3\to\TT^2=\mathbb{S}^1\times\mathb
 induce a map of non-zero degree $S\to\TT^2$.
 It follows that 
 \[\area S\ge  \area(\DD,\phi\cdot [(dx)^2+ (dy)^2]).\]
-Clearly for the right choice of function $\phi$, the right hand side can be taken bigger than the given number $L$.
+For the right choice of function $\phi$, the right hand side can be made bigger than the given number $L$.
 Hence the statement follows.
 \qeds
 
@@ -522,15 +524,15 @@ Given $q\in L$, denote by $v_q$ the direction of a minimizing geodesic $[qp]$.
 Note that $v_q\notin \mathrm{N}_qL$.
 Moreover there is $\delta=\delta(\eps,K,R)>0$ 
 such that for any point $q\in B(p,R)_M\cap L$,
-and any normal vector $u\in \mathrm{N}_qL$,
+and any normal vector $n\in \mathrm{N}_qL$,
 we have 
-\[\measuredangle (v_q,u)>\delta.\]
-Otherwise the geodesic in the direction of $u$ would cross $B(p,\eps)_M$.
+\[\measuredangle (v_q,n)>\delta.\]
+Otherwise the geodesic in the direction of $n$ would cross $B(p,\eps)_M$.
 
 It follows that starting at any point $q\in B(p,R)_M\cap L$ 
-one can construct a unit-speed curve in $L$
-which moves to $p$ with velocity at least $\sin\delta$.
-Following this curve for sufficient time brings us to $p$;
+one can construct a unit-speed curve $\gamma$ in $L$ such that 
+\[|p-\gamma(t)|\le |p-q|-t\cdot\sin \delta.\]
+Following $\gamma$ for sufficient time brings us to $p$;
 that is, $p\in L$, a contradiction.
 \qeds
 
@@ -542,7 +544,7 @@ that is, $p\in L$, a contradiction.
 The problem was suggested by Alexander Lytchak.
 
 From the picture, you should guess an example of immersion 
-such that one point does not lie in the image of the corresponding normal exponential.
+such that one point does not lie in the image of the corresponding normal exponential map.
 It might be interesting to understand what type of subsets can be avoided by such images.
 
 
@@ -559,12 +561,12 @@ Without loss of generality,
 we can assume that $\Omega$ is a ball centered at the origin.
 Choose an oriented 2-dimensional subspace $V$ subspace of $\RR^4$ 
 such that the integral of $\omega$ over 
-$\Omega\cap V$ is a small positive number, say $\tfrac\pi4$. 
+$\Omega\cap V$ is a  positive number smaller than $\tfrac\pi4$. 
 
 Note that there is a linear symplectomorphism $\lambda$
  which maps planes parallel to $V$ to planes
 parallel to the $(x_1,y_1)$-plane, 
-and that maps the disk $V\cap\Omega$ to a disk.
+and that maps the disk $V\cap\Omega$ to a round disk.
 It follows that the intersection of $\lambda(\Omega)$ 
 with any plane parallel to the $(x_1,y_1)$-plane is a disk of radius at most $\tfrac 12$.
 In particular $\phi\circ\lambda|_\Omega$
@@ -583,15 +585,14 @@ cannot be made arbitrary small.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Diffeomorphism test.}
-Since $N$ is simply connected, 
-it is sufficient to show that $f\:M\to N$ is a covering map.
+Note that the map $f$ is an open immersion.
 
-Note that $f$ is an open immersion.
 Let $h$ be the pullback metric on $M$ for $f\:M\to N$.
 Clearly $h\ge g$.
 In particular $(M,h)$ is complete and the map $f\:(M,h)\to N$ is a local isometry. 
 
 Note that any local isometry between complete connected Riemannian manifolds of the same dimension if a covering map.
+Since $N$ is simply connected, the result follows.
 \qeds 
 
 %???
@@ -692,9 +693,7 @@ where $\bar\sigma$ denotes the backward parametrization of $\sigma$.
 \end{lpic}
 \end{wrapfigure}
 
-Consider the loop $\lambda_0$ at $p$
-formed by the concatenation of $\gamma|_{[0,t_0]}$ and $\sigma$.
-Applying a curve shortening process to $\lambda_0$, 
+Applying a curve shortening process to the loop $\lambda_0=\gamma|_{[0,t_0]}*\sigma$, 
 we get a  homotopy $\lambda_t$
 rel. its ends 
 from the loop $\lambda_0$ to a geodesic loop $\lambda_1$ at $p$.
@@ -752,7 +751,7 @@ $f_0(\Delta_0)\subset B(x_i,s)$ for each $i$ and $s<\tfrac2{2+k}$.
 
 \medskip
 
-Now we coming back to the solution of the problem.
+Now we are coming back to the solution of the problem.
 
 Fix a fine triangulation of $W$ so that $M$ becomes a sub-complex of $W$.
 We can assume that the diameter of each simplex in $\tau$ is less than any given
@@ -822,7 +821,6 @@ takes random value in $\UU M$.
 By Liouville's theorem on phase volume, the same holds for $\gamma'(t)$
 for any fixed $t$.
 Therefore
-the expected value of
 \begin{align*}
 \mathrm{E}(|f\circ \gamma(1)-f\circ\gamma(0)|)\le \mathrm{E}\left(\int\limits_0^1|df(\gamma'(t))|\cdot dt\right)\le\delta_m.
 \end{align*}

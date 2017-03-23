@@ -2,6 +2,44 @@
 
 
 
+\parbf{A family of sets with no section.}
+Identify $\mathbb{S}^1$ with $[0,1]/(0\sim 1)$.
+Given $t\in[0,\tfrac12]$,
+Consider the set $K_t\subset \mathbb{S}^1$
+formed by all possible sums $\sum_{n=1}^\infty a_n\cdot t^n$,
+where $a_n$ is $0$ or $1$.
+
+Note that $K_{t}$ is a Cantor set and $K_{\frac12}=\mathbb{S}^1$.
+
+Denote by $\rho_t\:\mathbb{S}^1\to\mathbb{S}^1$ 
+the counterclockwise rotation by angle $\frac1{1-2\cdot t}$.
+Set 
+\[Z_t=\left[\begin{aligned}
+             Z_t&=\rho_t(K_t)&&\text{if}\ t\in[0,\tfrac12),
+\\
+Z_{t}&=\mathbb{S}^1&&\text{if}\ t=\tfrac12.
+            \end{aligned}
+\right.
+\]
+
+Note that the Hausdorff distance from $K_t$ to $K_{\frac12}=\SS^1$ converges to $0$ as $t\to\tfrac12$.
+Therefore $Z_t$ is a continuous family.
+
+Any continuous section $z(t)\in Z_t$ for $t\in[0,\tfrac12)$ can be described as
+\[z(t)=\rho_t\left(\sum_{n=1}^\infty a_n\cdot t^n\right)\]
+for a fixed sequence $(a_n)$.
+None of these can be extended continuousely to $[0,\tfrac12]$.\qeds
+
+
+
+
+
+
+
+
+
+
+
 
 Let us denote by $\mathrm{N} M$ and $\T M$ the normal and tangent bundle of $M$ in the Euclidean space $\RR^n$.
 Assume $m=\dim M$.
@@ -1211,8 +1249,8 @@ and $\Gamma$ is a descrete subgroup of isometries of $\HH^2$ which acts freely.
 Prove that $\Gamma$ contains only hyperbolic elements; that is, any transformation $\gamma\in\Gamma$ fix two distinct points on the absolute.
 
 Assume $\Sigma$ contains a closed curve with curvature $1$.
-Note that this curve lifts to a horocycle in $\HH^2$.
-Therefore $\Gamma$ has to contain an element which preserves this horocycle.
+Note that this curve lifts to a horo-cycle in $\HH^2$.
+Therefore $\Gamma$ has to contain an element which preserves this horo-cycle.
 Such an element has to be parabolic;
 that is, it fixes a single point on the absolute of $\HH^2$,
  a contradiction.
