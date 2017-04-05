@@ -9,8 +9,8 @@ By {}\emph{triangulation} of polyhedral space we always understand triangulation
 A point in a polyhedral space is called \index{regular point}\emph{regular} if it has a neighborhood isometric to an open set in a Euclidean space;
 otherwise it called {}\emph{singular}.
 
-If above we exchange the Euclidean spaces to the unit spheres or the hyperbolic spaces,
-we arrive to the definition of {}\emph{spherical} and correspondingly {}\emph{hyperbolic polyhedral spaces}.
+If we would exchange the Euclidean spaces to the unit spheres or the hyperbolic spaces,
+we arrive to the definition of {}\emph{spherical} and {}\emph{hyperbolic polyhedral spaces} correspondingly.
 
 The term \index{piecewise}\emph{piecewise} typically mean that there is a triangulation with some property on each triangle.
 For example,  if $P$ and $Q$ are polyhedral spaces, then
@@ -25,9 +25,9 @@ In particular, a {}\emph{piecewise linear homeomorphism} is a piecewise linear m
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Spherical arm lemma}
+\subsection*{Spherical arm lemma}\label{Spherical arm lemma}
 
-\begin{pr}{}{Spherical arm lemma}\label{Spherical arm lemma}
+\begin{pr}
 Let $A=a_1a_2\dots a_n$ and $B=b_1b_2\dots b_n$ be two simple spherical polygons 
 with equal corresponding sides.
 Assume $A$ lies in a hemisphere and $\measuredangle a_i\ge\measuredangle b_i$ for each $i$.
@@ -49,7 +49,7 @@ lie outside of an isometric copy of a hemisphere $\mathbb{S}^2_+\subset \Sigma$
 Denote by $n$ the number of singular points in $\Sigma$.
 It is sufficient to show that $n=0$.
 
-Assume the contrary; that is $n\ge 1$.
+Assume the contrary; that is, $n\ge 1$.
 We will arrive to a contradiction applying induction on $n$.
 The base case $n=1$ is trivial; 
 that is, $\Sigma$ cannot have single singular point.
@@ -57,11 +57,21 @@ that is, $\Sigma$ cannot have single singular point.
 Now assume $\Sigma$ has $n>1$ singular points.
 Choose two singular points $p, q$,
 cut $\Sigma$ along a geodesic $[pq]$.
-Show that the hole hole can be patched so that we obtain a new polyhedral space $\Sigma'$ of the same type but wit $n-1$ singular points.
-(The needed patch is obtained by doubling a
-spherical triangle along two sides.)
+The hole can be patched so that we obtain a new polyhedral space $\Sigma'$ of the same type but with $n-1$ singular points.
+Namely, if the total angles around $p$ and $q$ are $2\cdot \pi-\alpha$ and $2\cdot \pi-\beta$ correspondingly,
+consider the spherical triangle $\triangle$ with base $|p-q|_\Sigma$ and adjusted angles $\tfrac\alpha2$, $\tfrac\beta2$. 
+The needed patch is obtained by doubling $\triangle$ along its lateral sides.
 
-By induction hypothesis $\Sigma'$ does not exist. Hence the result follow.
+
+By induction hypothesis $\Sigma'$ does not exist. 
+Hence the result follows.
+\qeds
+
+\parit{Alternative end of proof.}
+By Alexandrov embedding theorem, $\Sigma$ is isometric to the surface of convex polyhedron $P$ in the unit 3-dimensional sphere $\mathbb S^3$. 
+The center of hemisphere has to lie in a facet, say $F$ of $P$.
+It remains to note that $F$ contains the equator and therefore $P$ has to be hemisphere in $\mathbb S^3$ or intersection of two hemispheres.
+In both cases its surface is isometric to $\mathbb S^2$.
 \qeds
 
 The problem is due to Victor Zalgaller \cite[see][]{zalgaller-shperical-polygon};
@@ -70,27 +80,23 @@ The patch construction above was introduced by
 Aleksandr Alexandrov
 in his proof of convex embeddability of polyhedrons
 \cite[see][VI, \S7]{alexandrov1948}.
+The alternative end of proof is taken from \cite{panov-petrunin}.
 
-Here is an alternative end of proof from \cite{panov-petrunin}:
-By Alexandrov embedding theorem, $\Sigma$ is isometric to the surface of convex polyhedron $P$ in the unit 3-dimensional sphere $\mathbb S^3$. 
-The center of hemisphere has to lie in a facet, say $F$ of $P$.
-It remains to note that $F$ contains the equator and therefore $P$ has to be hemisphere in $\mathbb S^3$ or intersection of two hemispheres.
-In both cases its surface is isometric to $\mathbb S^2$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Triangulation of 3-sphere}
+\subsection*{Triangulation of 3-sphere}\label{4-poly}
 
-\begin{pr}{}{Triangulation of 3-sphere}\label{4-poly}
+\begin{pr}
 Construct a triangulation of $\mathbb{S}^3$ 
-such with $100$ vertices
+with $100$ vertices
 such that any two vertices are connected by an edge.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Folding problem}
+\subsection*{Folding problem}\label{Folding problem}
 
-\begin{pr}{}{Folding problem} \label{Folding problem}
+\begin{pr}
 Let $P$ be a compact $2$-dimensional 
 polyhedral space. 
 Construct a 
@@ -99,9 +105,9 @@ $f\:P\to \RR^2$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Piecewise linear extension}
+\subsection*{Piecewise distance preserving extension}\label{iso-kirzhbraun}
 
-\begin{pr}{}{Piecewise linear extension} \label{iso-kirzhbraun}
+\begin{pr}
 Prove that any 1-Lipschitz map from a finite subset $F\subset \RR^2$
 to 
 $\RR^2$ can be extended to a 
@@ -110,21 +116,21 @@ $\RR^2\to\RR^2$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Closed polyhedral surface}
+\subsection*{Closed polyhedral surface}\label{Closed polyhedral surface}
 
-\begin{pr}{}{Closed polyhedral surface}\label{Closed polyhedral surface}
+\begin{pr}
 Construct a closed polyhedral surface in $\RR^3$ with nonpositive curvature;
 that is, the total angle around each vertex is at least $2\cdot\pi$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Minimal polyhedral disc}
+\subsection*{Minimal polyhedral disc}\label{Minimal polyhedral disc}
 
 By a polyhedral disc in $\RR^3$
 we understand a triangulation of a plane polygon with a map in $\RR^3$ which is affine on each triangle.
 The area of the polyhedral disc is defined as the sum of areas of the images of the triangles in the triangulation.
 
-\begin{pr}{}{Minimal polyhedral disc}\label{Minimal polyhedral disc}
+\begin{pr}
 Consider the  class of polyhedral discs glued from $n$ triangles in $\RR^3$ 
 with fixed broken line as the boundary.
 Let $\Sigma_n$ be a disc of minimal area in this class.
@@ -133,30 +139,30 @@ that is, a plane can not cut all the edges coming from one of the interior verti
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Coherent triangulation\easy}
+\subsection*{Coherent triangulation\easy}\label{Coherent triangulation} 
 
 A triangulation of a convex polygon is called coherent if there is a convex function which is linear on each triangle and changes the gradient on every edge of the triangulation.
 
-\begin{pr}{\easy}{Coherent triangulation}\label{Coherent triangulation} 
+\begin{pr}
 Find a non-coherent triangulation of a triangle.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{A sphere with one edge\hard}
+\subsection*{Sphere with one edge\hard}\label{panov-S^3} 
 
-\begin{pr}{\hard}{A sphere with one edge}\label{panov-S^3} 
-Given  a spherical polyhedral space $P$,
+Given  a polyhedral space $P$,
 denote by $P_s$ the subset of its 
 singular points.
 
-Construct spherical polyhedral space $P$ which is homeomorphic to $\mathbb{S}^3$ and such that $P_s$ is formed by a knotted circle.
-Show that in such an example the total length of $P_s$ can be arbitrary large and the angle around $P_s$ can be made strictly less than $2\cdot\pi$.
+\begin{pr}
+Construct spherical polyhedral space $P$ which is homeomorphic to $\mathbb{S}^3$ such that $P_s$ is formed by a knotted circle.
+%Show that in such an example the total length of $P_s$ can be arbitrary large and the angle around $P_s$ can be made strictly less than $2\cdot\pi$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Triangulation of a torus}
+\subsection*{Triangulation of a torus}\label{Triangulation of a torus}
 
-\begin{pr}{}{Triangulation of a torus}\label{Triangulation of a torus}
+\begin{pr}
 Show that the torus does not admit a triangulation 
 such that one vertex has 5 edges,
 one has 7 edges and 
@@ -166,9 +172,9 @@ all other vertices have
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{No simple geodesics\easy}
+\subsection*{No simple geodesics\easy}\label{No simple geodesics}
 
-\begin{pr}{\easy}{No simple geodesics}\label{No simple geodesics}
+\begin{pr}
 Construct a convex polyhedron $P$ whose surface 
 does not have a closed simple geodesic.
 \end{pr}
@@ -179,18 +185,28 @@ does not have a closed simple geodesic.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Triangulation of 3-sphere.}
-Choose 100 distinct points $x_1,x_2,\z\dots,x_{100}$
+Choose 100 distinct points $p_1,p_2,\z\dots,p_{100}$
 on the {}\emph{moment curve} 
 \[\gamma\:t\mapsto (t,t^2,t^3,t^4)\] 
 in $\RR^4$.
-Let $P$ be the convex hull of $\{x_1,x_2,\z\dots,x_{100}\}$.
+Let $P$ be the convex hull of $\{p_1,p_2,\z\dots,p_{100}\}$.
 
-Prove that for any two points $x_i$ and $x_j$ there is a hyperplane $H$ in $\RR^4$ which pass through $x_i$ and $x_i$ and leaves $\gamma$ on one side.
-The latter statement implies that any two vertices $x_i$ and $x_j$
-of $P$ are connected by an edge.
+The surface of $P$ is homeomorphic to $\mathbb{S}^2$.
+Therefore it is sufficient to show that any two vertexes of $P$ are connected by an edge.
+The letter follows from the following claim.
 
-The statement follows
-since the surface of $P$ is homeomorphic to $\mathbb{S}^2$.
+\begin{cl}{$({*})$}
+For any two points $p$ and $q$ on $\gamma$ there is a hyperplane $H$ in $\RR^4$ which intersects $\gamma$ only at $p$ and $q$ and leaves $\gamma$ on one side.
+\end{cl}
+
+To prove the claim, assume that $p=\gamma(t_1)$ and $q=\gamma(t_2)$. 
+Consider the polynomial
+\[f(t)=a+b\cdot t+c\cdot t^2+d\cdot t^3+t^4=(t-t_1)^2\cdot(t-t_2)^2.\]
+Clearly $f(t)\ge 0$ and the equality holds only at $t_1$ and $t_2$.
+It follows that the affine function $\ell\:\RR^4\to\RR$ defined as 
+\[\ell\:(w,x,y,z)\mapsto a+b\cdot w+c\cdot x+d\cdot y+z\]
+is nonnegative at the points of $\gamma$ and vanish only at $p$ and $q$.
+Therefore the zero set of $\ell$ is the required hyperplane $H$ in $({*})$. 
 \qeds
 
 The polyhedron $P$ above is an example 
@@ -198,13 +214,14 @@ of so called \index{cyclic polytope}\emph{cyclic polytopes}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Folding problem.}
-Given a triangulation of $P$
-consider the Voronoi domain $V_v$ for each vertex $v$.
-Prove that the triangulation can be subdivided if necessary
+Given a triangulation of $P$,
+consider the Voronoi domain $V_v$ for each vertex $v$;
+that is, $V_v$ is the set of all points in $P$ closer to $v$ than to any other vertex.
+Note that the triangulation can be subdivided if necessary
 so that Voronoi domain of each vertex is isometric to a convex subset in the cone with vertex corresponding to the tip.
 
 Note that the boundaries of all the Voronoi domains form a graph with straight edges.
-One can triangulate $P$ so that each triangle has such edge as the base 
+Let us triangulate $P$ so that each triangle has such edge as the base 
 and the opposite vertex is the center of an adjusted Voronoi domain; 
 such a vertex will be called {}\emph{main} vertex of the triangle.
 
@@ -233,7 +250,7 @@ $x\in  \triangle$, set
 \intertext{and}
 \theta(x)&=\min \{\measuredangle \hinge vax,\measuredangle\hinge vbx\}.
 \end{align*}
-Map $x$ to the plane the point with polar coordinates $(\rho(x),\theta(x))$.
+Let us map $x$ to the point with polar coordinates $(\rho(x),\theta(x))$ in the plane.
 
 Note that for each triangle $\triangle$, 
 the constructed map $\triangle\to\RR^2$ is piecewise distance preserving.
@@ -241,14 +258,13 @@ It remains to check that these maps agree on the common sides of the triangles.
 \qeds
 
 
-This construction was given by Victor Zalgaller in \cite{zalgaller-polyhedra}, 
-see also \cite{petrunin-yashinsky}.
+This construction was given by Victor Zalgaller \cite[see][]{zalgaller-polyhedra}.
 Svetlana Krat generalized the statement to the higher dimensions \cite[see][]{krat}.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Piecewise linear extension.}
+\parbf{Piecewise distance preserving extension.}
 Let $a_1,a_2,\dots,a_n$
 and $b_1$, $b_2,\z\dots,b_n$
 be two collections of points in $\RR^2$
@@ -261,16 +277,46 @@ let us do the case $n=m$.
 By assumption, 
 there is a piecewise liner length-preserving map $f\:\RR^2\to\RR^2$
 such that $f(a_i)=b_i$ for each $i>1$.
+
 Consider the set 
 \[\Omega=\set{x\in\RR^2}{|f(x)-b_1|>|x-a_1|}.\]
+Since $|a_i-a_1|\ge|b_i-b_1|$, we get $a_i\notin \Omega$ for $i>0$.
+
+Note that we can assume that the map $f$ and therefore the set $\Omega$ are bounded.
+Indeed, let $\square$ be a square containing all the points $b_i$.
+There is a piecewise isometric map $h\:\RR^2\to\square$ which can be obtained by folding plane along the lines of the grid defined by $\square$.
+Then the composition $h\circ f$ is bounded and it satisfies all the properties of $f$ described above.
+
 If $\Omega=\emptyset$,
 then $f(a_1)=b_1$; 
 that is, $f$ is a solution.
+It remains to consider the case $\Omega\ne\emptyset$. 
 
-Assume $\Omega\ne\emptyset$. 
-Prove that $\Omega$ is the interior of a polygon
-which is star-shaped with respect to $a_1$.
-Redefine the map $f$ inside $\Omega$ so that it remains piecewise distance preserving and $f(a_1)=b_1$.
+Note that $\Omega$ is star-shaped with respect to $a_1$.
+Indeed, if $x\in \Omega$, then $|a_1-x|<|b_1-f(x)|$.
+If $y\in [a_1x]$ then 
+$|a_1-y|+|y-x|=|a_1-x|$ and since $f$ is length-preserving we get $|f(x)-f(y)|\le |x-y|$.
+By the triangle inequality, 
+$|a_1-y|<|b_1-f(y)|$; that is, $y\in\Omega$. 
+
+
+
+\begin{wrapfigure}{r}{40 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/star(1)}
+\lbl{11,11;$\Omega$}
+\lbl[t]{21,9.5;$a_1$}
+\lbl[bl]{17.5,25;$E_i$}
+\lbl{19.5,19.5;$T_i$}
+\end{lpic}
+\end{wrapfigure}
+
+The boundary $\partial\Omega$ can be subdivided into finite collection of line segments $\{E_i\}$
+so that the map $f$ rigidly each $E_i$.
+Note that $|f(x)\z-b_1|=|x-b_1|$ for any $x\in E_i$.
+Denote by $T_i$ the triangle with base $E_i$ and vertex $a_1$.
+From above there is a rigid motion $m_i$ of $T_i$ such that $m_i(x)=f(x)$ for any $x\in E_i$ and $m_i(a_1)=b_1$.
+Let us redefine the map $f$ in $\Omega$ by sending $x$ to $m_i(x)$ for $x\in T_i$.
+This way we produce a new piecewise isometric map $f'\:\RR^2\to \RR^2$ which satisfies all the requirements.
 \qeds
 
 The same proof works in all dimensions.
@@ -281,146 +327,193 @@ see also \cite{petrunin-yashinsky}.
 The idea in the proof is the same as in the proof of Kirszbraun's theorem given in \cite{valentine}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Closed polyhedral surface.}
-Start with you favorite convex polyhedron $K$.
-Assume that the interior of $K$ contains the origin $0\in\RR^3$.
-Remove from $K$ the interior of $K'=\tfrac56\cdot K$.
 
 \begin{wrapfigure}{o}{37 mm}
-\begin{lpic}[t(-0
- mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/octahedron-with-holes(1)}
+\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/octahedron-with-holes(1)}
 \end{lpic}
 \end{wrapfigure}
 
+\parbf{Closed polyhedral surface.}
+An example can be constructed by drilling a polyhedral cave from a you favorite convex polyhedron.
+On the diagram you see the result of this construction for the octahedron.
+
+\medskip
+
+Choose a convex polyhedron $K$.
+We can assume that the interior of $K$ contains the origin $0\in\RR^3$.
+Remove from $K$ the interior of $K'=\tfrac56\cdot K$.
+
 Note that one can drill from each vertex of $K$ a polyhedral tunnel to the corresponding vertex $K'$
 so that the surface of obtained non-convex polytope is a solution.
-
-(On the diagram you see the result of this construction for the octahedron.)
 \qeds
 
+The problem suggested by Jaros{\l}aw K\k{e}dra.
 
 The construction above produce a surface of genus at least 3.
 One can also construct a polyhedral surface in $\RR^3$
 which is isometric to a flat torus.
-It follows from very general result of Burago and Zalgaller \cite[see][]{burago-zalgaller:pl}.
-They show in particular that any 1-Lipschitz smooth embedding of flat torus in $\RR^3$ can be approximated by piecewise linear isometric embedding.
+The existence of such torus follows from very general result of Burago and Zalgaller \cite[see][]{burago-zalgaller:pl}.
+They show in particular that any 1-Lipschitz smooth embedding of flat torus in $\RR^3$ can be approximated by piecewise distance preserving embedding.
 
 \begin{wrapfigure}[4]{r}{20 mm}
-\begin{lpic}[t(-7 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/cylinder(1)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/cylinder(1)}
 \end{lpic}
 \end{wrapfigure}
 
 The following construction is more direct;
 it is a bent version of so called \index{Schwarz boot}\emph{Schwarz boot} \cite[see][]{schwarz1890definition}.
-Construct an isometric piecewise linear embedding 
-of cylinder as shown on the diagram
-such that the planes thru the boundary triangles meet at the angle $\tfrac\pi n$ for a positive integer $n$.
-It remains to reflect the obtained surface several times in the planes through the boundary triangles.
+Construct an isometric piecewise linear embedding of cylinder from six triangles as on the diagram in such a way
+that the planes thru the boundary triangles meet at the angle $\tfrac\pi n$ for a positive integer $n$.
+It remains to reflect the obtained surface several times in the planes thru the boundary triangles.
 
-The problem suggested by Jaros{\l}aw K\k{e}dra.
+The following related problem was proposed by Brian Bowditch;
+a solution can be build on the construction of Joel Hass \cite[see][]{hass}.
+
+\begin{pr}
+Construct a polyhedral metric on 3-sphere such that the total angle around any edge of its triangulation is at least $2\cdot\pi$.
+\end{pr}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Minimal polyhedral disc.}
 Arguing by contradiction, 
-assume a polyhedral disc $\Sigma_n$ minimize the area but not saddle.
+assume a polyhedral disc $\Sigma$ minimize the area but not saddle;
+that is, there is an interior vertex $v$ of $\Sigma$ such that all the edges from $v$ can be cut by a plane.
 
-Prove that 
-one can move one of the vertices of $\Sigma_n$ in such a way that the lengths of all edges starting at this vertex decrease.
+Note that we can move $v$ in such a way that the lengths of all its edges decrease.
 
-Prove that if, 
-by this deformation, 
-the area does not decease,
-then there are two adjusted triangles in the triangulation, 
-say $[pxy]$ and $[qxy]$
-such that 
-\[\measuredangle \hinge pxy+\measuredangle \hinge qxy> \pi.\]
+Since the area is minimal,  this deformation does not decease the area. 
+Taking the derivative of the total area in along this deformation implies that $\Sigma$
+contains two adjusted non-coplanar triangles $[pvw]$ and $[qvw]$ such that
+\[\measuredangle \hinge pvw+\measuredangle \hinge qvw> \pi.\]
 
+\begin{center}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/flip(1)}
+\lbl[t]{15,8.2;$v$}
+\lbl[r]{20.2,26.8;$w$}
+\lbl[rb]{13,21;$p$}
+\lbl[tl]{29,11;$q$}
+\lbl[t]{52.5,8.2;$v$}
+\lbl[r]{57.7,26.8;$w$}
+\lbl[rb]{50.5,21;$p$}
+\lbl[tl]{66.5,11;$q$}
+\end{lpic}
+\end{center}
 
-Finally show that in this case exchanging triangles $[pxy]$ and $[qxy]$
-to the triangles $[xpq]$ and $[ypq]$
+{
+
+\begin{wrapfigure}[8]{r}{21 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/tent(1)}
+\end{lpic}
+\end{wrapfigure}
+
+In this case exchanging triangles $[pvw]$ and $[qvw]$
+to the triangles $[vpq]$ and $[wpq]$
 leads to a polyhedral surface with smaller area.
-That is, $\Sigma_n$ is not area minimizing, a contradiction.
+That is, $\Sigma$ is not area minimizing, a contradiction.
 \qeds
+
 
 This problem is discussed in \cite{petrunin-monthly}.
 
 For general polyhedral surface, the deformation which decrease the lengths of all edges may not decrease the area.
 Moreover, the surface which minimize the area among all surfaces with fixed  triangulation might be not saddle;
-try to construct such example.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{
-\begin{wrapfigure}{r}{32 mm}
-\begin{lpic}[t(-7 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
-\lbl[br]{10,8;$x$}
-\lbl[t]{21,6.5;$y$}
-\lbl[l]{16.5,17.5;$z$}
-\end{lpic}
-\end{wrapfigure}
-
-\parbf{Coherent triangulation.} 
-An example shown on the diagram.
-
-Assume it is coherent and $f$ is the corresponding piecewise linear convex function.
-Without loss of generality we can assume that $f$ vanish on the boundary of big triangle.
-Arrive to a contradiction by showing 
-\[f(x)>f(y)>f(z)>f(x).\]
-\qedsf
-
-The problem was discussed by 
-Israel Gelfand, 
-Mikhail Kapranov 
-and Andrei Zelevinsky in \cite[7C]{GKZ}.
-The given example is closely related to so called \index{Sch\"onhardt polyhedron}\emph{Sch\"onhardt polyhedron}, an example of non-convex polyhedron which does not admit a triangulation \cite[see][]{schoenhardt}.
+an example is shown on the diagram.
 
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{A sphere with one edge.}
-An example, say $P$, can be found among the spherical polyhedral spaces which admit
-an isometric $\mathbb{S}^1$-action with geodesic orbits.
 
-Fix large relatively prime integers $p>q$. 
-Consider the triangle $\Delta$ with angles $\tfrac\pi p$, $\tfrac\pi q$ and say $\pi\cdot(1-\tfrac1 p)$ in the sphere of radius $\tfrac12$.
-Denote by $\hat \Delta$ the  doubling of $\Delta$ along  its boundary.
-Note that $\hat \Delta$ is homeomorphic to $\mathbb S^2$,
-it has 3 singular points with total angles $2\cdot\tfrac\pi p$,
-$2\cdot\tfrac\pi q$ and $2\cdot\pi\cdot(1-\tfrac1 p)$.
+\parbf{Coherent triangulation.} 
+An example shown on the diagram.
+The triangulation of triangle $[x'y'z']$ has a homothetic triangles $[xyz]$ and the edges
+$[xx']$, $[yy']$, $[zz']$, 
+$[yx']$, $[zy']$, $[xz']$.
 
-Consider $\mathbb S^1$-action on $\mathbb S^3\subset\CC^2$ by the diagonal matrices $\left(\begin{smallmatrix}z^p&0\\0&z^q\end{smallmatrix}\right)$, $z\in\mathbb S^1\subset\CC$.
-Construct a spherical polyhedral metric $\rho$ on  $\mathbb S^3$
-such that the $\mathbb S^1$-orbits become geodesics 
-and the quotient $(\mathbb S^3,\rho)/\mathbb S^1$
-is isometric to $\hat \Delta$.
+\medskip
 
-In the constructed example 
-the singular points with total angles $2\cdot\tfrac\pi p$ and
-$2\cdot\tfrac\pi q$
-should correspond to the points with isotropy groups $\ZZ/p$ and $\ZZ/q$ of the action.
-The points in $P=(\mathbb{S}^3,d)$ on the orbits over these points will be regular points of $P$.
-The singular locus $P^\star$
-of $P$ will be formed by the orbit corresponding to the remaining singular point of  $\hat \Delta$.
-By construction,
-\begin{itemize}
-\item $P^\star$ is a closed geodesic with angle $2\cdot\pi\cdot(1-\tfrac1p)$ around it.
-\item $P^\star$ forms a $(p,q)$-torus knot in the ambient $\mathbb{S}^3$.
-\end{itemize}
-\qedsf
-
-The construction given by Dmitri Panov in \cite{panov-Kaeler}.
-The cone $K$ over $P$ is a polyhedral space with natural complex structure;
-that is, one can cut simplices from $\CC^2$ and the glue the cone from them in such a way that complex structures will agree along the gluings.
-Moreover the cone $K$ can be holomorphically parametrized by $\CC^2$ in such a way that its singular set becomes an algebraic curve $z^p=w^q$ in some $(z,w)$-coordinates of $\CC^2$.
-
-\begin{wrapfigure}[5]{r}{20 mm}
-\begin{lpic}[t(-8 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/thurston(1)}
+\begin{wrapfigure}{r}{32 mm}
+\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
+\lbl[br]{10,8;$x$}
+\lbl[t]{21,6.5;$y$}
+\lbl[l]{16.5,17.5;$z$}
+\lbl[br]{2,4;$x'$}
+\lbl[bl]{30,4;$y'$}
+\lbl[l]{17,27;$z'$}
 \end{lpic}
 \end{wrapfigure}
 
-It would be interesting to understand what types of knots can appear this way;
-the given construction produces only torus knots.
-We do not know if such knots exist for Euclidean polyhedral spaces, but there are links.
+Assume that this triangulation is coherent;
+let $f$ be the corresponding piecewise linear convex function.
+Without loss of generality we can assume that $f$ vanish on the boundary of big triangle.
+
+From convexity of $f$ at the edges $[x'y]$,  $[y'z]$ and $[z'x]$, we get 
+\[f(x)>f(y)>f(z)>f(x),\]
+a contradiction.
+\qeds
+
+The problem was discussed in the book of 
+Israel Gelfand, 
+Mikhail Kapranov 
+and Andrei Zelevinsky  \cite[see 7C in][]{GKZ}.
+The given example is closely related to the so called \index{Sch\"onhardt polyhedron}\emph{Sch\"onhardt polyhedron}, an example of non-convex polyhedron which does not admit a triangulation \cite[see][]{schoenhardt}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Sphere with one edge.} 
+An example $P$ can be found among polyhedral spaces with isometric $\SSS^1$ action which has geodesic orbits.
+(Equivalently the cone over $P$ admits a complex structure, that is one can cut simplicies from $\CC^2$ and glue the cone from them so that the complex structures agree on the gluing.)
+
+\medskip
+
+Let us identify $\SSS^3$ with the unit sphere in the hyperplane $\Pi$ described $x+y+z=0$ of $\CC^3$.
+The symmetric group $S_3$ acts on $\SSS^3$ by permuting the coordinates.
+Take $P=\SSS^3/S_3$. 
+
+Note that $P$ is a polyhedral space.
+Moreover, $P$ is an underlying space for an orbifold which isotopy groups either trivial or $\ZZ_2$.
+In particular $P$ is a 3-manifold.
+Clearly $P$ is compact and simply connected, in particular it is homeomorphic to 3-sphere.
+The later can be also seen by parametrizing $P$ using the symmetric polynomials $u=xy+yz+zx$ and $v=xyz$.
+
+
+Multiplications by unit complex numbers give an $\SSS^1$-action on $\SSS^3$ which commutes with the $S_3$-action.
+The singular set $P_s$ of $P$ is the image of the orbit $\SSS^1\cdot p$ where $p$ is a point fixed by an odd permutation of $S_3$.
+In particular $P_s$ is a circle.
+
+Note that the subgroup of even permutations $\ZZ_3\vartriangleleft S_3$ acts freely on $\SSS^3$.
+The quotient space $\SSS^3/\ZZ_3$ is the double cover of $P$ branching in $P_s$.
+That is, a double cover of the sphere $P$ branching in the knot $P_s$ is not simply connected.
+Therefore $P_s$ is a nontrivial knot.
+
+(In fact $P_s$ is a trefoil and in the $(u,v)$ coordinates it can be written as $u^3=v^2$.)
+\qeds
+
+
+This construction is given by Dmitri Panov in \cite{panov-Kaeler}.
+
+Note that the quotient space $P'=P/\SSS^1$ is isometric to the doubling of triangle in $\CP^1=\SSS^3/\SSS^1$ with the angles $\tfrac\pi2$, $\tfrac\pi2$ and $\tfrac\pi3$.
+Starting with other triangles one may produce $P$ with isometric $\SSS^1$ and arbitrary torus knot as the singular set.
+It can also produce arbitrary long singular sets.
+In these examples, the cone over $P$ can be holomorphically parametrized by $\CC^2$ in such a way that its singular set becomes an algebraic curve $u^p=v^q$ in some $(u,v)$-coordinates of $\CC^2$.
+Here is a related problem.
+
+\begin{pr}
+Construct a complex orbifold with the underlying space homeomorphic to $\CP^2$. 
+\end{pr}
+
+The solution of the problem gives the polyhedral metric on $\CP^2$ with nonnegative curvature in the sense of Alexandrov.
+It is not know if the canonical metric on $\CP^2$ can be approximated by such polyhedral metrics.
+
+
+\begin{wrapfigure}{r}{20 mm}
+\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/thurston(1)}
+\end{lpic}
+\end{wrapfigure}
+
+I do not know if such knots exist for Euclidean polyhedral spaces, but there are links.
 For example, the Borromean rings can appear as the singular set of a Euclidean polyhedral metrics on $\mathbb S^3$.
 It can be obtained by gluing each face of cube to it self
 along the reflections in the middle lines shown on the picture. 
@@ -428,50 +521,66 @@ This construction is due to William Thurston \cite[see][]{thurston}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Triangulation of a torus.}
+Assume contrary;
+let $\tau$ be a trainagulation of the torus with vertex $z_5$ which meets $5$ triangles,
+vertex $z_7$ which meets $7$ triangles and every other vertex meets $6$ triangles.
+
 Let us equip the torus with the flat metric such that each triangle is equilateral.
-The metric will have two singular cone points,
-the first corresponds to the vertex $v_5$ with 5 triangles,
-the total angle around this point is $\tfrac53\cdot\pi$
-and the second corresponds to the vertex $v_7$ with 7 triangles,
-the total angle around this point is $\tfrac73\cdot\pi$.
+The metric will have two singular cone points $z_5$ and $z_7$.
+The total angle around $z_5$ is $\tfrac53\cdot\pi$
+and the total angle around $z_7$ is $\tfrac73\cdot\pi$.
+Note the following. 
 
-Prove the following.
+\begin{cl}{$({*})$}
+The holonomy group of the obtained polyhedral metric on the torus is generated by rotation by $\tfrac\pi3$.
+\end{cl}
 
-\parit{Observation.} The holonomy group of this metric is generated by rotation by $\tfrac\pi3$.
+Indeed, since the parallel translation along any loop preserves the directions of the sides of triangle;
+it can only permute it cyclically, which corresponds to rotations by multiple of $\tfrac\pi3$. 
+On the other hand, the holonomy of the loop which surrounds $z_5$ is a rotation by $\tfrac\pi3$.
 
-\medskip
 
 Consider a closed geodesic $\gamma_1$ which minimize the length of all circles which are not null-homotopic.
 Let $\gamma_2$ be an other closed geodesic which minimize the length and is not homotopic to any power of $\gamma_1$.
 
-Show that $\gamma_1$ and $\gamma_2$ intersect at a single point.
+Note that $\gamma_1$ and $\gamma_2$ intersect at a single point.
+Otherwise one could shorten one of them keeping the defining property.
 
-Show that $\gamma_i$ cannot pass $v_5$.
+Note that $\gamma_i$ does not pass $z_5$.
+Infact no geodesic can pass singular point with total angle smaller than $2\cdot\pi$.
 
-Apply the observation above 
-to show that 
-if $\gamma_i$ pass through $v_7$,
-then the measure  
-of one of two angles which $\gamma_i$ cuts at $v_7$ equals to $\pi$.
-Use the latter statement to show that  
-one can push $\gamma_i$ aside so it does not longer pass through $v_7$, but remains a closed geodesic.
+Assume $\gamma_i$ passes thru $z_7$.
+Then by $({*})$, one of two angles which $\gamma_i$ cuts at $z_7$ equals to $\pi$.
+It follows that one can push $\gamma_i$ aside so it does not longer pass thru $z_7$, but remains to be a closed geodesic with the same length.
+
+\begin{wrapfigure}[5]{r}{30 mm}
+\begin{lpic}[t(-7 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/57-parallelogram(1)}
+\lbl[br]{9.5,6;$z_5$}
+\lbl[b]{20,13.5;$z_7$}
+\end{lpic}
+\end{wrapfigure}
 
 Cut $\TT^2$ along $\gamma_1$ and $\gamma_2$.
-In the obtained quadrilateral, connect $v_5$ to $v_7$ by a minimizing geodesic and cut along it.
-This way we obtain an annulus with flat metric.
-Look at the neighborhood of the boundary components and show that the annulus can and cannot be isometrically immersed into the plane;
-this is a contradiction.
+In the obtained quadrilateral, connect $z_5$ to $z_7$ by a minimizing geodesic and cut along it.
+This way we obtain an annulus $\Omega$ with flat metric.
+
+
+Note that the neighborhood of the first boundary component is parallelogram --- it has equal opposite sides and angles which add up to $2\cdot \pi$.
+In particular $\Omega$ admits an isometric immersion into the plane.
+
+The second component has to be mapped to a diangle with straight sides and angles $\tfrac\pi3$.
+Such diangle does not exist in the plane, a contradiction.
 \qeds
 
 There are flat metrics on the torus with 
 only two singular points 
 which have the total angles $\tfrac53\cdot\pi$ and $\tfrac73\cdot\pi$.
 Such example can be obtained by identifying the hexagon on the picture  according to the arrows.
-But the holonomy group of the obtained torus is generated by the rotation by angle $\tfrac\pi6$. 
-In particular, the observation is necessary in the proof.
+However, the holonomy group of the obtained torus is generated by the rotation by angle $\tfrac\pi6$. 
+In particular, the observation $({*})$ is essential in the proof.
 
 \begin{wrapfigure}{r}{20 mm}
-\begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
+\begin{lpic}[t(-4 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -479,7 +588,15 @@ The same argument shows that
 holonomy group of flat torus with exactly two singular points with total angle $2\cdot(1\pm \tfrac1n)\cdot\pi$ has more than $n$ elements.
 In the solution we did the case $n=6$.
 
-The problem was originally discovered and solved by Stanislav Jendrol' %???\soft{l}
+If one denotes by $v_m$ the number of vertexes in a triangulation of torus with $m$ incoming edges,
+then by Euler's formula, we get
+\[\sum_m(m-6)\cdot v_m=0.\leqno({*}{*})\]
+Note that this equation says nothing about $v_6$.
+It turns out that for almost any sequence $v_3,v_4,\dots$ satisfying $({*}{*})$ one can adjust $v_6$ so that it corresponds to a triangulation of torus --- the sequence 
+\[0,0,1,v_6,1,0,0,\dots\] 
+discussed in the problem is the only exception.
+
+The problem was originally discovered and solved by Stanislav Jendrol' 
 and Ernest Jucovi\v{c}, in \cite{jendrol-jucovich},
 their proof is combinatorial.
 The solution described above was given by Rostislav Matveyev
@@ -489,12 +606,7 @@ Ivan Izmestiev,
 Robert Kusner, 
 G\"unter Rote, 
 Boris Springborn 
-and John Sullivan in \cite{izmestiev-rote-springborn-kusner}. 
-
-
-
-
-
+and John Sullivan \cite[see][]{izmestiev-rote-springborn-kusner}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -502,7 +614,7 @@ and John Sullivan in \cite{izmestiev-rote-springborn-kusner}.
 The curvature of a vertex on the surface of a convex polyhedron
 is defined as the $2\cdot\pi-\theta$, where $\theta$ is the total angle around the vertex.
 
-Notice that a simple closed geodesic cuts the surface into two discs with total curvature $2\cdot\pi$ each.
+By Gauss--Bonnet formula, a simple closed geodesic cuts the surface into two discs with total curvature $2\cdot\pi$ each.
 Therefore it is sufficient to construct a convex polyhedron with curvatures of the vertices $\omega_1,\omega_2,\dots,\omega_n$ such that
 $2\cdot\pi$ cannot be obtained as sum of some of $\omega_i$.
 An example of that type can be found among the tetrahedrons.
@@ -510,9 +622,9 @@ An example of that type can be found among the tetrahedrons.
 
 The problem is due to Gregory Galperin \cite[see][]{galperin} 
 and rediscovered by Dmitry Fuchs and Serge Tabachnikov \cite[see 20.8 in][]{fuchs-tabachnikov}.
-If a the surface of $P$ contains arbitrary long closed simple geodesic, 
+If the surface of $P$ contains arbitrary long closed simple geodesic, 
 then $P$ is \emph{isosceles tetrahedron};
 that is, a tetrahedron with equal opposite edges.
 This statement was was proved by Vladimir Protasov in \cite{protasov}
-and generalized for arbitrary convex bodies in \cite{akopyan-petrunin} by Arseniy Akopyan and the author.
+and generalized for arbitrary convex bodies in \cite{akopyan-petrunin}.
 

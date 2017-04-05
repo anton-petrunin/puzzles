@@ -74,7 +74,8 @@ isbn=false]{biblatex}
 \def\HH{\mathbb{H}}% 
 \def\PP{\mathbb{P}}%  
 \def\NN{\mathbb{N}}%  
-\def\RR{\mathbb{R}}%  
+\def\RR{\mathbb{R}}% 
+\def\SSS{\mathbb{S}}
 \def\TT{\mathbb{T}}%
 \def\T{\mathrm{T}}%
 \def\UU{\mathrm{U}}%
@@ -88,6 +89,7 @@ isbn=false]{biblatex}
 \def\Re{\mathrm{Re}}%
 \def\Sc{\mathrm{Sc}}%
 \def\SO{\mathrm{SO}}%
+\def\SL{\mathrm{SL}}
 
 \def\eps{\varepsilon}%  
 \def\ge{\geqslant}%
@@ -101,17 +103,18 @@ isbn=false]{biblatex}
 
 %operators
 \def\CAT{\operatorname{\rm CAT}\nolimits}
-\def\Const{\operatorname{\rm Const}}
-\def\area{\operatorname{\rm area}}
+\def\Const{\operatorname{\rm Const}\nolimits}
+\def\area{\operatorname{\rm area}\nolimits}
 \def\acts{\curvearrowright}
-\def\vol{\operatorname{\rm vol}}
-\def\diam{\operatorname{\rm diam}}
-\def\codim{\operatorname{\rm codim}}
-\def\dim{\operatorname{\rm dim}}
-\def\dist{\operatorname{\rm dist}}
-\def\div{\operatorname{\rm div}}
+\def\bus{\operatorname{\rm bus}\nolimits}
+\def\vol{\operatorname{\rm vol}\nolimits}
+\def\diam{\operatorname{\rm diam}\nolimits}
+\def\codim{\operatorname{\rm codim}\nolimits}
+\def\dim{\operatorname{\rm dim}\nolimits}
+\def\dist{\operatorname{\rm dist}\nolimits}
+\def\div{\operatorname{\rm div}\nolimits}
 \def\FillRad{\operatorname{\rm FillRad}}
-\def\Hess{\operatorname{\rm Hess}\nolimits}
+\def\Hess{\operatorname{\rm hess}\nolimits}
 \def\InjRad{\operatorname{\rm InjRad}\nolimits}
 \def\Int{\operatorname{\rm Int}\nolimits}
 \def\id{\operatorname{\rm id}}
@@ -149,15 +152,20 @@ isbn=false]{biblatex}
 \newcounter{thm}
 \renewcommand{\thethm}{\arabic{thm}}
 
-\def\claim#1#2
-{\par\medskip\noindent\manimpossiblecube\refstepcounter{thm}
+\def\claim#1
+{\par\medskip\noindent#1\refstepcounter{thm}
  \it\ }
 %{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf{\arabic{thm}#1.}{\it Problem.}}}
 \def\endclaim{\par\medskip}
-\newenvironment{pr}{\claim}{\endclaim}
+\newenvironment{pr}{\claim{\manimpossiblecube}}{\endclaim}
+
+
+\newenvironment{cl}{\claim}{\endclaim}
+
 
 \def\qeds{\qed\par\medskip}
-\def\qedsf{\vskip-6mm\qeds}%END OF PROOF BY FORMULA
+\def\qedsin{\eqno\square}
+\def\qedsf{\vskip-4.5mm\qeds\par\medskip}%END OF PROOF BY FORMULA
 
 %comment
 \def\comment#1{\par\smallskip

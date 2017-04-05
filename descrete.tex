@@ -5,9 +5,9 @@ In this chapter we consider geometrical problems with strong combinatoric flavor
 No special prerequisite is needed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Round circles in $\mathbb{S}^3$}
+\subsection*{Round circles in $\mathbb{S}^3$}\label{Round circles}
 
-\begin{pr}{\easy}{Round circles in $\mathbb{S}^3$}\label{Round circles}
+\begin{pr}
 Suppose that you have a finite collection of pairwise linked round circles in the unit 3-sphere, 
 not necessarily all of the same radius. 
 Prove that there is an isotopy of the collection of circles 
@@ -29,9 +29,9 @@ The problem was discussed
 by Genevieve Walsh in \cite{walsh}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Box in a box}
+\subsection*{Box in a box}\label{box-in-box}
 
-\begin{pr}{}{Box in a box}\label{box-in-box} 
+\begin{pr}
 Assume that a parallelepiped with sizes $a,b,c$ 
 lies inside another parallelepiped with sizes $a',b',c'$. 
 Show that 
@@ -40,19 +40,46 @@ Show that
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Harnack's circles}
+\subsection*{Harnack's circles}\label{Harnack}
 
-\begin{pr}{}{Harnack's circles}\label{Harnack}
+\begin{pr}
 Prove that a smooth algebraic curve of degree $d$ in $\RP^2$ consists of at most $n=\tfrac12\cdot(d^2-3\cdot d+4)$ connected components.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Two points on each line}
+\subsection*{Two points on each line}\label{2pts-on-line}
 
-\begin{pr}{}{Two points on each line}\label{2pts-on-line}
+\begin{pr}
 Construct a set in the Euclidean plane, 
 which intersects each line at exactly 2 points. 
 \end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Balls without gaps}
+\label{Balls without gaps}
+
+\begin{pr}
+Let $B_1,\dots,B_n$ be the balls  
+of radiuses $r_1,\dots,r_n$ 
+in a Euclidean space.
+Assume that no hyperplane divides the balls into two
+non-empty sets without intersecting at least one of the balls. 
+Show that the balls
+$B_1,\dots,B_n$ can be covered by a ball of radius
+$r=r_1+\dots+r_n$.
+
+\end{pr}
+
+\subsection*{Covering lemma}
+
+\begin{pr}
+Let $\{B_i\}_{i\in F}$ be any finite collection of  balls in $m$-dimensional Euclidean space. 
+Show that there is a subcollection of pairwise disjoint balls $\{B_i\}_{i\in G}$, $G\subset F$
+such that
+\[\vol \left(\bigcup_{i\in F}B_i\right)\le 3^m\cdot \vol \left(\bigcup_{i\in G}B_i\right).\]
+\end{pr}
+
+
 
 {
 
@@ -69,7 +96,7 @@ which intersects each line at exactly 2 points.
 \end{lpic}
 \end{wrapfigure}
 
-\subsection*{Kissing number\easy}
+\subsection*{Kissing number\easy}\label{pr:Kissing number}
 
 
 Let  $W_0$ be a convex body in $\RR^m$.
@@ -83,7 +110,7 @@ and (3) no pair $W_i,W_j$ has common interior points.
 
 As you may guess from the diagram, the kissing number of round disc in the plane is $6$.
 
-\begin{pr}{\easy}{Kissing number}\label{pr:Kissing number}
+\begin{pr}
 Show that for any convex body $W_0$ in $\RR^m$
 $$\mathop{\rm kiss}W_0\ge \mathop{\rm kiss}B,$$
 where $B$ denotes the unit ball in $\RR^m$.
@@ -93,18 +120,18 @@ where $B$ denotes the unit ball in $\RR^m$.
 \subsection*{Monotonic homotopy}
 \label{mono-homotopy}
 
-\begin{pr}{}{Monotonic homotopy} 
+\begin{pr}
 Let $F$ be a finite set and $h_0,h_1\: F\to\RR^m$ be two maps.
 Consider $\RR^m$ as a subspace of $\RR^{2\cdot m}$.
 Show that there is a homotopy  $h_t\:F\z\to\RR^{2\cdot m}$ from $h_0$ to $h_1$ such that  the function 
 \[t\z\mapsto |h_t(x)-h_t(y)|\] 
-is monotonic for any $x,y\in F$.
+is monotonic for any pair $x,y\in F$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Cube}
+\subsection*{Cube}\label{Cube}
 
-\begin{pr}{}{Cube}\label{Cube}
+\begin{pr}
 Half of the vertices 
 of an $m$-dimensional cube
 are colored in white and the other half in black.
@@ -112,17 +139,17 @@ Show that the cube has at least $2^{m-1}$ edges which connect the vertices of di
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Geodesic loop}
+\subsection*{Geodesic loop}\label{Geodesic loop}
 
-\begin{pr}{}{Geodesic loop}\label{Geodesic loop}
+\begin{pr}
 Show that the surface of cube in $\RR^3$
 does not admit a geodesic loop with the base point at a vertex.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Right and acute triangles}
+\subsection*{Right and acute triangles}\label{Right and acute triangles}
 
-\begin{pr}{}{Right and acute triangles}\label{Right and acute triangles}
+\begin{pr}
 Let $x_1,\dots,x_n\in\RR^m$
 be a collection of points such that any triangle $[x_ix_jx_k]$ is right or acute.
 Show that $n\le 2^m$.
@@ -131,11 +158,11 @@ Show that $n\le 2^m$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Right-angled polyhedron\thm}
+\subsection*{Right-angled polyhedron\thm}\label{Right-angled polyhedron}
 
 A polyhedron is called {}\emph{right-angled} if all its dihedral angles are right.
 
-\begin{pr}{\thm}{Right-angled polyhedron}\label{Right-angled polyhedron}
+\begin{pr}
 Show that in all sufficiently large dimensions, there is no compact convex hyperbolic right-angled polyhedron. 
 \end{pr}
 
@@ -147,13 +174,14 @@ that is, every vertex of $P$ exactly $m$ facets are meeting.
 Denote by $f_k$ the number of $k$-dimensional faces of $P$;
 the array of integers $(f_0,f_1,\dots f_m)$ is called $f$-vector of $P$.
 
-Fix an order of the vertices $v_1,v_2,\dots v_{f_0}$
-of $P$ so that for some linear function $\ell$, we have $\ell(v_i)>\ell(v_j)\ \Leftrightarrow\ i<j$.
+Fix an order of the vertices $v_1,v_2,\dots, v_{f_0}$
+of $P$ so that for some linear function $\ell$, we have $\ell(v_i)<\ell(v_j)\ \Leftrightarrow\ i<j$.
 The \index{index of vertex}\emph{index} of the vertex $v_i$ 
 is defined as the number of edges $[v_iv_j]$ such that $i<j$. 
 The number of vertices of given index $k$ will be denoted as $h_k$.
 The array of integers $(h_0,h_1,\dots h_m)$ is called $h$-vector of $P$.
-Clearly $h_0=h_m=1$ and $h_k\ge 0$ for all $k$.
+Clearly $h_0=h_m=1$ and 
+\[h_k\ge 0\quad\text{for all}\quad k.\leqno({*})\]
 
 Each $k$-face of $P$ contains unique vertex which maximize $\ell$;
 if the vertex has index $i$,
@@ -166,25 +194,13 @@ This observation can be packed in the following polynomial identity
 Note that the identity above implies that $h$-vector does not depend on the choice of order of the vertices.
 In particular, the $h$ vector is the same for the reversed order;
 that is
-\[h_k=h_{m-k}\]
+\[h_k=h_{m-k}\leqno({*}{*})\]
 for any $k$.
-These identities are called Dehn--Sommerville equations.
+
+The identities $({*}{*})$ are called Dehn--Sommerville equations.
 It gives the complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Balls without gaps}
-\label{Balls without gaps}
-\begin{pr}{}{Gaps between balls}
-Let $B_1,\dots,B_n$ be the balls  
-of radii $r_1,\dots,r_n$ 
-in a Euclidean space.
-Assume that no hyperplane divides the balls into two
-non-empty sets without intersecting at least one of the balls. 
-Show that the balls
-$B_1,\dots,B_n$ can be covered by a ball of radius
-$r=r_1+\dots+r_n$.
-
-\end{pr}
+Note also that the inequalities $({*})$ can be rewritten in terms of 
+$f$-vectors.
 
 
 
@@ -198,24 +214,22 @@ with dimensions $a$, $b$ and $c$.
 Denote by $v(r)$ the volume of  $r$-neighborhoods of $\Pi$,
  
 Note that for all positive $r$ we have
-\[v(r)=w_3+w_2\cdot r+w_1\cdot r^2+w_0\cdot r^3,\leqno({*})\]
+\[v_{\Pi}(r)=w_3(\Pi)+w_2(\Pi)\cdot r+w_1(\Pi)\cdot r^2+w_0(\Pi)\cdot r^3,\leqno({*})\]
 where 
 \begin{itemize}
-\item $w_0=\tfrac43\cdot \pi$ is the volume of unit ball,
-\item $w_1=\pi\cdot (a+b+c)$,
-\item $w_2=2\cdot(a\cdot b+b\cdot c+c\cdot a)$ is the surface area of $\Pi$,
-\item $w_3=a\cdot b\cdot c$ is the volume of $\Pi$,
+\item $w_0(\Pi)=\tfrac43\cdot \pi$ is the volume of unit ball,
+\item $w_1(\Pi)=\pi\cdot (a+b+c)$,
+\item $w_2(\Pi)=2\cdot(a\cdot b+b\cdot c+c\cdot a)$ is the surface area of $\Pi$,
+\item $w_3(\Pi)=a\cdot b\cdot c$ is the volume of $\Pi$,
 \end{itemize}
 
 Assume $\Pi'$ be an other parallelepiped
-with dimensions $a'$, $b'$ and $c'$.
-For the volume $v'(r)$ the volume of  $r$-neighborhoods of $\Pi'$ we have a formula similar $({*})$.
-
+with dimensions $a'$, $b'$ and~$c'$.
 If $\Pi\subset \Pi'$,
-then $v(r)\le v'(r)$ for any $r$.
+then $v(r)_{\Pi}\le v_{\Pi'}(r)$ for any $r$.
 For $r\to\infty$, these inequalities imply
-\[a+b+c\le a'+b'+c'.\]
-\qedsf
+\[a+b+c\le a'+b'+c'.\qedsin\]
+\medskip
 
 
 The problem was discussed 
@@ -225,11 +239,11 @@ A formula analogous to $({*})$
 holds for arbitrary convex body $B$ in arbitrary dimension $m$.
 The coefficient $w_i(B)$ in the polynomial with different normalization constants 
 appear under different names most commonly
-\emph{intrinsic volume} and
-\emph{quermassintegral}.
+\emph{intrinsic volumes} and
+\emph{quermassintegrals}.
 They also can be defined as the average 
 of area of projections of $B$ to the $i$-dimensional planes.
-In particular 
+In particular, 
 if $B'$ and $B$ are convex bodies such that $B'\subset B$,
 then $w_i(B')\le w_i(B)$ for any $i$.
 This generalize our problem quite a bit.
@@ -238,29 +252,33 @@ Further generalizations lead to so called \index{mixed volumes}\emph{mixed volum
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Harnack's circles.}
-Let $\sigma\subset \RP^2$ be a algebraic curve of degree $d$.
-Consider the complexification $\Sigma\subset \CP^2$ of $\sigma$.
+Let $\sigma\subset \RP^2$ be a algebraic curve of degree~$d$.
+Consider the complexification $\Sigma\subset \CP^2$ of~$\sigma$.
 Without loss of generality, we may assume that $\Sigma$ is regular.
 
-Prove that all regular complex algebraic curves of degree $d$ in $\RP^2$
-are homeomorphic to each other; 
-denote by $g$ their genus.
-Perturbing a singular curve formed by  $d$ lines in $\CP^2$,
-we get that 
+Note that all regular complex algebraic curves of degree $d$ in $\CP^2$
+are isotopic to each other in the class of algebraic curves of degree $d$.
+Indeed, the set equation of degree $d$ which correspond to singular curves have the real codimesion 2.
+Therefore the set of equation of degree $d$ which correspond to regular curves is connected.
+In particular one can construct isotopy from one regular curve to an other by changing continuously the parameters of their equations.
+
+In particular it follows that all regular complex algebraic curves of degree $d$ in $\CP^2$ have the same genus,
+denote it by $g$.
+Perturbing a singular curve formed by $d$ lines in $\CP^2$,
+we can see that 
 \[g=\tfrac12\cdot(d-1)\cdot(d-2).\]
 
 The real curve $\sigma$ forms the fixed point set in $\Sigma$ 
 by the complex conjugation. 
-Use it to show that $\Sigma\backslash\sigma$ has at most 2 connected components.
-
-It follows that each connected component of $\sigma$ adds at least one to the genus of $\Sigma$.
+In particular $\sigma$ divides $\Sigma$ into two symmetric surfaces with boundary formed by $\sigma$.
+It follows that each connected component of $\sigma$ adds one to the genus of $\Sigma$.
 Hence the result follows.
 \qeds
  
 The inequality was originally proved 
 by Axel Harnack using a different method \cite[see][]{harnack}.
 The idea to use complexification is due to Felix Klein \cite[see][]{klein}.
-This problem formed the background to Hilbert's 16th problem \cite[see][]{hilbert-problems}. 
+This problem formed the background to Hilbert's 16th problem. 
 
 
 
@@ -272,7 +290,7 @@ This problem formed the background to Hilbert's 16th problem \cite[see][]{hilber
 Take any complete ordering of the set of all lines 
 so that each beginning interval has cardinality less than continuum.
 
-Assume we have a set of points $X$ such that each line intersects $X$ at most $2$ points and cardinality of $X$ is less than continuum.
+Assume we have a set of points $X$ of cardinality less than continuum such that each line intersects $X$ at most $2$ points and cardinality of $X$ is less than continuum.
 
 Choose the least line $\ell$ in the ordering which intersect $X$ 
 by $0$ or $1$ point.
@@ -286,14 +304,78 @@ This problem has endless list of variations.
 The following problem look similar but far more involved;
 a solution follows from the proof that a square cannot be cut into triangles of equal area given given by Paul Monsky in \cite{monsky}.
 
-\begin{itemize}
-\item {\it Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that each line meets exactly two of these sets.}
-\end{itemize}
+\begin{pr}
+Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that each line meets exactly two of these sets.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Balls without gaps.} 
+Assume that each ball has the mass proportional to its radius.
+Denote by $z$  the center of mass of the balls.
+It is sufficient to show the following.
+\begin{pr}
+The ball $B(z,r)$ contains all $B_1,\dots,B_n$.
+\end{pr}
+
+Assume this is not the case.
+Then there is a line $\ell$ thru $z$, 
+such that the orthogonal projection of some ball $B_i$ to $\ell$ 
+does not lie in the projection of $B$ completely.
+(This projection reduces the problem to one-dimensional case.)
+
+Note that the projection of all balls $B_1,\dots,B_n$ has to be connected and it contain a line segment longer than $r$ on one side from $z$. 
+In this case, the center of mass of balls projects inside of this segment, a contradiction.
+\qeds
+
+The statement was conjectured by Paul Erd\H{o}s.
+The solution is given by Adolph and Ruth Goodmans in
+\cite{goodman-goodman}.
+A variation was given later by Hugo Hardwiger in \cite{hadwiger}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\parbf{Covering lemma.} 
+The construction of the required collection $\{B_i\}_{i\in G}$ use the \emph{greedy algorithm}. 
+We choose the balls one by one;
+on each step we take the largest ball which does not intersect those which we choose already.
+
+\medskip
+
+Note that each ball in the original collection $\{B_i\}_{i\in F}$ intersects a ball in $\{B_i\}_{i\in G}$ with larger radius.
+Therefore 
+\[\bigcup_{i\in F}B_i\subset \bigcup_{i\in G}3\cdot B_i,\leqno({*})\]
+where $3\cdot B_i$ denotes the ball with the came center as $B_i$ and with three times larger radius.
+Hence the statement follows.
+\qeds
 
 
 
+The constant $3^n$ is not optimal.
+The optimal constant is at least $2^n$, but its value is not known and maybe no one is willing to know.
 
+The inclusion $({*})$ is called \emph{Vitali covering lemma}.
+The following statement is so called \emph{Besikovitch covering lemma};
+it has a similar proof.
 
+\begin{pr}
+For any positive integer $m$ there is a positive integer $M$ such that 
+any finite collection of balls $\{B_i\}_{i\in F}$ in the $m$-dimensional Euclidean space 
+contains a subcollection $\{B_i\}_{i\in G}$
+such that center of any ball from $\{B_i\}_{i\in F}$ lies in one of the balls from $\{B_i\}_{i\in G}$
+and the collection $\{B_i\}_{i\in G}$ can be subdivided into $M$ subcollections of pairwise disjoint balls.
+\end{pr}
+
+Both lemmas used to prove so called \emph{covering theorems} in measure theory,
+which state that ``undesirable sets'' have vanishing measure.
+Their applications overlap but not identical, \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while \emph{Besikovitch covering theorem} work in nice metric spaces for arbitrary Borel measures.
+
+More precisely, Vitali works in arbitrary metric space for so called \index{doubling measure}\emph{doubling measure} $\mu$;
+which means that 
+\[\mu B(x,2\cdot r)\le C\cdot \mu B(x,r)\] 
+for some fixed constant $C$ and any ball $B(x,r)$ in the metric space.
+On the other hand, Besikovitch works for all Borel measures in the so called \emph{directionally limited} metric spaces \cite[see 2.8.9 in][]{federer};
+these include Alexandrov spaces with curvature bounded below.
 
 
 
@@ -301,7 +383,7 @@ a solution follows from the proof that a square cannot be cut into triangles of 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{wrapfigure}{o}{42 mm}
-\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kiss-sol(1)}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kiss-sol(1)}
 \lbl[]{21,5;{\color{white} $W$}}
 \lbl[t]{28,19;$W_j$}
 \lbl[t]{10,19;$W_i$}
@@ -311,7 +393,8 @@ a solution follows from the proof that a square cannot be cut into triangles of 
 \end{wrapfigure}
 
 \parbf{Kissing number.}
-Fix $m$ and set $n=\mathop{\rm kiss} B$.
+Fix the dimension $m$.
+Set $n=\mathop{\rm kiss} B$.
 Let $B_1,B_2,\dots, B_n$ the copies of the ball $B$  
 which touch $B$ and have no common interior points.
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
@@ -323,7 +406,7 @@ to $W$
 with outer normal vector $v_i$.
 Denote by $W_i$ the reflection of $W$ in $\Pi_i$.
 
-Prove that $W_i$ and $W_j$ have no common interior points if $i\ne j$;
+Note that $W_i$ and $W_j$ have no common interior points if $i\ne j$;
 the latter gives the needed inequality.
 \qeds
 
@@ -344,20 +427,20 @@ that is,
 $h_0(F)\z\subset\RR^m\times\{0\}$
 and $h_1(F)\subset  \{0\}\times\RR^m$.
 
-Show that the following homotopy is monotonic
+Direct calculations show that the following homotopy is monotonic
 \[h_t(x)=\bigl(h_0(x)\cdot \cos\tfrac{\pi\cdot t}2
 \,,\,
- h_1(x)\cdot\sin\tfrac{\pi\cdot t}{2}\bigr).\] 
-\qedsf
+ h_1(x)\cdot\sin\tfrac{\pi\cdot t}{2}\bigr).\qedsin\] 
+\medskip
 
-This homotopy was discovered by Ralph Alexander in \cite{ralexander}.
+This homotopy was discovered by Ralph Alexander \cite[see][]{ralexander}.
 It has number of applications, 
 one of the most beautiful is the given 
 by K\'aroly Bezdek 
-and Robert Connelly \cite{bezdek-connelly} 
+and Robert Connelly 
 in their proof of 
 Kneser--Poulsen  
-and Klee--Wagon conjectures in dimension $2$.
+and Klee--Wagon conjectures in the two-dimensional case \cite[see][]{bezdek-connelly}.
 
 The dimension $2\cdot m$ is optimal;
 that is, for any positive integer $m$,
@@ -380,17 +463,17 @@ that is, the set
 Consider the set $\mathcal{A}\subset\mathbb{S}^{m-1}$
 formed by the union of all the sets $V_{\bm{q}}$ for black $\bm{q}$.
 Note that 
-\[\vol_{m-1}\mathcal{A}=\tfrac12\cdot\vol_{m-1}\mathbb{S}^{m-1}\]
-and 
+\[\vol_{m-1}\mathcal{A}=\tfrac12\cdot\vol_{m-1}\mathbb{S}^{m-1}.\]
+
+By isoperimetric inequality for $\mathbb{S}^m$.
+\[\vol_{m-2}\partial\mathcal{A}
+\ge \vol_{m-2}\mathbb{S}^{m-2}.\] 
+
+It remains to observe that
 \[\vol_{m-2}\partial\mathcal{A}
 =
 \tfrac k{2^{m-1}}\cdot\vol_{m-2}\mathbb{S}^{m-2},\]
 where $k$ is the number of edges of the cube with one end black and the other in white.
-
-It remains to  show that 
-\[\vol_{m-2}\partial\mathcal{A}
-\ge \vol_{m-2}\mathbb{S}^{m-2}.\]
-The latter follows from the isoperimetric inequality for $\mathbb{S}^m$. 
 \qeds
 
 The problem was suggested by Greg Kuperberg.
@@ -403,25 +486,31 @@ Denote by $\xi$ and $\zeta$ the directions of exit and the entrance of the loop.
 Let $\alpha$ be the angle between $\xi$ and $\zeta$
 measured in the tangent cone to the surface of cube at $v$.
 
-Prove that $\alpha=\tfrac\pi2$.
-To do this you can use Gauss--Bonnet theorem;
-alternatively, you may look at the unfolding of $\gamma$ on the plane.
+Note that $\alpha=\tfrac\pi2$.
+It can be seen from the Gauss--Bonnet formula since each vertex of the cube has curvature $\tfrac\pi2$.
+Alternatively, it can be proved by the unfolding of $\gamma$ on the plane.
 
 It follows that there is a rotational symmetry of cube with order 3 which fix $v$ and sends $\xi$ to $\zeta$.
 The later leads to a contradiction.
 \qeds
 
-For the surface of a higher dimensional cube,
-the same idea provides existence of symmetry of the cube which fix $v$ and swaps $\xi$ and $\zeta$.
-From this point one can arrive to a contradiction, but it is harder.
+The same idea can be used to solve the following harder problems.
 
-The same statement holds for tetrahedron, octahedron and icosahedron.
-In this case $\alpha$ is a multiple of $\tfrac\pi3$;
-it implies existence of rotational symmetry of which fix $v$ and sends $\xi$ to $\zeta$ and leads to a contradiction the same way.
+\begin{pr}
+Show the same for the surface of higher dimensional cube.
+\end{pr}
+
+\begin{pr}
+ Show the same for the surface tetrahedron, octahedron and icosahedron.
+\end{pr}
+
+
+%The same statement holds for tetrahedron, octahedron and icosahedron.
+%In this case $\alpha$ is a multiple of $\tfrac\pi3$; it implies existence of rotational symmetry of which fix $v$ and sends $\xi$ to $\zeta$ and leads to a contradiction the same way.
 
 For the dodecahedron such loop exists;
 its development shown on the diagram.
-(The vertices of a cube inscribed in the dodecahedron are circled.)
+The vertices of a cube inscribed in the dodecahedron are circled.
 
 \begin{center}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/geodesic-loop(1)}
@@ -433,16 +522,21 @@ The problem suggested by Jaros{\l}aw K\k{e}dra.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right and acute triangles.}
 Denote by $K$ the convex hull of $\{x_1,\z\dots,x_n\}$.
-Without loss of generality we can assume that $K$ is non-degenerate polytope. 
-Note that for any distinct $x_i$ and $x_j$
+Without loss of generality we can assume that $K$ is $m$-dimensional. 
+Note that for any distinct points $x_i$ and $x_j$
 and any interior point $z$ in $K$
 we have 
-\[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\]
+\[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\leqno({*})\]
+Indeed, if $({*})$ does not hold, then $\langle x_j-x_i,z-x_i\rangle<0$.
+Since $z\in K$ we have $\langle x_j-x_i,x_k-x_i\rangle<0$ for some vertex $x_k$.
+That is, $\measuredangle \hinge{x_i}{x_j}{x_k}<\tfrac\pi2$, a contradiction.
 
 Denote by $h_i$ the homothety with center at $x_i$ and coefficient $\tfrac12$.
 Set $K_i=h_i(K)$.
 
-\begin{wrapfigure}{r}{31 mm}
+{
+
+\begin{wrapfigure}[10]{r}{31 mm}
 \begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/acute-triangles(1)}
 \lbl[t]{2,-1;$x_i$}
 \lbl[t]{20,-1;$x_j$}
@@ -453,7 +547,7 @@ Set $K_i=h_i(K)$.
 \end{lpic}
 \end{wrapfigure}
 
-Let us show that $K_i$ and $K_j$ have no common interior point.
+Let us show that $K_i$ and $K_j$ have no common interior points.
 Assume contrary; 
 that is, \[z=h_i(z_i)=h_j(z_j);\]
 for some interior points $z_i$ and $z_j$ in $K$.
@@ -465,7 +559,9 @@ Note that
 =
 \pi,
 \]
-which contradicts the claim.
+which contradicts $({*})$.
+
+}
 
 Note that $K_i\subset K$ for any $i$;
 it follows that 
@@ -478,10 +574,8 @@ it follows that
 Hence the result follows.
 \qeds
 
-The problem was posted by Paul Erd{\H{o}}s in \cite{erdos}
-and solved by Ludwig Danzer and Branko Gr\"unbaum in \cite{danzer-guenbaum}.
-Under the name {}\emph{Angels in Space},
-this problem appears in the {}\emph{connoisseur's collection}  \cite{winkler} of Peter Winkler.
+The problem was posted by Paul Erd{\H{o}}s 
+and solved by Ludwig Danzer and Branko Gr\"unbaum \cite[see][]{erdos,danzer-guenbaum}.
 
 Grigori Perelman noticed that the same proof works for a similar problem for Alexandrov space \cite[see][]{perelman-Erdos};
 the later led to interesting connections to the crystallographic groups \cite[see][]{lebedeva}.
@@ -515,27 +609,12 @@ The latter contradicts $({*})$ for $m\ge 6$.
  
 The proof above 
 is the core of proof of nonexistence of compact hyperbolic Coxeter's polyhedra of large dimensions 
-given by Ernest Vinberg in \cite{vinberg}, 
-see also \cite{vinberg-strong}.
+given by Ernest Vinberg \cite[see][]{vinberg, vinberg-strong}.
 
 Playing a bit more with the same inequalities, 
 one gets nonexistence of  right-angled hyperbolic polyhedra,
 in all dimensions starting from $5$.
-In 4-dimensional case, an example of a bonded right-angled hyperbolic polyhedron
+In 4-dimensional case, an example of a bounded right-angled hyperbolic polyhedron
 can be found among regular \index{120-cells}\emph{120-cells} --- the 4-dimensional brothers of dodecahedra.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Balls without gaps.} 
-Assume that each ball has the mass proportional to its radius.
-Denote by $z$  the center of mass of the balls.
-
-Show that all balls lie in the ball $B(z,r)$.
-\qeds
-
-The statement was conjectured by Paul Erd\H{o}s.
-The solution is given by Adolph and Ruth Goodmans in
-\cite{goodman-goodman}.
-A variation was given later by Hugo Hardwiger in \cite{hadwiger}.
 
 

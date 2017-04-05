@@ -18,16 +18,15 @@ or
 
 \medskip
 
-We give a practice problem with a solution 
-and after that you are on your own.
+We give a practice problem with a solution --- after that you are on your own.
 
 \subsection*{Spiral}
-
+\label{spiral}
 The following problem states that 
 if you drive on the plane and turn the steering wheel to the right all the time,
 then you will not be able to come back to the same place.
 
-\begin{pr}{}{Problem}\label{spiral}
+\begin{pr}
 Assume $\gamma$ is a smooth regular plane curve with strictly monotonic curvature. 
 Show that $\gamma$ has no self-intersections.
 \end{pr}
@@ -37,9 +36,10 @@ Show that $\gamma$ has no self-intersections.
 \end{lpic}
 \end{wrapfigure}
 
-%???DONE
-\parit{Solution.}
+\parit{Semiolution.}
 The trick is to show that the osculating circles of $\gamma$ are nested.
+
+\medskip
 
 Without loss of generality we may assume that the curve is parametrized by its length and its
 curvature decreases.
@@ -54,18 +54,19 @@ r(t)&=\tfrac{1}{|\gamma''(t)|}.
 \end{align*}
 
 Straightforward calculations show that
-\[|z'(t)|\le r'(t).\]
+\[|z'(t)|\le r'(t).\leqno({*})\]
 Dentote by $D_t$ the osculating disc of $\gamma$ at $\gamma(t)$;
 it has center at $z(t)$ and radius $r(t)$.
-It follows that 
-$D_{t_1}\supset D_{t_0}$ for $t_1>t_0$.
+By  $({*})$,
+\[D_{t_1}\supset D_{t_0}\quad\text{for}\quad t_1>t_0.\]
 Hence the result follows.\qeds
 
 This problem was considered by Peter Tait in \cite{tait}
 and later rediscovered by Adolf Kneser in \cite{kneser};
 see also \cite{ovsienko-tabachnikov}.
 
-It is instructive to check that 3-dimensional analog does not hold.
+It is instructive to check that 3-dimensional analog does not hold;
+that is, there are self-intersecting smooth regular space curves with strictly monotonic curvature. 
 
 Note that if the curve $\gamma(t)$ is defined for $t\in[0,\infty)$ and the curvature of converges to $\infty$ as $t\to \infty$, 
 then the problem implies the convergence of $\gamma(t)$ as $t\to\infty$.
@@ -81,8 +82,9 @@ The latter could be considered as a continuous analog of the Leibniz's test for 
 \end{wrapfigure}
 
 \subsection*{The moon in the puddle}
+\label{moon-in-puddle}
 
-\begin{pr}{}{The moon in the puddle}\label{moon-in-puddle}
+\begin{pr}
 A smooth closed simple plane curve with curvature less than $1$ bounds a figure $F$. 
 Prove that $F$ contains a disc of radius~$1$.
 \end{pr}
@@ -91,8 +93,9 @@ Prove that $F$ contains a disc of radius~$1$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{A spring in a tin}
+\label{A spring in a tin} 
 
-\begin{pr}{\many}{A spring in a tin}\label{A spring in a tin} 
+\begin{pr}
 Let $\alpha$ be a closed smooth immersed curve
 inside a unit disc. 
 Prove that the average absolute curvature of $\alpha$ is at least $1$, with
@@ -103,7 +106,7 @@ equality if and only if $\alpha$ is the unit circle possibly traversed more than
 \subsection*{A curve in a sphere}
 \label{A curve in a sphere}
 
-\begin{pr}{\many}{A curve in a sphere} 
+\begin{pr}
 Show that if a closed curve on the unit sphere intersects every equator then it has length at least $2\cdot\pi$.
 \end{pr}
 
@@ -116,9 +119,9 @@ Show that if a closed curve on the unit sphere intersects every equator then it 
 \end{wrapfigure}
 
 \subsection*{Oval in oval}
+\label{Oval in oval} 
 
-
-\begin{pr}{}{Oval in oval}\label{Oval in oval} 
+\begin{pr}
 Consider two closed smooth strictly convex planar curves, one inside the other. 
 Show that there is a chord of the outer curve, which is tangent to the inner curve at its midpoint.
 \end{pr}
@@ -127,6 +130,7 @@ Show that there is a chord of the outer curve, which is tangent to the inner cur
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Capture a sphere in a knot\hard}
+\label{Capture a sphere in a knot}
 
 The following formulation use the notion of smooth isotopy of knots;
 that is, one parameter of embeddings 
@@ -134,7 +138,7 @@ that is, one parameter of embeddings
 such that the map $[0,1]\times \mathbb{S}^1\to\RR^3$ is smooth.
 
 
-\begin{pr}{}{Capture a sphere in a knot}\label{Capture a sphere in a knot}
+\begin{pr}
 Show that one can not capture a sphere in a knot.
 
 More precisely, let $B$ be the closed unit ball in $\RR^3$
@@ -154,9 +158,9 @@ and $f_1(\mathbb{S}^1)$ can be separated from $B$ by a plane.
 \end{wrapfigure}
 
 \subsection*{Linked circles}
+\label{linked-circles}
 
-
-\begin{pr}{}{Linked circles}\label{linked-circles}
+\begin{pr}
 Suppose that two linked  simple closed curves in $\RR^3$
 lie at a distance at least $1$ from each other.
 Show that the length of each curve is at least $2\cdot\pi$.
@@ -165,8 +169,9 @@ Show that the length of each curve is at least $2\cdot\pi$.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Surrounded area}
+\label{Surrounded area}
 
-\begin{pr}{\easy}{Surrounded area}\label{Surrounded area}
+\begin{pr}
 Consider two simple closed plane curves  
 $\gamma_1,\gamma_2\:\mathbb S^1\to\RR^2$.
 Assume 
@@ -182,7 +187,7 @@ Show that the area surrounded by $\gamma_1$ does not exceed the area surrounded 
 
 \label{Crooked circle}
 
-\begin{pr}{}{Crooked circle} 
+\begin{pr}
 Construct 
 a bounded set in $\RR^2$
 homeomorphic to an open disc
@@ -192,29 +197,30 @@ its boundary contains no simple curves.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Rectifiable curve}
+\label{Rectifiable curve}
 
 For the following problem we need the notion of 
 \index{Hausdorff measure}\emph{Hausdorff measure}.
 Fix a compact set $X\subset\RR^2$ and $\alpha>0$.
 Given $\delta>0$ consider the value
 \[h(\delta)=\inf\left\{\,\sum_i(\diam X_i)^\alpha\,\right\}\]
-where the infimum is taken for all coverings of $X$ by $\{X_i\}$
+where the infimum is taken for all finite coverings $\{X_i\}$ of $X$ 
 such that $\diam X_i<\delta$ for each $i$.
 
 Note that the function $\delta\mapsto h(\delta)$ is not decreasing in $\delta$.
-In particular,there is a (possibly infinite) limit, say $h$, of $h(\delta)$ as $\delta\to0$.
-This value $h$ is called $\alpha$-dimensional Hausdorff measure of $X$.
+In particular, $h(\delta)\to h$ as $\delta\to 0$ for some (possibly infinite) value $h$.
+This value $h$ is called $\alpha$-dimensional Hausdorff measure of $X$ and denoted as $\mathcal{H}_\alpha(X)$.
 
-\begin{pr}{}{Rectifiable curve}\label{Rectifiable curve}
+\begin{pr}
 Let $X\subset \RR^2$ be a compact connected set
 with finite 1-dimensional Hausdorff measure. 
-Show that there is a rectifiable curve which pass through all the points in $X$.
+Show that there is a rectifiable curve which pass thru all the points in $X$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Typical convex curves}
 
-\begin{pr}{\easy}{Typical convex curve}
+\begin{pr}
 Show that for \emph{most} of the convex closed curves in the plane
 have vanishing curvature at every point where it is defined.
 \end{pr}
@@ -238,7 +244,7 @@ has to be dense.
 
 In particular, in $X$, 
 the intersection of a finite or countable collection of G-delta dense sets is also G-delta dense. 
-The later means that G-delta dense sets contains {}\emph{most} of the points of a complete metric space. 
+The later means that G-delta dense sets contains {}\emph{most} of $X$. 
 This is the meaning of the word {}\emph{most} used in the problem.
 
 
@@ -367,17 +373,15 @@ and Thomas Richardson in \cite{lagarias-richardson}, see also \cite{nazarov-petr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{A curve in a sphere.} 
-Let us present two solutions, both by contradiction.
+Let us present two solutions.
 We assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intersects each equator.
 
 \parit{A solution with the Crofton formula.}
-Note that we can assume that $\alpha$ is a broken line.
-
 Given a unit vector $u$ denote by $e_u$ the equator with pole at $u$.
 Let $k(u)$ the number of intersections
 of the $\alpha$ and $e_u$.
 
-Note that for almost all $u\in \mathbb{S}^2$, the value $k(u)$ is even.
+Note that for almost all $u\in \mathbb{S}^2$, the value $k(u)$ is even or infinite.
 Since each equator intersects $\alpha$, we get $k(u)\ge 2$ for almost all $u$.
 
 Then we get
@@ -402,9 +406,7 @@ Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$.
 Let $r$ be a point of intersection of $\alpha$ with the equator with pole at $z$.  
 Without loss of generality we may assume that $r\in\check\alpha$. 
 
-The arc $\check\alpha$ together with its reflection in the point $z$ 
-form a closed curve of length $2\cdot \ell$ 
-that passes through $r$ and its antipodal point $r^{*}$.
+The arc $\check\alpha$ together with its reflection in the point $z$ forms a closed curve of length $2\cdot \ell$  that passes thru $r$ and its antipodal point $r^{*}$.
 Therefore 
 \[\ell=\length \check\alpha\ge |r-r^{*}|_{\mathbb S^2}=\pi.\]
 Here $|r-r^{*}|_{\mathbb S^2}$ 
@@ -413,9 +415,11 @@ denotes the angle metric in the sphere $\mathbb S^2$.\qeds
 
 The problem was suggested by Nikolai Nadirashvili.
 It is nearly equivalent to the following: 
-\begin{itemize}
-\item Show that total curvature of any closed smooth regular space curve is at least $2\cdot\pi$.
-\end{itemize}
+
+\begin{pr}
+Show that total curvature of any closed smooth regular space curve is at least $2\cdot\pi$.
+\end{pr}
+
 A way more advanced problem is to show that any embedded circle of total curvature at most $4\cdot\pi$ is unknot.
 It was solved independently by Istv{\'a}n F{\'a}ry \cite[in][]{fary-knot} and  John Milnor \cite[in][]{milnor}. 
 Later many interesting generalizations and refinements were found including a generalization to singular spaces 
@@ -438,6 +442,7 @@ and Daniel Wienholtz \cite[in][]{EWW}.
 \parbf{Oval in oval.}
 Choose the a chord which minimizes (or maximizes) the ratio, 
 in which it divides the bigger oval.
+
 If the chord is not divided into equal parts, then you can rotate it slightly
 to decrease the ratio.
 Hence the problem follows.
@@ -476,7 +481,7 @@ A closely related, so called {}\emph{equal tangents problem} is discussed by the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Capture a sphere in a knot.}
-We can assume that the knot is given by lies on the sphere.
+We can assume that the knot lies on the sphere.
 
 Fix a M\"obius transformation 
 $m\:\mathbb{S}^2\to\mathbb{S}^2$ which is close to identity and not a rotation.
@@ -490,7 +495,7 @@ such that
 Since the area is preserved, 
 we get 
 $$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u^2=1.$$ 
-Therefore, 
+By Bunyakovsky inequality, 
 $$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u<1.$$ 
 
 It follows that after a suitable rotation of $\mathbb{S}^2$, 
@@ -516,8 +521,7 @@ Fix a point $x\in\alpha$.
 Note that one can find another point $y\in\alpha$ such that the interval 
 $[xy]$ intersects $\beta$, say at the point $z$. 
 Indeed, if this is not the case, 
-we can shrink $\alpha$ to $x$ without crossing $\beta$;
-this can be done by rescaling $\alpha$ with center $x$.
+rescaling $\alpha$ with center $x$ shrinks $\alpha$ to $x$ without crossing $\beta$.
 The latter contradicts that $\alpha$ and $\beta$ are linked. 
 
 \begin{wrapfigure}{r}{54 mm}
@@ -536,7 +540,7 @@ from $z$ onto the unit sphere around $z$.
 Clearly
 $$\length \alpha\ge \length\alpha^{*}.$$
 
-Note that $\alpha^{*}$ passes through two antipodal points of the sphere,
+Note that $\alpha^{*}$ passes thru two antipodal points of the sphere,
 one corresponds to $x$ and the other to $y$.
 Therefore 
 $$\length \alpha^{*}\ge 2\cdot\pi.$$
@@ -544,7 +548,7 @@ Hence the result follows.\qeds
 
 
 This problem was proposed by Frederick Gehring \cite[see 7.22 in][]{gehring};
-\cite{mateljevic} surveys solutions and generalizations. 
+solutions and generalizations are surveyed in \cite{mateljevic}. 
 The presented the solution given by Michael Edelstein and Binyamin Schwarz in \cite{edelstein-schwatz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -615,7 +619,8 @@ for some $\eps_n$-crooked function $f_n$.
 Denote by $D$ the union of all discs bounded by $\gamma_n$.
 Clearly $D$ is homeomorphic to an open disc.
 For the right choice of the sequence $\eps_n$, 
-the set $D$ is bounded and by construction its boundary contains no simple curves. \qeds
+the set $D$ is bounded.
+By construction the boundary of $D$ contains no simple curves. \qeds
 
 In fact, the only curves in the boundary of the constructed set are constant, compare to the problem \emph{Simple path} on page~\pageref{Simple path}.
 
@@ -625,15 +630,27 @@ The construction is similar to the construction of the Cantor set.
 Here are few similar problems:
 
 }
-\begin{itemize}
-\item {\it Construct three disjoint non-empty open sets in $\RR$ which have the same boundary.}
-\item {\it Construct three open discs in $\RR^2$ which have the same boundary.}
-(These discs are called \index{lakes of Wada}\emph{lakes of Wada}; it is  described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.)
-\item {\it Construct a Cantor set in $\RR^3$ with non simply connected complement.}
-(This example was is called  \index{Antoine's necklace}\emph{Antoine's necklace};
-it is constructed in \cite{antoine}.)
-\item {\it Construct an open set in $\RR^3$ with fundamental group isomorphic to the additive group of rational numbers.}
-\end{itemize}
+
+\begin{pr}
+ Construct three distinct open sets in $\RR$ identical boundaries.
+\end{pr}
+
+\begin{pr}
+ Construct three open discs in $\RR^2$ which have the same boundary.
+\end{pr}
+
+These discs are called \index{lakes of Wada}\emph{lakes of Wada}; it is  described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.
+
+\begin{pr}
+ Construct a Cantor set in $\RR^3$ with non simply connected complement.
+\end{pr}
+
+This example was is called  \index{Antoine's necklace}\emph{Antoine's necklace} \cite[see][]{antoine}.
+
+\begin{pr}
+ Construct an open set in $\RR^3$ with fundamental group isomorphic to the additive group of rational numbers.
+\end{pr}
+
 More advanced examples include
 \emph{Whitehead manifold}, 
 \emph{Dogbone space}, 
@@ -664,7 +681,7 @@ Therefore the total length of $T_\eps$ is below $2\cdot n\cdot\eps\le 4\cdot L$.
 By construction, 
 $T_\eps$ is $\eps$-close to $K$ in the Hausdorff metric.
 
-Note that there is a closed curve $\gamma_\eps$ which image is $T_\eps$ and its length is twice the total length of $T_\eps$;
+Clearly, there is a closed curve $\gamma_\eps$ which image is $T_\eps$ and its length is twice the total length of $T_\eps$;
 that is, 
 \[\length\gamma_\eps\le 8\cdot L.\]
 
@@ -703,13 +720,13 @@ It is straightforward to check that there is $\eps>0$ such that
 the Hausdorff distance from any convex curve $\gamma$ squeezed between the circles 
 to any convex $n$-gon is at least $\frac{\eps}{n^{100}}$.
 
-Fix a countable set of convex polygons $p_1,p_2,\dots$ which is dense in $\mathfrak{C}$.
-Denote by $n_i$ the number of sides in $p_i$.
+Fix a countable set of convex polygons $\mathfrak{p}_1,\mathfrak{p}_2,\dots$ which is dense in $\mathfrak{C}$.
+Denote by $n_i$ the number of sides in $\mathfrak{p}_i$.
 For any positive integer $k$,
 consider the set $\Omega_k\subset\mathfrak{C}$ defined as 
 \[\Omega_k
 =
-\set{\xi\in \mathfrak{C}}{|\xi-p_i|_{H}<\tfrac1{k\cdot n_i^{100}}\quad\text{for some}\quad i},\]
+\set{\xi\in \mathfrak{C}}{|\xi-\mathfrak{p}_i|_{H}<\tfrac1{k\cdot n_i^{100}}\quad\text{for some}\quad i},\]
 where $|{*}-{*}|_H$ denotes the Hausdorff distance 
 
 From above we get that $\gamma\notin\Omega_k$ for some $k$. 
@@ -720,7 +737,8 @@ Therefore
 is a G-delta dense set.
 Hence the statement follows.\qeds
   
-It worth to note that the curvature of a convex curve is defined almost everywhere.
+It worth to note that the curvature of a convex curve is defined almost everywhere;
+it follows since monotonic functions are differentiable almost everywhere.
 
 This problem states that typical convex curves have unexpected property.
 In fact, this is very common situation --- typically we do not see the typical objects and these object often have surprising properties.
@@ -732,7 +750,7 @@ and
 L{\'a}szl{\'o} Sz{\'e}kelyhidi in \cite{KSS},
 a typical 1-Lipschitz maps from the plane to itself preserves the length of all curves.
 The same way one could show that boundary of typical open set in the plane contain no nontrivial curves in their boundary, 
-although the construction of a concrete example is not trivial;
+altho the construction of a concrete example is not trivial;
 see ``Crooked circle'', page \pageref{Crooked circle}.
 More problems of that type are surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
 

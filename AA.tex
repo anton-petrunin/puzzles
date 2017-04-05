@@ -1,5 +1,190 @@
 
 
+The space $P$ can be found among the spherical polyhedral spaces which admit
+an isometric circle action $\mathbb S^1\acts P$ with geodesic orbits.
+One of these orbits is the singular set.
+
+\medskip
+
+
+
+\begin{wrapfigure}{r}{19 mm}
+\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/deltoid(1)}
+\lbl[b]{9,36;$n$}
+\lbl[t]{9,1;$s$}
+\lbl[r]{1.5,25;$w$}
+\lbl[l]{17.5,25;$e$}
+\lbl[t]{9.5,29.5;{\small $\tfrac{2{\cdot}\pi}p$}}
+\lbl[b]{9.5,6.5;{\small $\tfrac{2{\cdot}\pi}q$}}
+\lbl{5,24;{\small $\theta$}}
+\lbl{14,24;{\small $\theta$}}
+\end{lpic}
+\end{wrapfigure}
+
+First let us construct the quotient space $P'=P/\mathbb S^1$.
+Consider the Hopf action $\mathbb S^1\acts\mathbb S^3$.
+Let 
+\[h\:\mathbb S^3\to\CP^1=\mathbb S^3/\mathbb S^1\] 
+be the quotient map.
+The complex projective line $\CP^1$ is isometric to the 2-sphere of radius $\tfrac12$.
+
+Fix large relatively prime integers $p$ and $q$. 
+Consider a solid deltoid $\Delta=[nesw]$ in $\CP^1$ with angles 
+\begin{align*}
+\measuredangle n&=2 \cdot\tfrac\pi p,
+\\
+\measuredangle s&=2\cdot\tfrac\pi q,
+\\
+\measuredangle e=\measuredangle w&=\theta<\pi.
+\end{align*}
+
+The quotient space $P'$ is obtained from $\Delta$ by gluing its boundary to it self along the reflection symmetry.
+Note that $P'$ is homeomorphic to $\mathbb S^2$ and
+it has 3 singular points with total angles $2\cdot\tfrac\pi p$,
+$2\cdot\tfrac\pi q$ and $2\cdot\theta$.
+
+The required $\mathbb S^1_{p,q}$-action on $\mathbb{S}^3\subset\CC^2$ is given by complex diagonal matrices $\left(\begin{smallmatrix}z^p&0\\0&z^q\end{smallmatrix}\right)$.
+The orbits with isotropy groups $\ZZ_p$ and $\ZZ_q$ correspond to $n$ and $s$ in $P'$.
+There is a metric $\rho$ on  $\mathbb{S}^3$ which is invariant with respect to the $\mathbb S^1_{p,q}$-action, which has $P'$  as the quotient space and geodesic orbits. 
+(In fact such metric $\rho$ is unique up to isometry.)
+
+This space $P=(\mathbb{S}^3,\rho)$ can be constructed the following way.
+Set $W=h^{-1}(\Delta)$;
+let $\tilde W$ be the universal metric cover of $W$.
+The $\mathbb{S}^1$-action on $W$ lifts to $\RR$-action on $\tilde W$,
+so the subgroup $2\cdot\pi\cdot\ZZ<\RR$ is the group of deck transformations of the covering $\tilde W\z\to W$. 
+Consider the quotient $W'=\tilde W/a\cdot\ZZ$;
+note that $W'$ is a solid torus with $\mathbb{S}^1$-action and the quotient isometric to $\Delta$.
+For the right choice of the constant $a$, the gluing map $\Delta\to P'$ can be lifted to a gluing map boundary of $W'\to P$.
+
+
+
+In the constructed example 
+the singular points with total angles $2\cdot\tfrac\pi p$ and
+$2\cdot\tfrac\pi q$
+correspond to the points with isotropy groups $\ZZ_p$ and $\ZZ_q$ of the action.
+The points in $P=(\mathbb{S}^3,\rho)$ on the orbits over these points will be regular; that is they admit a neighborhoods isometric to open sets in the unit 3-sphere.
+The singular locus $P_s$
+of $P$ corresponds to the remaining singular point of $P'$.
+Note that by construction,
+\begin{itemize}
+\item $P_s$ is a closed geodesic with angle $2\cdot\theta$ around it and $\theta$ can take arbitrary value close to $\pi$.
+\item $P_s$ forms a $(p,q)$-torus knot in the ambient $\mathbb{S}^3$.
+\end{itemize}
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fix large relatively prime integers $p>q$.
+Choose a regular $p$-gon $K_p$ and $q$-gon $K_q$ in $\CP^1$ with equal sides.
+Consider their inverse images $W_p=h^{-1}K_p$ and $W_q=h^{-1}K_q$;
+let $\tilde W_p$ and $\tilde W_q$ be their universal metric covers.
+
+The spaces $\tilde W_p$ and $\tilde W_q$ admit natural isometric actions by groups $\RR\times\ZZ_p$ and $\RR\times\ZZ_q$ correspondingly.
+It remains to find $\ZZ$ subactions on $\tilde W_p$ and $\tilde W_q$ such that the solid toruses $\tilde W_p/\ZZ$ and $\tilde W_q/\ZZ$ can be glued together long an isometry of their boundaries which sends orbits to orbits.
+
+Consider the quotient space $\CP^1=\mathbb S^3/\mathbb S^1$;
+it is isometric to the 2-sphere of radius $\tfrac12$.
+Fix large relatively prime integers $p>q$. 
+Consider the solid triangle $\Delta=[nsw]$ with angles $\measuredangle n=\tfrac\pi p$, $\measuredangle s=\tfrac\pi q$ and $\measuredangle w=\pi\cdot(1-\tfrac1 p)$ in $\CP^1$.
+Denote by $\hat \Delta$ the  doubling of $\Delta$ along  its boundary.
+Note that $\hat \Delta$ is homeomorphic to $\mathbb S^2$ and
+it has 3 singular points with total angles $2\cdot\tfrac\pi p$,
+$2\cdot\tfrac\pi q$ and $2\cdot\pi\cdot(1-\tfrac1 p)$.
+
+Consider the quotent map  $\mathbb S^3\to \mathbb S^3/\mathbb S^1$ for the $\mathbb S^1$-action on $\mathbb{S}^3\subset\CC^2$ by the diagonal matrices $\left(\begin{smallmatrix}z^p&0\\0&z^q\end{smallmatrix}\right)$, $z\in\mathbb S^1\subset\CC$.
+Identify the quotient space $\mathbb S^3/\mathbb S^1$ with $\hat \Delta$ such that the singular orbits mapped to $v$ and $w$ correspondingly.
+Let us equip $\mathbb S^3$ with a metric such that the 
+
+Note that there is a spherical polyhedral metric $\rho$ on  $\mathbb S^3$
+such that the $\mathbb S^1$-orbits become geodesics 
+and the quotient space $(\mathbb S^3,\rho)/\mathbb S^1$
+is isometric to $\hat \Delta$.
+
+To construct such metric, take the inverse image $W$ of $\Delta$ under the Hopf fibration $\mathbb S^3 \to \CP^1$.
+The universal cover $\tilde W$  of $W$ admits a natural $\RR$-action with geodesic orbits.
+For the right choice of $\ZZ$ subaction of $\RR$,
+the quotient space 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Function with no critical points}
+
+\begin{pr}{}{Function with no critical points}\label{Function with no critical points}
+Given an integer $m\ge 2$, 
+construct a smooth function $f\:\RR^m\to \RR$ 
+with no critical points in the unit ball $B^m$ 
+such that the restriction $f|_{B^m}$ does not factor thru a linear function;
+that is, 
+$f|_{B^m}$ cannot be presented as a composition
+$\ell\circ\phi$,
+where $\ell\:\RR^m\to\RR$ is a linear function 
+and $\phi\:B^m\to\RR^m$ is a smooth embedding.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{o}{24 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/no-critical-points()}
+\end{lpic}
+\end{wrapfigure}
+
+
+\parbf{Function with no critical points.}
+Construct an immersion 
+$\psi\:B^m\z\looparrowright\RR^m$ such that 
+\[\ell\circ\phi\ne\ell\circ\psi\]
+for any embedding  $\phi\:B^m\to\RR^m$. 
+The two-dimensional case can be guessed from the picture.
+
+It remains to note that the composition $f=\ell\circ\psi$ has no critical points.\qeds
+
+The problem was suggested by Petr Pushkar.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \parbf{A family of sets with no section.}
@@ -320,7 +505,7 @@ Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)$.
 In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is $\pi$ or just a little less.
 
 Fix $\eps>0$.
-If $\length[\partial D]$ is long enough,
+If $\length[\partial D]$ is long enuf,
 by $({*})$, 
 we can find a lens $L_p$ with diameter at most $\eps$,
 such that curvature $L_p$ is at least $\pi-\eps$.
@@ -645,7 +830,7 @@ that is, $\rho_t$ is nondecresing in $t$.
 Set $W(t,t')=\supp(\rho_t'-\rho_t)$.
 and let $\ell(t,t')$ be the length of minimal inteval in $\SS^1$ containing $W(t,t')$.
 
-Note that it is enough to construct one parameter family of almost constant functions $\rho_t\:\mathbb{S}^1\to \RR_\ge$
+Note that it is enuf to construct one parameter family of almost constant functions $\rho_t\:\mathbb{S}^1\to \RR_\ge$
 with small second derivative,
 nondecresing in $t$ and $\ell(t,t')\to 0$ as $|t'-t|\to 0$.
 
@@ -737,7 +922,7 @@ that is, $X\backslash\{x_0\}$ is disconnected \cite[see][3.32]{gromov-MetStr}.
 
 
 \comment{For the most of problems in this section 
-it is enough to know
+it is enuf to know
 definitions of curvature of curves,
 second fundamental form,
 Gauss curvature of surfaces,
@@ -746,7 +931,7 @@ To solve Problem~\ref{Two discs},
 it is better to know Hairy Ball theorem.
 }
 
-\comment{For most of the problems it is enough to know second variation formula. 
+\comment{For most of the problems it is enuf to know second variation formula. 
 Knowledge of  
 O'Neil formula, 
 Gauss formula, 
@@ -1315,7 +1500,7 @@ can not be separated from the vertices with decreasing angles by a line.
 \end{pr}
 
 
-Let us cut the polygon $A_0$ from the plane and glue instead the polygon $A_t$ for small enough $t$.
+Let us cut the polygon $A_0$ from the plane and glue instead the polygon $A_t$ for small enuf $t$.
 Denote by $\Pi$ the obtained polyhedral space.
 
 Note that 
@@ -1730,7 +1915,7 @@ Transversal foliation. To this I'd add that a non-vanishing divergence free vect
 \sign{???}
 \end{pr}
 
-\begin{pr}{}{Area of minimal surface.} Let $\Sigma$ be a minimal 2-disc in $\RR^3$ which passes through the origin and its boundary $\partial\Sigma$ on the unit sphere is a curve in a unit sphere and center of the sphere belongs to $S$.
+\begin{pr}{}{Area of minimal surface.} Let $\Sigma$ be a minimal 2-disc in $\RR^3$ which passes thru the origin and its boundary $\partial\Sigma$ on the unit sphere is a curve in a unit sphere and center of the sphere belongs to $S$.
 (i) Prove that area of $S$ is at least $\pi$.
 (ii) Prove that length of $\partial S$ is at least $2\cdot\pi$
 \sign{???}
