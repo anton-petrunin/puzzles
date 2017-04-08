@@ -36,7 +36,7 @@ Show that $\gamma$ has no self-intersections.
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Semiolution.}
+\parit{Semisolution.}
 The trick is to show that the osculating circles of $\gamma$ are nested.
 
 \medskip
@@ -61,9 +61,8 @@ By  $({*})$,
 \[D_{t_1}\supset D_{t_0}\quad\text{for}\quad t_1>t_0.\]
 Hence the result follows.\qeds
 
-This problem was considered by Peter Tait in \cite{tait}
-and later rediscovered by Adolf Kneser in \cite{kneser};
-see also \cite{ovsienko-tabachnikov}.
+This problem was considered by Peter Tait \cite[see][]{tait}
+and later rediscovered by Adolf Kneser [see \ncite{kneser} and also \ncite{ovsienko-tabachnikov}].
 
 It is instructive to check that 3-dimensional analog does not hold;
 that is, there are self-intersecting smooth regular space curves with strictly monotonic curvature. 
@@ -81,7 +80,7 @@ The latter could be considered as a continuous analog of the Leibniz's test for 
 \end{lpic}
 \end{wrapfigure}
 
-\subsection*{The moon in the puddle}
+\subsection*{Moon in a puddle}
 \label{moon-in-puddle}
 
 \begin{pr}
@@ -92,7 +91,7 @@ Prove that $F$ contains a disc of radius~$1$.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{A spring in a tin}
+\subsection*{Spring in a tin}
 \label{A spring in a tin} 
 
 \begin{pr}
@@ -103,7 +102,7 @@ equality if and only if $\alpha$ is the unit circle possibly traversed more than
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{A curve in a sphere}
+\subsection*{Curve in a sphere}
 \label{A curve in a sphere}
 
 \begin{pr}
@@ -118,7 +117,7 @@ Show that if a closed curve on the unit sphere intersects every equator then it 
 \end{lpic}
 \end{wrapfigure}
 
-\subsection*{Oval in oval}
+\subsection*{Oval in an oval}
 \label{Oval in oval} 
 
 \begin{pr}
@@ -208,8 +207,8 @@ where the infimum is taken for all finite coverings $\{X_i\}$ of $X$
 such that $\diam X_i<\delta$ for each $i$.
 
 Note that the function $\delta\mapsto h(\delta)$ is not decreasing in $\delta$.
-In particular, $h(\delta)\to h$ as $\delta\to 0$ for some (possibly infinite) value $h$.
-This value $h$ is called $\alpha$-dimensional Hausdorff measure of $X$ and denoted as $\mathcal{H}_\alpha(X)$.
+In particular, $h(\delta)\to \mathcal{H}_\alpha(X)$ as $\delta\to 0$ for some (possibly infinite) value $\mathcal{H}_\alpha(X)$.
+This value $\mathcal{H}_\alpha(X)$ is called $\alpha$-dimensional Hausdorff measure of $X$.
 
 \begin{pr}
 Let $X\subset \RR^2$ be a compact connected set
@@ -220,8 +219,12 @@ Show that there is a rectifiable curve which pass thru all the points in $X$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Typical convex curves}
 
+Formally we do not need it in the problem, 
+but it worth to note that the curvature of a convex curve is defined almost everywhere;
+it follows since monotonic functions are differentiable almost everywhere.
+
 \begin{pr}
-Show that for \emph{most} of the convex closed curves in the plane
+Show that \emph{most} of the convex closed curves in the plane
 have vanishing curvature at every point where it is defined.
 \end{pr}
 
@@ -253,7 +256,7 @@ This is the meaning of the word {}\emph{most} used in the problem.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\parbf{The moon in the puddle.}
+\parbf{Moon in a puddle.}
 In the proof we will use \emph{cut locus}
 of $F$ with respect to its boundary\footnote{Also called \emph{medial axis}.};
 it will be further denoted as $T$.
@@ -305,20 +308,23 @@ an end vertex say $z$.
 The point $z$ is focal since there is arbitrary small neighborhood $U$ of $z$ such that the complement $U\backslash T$ is connected.
 \qeds
 
-The problem was discussed by German Pestov and Vla\-di\-mir Ionin in \cite{pestov-ionin}.
+The problem was discussed by German Pestov and Vladimir Ionin \cite[see][]{pestov-ionin}.
 Another solution via curve shortening flow 
-was given by Konstantin Pankrashkin in  \cite{pankrashkin}.
+was given by Konstantin Pankrashkin \cite[see][]{pankrashkin}.
 The statement still holds if the curve fails to be smooth at one point.
 A spherical version of the later statement 
-was used by Dmitri Panov and me 
-in \cite{panov-petrunin-ramification}.
+was used by Dmitri Panov and me \cite[see][]{panov-petrunin-ramification}.
 
-The 3-dimensional analog of this statement does not hold.
-Namely, there is a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
+As you can see from the following problem, the 3-dimensional analog of this statement does not hold.
+
+\begin{pr}
+Construct a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
 with all the principle curvatures between $-1$ and $1$
 such that it does not surround a ball of radius 1.
+\end{pr}
+
 Such example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
-\cite[the Bing's house constructed in][will do the job]{bing}.
+[the Bing's house constructed in\ncite{bing} will do the job].
 This problem is discussed by Vladimir Lagunov in \cite{lagunov-2} 
 and it was generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite[see][]{alexander-bishop}.
 
@@ -329,7 +335,7 @@ for $(\mathbb S^3,g)$ this is not true.
 A related examples discussed after the hint for ``Almost flat manifold'', page \pageref{page-sol:almost-flat}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{A spring in a tin.}
+\parbf{Spring in a tin.}
 To solve this problem,
 you should imagine that you travel on a train along the curve $\alpha(t)$
 and watch the position of the center of the disc in the frame of your wagon.
@@ -349,7 +355,7 @@ In particular
 \ge 
 |\beta(\ell)-\beta(0)|
 =
-\ell.\]
+\ell.\leqno({*})\]
 
 Note that 
 \begin{align*}
@@ -358,21 +364,23 @@ Note that
 &\le|\alpha''(t)|.
 \end{align*}
 Since $|\alpha''(t)|$ is the curvature of $\alpha$ at $t$,
-we get the result.\qeds
+the result follows from $({*})$.\qeds
 
 The statement was originally proved 
 by Istv\'an F\'ary in \cite{fary};
-number of different proofs are discussed by Serge Tabachnikov in \cite{tabachnikov}, see also \cite[19.5 in ][]{fuchs-tabachnikov}.
+number of different proofs are discussed by Serge Tabachnikov [see \ncite{tabachnikov} and also 19.5 in \ncite{fuchs-tabachnikov}].
 
-If instead of a disc, 
+Note that the same argument works for curves in the unit ball.
+
+If instead of the disc, 
 we have a region bounded by closed convex curve $\gamma$, 
 then it is still true that the average curvature of $\alpha$ is at least as big as average curvature of $\gamma$. 
 The proof was given by Jeffrey Lagarias
-and Thomas Richardson in \cite{lagarias-richardson}, see also \cite{nazarov-petrov}.
+and Thomas Richardson [see \ncite{lagarias-richardson} and also \ncite{nazarov-petrov}].
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{A curve in a sphere.} 
+\parbf{Curve in a sphere.} 
 Let us present two solutions.
 We assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ which intersects each equator.
 
@@ -421,12 +429,12 @@ Show that total curvature of any closed smooth regular space curve is at least $
 \end{pr}
 
 A way more advanced problem is to show that any embedded circle of total curvature at most $4\cdot\pi$ is unknot.
-It was solved independently by Istv{\'a}n F{\'a}ry \cite[in][]{fary-knot} and  John Milnor \cite[in][]{milnor}. 
+It was solved independently by Istv{\'a}n F{\'a}ry \cite[see][]{fary-knot} and  John Milnor \cite[see][]{milnor}. 
 Later many interesting generalizations and refinements were found including a generalization to singular spaces 
-by Stephanie Alexander and Richard Bishop  \cite[in][]{alexander-bishop:knot} and the
+by Stephanie Alexander and Richard Bishop  \cite[see][]{alexander-bishop:knot} and the
 theorem on embedded minimal disc proved by Tobias Ekholm, 
 Brian White
-and Daniel Wienholtz \cite[in][]{EWW}.
+and Daniel Wienholtz \cite[see][]{EWW}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -439,7 +447,7 @@ and Daniel Wienholtz \cite[in][]{EWW}.
 \end{lpic}
 \end{wrapfigure}
 
-\parbf{Oval in oval.}
+\parbf{Oval in an oval.}
 Choose the a chord which minimizes (or maximizes) the ratio, 
 in which it divides the bigger oval.
 
@@ -518,7 +526,7 @@ the given solution is based on the idea of David Eppstein \cite[see][]{zeb}.
 Denote the linked circles by $\alpha$ and $\beta$. 
 
 Fix a point $x\in\alpha$. 
-Note that one can find another point $y\in\alpha$ such that the interval 
+Note that there is a point $y\in\alpha$ such that the line segment 
 $[xy]$ intersects $\beta$, say at the point $z$. 
 Indeed, if this is not the case, 
 rescaling $\alpha$ with center $x$ shrinks $\alpha$ to $x$ without crossing $\beta$.
@@ -549,7 +557,7 @@ Hence the result follows.\qeds
 
 This problem was proposed by Frederick Gehring \cite[see 7.22 in][]{gehring};
 solutions and generalizations are surveyed in \cite{mateljevic}. 
-The presented the solution given by Michael Edelstein and Binyamin Schwarz in \cite{edelstein-schwatz}.
+The presented solution is given by Michael Edelstein and Binyamin Schwarz \cite[see][]{edelstein-schwatz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Surrounded area.}
@@ -566,10 +574,9 @@ Hence the statement follows.\qeds
 
 
 The Kirszbraun theorem appears in his thesis \cite[see][]{kirszbraun}
-and rediscovered later by Frederick Valentine in \cite{valentine}.
+and rediscovered later by Frederick Valentine \cite[see][]{valentine}.
 An interesting survey is given by 
-Ludwig Danzer, Branko Gr{\"u}nbaum  and Victor Klee
-in \cite{danzer-grunbaum-klee}.
+Ludwig Danzer, Branko Gr{\"u}nbaum  and Victor Klee \cite[see][]{danzer-grunbaum-klee}.
 
 
 
@@ -625,8 +632,8 @@ By construction the boundary of $D$ contains no simple curves. \qeds
 In fact, the only curves in the boundary of the constructed set are constant, compare to the problem \emph{Simple path} on page~\pageref{Simple path}.
 
 The proof use so called on \emph{pseudo-arc} 
-constructed by Bronis\l{}aw Knaster in \cite{knaster}.
-The construction is similar to the construction of the Cantor set.
+constructed by Bronis\l{}aw Knaster \cite[see][]{knaster}.
+The proof resembles construction of the Cantor set.
 Here are few similar problems:
 
 }
@@ -639,7 +646,7 @@ Here are few similar problems:
  Construct three open discs in $\RR^2$ which have the same boundary.
 \end{pr}
 
-These discs are called \index{lakes of Wada}\emph{lakes of Wada}; it is  described by Kuniz\^{o} Yoneyama in \cite{yoneyama}.
+These discs are called \index{lakes of Wada}\emph{lakes of Wada}; it is  described by Kuniz\^{o} Yoneyama \cite[see][]{yoneyama}.
 
 \begin{pr}
  Construct a Cantor set in $\RR^3$ with non simply connected complement.
@@ -700,8 +707,8 @@ it also appears in the book of Kenneth Falconer \cite[see Exercise 3.5 in][]{fal
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{wrapfigure}{o}{38 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/typical-curve(1)}
+\begin{wrapfigure}[9]{o}{38 mm}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/typical-curve(1)}
 \lbl[rt]{20,20;$\gamma$}
 \end{lpic}
 \end{wrapfigure}
@@ -736,9 +743,6 @@ Therefore
 \[\Omega=\bigcap_k\Omega_k\]
 is a G-delta dense set.
 Hence the statement follows.\qeds
-  
-It worth to note that the curvature of a convex curve is defined almost everywhere;
-it follows since monotonic functions are differentiable almost everywhere.
 
 This problem states that typical convex curves have unexpected property.
 In fact, this is very common situation --- typically we do not see the typical objects and these object often have surprising properties.
@@ -747,12 +751,12 @@ For example, as it was proved by
 Bernd Kirchheim, 
 Emanuele Spadaro  
 and 
-L{\'a}szl{\'o} Sz{\'e}kelyhidi in \cite{KSS},
-a typical 1-Lipschitz maps from the plane to itself preserves the length of all curves.
+L{\'a}szl{\'o} Sz{\'e}kelyhidi,
+a typical 1-Lipschitz maps from the plane to itself preserves the length of all curves \cite[see][]{KSS}.
 The same way one could show that boundary of typical open set in the plane contain no nontrivial curves in their boundary, 
 altho the construction of a concrete example is not trivial;
 see ``Crooked circle'', page \pageref{Crooked circle}.
-More problems of that type are surveyed by Tudor Zamfirescu in \cite{zamfirescu}.
+More problems of that type are surveyed by Tudor Zamfirescu \cite[see][]{zamfirescu}.
 
 
 
