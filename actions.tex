@@ -18,14 +18,15 @@ Prove that $x_n$ is bounded.
 \parit{Semisolution.}
 Note that we can assume that the orbit $\{x_n\}$ is dense in $X$;
 otherwise pass to the closure of the orbit.
-In particular, we can choose a finite number of positive integer values $n_1$, $n_2,\dots,n_k$
-such that the set of points $\{x_{n_1},x_{n_2},\dots,x_{n_k}\}$ is a $\tfrac1{10}$-net for the ball $B(x_0,10)$;
+In particular, we can choose a finite number of positive integer values $n_1,\dots,n_k$
+such that the set of points $\{x_{n_1},\dots,x_{n_k}\}$ is a $\tfrac1{10}$-net for the ball $B(x_0,10)$;
 that is, for any $x\in B(x_0,10)$ there is $x_{n_i}$ such that
 \[|x-x_{n_i}|<\tfrac1{10}.\]
 
 Assume $x_m\in B(x_0,1)$ for some $m$.
-Then \[B(x_m,10)=f^m( B(x_0,10))\supset B(x_0,1).\] 
-In particular, $\{x_{m+n_1},x_{m+n_2},\dots,x_{m+n_k}\}$ is a $\tfrac1{10}$-net for the ball $B(x_0,1)$
+Then 
+\[B(x_m,10)=f^m( B(x_0,10))\supset B(x_0,1).\] 
+In particular, $\{x_{m+n_1},\dots,x_{m+n_k}\}$ is a $\tfrac1{10}$-net for the ball $B(x_0,1)$
 Therefore $x_{m+n_i}\in B(x_0,1)$ for some $i\z\in\{1,\dots,k\}$.
 
 Set $N=\max_i\{n_i\}$.
@@ -71,7 +72,7 @@ is obtained by gluing together all four ends of two unit segments.
 }
 
 \begin{pr}
-Prove that any compact length-metric space $K$ 
+Show that any compact length-metric space 
 is a Gromov--Hausdorff limit of a sequence of
 metric covers  
 \[(\widetilde \Phi_n, \tilde d/n)\to(\Phi,d/n),\]

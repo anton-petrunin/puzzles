@@ -1,3 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Curvature hollow}
+\label{Curvature hollow}
+
+\begin{pr}
+Construct a Riemannian metric on $\RR^3$ 
+which is Euclidean outside of an open bounded set $\Omega$ 
+and with negative scalar curvature in $\Omega$.
+\end{pr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Curvature hollow.}
+An example can be found among the  metrics with isometric $\mathbb{S}^1$ action which fix a line.
+
+\medskip
+
+First note that it is easy to construct such metric on the connected sum
+$\RR^3\#\mathbb{S}^2\times\mathbb{S}^1$.
+Indded make two holes in $\RR^3$, deform the obtained space conformally so that scalar curvature drops and the two holes fit and glue the holes to each other.
+Further, note that such metric can be constructed in such a way that it has a closed geodesic $\gamma$ with trivial holonomy and with constant negative curvature in its a tubular neighborhood.
+
+Cut tubular neighborhood $V\simeq\mathbb{D}^2\times \mathbb{S}^1$ of $\gamma$ 
+and glue in the product $W\simeq\mathbb{S}^1\times \mathbb{D}^2$ with the swapped factors. 
+Note that after this surgery we get back $\RR^3$.
+
+It remains to construct a metric $g$ on $W$ with negative scalar curvature which 
+is identical to the original metric on $V$ near its boundary.
+The needed space $(W,g)$ can be found among wrap products $\mathbb{S}^1\times_f \mathbb{D}^2$ [see page~\pageref{page:warped product}].
+\qeds
+
+
+This construction was given by Joachim Lohkamp \cite[see][]{lohkamp},
+he describes there yet an other equally simple construction.
+In fact,
+his constructions produce 
+$\mathbb{S}^1$-invariant hollows 
+with negative Ricci curvature.
+
+On the other hand,
+there are no hollows with 
+positive scalar curvature and negative sectional curvature.
+The former is equivalent to the positive mass conjecture \cite[see][and the references therein]{witten}
+and the latter is an easy exercise.
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Almost flat manifold\easy}
+\label{almost-flat}
+
+\emph{Nil-manifolds} form the minimal class of manifolds which includes a point, and has the following property:  
+the total space of any principle $\mathbb{S}^1$-bundle over a nil-manifold is a nil-manifold. 
+
+The nil-manifolds can be also defined as the quotients of a connected nilpotent Lie group by a lattice.
+
+A compact Riemannian manifold $M$ is called $\eps$-flat if its sectional curvature at all points in all directions lie in the interval $[-\eps,\eps]$. 
+
+The main theorem of Gromov in \cite{gromov-almost-flat}, 
+states that for any positive integer $n$ there is $\eps>0$ such that any $\eps$-flat compact $n$-dimensional manifold with diameter at most $1$ admits a finite cover by a nil-manifold.
+A more detailed proof can be found in \cite{buser-karcher}
+and a more precise statement can be found in \cite{ruh}.
+
+\begin{pr}
+Given $\eps>0$ construct a compact Riemannian manifold $M$ of sufficiently large dimension which admits a Riemannian metric with diameter $\le 1$ and sectional
+curvature $|K|<\eps$,
+but does not admit a finite covering by a nil-manifold.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Almost flat manifold.}
+An example can be found among solve manifolds;
+that is, quotients of solvable lie group by a lattice.
+In fact torus bundles over circle circles are sufficient.
+
+\medskip
+
+A torus bundle $\TT^m\to E\to\mathbb{S}^1$ is obtained by taking $\TT^m\times [0,1]$ and gluing $\TT^m\times 0$ to $\TT^m\times 1$ along the map given by a matrix $A\in \SL(\ZZ,n)$.
+
+The matrix $A$ has to meet two conditions.
+
+On one hand, we need to make sure that the fundamental group of $E$ does not contain a nilpotent group of finite index.
+This can be achieved by making at least one of eigenvalues of $A$ different from 1 by absolute value.
+
+On the other hand the space $E$ has to admit a metric with small curvature and diameter, this can be achieved by making all 
+eigenvalues of $A$ close enough to 1 by absolute value.
+So the $n{\times}n$ matrix 
+\[A=
+\left(
+\begin{matrix}
+0&0&\dots&0&1&1
+\\
+1&0&\dots&0&0&0
+\\
+\vdots&\vdots&\ddots&\vdots&\vdots&\vdots
+\\
+0&0&\dots&0&0&0
+\\
+0&0&\dots&1&0&0
+\\
+0&0&\dots&0&1&0
+\end{matrix}
+\right).
+\]
+for large enough $n$ does the job;
+its characteristic polynomial is 
+\[\lambda^n+\lambda+1.\qedsin\] 
+\medskip
+
+\label{page-sol:almost-flat}
+This example was constructed 
+by Galina Guzhvina \cite[see][]{guzhvina}.
+
+It is expected that for small enuf $\eps>0$,
+a Riemannian manifold $(M,g)$ of any dimension 
+with  $\diam(M,g)\le 1$ and $|K_g|\le \eps$ cannot be simply connected,
+here $K_g$ denotes the sectional curvature of $g$.
+
+The latter does not hold with the condition $K_g\le \eps$ instead.
+In fact, 
+for any $\eps>0$,
+there is a metric $g$ on $\mathbb{S}^3$ 
+with $K_g\le \eps$ and $\diam(\mathbb{S}^3,g)\le 1$.
+This example was originally constructed by Mikhael Gromov in \cite{gromov-almost-flat}; 
+a simplified proof was given by 
+Peter Buser
+and Detlef Gromoll in \cite{buser-gromoll}.
+
+
+
+
+
+
+
+
+
+
 
 
 The space $P$ can be found among the spherical polyhedral spaces which admit
