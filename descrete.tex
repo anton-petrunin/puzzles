@@ -101,7 +101,7 @@ such that
 
 Let  $W_0$ be a convex body in $\RR^m$.
 We say that $k$ is the \index{kissing number}\emph{kissing number} of $W_0$ (briefly $k=\mathop{\rm kiss}W_0$)
-if $k$ the maximal integer such that there are $k$ bodies $W_1,W_2,\dots,W_k$ such that 
+if $k$ the maximal integer such that there are $k$ bodies $W_1,\dots,W_k$ such that 
 (1) each $W_i$ is congruent to $W_0$,
 (2) $W_i\cap W_0\not=\emptyset$ for each $i$ 
 and (3) no pair $W_i,W_j$ has common interior points.
@@ -172,14 +172,14 @@ which can help you to solve this problem.
 Assume $P$ is a \index{simple polyhedron}\emph{simple} Euclidean $m$-dimensional polyhedron;
 that is, every vertex of $P$ exactly $m$ facets are meeting.
 Denote by $f_k$ the number of $k$-dimensional faces of $P$;
-the array of integers $(f_0,f_1,\dots f_m)$ is called $f$-vector of $P$.
+the array of integers $(f_0,\dots f_m)$ is called $f$-vector of $P$.
 
-Fix an order of the vertices $v_1,v_2,\dots, v_{f_0}$
+Fix an order of the vertices $v_1,\dots, v_{f_0}$
 of $P$ so that for some linear function $\ell$, we have $\ell(v_i)<\ell(v_j)\ \Leftrightarrow\ i<j$.
 The \index{index of vertex}\emph{index} of the vertex $v_i$ 
 is defined as the number of edges $[v_iv_j]$ such that $i<j$. 
 The number of vertices of given index $k$ will be denoted as $h_k$.
-The array of integers $(h_0,h_1,\dots h_m)$ is called $h$-vector of $P$.
+The array of integers $(h_0,\dots h_m)$ is called $h$-vector of $P$.
 Clearly $h_0=h_m=1$ and 
 \[h_k\ge 0\quad\text{for all}\quad k.\leqno({*})\]
 
@@ -395,7 +395,7 @@ these include Alexandrov spaces with curvature bounded below.
 \parbf{Kissing number.}
 Fix the dimension $m$.
 Set $n=\mathop{\rm kiss} B$.
-Let $B_1,B_2,\dots, B_n$ the copies of the ball $B$  
+Let $B_1,\dots, B_n$ the copies of the ball $B$  
 which touch $B$ and have no common interior points.
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
 Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
@@ -452,13 +452,13 @@ The latter was shown by Maria Belk and Robert Connelly \cite[see][]{belk-connell
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Cube.}
 Consider the cube $[-1,1]^m\subset \RR^m$.
-Any vertex this cube has the form $\bm{q}=(q_1,q_2,\dots,q_m)$,
+Any vertex this cube has the form $\bm{q}=(q_1,\dots,q_m)$,
 where  $q_i=\pm1$.
 
 For each vertex $\bm{q}$,
 consider the intersection of the corresponding octant with the unit sphere;
 that is, the set
-\[V_{\bm{q}}=\set{(x_1,x_2,\dots,x_m)\in\mathbb{S}^{m-1}}{q_i\cdot x_i\ge 0\ \text{for each}\ i}.\]
+\[V_{\bm{q}}=\set{(x_1,\dots,x_m)\in\mathbb{S}^{m-1}}{q_i\cdot x_i\ge 0\ \text{for each}\ i}.\]
 
 Consider the set $\mathcal{A}\subset\mathbb{S}^{m-1}$
 formed by the union of all the sets $V_{\bm{q}}$ for black $\bm{q}$.
@@ -595,7 +595,7 @@ From the projective model of hyperbolic plane,
 one can see that for any simple compact hyperbolic polyhedron there is a simple Euclidean polyhedron with the same combinatorics. 
 In particular Dehn--Sommerville equations hold for $P$.
 
-Denote by $(f_0,f_1,\dots f_m)$ and $(h_0,h_1,\dots h_m)$ the $f$- and $h$-vectors of $P$.
+Denote by $(f_0,\dots f_m)$ and $(h_0,\dots h_m)$ the $f$- and $h$-vectors of $P$.
 Recall that $h_i\ge 0$ for any $i$ and $h_0=h_m=1$.
 By Dehn--Sommerville equations, we get
 \[f_2> \tfrac{m-2}4\cdot f_1.
