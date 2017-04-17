@@ -15,7 +15,7 @@ will be denoted as
 |x-y|_X,
 \]
 the latter notation is used to emphasize that $x$ and $y$ are points in the space $X$.
-\item A metric space $X$ is called {}\emph{length-metric space} if for any $\eps>0$ two points $x,y\in X$ can be connected by curve $\alpha$
+\item A metric space $X$ is called {}\emph{length-metric space} if for any $\eps>0$ and any two points $x,y\in X$ can be connected by a curve $\alpha$
 such that
 \[\length\alpha<|x-y|_X+\eps.\]
 In this case the metric on $X$ is called a \index{length-metric}\emph{length-metric}.
@@ -34,26 +34,26 @@ a subset of a compact length-metric spaces.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parit{Semisolution.}
 Let $K$ be a compact metric space.
-Denote by $B(K,\RR)$ the space of real-valued bounded functions on $K$
+Denote by $\mathcal{B}(K,\RR)$ the space of real-valued bounded functions on $K$
 equipped with sup-norm; 
 that is, 
 \[|f|=\sup\set{|f(x)|}{x\in K}.\]
 
-Note that the map $K\to B(K,\RR)$, defied by $x\mapsto \dist_x$
+Note that the map $K\to \mathcal{B}(K,\RR)$, defied by $x\mapsto \dist_x$
 is a distance preserving embedding.
-Indeed,cby triangle inequality we have
+Indeed, by triangle inequality we have
 \[|\dist_x(z)-\dist_y(z)|\le |x-y|_K\]
 for any $z\in K$
 and the equality holds for $z=x$.
 
-In other words we can (and will) consider $K$ as a subspace of $B(K,\RR)$.
+In other words, we can and will consider $K$ as a subspace of $\mathcal{B}(K,\RR)$.
 
-Denote by $W$ the linear convex hull of the image $K$ in $B(K,\RR)$;
+Denote by $W$ the linear convex hull of $K$ in $\mathcal{B}(K,\RR)$;
 that is, $W$ is the intersection of all closed convex subsets containing $K$. 
-Clearly $W$ is a complete subspace of $B(K,\RR)$.
+Clearly $W$ is a complete subspace of $\mathcal{B}(K,\RR)$.
 
 Since $K$ is compact we can choose a finite $\eps$-net $K_\eps$ in $K$.
-Evidently convex hull $W_\eps$ of $K_\eps$ is compact and $W$ lies in the $\eps$-neighborhood of $W_\eps$.
+Evidently the convex hull $W_\eps$ of $K_\eps$ is compact and $W$ lies in the $\eps$-neighborhood of $W_\eps$.
 Therefore, $W$ admits a compact $\eps$-net for any $\eps>0$.
 That is, $W$ is totally bounded and complete and therefore compact.
 
@@ -72,14 +72,14 @@ in the same paper he introduced metric spaces \cite[see][]{frechet}.
 \subsection*{Non-contracting map\easy}
 \label{Noncontracting map}
 
-A map $f\: X\to Y$ between metric spaces is called \index{non-contracting map}\emph{non-contracting} if
+A map $f\: X\to Y$ between metric spaces is called \index{non-contracting map}\emph{distance non-contracting} if
 \[|f(x)-f(x')|_Y\ge |x-x'|_X\]
 for any two points $x,x'\in X$.
 
 \begin{pr}
 Let $K$  be a compact metric space and
 \[f\:K\z\to K\] 
-be a non-contracting map.
+be a distance non-contracting map.
 Prove that $f$ is an isometry.
 \end{pr}
 
@@ -211,8 +211,7 @@ that is, the orthogonal projection of $X$ to $H$
 and $X^V$ denotes the vertical part of $X$;
 so, $X^V+X^H=X$.
 
-In addition we need to add the a condition
-to ensures the following properties 
+In addition we need to add the a condition to ensure the following properties 
 \begin{itemize}
 \item The sub-Riemannian metric induce the original topology on the manifold. 
 In particular, if $M$ is connected, then the distance cannot take infinite values.
@@ -264,8 +263,9 @@ Assume that $f\:(\RR^m,\rho)\to(\RR^m,\rho)$ is an isometry which fixes two dist
 Show that $f$ fixes the line segment between $a$ and $b$.
 \end{pr}
 
-Evidently $f$ maps the line segment to a minimizing geodesic connecting $a$ to $b$ in $(\RR^m,\rho)$,
-but in general there might be many minimizing geodesics connecting $a$ to $b$ in $(\RR^m,\rho)$.
+Evidently $f$ maps the line segment $[ab]$ to a minimizing geodesic connecting $a$ to $b$ in $(\RR^m,\rho)$.
+However, in general there might be many minimizing geodesics connecting $a$ to $b$ in $(\RR^m,\rho)$.
+The problem states that $[ab]$ is mapped to itself.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -279,7 +279,7 @@ set
 \[\rho(x,y)=\mu[B(x,\tfrac \pi2)\backslash B(y,\tfrac\pi2)].\]
 
 Show that $\rho$ is a length-metric on $\mathbb{S}^2$
-and moreover, the images of geodesics in this metric are arcs of great circles in $\mathbb{S}^2$.
+and moreover, thegeodesics in $(\mathbb{S}^2,\rho)$ run along the great circles of $\mathbb{S}^2$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -289,8 +289,9 @@ and moreover, the images of geodesics in this metric are arcs of great circles i
 \begin{pr}
 Let $\rho$ be a length-metric on $\RR^m$, 
 which is bi-Lipschitz equivalent to the canonical metric.
-Assume that every geodesic $\gamma$ in $(\RR^d,\rho)$ is linear 
-(that is, $\gamma(t)=v+w\cdot t$ for some $v,w\in\RR^m$).
+Assume that every geodesic $\gamma$ in $(\RR^d,\rho)$ is \emph{affine};
+that is, $\gamma(t)=v+w\cdot t$ for some $v,w\in\RR^m$.
+
 Show that $\rho$ is induced by a norm on $\RR^m$.
 \end{pr}
 
@@ -333,7 +334,8 @@ $$|f(x)-h(x)|\le C$$
 for any $x\in\RR^m$ and a real constant $C$.
 \end{pr}
 
-The expected solution requires a corollary of the theorem  of Laurence Siebenmann \cite[see][]{siebenmann}.
+The expected solution requires so called \emph{gluing theorem},
+a corollary of the theorem proved by Laurence Siebenmann \cite[see][]{siebenmann}.
 It states that 
 if $V_1, V_2\subset\RR^m$ are open
 and the two embedding $f_1\:V_1\to\RR^m$ and $f_2\:V_2\to\RR^m$ 
@@ -430,12 +432,12 @@ This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[se
 I learned this proof from Travis Morrison, 
 a students in my MASS class at Penn State, Fall 2011.
 
-As an easy corollary one can get that any surjective non-expanding map maps from compact metric space to it self is an isometry.
+As an easy corollary one can get that any surjective non-expanding map maps from compact metric space to itself is an isometry.
 The following problem due to Aleksander Ca{\l}ka \cite[see][]{calka:loc-isom};
 it is closely related but more involved. 
 
 \begin{pr}
-Show that any local isometry from a connected compact metric space to it self is a homeomorphism. 
+Show that any local isometry from a connected compact metric space to itself is a homeomorphism. 
 \end{pr}
 
 
@@ -445,7 +447,7 @@ Show that any local isometry from a connected compact metric space to it self is
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Finite-whole extension.}
 Given a finite set $F\subset X$,
-denote by $\mathfrak{S}_F$ the set of all non-expanding map maps $h\: F\to Y$ which agree with $f$ on $F\cap A$.
+denote by $\mathfrak{S}_F$ the set of all non-expanding maps $h\: F\to Y$ which agree with $f$ on $F\cap A$.
 For $x\in F$, consider the set
 \[K(F,x)=\set{h(x)\in Y}{h\in \mathfrak{S}_F}.\]
 
@@ -463,7 +465,8 @@ that is, $f$ can not be extended to a bigger set in such a way that it satisfies
 
 Arguing by contradiction, assume $A\ne X$; fix $x\in X\backslash A$.
 Given $y\in Y$ there is a finite set $F\ni x$ such that $y\notin K(F,x)$.
-Or equivalently the intersection of all $K(F,x)$ for all finite sets $F$ including $x$ is empty.
+Or equivalently,
+\[\bigcap_{F\ni x}K(F,x)=\emptyset.\]
 
 By finite intersection property, 
 we can choose a finite collection of finite sets $F_1,\dots F_n$ containing $x$ such that 
@@ -595,6 +598,8 @@ Therefore $h(z)$ lies on the distance at least $\tfrac a2$ from $\alpha$, $\beta
 and therefore from $\gamma$.
 Hence the claim $({*})$ follows.
 
+\medskip
+
 Fix a point $p\in M$.
 Let us cover $M$ by the connected components of the inverse images 
 $\dist_p^{-1}((n-1,n+1))$ for all integers $n$.
@@ -647,15 +652,15 @@ such that the total length of the circles is $\ell$
 and $U$ is an open bounded set containing all the circles $c_i$.
 Note that for any $L$-Lipschitz embedding $f\:(U,\rho)\to\RR^3$ the distance from $f(c_0)$ to $f(c_n)$ is less than $L\cdot\ell$.
 
-Let us show that the $\rho$-distance from $c_0$ to $c_n$ might be much larger than $\ell$.
-Fix a line segment $[ab]$ in $\RR^3$.
+The $\rho$-distance from $c_0$ to $c_n$ might be much larger than $L\cdot\ell$.
+Indeed, fix a line segment $[ab]$ in $\RR^3$.
 Modify 
 the length-metric on $\RR^3$ in a small neighborhood of $[ab]$
 so that there is a chain $(c_i)$ of circles as above,
 which goes from $a$ to $b$ 
 such that
 (1) the total length, say $\ell$, 
-of $(c_i)$ is arbitrary small,
+of all the circles $c_i$ is arbitrary small,
 but 
 (2) the obtained metric $\rho$ 
 is arbitrary close to the canonical, say
@@ -720,7 +725,7 @@ and David Shoenthal \cite[see][]{BIS}.
 It is expected that any metric on $\RR^2$ admits local Lipschitz embeddings into the Euclidean plane.
 Also, it seems feasible that any metric on $\RR^3$ admits a locally Lipschitz embedding into $\RR^4$.
 
-Note that any metric on $\RR^3$ admits a proper locally Lipschitz map to $\RR^3$ of degree 1.
+Note that any metric on the cube in $\RR^3$ admits a proper locally Lipschitz map the unit cube of degree 1.
 Moreover one can make this map injective on any finite set of points.
 It is instructive to visualize this map for the metric as in the solution.
 
@@ -781,7 +786,7 @@ can be used to prove some seemingly irrelevant statements.
 Here is one example based on the observation that Weyl curvature tensor 
 is vanishing on hypersurfaces in the Euclidean space.
 \begin{itemize}
-\item Let $M$ be a Riemannian manifold diffeomorphic to the $n$-sphere. 
+\item Let $M$ be a Riemannian manifold diffeomorphic to the $m$-sphere. 
 Show that there is a Riemannian manifold $M'$ arbitrary close to $M$ in Lipschitz metric and vanishing Weyl curvature tensor.
 \end{itemize}
 
@@ -792,20 +797,28 @@ Assume contrary;
 let $f\:\RR^2\to \RR$ be a length-preserving map.
 
 Note that $f$ is Lipschitz.
-Therefore by Rademacher's theorem \cite[see][]{rademacher}, $f$ is differentiable almost everywhere.
+Therefore by Rademacher's theorem \cite[see][]{rademacher}, the differential $d_xf$ is defined for  almost all $x$.
 
 Fix a unit vector $u$.
 Given $x\in\RR^2$,
 consider the path $\alpha_x(t)\z=x+t\cdot u$ defined for $t\in [0,1]$.
-Note that for almost all $x$, the equality 
+Note that  
 \[\alpha'_x(t)=(d_{\alpha_x(t)}f)(u)\]
-holds for almost all $t$.
+holds for almost all $x$ and $t$.
 It follows that 
 \[\length(f\circ\alpha_x)=\int\limits_0^1 |(d_{\alpha_x(t)}f)(u)| \cdot dt\]
 for almost all $x$.
 
 Therefore $|d_xf(v)|=|v|$ for almost all $x,v\in\RR^2$.
-In particular there is $x\in\RR^2$ such that the differential $d_xf$ is defined and has rank 2, a contradiction. \qeds 
+In particular there is $x\in\RR^2$ such that the differential $d_xf$ is defined 
+and 
+\[|d_xf(e_1)|=|e_1|,
+\quad
+|d_xf(e_2)|=|e_2|,
+\quad
+|d_xf(e_1+e_2)|=|e_1+e_2|\]
+for a basis $(e_1,e_2)$ of $\RR^2$.
+It follows that $d_xf$ has rank 2, a contradiction. \qeds 
 
 
 The idea above can be also used to solve the following problem.
@@ -848,6 +861,7 @@ $$|f_{n+1}(0)|=2\cdot|f_n(0)|.$$
 Therefore  
 if $f(0)\ne 0$,
 then $|f_n(0)|\to\infty$ as $n\to\infty$.
+
 On the other hand, since $f_n$ is isometry and $f(a)=a$,
 we get $|f_n(0)|\le 2\cdot |a|$, a contradiction.
 \qeds
@@ -875,6 +889,13 @@ does not overlap
 $B(y,\tfrac\pi2)\backslash B(z,\tfrac\pi2)$.
 
 
+\begin{wrapfigure}{r}{30 mm}\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/B1B2B3(1)}
+\lbl{25,7,60;$B(x,\tfrac\pi2)$}
+\lbl{6,7,-60;$B(y,\tfrac\pi2)$}
+\lbl{15,23;$B(z,\tfrac\pi2)$}
+\end{lpic}
+\end{wrapfigure}
+
 Note that we get equality in $(*)$ if and only if $y$ lies on the great circle arc from $x$ to $z$.
 Therefore the second statement follows.\qeds
 
@@ -899,12 +920,13 @@ Note that
 |\lambda|\cdot\|\bm{v}\|_{\bm{x}}\]
 for any $\bm{x},\bm{v}\in\RR^m$ and $\lambda\in\RR$.
 
+Denote by $|x-y|$ the Euclidean distance between the points $x$ and~$y$.
 Since $\rho$ is bi-Lipschitz to $|{*}-{*}|$,
 applying triangle inequality twice for the points $\bm{x}$, $\bm{x}+\lambda\cdot\bm{v}$, $\bm{x}'$ and $\bm{x}'+\lambda\cdot\bm{v}$, we get
 \[
-\|\lambda\cdot\bm{v}\|_{\bm{x}}
+\bigl|\|\lambda\cdot\bm{v}\|_{\bm{x}}
 -
-\|\lambda\cdot\bm{v}\|_{\bm{x}'}
+\|\lambda\cdot\bm{v}\|_{\bm{x}'}\bigr|
 \le 
 C\cdot |\bm{x}-\bm{x'}|\]
 for any $\bm{x},\bm{x'},\bm{v}\in\RR^m$, 
@@ -921,15 +943,14 @@ The idea is due to Thomas Foertsch
 and Viktor Schroeder \cite[see][]{foertsch-schroeder}.
 A more general statement was proved by Petra Hitzelberger and Alexander Lytchak \cite[see][]{hitzelberger-lytchak}.
 Namely they show that 
-if any pair of points in a geodesic metric space $X$ can be separated by an affine function,
+if any pair of points in a geodesic metric space $X$ can be separated by an \emph{affine function},
 then $X$ is isometric to a convex subset in a normed vector space.
-(A function $f\:X\to\RR$ is called affine if the composition $f\circ\gamma$ is affine for any geodesic $\gamma$ in $X$.)
+(A function $f\:X\to\RR$ is called affine if for any geodesic $\gamma$ in $X$, the composition $f\circ\gamma$ is affine.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Hyperbolic space.}
-The hyperbolic plane $\HH^2$
-can be viewed as $(\RR^2,g)$, where 
+The hyperbolic plane $\HH^2$ is isometric to $(\RR^2,g)$, where 
 \[g(x,y)=\left(\begin{matrix}
      1&0
      \\
@@ -964,7 +985,7 @@ In particular, the map $\HH^3\to\HH^2\times\HH^2$ defined as $p\mapsto (\phi(p),
 is $2^{\mp1}$-bi-Lipschitz.\qeds
 
 We used that horo-sphere in the hyperbolic space is isometric to the Euclidean plane.
-This observation appears already in the book of Nikolai Lobachevsky \cite[see 34 in][]{lobachevsky}.
+This observation was made already by Nikolai Lobachevsky \cite[see 34 in][]{lobachevsky}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Quasi-isometry of a Euclidean space.}
@@ -1061,7 +1082,7 @@ Fix an infinite sequence $a_0,a_1,\dots$ of zeros and ones.
 Given an integer $k$ cut a the upper half-plane along the line segment from $(k,0)$ to $(k,2^{m+1})$ 
 if $m$ is the maximal number such that 
 \[k\equiv a_0+2\cdot a_1+\dots+2^{m-1}\cdot a_{m-1}\pmod{2^{m}};\]
-If the equality holds for all $m$, cut the plane along the vertical half-plane from $(k,0)$.
+If the equality holds for all $m$, cut the plane along the vertical half-line from $(k,0)$.
 
 Note that all the obtained spaces, independently from the sequence $(a_n)$, meet the conditions for the point $x_0=(\tfrac12,0)$.
 
@@ -1072,4 +1093,4 @@ Note yet that the resulting spaces for two sequences $(a_n)$ and $(a'_n)$ are is
 \end{itemize}
 
 It remains to produce two sequences which do not have these identities for all large $n$; 
-two random sequences do the job with probability one.\qeds
+two random sequences of zeros and ones do the job with probability one.\qeds
