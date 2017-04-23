@@ -43,7 +43,7 @@ It remains to observe that each homeomorphism $h_i$ is isotopic to the identity 
 
 The problem is due to Victor Klee \cite[see][]{klee};
 the same idea used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite[see][]{doyle}.
-The problem ``Monotonic homotopy'' on page \pageref{mono-homotopy} is closely related.
+The problem ``Monotonic homotopy'' on page \pageref{mono-homotopy} looks similar.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Immersed disks}\label{Immersed disks}
@@ -61,7 +61,7 @@ into the plane which coincide near the boundary.
 \subsection*{Positive Dehn twist}\label{Positive Dehn twist} 
 
 \begin{wrapfigure}{r}{48 mm}
-\begin{lpic}[t(-8 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/dehn-twist(1)}
+\begin{lpic}[t(-10 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/dehn-twist(1)}
 \lbl[b]{24,15;$h$}
 \lbl{24,14;$\longrightarrow$}
 \end{lpic}
@@ -84,9 +84,9 @@ then the Dehn twist described above is called {}\emph{positive}.
 
 \begin{pr}
 Let $\Sigma$ be an compact oriented surface with nonempty boundary.
-Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to identity rel. boundary.
+Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to the identity rel. boundary.
 
-In other words, any product of positive Dehn twists is nontrivial in the mapping class group of $\Sigma$.
+In other words, any product of positive Dehn twists represents a nontrivial class in the mapping class group of $\Sigma$.
 \end{pr}
 
 
@@ -102,6 +102,9 @@ to $U$ which sends its vertex to $p$.
 \begin{pr}  
 Show that any two conic neighborhoods of one point are homeomorphic to each other.
 \end{pr}
+
+Note that two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Sigma_2)$ might be homeomorphic while $\Sigma_1$ and $\Sigma_2$ are not;
+existence of such examples follow from the double suspension theorem.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Unknots\easy}\label{No knots}
@@ -218,21 +221,23 @@ Consider the universal covering
 $f\:\tilde\Sigma\z\to\Sigma$.
 The surface $\tilde \Sigma$ comes with the orientation induced from $\Sigma$.
 
+%\begin{center}
+\begin{wrapfigure}{r}{47 mm}
+\begin{lpic}[t(-3 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn()}
+\lbl[t]{13,1.5;$x_0$}
+\lbl[bl]{23,20;$y$}
+\lbl[br]{4,17;$z$}
+\lbl[]{33,5;$\tilde \Sigma$}
+\end{lpic} 
+\end{wrapfigure}
+%\end{center}
+
 Fix a point $x_0$ on the boundary $\partial \tilde \Sigma$.
 Given two other points $y$ and $z$ in $\partial \tilde \Sigma$ we will write
 $z\succ y$ if $y$ lies on the right side from some simple curve from $x_0$ to $z$ in $\tilde\Sigma$.
 Note that  $\succ $ defines a linear order on $\partial\tilde\Sigma\backslash\{x_0\}$.
 We will write $z \succeq y$ 
 if $z\succ y$ or $z=y$.
-
-\begin{center}
-\begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn()}
-\lbl[t]{13,1.5;$x_0$}
-\lbl[bl]{23,20;$y$}
-\lbl[br]{4,17;$z$}
-\lbl[]{33,5;$\tilde \Sigma$}
-\end{lpic} 
-\end{center}
 
 Note that any homeomorphism $h\:\Sigma\to\Sigma$ which is identity on the boundary
 lifts to the unique homeomorphism $\tilde h\:\tilde \Sigma\to\tilde\Sigma$ 
@@ -271,13 +276,13 @@ In particular, if $x$ lies on the boundary then $\tilde h(x)$ lies on the right 
 
 \begin{center}
 \begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn-annulus(1)}
-\lbl[t]{54.5,-.5;$x_0$}
-\lbl[r]{7,13.5;{\small $x$}}
-\lbl[r]{36.5,13.5;{\small $\tilde h(x)$}}
-\lbl[]{17,4.5;$\tilde \Sigma$}
-\lbl[]{7,9.5;{\small $f^{-1}(U_\gamma)$}}
-\lbl[b]{60,10;{\small $f^{-1}(\gamma)$}}
-\lbl[b]{56,5.5,-10;{\tiny $\phi(x)$}}
+\lbl[t]{58.5,.5;$x_0$}
+\lbl[rb]{8,21;$x$}
+\lbl[rb]{41,21;$\tilde h(x)$}
+\lbl[]{17,6;$\tilde \Sigma$}
+\lbl[]{7,14;$f^{-1}(U_\gamma)$}
+\lbl[b]{75,15;$f^{-1}(\gamma)$}
+\lbl[b]{60.3,6.3,-12;{\small $\phi(x)$}}
 \end{lpic} 
 \end{center}
 
@@ -287,10 +292,12 @@ In this case $\tilde \Sigma$ is a strip between two parallel lines in the plane,
 \qeds
 
 The problem was suggested by Rostislav Matveyev.
+It is instructive to solve the following problem.
 
-The statement does not hold
-for surfaces without boundary.
-It is instructive to find a counterexample.
+\begin{pr}
+Construct a composition of positive Dehn twists on a compact oriented surface witout boundary which is homotopic to the identity. 
+\end{pr}
+
 
 
 
@@ -312,23 +319,18 @@ $f_n(k)=f_m(k)$ for any $k\in K$ and $m\ge n$.
 
 Note that once such sequence is constructed, $f\:V\to W$ defined as $f(v)=f_n(v)$ for all large values of $n$ gives the needed homeomorphism.
 
-The sequence $f_n$ can be constructed recursively, setting
+The sequence $f_n$ can be constructed recursively
 \[f_{n+1}=\Psi_n\circ f_n\circ \Phi_n,\]
 where $\Phi_n\:V\to V$ 
 and $\Psi_n\:W\to W$ 
 are homeomorphisms
 of the form 
-\[\Phi_n(x)=\phi_n(x)\cdot x\quad \text{and}\quad \Phi_n(x)=\psi_n(x)\cdot x,\]
-where $\phi_n\:V\to \RR_+$, $\psi_n\:W\to \RR_+$ are suitable continuous functions 
-and 
-``$\cdot$'' denotes the ``multiplication'' in the cone structures of $V$ and $W$ correspondingly.\qeds
+\[\Phi_n(x)=\phi_n(x)\ast x\quad \text{and}\quad \Phi_n(x)=\psi_n(x)\star x,\]
+where $\phi_n\:V\to \RR_+$, $\psi_n\:W\to \RR_+$ are suitable continuous functions;
+``$\ast$'' and ``$\star$'' denote the {}\emph{multiplication} in the cone structures of $V$ and $W$ correspondingly.\qeds
 
 
 The problem is due to Kyung Whan Kwun \cite[see][]{kwun}.
-
-Note that two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Sigma_2)$ might be homeomorphic while $\Sigma_1$ and $\Sigma_2$ are not.
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unknots.}
@@ -382,15 +384,7 @@ Hence $K_1\ncong K_2$.
 \qeds
 
 
-I learned this problem 
-from 
-Maria Goluzina around 1988 and
-I was not been able to trace its origin.
-
-
-
-
-
+I learned this problem from Maria Goluzina around 1988.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Homeomorphism of a cube.}
@@ -436,7 +430,7 @@ It remains to observe that $f\:\RR^m\to\RR^m$ is a solution.
 
 The problem is a stripped from a proof of Robion Kirby \cite[see][]{kirby}.
 The condition that face is mapped to face can be removed and 
-instead of homeomorphism one can take an embedding which is close enuf to the identity.
+instead of homeomorphism one can take an embedding which is close to the identity.
 
 An interesting twist to this idea was given by Dennis Sullivan \cite[see][]{sullivan}.
 Instead of the discrete group of motions of Euclidean space,
@@ -503,7 +497,18 @@ Therefore $h$ is a solution.
 The problem was mentioned by Frederic Le Rox \cite[see][]{rox} on a problem section at a conference in Oberwolfach, 
 where he also conjectured that this is not true for the area-preserving homeomorphisms.
 An affirmative answer to this conjecture was given by Daniel Dore, Andrew Hanlon and Sobhan Seyfaddini 
-\cite[see][]{dore-hanlon,seyfaddini}
+\cite[see][]{dore-hanlon,seyfaddini}.
+In particular it implies the following seemingly evident but nontrivial statement.
+
+\begin{pr}
+Given $\eps>0$ there is $\delta>0$ such that 
+\[\Omega\cap h(\Omega)\ne\emptyset\]
+for any topological disc $\Omega\subset \SSS^3$ with area at least $\eps$
+and 
+any area-preserving homeomorphism $h\:\SSS^2\to\SSS^2$ with displacement at most $\delta$;
+that is $|h(x)-x|_{\SSS^2}<\delta$ for any $x\in \SSS^2$. 
+\end{pr}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Simple path.}
