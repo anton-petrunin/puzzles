@@ -27,6 +27,8 @@ In particular, a {}\emph{piecewise linear homeomorphism} is a piecewise linear m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Spherical arm lemma}\label{Spherical arm lemma}
 
+Recall that a polygon without self intersections is called \index{simple polygon}\emph{simple}.
+
 \begin{pr}
 Let $A=[a_1\dots a_n]$ and $B=[b_1\dots b_n]$ be two simple spherical polygons 
 with equal corresponding sides.
@@ -50,21 +52,18 @@ Denote by $n$ the number of singular points in $\Sigma$.
 It is sufficient to show that $n=0$.
 
 Assume the contrary; that is, $n\ge 1$.
-We will arrive to a contradiction applying induction on $n$.
-The base case $n=1$ is trivial; 
-that is, $\Sigma$ cannot have single singular point.
+We can assume that $n$ takes minimal possible value.
 
-Now assume $\Sigma$ has $n>1$ singular points.
-Choose two singular points $p, q$,
-cut $\Sigma$ along a geodesic $[pq]$.
+Clearly $n>1$;
+that is, $\Sigma$ can not have single singular point.
+Therefore we can choose two singular points $p,q\in \Sigma$.
+Cut $\Sigma$ along a geodesic $[pq]$.
 The hole can be patched so that we obtain a new polyhedral space $\Sigma'$ of the same type but with $n-1$ singular points.
+Since $n$ is minimal, we arrive to a contradiction
+
 Namely, if the total angles around $p$ and $q$ are $2\cdot \pi-\alpha$ and $2\cdot \pi-\beta$ correspondingly,
 consider the spherical triangle $\triangle$ with base $|p-q|_\Sigma$ and adjusted angles $\tfrac\alpha2$, $\tfrac\beta2$. 
 The needed patch is obtained by doubling $\triangle$ along its lateral sides.
-
-
-By induction hypothesis $\Sigma'$ does not exist. 
-Hence the result follows.
 \qeds
 
 \parit{Alternative end of proof.}
@@ -119,8 +118,8 @@ $\RR^2\to\RR^2$.
 \subsection*{Closed polyhedral surface}\label{Closed polyhedral surface}
 
 \begin{pr}
-Construct a closed polyhedral surface in $\RR^3$ with nonpositive curvature;
-that is, the total angle around each vertex is at least $2\cdot\pi$.
+Construct a closed polyhedral surface $\Sigma$ in $\RR^3$ with nonpositive curvature;
+that is, the total angle around each vertex of $\Sigma$ is at least $2\cdot\pi$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -155,9 +154,10 @@ denote by $P_s$ the subset of its
 singular points.
 
 \begin{pr}
-Construct spherical polyhedral space $P$ which is homeomorphic to $\mathbb{S}^3$ such that $P_s$ is formed by a knotted circle.
-%Show that in such an example the total length of $P_s$ can be arbitrary large and the angle around $P_s$ can be made strictly less than $2\cdot\pi$.
+Construct spherical polyhedral space $P$ which is homeomorphic to $\mathbb{S}^3$ and such that $P_s$ is formed by a knotted circle.
 \end{pr}
+
+In addition the total length of $P_s$ can be made arbitrary large and the angle around $P_s$ can be made strictly less than $2\cdot\pi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Triangulation of a torus}\label{Triangulation of a torus}
@@ -189,7 +189,7 @@ Choose 100 distinct points $p_1\z\dots,p_{100}$
 on the {}\emph{moment curve} 
 \[\gamma\:t\mapsto (t,t^2,t^3,t^4)\] 
 in $\RR^4$.
-Let $P$ be the convex hull of $\{p_1,\z\dots,p_{100}\}$.
+Denote by $P$ the convex hull of $\{p_1,\z\dots,p_{100}\}$.
 
 The surface of $P$ is homeomorphic to $\mathbb{S}^2$.
 Therefore it is sufficient to show that any two vertexes of $P$ are connected by an edge.
@@ -220,7 +220,7 @@ that is, $V_v$ is the set of all points in $P$ closer to $v$ than to any other v
 Note that the triangulation can be subdivided if necessary
 so that Voronoi domain of each vertex is isometric to a convex subset in the cone with vertex corresponding to the tip.
 
-Note that the boundaries of all the Voronoi domains form a graph with straight edges.
+The boundaries of all the Voronoi domains form a graph with straight edges.
 Let us triangulate $P$ so that each triangle has such edge as the base 
 and the opposite vertex is the center of an adjusted Voronoi domain; 
 such a vertex will be called {}\emph{main} vertex of the triangle.
@@ -268,7 +268,9 @@ Svetlana Krat generalized the statement to the higher dimensions \cite[see][]{kr
 Let $a_1,\dots,a_n$
 and $b_1,\z\dots,b_n$
 be two collections of points in $\RR^2$
-such that $|a_i-a_j|\ge |b_i-b_j|$ for all pairs $i$, $j$.
+such that 
+\[|a_i-a_j|\ge |b_i-b_j|\] 
+for all pairs $i$, $j$.
 We need to construct a piecewise distance preserving map $f\:\RR^2\to\RR^2$
 such that $f(a_i)=b_i$ for each $i$.
 
@@ -316,15 +318,15 @@ Note that $|f(x)\z-b_1|=|x-b_1|$ for any $x\in E_i$.
 Denote by $T_i$ the triangle with base $E_i$ and vertex $a_1$.
 From above there is a rigid motion $m_i$ of $T_i$ such that $m_i(x)=f(x)$ for any $x\in E_i$ and $m_i(a_1)=b_1$.
 Let us redefine the map $f$ in $\Omega$ by sending $x$ to $m_i(x)$ for $x\in T_i$.
-This way we produce a new piecewise isometric map $f'\:\RR^2\to \RR^2$ which satisfies all the requirements.
+
+The maps $m_i$ agree on the common sides of triangles $T_i$.
+Therefore we produce a new piecewise isometric map $f'\:\RR^2\to \RR^2$ which satisfies all the requirements.
 \qeds
 
 The same proof works in all dimensions.
 
-The statement was proved by Ulrich Brehm \cite[see][]{brehm}
-and rediscovered by Arseniy Akopyan and Alexey Tarasov \cite[see][]{akopyan-tarasov};
-a popular exposition is given in \cite{petrunin-yashinsky}.
-The idea in the proof is the same as in the proof of Kirszbraun's theorem given in \cite{valentine}.
+The statement was proved by Ulrich Brehm 
+and rediscovered by Arseniy Akopyan and Alexey Tarasov [see \ncite{brehm}, \ncite{akopyan-tarasov} and also the section 2 in \ncite{petrunin-yashinsky}].
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -344,7 +346,7 @@ We can assume that the interior of $K$ contains the origin $0\in\RR^3$.
 Remove from $K$ the interior of $K'=\tfrac56\cdot K$.
 
 Note that one can drill from each vertex of $K$ a polyhedral tunnel to the corresponding vertex $K'$
-so that the surface of obtained non-convex polytope is a solution.
+so that the surface $\Sigma$ of the obtained non-convex polytope is a solution.
 \qeds
 
 The problem suggested by Jaros{\l}aw K\k{e}dra.
@@ -413,12 +415,9 @@ leads to a polyhedral surface with smaller area.
 That is, $\Sigma$ is not area minimizing, a contradiction.
 \qeds
 
-
-This problem is discussed in \cite{petrunin-monthly}.
-
 For general polyhedral surface, the deformation which decrease the lengths of all edges may not decrease the area.
 Moreover, the surface which minimize the area among all surfaces with fixed  triangulation might be not saddle;
-an example is shown on the diagram.
+the symmetric tent shown on the diagram provides an example [see \ncite{petrunin-monthly} for more details].
 
 }
 
@@ -453,7 +452,7 @@ From convexity of $f$ at the edges $[x'y]$,  $[y'z]$ and $[z'x]$, we get
 a contradiction.
 \qeds
 
-The problem was discussed in the book of 
+The problem is discussed in the book of 
 Israel Gelfand, 
 Mikhail Kapranov 
 and Andrei Zelevinsky  \cite[see 7C in][]{GKZ}.
@@ -473,11 +472,11 @@ Let us identify $\SSS^3$ with the unit sphere in the hyperplane $\Pi$ described 
 The symmetric group $S_3$ acts on $\SSS^3$ by permuting the coordinates.
 Take $P=\SSS^3/S_3$. 
 
-Note that $P$ is a polyhedral space.
+Note that $P$ is a spherical polyhedral space.
 Moreover, $P$ is an underlying space for an orbifold which isotopy groups either trivial or $\ZZ_2$.
 In particular $P$ is a 3-manifold.
 Clearly $P$ is compact and simply connected, in particular it is homeomorphic to 3-sphere.
-The later can be also seen by parametrizing $P$ using the symmetric polynomials $u=xy+yz+zx$ and $v=xyz$.
+(The later can be also seen by parametrizing $P$ using the symmetric polynomials $u=xy+yz+zx$ and $v=xyz$.)
 
 
 Multiplications by unit complex numbers give an $\SSS^1$-action on $\SSS^3$ which commutes with the $S_3$-action.
@@ -547,8 +546,8 @@ Let $\gamma_2$ be an other closed geodesic which minimize the length and is not 
 Note that $\gamma_1$ and $\gamma_2$ intersect at a single point.
 Otherwise one could shorten one of them keeping the defining property.
 
-Note that $\gamma_i$ does not pass $z_5$.
-Infact no geodesic can pass singular point with total angle smaller than $2\cdot\pi$.
+Note that $\gamma_i$ does not contain $z_5$.
+Infact no geodesic can pass thru singular point with total angle smaller than $2\cdot\pi$.
 
 Assume $\gamma_i$ passes thru $z_7$.
 Then by $({*})$, one of two angles which $\gamma_i$ cuts at $z_7$ equals to $\pi$.
@@ -573,17 +572,17 @@ The second component has to be mapped to a diangle with straight sides and angle
 Such diangle does not exist in the plane, a contradiction.
 \qeds
 
+\begin{wrapfigure}{r}{20 mm}
+\begin{lpic}[t(-4 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
+\end{lpic}
+\end{wrapfigure}
+
 There are flat metrics on the torus with 
 only two singular points 
 which have the total angles $\tfrac53\cdot\pi$ and $\tfrac73\cdot\pi$.
 Such example can be obtained by identifying the hexagon on the picture  according to the arrows.
 However, the holonomy group of the obtained torus is generated by the rotation by angle $\tfrac\pi6$. 
 In particular, the observation $({*})$ is essential in the proof.
-
-\begin{wrapfigure}{r}{20 mm}
-\begin{lpic}[t(-4 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
-\end{lpic}
-\end{wrapfigure}
 
 The same argument shows that 
 holonomy group of flat torus with exactly two singular points with total angle $2\cdot(1\pm \tfrac1n)\cdot\pi$ has more than $n$ elements.
@@ -618,14 +617,19 @@ is defined as the $2\cdot\pi-\theta$, where $\theta$ is the total angle around t
 By Gauss--Bonnet formula, a simple closed geodesic cuts the surface into two discs with total curvature $2\cdot\pi$ each.
 Therefore it is sufficient to construct a convex polyhedron with curvatures of the vertices $\omega_1,\dots,\omega_n$ such that
 $2\cdot\pi$ cannot be obtained as sum of some of $\omega_i$.
+
 An example of that type can be found among the tetrahedrons.
 \qeds
 
 The problem is due to Gregory Galperin \cite[see][]{galperin} 
 and rediscovered by Dmitry Fuchs and Serge Tabachnikov \cite[see 20.8 in][]{fuchs-tabachnikov}.
-If the surface of $P$ contains arbitrary long closed simple geodesic, 
-then $P$ is \emph{isosceles tetrahedron};
+The following problem is closely related.
+
+\begin{pr}
+Assume that the surface of convex polyhedron $P$ contains arbitrary long closed simple geodesic. 
+Show that $P$ is \emph{isosceles tetrahedron};
 that is, a tetrahedron with equal opposite edges.
-This statement was was proved by Vladimir Protasov \cite[see][]{protasov}
-and generalized for arbitrary convex bodies in \cite{akopyan-petrunin}.
+\end{pr}
+
+The latter statement was proved by Vladimir Protasov [see \ncite{protasov} and also \ncite{akopyan-petrunin} and \ncite{itoh-vilcu}].
 

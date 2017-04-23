@@ -8,15 +8,14 @@ No special prerequisite is needed.
 \subsection*{Round circles in 3-sphere}\label{Round circles}
 
 \begin{pr}
-Suppose that you have a finite collection of pairwise linked round circles in the unit 3-sphere, 
-not necessarily all of the same radius. 
-Prove that there is an isotopy of the collection of circles 
+Suppose that $\mathcal{C}$ a finite collection of pairwise linked round circles in the unit 3-sphere. 
+Prove that there is an isotopy of $\mathcal{C}$
 which moves all of them into great circles.
 \end{pr}
 
 
 \parit{Semisolution.}
-For each circle consider the plane containing it.
+For each circle in $\mathcal{C}$ consider the plane containing it.
 Note that the circles are linked 
 if and only if 
 the corresponding planes intersect at a single point inside the unit sphere $\mathbb{S}^3\subset \RR^4$.
@@ -101,7 +100,7 @@ such that
 
 Let  $W_0$ be a convex body in $\RR^m$.
 We say that $k$ is the \index{kissing number}\emph{kissing number} of $W_0$ (briefly $k=\mathop{\rm kiss}W_0$)
-if $k$ the maximal integer such that there are $k$ bodies $W_1,\dots,W_k$ such that 
+if $k$ is the maximal integer such that there are $k$ bodies $W_1,\dots,W_k$ such that 
 (1) each $W_i$ is congruent to $W_0$,
 (2) $W_i\cap W_0\not=\emptyset$ for each $i$ 
 and (3) no pair $W_i,W_j$ has common interior points.
@@ -167,7 +166,7 @@ Show that in all sufficiently large dimensions, there is no compact convex hyper
 \end{pr}
 
 Let us give a short summary of Dehn--Sommerville equations 
-which can help you to solve this problem.
+which can help to solve this problem.
 
 Assume $P$ is a \index{simple polyhedron}\emph{simple} Euclidean $m$-dimensional polyhedron;
 that is, every vertex of $P$ exactly $m$ facets are meeting.
@@ -177,7 +176,7 @@ the array of integers $(f_0,\dots f_m)$ is called $f$-vector of $P$.
 Fix an order of the vertices $v_1,\dots, v_{f_0}$
 of $P$ so that for some linear function $\ell$, we have $\ell(v_i)<\ell(v_j)\ \Leftrightarrow\ i<j$.
 The \index{index of vertex}\emph{index} of the vertex $v_i$ 
-is defined as the number of edges $[v_iv_j]$ such that $i<j$. 
+is defined as the number of edges $[v_iv_j]$ of $P$ such that $i<j$. 
 The number of vertices of given index $k$ will be denoted as $h_k$.
 The array of integers $(h_0,\dots h_m)$ is called $h$-vector of $P$.
 Clearly $h_0=h_m=1$ and 
@@ -191,15 +190,17 @@ faces of dimension $k$.
 This observation can be packed in the following polynomial identity 
 \[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
 
-Note that the identity above implies that $h$-vector does not depend on the choice of order of the vertices.
+Note that the identity above implies that $h$-vector does not depend on the choice of $\ell$.
 In particular, the $h$ vector is the same for the reversed order;
-that is
+that is,
 \[h_k=h_{m-k}\leqno({*}{*})\]
 for any $k$.
 
 The identities $({*}{*})$ are called Dehn--Sommerville equations.
 It gives the complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
-Note also that the inequalities $({*})$ can be rewritten in terms of 
+
+Note that the Dehn--Sommerville equations $({*}{*})$ 
+as well as the inequalities $({*})$ can be rewritten in terms of 
 $f$-vectors.
 
 
@@ -208,7 +209,7 @@ $f$-vectors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\parbf{Box in a box.}
+\parbf{Box in a box.} 
 Let $\Pi$ be a parallelepiped
 with dimensions $a$, $b$ and $c$.
 Denote by $v(r)$ the volume of  $r$-neighborhoods of $\Pi$,
@@ -229,8 +230,17 @@ If $\Pi\subset \Pi'$,
 then $v(r)_{\Pi}\le v_{\Pi'}(r)$ for any $r$.
 For $r\to\infty$, these inequalities imply
 \[a+b+c\le a'+b'+c'.\qedsin\]
-\medskip
 
+\parit{Alternative proof.}
+Note that the average length of projection of $\Pi$ to a line is
+$\Const\cdot(a+b+c)$ for some $\Const>0$.
+(In fact $\Const=\tfrac12$, but we will not need it.)
+
+Since $\Pi\subset \Pi'$,
+the average length of projection of $\Pi$
+can not exceed the average length of projection of $\Pi'$.
+Hence the statement follows.
+\qeds
 
 The problem was discussed by Alexander Shen \cite[see][]{shen}.
 
@@ -241,7 +251,8 @@ The coefficient $w_i(B)$ in the polynomial with different normalization constant
 appear under different names most commonly
 \emph{intrinsic volumes} and
 \emph{quermassintegrals}.
-They also can be defined as the average 
+Up to a normalization constant
+they also can be defined as the average 
 of area of projections of $B$ to the $i$-dimensional planes.
 In particular, 
 if $B'$ and $B$ are convex bodies such that $B'\subset B$,
@@ -257,7 +268,7 @@ Consider the complexification $\Sigma\subset \CP^2$ of~$\sigma$.
 Without loss of generality, we may assume that $\Sigma$ is regular.
 
 Note that all regular complex algebraic curves of degree $d$ in $\CP^2$
-are isotopic to each other in the class of algebraic curves of degree $d$.
+are isotopic to each other in the class of regular algebraic curves of degree $d$.
 Indeed, the set equation of degree $d$ which correspond to singular curves have the real codimesion 2.
 Therefore the set of equation of degree $d$ which correspond to regular curves is connected.
 In particular one can construct isotopy from one regular curve to an other by changing continuously the parameters of their equations.
@@ -278,12 +289,7 @@ Hence the result follows.
 The inequality was originally proved 
 by Axel Harnack using a different method \cite[see][]{harnack}.
 The idea to use complexification is due to Felix Klein \cite[see][]{klein}.
-This problem formed the background to Hilbert's 16th problem. 
-
-
-
-
-
+This problem is a background for the Hilbert's 16th problem. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Two points on each line.}
@@ -302,7 +308,7 @@ It remains to apply well ordering principle.
 
 This problem has endless list of variations.
 The following problem look similar but far more involved;
-a solution follows from the proof that a square cannot be cut into triangles of equal area given given by Paul Monsky \cite[see][]{monsky}.
+a solution follows from the proof of Paul Monsky that a square cannot be cut into triangles with equal areas \cite[see][]{monsky}.
 
 \begin{pr}
 Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that each line meets exactly two of these sets.
@@ -314,9 +320,9 @@ Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that 
 Assume that each ball has the mass proportional to its radius.
 Denote by $z$  the center of mass of the balls.
 It is sufficient to show the following.
-\begin{pr}
+\begin{cl}{$({*})$}
 The ball $B(z,r)$ contains all $B_1,\dots,B_n$.
-\end{pr}
+\end{cl}
 
 Assume this is not the case.
 Then there is a line $\ell$ thru $z$, 
@@ -330,8 +336,7 @@ In this case, the center of mass of balls projects inside of this segment, a con
 
 The statement was conjectured by Paul Erd\H{o}s.
 The solution is given by Adolph and Ruth Goodmans
-\cite[see][]{goodman-goodman}.
-A variation was given later by Hugo Hardwiger \cite[see][]{hadwiger}.
+[see \ncite{goodman-goodman} and also \ncite{hadwiger}].
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -355,7 +360,7 @@ The constant $3^n$ is not optimal.
 The optimal constant is at least $2^n$, but its value is not known and maybe no one is willing to know.
 
 The inclusion $({*})$ is called \emph{Vitali covering lemma}.
-The following statement is so called \emph{Besikovitch covering lemma};
+The following statement is called \emph{Besikovitch covering lemma};
 it has a similar proof.
 
 \begin{pr}
@@ -438,7 +443,7 @@ It has number of applications,
 one of the most beautiful is the given 
 by K\'aroly Bezdek 
 and Robert Connelly 
-in their proof of 
+in the proof of 
 Kneser--Poulsen  
 and Klee--Wagon conjectures in the two-dimensional case \cite[see][]{bezdek-connelly}.
 
@@ -460,12 +465,11 @@ consider the intersection of the corresponding octant with the unit sphere;
 that is, the set
 \[V_{\bm{q}}=\set{(x_1,\dots,x_m)\in\mathbb{S}^{m-1}}{q_i\cdot x_i\ge 0\ \text{for each}\ i}.\]
 
-Consider the set $\mathcal{A}\subset\mathbb{S}^{m-1}$
-formed by the union of all the sets $V_{\bm{q}}$ for black $\bm{q}$.
+Let $\mathcal{A}\subset\mathbb{S}^{m-1}$ be the union of all the sets $V_{\bm{q}}$ for all black $\bm{q}$.
 Note that 
 \[\vol_{m-1}\mathcal{A}=\tfrac12\cdot\vol_{m-1}\mathbb{S}^{m-1}.\]
 
-By isoperimetric inequality for $\mathbb{S}^m$.
+By spherical isoperimetric inequality,
 \[\vol_{m-2}\partial\mathcal{A}
 \ge \vol_{m-2}\mathbb{S}^{m-2}.\] 
 
@@ -614,7 +618,7 @@ given by Ernest Vinberg \cite[see][]{vinberg, vinberg-strong}.
 Playing a bit more with the same inequalities, 
 one gets nonexistence of  right-angled hyperbolic polyhedra,
 in all dimensions starting from $5$.
-In 4-dimensional case, an example of a bounded right-angled hyperbolic polyhedron
-can be found among regular \index{120-cells}\emph{120-cells} --- the 4-dimensional brothers of dodecahedra.
+In the 4-dimensional case,
+there is a regular right-angled  hyperbolic \index{120-cells}\emph{120-cells} --- a 4-dimensional uncle of dodecahedra.
 
 
