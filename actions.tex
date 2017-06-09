@@ -720,7 +720,7 @@ the right action of $\Omega$ on $\HH$ is isometric and the quotient isometric to
 
 \medskip
 
-We will prove the statement for any connected Lie group $G$, in particular for $G=\SSS^3$.
+We will prove the statement for any connected Lie group $G$ with bi-invariant metric, in particular for $G=\SSS^3$.
 Denote by $\mathfrak{g}=\T_1G$ the Lie algebra of $G$.
 Equip $G$ with a bi-invariant metric and let $\langle{*},{*}\rangle_{\mathfrak{g}}$ be the corresponding scalar product in $\mathfrak{g}$.
 
@@ -769,7 +769,24 @@ it can be viewed as the group of $W^{1,2}$-loops in $G$.
 It remains to note that $\phi\:\HH\to G$ is the quotient map for the right action of $\Omega$ on $\HH$.
 \qeds
 
-This construction is given by Chuu-Lian Terng and Gudlaugur Thorbergsson \cite[see section 4 in][]{terng-thorbergsson}.
+\parit{Aleternative solution.} Again, we will prove the statement for any connected Lie group $G$ with bi-invariant metric.
+
+Denote by $G^n$ the direct product of $n$ copies of $G$.
+Consider the map $\phi_n\:G^n\to G$ defined by
+\[\phi_n\:(\alpha_1,\dots,\alpha_n)\mapsto \alpha_1\cdots\alpha_n.\]
+Note that $\phi_n$ is a quotient map for the $G^{n-1}$-action on $G^n$ defined by
+\[(\beta_1,\dots,\beta_{n-1})\cdot(\alpha_1,\dots,\alpha_n)=(\alpha_1\cdot\beta_1^{-1},\beta_1\cdot\alpha_2\cdot\beta_2^{-1},\dots,\beta_{n-1}\cdot\alpha_n).\]
+
+Denote by $\rho_n$ the product metric on $G^n$ rescaled with factor $\sqrt{n}$.
+Note that the quotient $(G^n,\rho_n)/G^{n-1}$ is isometric to $G=(G,\rho_1)$.
+
+As $n\to\infty$ the curvature of $(G^n,\rho_n)$ converges to zero and its injectivity radius goes to infinity.
+Therefore passing to the ultra-limit of $G^n$ as $n\to\infty$ we get the Hilbert space.
+It remains to observe that the limit action has the required property.
+\qeds
+
+This construction is given by Chuu-Lian Terng and Gudlaugur Thorbergsson \cite[see section 4 in][]{terng-thorbergsson};
+the alternative solution was suggested by Alexander Lytchak.
 
 Instead of the group $\Omega$, 
 one could consider the subgroup $\Omega_H$ of paths $\gamma\:[0,1]\to G$ such that the pairs $(\gamma(0),\gamma(1))$ belong to a given subgroup $H<G\times G$.
