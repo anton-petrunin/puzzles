@@ -50,6 +50,7 @@ isbn=false]{biblatex}
 \partopsep=\topsep
 \parsep=\topsep
 \itemsep=\topsep}
+
 %ITEMIZE-first order sign
 \renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
 \renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
@@ -145,10 +146,6 @@ isbn=false]{biblatex}
 \def\thm{$\lefteqn{{}^{{}^{+}}}$}
 \def\many{$\lefteqn{{}^{\sharp}}$}
 
-%sign
-\def\sign#1{\hfill\ \hbox{\small{\it #1}}}
-\def\bigsign#1{\\$\mathstrut$\hfill\ \small{\it #1}}
-
 %problem
 \newcounter{thm}
 \renewcommand{\thethm}{\arabic{thm}}
@@ -189,6 +186,7 @@ isbn=false]{biblatex}
 
 \let\oldcdot\cdot
 \def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
+
 
 \hyphenation{ 
 Alex-an-drov 

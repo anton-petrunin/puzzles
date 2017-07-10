@@ -12,7 +12,7 @@ contains all the necessary material.
 Recall that an isotopy is a continuous one parameter family of embeddings.
 
 \begin{pr}
-Let $K_1$ and $K_2$ be homeomorphic compact subsets of the coordinate subspace $\RR^m$ in $\RR^{2\cdot m}$.
+Let $K_1$ and $K_2$ be homeomorphic closed subsets of the coordinate subspace $\RR^m$ in $\RR^{2\cdot m}$.
 Show that there is a homeomorphism 
 \[h\:\RR^{2\cdot m}\z\to \RR^{2\cdot m}\] 
 such that $K_2=h(K_1)$.
@@ -24,11 +24,25 @@ Moreover, $h$ can be chosen to be isotopic to the identity map.
 Fix a homeomorphism $\phi\:K_1\to K_2$.
 
 By Tietze extension theorem,
-the homeomorphisms $\phi\:K_1\to K_2$ and $\phi^{-1}\:K_2\to K_1$ can be extended to a continuous maps;
-denote these maps by $f\:\RR^m\to \RR^m$ and $g\:\RR^m\to \RR^m$ correspondingly.
+the homeomorphisms $\phi\:K_1\z\to K_2$ and $\phi^{-1}\:K_2\z\to K_1$ can be extended to a continuous maps;
+denote these maps by $f\:\RR^m\z\to \RR^m$ and $g\:\RR^m\z\to \RR^m$ correspondingly.
+
+{
+
+\begin{wrapfigure}[]{r}{57 mm}
+\begin{lpic}[t(-3 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/klee-trick(1)}
+\lbl[t]{53,2;$\RR^m$}
+\lbl[l]{26,30;$\RR^m$}
+\lbl[t]{10,2;$K_1$}
+\lbl[t]{43,2;$K_2$}
+\lbl[l]{11,12;$h_1$}
+\lbl[b]{18.5,22;$h_2$}
+\lbl[lb]{37,17;$h_3$}
+\end{lpic}
+\end{wrapfigure}
 
 Consider the homeomorphisms
-$h_1, h_2, h_3\:\RR^m\times\RR^m\to\RR^m\times\RR^m$ defined the following way
+$h_1, h_2, h_3\:\RR^m\times\RR^m\z\to\RR^m\times\RR^m$ defined the following way
 \begin{align*}
 h_1(x,y)&=(x,y+f(x)),
 \\
@@ -37,12 +51,17 @@ h_2(x,y)&=(x-g(y),y),
 h_3(x,y)&=(y,-x).
 \end{align*}
 
+}
+
 It remains to observe that each homeomorphism $h_i$ is isotopic to the identity map and
 \[K_2=h_3\circ h_2\circ h_1(K_1).\qedsin\]
-\medskip
 
-The problem is due to Victor Klee \cite[see][]{klee};
-the same idea used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite[see][]{doyle}.
+
+This construction is called \emph{Klee's trick}; it is due to Victor Klee \cite[see][]{klee}.
+This trick used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite[see][]{doyle};
+a proof of the separation theorem for the embeddings $\mathbb{S}^n\hookrightarrow\mathbb{S}^{n+1}$
+can be build on the same idea \cite[see][]{cohen}. 
+
 The problem ``Monotonic homotopy'' on page \pageref{mono-homotopy} looks similar.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,6 +183,13 @@ that is, there is an injective continuous map $\beta\:[0,1]\z\to X$
 such that $\beta(0)=p$ and $\beta(1)=q$.
 \end{pr}
 
+
+\subsection*{Path in a surface\easy}
+\label{Path in a surface}
+
+\begin{pr}
+Show that any path with distinct ends in a surface is homotopic (relative to the ends) to a simple path.  
+\end{pr}
 
 
 
@@ -552,3 +578,35 @@ Alexander Lytchak
 and Stefan Wenger \cite[see 7.13 in][]{lytchak-wenger}.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Path in a surface.}
+Denote the surface by $\Sigma$, assume the path runs from $p$ to $q$.
+Let us present the path as a concatenation $\alpha*\beta$ of two paths  such that $\alpha$ is simple
+and $\beta$ does not pass the beginning point $p$.
+We can assume that $\beta\:[0,1]\to \Sigma$ is smooth.
+
+Choose a smooth time depending vector field $V_t$ on $\Sigma$ such that
+\[V_t(\beta(t))=\beta'(t)\quad\text{and}\quad V_t(p)=0\]
+for any $t\in[0,1]$. 
+
+Consider the flow $\Phi^t\:\Sigma\to \Sigma$ along $V_t$;
+that is,
+\[\Phi^0(x)=x\quad\text{and}\quad \tfrac{d}{dt}(\Phi^t(x))=V_t(\Phi^t(x))\]
+for any $t\in[0,1]$ and $x\in \Sigma$.
+The map $\Phi^1\:\Sigma\to \Sigma$ is a diffeomorphism;
+in particular $\Phi^1$ sends the simple path $\alpha$ to a simple path $\alpha_1=\Phi^1\circ\alpha$.
+By construction $\alpha_1(1)=q$. 
+Since $V_t(p)=0$ for any $t$, we have $\alpha_1(0)=p$.
+That is, the path $\alpha_1$ runs from $p$ to $q$.
+
+It remains to show that $\alpha_1$ is homotopic to $\alpha*\beta$ relative the ends.
+Set $\alpha_\tau=\Phi^\tau\circ\alpha$ and denote by  $\beta_\tau$ the path running along $\beta$ from $\beta(\tau)$ to $q$;
+that is, 
+\[\beta_\tau(t)=\beta(\tau+\tfrac1{1-\tau}\cdot t).\]
+The concatenation $\alpha_\tau*\beta_\tau$ provides a homotopy from $\alpha*\beta$ to $\alpha_1*\beta_1$. 
+Since $\beta_1$ is a constant path, $\alpha*\beta$ is homotopic to $\alpha_1$.
+Hence the statement follows.
+\qeds
+
+
+This is a stripped version of the problem suggested by Jaros{\l}aw K\k{e}dra \cite[see][]{One-step}.
