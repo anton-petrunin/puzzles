@@ -581,20 +581,22 @@ and Stefan Wenger \cite[see 7.13 in][]{lytchak-wenger}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Path in a surface.}
 Denote the surface by $\Sigma$, assume the path runs from $p$ to $q$.
-The following picture might suggest an idea;
-think about it before reading further.  
+The following picture suggests an idea for an induction proof on the number of self-crossings.
+(The picture after few steps will look like a 100 kg of spaghetti.)
 
 \begin{center}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/simplification-of-path(1)}
-\lbl[t]{27,10;$p$}
-\lbl[t]{70,10;$p$}
-\lbl[r]{17,3;$q$}
-\lbl[r]{59,3;$q$}
+\lbl[t]{9,17;$p$}
+\lbl[t]{47,17;$p$}
+\lbl[t]{86,17;$p$}
+\lbl[tr]{15.5,2.5;$q$}
+\lbl[tr]{52.5,2.5;$q$}
+\lbl[tr]{91,2.5;$q$}
 \end{lpic}
 \end{center}
 
-
-Let us present the path as a concatenation $\alpha*\beta$ of two paths  such that $\alpha$ is simple
+To do the proof formally,
+let us present the path as a concatenation $\alpha*\beta$ of two paths  such that $\alpha$ is simple
 and $\beta$ does not pass the beginning point $p$.
 We can assume that $\beta\:[0,1]\to \Sigma$ is smooth.
 
@@ -612,7 +614,7 @@ By construction $\alpha_1(1)=q$.
 Since $V_t(p)=0$ for any $t$, we have $\alpha_1(0)=p$.
 That is, the path $\alpha_1$ runs from $p$ to $q$.
 
-It remains to show that $\alpha_1$ is homotopic to $\alpha*\beta$ relative the ends.
+It remains to show that $\alpha_1$ is homotopic to $\alpha*\beta$ relative to the ends.
 Set $\alpha_\tau=\Phi^\tau\circ\alpha$ and denote by  $\beta_\tau$ the path running along $\beta$ from $\beta(\tau)$ to $q$;
 that is, 
 \[\beta_\tau(t)=\beta(\tau+\tfrac1{1-\tau}\cdot t).\]
@@ -622,4 +624,5 @@ Hence the statement follows.
 \qeds
 
 
-This is a stripped version of the problem suggested by Jaros{\l}aw K\k{e}dra \cite[see][]{One-step}.
+This is a stripped version of the problem suggested by Jaros{\l}aw K\k{e}dra \cite[see][]{One-step}; 
+it was used by Michael Khanevsky \cite[see Lemma 3 in][]{khanevsky}.
