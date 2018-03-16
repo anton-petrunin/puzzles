@@ -2,7 +2,7 @@
 \chapter{Piecewise linear geometry}
 
 
-A \index{polyhedral space}\emph{polyhedral space} is complete length-metric space which admits a locally finite triangulation 
+A \index{polyhedral space}\emph{polyhedral space} is complete length-metric space that admits a locally finite triangulation 
 such that each simplex is isometric to a simplex in a Euclidean space.
 By {}\emph{triangulation} of polyhedral space we always understand triangulation as above. 
 
@@ -126,7 +126,7 @@ that is, the total angle around each vertex of $\Sigma$ is at least $2\cdot\pi$.
 \subsection*{Minimal polyhedral disc}\label{Minimal polyhedral disc}
 
 By a polyhedral disc in $\RR^3$
-we understand a triangulation of a plane polygon with a map in $\RR^3$ which is affine on each triangle.
+we understand a triangulation of a plane polygon $P$ with a map $P\to\RR^3$ that is affine on each triangle.
 The area of the polyhedral disc is defined as the sum of areas of the images of the triangles in the triangulation.
 
 \begin{pr}
@@ -140,7 +140,7 @@ that is, a plane can not cut all the edges coming from one of the interior verti
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Coherent triangulation\easy}\label{Coherent triangulation} 
 
-A triangulation of a convex polygon is called coherent if there is a convex function which is linear on each triangle and changes the gradient on every edge of the triangulation.
+A triangulation of a convex polygon is called coherent if there is a convex function that is linear on each triangle and changes the gradient on every edge of the triangulation.
 
 \begin{pr}
 Find a non-coherent triangulation of a triangle.
@@ -154,7 +154,7 @@ denote by $P_s$ the subset of its
 singular points.
 
 \begin{pr}
-Construct spherical polyhedral space $P$ which is homeomorphic to $\mathbb{S}^3$ and such that $P_s$ is formed by a knotted circle.
+Construct spherical polyhedral space $P$ that is homeomorphic to $\mathbb{S}^3$ and such that $P_s$ is formed by a knotted circle.
 \end{pr}
 
 In addition the total length of $P_s$ can be made arbitrary large and the angle around $P_s$ can be made strictly less than $2\cdot\pi$.
@@ -415,7 +415,7 @@ That is, $\Sigma$ is not area minimizing, a contradiction.
 \qeds
 
 For general polyhedral surface, the deformation which decrease the lengths of all edges may not decrease the area.
-Moreover, the surface which minimize the area among all surfaces with fixed  triangulation might be not saddle;
+Moreover, the surface that minimize the area among all surfaces with fixed  triangulation might be not saddle;
 the symmetric tent shown on the diagram provides an example [see \ncite{petrunin-monthly} for more details].
 
 }
@@ -461,7 +461,7 @@ The given example is closely related to the so called \index{Sch\"onhardt polyhe
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sphere with one edge.} 
-An example $P$ can be found among polyhedral spaces with isometric $\SSS^1$ action which has geodesic orbits.
+An example $P$ can be found among polyhedral spaces with isometric $\SSS^1$-action which has geodesic orbits.
 (Equivalently the cone over $P$ admits a complex structure; 
 that is, one can cut simplexes from $\CC^2$ and glue the cone from them so that the complex structures agree on the gluing.)
 
@@ -521,8 +521,9 @@ This construction is due to William Thurston \cite[see][]{thurston}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Triangulation of a torus.}
 Assume contrary;
-let $\tau$ be a trainagulation of the torus with vertex $z_5$ which meets $5$ triangles,
-vertex $z_7$ which meets $7$ triangles and every other vertex meets $6$ triangles.
+let $\tau$ be a trainagulation of the torus with the vertex $z_5$ meeting $5$ triangles,
+vertex $z_7$ meeting $7$ triangles 
+and every other vertex meeting $6$ triangles.
 
 Let us equip the torus with the flat metric such that each triangle is equilateral.
 The metric will have two singular cone points $z_5$ and $z_7$.
@@ -539,8 +540,8 @@ it can only permute it cyclically, which corresponds to rotations by multiple of
 On the other hand, the holonomy of the loop which surrounds $z_5$ is a rotation by $\tfrac\pi3$.
 
 
-Consider a closed geodesic $\gamma_1$ which minimize the length of all circles which are not null-homotopic.
-Let $\gamma_2$ be an other closed geodesic which minimize the length and is not homotopic to any power of $\gamma_1$.
+Consider a closed geodesic $\gamma_1$ that minimize the length of all circles which are not null-homotopic.
+Let $\gamma_2$ be an other closed geodesic that minimize the length and is not homotopic to any power of $\gamma_1$.
 
 Note that $\gamma_1$ and $\gamma_2$ intersect at a single point.
 Otherwise one could shorten one of them keeping the defining property.
@@ -549,7 +550,7 @@ Note that $\gamma_i$ does not contain $z_5$.
 Infact no geodesic can pass thru singular point with total angle smaller than $2\cdot\pi$.
 
 Assume $\gamma_i$ passes thru $z_7$.
-Then by $({*})$, one of two angles which $\gamma_i$ cuts at $z_7$ equals to $\pi$.
+Then by $({*})$, one of two angles cut by $\gamma_i$ at $z_7$ equals to $\pi$.
 It follows that one can push $\gamma_i$ aside so it does not longer pass thru $z_7$, but remains to be a closed geodesic with the same length.
 
 \begin{wrapfigure}[5]{r}{30 mm}
@@ -564,7 +565,7 @@ In the obtained quadrilateral, connect $z_5$ to $z_7$ by a minimizing geodesic a
 This way we obtain an annulus $\Omega$ with flat metric.
 
 
-Note that the neighborhood of the first boundary component is parallelogram --- it has equal opposite sides and angles which add up to $2\cdot \pi$.
+Note that the neighborhood of the first boundary component is parallelogram --- it has equal opposite sides and its angles add up to $2\cdot \pi$.
 In particular $\Omega$ admits an isometric immersion into the plane.
 
 The second component has to be mapped to a diangle with straight sides and angles $\tfrac\pi3$.
