@@ -444,40 +444,21 @@ Show that any local isometry from a connected compact metric space to itself is 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Finite-whole extension.}
-Given a finite set $F\subset X$,
-denote by $\mathfrak{S}_F$ the set of all non-expanding maps $h\: F\to Y$ that agree with $f$ on $F\cap A$.
-For $x\in F$, consider the set
-\[K(F,x)=\set{h(x)\in Y}{h\in \mathfrak{S}_F}.\]
+Consider the space $Y^X$ of all maps $X\to Y$ equipped with the product topology.
 
-By assumption  
-\[K(F,x)\ne\emptyset\leqno{({*})}\] 
-for any finite set $F\subset X$ and $x\in F$.
-Further, note that $K(F,x)$ is closed and
-\[K(F',x)\supset K(F,x)\leqno{({*}{*})}\]
-for any other finite set $F'$ such that 
-$x\in F'\subset F$.
+Given a finite set $F\in X$;
+denote by $\mathfrak{C}_F$ the set of maps $h\in Y^X$ such that its restriction $h|_F$ is short and the restriction $h|_{A\cap F}$ agrees with $f\:A\to Y$.
+By assumption, the sets $\mathfrak{C}_F\subset Y^X$ are closed.
+Note that 
+\[\mathfrak{C}_{F_1\cup\dots\cup F_n}\subset \mathfrak{C}_{F_1}\cap\dots\cap\mathfrak{C}_{F_n};\]
+in particular finite interections of these sets are nonempty.
 
-By Zorn's lemma, we can assume that $A$ is a maximal set;
-that is, $f$ can not be extended to a bigger set in such a way that it satisfies the assumptions of the problem. 
-(It follows that $A$ is closed subset of $X$, but we will not use it.)
-
-Arguing by contradiction, assume $A\ne X$; fix $x\in X\backslash A$.
-Given $y\in Y$ there is a finite set $F\ni x$ such that $y\notin K(F,x)$.
-Or equivalently,
-\[\bigcap_{F\ni x}K(F,x)=\emptyset.\]
-
-By finite intersection property, 
-we can choose a finite collection of finite sets $F_1,\dots F_n$ containing $x$ such that 
-\[K(F_1,x)\cap \dots\cap K(F_n,x)=\emptyset.\leqno{(\asterism)}\]
-
-Since the union $F=F_1\cup\dots\cup F_n$ is finite, $({*})$ and $({*}{*})$
-imply
-\[K(F_1,x)\cap \dots\cap K(F_n,x)\supset K(F,x)\ne \emptyset,\]
-which contradicts $(\asterism)$.
+According to Tikhonov's theorem \cite[see][and the references there in]{chernoff}, $Y^X$ is compact.
+By the finite intersection propery, the intersection $\bigcap_F\mathfrak{C}_F$ for all finite sets $F\subset X$ is nonempty.
+Hence the stattement follows.
 \qeds
 
 This observation was used by Stephan Stadler and me \cite[see][]{petrunin-stadler}.
-А perspicacious reader undoubtedly sees that this statement is nothing but a straightforward corollary of Tychonoff's theorem on the product of compact spaces. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Horo-compactification.}
