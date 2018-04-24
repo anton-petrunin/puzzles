@@ -449,13 +449,14 @@ Consider the space $Y^X$ of all maps $X\to Y$ equipped with the product topology
 Given a finite set $F\in X$;
 denote by $\mathfrak{C}_F$ the set of maps $h\in Y^X$ such that its restriction $h|_F$ is short and the restriction $h|_{A\cap F}$ agrees with $f\:A\to Y$.
 By assumption, the sets $\mathfrak{C}_F\subset Y^X$ are closed.
-Note that 
-\[\mathfrak{C}_{F_1\cup\dots\cup F_n}\subset \mathfrak{C}_{F_1}\cap\dots\cap\mathfrak{C}_{F_n};\]
-in particular finite interections of these sets are nonempty.
 
-According to Tikhonov's theorem \cite[see][and the references there in]{chernoff}, $Y^X$ is compact.
+Note that for any finite collection of finite sets $F_1,\dots,F_n\subset X$ we have
+\[\mathfrak{C}_{F_1}\cap\dots\cap\mathfrak{C}_{F_n}\supset \mathfrak{C}_{F_1\cup\dots\cup F_n}.\]
+In particular, the interection is nonempty.
+
+According to Tikhonov's theorem \cite[see][and the references there in]{wright}, $Y^X$ is compact.
 By the finite intersection propery, the intersection $\bigcap_F\mathfrak{C}_F$ for all finite sets $F\subset X$ is nonempty.
-Hence the stattement follows.
+It remains to note that any map $h\in \bigcap_F\mathfrak{C}_F$ solves the problem.
 \qeds
 
 This observation was used by Stephan Stadler and me \cite[see][]{petrunin-stadler}.
