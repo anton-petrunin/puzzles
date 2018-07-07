@@ -3,8 +3,8 @@
 \chaptermark{Curvature free}
 
 The reader should be familiar 
-with the notion of smooth manifold, 
-Riemannian metric and symplectic form.
+with the notions of smooth manifolds, 
+Riemannian metrics and symplectic forms.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Distant involution}
@@ -41,8 +41,7 @@ $$\vol_3[\partial(\Delta\times \Delta)]=2\cdot\area \Delta\cdot\length \partial 
 The boundary $\partial(\Delta\times \Delta)$ homeomorphic to $\mathbb{S}^3$
 and the restriction of the involution $(x,y)\z\mapsto (\iota(x),\iota(y))$ has the needed property.
 
-It remains to smooth $\partial(\Delta\times \Delta)$ slightly.
-\qeds
+It remains to slightly smooth $\partial(\Delta\times \Delta)$. \qeds
 
 This example is given by Christopher Croke \cite[see][]{croke}.
 
@@ -67,11 +66,11 @@ and the equality holds if and only if $(Q,g)$ is isometric to the unit cube.
 \subsection*{Minimal foliation\thm}
 \label{gromomorphic-curves}
 
-The minimal surface in Riemannian manifolds are defined on page \pageref{minimal surface}.
+The minimal surfaces in Riemannian manifolds are defined on page \pageref{minimal surface}.
 
 \begin{pr}
 Consider the product of spheres $\mathbb{S}^2\times \mathbb{S}^2$ equipped with a Riemannian metric $g$ that is $C^\infty$-close to the product metric. 
-Prove that there is a conformally equivalent metric $\lambda\cdot g$ and re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
+Prove that there is a conformally equivalent metric $\lambda\cdot g$ and a re-parametrization of $\mathbb{S}^2\times \mathbb{S}^2$
 such that for any $x\in \mathbb{S}^2$, the spheres $x\times\mathbb{S}^2$ and $\mathbb{S}^2\times x$ are minimal surfaces 
 in $(\mathbb{S}^2\times \mathbb{S}^2,\lambda\cdot g)$.
 \end{pr}
@@ -83,15 +82,15 @@ The expected solution requires pseudo-holomorphic curves introduced by Mikhael G
 \subsection*{Volume and convexity\thm}
 \label{Volume and convexity} 
 
-A function $f$ defined on Riemannian manifold is called convex if for any geodesic $\gamma$, the composition $f\circ\gamma$ is a convex real-to-real function.
+A function $f$ defined on a Riemannian manifold is called convex if for any geodesic $\gamma$, the composition $f\circ\gamma$ is a convex real-to-real function.
 
 \begin{pr}
 Let $M$ be a complete Riemannian manifold that admits a non-constant convex function. 
-Prove that $M$ has an infinite volume.
+Prove that $M$ has infinite volume.
 \end{pr}
 
-The expected solution use Liouville's theorem on phase volume.
-It implies in particular, that geodesic flow on the unit tangent bundle to a Riemannian manifold preserves the volume.
+The expected solution uses Liouville's theorem on phase volume.
+It implies in particular, that the geodesic flow on the unit tangent bundle of a Riemannian manifold preserves the volume.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -112,11 +111,11 @@ that is, the curve $v(t)$ normally crosses the tangent spaces $\T_{\gamma(t)}\su
 
 In other words, we identify the tangent space 
 $\T_u[\T M]$ for any $u\in \T_p M$ with the direct sum of vertical and horizontal subspaces $\T_p M\oplus \T_p M$.
-The projection of this splitting defined by the differential $d\tau\:\T\T M\to \T M$
-and we assume that a the velocity of a curve in $\T M$ formed by parallel field along a curve in $M$ is horizontal.
+The projection of this splitting is defined by the differential $d\tau\:\T\T M\to \T M$
+and we assume that the velocity of a curve in $\T M$ formed by a parallel field along a curve in $M$ is horizontal.
 Then $\T_u[\T M]$ is equipped with the metric $\hat g$ defined as 
 \[\hat g(X,Y)=g(X^V,Y^V)+g(X^H,Y^H),\]
-where $X^V,X^H\in\T_pM$ denotes the vertical and horizontal components of $X\in\T_u[\T M]$.
+where $X^V,X^H\in\T_pM$ denote the vertical and horizontal components of $X\in\T_u[\T M]$.
 
 
 
@@ -125,7 +124,7 @@ Let $g$ be a Riemannian metric on the sphere $\mathbb{S}^2$.
 Consider the tangent bundle $\T \mathbb{S}^2$ 
 equipped with the induced Sasaki metric $\hat g$.
 Show that
-the space $(\T \mathbb{S}^2, \hat g)$ lies on bounded distance to the ray $\RR_+=[0,\infty)$ in the sense of Gromov--Hausdorff.
+the space $(\T \mathbb{S}^2, \hat g)$ lies at bounded distance to the ray $\RR_+=[0,\infty)$ in the sense of Gromov--Hausdorff.
 \end{pr}
 
 
@@ -138,8 +137,8 @@ and \[\area S\ge L\]
 for any closed surface $S$ that does not bound in $\TT^3$.
 \end{pr}
 
-According to Gromov's systolic inequality \cite[see][]{gromov-filling}, the volume of $(\TT^3,g)$ can be bounded below in terms of its \emph{1-systole} defined to be the least length of a noncontractible closed curve in $(\TT^3,g)$.
-The lower bound on area of $S$ as in the problem is called 2-systole of $(\TT^3,g)$.
+According to Gromov's systolic inequality \cite[see][]{gromov-filling}, the volume of $(\TT^3,g)$ can be bounded below in terms of its \emph{1-systole} defined to be the shortest length of a noncontractible closed curve in $(\TT^3,g)$.
+The lower bound on the area of $S$ in the problem is called the 2-systole of $(\TT^3,g)$.
 
 The problem implies that the Gromov's systolic inequality does not have a direct 2-dimensional analog.
 
@@ -153,13 +152,13 @@ denote by $\T M$ the tangent bundle over $M$ and by $\T_p=\T_pM$ the tangent spa
 
 Given a vector $v\in\T_pM$ denote by $\gamma_v$ the geodesic in $(M,g)$
 such that $\gamma(0)=p$ and $\gamma'(0)=v$.
-The map $\exp\:\T M\to M$ defined by $v\mapsto \gamma_v(1)$ is called exponential map.
+The map $\exp\:\T M\to M$ defined by $v\mapsto \gamma_v(1)$ is called the exponential map.
 
-The restriction of $\exp|_{\T_p}$ is called \index{exponential map}\emph{exponential map at} $p$ and denoted as $\exp_p$.
+The restriction of $\exp|_{\T_p}$ is called the \index{exponential map}\emph{exponential map at} $p$ and is denoted as $\exp_p$.
 
 Given a smooth immersion $L\to M$;
 denote by $\mathrm{N} L$ the normal bundle over $L$.
-The restriction $\exp|_{\mathrm{N} L}$ is called {}\emph{normal exponential map} of $L$ and denoted as $\exp_L$.
+The restriction $\exp|_{\mathrm{N} L}$ is called the {}\emph{normal exponential map} of $L$ and is denoted by $\exp_L$.
 
 \begin{pr}
 Let $M,L$ be complete connected Riemannian manifolds.
@@ -178,7 +177,7 @@ normal exponential map of $L$ is dense in $M$.
 Let 
 \[\omega=dx_1\wedge dy_1+ dx_2\wedge dy_2\]
 be the standard symplectic form on $\RR^4$.
-Assume $\ZZ^2$ is the integer lattice in $(x_1,y_1)$ coordinate plane of $\RR^4$.
+Assume $\ZZ^2$ is the integer lattice in the $(x_1,y_1)$ coordinate plane of $\RR^4$.
 
 Show that an arbitrary bounded domain $\Omega\subset (\RR^4,\omega)$
 admits a symplectic embedding into the quotient space $(\RR^4,\omega)/\ZZ^2$. 
@@ -207,7 +206,7 @@ Show that $f$ is a diffeomorphism.
 \label{Volume of tubular neighborhoods}
 
 \begin{pr}
-Assume $M$ and $M'$ be isometric closed smooth submanifolds in a Euclidean space.
+Assume $M$ and $M'$ are isometric closed smooth submanifolds in a Euclidean space.
 Show that for all small $r>0$ we have
 $$\vol B(M,r)=\vol B(M',r),$$
 where $B(M,r)$ denotes the $r$-neighborhood of $M$.
@@ -238,8 +237,8 @@ Let $M$ be a compact Riemannian manifold with diameter $D$ and $p\in M$.
 Assume that for some $L>D$,
 there are no geodesic loops based at $p$ in $M$
 with length in the interval $(L-D,L+ D]$.
-Show that for any path $\gamma_0$ in $(M,g)$
-there is a homotopy $\gamma_t$ rel. to the ends
+Show that for any path $\gamma_0$ in $(M,g)$ starting at $p$, 
+there is a homotopy $\gamma_t$ rel. to its endpoints
 such that 
 \begin{enumerate}[a)]
 \item $\length \gamma_1<L$;
@@ -248,8 +247,8 @@ such that
 \end{enumerate}
 \end{pr}
 
-It is not at all easy to find an example of a manifold that satisfy the above condition for some $L$;
-they are found among the Zoll spheres
+It is not easy at all to find an example of a manifold satisfying the above condition for some $L$;
+they can be found among the Zoll spheres
 by Florent Balachev, Christopher Croke and Mikhail Katz \cite[see][]{balacheff-croke-katz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -258,13 +257,13 @@ by Florent Balachev, Christopher Croke and Mikhail Katz \cite[see][]{balacheff-c
 \subsection*{Convex hypersurface}
 \label{Convex hypersurface}
 
-Recall that a subset $K$ of Riemannian manifold is called \index{convex set}\emph{convex} if every minimizing geodesic connecting two  points in $K$ completely lies in $K$. 
+Recall that a subset $K$ of Riemannian manifold is called \index{convex set}\emph{convex} if every minimizing geodesic connecting two  points in $K$ lies completely in $K$. 
 
 \begin{pr}
 Let $M$ be a totally geodesic hypersurface 
 in a closed Riemannian $m$-dimensional manifold $W$.
 Assume that the injectivity radius of $M$ is at least $1$
-and it forms a convex set in $W$.
+and $M$ forms a convex set in $W$.
 
 Show that the maximal distance from $M$ to the points of $W$ can be bounded below by a positive constant $\eps_m$ that depends only on the dimension $m$ (in fact, $\eps_m=\tfrac2{m+3}$ will~do).
 \end{pr}
@@ -280,7 +279,7 @@ admits a natural choice of volume.
 Let us equip $\UU M$ with the probability measure that is proportional to the volume.
 
 We say that a unit-speed geodesic $\gamma\:\RR\to M$ is \emph{random}
-if $\gamma'(0)$ takes the random value in $\UU M$.
+if $\gamma'(0)$ takes a random value in $\UU M$.
 
 \begin{pr}
 Assume $\eps>0$ is given.
@@ -299,18 +298,18 @@ happens with probability at most $\eps$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Besikovitch inequality.}
-Without loss of generality, we may assume  $Q=[0,1]^m$.
+Without loss of generality, we may assume that $Q=[0,1]^m$.
 Set 
 \[A_i=\set{(x_1,\dots,x_m)\in Q}{x_i=0}.\]
 
-Consider functions $f_i\:Q\to\RR$ defined as
-$$f_i(x)=\max\{1,\dist_{A_i}(x)\}$$
+Consider the functions $f_i\:Q\to\RR$ defined as
+$$f_i(x)=\min \{1,\dist_{A_i}(x)\}$$
 Note that each $f_i$ is $1$-Lipschitz, 
-in particular $|\nabla f|\le 1$ almost everywhere.
+in particular $|\nabla f_i|\le 1$ almost everywhere.
 
 Consider the map
 \[\bm{f}\:x\mapsto(f_1(x),\dots,f_m(x)).\]
-Notes that it maps $Q$ to itself
+Note that it maps $Q$ to itself
 and, moreover, it maps each face of $Q$ to itself.
 It follows that the restriction $\bm{f}|_{\partial Q}\:\partial Q\to \partial Q$ has degree one and therefore 
 $\bm{f}\:Q\to Q$ is onto.
@@ -337,21 +336,21 @@ is an isometry.
 \qeds
 
 This inequality was proved by Abram Besikovitch \cite[see][]{besicovitch}.
-It has number applications in Riemannian geometry.
+It has a number of applications in Riemannian geometry.
 For example using this inequality it is easy to solve the following problem.
 
 \begin{pr}
-Assume a metric $g$ on $\RR^m$ coincides with Euclidean outside of a bounded set $K$;
-assume further that any geodesic that comes into $K$ goes out from $K$ the same way as if the metric would be Euclidean everywhere. 
+Assume a metric $g$ on $\RR^m$ coincides with the Euclidean one outside of a bounded set $K$;
+assume further that any geodesic that comes into $K$ goes out from $K$ the same way the Euclidean geodesic would. 
 Show that $g$ is flat.
 \end{pr}
 
-The same proof gives a rough version of this inequality holds for any metric on the cube.
+The same proof gives a rough version of this inequality for any metric on the cube.
 Here is one of its applications suggested by Stephan Stadler.
 
 \begin{pr}
-Suppose $X$ is contactable metric with vanishing $(n+1)$-dimensional Hausdorff measure.
-Assume $\Delta_1,\Delta_2\subset X$ be two embedded $n$-discs that have the same boundary.
+Suppose $X$ is contractible metric space with vanishing $(n+1)$-dimensional Hausdorff measure.
+Assume $\Delta_1,\Delta_2\subset X$ are two embedded $n$-discs having the same boundary.
 Show that $\Delta_1=\Delta_2$.
 \end{pr}
 
@@ -373,7 +372,7 @@ Since $\star(\star\phi)=\phi$,
 the form $\omega=\phi+\star\phi$ does the job.
 
 Fix $p\in \mathbb{S}^2\times\mathbb{S}^2$.
-We can use $g_p$ to identify tangent space $\T_p$ and the cotangent space $\T^*_p$.
+We can use $g_p$ to identify the tangent space $\T_p$ and the cotangent space $\T^*_p$.
 There is a $g_p$-orthonormal basis $e_1, e_2, e_3, e_4$ on $\T_p$ such that 
 \[\omega_p=\lambda_p\cdot e_1\wedge e_2+\lambda'_p\cdot  e_3\wedge e_4.\]
 Note that 
@@ -382,13 +381,13 @@ Since $\star\omega_p=\omega_p$, we have $\lambda_p=\lambda'_p$.
 
 Consider the rotation $\mathrm{J}_p\:\T_p\to\T_p$ defined by 
 \[ 
-e_1\mapsto e_2,
+e_1\mapsto -e_2,
 \quad 
-e_2\mapsto -e_1,
+e_2\mapsto e_1,
 \quad 
-e_3\mapsto e_4,
+e_3\mapsto -e_4,
 \quad 
-e_4\mapsto-e_3.\]
+e_4\mapsto e_3.\]
 Note that
 \[\mathrm{J}_p\circ\mathrm{J}_p =-\id
 \quad\text{and}\quad
@@ -396,8 +395,8 @@ Note that
 for any two tangent vectors $X,Y\in \T_p$.
 
 Consider the canonical symplectic form $\omega_0$ on $\mathbb{S}^2\times\mathbb{S}^2$;
-that is, the sum of pullbacks of the volume form on $\mathbb{S}^2$  
-for the two coordinate projections $\mathbb{S}^2\times\mathbb{S}^2\to \mathbb{S}^2$.
+that is, the sum of the pullbacks of the volume form on $\mathbb{S}^2$  
+by the two coordinate projections $\mathbb{S}^2\times\mathbb{S}^2\to \mathbb{S}^2$.
 Note that for the canonical metric on $\mathbb{S}^2\times\mathbb{S}^2$,
 the form $\omega_0$ is harmonic and self-dual. 
 Since $g$ is close to the standard metric,
@@ -405,7 +404,7 @@ we can assume that $\omega$ is close to $\omega_0$.
 In particular $\lambda_p\ne0$ for any $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 
 It follows that $\mathrm{J}$ is a pseudo-complex structure for the symplectic form $\omega$ on $\mathbb{S}^2\times\mathbb{S}^2$.
-The Riemannian metric $g'=\lambda\cdot g$ is a  conformal to $g$ and $\omega(X,Y)=g'(X,\mathrm{J} Y)$ 
+The Riemannian metric $g'=\lambda\cdot g$ is conformal to $g$ and $\omega(X,Y)=g'(X,\mathrm{J} Y)$ 
 for any two tangent vectors $X,Y$ at one point.
 In this case the $\mathrm{J}$-holomorphic curves are minimal with respect to $g'$;
 in fact, they are area minimizing in its homology class. 
@@ -415,7 +414,7 @@ so that vertical and horizontal spheres will form pseudo-holomorphic curves in t
 \qeds
  
  
-For general metric the form $\omega$ might vanish at some points.
+For general metrics the form $\omega$ might vanish at some points.
 If the metric is generic, then it happens on disjoint circles \cite[see][]{honda}.
 
 
@@ -426,7 +425,7 @@ If the metric is generic, then it happens on disjoint circles \cite[see][]{honda
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Volume and convexity.}
-We use the idea from the proof of Poincar\'e recurrence theorem.
+We use the idea from the proof of the Poincar\'e recurrence theorem.
 
 \medskip
 
@@ -476,13 +475,13 @@ appear as a holonomy of some loop at $p$;
 moreover the length of such loop can be bounded by some constant, say $\ell$.
 
 Indeed, fix a smooth homotopy $\gamma_t\:[0,1]\to \mathbb{S}^2$, $t\in[0,1]$ of loops based at $p$ that sweeps out $\mathbb{S}^2$.
-By Gauss--Bonnet formula, the total curvature of $(\mathbb{S}^2,g)$ is $4\cdot\pi$.
-It follows that any rotation of $\T_p$ appears as a holonomy of $\gamma_t$ for some $t$.
+By the Gauss--Bonnet formula, the total curvature of $(\mathbb{S}^2,g)$ is $4\cdot\pi$.
+It follows that any rotation of $\T_p$ appears as the holonomy of $\gamma_t$ for some $t$.
 Therefore one can take 
 \[\ell=\max\set{\length\gamma_t}{t\in[0,1]}.\]
 
 Denote by $d$ the diameter of $(\mathbb{S}^2,g)$.
-From above it follows that for any two unit tangent vectors $v\in\T_p$ 
+From above follows that for any two unit tangent vectors $v\in\T_p$ 
 and $w\in T_q$
 there is a path 
 $\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
@@ -493,7 +492,7 @@ $w$ is the parallel transport of $v$ along $\gamma$.
 
 In particular, the diameter of the set of all vectors of fixed magnitude in $(\T \mathbb{S}^2,\hat g)$ has diameter at most $\ell+d$.
 Therefore the map $\T\mathbb{S}^2\to[0,\infty)$ defined as $v\mapsto |v|$ 
-preserves the distance up to error $\ell+d$.
+preserves the distance up to an error of $\ell+d$.
 Hence the result follows.
 \qeds
 
@@ -515,20 +514,20 @@ In each tunnel, shrink the metric long-wise and expand it  cross-wise while keep
 \end{lpic}
 \end{wrapfigure}
 
-More precisely, assume $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\times [0,1]$ 
-then the new metric is defined as
+More precisely, assume $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\times [0,1]$. 
+Then the new metric is defined as
 \[g=\phi\cdot [(dx)^2+ (dy)^2]+\tfrac1{\phi^2}\cdot (dz)^2,\]
-where $\phi=\phi(x,y)$ is a positive smooth function on $\DD$ that takes huge values around the center and equals to 1 near the boundary of $\DD$.
+where $\phi=\phi(x,y)$ is a positive smooth function on $\DD$ taking huge values around the center and equal to 1 near the boundary of $\DD$.
 
 
 Gluing the opposite faces of the cube, we obtain a 3-dimensional torus with a smooth Riemannian metric.
 
 Since the surface $S$ does not bound in $\TT^3=\mathbb{S}^1\times\mathbb{S}^1\times\mathbb{S}^1$,
 one of the three coordinates projections $\TT^3\to\TT^2=\mathbb{S}^1\times\mathbb{S}^1$
-induce a map of non-zero degree $S\to\TT^2$.
+induces a map of non-zero degree $S\to\TT^2$.
 It follows that 
 \[\area S\ge  \area(\DD,\phi\cdot [(dx)^2+ (dy)^2]).\]
-For the right choice of function $\phi$, the right hand side can be made bigger than the given number $L$.
+For the right choice of the function $\phi$, the right hand side can be made larger than the given number $L$.
 Hence the statement follows.
 \qeds
 
@@ -537,15 +536,15 @@ I learned this problem from Dmirti Burago.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Normal exponential map.}
-Assume the contrary; that is, there is a point $p\in M$ 
-such that the image of normal exponential map to $L$
+Assume there are $p\in M$, $\eps >0 $, 
+such that the image of the normal exponential map to $L$
  does not intersect the ball $B(p,\eps)_M$; that is, no geodesic normal to $L$ crosses the ball.
 
 Fix a positive real number $R$ such that $B(p,R)_M\cap L\ne \emptyset$.
 The sectional curvature of $M$ in the ball $B(p,R)$
-is bounded above by some constant, say $K$.
+is bounded below by some constant, say $K$.
 
-Given $q\in L$, denote by $v_q$ the direction of a minimizing geodesic $[qp]$.
+Given $q\in L$, denote by $v_q \in \T_qM$ the direction of a minimizing geodesic $[qp]$.
 Note that $v_q\notin \mathrm{N}_qL$.
 Moreover there is $\delta=\delta(\eps,K,R)>0$ 
 such that for any point $q\in B(p,R)_M\cap L$,
@@ -557,7 +556,7 @@ Otherwise the geodesic in the direction of $n$ would cross $B(p,\eps)_M$.
 It follows that starting at any point $q\in B(p,R)_M\cap L$ 
 one can construct a unit-speed curve $\gamma$ in $L$ such that 
 \[|p-\gamma(t)|\le |p-q|-t\cdot\sin \delta.\]
-Following $\gamma$ for sufficient time brings us to $p$;
+Following $\gamma$ for enough time brings us to $p$;
 that is, $p\in L$, a contradiction.
 \qeds
 
@@ -568,7 +567,7 @@ that is, $p\in L$, a contradiction.
 
 The problem was suggested by Alexander Lytchak.
 
-From the picture, you should guess an example of immersion 
+From the picture, you should guess an example of an immersion 
 such that one point does not lie in the image of the corresponding normal exponential map.
 It might be interesting to understand what type of subsets can be avoided by such images.
 
@@ -581,31 +580,31 @@ with the quotient map $\phi\:\RR^4\to \TT^2\times\RR^2$ by the integer $(x_1,y_1
 
 \medskip
 
-The composition $\phi\circ\lambda$ always preserves the symplectic structure;
+The composition $\phi\circ\lambda$ will preserve the symplectic structure;
 it remains to find $\lambda$ such that the restriction $\phi\circ\lambda|_\Omega$
 is injective.
 
 Without loss of generality,
 we can assume that $\Omega$ is a ball centered at the origin.
-Choose an oriented 2-dimensional subspace $V$ subspace of $\RR^4$ 
+Choose an oriented 2-dimensional subspace $V$ of $\RR^4$ 
 such that the integral of $\omega$ over 
 $\Omega\cap V$ is a  positive number smaller than $\tfrac\pi4$. 
 
-Note that there is a linear symplectomorphism $\lambda$ that maps planes parallel to $V$ to planes parallel to the $(x_1,y_1)$-plane, and that maps the disk $V\cap\Omega$ to a round disk.
+Note that there is a linear symplectomorphism $\lambda$ that maps planes parallel to $V$ to planes parallel to the $(x_1,y_1)$-plane, and that maps the disc $V\cap\Omega$ to a round disc.
 It follows that the intersection of $\lambda(\Omega)$ 
-with any plane parallel to the $(x_1,y_1)$-plane is a disk of radius at most $\tfrac 12$.
+with any plane parallel to the $(x_1,y_1)$-plane is a disc of radius at most $\tfrac 12$.
 In particular $\phi\circ\lambda|_\Omega$
 is injective.\qeds
 
-This construction is given 
+This construction was given 
 by Larry Guth \cite[see][]{guth-symplectic}
 and attributed to Leonid Polterovich.
 
 Note that according to the Gromov's non-squeezing theorem \cite[see][]{gromov-pseudoholomorphic}, 
-an analogous statement with $\CC\times \DD$ as the target does not hold, here $\DD\subset \CC$ is the open disc with the induced symplectic structure.
+an analogous statement with $\CC\times \DD$ as the target space does not hold, here $\DD\subset \CC$ is the open unit disc with the induced symplectic structure.
 In particular, it shows that
 the projection of $\lambda(\Omega)$ as above 
-to $(x_1,y_1)$-plane
+to the $(x_1,y_1)$-plane
 cannot be made arbitrary small.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -625,8 +624,8 @@ Since $N$ is simply connected, the result follows.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Volume of tubular neighborhoods.}
 This problem is a direct corollary of the the so called \emph{tube formula} given by Hermann Weyl \cite[see][]{weyl}.
-It express the volume of $r$-neighborhood of $M$ as a polynomial $p(r)$;
-the coefficients of $p$, up to a multiplicative constant, the integrals along $M$ of the quantities called \emph{Lipschitz--Killing curvatures} --- these are certain scalars that can be expressed in terms of curvature tensor at the given point.
+It expresses the volume of the $r$-neighborhood of $M$ as a polynomial $p(r)$;
+the coefficients of $p$, up to a multiplicative constant, are integrals along $M$ of some quantities called the \emph{Lipschitz--Killing curvatures} --- these are certain scalars which can be expressed in terms of the curvature tensor at the given point.
  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -658,9 +657,9 @@ Assuming we constructed $T_{n-1}$, the tree $T_n$ can be obtained by identifying
 
 Fix $\eps=\tfrac1{10}$ and a large integer $n$.
 Let us construct a metric on the disc $\DD$ with the embedded tree $T_n$ as in $({*})$ such that
-its diameter and length of its boundary below $1$
+its diameter and the length of its boundary are less than $1$
 and  
-the distance between any two edges of $T_n$ of without common vertex 
+the distance between any two edges of $T_n$ without a common vertex 
 is at least $\eps$.
 
 
@@ -677,12 +676,12 @@ have product metrics.
 where $m$ is the number of edges in the tree $T_n$.
 \end{itemize}
 Equip $T_n$ with a length-metric so that each edge has length $\eps$.
-Glue by piecewise isometry the cylinder $(\mathbb S^1\times [0,1],g)$ along its long boundary component to the tree $T_n$  
-in such a way that the resulting space is homeomorphic to disc and the obtained embedding of $T_n$ in $\DD$ is the same as in the claim $({*})$.
+Glue by a piecewise isometry the cylinder $(\mathbb S^1\times [0,1],g)$ along its long boundary component to the tree $T_n$  
+in such a way that the resulting space is homeomorphic to a disc and the obtained embedding of $T_n$ in $\DD$ is the same as in the claim $({*})$.
 
 
 By $({*})$ and the construction, for any null-homotopy of the boundary 
-the least length exceeds $\tfrac{\eps}{10}\cdot n=\tfrac{1}{100}\cdot n$.
+the least length it exceeds $\tfrac{\eps}{10}\cdot n=\tfrac{1}{100}\cdot n$.
 The obtained metric is not Riemannian, but is easy to smooth while keeping this property.
 
 Since $n$ is large the result follows.
@@ -698,7 +697,7 @@ Set
 
 By a compactness argument,
 there exists $\delta>0$ 
-such that no geodesic loops based at $p$ has length in the interval $(L-D, L+D+\delta]$. 
+such that no geodesic loop based at $p$ has length in the interval $(L-D, L+D+\delta]$. 
 
 Assume $\ell_0\ge L+\delta$.
 Choose $t_0\in [0,1]$ such that
@@ -721,14 +720,14 @@ where $\bar\sigma$ denotes the backward parametrization of $\sigma$.
 
 Applying a curve shortening process to the loop $\lambda_0=\gamma|_{[0,t_0]}*\sigma$, 
 we get a  homotopy $\lambda_t$
-rel. its ends 
+rel. to its endpoints 
 from the loop $\lambda_0$ to a geodesic loop $\lambda_1$ at $p$.
 From above, 
 \[\length\lambda_1\le L-D.\]
 
 The concatenation $\gamma_t=\lambda_t*\bar\sigma*\gamma|_{[t_0,1]}$
 is a homotopy
-from $\gamma_0'$ to an other curve $\gamma_1$.
+from $\gamma_0'$ to another curve $\gamma_1$.
 From the construction it is clear that 
 \begin{align*}
  \length \gamma_t&\le \length \gamma_0+2\cdot \length\sigma\le
@@ -742,7 +741,7 @@ and
 \\ &\le L-D+D+\length\gamma-(L+\delta)=
 \\ &=\ell_0 -\delta.
 \end{align*}
-Repeating the procedure few times we get we get curves $\gamma_2,\dots,\gamma_n$
+Repeating the procedure enough times we get we get curves $\gamma_2,\dots,\gamma_n$
 connected by the needed homotopies so that 
 $\ell_{i+1}\le\ell_i-\delta$ and $\ell_n\z< L+\delta$,
 where $\ell_i=\length\gamma_i$.
@@ -761,39 +760,39 @@ and Regina Rotman \cite[see][]{nabutovsky-rotman}.
 First let us define the {}\emph{cone construction} of maps into $M$.
 
 Let $\Delta'$ be a simplex and $\Delta$ be its facet opposite to the vertex $v$.
-Assume $f\:\Delta\to M$ is a map and $x\in M$ such that $f(\Delta)\subset B(x,1)_M$.
+Assume $f\:\Delta\to M$ is a map such that $f(\Delta)\subset B(x,1)_M$ for some $x \in M$.
 Given $w\in \Delta$, let $\gamma_w\:[0,1]\to M$ be the minimizing geodesic path from $x$ to  $f(w)$.
 Since the injectivity radius of $M$ is at least $1$, the path $\gamma_w$ is uniquely defined.
 The map $f'\:\Delta'\to M$ defined as 
 \[f'\:(1-t)\cdot v+t\cdot w\mapsto \gamma_w(t)\] 
-is called {}\emph{cone over $f$} with the vertex $x$. 
+is called the {}\emph{cone over $f$} with vertex $x$. 
 
 One may start with a map $f_0\:\Delta_0\to M$ and iterate the cone construction for the vertices $x_1,\dots x_k$,
 to get a sequence of maps $f_i\:\Delta_i\to M$
-as far as $f_{i-1}(\Delta_{i-1})\subset B(x_i,1)$.
-Straightforward application of triangle inequality 
+as long as $f_{i-1}(\Delta_{i-1})\subset B(x_i,1)$.
+Straightforward application of the triangle inequality 
 shows that the latter conditions hold if 
 $f_0(\Delta_0)\subset B(x_i,s)$ for each $i$ and $s<\tfrac2{2+k}$.
 
 \medskip
 
-Now we are coming back to the solution of the problem.
+Now we go back to the solution of the problem.
 
 Fix a fine triangulation of $W$ so that $M$ becomes a sub-complex of $W$.
 We can assume that the diameter of each simplex in $\tau$ is less than any given
 $\eps>0$.
-Further, we can assume that all the vertices of $\tau$ can be colored into $m+2$ colors $(0,\dots, m+1)$
+Furthermore, we can assume that all the vertices of $\tau$ can be colored into $m+2$ colors $(0,\dots, m+1)$
 in such a way that the vertices of each simplex 
-get different colors;
-the latter can be acheaved by passing to the barycentric subdivision of $\tau$.
+have different colors;
+the latter can be achieved by passing to the barycentric subdivision of $\tau$.
 Denote by $\tau_i$ the maximal $i$-dimensional sub-complex of $\tau$ 
 with all the vertices colored by $0,\dots, i$.
 
 Let $h$ be the maximal distance from points in $W$ to $M$.
 For each vertex $v$ in $\tau$ 
-choose a point $v'\in M$ on the distance $\le h$.
+choose a point $v'\in M$ at distance $\le h$.
 Note that 
-if $v$ and $w$ are the vertices of one simplex,
+if $v$ and $w$ are vertices of one simplex,
 then
 \[|v'-w'|_M<2\cdot h+\eps.\]
 
@@ -801,11 +800,11 @@ Assume $\tfrac{2}{m+3}>h$.
 Fix a positive value $\eps<\tfrac{2}{m+3}-h$ and use it in the construction of the triangulation $\tau$ above.
 Applying the iterated cone construction for each simplex of $\tau$
 we get an extension of the map $v\mapsto v'$ defined on $\tau_0$ to $\tau_1,\dots\tau_{m+1}$.
-According to the estimates above the cone constructions are defined at each of the needed $m+1$ iterations.
+According to the above estimates, the cone constructions are defined at each of the needed $m+1$ iterations.
 
 This way we get 
 to a retraction $W\to M$.
-It follows that fundamental class of $M$ vanish in the homology ring of $M$, 
+It follows that the fundamental class of $M$ vanishes in the homology ring of $M$, 
 a contradiction. 
 \qeds
 
@@ -856,7 +855,7 @@ is at most $\tfrac{\delta_m}{\eps}$.
 Hence the result follows.
 \qeds
 
-I learned the problem from Mikhael Gromov.
+I learned this problem from Mikhael Gromov.
 It gives an example in the Riemannian world
 of the so called 
 \index{concentration of measure}\emph{concentration of measure phenomenon}
