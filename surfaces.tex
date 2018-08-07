@@ -621,9 +621,16 @@ Arguing by contradiction, assume that the projection $\bar\gamma$
 of $\gamma$ to the $(x, y)$-plane is star shaped with respect to the origin.
 
 Consider the function 
-$$h(t)=(d_{\bar\gamma(t)}f)(\gamma(t)).$$ 
+%<<<<<<< zamorabars-patch-1
+%$$h(t)=(d_{\bar\gamma(t)}f)(\gamma(t)).$$ 
 % I actually don't understand this, gamma is not in the domain of d_{\bar\gamma(t)}f and I dont get where the asymptotic line equation shows up.
-Direct calculations show that $h'(t)\ne 0$.
+%Direct calculations show that $h'(t)\ne 0$.
+%=======
+$$h(t)=(d_{\bar\gamma(t)}f)(\bar\gamma(t));$$
+here $\bar\gamma(t)$ is considered as a vector in the $(x, y)$-plane where the differential  $d_{\bar\gamma(t)}f$ is defined.
+
+Direct calculations show $h'(t)\ne 0$.
+%>>>>>>> master
 In particular $h(t)$ is a strictly monotonic function of $\mathbb{S}^1$, a contradiction.\qeds
 
 The problem is discussed by Dmitri Panov \cite[see][]{panov-curves}.
