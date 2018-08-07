@@ -8,7 +8,7 @@ No special prerequisite is needed.
 \subsection*{Round circles in 3-sphere}\label{Round circles}
 
 \begin{pr}
-Suppose that $\mathcal{C}$ a finite collection of pairwise linked round circles in the unit 3-sphere. 
+Suppose that $\mathcal{C}$ is a finite collection of pairwise linked round circles in the unit 3-sphere. 
 Prove that there is an isotopy of $\mathcal{C}$ that moves all of them into great circles.
 \end{pr}
 
@@ -21,9 +21,9 @@ the corresponding planes intersect at a single point inside the unit sphere $\ma
 
 Take the intersection of the planes with the sphere of radius $R\ge 1$,
 rescale and pass to the limit as $R\to\infty$.  
-This way we get needed isotopy.\qeds
+This way we get the needed isotopy.\qeds
 
-The problem was discussed 
+This problem was discussed 
 by Genevieve Walsh \cite[see][]{walsh}.
 The same idea was used by Michael Freedman and  Richard Skora to show that any link made from pairwise not linked round circles is trivial; 
 in particular, Borromean rings can not be realized by round circles
@@ -33,8 +33,8 @@ in particular, Borromean rings can not be realized by round circles
 \subsection*{Box in a box}\label{box-in-box}
 
 \begin{pr}
-Assume that a rectangular parallelepiped with sizes $a,b,c$ 
-lies inside another rectangular parallelepiped with sizes $a',b',c'$. 
+Assume that a rectangular parallelepiped with sides $a,b,c$ 
+lies inside another rectangular parallelepiped with sides $a',b',c'$. 
 Show that 
 \[a'+b'+c'\ge a+b+c.\]
 
@@ -59,8 +59,8 @@ Construct a set in the Euclidean plane that intersects each line at exactly 2 po
 \label{Balls without gaps}
 
 \begin{pr}
-Let $B_1,\dots,B_n$ be the balls  
-of radiuses $r_1,\dots,r_n$ 
+Let $B_1,\dots,B_n$ be balls  
+of radii $r_1,\dots,r_n$ 
 in a Euclidean space.
 Assume that no hyperplane divides the balls into two
 non-empty sets without intersecting at least one of the balls. 
@@ -108,7 +108,7 @@ and (3) no pair $W_i,W_j$ has common interior points.
 
 }
 
-As you may guess from the diagram, the kissing number of round disc in the plane is $6$.
+As you may guess from the diagram, the kissing number of the round disc in the plane is $6$.
 
 \begin{pr}
 Show that for any convex body $W_0$ in $\RR^m$
@@ -135,15 +135,15 @@ is monotonic for any pair $x,y\in F$.
 Half of the vertices 
 of an $m$-dimensional cube
 are colored in white and the other half in black.
-Show that the cube has at least $2^{m-1}$ edges that connect the vertices of different colors. 
+Show that the cube has at least $2^{m-1}$ edges connecting vertices of different colors. 
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Geodesic loop}\label{Geodesic loop}
 
 \begin{pr}
-Show that the surface of cube in $\RR^3$
-does not admit a geodesic loop with the base point at a vertex.
+Show that the surface of a cube in $\RR^3$
+does not admit a geodesic loop with a vertex as the base point.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,37 +166,37 @@ A polyhedron is called {}\emph{right-angled} if all its dihedral angles are righ
 Show that in all sufficiently large dimensions, there is no compact convex hyperbolic right-angled polyhedron. 
 \end{pr}
 
-Let us give a short summary of Dehn--Sommerville equations which can help to solve this problem.
+Let us give a short summary of the Dehn--Sommerville equations which can help to solve this problem.
 
 Assume $P$ is a \index{simple polyhedron}\emph{simple} Euclidean $m$-dimensional polyhedron;
-that is, every vertex of $P$ exactly $m$ facets are meeting.
+that is, exactly $m$ facets meet at each vertex of $P$.
 Denote by $f_k$ the number of $k$-dimensional faces of $P$;
-the array of integers $(f_0,\dots f_m)$ is called $f$-vector of $P$.
+the array of integers $(f_0,\dots f_m)$ is called the $f$-vector of $P$.
 
-Fix an order of the vertices $v_1,\dots, v_{f_0}$
+Fix an ordering of the vertices $v_1,\dots, v_{f_0}$
 of $P$ so that for some linear function $\ell$, we have $\ell(v_i)<\ell(v_j)\ \Leftrightarrow\ i<j$.
 The \index{index of vertex}\emph{index} of the vertex $v_i$ 
-is defined as the number of edges $[v_iv_j]$ of $P$ such that $i<j$. 
-The number of vertices of given index $k$ will be denoted as $h_k$.
-The array of integers $(h_0,\dots h_m)$ is called $h$-vector of $P$.
+is defined as the number of edges $[v_iv_j]$ of $P$ such that $i>j$. 
+The number of vertices of index $k$ will be denoted as $h_k$.
+The array of integers $(h_0,\dots h_m)$ is called the $h$-vector of $P$.
 Clearly $h_0=h_m=1$ and 
 \[h_k\ge 0\quad\text{for all}\quad k.\leqno({*})\]
 
-Each $k$-face of $P$ contains a unique vertex that maximize $\ell$;
+Each $k$-face of $P$ contains a unique vertex that maximizes $\ell$;
 if the vertex has index $i$,
 then $i\ge k$ and
-then it is the maximal vertex for exactly $\tfrac{i!}{k!\cdot (i-k)!}$
+then it is the maximal vertex of exactly $\tfrac{i!}{k!\cdot (i-k)!}$
 faces of dimension $k$.
 This observation can be packed in the following polynomial identity 
 \[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
 
-Note that the identity above implies that $h$-vector does not depend on the choice of $\ell$.
+Note that the identity above implies that the $h$-vector does not depend on the choice of $\ell$.
 In particular, the $h$ vector is the same for the reversed order;
 that is,
 \[h_k=h_{m-k}\leqno({*}{*})\]
 for any $k$.
 
-The identities $({*}{*})$ are called Dehn--Sommerville equations.
+The identities $({*}{*})$ are called the Dehn--Sommerville equations.
 It gives the complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
 
 Note that the Dehn--Sommerville equations $({*}{*})$ 
@@ -211,52 +211,52 @@ $f$-vectors.
 \parbf{Box in a box.} 
 Let $\Pi$ be a parallelepiped
 with dimensions $a$, $b$ and $c$.
-Denote by $v(r)$ the volume of  $r$-neighborhoods of $\Pi$,
+Denote by $v(r)$ the volume of the $r$-neighborhood of $\Pi$,
  
 Note that for all positive $r$ we have
 \[v_{\Pi}(r)=w_3(\Pi)+w_2(\Pi)\cdot r+w_1(\Pi)\cdot r^2+w_0(\Pi)\cdot r^3,\leqno({*})\]
 where 
 \begin{itemize}
-\item $w_0(\Pi)=\tfrac43\cdot \pi$ is the volume of unit ball,
+\item $w_0(\Pi)=\tfrac43\cdot \pi$ is the volume of the unit ball,
 \item $w_1(\Pi)=\pi\cdot (a+b+c)$,
 \item $w_2(\Pi)=2\cdot(a\cdot b+b\cdot c+c\cdot a)$ is the surface area of $\Pi$,
 \item $w_3(\Pi)=a\cdot b\cdot c$ is the volume of $\Pi$,
 \end{itemize}
 
-Assume $\Pi'$ be an other parallelepiped
+Assume $\Pi'$ be another parallelepiped
 with dimensions $a'$, $b'$ and~$c'$.
 If $\Pi\subset \Pi'$,
-then $v(r)_{\Pi}\le v_{\Pi'}(r)$ for any $r$.
+then $v_{\Pi} (r)\le v_{\Pi'}(r)$ for any $r$.
 For $r\to\infty$, these inequalities imply
 \[a+b+c\le a'+b'+c'.\qedsin\]
 
 \parit{Alternative proof.}
-Note that the average length of projection of $\Pi$ to a line is
+Note that the average length of the projection of $\Pi$ to a line is
 $\Const\cdot(a+b+c)$ for some $\Const>0$.
 (In fact $\Const=\tfrac12$, but we will not need it.)
 
 Since $\Pi\subset \Pi'$,
-the average length of projection of $\Pi$
-can not exceed the average length of projection of $\Pi'$.
+the average length of the projection of $\Pi$
+can not exceed the average length of the projection of $\Pi'$.
 Hence the statement follows.
 \qeds
 
 The problem was discussed by Alexander Shen \cite[see][]{shen}.
 
 A formula analogous to $({*})$
-holds for arbitrary convex body $B$ in arbitrary dimension $m$.
+holds for an arbitrary convex body $B$ of arbitrary dimension $m$.
 It was discovered by Jakob Steiner \cite[see][]{steiner}.
 The coefficient $w_i(B)$ in the polynomial with different normalization constants 
-appear under different names most commonly
+appear under different names, most commonly
 \emph{intrinsic volumes} and
 \emph{quermassintegrals}.
 Up to a normalization constant
-they also can be defined as the average 
-of area of projections of $B$ to the $i$-dimensional planes.
+they can also be defined as the average 
+area of the projections of $B$ to the $i$-dimensional planes.
 In particular, 
 if $B'$ and $B$ are convex bodies such that $B'\subset B$,
 then $w_i(B')\le w_i(B)$ for any $i$.
-This generalize our problem quite a bit.
+This generalizes our problem quite a bit.
 Further generalizations lead to the theory of \index{mixed volumes}\emph{mixed volumes} \cite[see][]{burago-zalgaller}.
 
 The equality $w_1(\Pi)=\pi\cdot (a+b+c)$ still holds for all parallelepipeds, not only rectangular ones.
@@ -272,9 +272,9 @@ Without loss of generality, we may assume that $\Sigma$ is regular.
 
 Note that all regular complex algebraic curves of degree $d$ in $\CP^2$
 are isotopic to each other in the class of regular algebraic curves of degree $d$.
-Indeed, the set equations of degree $d$ that correspond to singular curves have the real codimesion 2.
+Indeed, the set of equations of degree $d$ that correspond to singular curves have real codimesion 2.
 Therefore the set of equations of degree $d$ that correspond to regular curves is connected.
-In particular one can construct isotopy from one regular curve to an other by changing continuously the parameters of their equations.
+In particular one can construct an isotopy from one regular curve to any other by changing continuously the parameters of the equations.
 
 In particular it follows that all regular complex algebraic curves of degree $d$ in $\CP^2$ have the same genus,
 denote it by $g$.
@@ -299,18 +299,18 @@ This problem is a background for the Hilbert's 16th problem.
 Take any complete ordering of the set of all lines 
 so that each beginning interval has cardinality less than continuum.
 
-Assume we have a set of points $X$ of cardinality less than continuum such that each line intersects $X$ at most $2$ points and cardinality of $X$ is less than continuum.
+Assume we have a set of points $X$ of cardinality less than continuum such that each line intersects $X$ in at most $2$ points.
 
 Choose the least line $\ell$ in the ordering that intersects $X$ 
-by $0$ or $1$ point.
+in $0$ or $1$ point.
 Note that the set of all lines intersecting $X$ at two points has cardinality less than continuum.
 Therefore we can choose a point on $\ell$ and add it to $X$ so that the remaining lines are not overloaded.
 
 It remains to apply well ordering principle.
 \qeds
 
-This problem has endless list of variations.
-The following problem look similar but far more involved;
+This problem has an endless list of variations.
+The following problem looks similar but far more involved;
 a solution follows from the proof of Paul Monsky that a square cannot be cut into triangles with equal areas \cite[see][]{monsky}.
 
 \begin{pr}
@@ -320,7 +320,7 @@ Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Balls without gaps.} 
-Assume that each ball has the mass proportional to its radius.
+Assume the mass of each ball is proportional to its radius.
 Denote by $z$  the center of mass of the balls.
 It is sufficient to show the following.
 \begin{cl}{$({*})$}
@@ -330,15 +330,15 @@ The ball $B(z,r)$ contains all $B_1,\dots,B_n$.
 Assume this is not the case.
 Then there is a line $\ell$ thru $z$, 
 such that the orthogonal projection of some ball $B_i$ to $\ell$ 
-does not lie in the projection of $B$ completely.
-(This projection reduces the problem to one-dimensional case.)
+does not lie completely inside the projection of $B$.
+(This projection reduces the problem to the one-dimensional case.)
 
-Note that the projection of all balls $B_1,\dots,B_n$ has to be connected and it contain a line segment longer than $r$ on one side from $z$. 
-In this case, the center of mass of balls projects inside of this segment, a contradiction.
+Note that the projection of all balls $B_1,\dots,B_n$ has to be connected and it contains a line segment longer than $r$ on one side from $z$. 
+In this case, the center of mass of the balls projects inside of this segment, a contradiction.
 \qeds
 
 The statement was conjectured by Paul Erd\H{o}s.
-The solution is given by Adolph and Ruth Goodmans
+The solution was given by Adolph and Ruth Goodmans
 [see \ncite{goodman-goodman} and also \ncite{hadwiger}].
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -346,14 +346,14 @@ The solution is given by Adolph and Ruth Goodmans
 \parbf{Covering lemma.} 
 The required collection $\{B_i\}_{i\in G}$ is constructed using the \emph{greedy algorithm}. 
 We choose the balls one by one;
-on each step we take the largest ball that does not intersect those which we choose already.
+on each step we take the largest ball that does not intersect those which we have chosen already.
 
 \medskip
 
 Note that each ball in the original collection $\{B_i\}_{i\in F}$ intersects a ball in $\{B_i\}_{i\in G}$ with larger radius.
 Therefore 
 \[\bigcup_{i\in F}B_i\subset \bigcup_{i\in G}3\cdot B_i,\leqno({*})\]
-where $3\cdot B_i$ denotes the ball with the came center as $B_i$ and with three times larger radius.
+where $3\cdot B_i$ denotes the ball with the same center as $B_i$ and with radius three times larger.
 Hence the statement follows.
 \qeds
 
@@ -362,23 +362,23 @@ Hence the statement follows.
 The constant $3^n$ is not optimal.
 The optimal constant is at least $2^n$, but its value is not known and maybe no one is willing to know.
 
-The inclusion $({*})$ is called \emph{Vitali covering lemma}.
-The following statement is called \emph{Besikovitch covering lemma};
+The inclusion $({*})$ is called the \emph{Vitali covering lemma}.
+The following statement is called the \emph{Besikovitch covering lemma};
 it has a similar proof.
 
 \begin{pr}
 For any positive integer $m$ there is a positive integer $M$ such that 
 any finite collection of balls $\{B_i\}_{i\in F}$ in the $m$-dimensional Euclidean space 
 contains a subcollection $\{B_i\}_{i\in G}$
-such that center of any ball from $\{B_i\}_{i\in F}$ lies in one of the balls from $\{B_i\}_{i\in G}$
+such that center of any ball in $\{B_i\}_{i\in F}$ lies inside one of the balls from $\{B_i\}_{i\in G}$
 and the collection $\{B_i\}_{i\in G}$ can be subdivided into $M$ subcollections of pairwise disjoint balls.
 \end{pr}
 
-Both lemmas used to prove the so called \emph{covering theorems} in measure theory,
+Both lemmas were used to prove the so called \emph{covering theorems} in measure theory,
 which state that ``undesirable sets'' have vanishing measure.
-Their applications overlap but not identical, \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while \emph{Besikovitch covering theorem} work in nice metric spaces for arbitrary Borel measures.
+Their applications overlap but aren't identical, \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while \emph{Besikovitch covering theorem} work in nice metric spaces with arbitrary Borel measures.
 
-More precisely, Vitali works in arbitrary metric space for any \index{doubling measure}\emph{doubling measure} $\mu$;
+More precisely, Vitali works in arbitrary metric spaces with a \index{doubling measure}\emph{doubling measure} $\mu$;
 the latter means that 
 \[\mu B(x,2\cdot r)\le C\cdot \mu B(x,r)\] 
 for some fixed constant $C$ and any ball $B(x,r)$ in the metric space.
@@ -403,15 +403,15 @@ these include Alexandrov spaces with curvature bounded below.
 \parbf{Kissing number.}
 Fix the dimension $m$.
 Set $n=\mathop{\rm kiss} B$.
-Let $B_1,\dots, B_n$ the copies of the ball $B$ that touch $B$ and have no common interior points.
+Let $B_1,\dots, B_n$ be copies of the ball $B$ that touch $B$ and don't have common interior points.
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
 Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
 
 For each $i$,
-consider supporting hyperplane $\Pi_i$
-to $W$
+consider the supporting hyperplane $\Pi_i$
+of $W$
 with outer normal vector $v_i$.
-Denote by $W_i$ the reflection of $W$ in $\Pi_i$.
+Denote by $W_i$ the reflection of $W$ with respect to $\Pi_i$.
 
 Note that $W_i$ and $W_j$ have no common interior points if $i\ne j$;
 the latter gives the needed inequality.
@@ -422,7 +422,7 @@ Charles Halberg,
 Eugene Levin 
 and Ernst Straus 
 \cite[see][]{halberg-levin-straus}.
-It is not known if the same inequality holds for the orientation-preserving version of kissing number.
+It is not known if the same inequality holds for the orientation-preserving version of the kissing number.
 
 
 
@@ -441,7 +441,8 @@ Direct calculations show that the following homotopy is monotonic
 \medskip
 
 This homotopy was discovered by Ralph Alexander \cite[see][]{ralexander}.
-It has number of applications, 
+It has a  %wide?
+number of applications, 
 one of the most beautiful is the given 
 by K\'aroly Bezdek 
 and Robert Connelly 
@@ -459,19 +460,19 @@ The latter was shown by Maria Belk and Robert Connelly \cite[see][]{belk-connell
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Cube.}
 Consider the cube $[-1,1]^m\subset \RR^m$.
-Any vertex this cube has the form $\bm{q}=(q_1,\dots,q_m)$,
+Any vertex of this cube has the form $\bm{q}=(q_1,\dots,q_m)$,
 where  $q_i=\pm1$.
 
 For each vertex $\bm{q}$,
-consider the intersection of the corresponding octant with the unit sphere;
+consider the intersection of the corresponding hyperoctant with the unit sphere;
 that is, the set
 \[V_{\bm{q}}=\set{(x_1,\dots,x_m)\in\mathbb{S}^{m-1}}{q_i\cdot x_i\ge 0\ \text{for each}\ i}.\]
 
-Let $\mathcal{A}\subset\mathbb{S}^{m-1}$ be the union of all the sets $V_{\bm{q}}$ for all black $\bm{q}$.
+Let $\mathcal{A}\subset\mathbb{S}^{m-1}$ be the union of all the sets $V_{\bm{q}}$ for black $\bm{q}$.
 Note that 
 \[\vol_{m-1}\mathcal{A}=\tfrac12\cdot\vol_{m-1}\mathbb{S}^{m-1}.\]
 
-By spherical isoperimetric inequality,
+By the spherical isoperimetric inequality,
 \[\vol_{m-2}\partial\mathcal{A}
 \ge \vol_{m-2}\mathbb{S}^{m-2}.\] 
 
@@ -479,7 +480,7 @@ It remains to observe that
 \[\vol_{m-2}\partial\mathcal{A}
 =
 \tfrac k{2^{m-1}}\cdot\vol_{m-2}\mathbb{S}^{m-2},\]
-where $k$ is the number of edges of the cube with one end black and the other in white.
+where $k$ is the number of edges of the cube with one black end and the other in white.
 \qeds
 
 The problem was suggested by Greg Kuperberg.
@@ -490,24 +491,24 @@ Assume such loop exists; denote it by $\gamma$ and let $v$ be its base vertex.
 
 Denote by $\xi$ and $\zeta$ the directions of exit and the entrance of the loop.
 Let $\alpha$ be the angle between $\xi$ and $\zeta$
-measured in the tangent cone to the surface of cube at $v$.
+measured in the tangent cone to the surface of the cube at $v$.
 
 Note that $\alpha=\tfrac\pi2$.
 It can be seen from the Gauss--Bonnet formula since each vertex of the cube has curvature $\tfrac\pi2$.
-Alternatively, it can be proved by the unfolding of $\gamma$ on the plane.
+Alternatively, it can be proved by unfolding $\gamma$ on the plane.
 
-It follows that there is a rotational symmetry of cube with order 3 that fix $v$ and sends $\xi$ to $\zeta$.
-The later leads to a contradiction.
+It follows that there is a rotational symmetry of the cube with order 3 that fixes $v$ and sends $\xi$ to $\zeta$.
+The latter leads to a contradiction.
 \qeds
 
 The same idea can be used to solve the following harder problems.
 
 \begin{pr}
-Show the same for the surface of higher dimensional cube.
+Show the same for the surface of the higher dimensional cube.
 \end{pr}
 
 \begin{pr}
- Show the same for the surface tetrahedron, octahedron and icosahedron.
+ Show the same for the surface of the tetrahedron, octahedron and icosahedron.
 \end{pr}
 
 
@@ -515,7 +516,7 @@ Show the same for the surface of higher dimensional cube.
 %In this case $\alpha$ is a multiple of $\tfrac\pi3$; it implies existence of rotational symmetry of which fix $v$ and sends $\xi$ to $\zeta$ and leads to a contradiction the same way.
 
 For the dodecahedron such loop exists;
-its development shown on the diagram.
+its development is shown on the diagram.
 The vertices of a cube inscribed in the dodecahedron are circled.
 
 \begin{center}
@@ -535,9 +536,9 @@ we have
 \[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\leqno({*})\]
 Indeed, if $({*})$ does not hold, then $\langle x_j-x_i,z-x_i\rangle<0$.
 Since $z\in K$ we have $\langle x_j-x_i,x_k-x_i\rangle<0$ for some vertex $x_k$.
-That is, $\measuredangle \hinge{x_i}{x_j}{x_k}<\tfrac\pi2$, a contradiction.
+That is, $\measuredangle \hinge{x_i}{x_j}{x_k} > \tfrac\pi2$, a contradiction.
 
-Denote by $h_i$ the homothety with center at $x_i$ and coefficient $\tfrac12$.
+Denote by $h_i$ the homothety with center $x_i$ and coefficient $\tfrac12$.
 Set $K_i=h_i(K)$.
 
 {
@@ -554,7 +555,7 @@ Set $K_i=h_i(K)$.
 \end{wrapfigure}
 
 Let us show that $K_i$ and $K_j$ have no common interior points.
-Assume contrary; 
+Assume the contrary; 
 that is, \[z=h_i(z_i)=h_j(z_j);\]
 for some interior points $z_i$ and $z_j$ in $K$.
 Note that 
@@ -583,8 +584,9 @@ Hence the result follows.
 The problem was posted by Paul Erd{\H{o}}s 
 and solved by Ludwig Danzer and Branko Gr\"unbaum \cite[see][]{erdos,danzer-guenbaum}.
 
-Grigori Perelman noticed that the same proof works for a similar problem for Alexandrov space \cite[see][]{perelman-Erdos};
-the later led to interesting connections to the crystallographic groups \cite[see][]{lebedeva}.
+Grigori Perelman noticed that the same proof works for a similar problem in Alexandrov spaces \cite[see][]{perelman-Erdos};
+the later led to interesting connections with the crystallographic groups \cite[see][]{lebedeva}.
+
 
 Surprisingly, the maximal number of points that make only acute triangles grows exponentially with as well.
 The latter was shown by Paul Erd\H{o}s and Zolt\'an F\"uredi \cite[see][]{erdos-fueredi} using the \index{probabilistic method}\emph{probabilistic method}.
@@ -601,13 +603,13 @@ Let $P$ be a right-angled hyperbolic polyhedron of dimension $m$.
 Note that $P$ is simple; 
 that is, exactly $m$ facets meet at each vertex of $P$.
 
-From the projective model of hyperbolic plane, 
+From the projective model of the hyperbolic plane, 
 one can see that for any simple compact hyperbolic polyhedron there is a simple Euclidean polyhedron with the same combinatorics. 
 In particular Dehn--Sommerville equations hold for $P$.
 
 Denote by $(f_0,\dots f_m)$ and $(h_0,\dots h_m)$ the $f$- and $h$-vectors of $P$.
 Recall that $h_i\ge 0$ for any $i$ and $h_0=h_m=1$.
-By Dehn--Sommerville equations, we get
+By the Dehn--Sommerville equations, we get
 \[f_2> \tfrac{m-2}4\cdot f_1.
 \leqno({*})\]
 
@@ -616,13 +618,14 @@ It follows that
 \[f_2\le \tfrac{m-1}5\cdot f_1.\]
 The latter contradicts $({*})$ for $m\ge 6$.
 \qeds
- 
-The proof above 
-is the core of proof of nonexistence of compact hyperbolic Coxeter's polyhedrons of large dimensions 
+
+The above proof  
+is the core of the proof of nonexistence of compact hyperbolic Coxeter's polyhedrons of large dimensions 
 given by Ernest Vinberg \cite[see][]{vinberg, vinberg-strong}.
 
 Playing a bit more with the same inequalities, 
 one gets nonexistence of  right-angled hyperbolic polyhedrons,
 in all dimensions starting from $5$.
 In the 4-dimensional case,
-there is a regular right-angled  hyperbolic \index{120-cells}\emph{120-cells} --- a 4-dimensional uncle of dodecahedron.
+there is a regular right-angled  hyperbolic polyhedron with \index{120-cells}\emph{120-cells} --- a 4-dimensional uncle of the dodecahedra.
+
