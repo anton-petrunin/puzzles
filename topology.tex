@@ -23,8 +23,8 @@ Moreover, $h$ can be chosen to be isotopic to the identity map.
 \parit{Semisolution.}
 Fix a homeomorphism $\phi\:K_1\to K_2$.
 
-By Tietze extension theorem,
-the homeomorphisms $\phi\:K_1\z\to K_2$ and $\phi^{-1}\:K_2\z\to K_1$ can be extended to a continuous maps;
+By the Tietze extension theorem,
+the homeomorphisms $\phi\:K_1\z\to K_2$ and $\phi^{-1}\:K_2\z\to K_1$ can be extended to continuous maps;
 denote these maps by $f\:\RR^m\z\to \RR^m$ and $g\:\RR^m\z\to \RR^m$ correspondingly.
 
 {
@@ -58,9 +58,9 @@ It remains to observe that each homeomorphism $h_i$ is isotopic to the identity 
 
 
 This construction is called \emph{Klee's trick}; it is due to Victor Klee \cite[see][]{klee}.
-This trick used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite[see][]{doyle};
+This trick is used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite[see][]{doyle};
 a proof of the separation theorem for the embeddings $\mathbb{S}^n\hookrightarrow\mathbb{S}^{n+1}$
-can be build on the same idea \cite[see][]{cohen}. 
+can be built with the same idea \cite[see][]{cohen}. 
 
 The problem ``Monotonic homotopy'' on page \pageref{mono-homotopy} looks similar.
 
@@ -89,11 +89,11 @@ into the plane that coincide near the boundary.
 
 Let $\Sigma$ be a surface and 
 \[\gamma\:\RR/\ZZ\z\to\Sigma\] 
-be non-contractible closed simple curve.
+be a non-contractible closed simple curve.
 Let $U_\gamma$ be a neighborhood of $\gamma$ that admits a parametrization 
 \[\iota\:\RR/\ZZ\times (0,1)\to U_\gamma.\]
-\index{Dehn twist}\emph{Dehn twist} along $\gamma$ is a homeomorphism $h\:\Sigma\z\to\Sigma$
-that is identity outside of $U_\gamma$ and 
+A \index{Dehn twist}\emph{Dehn twist} along $\gamma$ is a homeomorphism $h\:\Sigma\z\to\Sigma$
+that is the identity outside of $U_\gamma$ and 
 such that
 \[\iota^{-1}\circ h\circ \iota\:(x,y)\mapsto(x+y,y).\]
 
@@ -102,7 +102,7 @@ and $\iota$ is orientation preserving,
 then the Dehn twist described above is called {}\emph{positive}.
 
 \begin{pr}
-Let $\Sigma$ be an compact oriented surface with nonempty boundary.
+Let $\Sigma$ be a compact oriented surface with nonempty boundary.
 Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to the identity rel. boundary.
 
 In other words, any product of positive Dehn twists represents a nontrivial class in the mapping class group of $\Sigma$.
@@ -116,7 +116,7 @@ In other words, any product of positive Dehn twists represents a nontrivial clas
 Let $p$ be a point in a topological space $X$.
 We say that an open neighborhood $U\ni p$ is \index{conic neighborhood}\emph{conic}
 if there is a homeomorphism from a cone
-to $U$ that sends its vertex to $p$.
+to $U$ that sends the vertex to $p$.
 
 \begin{pr}  
 Show that any two conic neighborhoods of one point are homeomorphic to each other.
@@ -176,7 +176,7 @@ Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations
 \label{Simple path}
 
 \begin{pr}
-Let $p$ and $q$ be distinct points in Hausdorff topological space $X$.
+Let $p$ and $q$ be distinct points in a Hausdorff topological space $X$.
 Assume $p$ and $q$ are connected by a path.
 Show that they can be connected by a simple path;
 that is, there is an injective continuous map $\beta\:[0,1]\z\to X$
@@ -221,7 +221,7 @@ Both circles on the picture bound essentially different discs.
 
 On the first diagram, the dashed lines and the solid lines together bound three embedded discs;
 gluing these discs along the dashed lines gives the first immersion.
-The reflection of this immersion in the vertical line of symmetry gives an other immersion which is essentially different.
+The reflection of this immersion across the vertical line of symmetry gives another immersion which is essentially different.
 \qeds
 
 
@@ -271,7 +271,7 @@ such that $\tilde h(x_0)=x_0$.
 The following claim is the key step in the proof. 
 
 \begin{cl}{$({*})$} 
-Assume $h$ is a positive Dehn twist along closed curve $\gamma$.
+Assume $h$ is a positive Dehn twist along a closed curve $\gamma$.
 Then $ y\succeq \tilde h(y)$ for any $y\in\partial\tilde\Sigma\backslash\{x_0\}$
 and $y_0\succ\tilde h(y_0)$ for some $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$.
 \end{cl}
@@ -285,9 +285,9 @@ Therefore the problem follows from~$({*})$.
 \medskip
 
 If $\Sigma$ is not an annulus,
-then by uniformization theorem, we can assume that $\Sigma$ has  hyperbolic metric and geodesic boundary; 
+then by the uniformization theorem, we can assume that $\Sigma$ has a  hyperbolic metric with geodesic boundary; 
 the lifted metric on $\tilde\Sigma$ has the same properties.
-Further we can assume that (1) $\gamma$ is a closed geodesic,
+Furthermore, we can assume that (1) $\gamma$ is a closed geodesic,
 (2) the parametrization $\iota\:\RR/\ZZ\times (0,1)\to U_\gamma$ from the definition of Dehn twist is rotationally symmetric 
 and (3) for any $u\in \RR/\ZZ$ the arc $\iota(u\times (0,1))$ is a geodesic perpendicular to~$\gamma$. 
 
@@ -339,7 +339,7 @@ such that
 \item 
 For any compact set $K\subset V$ 
 there is a positive integer $n=n_K$ such that 
-$f_n(k)=f_m(k)$ for any $k\in K$ and $m\ge n$.
+$f_n(k)=f_m(k)$ for any $k\in K$ and $m, n \ge n_K$.
 \item For any point $w\in W$ there is a point $v\in V$ such that $f_n(v)=w$ for all large $n$.
 \end{itemize}
 
@@ -366,7 +366,7 @@ The problem is due to Kyung Whan Kwun \cite[see][]{kwun}.
 \end{lpic}
 \end{center}
 
-Observe that it is possible to draw tight arbitrary knot 
+Observe that it is possible to draw an arbitrary tight knot 
 while keeping it smoothly embedded all the time including the last moment.\qeds
 
 
@@ -387,25 +387,25 @@ The example can be guessed from the diagram.
 
 \medskip
 
-The two sets $K_1$ and $K_2$ are subspaces of the plane 
-each is a closed annulus with attached two line segments.
-In $K_1$ one segment is attached from inside and the other from the outside and 
+The two sets $K_1$ and $K_2$ are subspaces of the plane, 
+each one is a closed annulus with two attached line segments.
+In $K_1$ one segment is attached from inside and the other from outside and 
 in $K_2$ both segments are attached from outside.
 
 }
 
-The product spaces $K_1\times[0,1]$ and $K_2\times[0,1]$ are solid toruses with attached rectangles.
-A homeomorphism $K_1\times[0,1]\to K_2\times[0,1]$ can be contrasted by twisting part of one solid torus.
+The product spaces $K_1\times[0,1]$ and $K_2\times[0,1]$ are solid tori with attached rectangles.
+A homeomorphism $K_1\times[0,1]\to K_2\times[0,1]$ can be constructed by twisting a part of one solid torus.
 
-To prove the nonexistence of homeomorphism $K_1\to K_2$ consider the sets of cut points $V_i\subset K_i$ and the sets $W_i\subset K_i$ of points that admit a punctured simply connected neighborhood.
+To prove the nonexistence of a homeomorphism $K_1\to K_2$ consider the sets of cut points $V_i\subset K_i$ and the sets $W_i\subset K_i$ of points that admit a punctured simply connected neighborhood.
 Note that the set $V_i$ is the union of the attached line segments 
-and $W_i$ is the boundary of annulus without points where the segments are attached.
+and $W_i$ is the boundary of the annulus without points where the segments are attached.
 Note that $V_i\cup W_i=\partial K_i$;
 in particular, a homeomorphism $K_1\to K_2$ (if exists) sends $\partial K_1$ to $\partial K_2$.
 
 Finally note that each $\partial K_i$ has two connected components and 
-$V_1$ lies in both components of $\partial K_1$
-while $V_2$ lies in one components of $\partial K_2$.
+$V_1$ intersects both components of $\partial K_1$
+while $V_2$ lies in one component of $\partial K_2$.
 Hence $K_1\ncong K_2$.
 \qeds
 
@@ -414,10 +414,10 @@ I learned this problem from Maria Goluzina around 1988.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Homeomorphism of a cube.}
-Let us extend the homeomorphism $h$ to whole $\RR^m$ by reflecting the cube in its facets.
-We get a homeomorphism say $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any $x\in\square^m$ and 
+Let us extend the homeomorphism $h$ to $\RR^m$ by reflecting the cube across its facets.
+We get a homeomorphism $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any $x\in\square^m$ and 
 \[\tilde h\circ\gamma=\gamma\circ \tilde h,\]
-where $\gamma$ is any reflection in the facets of the cube.
+where $\gamma$ is any reflection with respect to the facets of the cube.
 
 Without loss of generality, we may assume that the cube $\square^m$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
 In this case $\tilde h$ has \index{displacement}\emph{displacement} at most $2$;
@@ -430,7 +430,7 @@ for any $x\in\RR^m$.
 \end{lpic}
 \end{wrapfigure}
 
-Fix a smooth increasing concave function $\phi\:\RR\to\RR$ such that
+Fix a smooth increasing concave function $\phi\:\RR ^{ +} \to\RR$ such that
 \[\phi(r)\z=r\] 
 for any $r\le 1$ and 
 \[\sup\{\phi(r)\}=2.\]
@@ -454,20 +454,20 @@ f(x)=\left[
 It remains to observe that $f\:\RR^m\to\RR^m$ is a solution.
 \qeds
 
-The problem is a stripped from a proof of Robion Kirby \cite[see][]{kirby}.
-The condition that face is mapped to face can be removed and 
-instead of homeomorphism one can take an embedding that is close to the identity.
+This problem is stripped from a proof of Robion Kirby \cite[see][]{kirby}.
+The condition that each face is mapped to itself can be removed and 
+instead of homeomorphism one could take any embedding close to the identity.
 
 An interesting twist to this idea was given by Dennis Sullivan \cite[see][]{sullivan}.
-Instead of the discrete group of motions of Euclidean space,
-he use a discrete group of motions of hyperbolic space in the conformal disk model.
+Instead of the discrete group of motions of the Euclidean space,
+he uses a discrete group of motions of the hyperbolic space in the conformal disk model.
 
-To see the idea, note that the construction of $\tilde h$ can be done for a Coxeter polytope in the hyperbolic space instead of cube.
+To see the idea, note that the construction of $\tilde h$ can be done for a Coxeter polytope in the hyperbolic space instead of a cube.
 Then the constructed map $\tilde h$
 coincides with the identity on the absolute and therefore the last ``shrinking'' step in the proof above is not needed.
 Moreover, 
 if the original homeomorphism is bi-Lipschitz,
-then the construction also produce a bi-Lipschitz homeomorphism ---
+then the Sullivan construction produces a bi-Lipschitz homeomorphism ---
 this is the main advantage.
 
   
@@ -476,7 +476,7 @@ this is the main advantage.
 \parbf{Finite topological space.}
 Given a point $p\in F$,
 denote by $O_p$ the minimal open set in $F$ containing $p$. 
-Note that we can assume that $F$ connected $T_0$-space;
+Note that we can assume that $F$ is a connected $T_0$-space;
 in particular, $O_p=O_q$ if and only if $p=q$.
 
 Let us write $p\preccurlyeq q$ 
@@ -484,9 +484,9 @@ if $O_p\subset O_q$.
 The relation $\preccurlyeq$ is a partial order on~$F$.
 
 Let us construct a simplicial complex $K$ 
-by taking $F$ as the set of its vertices
-and saying that a collection of vertices form a simplex 
-if they can be linearly ordered with respect to $\preccurlyeq$.
+by taking $F$ as the set of vertices
+and declaring a collection of vertices to be a simplex 
+if it can be linearly ordered with respect to $\preccurlyeq$.
 
 Given $k\in K$,
 consider the minimal simplex $(f_0,\dots,f_m)\ni k$;
@@ -495,10 +495,10 @@ Set $h\:k\mapsto f_0$;
 it defines a map $K\to F$.
 
 It remains to check that $h$ is continuous 
-and induces an isomorphism of all the homotopy groups.
+and induces isomorphisms for all the homotopy groups.
 \qeds
 
-In a similar fashion, one can construct a finite topological space $F$ for given simplicial complex $K$ 
+In a similar fashion, one can construct a finite topological space $F$ for any given simplicial complex $K$ 
 such that 
 there is a weak homotopy equivalence $K\to F$.
 Both constructions are due to Pavel Alexandrov
@@ -507,11 +507,11 @@ Both constructions are due to Pavel Alexandrov
 \parbf{Dense homeomorphism.}
 Note that there is countable set of homeomorphisms $h_1,h_2,\dots$ that is dense in $\mathcal{H}$
 such that
-each $h_n$ fix all the points outside an open round disc, say $D_n$.
+each $h_n$ fixes all the points outside an open round disc, say $D_n$.
 
 Choose a countable disjoint collection of round discs $D_n'$.
 Consider the homeomorphism $h\:\mathbb S^2\to \mathbb S^2$
-that fix all the points outside of $\bigcup_nD'_n$ and
+that fixes all the points outside of $\bigcup_nD'_n$ and
 for each $n$,
 the restriction $h|_{D_n'}$ is conjugate to $h_n|_{D_n}$. 
 
@@ -529,7 +529,7 @@ In particular it implies the following seemingly evident but nontrivial statemen
 \begin{pr}
 Given $\eps>0$ there is $\delta>0$ such that 
 \[\Omega\cap h(\Omega)\ne\emptyset\]
-for any topological disc $\Omega\subset \SSS^3$ with area at least $\eps$
+for any topological disc $\Omega\subset \SSS^2$ with area at least $\eps$
 and 
 any area-preserving homeomorphism $h\:\SSS^2\to\SSS^2$ with displacement at most $\delta$;
 that is, $|h(x)-x|_{\SSS^2}<\delta$ for any $x\in \SSS^2$. 
@@ -538,7 +538,7 @@ that is, $|h(x)-x|_{\SSS^2}<\delta$ for any $x\in \SSS^2$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Simple path.}
-We will give two solution, first is elementary and the second is involved. 
+We will give two solutions, the first one is elementary and the second one is involved. 
 
 \parit{First solution.}
 Let $\alpha$ be a path connecting $p$ to $q$.
@@ -548,8 +548,7 @@ we can assume that $\alpha(t)\ne p,q$ for $t\ne0,1$.
 
 An open set $\Omega$ in $(0,1)$ will be called {}\emph{suitable}
 if for any connected component $(a,b)$ of $\Omega$ we have $\alpha(a)=\alpha(b)$.
-Passing to the union of nested sequence of suitable sets we can find a maximal suitable set $\hat \Omega$;
-that is, $\hat \Omega$ suitable and it is not a subset of any other suitable set.
+Since the union of nested suitable sets is suitable, we can find a maximal suitable set $\hat \Omega$.
 
 Define $\beta(t)=\alpha(a)$ for any $t$ in a connected component $(a,b)\subset\Omega$.
 Note that $\beta$ is continuous and monotonic;
@@ -560,7 +559,7 @@ It remains to re-parametrize $\beta$ to make it injective.
 
 \parit{Second solution.}
 Note that one can assume that $X$ coincides with the image of $\alpha$.
-In particular $X$ is connected, locally connected, compact Hausdorff space.
+In particular, $X$ is a connected, locally connected, compact Hausdorff space.
 
 Any such space admits a length-metric.
 This statement is not at all trivial;
@@ -572,7 +571,7 @@ and Edwin Moise \cite[see][]{moise}.
 It remains to consider a geodesic path from $p$ to $q$.
 \qeds
 
-The problem inspired by a lemma 
+The problem was inspired by a lemma 
 proved by 
 Alexander Lytchak
 and Stefan Wenger \cite[see 7.13 in][]{lytchak-wenger}.
@@ -596,7 +595,7 @@ The following picture suggests an idea for an induction proof on the number of s
 
 To do the proof formally,
 let us present the path as a concatenation $\alpha*\beta$ of two paths  such that $\alpha$ is simple
-and $\beta$ does not pass the beginning point $p$.
+and $\beta$ does not pass through $p$.
 We can assume that $\beta\:[0,1]\to \Sigma$ is smooth.
 
 Choose a smooth time depending vector field $V_t$ on $\Sigma$ such that
