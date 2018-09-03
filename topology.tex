@@ -374,13 +374,7 @@ This problem was suggested by Greg Kuperberg.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{
-\begin{wrapfigure}{o}{39 mm}
-\begin{lpic}[t(-3 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/K1K2(1)}
-\lbl[]{3,9;{\small\color{white} $K_1$}}
-\lbl[]{23,9;{\small\color{white} $K_2$}}
-\end{lpic}
-\end{wrapfigure}
+
 
 \parbf{Stabilization.}
 The example can be guessed from the diagram.
@@ -392,7 +386,13 @@ each one is a closed annulus with two attached line segments.
 In $K_1$ one segment is attached from inside and the other from outside and 
 in $K_2$ both segments are attached from outside.
 
-}
+{
+\begin{wrapfigure}{o}{39 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/K1K2(1)}
+\lbl[]{3,9;{\small\color{white} $K_1$}}
+\lbl[]{23,9;{\small\color{white} $K_2$}}
+\end{lpic}
+\end{wrapfigure}
 
 The product spaces $K_1\times[0,1]$ and $K_2\times[0,1]$ are solid tori with attached rectangles.
 A homeomorphism $K_1\times[0,1]\to K_2\times[0,1]$ can be constructed by twisting a part of one solid torus.
@@ -402,6 +402,8 @@ Note that the set $V_i$ is the union of the attached line segments
 and $W_i$ is the boundary of the annulus without points where the segments are attached.
 Note that $V_i\cup W_i=\partial K_i$;
 in particular, a homeomorphism $K_1\to K_2$ (if exists) sends $\partial K_1$ to $\partial K_2$.
+
+}
 
 Finally note that each $\partial K_i$ has two connected components and 
 $V_1$ intersects both components of $\partial K_1$
@@ -595,7 +597,7 @@ The following picture suggests an idea for an induction proof on the number of s
 
 To do the proof formally,
 let us present the path as a concatenation $\alpha*\beta$ of two paths  such that $\alpha$ is simple
-and $\beta$ does not pass through $p$.
+and $\beta$ does not pass thru $p$.
 We can assume that $\beta\:[0,1]\to \Sigma$ is smooth.
 
 Choose a smooth time depending vector field $V_t$ on $\Sigma$ such that
