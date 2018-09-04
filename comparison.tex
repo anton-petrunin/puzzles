@@ -101,9 +101,9 @@ with non-positive curvature.
 
 By Cartan--Hadamard theorem, for any point $p\in M$
 the exponential map $\exp_p\:\T_p\to M$ is a diffeomorphism.
-In particular $M$ is diffeomorphic to the Euclidean space of the same dimension.
-In particular, any geodesic in $M$ is minimizing,
-and any two points in $M$ are connected by unique minimizing geodesic,
+In particular, $M$ is diffeomorphic to the Euclidean space of the same dimension.
+Moreover, any geodesic in $M$ is minimizing,
+and any two points in $M$ are connected by a unique minimizing geodesic,
 
 Further, $M$ is a $\CAT[0]$ space; that is, it satisfies a global angle comparison which we are about to describe.
 Assume $[xyz]$ is a triangle in $M$;
@@ -137,8 +137,8 @@ such that $\iota=f\circ h$.
 \label{minimal surface}\label{almgren} 
 
 A  smooth $n$-dimensional surface $\Sigma$ in
-an $m$-dimensional Riemannian manifold $M$ is called minimal
-if it is locally minimizing the $n$-dimensional area;
+an $m$-dimensional Riemannian manifold $M$ is called \index{minimal surface}\emph{minimal}
+if it locally minimizes the $n$-dimensional area;
 that is, sufficiently small regions of $\Sigma$ do not admit area decreasing deformations with fixed boundary.
 
 The minimal surfaces can be also defined via mean curvature vector as follows.
@@ -202,10 +202,10 @@ which is direct generalization of the formula for Gauss curvature of a surface.
 \subsection*{Horo-sphere}
 \label{Horosphere}
 
-We say that a Riemannian manifold has negatively pinched sectional curvature, if its sectional curvatures at all point in all sectional direction lie in an interval $[-a^2, -b^2]$, for fixed constants $a>b>0$.
+We say that a Riemannian manifold has negatively pinched sectional curvature, if its sectional curvatures at all points in all sectional directions lie in an interval $[-a^2, -b^2]$, for fixed constants $a>b>0$.
 
 Let $M$ be a complete Riemannian manifold
-and $\gamma$ is a ray in $M$; 
+and $\gamma$ a ray in $M$; 
 that is, $\gamma\:[0, \infty)\to M$ is a minimizing unit-speed geodesic.
 
 The \label{page:Busemann function}\index{Busemann function}\emph{Busemann function} $\bus_\gamma\:M\to\RR$ is defined by
@@ -270,7 +270,7 @@ For more on Alexandrov geometry read our book \cite{akp}.
 \label{Energy minimizer}
 
 Let $F$ be a smooth map from a closed Riemannian manifold $M$ to a Riemannian manifold $N$.
-Then energy functional of $F$ is defined as
+The energy functional of $F$ is defined as
 \[E(F)=\int\limits_M |d_xF|^2\cdot d_x\vol_M.\]
 We assume that  
 \[|d_xF|^2=\sum_{i,j}a_{i,j}^2,\]
@@ -489,7 +489,7 @@ The problem was suggested by Peter Petersen.
 Set 
 \[m=\dim \Sigma=\dim M-1.\]
 
-Given a point in $p$ on $\Sigma$ 
+Given a point $p$ on $\Sigma$ 
 denote by $p_r$ the point on distance $r$ from $p$
 that lies on the geodesic starting from $p$ in the outer normal direction to $\Sigma$.
 Note that for fixed $r\ge 0$,
@@ -558,7 +558,7 @@ and $\exp_{h(p)}\circ\,\tilde\gamma_q(t)=\gamma_q(t)$ for any $t\in[0,1]$.
  \item Set $\tilde h(q)=\tilde\gamma_q(1)$.
 \end{enumerate}
 
-Show that all the hypersurfaces $\tilde h_p(\Delta(p))\subset \T_{h(p)}$ has principle curvatures at least $\tfrac\kappa2$.
+Show that all the hypersurfaces $\tilde h_p(\Delta(p))\subset \T_{h(p)}$ have principle curvatures at least $\tfrac\kappa2$.
 
 Use the same idea as in the solution of ``Immersed surface'' [page ~\pageref{Immersed surface}] to show that 
 one can fix $\eps\z=\eps(M,\kappa)>0$ such that the restriction of $\tilde h_p|_{\Delta(p)}$ is injective.
@@ -754,11 +754,11 @@ is the group of $3\times3$ upper triangular matrices of the form
  0 & 0 & 1\\
 \end{pmatrix}\]
 under the operation of matrix multiplication.} 
-It instructive to show that any such metric has volume  growth of degree $4$.
+It is instructive to show that any such metric has volume  growth of degree $4$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Minimal spheres.}
-Assuming contrary,
+Assuming the contrary,
 we can choose a pair of sufficiently close minimal spheres $\Sigma$ and $\Sigma'$ in the 4-dimesional manifold $M$;
 we can assume that the distance $a$ between $\Sigma$ and $\Sigma'$ is strictly smaller than the injectivity radius of the manifold.
 Note that in this case there is a unique bijection $\Sigma\to \Sigma'$, denoted by $p\mapsto p'$ such that the distance $|p-p'|_M=a$ for any $p\in\Sigma$.
