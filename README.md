@@ -1,4 +1,14 @@
-## Exercises in Orthodox Geometry
+## How to build
 
-A collection of advanced exercises in geometry; 
-it should be good for graduate students and young researchers.
+Building is straightforward, you will need LaTeX and Git.
+The following command will create a local copy of the source code for you.
+
+`git clone https://github.com/anton-petrunin/puzzles.git`
+
+Go to the created folder and run `pdflatex`, `biber` and `makeindex` few times:
+
+`cd puzzles/`<br/>
+`pdflatex problems.tex`<br/>
+`makeindex problems`<br/>
+`biber problems`<br/>
+`pdflatex problems.tex`<br/>
