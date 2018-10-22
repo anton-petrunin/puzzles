@@ -390,15 +390,6 @@ these include Alexandrov spaces with curvature bounded below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{wrapfigure}{o}{42 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kiss-sol(1)}
-\lbl[]{21,5;{\color{white} $W$}}
-\lbl[t]{28,19;$W_j$}
-\lbl[t]{10,19;$W_i$}
-\lbl[t]{40,3;$\Pi_j$}
-\lbl[tl]{3,1;$\Pi_i$}
-\end{lpic}
-\end{wrapfigure}
 
 \parbf{Kissing number.}
 Fix the dimension $m$.
@@ -413,9 +404,21 @@ of $W$
 with outer normal vector $v_i$.
 Denote by $W_i$ the reflection of $W$ with respect to $\Pi_i$.
 
+\begin{wrapfigure}{o}{42 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kiss-sol(1)}
+\lbl[]{21,5;{\color{white} $W$}}
+\lbl[t]{28,19;$W_j$}
+\lbl[t]{10,19;$W_i$}
+\lbl[t]{40,3;$\Pi_j$}
+\lbl[tl]{3,1;$\Pi_i$}
+\end{lpic}
+\end{wrapfigure}
+
 Note that $W_i$ and $W_j$ have no common interior points if $i\ne j$;
 the latter gives the needed inequality.
 \qeds
+
+
 
 The proof is given by 
 Charles Halberg, 
@@ -560,9 +563,9 @@ that is, \[z=h_i(z_i)=h_j(z_j);\]
 for some interior points $z_i$ and $z_j$ in $K$.
 Note that 
 \[
-\measuredangle\hinge{x_i}{x_j}{z_i}
+\measuredangle\hinge{x_i}{x_j}{z_j}
 +
-\measuredangle\hinge{x_j}{x_i}{z_j}
+\measuredangle\hinge{x_j}{x_i}{z_i}
 =
 \pi,
 \]
