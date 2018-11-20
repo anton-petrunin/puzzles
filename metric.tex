@@ -381,6 +381,15 @@ the ball $B(x_0,R)_X$ is
 isometric to the ball $B(y_0,R)_Y$.
 \end{pr}
 
+\subsection*{Average distance\easy}
+
+\begin{pr}
+Show that for any compact length-metric space $X$ there is unique number $\ell=\ell(X)$ such that for any finite collection of points there is a point  average distance $\ell$ from the collection;
+that is, for any $x_1,\dots,x_n\in X$ there is $z\in X$ such that
+\[\tfrac1n\cdot\sum_i|x_i-z|_X=\ell.\]
+
+\end{pr}
+
 
 
 \section*{Semisolutions}
@@ -1089,3 +1098,20 @@ Note yet that the resulting spaces for two sequences $(a_n)$ and $(a'_n)$ are is
 
 It remains to produce two sequences that do not have these identities for all large $n$; 
 two random sequences of zeros and ones will do the job with probability one.\qeds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Average distance.}
+Arguing by contradiction assume there is no such number.
+Then, by 1-dimesional Helly's theorem, there is a pair of point-arrays $\{x_1,\dots,x_n\}$ and $\{y_1,\dots,y_m\}$
+such that for their average distance functions $f(z)=\tfrac1n\cdot\sum_i|x_i-z|$ and $h(z)=\tfrac1m\cdot\sum_j|y_j-z|$, we have 
+$$f(p)>h(q)$$
+for any two points $p,q$.
+
+Note that 
+$$\tfrac1m\cdot\sum_j f(y_j)=\tfrac1{m\cdot n}\cdot\sum_{i,j}|x_i-y_j|=\tfrac1n\cdot\sum_i h(x_i),$$
+a contradiction.
+
+To prove uniqueness, it is sufficient to approximate a constant function by average distance functions.
+\qeds
+
+This is a result of Oliver Gross \cite[see][]{gross}.
