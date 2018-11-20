@@ -53,7 +53,9 @@ that is, $W$ is the intersection of all closed convex subsets containing $K$.
 Clearly $W$ is a complete subspace of $\mathcal{B}(K,\RR)$.
 
 Since $K$ is compact we can choose a finite $\eps$-net $K_\eps$ in $K$.
-Evidently the convex hull $W_\eps$ of $K_\eps$ is compact and $W$ lies in the $\eps$-neighborhood of $W_\eps$.
+The set $K_\eps$ lies in a finite dimensional subspace;
+therefore its convex hull $W_\eps$ is compact.
+Note that $W$ lies in the $\eps$-neighborhood of $W_\eps$.
 Therefore, $W$ admits a compact $\eps$-net for any $\eps>0$.
 That is, $W$ is totally bounded and complete and therefore compact.
 
@@ -62,10 +64,22 @@ In particular $W$ is a compact length-metric space as required.
 \qeds
 
 The map $x\mapsto \dist_x$ is called the \index{Kuratowski embedding}\emph{Kuratowski embedding},
-it was constructed in \cite{kuratowski},
-essentially the same map 
-was described by Maurice Fr\'echet 
-in the same paper he introduced metric spaces \cite[see][]{frechet}.
+it was constructed in \cite{kuratowski}.
+Essentially the same map 
+was described by Maurice Fr\'echet \cite[in][this is the paper where metric spaces were introduced]{frechet}.
+
+The problem also follows directly from a theorem of John Isbell, stating that \emph{injective envelope} of compact metric space is compact;
+injective envelope is an analog of convex hull in the category of metric spaces
+\cite[see 2.11 in][]{isbell}.
+
+The following related problem is open even for three-point sets.
+This problem is known in folklore for long time [I know it since 1993],
+but in print it was mentioned only recently 
+[see \ncite{kopecka-reich} after Theorem 2.10, \ncite{convex-hull} and Question 2.17 in \ncite{duchesne}].
+
+\begin{pr}
+Is it true that any compact subset of a complete $\CAT(0)$ length-space lies in a convex compact set?
+\end{pr}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -518,7 +532,7 @@ It remains to smooth the obtained space slightly
 to get a genuine Riemannian metric with the needed property.\qeds
 
 
-This construction is a stripped version of the theorem of Steven Ferry and Boris Okunin \cite[see][]{ferry-okun}.
+This construction is a stripped version of the theorem of Steven Ferry and Boris Okun \cite[see][]{ferry-okun}.
 The theorem states that Riemannian metrics on a fixed smooth closed manifold $M$ with $\dim M\ge 3$ 
 can approximate a given compact length-metric space $X$ 
 if and only if 
