@@ -155,7 +155,13 @@ be a collection of points such that any triangle $[x_ix_jx_k]$ is right or acute
 Show that $n\le 2^m$.
 \end{pr}
 
+\subsection*{Upper approximant}\label{One-sided approximants}
 
+\begin{pr}
+Let $\mu$ be a Borel probability measure on the plane.
+Show that given $\eps>0$ there is a finite set of points $S$ that intersects every convex figure of measure at leaset $\eps$.
+Moreover we can assume that $|S|$ --- the number of points in $S$, depends only on $\eps$ (in fact one can take $|S|=\lceil\tfrac1{\eps^5}\rceil$).
+\end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Right-angled polyhedron\thm}\label{Right-angled polyhedron}
@@ -599,6 +605,22 @@ Bal{\'a}zs Gerencs{\'e}r and Viktor Harangi
 \cite[see][]{zakharov,grizzly,gerencser-harangi};
 the current lower bound is $2^{m-1}+1$, which is exponentially optimal.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Upper approximant.}
+We assume that the measure is given by a distribution.
+The general case is done by a straightforward modification.
+
+Cut the plane by two lines into 4 angles of equal measure.
+Let $p$ be the intersection point of the two lines.
+Note that every convex set avoiding $p$ is fully contained in three angles out of the four.
+In particular its measure can not exceed $\tfrac34$.
+
+Apply this construction recursively for the restriction of the measure to each triple of angles.
+After $n$ steps we get a $(1+\z\dots+4^{n-1})$-point set 
+that intersects each convex figure $F$ of measure $(\tfrac34)^n$.
+\qeds
+
+This is a stripped version of a theorem proved by Boris Bukh and Gabriel Nivasch in \cite{bukh-nivasch}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right-angled polyhedron.}

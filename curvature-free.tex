@@ -45,9 +45,26 @@ It remains to slightly smooth $\partial(\Delta\times \Delta)$. \qeds
 
 This example is given by Christopher Croke \cite[see][]{croke}.
 
-It is instructive to show that for $\mathbb{S}^2$ such thing is not possible.
+It is instructive to show that for $\mathbb{S}^2$ such thing is not possible. %??? make a problem from it.
 Note also, that according to Gromov's systolic inequality \cite[see][]{gromov-filling}, 
 the involution $\iota$ above cannot be made isometric.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Another distant involution}
+\label{Another distant involution}
+
+\begin{pr}
+Given $x\in \mathbb{S}^2$, denote by $x'$ its antipodal point.
+Suppose that $g$ is a Riemannian metric on $\mathbb{S}^2$ such that
+\[|x-x'|_g\ge2\]
+for any $x\in\mathbb{S}^2$.
+Show that 
+\[\area (\mathbb{S}^2,g)> 2.\]
+\end{pr}
+
+The expected solution uses Besikovitch inequality described in the next problem.
+
+%???
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Besikovitch inequality}
@@ -295,6 +312,39 @@ happens with probability at most $\eps$.
 
 
 \section*{Semisolutions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Another distant involution.}
+Let $x\in \mathbb{S}^2$ be a point that minimize the distant $|x-x'|_g$.
+Consider a minimizing geodesic $\gamma$ from $x$ to $x'$.
+We can assume that 
+\[|x-x'|_g=\length \gamma=2.\]
+
+Let $\gamma'$ be the antipodal arc to $\gamma$.
+Note that $\gamma'$ intersects $\gamma$ only at the common ends $x$ and $x'$.
+Indeed, assume $p'=q$ for some $p,q\in\gamma$, then $|p-q|\ge 2$.
+Since $\length \gamma=1$ we get that $p$ and $q$ are the ends of $\gamma$.
+
+Therefore $\gamma$ together with $\gamma'$ forms a closed simple curve in $\mathbb{S}^2$
+that divined it into two disks $D_1$ and $D_2$.
+
+Let us divide $\gamma$ into two equal arcs $\gamma_1$ and $\gamma_2$; each has length $1$.
+Suppose that $p,q\in\gamma_1$, then 
+\begin{align*}
+|p-q'|_g&\ge |q-q'|_g-|p-q|_g\ge
+\\
+&\ge 2-1=1.
+\end{align*}
+That is, the minimal distance from $\gamma_1$ to $\gamma_1'$ is at least~$1$.
+The same way we get that the minimal distance from $\gamma_2$ to $\gamma_2'$ is at least~$1$.
+Applying Besicovitch inequality we get that 
+\[\area(D_1,g)> 1\quad\text{and}\quad \area(D_2,g)> 1.\]
+Therefore 
+\[\area(\mathbb{S}^2,g)>2.\]
+\qedsf
+
+This inequality was proved by Marcel Berger \cite[see][]{berger}.
+It seems that the optimal bound is admitted for a round sphere.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Besikovitch inequality.}
