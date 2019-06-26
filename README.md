@@ -12,3 +12,7 @@ Go to the created folder and run `pdflatex`, `biber` and `makeindex` few times:
 `makeindex problems`<br/>
 `biber problems`<br/>
 `pdflatex problems.tex`<br/>
+
+To get arXiv.tar with all needed files do
+
+`tar -cvf arXiv.tar --files-from list-of-files.txt`

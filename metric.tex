@@ -383,7 +383,7 @@ isometric to the ball $B(y_0,R)_Y$.
 \subsection*{Average distance\easy}
 
 \begin{pr}
-Show that for any compact length-metric space $X$ there is unique number $\ell=\ell(X)$ such that for any finite collection of points there is a point  average distance $\ell$ from the collection;
+Show that for any compact length-metric space $X$ there is unique number $\ell=\ell(X)$ such that for any finite collection of points there is a point $z$ that lies of average distance $\ell$ from the collection;
 that is, for any $x_1,\dots,x_n\in X$ there is $z\in X$ such that
 \[\tfrac1n\cdot\sum_i|x_i-z|_X=\ell.\]
 
@@ -1060,13 +1060,16 @@ a contradiction.\qeds
 
 The problem was suggested by Stephan Stadler.
 Here is a simpler, closely related problem.
+
 \begin{pr}
 Show that any Hausdorff continuous family of compact sets in $\RR$ admits a continuous section.
 \end{pr}
 
+The existence of sections for a family of sets parameterized by a topological space was considered by Ernest Michael \cite[see][]{michael-1,michael-2,michael-3}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\begin{wrapfigure}{o}{33 mm}
-\begin{lpic}[t(-8 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/comb(1)}
+\begin{wrapfigure}{O}{33 mm}
+\begin{lpic}[t(-2 mm),b(0 mm),r(0 mm),l(2 mm)]{pics/comb(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1105,7 +1108,7 @@ Let us show the existence.
 
 If such number does not exist then the ranges of average distance functions have empty intersection.
 Since $X$ is a compact length-metric space, the range of any continuous function on $X$ is a closed interval.
-By 1-dimesional Helly's theorem, a pair of such range intervals do not intersect.
+By 1-dimesional Helly's theorem, there is a pair of such range intervals that do not intersect.
 That is, for two point-arrays $(x_1,\dots,x_n)$ and $(y_1,\dots,y_m)$
 and their average distance functions 
 \[f(z)=\tfrac1n\cdot\sum_i|x_i-z|_X\quad\text{and}\quad h(z)=\tfrac1m\cdot\sum_j|y_j-z|_X,\] we have 

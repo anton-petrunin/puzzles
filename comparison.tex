@@ -439,7 +439,7 @@ is small; here $k_1$ and $k_2$ denote the principle curvatures of $D$.
 \end{pr}
 
 The expected solution use the following relative version of Bochner formula.
-Assume $M$ a Riemannian manifold with boundary $\partial M$.
+Assume $M$ is a Riemannian manifold with boundary $\partial M$.
 If $f\:M\to \RR$ is a smooth function that vanish on $\partial M$,
 then 
 \[\int\limits_M |\Delta f|^2
@@ -518,7 +518,11 @@ that lies on the geodesic starting from $p$ in the outer normal direction to $\S
 Note that for fixed $r\ge 0$,
 the points $p_r$ sweep an immersed locally convex hypersurface which we denote by $\Sigma_r$.
 
-
+Fix $z\in M$. 
+Denote by $d$ the maximal distance from $z$ to the points in $\Sigma$.
+Note that 
+any point on $\Sigma_r$
+lies on a distance at least $r-d$ from $z$.
 
 \begin{wrapfigure}{r}{54 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(3 mm),l(0 mm)]{pics/sigma-r(1)}
@@ -532,12 +536,6 @@ the points $p_r$ sweep an immersed locally convex hypersurface which we denote b
 %\lbl[r]{18.5,34;{\small $\phi_r(x)$}}
 \end{lpic}
 \end{wrapfigure}
-
-Fix $z\in M$. 
-Denote by $d$ the maximal distance from $z$ to the points in $\Sigma$.
-Note that 
-any point on $\Sigma_r$
-lies on a distance at least $r-d$ from $z$.
 
 By comparison, 
 \[\measuredangle\hinge{p_r}zp\le \arcsin\tfrac dr.\]
@@ -1014,7 +1012,7 @@ Hence the result follows.\qeds
 
 The problem illustrates the idea of Eberhard Hopf \cite[see][]{hopf-conjugate}
 which was developed further by Leon Green \cite[see][]{green}.
-Hopf used it to show that a metric on torus without conjugate points must be flat
+Hopf used it to show that a metric on 2-dimensional torus without conjugate points must be flat
 and Green showed that average of sectional curvature on closed manifold without conjugate points can not be positive.
 
 More applications of Liouville's theorem on phase volume discussed in the comments the solution of ``Energy minimizer'', page~\pageref{page:liouville}.
@@ -1431,9 +1429,8 @@ where $K$ denotes the intrinsic curvature of $D$.
 Therefore it would be sufficient to show that the right hand side is small;
 however, the integral $\int_{D}K$ might be large for arbitrary small angle between the discs; for example, if $M=\mathbb{S}^3$ it might be arbitrary close to $2\cdot \pi$.
 
-\medskip
 
-
+\parit{Semisolution.}
 Denote by $\eps$ the maximal angle between the discs, we can assume that $\eps<\tfrac\pi2$.
 
 Note that the function $h=\dist_{D'}$ is convex in $L$.
@@ -1443,8 +1440,8 @@ Consider the restriction $f=h|_D$.
 Note that $f$ is a concave function which vanishes on $\partial D$.
 
 Assume $f$ is smooth.
-If discs are meeting at angle at most $\eps<\tfrac\pi2$,
-then $|\nabla f|\le \sin\eps$ and 
+Since the discs are meeting at angle at most $\eps<\tfrac\pi2$,
+we have that $|\nabla f|\le \sin\eps$ and 
 \[(\Hess f)(v,v)+ \cos\eps \cdot \2(v,v)\le 0,\]
 where $\2$ denotes the second fundamental form of $D$ in $M$.
 It follows that
@@ -1464,16 +1461,15 @@ Applying the Bochner formula for $f$, we get that
 -K\cdot|\nabla f|^2
 =\int\limits_{\partial D}
 \kappa\cdot|\nabla f|^2,\]
-where $K$ and $\kappa$ denotes the curvature of $D$ and geodesic curvature of $\partial D$ correspondingly.
+where $K$ and $\kappa$ denotes the curvature of $D$ and geodesic curvature of $\partial D$ in $D$ correspondingly.
 By Gauss--Bonnet formula, we get that
 \[\int\limits_D 
 K+\int\limits_{\partial D}\kappa=2\cdot\pi.\]
 Therefore
 \[\int\limits_Dk_1\cdot k_2\le \tfrac{\sin \eps}{\cos^2\eps}\cdot\pi.\]
 
-Finally if $f$ is not smooth, one can apply to it the smoothing theorem of Greene and Wu \cite[see Theorem~2 in][]{greene-wu} and the remaining part of proof still works.
+If $f$ is not smooth, then one can smooth it using Greene--Wu construction \cite[see Theorem~2 in][]{greene-wu} and repeat the above argument for the obtained function.
 \qedsf
 
 This estimate was used by Nina Lebedeva and the author \cite[see][]{lebedeva-petrunin-curvature}.
-There are of cause other places in comparison geometry, where Bochner's formula shows up.
-Various vanishing theorems and estimates for eigenvalues of Laplacian are the most famous examples \cite[see II \S 8 in][]{lawson-michelsohn}.
+For classical applications of Bochner's formula including vanishing theorems and estimates for eigenvalues of Laplacian see \cite[II \S 8 in][]{lawson-michelsohn}.

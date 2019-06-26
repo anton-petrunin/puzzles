@@ -45,7 +45,7 @@ It remains to slightly smooth $\partial(\Delta\times \Delta)$. \qeds
 
 This example is given by Christopher Croke \cite[see][]{croke}.
 
-It is instructive to show that for $\mathbb{S}^2$ such thing is not possible. %??? make a problem from it.
+The following problem states that for $\mathbb{S}^2$ such thing is not possible. 
 Note also, that according to Gromov's systolic inequality \cite[see][]{gromov-filling}, 
 the involution $\iota$ above cannot be made isometric.
 
@@ -56,10 +56,9 @@ the involution $\iota$ above cannot be made isometric.
 \begin{pr}
 Given $x\in \mathbb{S}^2$, denote by $x'$ its antipodal point.
 Suppose that $g$ is a Riemannian metric on $\mathbb{S}^2$ such that
-\[|x-x'|_g\ge2\]
+\[|x-x'|_g\ge1\]
 for any $x\in\mathbb{S}^2$.
-Show that 
-\[\area (\mathbb{S}^2,g)> 2.\]
+Show that the area of $(\mathbb{S}^2,g)$ is bounded below by a fixed positive constant. 
 \end{pr}
 
 The expected solution uses Besikovitch inequality described in the next problem.
@@ -230,7 +229,7 @@ where $B(M,r)$ denotes the $r$-neighborhood of $M$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{disk\hard}
+\subsection*{Disk\hard}
 \label{disk}
 
 \begin{pr}
@@ -315,36 +314,57 @@ happens with probability at most $\eps$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Another distant involution.}
-Let $x\in \mathbb{S}^2$ be a point that minimize the distant $|x-x'|_g$.
+Let $x\in \mathbb{S}^2$ be a point that minimize the distance $|x-x'|_g$.
 Consider a minimizing geodesic $\gamma$ from $x$ to $x'$.
 We can assume that 
-\[|x-x'|_g=\length \gamma=2.\]
+\[|x-x'|_g=\length \gamma=1.\]
 
 Let $\gamma'$ be the antipodal arc to $\gamma$.
-Note that $\gamma'$ intersects $\gamma$ only at the common ends $x$ and $x'$.
-Indeed, assume $p'=q$ for some $p,q\in\gamma$, then $|p-q|\ge 2$.
-Since $\length \gamma=1$ we get that $p$ and $q$ are the ends of $\gamma$.
+Note that $\gamma'$ intersects $\gamma$ only at the common endpoints $x$ and $x'$.
+Indeed, assume $p'=q$ for some $p,q\in\gamma$, then $|p-q|\ge 1$.
+Since $\length \gamma=1$, the points $p$ and $q$ must be the ends of $\gamma$.
 
-Therefore $\gamma$ together with $\gamma'$ forms a closed simple curve in $\mathbb{S}^2$
-that divined it into two disks $D_1$ and $D_2$.
+It follows that $\gamma$ together with $\gamma'$ forms a closed simple curve in $\mathbb{S}^2$
+that divines the sphere into two disks $D$ and $D'$.
 
-Let us divide $\gamma$ into two equal arcs $\gamma_1$ and $\gamma_2$; each has length $1$.
+Let us divide $\gamma$ into two equal arcs $\gamma_1$ and $\gamma_2$; each of length $\tfrac12$.
 Suppose that $p,q\in\gamma_1$, then 
 \begin{align*}
 |p-q'|_g&\ge |q-q'|_g-|p-q|_g\ge
 \\
-&\ge 2-1=1.
+&\ge 1-\tfrac12=\tfrac12.
 \end{align*}
-That is, the minimal distance from $\gamma_1$ to $\gamma_1'$ is at least~$1$.
-The same way we get that the minimal distance from $\gamma_2$ to $\gamma_2'$ is at least~$1$.
-Applying Besicovitch inequality we get that 
-\[\area(D_1,g)> 1\quad\text{and}\quad \area(D_2,g)> 1.\]
+That is, the minimal distance from $\gamma_1$ to $\gamma_1'$ is at least~$\tfrac12$.
+The same way we get that the minimal distance from $\gamma_2$ to $\gamma_2'$ is at least~$\tfrac12$.
+By Besicovitch inequality, we get that 
+\[\area(D,g)> \tfrac14\quad\text{and}\quad \area(D',g)> \tfrac14.\]
 Therefore 
-\[\area(\mathbb{S}^2,g)>2.\]
+\[\area(\mathbb{S}^2,g)>\tfrac12.\]
 \qedsf
 
-This inequality was proved by Marcel Berger \cite[see][]{berger}.
-It seems that the optimal bound is admitted for a round sphere.
+This inequality was proved by Marcel Berger \cite[see][]{berger}. 
+Christopher Croke conjectured that the optimal bound is $\tfrac4\pi$ and the round sphere is the only space that achieves this \cite[see Conjecture 0.3 in][]{croke}.
+
+Let us indicate how to improve the bound from $\tfrac12$ to $1$.
+
+Suppose $x$, $x'$, $\gamma$ and $\gamma'$ are as above.
+Consider the function
+\[f(z)=\min_t \{\,|\gamma'(t)-z|_g+t\,\}.\]
+Observe that $f$ is 1-Lipschitz.
+
+Show that two points $\gamma'(c)$ and $\gamma(1-c)$ lie on one connected component of the level set $L_c=\set{z\in\mathbb{S}^2}{f(z)=c}$;
+in particular 
+\[\length L_c\ge 2\cdot|\gamma'(c)-\gamma(1-c)|_g.\]
+By the triangle inequality, we have that
+\begin{align*}
+|\gamma'(c)-\gamma(1-c)|_g&\ge 1-|\gamma(c)-\gamma(1-c)|_g=
+\\
+&=1-|1-2\cdot c|.
+\end{align*}
+
+It remains to apply the coarea formula
+\[\area(\mathbb{S}^2,g)\ge \int\limits_0^1\length L_c\cdot dc.\]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Besikovitch inequality.}
@@ -666,7 +686,7 @@ Let $h$ be the pullback metric on $M$ for $f\:M\to N$.
 Clearly $h\ge g$.
 In particular $(M,h)$ is complete and the map $f\:(M,h)\to N$ is a local isometry. 
 
-Note that any local isometry between complete connected Riemannian manifolds of the same dimension if a covering map.
+Note that any local isometry between complete connected Riemannian manifolds of the same dimension is a covering map.
 Since $N$ is simply connected, the result follows.
 \qeds 
 
