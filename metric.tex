@@ -7,7 +7,7 @@ All the necessary material could be found in the first three chapters of the tex
 Let us fix a few standard notations.
 \begin{itemize}
 \item The distance between two points $x$ and $y$ in a metric space $X$
-will be denoted as 
+will be denoted by 
 \[\dist_x(y),
 \quad
 |x-y|
@@ -15,7 +15,7 @@ will be denoted as
 |x-y|_X,
 \]
 the latter notation is used to emphasize that $x$ and $y$ belong to the space $X$.
-\item A metric space $X$ is called {}\emph{length-metric space} if for any two points $x,y\in X$ and any $\eps>0$. The points $x$ and $y$ can be connected by a curve $\alpha$
+\item A metric space $X$ is called {}\emph{length-metric space} if for any two points $x,y\in X$ and any $\eps>0$, the points $x$ and $y$ can be connected by a curve $\alpha$
 with
 \[\length\alpha<|x-y|_X+\eps.\]
 In this case we say the metric on $X$ is a \index{length-metric}\emph{length-metric}.
@@ -66,7 +66,7 @@ In particular $W$ is a compact length-metric space as required.
 The map $x\mapsto \dist_x$ is called the \index{Kuratowski embedding}\emph{Kuratowski embedding},
 it was constructed in \cite{kuratowski}.
 Essentially the same map 
-was described by Maurice Fr\'echet \cite[in][this is the paper where metric spaces were introduced]{frechet}.
+was described by Maurice Fr\'echet \cite[][this is the paper where metric spaces were introduced]{frechet}.
 
 The problem also follows directly from a theorem of John Isbell, stating that \emph{injective envelope} of compact metric space is compact;
 injective envelope is an analog of convex hull in the category of metric spaces
@@ -74,7 +74,7 @@ injective envelope is an analog of convex hull in the category of metric spaces
 
 The following related problem is open even for three-point sets.
 This problem was mentioned by Mikhael Gromov [in \ncite{gromov-asymptotic},
-see also \ncite{kopecka-reich} after Theorem 2.10, \ncite{convex-hull} and Question 2.17 in \ncite{duchesne}].
+see also \ncite{kopecka-reich} after Theorem 2.10, \ncite{convex-hull}, and Question 2.17 in \ncite{duchesne}].
 
 \begin{pr}
 Is it true that any compact subset of a complete $\CAT(0)$ length-space lies in a convex compact set?
@@ -92,7 +92,7 @@ for any two points $x,x'\in X$.
 \begin{pr}
 Let $K$  be a compact metric space and
 \[f\:K\z\to K\] 
-be a distance non-contracting map.
+a distance non-contracting map.
 Prove that $f$ is an isometry.
 \end{pr}
 
@@ -107,7 +107,8 @@ for any two points $x,x'\in X$.
 \begin{pr}
 Let $X$ and $Y$ be metric spaces, 
 $Y$ compact,
-$A\subset X$ and $f\:A\to Y$ be a non-expanding map.
+$A\subset X$,
+and $f\:A\to Y$ a non-expanding map.
 Assume that for any finite set $F\subset X$ there is a non-expanding map $F \to Y$
 that agrees with $f$ in $F\cap A$.
 Show that there is a non-expanding map $X\to  Y$ that agrees with $f$ on $A$.
@@ -125,11 +126,11 @@ that is, for any compact set $K\subset X$ and any open set $U\subset \RR$
 the set of all continuous functions $f\: X\to \RR$ such that $f(K)\subset U$
 is declared to be open.
 
-Fix a point $x_0\in X$.
-Given a point $z\in X$, let $f_z\in C(X,\RR)$ be the function defined as 
+Choose a point $x_0\in X$.
+Given a point $z\in X$, let $f_z\in C(X,\RR)$ be the function defined by 
 \[f_z(x)=\dist_z(x)-\dist_z(x_0).\]
 Let $F_X\:X\to C(X,\RR)$ be the map 
-defined as $F_X\:z\mapsto f_z$.
+sending $z$ to $f_z$.
 
 Denote by $\bar X$ 
 the closure of $F_X(X)$ in $C(X,\RR)$;
@@ -142,7 +143,7 @@ In this case, the complement
 $\partial_\infty X=\bar X\backslash F_X(X)$ 
 is called the {}\emph{horo-absolute} of $X$.
 
-The construction above is due to Mikhael Gromov \cite[see][]{gromov-hyperbolic}.
+The construction above is due to Mikhael Gromov \cite{gromov-hyperbolic}.
 
 \begin{pr}
 Construct a proper metric space $X$
@@ -168,21 +169,21 @@ to the unit ball in $\RR^3$.
 Let $X$ be a locally compact metric space
 and $a>0$.
 
-Following Mikhael Gromov \cite[see][]{gromov:macroscopic-dimension},
-we say that the \index{macroscopic dimension}\emph{macroscopic dimension}  of $X$ at the scale $a$ is the least integer $m$ such that there is a continuous map $f$ from $X$ to an $m$-dimensional simplicial complex $K$
+Following Mikhael Gromov \cite{gromov:macroscopic-dimension},
+we say that the \index{macroscopic dimension}\emph{macroscopic dimension}  of $X$ at scale $a$ is the smallest integer $m$ such that there is a continuous map $f$ from $X$ to an $m$-dimensional simplicial complex $K$
 with 
 \[\diam[f^{-1}\{k\}]<a\]
 for any point $k\in K$.
 
 Equivalently, the macroscopic dimension of $X$ on scale $a$ can be defined as 
-the least integer $m$ such that $X$ admits an open covering with diameter of each set less than $a$ 
+the smallest integer $m$ such that $X$ admits an open cover with diameter of each set less than $a$ 
 and such that each point in $X$ is covered by at most $m+1$ sets in the cover.
 
 \begin{pr}
 Let $M$ be a simply connected Riemannian manifold with the following property: 
-any closed curve is null-homotopic 
+every closed curve is null-homotopic 
 in its own  1-neighborhood. 
-Prove that the macroscopic dimension of $M$ at the scale $100$ is at most $1$.
+Prove that the macroscopic dimension of $M$ at scale $100$ is at most $1$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -190,18 +191,16 @@ Prove that the macroscopic dimension of $M$ at the scale $100$ is at most $1$.
 \label{weird-metric} 
 
 \begin{pr}
-Construct a length-metric $d$ on $\RR^3$,
-such that 
-the space $(\RR^3,d)$ does not admit a locally Lipschitz embedding into the 3-dimensional Euclidean space.
+Construct a length-metric $d$ on $\RR^3$ such that the space $(\RR^3,d)$ does not admit a locally Lipschitz embedding into the 3-dimensional Euclidean space.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Sub-Riemannian sphere\thm}
 \label{sub-Riemannian} 
 
-Let us define sub-Riemannian metric.
+Let us explain what is a sub-Riemannian metric.
 
-Fix a Riemannian manifold $(M,g)$.
+Let $(M,g)$ be a Riemannian manifold.
 Assume that in the tangent bundle $\T M$ 
 a choice of sub-bundle $H$ is given.
 
@@ -210,18 +209,18 @@ The tangent vectors in $H$ will be called {}\emph{horizontal}.
 A piecewise smooth curve will be called {}\emph{horizontal}
 if all its tangent vectors are horizontal.
 
-The sub-Riemannian distance between any two points $x$ and $y$ is defined as the infimum of lengths of horizontal curves connecting $x$ to $y$.
+The sub-Riemannian distance between any two points $x$ and $y$ is defined as the infimum of lengths of horizontal curves connecting $x$ to~$y$.
 
-Alternatively, the distance can be defined as a limit of Riemannian distances 
+Alternatively, the distance can be defined as the limit of Riemannian distances 
 for the metrics 
 \[g_\lambda(X,Y)=g(X^H,Y^H)+\lambda\cdot g(X^V,Y^V)\] 
 as $\lambda\to \infty$,
 where $X^H$ denotes the horizontal part of $X$;
 that is, the orthogonal projection of $X$ to $H$
-and $X^V$ denotes the vertical part of $X$;
+and $X^V$ denotes the vertical part of~$X$;
 so, $X^V+X^H=X$.
 
-In addition we need to add an additional condition to ensure the following properties 
+We also need an additional condition to ensure the following properties 
 \begin{itemize}
 \item The sub-Riemannian metric induce the original topology on the manifold. 
 In particular, if $M$ is connected, then the distance cannot take infinite values.
@@ -241,9 +240,9 @@ on $\mathbb{S}^m$ is isometric to the intrinsic metric of a hypersurface in $\RR
 \end{pr}
 
 
-It will be hard to solve the problem without knowing proof of Nash--Kuiper theorem on length preserving $C^1$-embeddings.
+It will be difficult to solve the problem without knowing a proof of the Nash--Kuiper theorem about length preserving $C^1$-embeddings.
 The original papers of John Nash 
-and Nicolaas Kuiper \cite[see][]{nash,kuiper} are very readable.
+and Nicolaas Kuiper \cite{nash,kuiper} are very readable.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Length-preserving map\thm}
@@ -258,7 +257,7 @@ Show that there is no length-preserving map $\RR^2\to \RR$.
 \end{pr}
 
 
-The expected solution use Rademacher's theorem on differentiability of Lipschitz functions \cite[see][]{rademacher}. 
+The expected solution uses Rademacher's theorem \cite{rademacher} about differentiability of Lipschitz functions. 
 
 
 
@@ -268,9 +267,8 @@ The expected solution use Rademacher's theorem on differentiability of Lipschitz
 
 \begin{pr}
 Let $\rho(x,y)=\|x-y\|$ be a metric on $\RR^m$ induced by a norm $\|{*}\|$.
-
 Assume that $f\:(\RR^m,\rho)\to(\RR^m,\rho)$ is an isometry that fixes two distinct points $a$ and $b$.
-Show that $f$ fixes the line segment between $a$ and $b$.
+Show that $f$ fixes the line segment between $a$ and~$b$.
 \end{pr}
 
 Evidently $f$ maps the line segment $[ab]$ to a minimizing geodesic connecting $a$ to $b$ in $(\RR^m,\rho)$.
@@ -289,15 +287,20 @@ set
 \[\rho(x,y)=\mu[B(x,\tfrac \pi2)\backslash B(y,\tfrac\pi2)].\]
 
 Show that $\rho$ is a length-metric on $\mathbb{S}^2$
-and moreover, the geodesics in $(\mathbb{S}^2,\rho)$ run along the great circles of $\mathbb{S}^2$.
+and moreover, the geodesics in $(\mathbb{S}^2,\rho)$ run along great circles of $\mathbb{S}^2$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Straight geodesics}
 \label{Straight geodesics}
 
+Recall that a map $f\:X\to Y$ between metric spaces is called bi-Lipschitz if there if a constant $\eps>0$
+such that 
+\[\eps\cdot|x-y|_X\le|f(x)-f(y)|_Y\le\tfrac1\eps\cdot|x-y|_X.\]
+for any $x,y\in X$.
+
 \begin{pr}
-Let $\rho$ be a length-metric on $\RR^m$ bi-Lipschitz equivalent to the canonical metric.
+Let $\rho$ be a length-metric on $\RR^m$ that is bi-Lipschitz equivalent to the canonical metric.
 Assume that every geodesic $\gamma$ in $(\RR^d,\rho)$ is \emph{affine};
 that is, $\gamma(t)=v+w\cdot t$ for some $v,w\in\RR^m$.
 
@@ -307,11 +310,6 @@ Show that $\rho$ is induced by a norm on $\RR^m$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Hyperbolic space}
 \label{Hyperbolic space}
-
-Recall that a map $f\:X\to Y$ between metric spaces is called bi-Lipschitz if there if a constant $\eps>0$
-such that 
-\[\eps\cdot|x-y|_X\le|f(x)-f(y)|_Y\le\tfrac1\eps\cdot|x-y|_X.\]
-for any $x,y\in X$.
 
 
 \begin{pr}
@@ -332,19 +330,20 @@ for any $x,x'\in X$ and $f(X)$ is a \index{net}\emph{$C$-net} in $Y$;
 that is, for any $y\in Y$ there is $x\in X$ such that $|f(x)-y|_Y\le C$.
 
 
-Note that a quasi-isometry is not assumed to be continuous, for example any map between compact metric spaces is a quasi-isometry.
+Note that a quasi-isometry is not assumed to be continuous;
+for example any map between compact metric spaces is a quasi-isometry.
 
 \begin{pr}
 Let $f\:\RR^m\to\RR^m$ be a quasi-isometry.
 Show that there is a (bi-Lipschitz) homeomorphism 
-$h\:\RR^m\to\RR^m$ on a bounded distance from $f$;
+$h\:\RR^m\to\RR^m$ at a bounded distance from $f$;
 that is, there is a real constant $C$ such that
 $$|f(x)-h(x)|\le C$$
 for any $x\in\RR^m$.
 \end{pr}
 
 The expected solution requires the so called \emph{gluing theorem},
-a corollary of the theorem proved by Laurence Siebenmann \cite[see][]{siebenmann}.
+a corollary of the theorem proved by Laurence Siebenmann \cite{siebenmann}.
 It states that 
 if $V_1, V_2\subset\RR^m$ are open
 and the two embedding $f_1\:V_1\to\RR^m$ and $f_2\:V_2\to\RR^m$ 
@@ -358,7 +357,7 @@ and such that $f$ is sufficiently close to each $f_1$ and $f_2$ at the points wh
 The  bi-Lipschitz version requires 
 an analogous statement in the category of bi-Lipschitz embeddings;
 it was proved by
-Dennis Sullivan \cite[see][]{sullivan}.
+Dennis Sullivan \cite{sullivan}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Family of sets with no section\easy}
@@ -375,7 +374,7 @@ That is, there is no path $c\:[0,1]\to \mathbb{S}^1$ such that $c(t)\in C_t$ for
 \begin{pr}
 Construct a pair of locally compact length-metric spaces $X$ and $Y$ 
 that are not isometric,
-but for some fixed points $x_0\in X$,  $y_0\in Y$ and any radius $R$
+but for some points $x_0\in X$,  $y_0\in Y$ and any radius $R$
 the ball $B(x_0,R)_X$ is 
 isometric to the ball $B(y_0,R)_Y$.
 \end{pr}
@@ -400,8 +399,7 @@ that is, for any $x_1,\dots,x_n\in X$ there is $z\in X$ such that
 \parbf{Non-contracting map.}
 Given any pair of point $x_0,y_0\in K$, 
 consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
-such that 
-and $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
+such that $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
 
 Since $K$ is compact, 
 we can choose an increasing sequence of integers $n_k$
@@ -449,8 +447,8 @@ This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[se
 I learned this proof from Travis Morrison, 
 a student in my MASS class at Penn State, Fall 2011.
 
-As an easy corollary one can get that any surjective non-expanding map from a compact metric space to itself is an isometry.
-The following problem due to Aleksander Ca{\l}ka \cite[see][]{calka:loc-isom};
+As an easy corollary one can see that any surjective non-expanding map from a compact metric space to itself is an isometry.
+The following problem due to Aleksander Ca{\l}ka \cite{calka:loc-isom}
 is closely related but more involved. 
 
 \begin{pr}
@@ -465,37 +463,38 @@ Show that any local isometry from a connected compact metric space to itself is 
 \parbf{Finite-whole extension.}
 Consider the space $Y^X$ of all maps $X\to Y$ equipped with the product topology.
 
-Given a finite set $F\in X$;
-denote by $\mathfrak{C}_F$ the set of maps $h\in Y^X$ such that its restriction $h|_F$ is short and the restriction $h|_{A\cap F}$ agrees with $f\:A\to Y$.
+Given a finite set $F\in X$, denote by $\mathfrak{C}_F$ the set of maps $h\in Y^X$ such that the restriction $h|_F$ is short and the restriction $h|_{A\cap F}$ agrees with $f\:A\to Y$.
 By assumption, the sets $\mathfrak{C}_F\subset Y^X$ are closed and nonempty.
 
 Note that for any finite collection of finite sets $F_1,\dots,F_n\subset X$ we have
 \[\mathfrak{C}_{F_1}\cap\dots\cap\mathfrak{C}_{F_n}\supset \mathfrak{C}_{F_1\cup\dots\cup F_n}.\]
 In particular, the intersection is nonempty.
 
-According to Tikhonov's theorem \cite[see][and the references there in]{wright}, $Y^X$ is compact.
+{\sloppy
+According to Tikhonov's theorem \cite[see][and the references therein]{wright}, $Y^X$ is compact.
 By the finite intersection propery, the intersection $\bigcap_F\mathfrak{C}_F$ with $F$ ranging along all finite subsets of $X$ is nonempty.
 It remains to note that any map $h\in \bigcap_F\mathfrak{C}_F$ solves the problem.
 \qeds
 
-This observation was used by Stephan Stadler and me \cite[see][]{petrunin-stadler}.
+}
+
+This observation was used by Stephan Stadler and me \cite{petrunin-stadler}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Horo-compactification.}
-For the first part of the problem, take $X$ to be the set of non-negative integers with the metric $\rho$ defined as 
+For the first part of the problem, take $X$ to be the set of non-negative integers with the metric $\rho$ defined by
 \[\rho(m,n)=m+n\] 
 for $m\ne n$.
 
 \medskip
 
 The second part is proved by contradiction.
-Assume $X$ is proper length space  and $F_X$ is not an embedding.
+Assume that $X$ is a proper length space and $F_X$ is not an embedding.
 That is, there is a sequence of points $z_1,z_2,\dots$ 
-and a point $z_\infty$,
-such that $f_{z_n}\to f_{z_\infty}$ in $C(X,\RR)$
+and a point $z_\infty$ such that $f_{z_n}\to f_{z_\infty}$ in $C(X,\RR)$
 as $n\to \infty$, 
 while $|z_n-z_\infty|_X>\eps$ 
-for some fixed $\eps>0$ and all $n$.
+for some fixed $\eps>0$ and all~$n$.
 
 Note that any pair of points $x,y\in X$ can be connected by a minimizing geodesic $[xy]$.
 Choose $\bar z_n$ on a geodesic $[z_\infty z_n]$ such that $|z_\infty-\bar z_n|=\eps$.
@@ -509,7 +508,7 @@ for all $n$.
 
 Since $X$ is proper, we can pass to a subsequence of $z_n$ so that the sequence  $\bar z_n$ converges;
 denote its limit by $\bar z_\infty$.
-From the above identities follows that
+The above identities imply that
 \[f_{z_n}(\bar z_\infty)\not\to f_{z_\infty}(\bar z_\infty)
 \quad
 \text{or}
@@ -540,7 +539,7 @@ It remains to smooth the obtained space slightly
 to get a genuine Riemannian metric with the needed property.\qeds
 
 
-This construction is a stripped version of the theorem of Steven Ferry and Boris Okun \cite[see][]{ferry-okun}.
+This construction is a stripped version of the theorem of Steven Ferry and Boris Okun \cite{ferry-okun}.
 The theorem states that Riemannian metrics on a fixed smooth closed manifold $M$ with $\dim M\ge 3$ 
 can approximate a given compact length-metric space $X$ 
 if and only if 
@@ -570,13 +569,13 @@ it is key to the proof.
 \end{cl}
 
 
-To prove $({*})$, consider two functions defined on $X$ as
+To prove $({*})$, consider two functions defined on $X$ as follows:
 \begin{align*}
 w_1(x)&=\min \{\,a,\dist_{\alpha}(x)\,\}
 \\
 w_2(x)&=\min \{\,a,\dist_{\beta}(x)\,\}
 \end{align*}
-and the map $\bm{w}\:X\to [0,a]\times[0,a]$, defined as 
+and the map $\bm{w}\:X\to [0,a]\times[0,a]$, defined by
 \[\bm{w}\:x\mapsto(w_1(x),w_2(x)).\]
 
 Note that 
@@ -599,14 +598,14 @@ Hence the claim $({*})$ follows.
 
 \medskip
 
-Fix a point $p\in M$.
-Let us cover $M$ with the connected components of the inverse images 
+Choose a point $p\in M$.
+Let us cover $M$ by the connected components of the inverse images 
 $\dist_p^{-1}((n-1,n+1))$ for all integers $n$.
 Clearly any point in $M$ is covered by at most two of these components.
 It remains to show that each of these components has diameter less than $100$.
 
-\begin{wrapfigure}{r}{40 mm}
-\begin{lpic}[t(-0 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/pxy-tau(1)}
+\begin{wrapfigure}{o}{40 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/pxy-tau(1)}
 \lbl[t]{2,0;$p$}
 \lbl[t]{35,0;$x$}
 \lbl[t]{24,0;$m$}
@@ -617,7 +616,7 @@ It remains to show that each of these components has diameter less than $100$.
 
 Assume the contrary; let $x$ and $y$ be two points in one connected component 
 and $|x-y|_M\ge 100$.
-Connect $x$ to $y$ with a curve $\tau$ in the component.
+Connect $x$ to $y$ with a curve $\tau$ in this component.
 Consider the closed curve $\sigma$ formed by $\tau$ and two geodesics $[px]$, $[py]$.
 
 
@@ -646,10 +645,9 @@ that is, $c_i$ and $c_{i-1}$ are linked for each $i$.
 \end{center}
 
 
-Assume that $\RR^3$ is equipped with a length-metric $\rho$,
-such that the total length of the circles is $\ell$
+Assume that $\RR^3$ is equipped with a length-metric $\rho$ such that the total length of the circles is $\ell$
 and $U$ is an open bounded set containing all the circles $c_i$.
-Note that for any $L$-Lipschitz embedding $f\:(U,\rho)\to\RR^3$ the distance from $f(c_0)$ to $f(c_n)$ is less than $L\cdot\ell$.
+Note that for any $L$-Lipschitz embedding $f\:(U,\rho)\z\to\RR^3$ the distance from $f(c_0)$ to $f(c_n)$ is less than $L\cdot\ell$.
 
 The $\rho$-distance from $c_0$ to $c_n$ might be much larger than $L\cdot\ell$.
 Indeed, fix a line segment $[ab]$ in $\RR^3$.
@@ -688,8 +686,8 @@ The obtained length-metric $\rho$ is still close to the canonical metric on $\RR
 but it does not admit 
 a locally Lipschitz homeomorphism to $\RR^3$.
 Indeed, 
-assume such homeomorphism $h$ exists.
-Fix a bounded open set $U$ containing $[a_\infty b_\infty]$;
+assume that such homeomorphism $h$ exists.
+Choose a bounded open set $U$ containing $[a_\infty b_\infty]$;
 note that the restriction $h|_U$ is $L$-Lipschitz for some $L$.
 From the above construction,
 we get 
@@ -719,7 +717,7 @@ a contradiction.\qeds
 The problem is due to
 Dmitri Burago, 
 Sergei Ivanov 
-and David Shoenthal \cite[see][]{BIS}.
+and David Shoenthal \cite{BIS}.
 
 It is expected that any metric on $\RR^2$ admits locally Lipschitz embeddings into the Euclidean plane.
 Also, it seems feasible that any metric on $\RR^3$ admits a locally Lipschitz embedding into $\RR^4$.
@@ -736,12 +734,12 @@ $g_0< g_1<\dots$ such that their induced metrics $d_1<d_2<\dots$ converge to $d$
 The metric $g_0$ can be assumed to be the metric of a round sphere,
 so it is induced by an embedding $h_0\:\mathbb{S}^m\to \RR^{m+1}$.
 
-Applying the construction as in Nash--Kuiper theorem,
+Applying the construction from the Nash--Kuiper theorem,
 one can produce a sequence of smooth embeddings $h_n\:\mathbb{S}^m\to \RR^{m+1}$ with the induced metrics $g_n'$
 such that $|g_n'-g_n|\to 0$.
 In particular, if we denote by $d'_n$ the metric corresponding to $g'_n$, then $d'_n\to d$ an $n\to\infty$.
 
-From the same construction follows that
+It follows from the same construction that
 if one chooses $\eps_n>0$, depending on $h_n$,
 then we can assume that 
 \[|h_{n+1}(x)-h_n(x)|<\eps_n\] for any $x\in \mathbb{S}^m$.
@@ -761,7 +759,7 @@ Set $\Sigma=h_n(\mathbb{S}^m)$
 and let $\Sigma_r$ be the tubular $r$-neighborhood of $\Sigma$.
 Equip $\Sigma$ and $\Sigma_r$ with the induced length-metrics.
 Since $\Sigma$ is a smooth hypersurface, we can choose $r_n\in(0,\eps_{n-1}]$ 
-so that the inclusion $\Sigma\hookrightarrow \Sigma_{r_n}$ preserves the distance up to the error $\tfrac1{2^n}$.
+so that the inclusion $\Sigma\hookrightarrow \Sigma_{r_n}$ preserves the distance up to error $\tfrac1{2^n}$.
 Then the strong condition states that $\eps_n< \tfrac12\cdot r_n$, 
 which is evidently stronger than the weak condition  $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ above.
 
@@ -775,30 +773,30 @@ hence $\bar d\ge d$ as required.
 
 
 The problem
-on this list was first discovered by Enrico Le Donne \cite[see][]{le-donne}.
-A similar construction is described in the lecture notes by Allan Yashinski and me \cite[see][]{petrunin-yashinsky} 
+on this list was first discovered by Enrico Le Donne \cite{le-donne}.
+A similar construction is described in the lecture notes by Allan Yashinski and the author \cite{petrunin-yashinsky} 
 which are aimed for undergraduate students. 
 Yet the results in \cite{petrunin-paths} are closely relevant.
 
 The construction in the Nash--Kuiper embedding theorem
-can be used to prove some seemingly irrelevant statements.
+can be used to prove strange statements.
 Here is one example based on the observation that Weyl curvature tensor 
 vanishes on hypersurfaces in the Euclidean space.
 
 \begin{pr}
 Let $M$ be a Riemannian manifold diffeomorphic to the $m$-sphere. 
-Show that there is a Riemannian manifold $M'$ arbitrary close to $M$ in the Lipschitz metric and whose Weyl curvature tensor is identically 0.
+Show that there is a Riemannian manifold $M'$ arbitrary close to $M$ in the Lipschitz metric whose Weyl curvature tensor is identically 0.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Length-preserving map.}
-Assume contrary;
+Assume the contrary;
 let $f\:\RR^2\to \RR$ be a length-preserving map.
 
 Note that $f$ is Lipschitz.
-Therefore by Rademacher's theorem \cite[see][]{rademacher}, the differential $d_xf$ is defined for  almost all $x$.
+Therefore by Rademacher's theorem \cite{rademacher}, the differential $d_xf$ is defined for  almost all $x$.
 
-Fix a unit vector $u$.
+Choose a unit vector $u$.
 Given $x\in\RR^2$,
 consider the path $\alpha_x(t)\z=x+t\cdot u$ defined for $t\in [0,1]$.
 Note that  
@@ -822,7 +820,7 @@ It follows that $d_xf$ has rank 2, a contradiction. \qeds
 
 The idea above can also be used to solve the following problem.
 
-\begin{pr} Assume $\rho$ is a metric on $\RR^2$ that is induced by a norm.
+\begin{pr} Let $\rho$ be a metric on $\RR^2$ that is induced by a norm.
 Show that $(\RR^2,\rho)$ admits 
 a length-preserving map
 to $\RR^3$ 
@@ -840,7 +838,7 @@ $(\RR^2,\rho)$ is isometric to the Euclidean plane.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Fixed segment.}
 Note that it is sufficient to show that 
-if 
+if $f$ is an isometry such that
 \[f(a)=a\ \ \text{and}\ \ f(b)=b\]
 for some $a,b\in\RR^m$,
 then 
@@ -850,7 +848,7 @@ then
 Without loss of generality, we can assume that $b+a=0$.
 
 Set $f_0=f$.
-Consider the sequence of isometries $f_0$, $f_1,\dots$ recursively defined as
+Consider the sequence of isometries $f_0$, $f_1,\dots$ recursively defined by
 \[f_{n+1}(x)= -f_n^{-1}(-f_n(x))\]
 for all $n$.
 
@@ -864,8 +862,8 @@ On the other hand, since $f_n$ is isometry and $f(a)=a$,
 we also have $|f_n(0)|\le 2\cdot |a|$, a contradiction.
 \qeds
 
-The idea of the proof is due to  Jussi V\"ais\"al\"a's \cite[see][]{vaisala}.
-The problem is the main step in the proof of Mazur--Ulam  \cite[see][]{mazur-ulam},
+The idea of the proof is due to  Jussi V\"ais\"al\"a \cite{vaisala}.
+The problem is the main step in the proof of the Mazur--Ulam theorem \cite{mazur-ulam},
 which states that any isometry of $(\RR^m,\rho)$ is an affine map. 
 
 
@@ -899,9 +897,9 @@ Therefore the second statement follows.\qeds
 
 
 This construction was given by 
-Aleksei Pogorelov \cite[see][]{pogorelov}.
+Aleksei Pogorelov \cite{pogorelov}.
 It is closely related to the construction given 
-by David Hilbert in \cite[see][]{hilbert}
+by David Hilbert in \cite{hilbert}
 which was the motivating example for his 4th problem.
 
 
@@ -919,8 +917,8 @@ Note that
 for any $\bm{x},\bm{v}\in\RR^m$ and $\lambda\in\RR$.
 
 Denote by $|x-y|$ the Euclidean distance between the points $x$ and~$y$.
-Since $\rho$ is bi-Lipschitz to $|{*}-{*}|$,
-applying the triangle inequality twice for the points $\bm{x}$, $\bm{x}+\lambda\cdot\bm{v}$, $\bm{x}'$ and $\bm{x}'+\lambda\cdot\bm{v}$, we get
+Since $\rho$ and $|{*}-{*}|$ are bi-Lipschitz equivalent,
+applying the triangle inequality twice to the points $\bm{x}$, $\bm{x}+\lambda\cdot\bm{v}$, $\bm{x}'$ and $\bm{x}'+\lambda\cdot\bm{v}$, we get
 \[
 \bigl|\|\lambda\cdot\bm{v}\|_{\bm{x}}
 -
@@ -938,9 +936,9 @@ hence the result follows.\qeds
 
 
 This idea is due to Thomas Foertsch
-and Viktor Schroeder \cite[see][]{foertsch-schroeder}.
-A more general statement was proved by Petra Hitzelberger and Alexander Lytchak \cite[see][]{hitzelberger-lytchak}.
-Namely they show that 
+and Viktor Schroeder \cite{foertsch-schroeder}.
+A more general statement was proved by Petra Hitzelberger and Alexander Lytchak \cite{hitzelberger-lytchak}.
+Namely they showed that 
 if any pair of points in a geodesic metric space $X$ can be separated by an \emph{affine function},
 then $X$ is isometric to a convex subset of a normed vector space.
 (A function $f\:X\to\RR$ is called affine if for any geodesic $\gamma$ in $X$, the composition $f\circ\gamma$ is affine.)
@@ -964,13 +962,13 @@ can be viewed as $(\RR^3,h)$, where
      0&0&e^{x}
 \end{matrix}\right).\]
     
-In the described coordinates, consider the projections $\HH^3\to\HH^2$ defined as 
+In the described coordinates, consider the projections $\phi,\psi\:\HH^3\to\HH^2$ defined by 
 $\phi\:(x,y,z)\mapsto (x,y)$ and $\psi\:(x,y,z)\mapsto (x,z)$.
 Note that 
 \begin{align*}
-|\phi(p)-\phi(q)|_{\HH^2},&
+\max&\{\,|\phi(p)-\phi(q)|_{\HH^2},|\psi(p)-\psi(q)|_{\HH^2}\,\}
+\le
 \\
-\quad |\psi(p)-\psi(q)|_{\HH^2}\hphantom{,}
 &\le
 |p-q|_{\HH^3}
 \le
@@ -979,11 +977,11 @@ Note that
 |\phi(p)-\phi(q)|_{\HH^2}+ |\psi(p)-\psi(q)|_{\HH^2}
 \end{align*}
 for any two points $p,q\in \HH^3$.
-In particular, the map $\HH^3\to\HH^2\times\HH^2$ defined as $p\mapsto (\phi(p),\psi(p))$
+In particular, the map $\HH^3\to\HH^2\times\HH^2$ defined by $p\mapsto (\phi(p),\psi(p))$
 is $2^{\mp1}$-bi-Lipschitz.\qeds
 
 We used that horo-spheres in the hyperbolic space are isometric to the Euclidean plane.
-This observation was previously made by Nikolai Lobachevsky \cite[see 34 in][]{lobachevsky}.
+This observation was made by Nikolai Lobachevsky \cite[see 34 in][]{lobachevsky}.
 The same observation is used in the following construction discovered by 
 K\'{a}roly B\"{o}r\"{o}czky [see \ncite{boroczky} and also \ncite{radin}]. 
 
@@ -993,7 +991,7 @@ Construct a tessellation of the hyperbolic plane with one polygonal tile of arbi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Quasi-isometry of a Euclidean space.}
-Fix two constants $M\ge 1$ and $A\ge 0$.
+Choose two constants $M\ge 1$ and $A\ge 0$.
 A map $f\:X\z\to Y$ between metric spaces $X$ and $Y$ such that for any $x,y\in X$,
  we have
 \[\tfrac1M\cdot |x-y|-A\le |f(x)-f(y)|\le M\cdot |x-y|+A\]
@@ -1005,33 +1003,32 @@ Note that $(M,0)$-quasi-isometry is a $[\tfrac1M,M]$-bi-Lipschitz map.
 Moreover,
 if $f_n\:\RR^m\to\RR^m$ is a  $(M,\frac1n)$-quasi-isometry 
 for each $n$, 
-then any partial limit of $f_n$ as $n\to\infty$
+then any subsequential limit of $f_n$ as $n\to\infty$
 is a $[\tfrac1M,M]$-bi-Lipschitz map.
 
 }
 
-It follows that given $M\ge 1$ and $\eps>0$ there is $\delta>0$ such that 
+Therefore given $M\ge 1$ and $\eps>0$ there is $\delta>0$ such that 
 for any $(M,\delta)$-quasi-isometry $f\:\RR^m\to\RR^m$ and any $p\in \RR^m$
 there is an $[\tfrac1M,M]$-bi-Lipschitz map $h\:B(p,1)\to \RR^m$
 such that
 \[|f(x)-h(x)|<\eps\]
 for any $x\in B(p,1)$.
 
-Applying rescaling, we can get the following equivalent formulation. 
-Given $M\ge 1$, $A\ge 0$ and $\eps>0$
-there is big enuf $R>0$ such that for any $(M,A)$-quasi-isometry 
+Using rescaling, we can get the following equivalent formulation. 
+Given $M\ge 1$, $A\ge 0$, and $\eps>0$
+there is sufficiently large $R>0$ such that for any $(M,A)$-quasi-isometry 
 $f\:\RR^m\to\RR^m$ and any $p\in\RR^m$ there is a $[\tfrac1M,M]$-bi-Lipschitz map $h\:B(p,R)\to \RR^m$
 such that 
 \[|f(x)-h(x)|<\eps\cdot R\]
 for any $x\in B(p,R)$.
 
-Cover $\RR^m$ by balls
-$B(p_n,R)$, construct a $[\tfrac1M,M]$-bi-Lipschitz map $h_n\:B(p_n,R)\to \RR^m$ close to the restrictions $f|_{B(p_n,R)}$ for each $n$.
+Cover $\RR^m$ by balls $B(p_n,R)$ and construct a $[\tfrac1M,M]$-bi-Lipschitz map $h_n\:B(p_n,R)\to \RR^m$ close to the restrictions $f|_{B(p_n,R)}$ for each $n$.
 
 The maps $h_n$ are $2\cdot \eps\cdot R$ close to each other on the overlaps of their domains of definition.
 This makes possible to deform slightly each $h_n$ so that they agree on the overlaps.
-This can be done by Siebenmann's Theorem \cite[see][]{siebenmann}.
-If instead you apply Sullivan's theorem \cite[see][]{sullivan}, you get a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.\qeds
+This can be done by Siebenmann's theorem \cite{siebenmann}.
+If instead you apply Sullivan's theorem \cite{sullivan}, you get a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.\qeds
 
 
 The problem was suggested by Dmitri Burago.
@@ -1065,7 +1062,7 @@ Here is a simpler, closely related problem.
 Show that any Hausdorff continuous family of compact sets in $\RR$ admits a continuous section.
 \end{pr}
 
-The existence of sections for a family of sets parameterized by a topological space was considered by Ernest Michael \cite[see][]{michael-1,michael-2,michael-3}.
+The existence of sections for a family of sets parameterized by a topological space was considered by Ernest Michael \cite{michael-1,michael-2,michael-3}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \begin{wrapfigure}{O}{33 mm}
@@ -1075,20 +1072,18 @@ The existence of sections for a family of sets parameterized by a topological sp
 
 
 \parbf{Spaces with isometric balls.} 
-The needed examples can be constructed from the upper half-plane
-by cutting it along a ``dyadic comb'' shown on the diagram
-and equipping the obtained space with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
-Few concentric balls in this metric are shown on the diagram.
-
+The needed examples can be constructed by cutting the upper half-plane along a ``dyadic comb'' shown on the diagram;
+the obtained space should be equipped with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
+Few concentric balls in this metric are shown in the diagram.
 
 \medskip
 
 First let us describe the comb precisely.
-Fix an infinite sequence $a_0,a_1,\dots$ of zeros and ones.
-Given an integer $k$ cut the upper half-plane along the line segment from $(k,0)$ to $(k,2^{m+1})$ 
+Choose an infinite sequence $a_0,a_1,\dots$ of zeros and ones.
+Given an integer $k$ cut the upper half-plane along the line segment between $(k,0)$ and $(k,2^{m+1})$ 
 if $m$ is the maximal number such that 
 \[k\equiv a_0+2\cdot a_1+\dots+2^{m-1}\cdot a_{m-1}\pmod{2^{m}};\]
-If the equality holds for all $m$, cut the half-plane along the vertical half-line from $(k,0)$.
+If the equality holds for all $m$, cut the half-plane along the vertical half-line starting at $(k,0)$.
 
 Note that all the obtained spaces, independently from the sequence $(a_n)$, meet the conditions of the problem for the point $x_0=(\tfrac12,0)$.
 
@@ -1120,4 +1115,4 @@ that is, the average value of $f(y_j)$ coincides with the average value of $h(x_
 which contradicts $({*})$.
 \qeds
 
-This is a result of Oliver Gross \cite[see][]{gross}; the value $\ell(X)$ is called the \emph{rendezvous value} of $X$.
+This is a result of Oliver Gross \cite{gross}; the value $\ell(X)$ is called the \emph{rendezvous value} of $X$.

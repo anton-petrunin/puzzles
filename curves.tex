@@ -19,12 +19,13 @@ We give a practice problem with a solution --- after that, you are on your own.
 
 \subsection*{Spiral}
 \label{spiral}
+
 The following problem states that 
 if you drive on the plane and turn the steering wheel to the right all the time,
 then you will not be able to come back to the same place.
 
 \begin{pr}
-Assume $\gamma$ is a smooth regular plane curve with strictly monotonic curvature. 
+Let $\gamma$ be a smooth regular plane curve with strictly monotonic curvature. 
 Show that $\gamma$ has no self-intersections.
 \end{pr}
 
@@ -42,7 +43,7 @@ Without loss of generality we may assume that the curve is parametrized by its l
 curvature decreases.
 
 Let $z(t)$ be the center of osculating circle at $\gamma(t)$
-and $r(t)$ is its radius.
+and $r(t)$ its radius.
 Note that 
 \begin{align*}
 z(t)&=\gamma(t)+\tfrac{\gamma''(t)}{|\gamma''(t)|^2},
@@ -62,13 +63,13 @@ it has center at $z(t)$ and radius $r(t)$.
 By $({*})$, $D_{t_1}$ lies in the interior of $D_{t_0}$ for any $t_1>t_0$.
 Hence the result follows.\qeds
 
-This problem was considered by Peter Tait \cite[see][]{tait}
-and later rediscovered by Adolf Kneser \cite[see][]{kneser}.
-The osculating circles of the curve give a peculiar decomposition of an annulus into circles; it has the following property: if a smooth function is constant on each osculating circle it must be constant in the annulus \cite[see][Lecture 10]{fuchs-tabachnikov}.
+This problem was considered by Peter Tait \cite{tait}
+and later rediscovered by Adolf Kneser \cite{kneser}.
+The osculating circles of the curve give a peculiar decomposition of an annulus into circles; it has the following property: if a smooth function is constant on each osculating circle it must be constant in the annulus \cite[see Lecture 10 in][]{fuchs-tabachnikov}.
 The same idea leads to a solution of the following problem: %???
 
 \begin{pr}
-Assume that $\gamma$ is a smooth regular plane curve with strictly monotonic curvature. 
+Let $\gamma$ be a smooth regular plane curve with strictly monotonic curvature. 
 Show that no line can be tangent to $\gamma$ at two distinct points.
 \end{pr} %???monotone or monotonic???
 
@@ -77,14 +78,14 @@ Show that no line can be tangent to $\gamma$ at two distinct points.
 It is instructive to check that the 3-dimensional analog does not hold;
 that is, there are self-intersecting smooth regular space curves with strictly monotonic curvature. 
 
-Note that if the curve $\gamma(t)$ is defined for $t\in[0,\infty)$ and its curvature converges to $\infty$ as $t\to \infty$, 
-then the problem implies the convergence of $\gamma(t)$ as $t\to\infty$.
-The latter could be considered as a continuous analog of the Leibniz's test for alternating series.
+Note that if the curve $\gamma(t)$ is defined for $t\in[0,\infty)$ and its curvature tends to $\infty$ as $t\to \infty$, 
+then the problem implies the existence of the limit of $\gamma(t)$ as $t\to\infty$.
+The latter result could be considered as a continuous analog of the Leibniz test for alternating series.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 
-\begin{wrapfigure}[6]{r}{27 mm}
+\begin{wrapfigure}{r}{27 mm}
 \begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle(1)}
 \lbl{14.5,22.5;$F$}
 \end{lpic}
@@ -93,15 +94,16 @@ The latter could be considered as a continuous analog of the Leibniz's test for 
 \subsection*{Moon in a puddle}
 \label{moon-in-puddle}
 
+
 \begin{pr}
-A smooth closed simple plane curve with curvature less than $1$ bounds a figure $F$. 
+A smooth closed simple plane curve with curvature less than $1$ at every point bounds a figure~$F$. 
 Prove that $F$ contains a disk of radius~$1$.
 \end{pr}
 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Spring in a tin}
+\subsection*{Wire in a tin}
 \label{A spring in a tin} 
 
 \begin{pr}
@@ -112,7 +114,7 @@ equality if and only if $\alpha$ is the unit circle possibly traversed more than
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Curve in a sphere}
+\subsection*{Curve on a sphere}
 \label{A curve in a sphere}
 
 \begin{pr}
@@ -120,6 +122,7 @@ Show that if a closed curve on the unit sphere intersects every equator then its
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 {
 
 \begin{wrapfigure}{r}{30 mm}
@@ -130,9 +133,10 @@ Show that if a closed curve on the unit sphere intersects every equator then its
 \subsection*{Oval in an oval}
 \label{Oval in oval} 
 
+
 \begin{pr}
 Consider two closed smooth strictly convex planar curves, one inside the other. 
-Show that there is a chord of the outer curve that is tangent to the inner curve at its midpoint.
+Show that there is a chord of the outer curve that is tangent to the inner curve at the midpoint of the chord.
 \end{pr}
 
 }
@@ -141,19 +145,19 @@ Show that there is a chord of the outer curve that is tangent to the inner curve
 \subsection*{Capture a sphere in a knot\hard}
 \label{Capture a sphere in a knot}
 
-The following formulation uses the notion of smooth isotopy of knots;
+The following formulation uses the notion of smooth isotopy of knots,
 that is, a one parameter family of embeddings 
 \[f_t\:\mathbb{S}^1\z\to \RR^3,\ \ t\in[0,1]\] 
 such that the map $[0,1]\times \mathbb{S}^1\to\RR^3$ is smooth.
 
 
 \begin{pr}
-Show that one can not capture a sphere in a knot.
+Show that one cannot capture a sphere in a knot.
 
 More precisely, let $B$ be the closed unit ball in $\RR^3$
-and $f\:\mathbb{S}^1\z\to \RR^3\backslash B$ be a knot.
+and $f\:\mathbb{S}^1\z\to \RR^3\backslash B$ a knot.
 Show that there is a smooth isotopy 
-$$f_t\:\mathbb{S}^1\to \RR^3\backslash B,\ \ \ t\in [0,1],$$ 
+$$f_t\:\mathbb{S}^1\to \RR^3\backslash B,\ \ \ t\in [0,1]$$ 
 such that $f_0=f$,
 the length of $f_t$ is non-increasing with respect to $t$
 and $f_1(\mathbb{S}^1)$ can be separated from $B$ by a plane.
@@ -210,10 +214,10 @@ its boundary contains no simple curves.
 
 For the following problem we need the notion of 
 \index{Hausdorff measure}\emph{Hausdorff measure}.
-Fix a compact set $X\subset\RR^2$ and $\alpha>0$.
-Given $\delta>0$ consider the value
+Choose a compact set $X\subset\RR^2$ and $\alpha>0$.
+Given $\delta>0$, set
 \[h(\delta)=\inf\left\{\,\sum_i(\diam X_i)^\alpha\,\right\}\]
-where the infimum is taken over all finite coverings $\{X_i\}$ of $X$ 
+where the greatest lower bound is taken over all finite coverings $\{X_i\}$ of $X$ 
 such that $\diam X_i<\delta$ for each $i$.
 
 Note that the function $\delta\mapsto h(\delta)$ is not decreasing in $\delta$.
@@ -241,15 +245,18 @@ have vanishing curvature at every point where it is defined.
 We need to explain the meaning of word ``most'' in the formulation;
 it use \index{Hausdorff distance}\emph{Hausdorff distance} and \index{G-delta set}\emph{G-delta sets}.
 
-The Hausdorff distance $|A-B|_H$ between two closed bounded sets $A$ and $B$ in the plane is defined as the infimum of the positive numbers $r$ such that the $r$-neighborhood of $A$ contains $B$ and the $r$-neighborhood of $B$ contains $A$.
+The Hausdorff distance $|A-B|_H$ between two closed bounded sets $A$ and $B$ in the plane is defined by 
+\[|A-B|_H=\sup_{x\in\RR^2}\{|\dist_A(x)-\dist_B(x)|\},\]
+where $\dist_A(x)$ denotes the smallest distance from $A$ to $x$.
+Equivalently, $|A-B|_H$ can be defined as the greatest lower bound of the positive numbers $r$ such that the $r$-neighborhood of $A$ contains $B$ and the $r$-neighborhood of $B$ contains $A$.
 
-In particular we can equip the space of all closed plane curves with the Hausdorff metric.
+It is straightforward to show that the Hausdorff distance defines a metric on the space of all closed plane curves.
 The obtained metric space is locally compact.
 The latter follows from the \index{selection theorem}\emph{selection theorem} \cite[see \S18 in][]{blaschke},
-which states that the closed subsets of a fixed closed bounded set in the plane form a compact set with respect to the Hausdorff metric. 
+which states that closed subsets of a fixed closed bounded set in the plane form a compact set with respect to the Hausdorff metric. 
 
 A G-delta set in a metric space $X$ is defined as a countable intersection of open sets.
-According to \index{Baire category theorem}\emph{Baire category theorem}, 
+According to the \index{Baire category theorem}\emph{Baire category theorem}, 
 in locally compact metric spaces $X$,
 the intersection of a countable collection of open dense set 
 has to be dense.
@@ -257,7 +264,7 @@ has to be dense.
 
 In particular, in $X$, 
 the intersection of a finite or countable collection of G-delta dense sets is also a G-delta dense set. 
-The later means that G-delta dense sets contain {}\emph{most} of $X$. 
+It means that each G-delta dense set contains {}\emph{most} of $X$.
 This is the meaning of the word {}\emph{most} used in the problem.
 
 
@@ -269,7 +276,7 @@ This is the meaning of the word {}\emph{most} used in the problem.
 \parbf{Moon in a puddle.}
 In the proof we will use the \emph{cut locus}
 of $F$ with respect to its boundary\footnote{Also called \emph{medial axis}.};
-it will be further denoted as $T$.
+it will be further denoted by $T$.
 The cut locus can be defined as the closure
 of the set of points $x\in F$ 
 for which there exist two or more points in $\partial F$ minimizing the distance to $x$.
@@ -323,20 +330,21 @@ Note that these points are \index{vertex of curve}\emph{vertexes} of $\partial F
 that is, they are critical points of its curvature.
 
 Note further that inversion respects osculating circles.
-That is, suppose $\gamma$ is an osculating circle of curve $\alpha$ at $t_0$;
-assume $\gamma'$ and $\alpha'$ are inverions of $\gamma$ and $\alpha$,
+That is, if $\gamma$ is an osculating circle of curve $\alpha$ at $t_0$,
+$\gamma'$ is the inversion of $\gamma$, and 
+$\alpha'$ is the inversion of $\alpha$,
 then $\gamma'$ is an osculating circle of curve $\alpha'$ at $t_0$.
 Therefore appling an inversion about a circle with the center in $F$, we also get a pair of osculating circles of $\partial F$ which surround $F$.
 This way we obtain 4 osculating circles that lie on one side of $\partial F$.
 The latter statement is a generalization of the four-vertex theorem.
 
 The case of convex curves of this problem appears in a book of Wilhelm Blaschke \cite[see \S 24 in][]{blaschke}.
-In full generality, the problem was discussed by Vladimir Ionin and German Pestov \cite[see][]{pestov-ionin}. %???include ref to my lectures 
+In full generality, the problem was discussed by Vladimir Ionin and German Pestov \cite{pestov-ionin}. %???include ref to my lectures 
 A solution via curve shortening flow of a weaker statement 
-was given by Konstantin Pankrashkin \cite[see][]{pankrashkin}.
+was given by Konstantin Pankrashkin \cite{pankrashkin}.
 The statement still holds if the curve fails to be smooth at one point.
 A spherical version of the later statement 
-was used by Dmitri Panov and me \cite[see][]{panov-petrunin-ramification}.
+was used by Dmitri Panov and me \cite{panov-petrunin-ramification}.
 
 As you can see from the following problem, the 3-dimensional analog of this statement does not hold.
 
@@ -347,9 +355,9 @@ such that it does not surround a ball of radius 1.
 \end{pr}
 
 Such example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
-[the Bing's house constructed in \ncite{bing} will do the job].
-This problem is discussed by Abram Fet and Vladimir Lagunov in \cite{lagunov-2,lagunov-fet} 
-and it was generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite[see][]{alexander-bishop}.
+[Bing's house constructed in \ncite{bing} will do the job].
+This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet} 
+and it was generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}.
 
 A similar argument shows that for any Riemannian metric $g$ on the 2-sphere $\mathbb S^2$ 
 and any point $p\in(\mathbb S^2,g)$ there is a minimizing geodesic $[pq]$ with conjugate ends.
@@ -357,22 +365,22 @@ On the other hand, for $(\mathbb S^3,g)$ this is not true.
 Moreover there is a metric $g$ on $\mathbb{S}^3$ 
 with sectional curvature bounded above by arbitrary small $\eps>0$ and $\diam(\mathbb{S}^3,g)\le 1$.
 In particular, $(\mathbb S^3,g)$ has no minimizing geodesic with conjugate ends.
-An example was originally constructed by Mikhael Gromov \cite[see][]{gromov-almost-flat}; 
+An example was originally constructed by Mikhael Gromov \cite{gromov-almost-flat}; 
 a simplification was given by 
 Peter Buser
-and Detlef Gromoll \cite[see][]{buser-gromoll}.
+and Detlef Gromoll \cite{buser-gromoll}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Spring in a tin.}
+\parbf{Wire in a tin.}
 To solve this problem,
 you should imagine that you travel on a train along the curve $\alpha(t)$
-and watch the position of the center of the disk in the frame of your wagon.
+and watch the position of the center of the disk in the frame of your train car.
 
 \medskip
 
 Denote by $\ell$ the length of $\alpha$.
 Equip the plane with complex coordinates so that $0$ is the center of the unit disk.
-We can assume $\alpha$ is equipped with an $\ell$-periodic parametrization by arc length.
+We can assume that $\alpha$ is equipped with an $\ell$-periodic parametrization by arc length.
 
 Consider the curve $\beta(t)=t-\tfrac{\alpha(t)}{\alpha'(t)}$.
 Observe that 
@@ -396,26 +404,25 @@ the result follows from $({*})$.\qeds
 
 The statement was originally proved 
 by Istv\'an F\'ary in \cite{fary};
-number of different proofs are discussed by Serge Tabachnikov [see \ncite{tabachnikov} and also 19.5 in \ncite{fuchs-tabachnikov}].
+several different proofs are discussed by Serge Tabachnikov [see \ncite{tabachnikov} and also 19.5 in \ncite{fuchs-tabachnikov}].
 
 Note that the same argument works for curves in the unit ball.
 
-If instead of the disk, 
-we have a region bounded by a closed convex curve $\gamma$, 
+If instead of the disk we have a region bounded by a closed convex curve $\gamma$, 
 then it is still true that the average curvature of $\alpha$ is at least as big as average curvature of $\gamma$. 
 The proof was given by Jeffrey Lagarias
 and Thomas Richardson [see \ncite{lagarias-richardson} and also \ncite{nazarov-petrov}].
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Curve in a sphere.} 
+\parbf{Curve on a sphere.} 
 Let us present two solutions.
 We assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ that intersects each equator.
 
 \parit{A solution with the Crofton formula.}
 Given a unit vector $u$ denote by $e_u$ the equator with pole at $u$.
-Let $k(u)$ the number of intersections
-between $\alpha$ and $e_u$.
+Let $k(u)$ be the number of intersections
+of $\alpha$ and $e_u$.
 
 Note that for almost all $u\in \mathbb{S}^2$, the value $k(u)$ is even or infinite.
 Since each equator intersects $\alpha$, we get $k(u)\ge 2$ for almost all $u$.
@@ -439,7 +446,7 @@ and by approximation it holds for all curves.
 Let $\check\alpha$ be a sub-arc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
 Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$. 
 
-Let $r$ be a point of intersection of $\alpha$ with the equator with pole at $z$. 
+Let $r$ be a point of intersection of $\alpha$ with the equator with pole at~$z$. 
 Without loss of generality we may assume that $r\in\check\alpha$. 
 
 The arc $\check\alpha$ together with its reflection with respect to the point $z$ forms a closed curve of length $2\cdot \ell$ passing throgh both $r$ and its antipodal point $r^{*}$.
@@ -457,12 +464,12 @@ Show that total curvature of any closed smooth regular space curve is at least $
 \end{pr}
 
 A way more advanced problem is to show that any embedded circle of total curvature at most $4\cdot\pi$ is unknotted.
-It was solved independently by Istv{\'a}n F{\'a}ry \cite[see][]{fary-knot} and John Milnor \cite[see][]{milnor}. 
+It was solved independently by Istv{\'a}n F{\'a}ry \cite{fary-knot} and John Milnor \cite{milnor}. 
 Later many interesting generalizations and refinements were found including a generalization to singular spaces 
-by Stephanie Alexander and Richard Bishop \cite[see][]{alexander-bishop:knot} and the
+by Stephanie Alexander and Richard Bishop \cite{alexander-bishop:knot} and the
 theorem on embedded minimal disk proved by Tobias Ekholm, 
 Brian White
-and Daniel Wienholtz \cite[see][]{EWW}.
+and Daniel Wienholtz \cite{EWW}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -488,10 +495,10 @@ Hence the problem follows.
 Given a unit vector $u$, denote by $x_u$ the point on the inner curve
 with outer normal vector $u$.
 Draw a chord of outer curve that is tangent to the inner curve at $x_u$;
-denote by $r=r(u)$ and $l=l(u)$ the lengths of the segments of this chord to the right and to the left of $x_u$, respectively.
+denote by $r\z=r(u)$ and $l=l(u)$ the lengths of the segments of this chord to the right and to the left of $x_u$, respectively.
 
 
-Arguing by contradiction, assume $r(u)\ne l(u)$ for all $u\in\mathbb{S}^1$.
+Arguing by contradiction, assume that $r(u)\ne l(u)$ for all $u\in\mathbb{S}^1$.
 Since the functions $r$ and $l$ are continuous,
 we can assume that 
 $$r(u)>l(u)\ \ \text{for all}\ \ u\in\mathbb{S}^1.\leqno{({*})}$$
@@ -510,14 +517,14 @@ The latter contradicts $({*})$.\qeds
 
 
 
-This is a problem by Serge Tabachnikov \cite[see][]{tabachnikov-mi}.
+This is a problem of Serge Tabachnikov \cite{tabachnikov-mi}.
 A closely related {}\emph{equal tangents problem} is discussed by the same author in \cite{tabachnikov-tan}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Capture a sphere in a knot.}
 We can assume that the knot lies on the sphere $\partial B$.
 
-Fix a M\"obius transformation 
+Choose a M\"obius transformation 
 $m\:\mathbb{S}^2\to\mathbb{S}^2$ close to the identity and not a rotation.
 
 Note that $m$ is a conformal map;
@@ -526,7 +533,7 @@ as
 \[u(x)=\lim_{y,z\to x}\frac{|m(y)-m(z)|}{|y-z|}.\]
 (The function $u$ is called the \emph{conformal factor} of $m$.)
 
-Since the area is preserved, 
+Applying the area formula for $m$,
 we get 
 $$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u^2=1.$$ 
 By Bunyakovsky inequality, 
@@ -535,14 +542,14 @@ $$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u<1.$$
 It follows that after a suitable rotation of $\mathbb{S}^2$, 
 the map $m$ decreases the length of the knot.
 
-Iterate this construction and pass to the limit as $m\to\id$.
-This way you get a continuous one parameter family of M\"obius transformations which shorten the length of the knot.
+Iterating this construction we get a sequence of knots $f_n\:\mathbb{S}^1\z\to\mathbb{S}^2$ with length decreasing  and tending to zero.
+Passing to the limit as $m\to\id$, we get a continuous one parameter family of M\"obius transformations which shorten the length of the knot.
 Therefore it drifts the knot to a single hemisphere and allows the ball to escape. 
 \qeds
 
 
 This is a problem by Zarathustra Brady, 
-the given solution is based on the idea of David Eppstein \cite[see][]{zeb}.
+the given solution is based on the idea of David Eppstein \cite{zeb}.
 
 
 
@@ -551,7 +558,7 @@ the given solution is based on the idea of David Eppstein \cite[see][]{zeb}.
 \parbf{Linked circles.} 
 Denote the linked circles by $\alpha$ and $\beta$. 
 
-Fix a point $x\in\alpha$. 
+Choose a point $x\in\alpha$. 
 Note that there is a point $y\in\alpha$ such that the line segment 
 $[xy]$ intersects $\beta$, say at the point $z$. 
 Indeed, if this is not the case, 
@@ -573,8 +580,8 @@ Let $\alpha^{*}$ be the image of $\alpha$ under the central projection onto the 
 Clearly
 $$\length \alpha\ge \length\alpha^{*}.$$
 
-Note that $\alpha^{*}$ passes thru two antipodal points of the sphere, the
-one corresponding to $x$ and the one corresponding to $y$.
+Note that $\alpha^{*}$ passes thru two antipodal points of the sphere,
+one corresponding to $x$ and the other corresponding to $y$.
 Therefore 
 $$\length \alpha^{*}\ge 2\cdot\pi.$$
 Hence the result follows.\qeds
@@ -582,30 +589,26 @@ Hence the result follows.\qeds
 
 This problem was proposed by Frederick Gehring \cite[see 7.22 in][]{gehring};
 solutions and generalizations are surveyed in \cite{mateljevic}. 
-The presented solution is attributed to Marvin Ortel in \cite{CJKSW} and it is very close to the solution given by Michael Edelstein and Binyamin Schwarz \cite[see][]{edelstein-schwatz}.
+The presented solution is attributed to Marvin Ortel in \cite{CJKSW} and it is very close to the solution given by Michael Edelstein and Binyamin Schwarz \cite{edelstein-schwatz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Surrounded area.}
+\parbf{Surrounded area.} The trick is to use the Kirszbraun theorem:
+\emph{Any $L$-Lipschitz  map $f\:Q\to \RR^n$ defined on a subset $Q\subset \RR^m$ can be extended to a $L$-Lipschitz  map $\bar f\:\RR^m\to \RR^n$.}
+
+This theorem  appears in the thesis of Mojżesz Kirszbraun \cite[][]{kirszbraun};
+it was rediscovered later by Frederick Valentine \cite[][]{valentine}.
+An interesting survey is given by 
+Ludwig Danzer, Branko Gr{\"u}nbaum and Victor Klee \cite[][]{danzer-grunbaum-klee}.
+
+\medskip
+
 Let $C_1$ and $C_2$ be the compact regions bounded by $\gamma_1$ and $\gamma_2$ correspondingly.
 
-By Kirszbraun theorem, 
-any 1-Lipschitz map $X\to \RR^2$ defined on $X\subset \RR^2$
-can be extended to a 1-Lipschitz map on the whole $\RR^2$.
-In particular, there is a 1-Lipschitz map $f\:\RR^2\to\RR^2$ 
+By the Kirszbraun theorem, there is a 1-Lipschitz map $f\:\RR^2\to\RR^2$ 
 such that $f(\gamma_2(v))\z=f(\gamma_1(v))$ for any $v\in\mathbb S^1$.
 
 Note that $f(C_2)\supset C_1$.
 Hence the statement follows.\qeds
-
-
-The Kirszbraun theorem appears in his thesis \cite[see][]{kirszbraun}
-and was rediscovered later by Frederick Valentine \cite[see][]{valentine}.
-An interesting survey is given by 
-Ludwig Danzer, Branko Gr{\"u}nbaum and Victor Klee \cite[see][]{danzer-grunbaum-klee}.
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Crooked circle.}
@@ -617,6 +620,9 @@ one can choose $a\le x\le y\le b$
 such that
 \[|f(y)-f(a)|\le\eps\ \ \text{and}\ \ |f(x)-f(b)|\le\eps.\]
 
+A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
+Figure out the construction looking at the following diagram.
+
 \begin{center}
 \begin{lpic}[t(-0 mm),b(4 mm),r(0 mm),l(0 mm)]{pics/crooked(1)}
 \lbl[t]{8,0;$\eps=\tfrac12$}
@@ -626,8 +632,15 @@ such that
 \end{lpic}
 \end{center}
 
-A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
-Guess the construction from the diagram.
+
+Now, start with the unit circle, 
+$\gamma_0(t)=(\cos 2\pi t,\sin 2 \pi t)$.
+Choose a sequence of positive numbers $\eps_n$ converging to zero very fast. 
+Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\z\to\RR^2$ such that $\gamma_{n+1}$ runs outside of the disk bounded by $\gamma_n$
+and 
+\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
+for some $\eps_n$-crooked function $f_n$.
+(On the diagram you can see an attempt to draw the first iteration.)
 
 {
 
@@ -638,15 +651,6 @@ Guess the construction from the diagram.
 \end{lpic}
 \end{wrapfigure}
 
-Now, start with the unit circle, 
-$\gamma_0(t)=(\cos 2\pi t,\sin 2 \pi t)$.
-Fix a sequence of positive numbers $\eps_n$ converging to zero very fast. 
-Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\z\to\RR^2$ such that $\gamma_{n+1}$ runs outside of the disk bounded by $\gamma_n$
-and 
-\[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
-for some $\eps_n$-crooked function $f_n$.
-(On the diagram you can see an attempt to draw the first iteration.)
-
 Denote by $D$ the union of all disks bounded by the curves $\gamma_n$.
 Clearly $D$ is homeomorphic to an open disk.
 For the right choice of the sequence $\eps_n$, 
@@ -656,27 +660,27 @@ By construction, the boundary of $D$ contains no simple curves. \qeds
 In fact, the only curves in the boundary of the constructed set are constant. Compare to the problem \emph{Simple path} on page~\pageref{Simple path}.
 
 The proof use the so called \emph{pseudo-arc} 
-constructed by Bronis\l{}aw Knaster \cite[see][]{knaster}.
+constructed by Bronis\l{}aw Knaster \cite{knaster}.
 The proof resembles construction of the Cantor set.
 Here are few similar problems:
 
 }
 
 \begin{pr}
- Construct three distinct open sets in $\RR$ with identical boundaries.
+ Construct three distinct open sets in $\RR$ with the same boundary.
 \end{pr}
 
 \begin{pr}
  Construct three open disks in $\RR^2$ having the same boundary.
 \end{pr}
 
-These disks are called \index{lakes of Wada}\emph{lakes of Wada}; it is described by Kuniz\^{o} Yoneyama \cite[see][]{yoneyama}.
+These disks are called \index{lakes of Wada}\emph{lakes of Wada}; it is described by Kuniz\^{o} Yoneyama \cite{yoneyama}.
 
 \begin{pr}
  Construct a Cantor set in $\RR^3$ with non simply connected complement.
 \end{pr}
 
-This example is called \index{Antoine's necklace}\emph{Antoine's necklace} \cite[see][]{antoine}.
+This example is called \index{Antoine's necklace}\emph{Antoine's necklace} \cite{antoine}.
 
 \begin{pr}
  Construct an open set in $\RR^3$ with fundamental group isomorphic to the additive group of rational numbers.
@@ -694,7 +698,7 @@ see also the problem ``Conic neighborhood'' on page \pageref{Conic neighborhood}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Rectifiable curve.}
-The 1-dimensional Hausdorff measure will be denoted as $\mathcal{H}_1$. 
+The 1-dimensional Hausdorff measure will be denoted by $\mathcal{H}_1$. 
 
 Set $L=\mathcal{H}_1(K)$.
 Without loss of generality, we may assume that $K$ has diameter $1$.
@@ -716,7 +720,7 @@ Clearly, there is a closed curve $\gamma_\eps$ whose image is $T_\eps$ and its l
 that is, 
 \[\length\gamma_\eps\le 8\cdot L.\]
 
-Passing to a partial limit of $\gamma_\eps$ as $\eps\to 0$,
+Passing to a subsequential limit of $\gamma_\eps$ as $\eps\to 0$,
 we get the needed curve. \qeds
 
 In terms of measure, the optimal bound is $2\cdot L$;
@@ -724,12 +728,18 @@ if in addition the diameter $D$ is known then it is $2\cdot L-D$.
 The problem is due to 
 Samuel Eilenberg 
 and Orville Harrold 
-\cite[see][]{eilenberg-harrold};
+\cite{eilenberg-harrold};
 it also appears in the book of Kenneth Falconer \cite[see Exercise 3.5 in][]{falconer}.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}[10]{r}{38 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/typical-curve(1)}
+\lbl[rt]{20,20;$\gamma$}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{Typical convex curves.}
 Denote by $\mathfrak{C}$ the space of all closed convex curves in the plane equipped with the Hausdorff metric.
 Recall that $\mathfrak{C}$ is locally compact.
@@ -739,27 +749,21 @@ Note that if a curve $\gamma\in\mathfrak{C}$
 has nonzero second derivative at some point $p$,
 then it lies between two circles with one of them tangent to the other from inside at $p$.
 
-\begin{wrapfigure}[10]{o}{38 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/typical-curve(1)}
-\lbl[rt]{20,20;$\gamma$}
-\end{lpic}
-\end{wrapfigure}
-
 Fix these two circles.
 It is straightforward to check that there is $\eps>0$ such that 
 the Hausdorff distance from any convex curve $\gamma$ squeezed between the circles 
 to any convex $n$-gon is at least $\frac{\eps}{n^{100}}$.
 
-Fix a countable dense set of convex polygons $\mathfrak{p}_1,\mathfrak{p}_2,\dots$ in $\mathfrak{C}$.
+Choose a countable dense set of convex polygons $\mathfrak{p}_1,\mathfrak{p}_2,\dots$ in $\mathfrak{C}$.
 Denote by $n_i$ the number of sides in $\mathfrak{p}_i$.
 For any positive integer $k$,
-consider the set $\Omega_k\subset\mathfrak{C}$ defined as 
+consider the set $\Omega_k\subset\mathfrak{C}$ defined by 
 \[\Omega_k
 =
 \set{\xi\in \mathfrak{C}}{|\xi-\mathfrak{p}_i|_{H}<\tfrac1{k\cdot n_i^{100}}\quad\text{for some}\quad i},\]
 where $|{*}-{*}|_H$ denotes the Hausdorff distance 
 
-From above we get that $\gamma\notin\Omega_k$ for some $k$. 
+From the above we get that $\gamma\notin\Omega_k$ for some $k$. 
 
 Note that $\Omega_k$ is open and everywhere dense in $\mathfrak{C}$.
 Therefore 
@@ -775,11 +779,11 @@ Bernd Kirchheim,
 Emanuele Spadaro 
 and 
 L{\'a}szl{\'o} Sz{\'e}kelyhidi,
-typical 1-Lipschitz maps from the plane to itself preserve the length of all curves \cite[see][]{KSS}.
-The same way one could show that the boundaries of typical open sets in the plane contain no nontrivial curves, 
-altho the construction of a concrete example is not trivial;
-see ``Crooked circle'', page \pageref{Crooked circle}.
-More problems of that type are surveyed by Tudor Zamfirescu \cite[see][]{zamfirescu}.
+typical 1-Lipschitz maps from the plane to itself preserve the length of all curves \cite{KSS}.
+In the same way one could show that the boundaries of typical open sets in the plane contain no nontrivial curves, 
+altho the construction of a concrete example is not trivial
+[see ``Crooked circle'', page \pageref{Crooked circle}].
+More problems of that type are surveyed by Tudor Zamfirescu \cite{zamfirescu}.
 
 
 

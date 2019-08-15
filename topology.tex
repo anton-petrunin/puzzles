@@ -21,7 +21,7 @@ Moreover, $h$ can be chosen to be isotopic to the identity map.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parit{Semisolution.}
-Fix a homeomorphism $\phi\:K_1\to K_2$.
+Choose a homeomorphism $\phi\:K_1\to K_2$.
 
 By the Tietze extension theorem,
 the homeomorphisms $\phi\:K_1\z\to K_2$ and $\phi^{-1}\:K_2\z\to K_1$ can be extended to continuous maps;
@@ -42,7 +42,7 @@ denote these maps by $f\:\RR^m\z\to \RR^m$ and $g\:\RR^m\z\to \RR^m$ correspondi
 \end{wrapfigure}
 
 Consider the homeomorphisms
-$h_1, h_2, h_3\:\RR^m\times\RR^m\z\to\RR^m\times\RR^m$ defined the following way
+$h_1, h_2, h_3\:\RR^m\times\RR^m\z\to\RR^m\times\RR^m$ defined in the following way:
 \begin{align*}
 h_1(x,y)&=(x,y+f(x)),
 \\
@@ -57,10 +57,10 @@ It remains to observe that each homeomorphism $h_i$ is isotopic to the identity 
 \[K_2=h_3\circ h_2\circ h_1(K_1).\qedsin\]
 
 
-This construction is called \emph{Klee's trick}; it is due to Victor Klee \cite[see][]{klee}.
-This trick is used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite[see][]{doyle};
-a proof of the separation theorem for the embeddings $\mathbb{S}^n\hookrightarrow\mathbb{S}^{n+1}$
-can be built with the same idea \cite[see][]{cohen}. 
+This construction is called \emph{Klee's trick}; it is due to Victor Klee \cite{klee}.
+This trick is used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite{doyle};
+a proof of the separation theorem for embeddings $\mathbb{S}^n\hookrightarrow\mathbb{S}^{n+1}$
+can be given using the same idea \cite{cohen}. 
 
 The problem ``Monotonic homotopy'' on page \pageref{mono-homotopy} looks similar.
 
@@ -103,7 +103,7 @@ then the Dehn twist described above is called {}\emph{positive}.
 
 \begin{pr}
 Let $\Sigma$ be a compact oriented surface with nonempty boundary.
-Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to the identity rel. boundary.
+Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to the identity relative to the boundary.
 
 In other words, any product of positive Dehn twists represents a nontrivial class in the mapping class group of $\Sigma$.
 \end{pr}
@@ -177,7 +177,7 @@ Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations
 
 \begin{pr}
 Let $p$ and $q$ be distinct points in a Hausdorff topological space $X$.
-Assume $p$ and $q$ are connected by a path.
+Assume that $p$ and $q$ are connected by a path.
 Show that they can be connected by a simple path;
 that is, there is an injective continuous map $\beta\:[0,1]\z\to X$
 such that $\beta(0)=p$ and $\beta(1)=q$.
@@ -235,7 +235,7 @@ The reflection of this immersion across the vertical line of symmetry gives anot
 It is a good exercise to count the essentially different disks in the second example. 
 (The answer is 5.) 
 
-The existence of examples of that type is generally attributed to John Milnor \cite[see][]{bennequin}.
+The existence of examples of that type is generally attributed to John Milnor \cite{bennequin}.
 
 An easier problem would be to construct two essentially different immersions of annuli with the same boundary curves; a solution is shown on the picture \cite[for more details and references see][]{eppstein-mumford}.
 
@@ -258,21 +258,21 @@ The surface $\tilde \Sigma$ comes with the orientation induced from $\Sigma$.
 \end{wrapfigure}
 %\end{center}
 
-Fix a point $x_0$ on the boundary $\partial \tilde \Sigma$.
+Choose a point $x_0$ on the boundary $\partial \tilde \Sigma$.
 Given two other points $y$ and $z$ in $\partial \tilde \Sigma$ we will write
 $z\succ y$ if $y$ lies on the right side from some simple curve from $x_0$ to $z$ in $\tilde\Sigma$.
 Note that  $\succ $ defines a linear order on $\partial\tilde\Sigma\backslash\{x_0\}$.
 We will write $z \succeq y$ 
 if $z\succ y$ or $z=y$.
 
-Note that any homeomorphism $h\:\Sigma\to\Sigma$ that is identity on the boundary
+Note that any homeomorphism $h\:\Sigma\to\Sigma$ identical on the boundary
 lifts to the unique homeomorphism $\tilde h\:\tilde \Sigma\to\tilde\Sigma$ 
 such that $\tilde h(x_0)=x_0$.
 The following claim is the key step in the proof. 
 
 \begin{cl}{$({*})$} 
-Assume $h$ is a positive Dehn twist along a closed curve $\gamma$.
-Then $ y\succeq \tilde h(y)$ for any $y\in\partial\tilde\Sigma\backslash\{x_0\}$
+If $h$ is a positive Dehn twist along a closed curve $\gamma$,
+then $y\succeq \tilde h(y)$ for any $y\in\partial\tilde\Sigma\backslash\{x_0\}$
 and $y_0\succ\tilde h(y_0)$ for some $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$.
 \end{cl}
 
@@ -285,10 +285,10 @@ Therefore the problem follows from~$({*})$.
 \medskip
 
 If $\Sigma$ is not an annulus,
-then by the uniformization theorem, we can assume that $\Sigma$ has a  hyperbolic metric with geodesic boundary; 
+then by the uniformization theorem we can assume that $\Sigma$ has a  hyperbolic metric with geodesic boundary; 
 the lifted metric on $\tilde\Sigma$ has the same properties.
 Furthermore, we can assume that (1) $\gamma$ is a closed geodesic,
-(2) the parametrization $\iota\:\RR/\ZZ\times (0,1)\to U_\gamma$ from the definition of Dehn twist is rotationally symmetric 
+(2) the parametrization $\iota\:\RR/\ZZ\z\times (0,1)\to U_\gamma$ from the definition of Dehn twist is rotationally symmetric 
 and (3) for any $u\in \RR/\ZZ$ the arc $\iota(u\times (0,1))$ is a geodesic perpendicular to~$\gamma$. 
 
 Consider the polar coordinates $(\phi,\rho)$ on $\tilde\Sigma$ with the origin at~$x_0$;
@@ -298,7 +298,7 @@ By construction of Dehn twist, we get
 for any $x\ne x_0$ 
 and if the geodesic $[x_0x]$ crosses $f^{-1}(U_\gamma)$ then 
 \[\phi(x)> \phi\circ\tilde h(x).\]
-In particular, if $x$ lies on the boundary then $\tilde h(x)$ lies on the right side from the geodesic $[x_0x]$; hence the claim $({*})$ follows. 
+In particular, if $x$ lies on the boundary then $\tilde h(x)$ lies on the right of the geodesic $[x_0x]$; hence the claim $({*})$ follows. 
 
 \begin{center}
 \begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn-annulus(1)}
@@ -329,7 +329,7 @@ Construct a composition of positive Dehn twists on a compact oriented surface wi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Conic neighborhood.}
-Let $V$ and $W$ be two conic neighborhoods of $p$.
+Let $V$ and $W$ be two conic neighborhoods of~$p$.
 Without loss of generality, we may assume that $V\Subset W$;
 that is, the closure of $V$ lies in $W$.
 
@@ -343,7 +343,7 @@ $f_n(k)=f_m(k)$ for any $k\in K$ and $m, n \ge n_K$.
 \item For any point $w\in W$ there is a point $v\in V$ such that $f_n(v)=w$ for all large $n$.
 \end{itemize}
 
-Note that once such sequence is constructed, $f\:V\to W$ defined as $f(v)=f_n(v)$ for all large values of $n$ gives the needed homeomorphism.
+Note that once such sequence is constructed, $f\:V\to W$ defined by $f(v)=f_n(v)$ for all large values of $n$ gives the needed homeomorphism.
 
 The sequence $f_n$ can be constructed recursively
 \[f_{n+1}=\Psi_n\circ f_n\circ \Phi_n,\]
@@ -356,7 +356,7 @@ where $\phi_n\:V\to \RR_+$, $\psi_n\:W\to \RR_+$ are suitable continuous functio
 ``$\ast$'' and ``$\star$'' denote the {}\emph{multiplication} in the cone structures of $V$ and $W$ correspondingly.\qeds
 
 
-The problem is due to Kyung Whan Kwun \cite[see][]{kwun}.
+The problem is due to Kyung Whan Kwun \cite{kwun}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unknots.}
@@ -367,7 +367,7 @@ The problem is due to Kyung Whan Kwun \cite[see][]{kwun}.
 \end{center}
 
 Observe that it is possible to draw an arbitrary tight knot 
-while keeping it smoothly embedded all the time including the last moment.\qeds
+while keeping it smoothly embedded at all times including the last moment.\qeds
 
 
 This problem was suggested by Greg Kuperberg.
@@ -382,7 +382,7 @@ The example can be guessed from the diagram.
 \medskip
 
 The two sets $K_1$ and $K_2$ are subspaces of the plane, 
-each one is a closed annulus with two attached line segments.
+each one being a closed annulus with two attached line segments.
 In $K_1$ one segment is attached from inside and the other from outside and 
 in $K_2$ both segments are attached from outside.
 
@@ -395,13 +395,13 @@ in $K_2$ both segments are attached from outside.
 \end{wrapfigure}
 
 The product spaces $K_1\times[0,1]$ and $K_2\times[0,1]$ are solid tori with attached rectangles.
-A homeomorphism $K_1\times[0,1]\to K_2\times[0,1]$ can be constructed by twisting a part of one solid torus.
+A homeomorphism $K_1\times[0,1]\z\to K_2\times[0,1]$ can be constructed by twisting a part of one solid torus.
 
 To prove the nonexistence of a homeomorphism $K_1\to K_2$ consider the sets of cut points $V_i\subset K_i$ and the sets $W_i\subset K_i$ of points that admit a punctured simply connected neighborhood.
 Note that the set $V_i$ is the union of the attached line segments 
 and $W_i$ is the boundary of the annulus without points where the segments are attached.
 Note that $V_i\cup W_i=\partial K_i$;
-in particular, a homeomorphism $K_1\to K_2$ (if exists) sends $\partial K_1$ to $\partial K_2$.
+in particular, a homeomorphism $K_1\to K_2$ (if it exists) sends $\partial K_1$ to $\partial K_2$.
 
 }
 
@@ -421,7 +421,7 @@ We get a homeomorphism $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ fo
 \[\tilde h\circ\gamma=\gamma\circ \tilde h,\]
 where $\gamma$ is any reflection with respect to the facets of the cube.
 
-Without loss of generality, we may assume that the cube $\square^m$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
+Without loss of generality we may assume that the cube $\square^m$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
 In this case $\tilde h$ has \index{displacement}\emph{displacement} at most $2$;
 that is, 
 \[|\tilde h(x)-x|\le 2\]
@@ -432,15 +432,15 @@ for any $x\in\RR^m$.
 \end{lpic}
 \end{wrapfigure}
 
-Fix a smooth increasing concave function $\phi\:\RR ^{ +} \to\RR$ such that
+Choose a smooth increasing concave function $\phi\:\RR ^{ +} \to\RR$ such that
 \[\phi(r)\z=r\] 
 for any $r\le 1$ and 
 \[\sup\{\phi(r)\}=2.\]
 
-Equip $\RR^m$ with the polar coordinates $(u,r)$, 
+Equip $\RR^m$ with polar coordinates $(u,r)$, 
 where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
 Consider the open embedding $\Phi\:\RR^m\hookrightarrow\RR^m$
-defined as $\Phi(u,r)=(u,\phi(r))$.
+defined by $\Phi(u,r)=(u,\phi(r))$.
 
 Set 
 \[
@@ -456,11 +456,11 @@ f(x)=\left[
 It remains to observe that $f\:\RR^m\to\RR^m$ is a solution.
 \qeds
 
-This problem is stripped from a proof of Robion Kirby \cite[see][]{kirby}.
+This problem is stripped from a proof of Robion Kirby \cite{kirby}.
 The condition that each face is mapped to itself can be removed and 
 instead of homeomorphism one could take any embedding close to the identity.
 
-An interesting twist to this idea was given by Dennis Sullivan \cite[see][]{sullivan}.
+An interesting twist to this idea was given by Dennis Sullivan \cite{sullivan}.
 Instead of the discrete group of motions of the Euclidean space,
 he uses a discrete group of motions of the hyperbolic space in the conformal disk model.
 
@@ -470,7 +470,7 @@ coincides with the identity on the absolute and therefore the last ``shrinking''
 Moreover, 
 if the original homeomorphism is bi-Lipschitz,
 then the Sullivan construction produces a bi-Lipschitz homeomorphism ---
-this is the main advantage.
+this is its main advantage.
 
   
 
@@ -504,7 +504,7 @@ In a similar fashion, one can construct a finite topological space $F$ for any g
 such that 
 there is a weak homotopy equivalence $K\to F$.
 Both constructions are due to Pavel Alexandrov
-\cite[see][]{alexandrov-finite,mccord}.
+\cite{alexandrov-finite,mccord}.
 
 \parbf{Dense homeomorphism.}
 Note that there is countable set of homeomorphisms $h_1,h_2,\dots$ that is dense in $\mathcal{H}$
@@ -522,19 +522,19 @@ Note that for large $n$, the homeomorphism $h$ is conjugate to a homeomorphism c
 Therefore $h$ is a solution.
 \qeds
 
-The problem was mentioned by Frederic Le Rox \cite[see][]{rox} on a problem section at a conference in Oberwolfach, 
+The problem was mentioned by Frederic Le Rox \cite{rox} on a problem section at a conference in Oberwolfach, 
 where he also conjectured that this is not true for the area-preserving homeomorphisms.
 An affirmative answer to this conjecture was given by Daniel Dore, Andrew Hanlon and Sobhan Seyfaddini 
-\cite[see][]{dore-hanlon,seyfaddini}.
+\cite{dore-hanlon,seyfaddini}.
 In particular it implies the following seemingly evident but nontrivial statement.
 
 \begin{pr}
 Given $\eps>0$ there is $\delta>0$ such that 
 \[\Omega\cap h(\Omega)\ne\emptyset\]
-for any topological disk $\Omega\subset \SSS^2$ with area at least $\eps$
+for any topological disk $\Omega\subset \mathbb{S}^2$ with area at least $\eps$
 and 
-any area-preserving homeomorphism $h\:\SSS^2\to\SSS^2$ with displacement at most $\delta$;
-that is, $|h(x)-x|_{\SSS^2}<\delta$ for any $x\in \SSS^2$. 
+any area-preserving homeomorphism $h\:\mathbb{S}^2\to\mathbb{S}^2$ with displacement at most $\delta$;
+that is, such that $|h(x)-x|_{\mathbb{S}^2}<\delta$ for any $x\in \mathbb{S}^2$. 
 \end{pr}
 
 
@@ -564,14 +564,14 @@ The construction is similar to the construction of devil's staircase.
 
 \parit{Second solution.}
 Note that one can assume that $X$ coincides with the image of $\alpha$.
-In particular, $X$ is a connected, locally connected, compact Hausdorff space.
+In particular, $X$ is a connected locally connected compact Hausdorff space.
 
 Any such space admits a length-metric.
 This statement is not at all trivial;
-it was conjectured by Karl Menger \cite[see][]{menger}
+it was conjectured by Karl Menger \cite{menger}
 and proved independently 
-by R.~H.~Bing  \cite[see][]{bing-length-0, bing-length-1} 
-and Edwin Moise \cite[see][]{moise}.
+by R.~H.~Bing  \cite{bing-length-0, bing-length-1} 
+and Edwin Moise \cite{moise}.
 
 It remains to consider a geodesic path from $p$ to $q$.
 \qeds
@@ -584,7 +584,7 @@ and Stefan Wenger \cite[see 7.13 in][]{lytchak-wenger}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Path in a surface.}
-Denote the surface by $\Sigma$, assume the path runs from $p$ to $q$.
+Denote the surface by $\Sigma$, assume that the path runs from $p$ to $q$.
 The following picture suggests an idea for an induction proof on the number of self-crossings.
 
 \begin{center}
@@ -614,7 +614,7 @@ for any $t\in[0,1]$ and $x\in \Sigma$.
 The map $\Phi^1\:\Sigma\to \Sigma$ is a diffeomorphism;
 in particular $\Phi^1$ sends the simple path $\alpha$ to a simple path $\alpha_1=\Phi^1\circ\alpha$.
 By construction $\alpha_1(1)=q$. 
-Since $V_t(p)=0$ for any $t$, we have $\alpha_1(0)=p$.
+Since $V_t(p)=0$ for any $t$, we have $\alpha_1(0)\z=p$.
 That is, the path $\alpha_1$ runs from $p$ to $q$.
 
 It remains to show that $\alpha_1$ is homotopic to $\alpha*\beta$ relative to the ends.
@@ -627,5 +627,5 @@ Hence the statement follows.
 \qeds
 
 
-This is a stripped version of the problem suggested by Jaros{\l}aw K\k{e}dra \cite[see][]{One-step}; 
+This is a stripped version of the problem suggested by Jaros{\l}aw K\k{e}dra \cite{One-step}; 
 it was used by Michael Khanevsky \cite[see Lemma 3 in][]{khanevsky}.

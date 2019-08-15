@@ -24,16 +24,16 @@ rescale and pass to the limit as $R\to\infty$.
 This way we get the needed isotopy.\qeds
 
 This problem was discussed 
-by Genevieve Walsh \cite[see][]{walsh}.
+by Genevieve Walsh \cite{walsh}.
 The same idea was used by Michael Freedman and  Richard Skora to show that any link made from pairwise not linked round circles is trivial; 
-in particular, Borromean rings can not be realized by round circles
+in particular, Borromean rings cannot be realized by round circles
 \cite[see Lemma 3.2 in ][]{freedman-skora}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Box in a box}\label{box-in-box}
 
 \begin{pr}
-Assume that a rectangular parallelepiped with sides $a,b,c$ 
+Suppose a rectangular parallelepiped with sides $a,b,c$ 
 lies inside another rectangular parallelepiped with sides $a',b',c'$. 
 Show that 
 \[a'+b'+c'\ge a+b+c.\]
@@ -174,16 +174,16 @@ Show that in all sufficiently large dimensions, there is no compact convex hyper
 
 Let us give a short summary of the Dehn--Sommerville equations which can help to solve this problem.
 
-Assume $P$ is a \index{simple polyhedron}\emph{simple} Euclidean $m$-dimensional polyhedron;
+Let $P$ be a \index{simple polyhedron}\emph{simple} Euclidean $m$-dimensional polyhedron;
 that is, exactly $m$ facets meet at each vertex of $P$.
 Denote by $f_k$ the number of $k$-dimensional faces of $P$;
 the array of integers $(f_0,\dots f_m)$ is called the $f$-vector of $P$.
 
-Fix an ordering of the vertices $v_1,\dots, v_{f_0}$
+Choose an ordering of the vertices $v_1,\dots, v_{f_0}$
 of $P$ so that for some linear function $\ell$, we have $\ell(v_i)<\ell(v_j)\ \Leftrightarrow\ i<j$.
 The \index{index of vertex}\emph{index} of the vertex $v_i$ 
 is defined as the number of edges $[v_iv_j]$ of $P$ such that $i>j$. 
-The number of vertices of index $k$ will be denoted as $h_k$.
+The number of vertices of index $k$ will be denoted by $h_k$.
 The array of integers $(h_0,\dots h_m)$ is called the $h$-vector of $P$.
 Clearly $h_0=h_m=1$ and 
 \[h_k\ge 0\quad\text{for all}\quad k.\leqno({*})\]
@@ -197,7 +197,7 @@ This observation can be packed in the following polynomial identity
 \[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
 
 Note that the identity above implies that the $h$-vector does not depend on the choice of $\ell$.
-In particular, the $h$ vector is the same for the reversed order;
+In particular, the $h$-vector is the same for the reversed order;
 that is,
 \[h_k=h_{m-k}\leqno({*}{*})\]
 for any $k$.
@@ -229,7 +229,7 @@ where
 \item $w_3(\Pi)=a\cdot b\cdot c$ is the volume of $\Pi$,
 \end{itemize}
 
-Assume $\Pi'$ be another parallelepiped
+Let $\Pi'$ be another parallelepiped
 with dimensions $a'$, $b'$ and~$c'$.
 If $\Pi\subset \Pi'$,
 then $v_{\Pi} (r)\le v_{\Pi'}(r)$ for any $r$.
@@ -243,15 +243,15 @@ $\Const\cdot(a+b+c)$ for some $\Const>0$.
 
 Since $\Pi\subset \Pi'$,
 the average length of the projection of $\Pi$
-can not exceed the average length of the projection of $\Pi'$.
+cannot exceed the average length of the projection of $\Pi'$.
 Hence the statement follows.
 \qeds
 
-The problem was discussed by Alexander Shen \cite[see][]{shen}.
+The problem was discussed by Alexander Shen \cite{shen}.
 
 A formula analogous to $({*})$
 holds for an arbitrary convex body $B$ of arbitrary dimension $m$.
-It was discovered by Jakob Steiner \cite[see][]{steiner}.
+It was discovered by Jakob Steiner \cite{steiner}.
 The coefficient $w_i(B)$ in the polynomial with different normalization constants 
 appear under different names, most commonly
 \emph{intrinsic volumes} and
@@ -263,7 +263,7 @@ In particular,
 if $B'$ and $B$ are convex bodies such that $B'\subset B$,
 then $w_i(B')\le w_i(B)$ for any $i$.
 This generalizes our problem quite a bit.
-Further generalizations lead to the theory of \index{mixed volumes}\emph{mixed volumes} \cite[see][]{burago-zalgaller}.
+Further generalizations lead to the theory of \index{mixed volumes}\emph{mixed volumes} \cite{burago-zalgaller}.
 
 The equality $w_1(\Pi)=\pi\cdot (a+b+c)$ still holds for all parallelepipeds, not only rectangular ones.
 In particular, if one parallelepiped 
@@ -296,8 +296,8 @@ Hence the result follows.
 \qeds
  
 The inequality was originally proved 
-by Axel Harnack using a different method \cite[see][]{harnack}.
-The idea to use complexification is due to Felix Klein \cite[see][]{klein}.
+by Axel Harnack using a different method \cite{harnack}.
+The idea to use complexification is due to Felix Klein \cite{klein}.
 This problem is a background for the Hilbert's 16th problem. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -317,7 +317,7 @@ It remains to apply well ordering principle.
 
 This problem has an endless list of variations.
 The following problem looks similar but far more involved;
-a solution follows from the proof of Paul Monsky that a square cannot be cut into triangles with equal areas \cite[see][]{monsky}.
+a solution follows from the proof of Paul Monsky that a square cannot be cut into triangles with equal areas \cite{monsky}.
 
 \begin{pr}
 Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that each line meets exactly two of these sets.
@@ -382,7 +382,7 @@ and the collection $\{B_i\}_{i\in G}$ can be subdivided into $M$ subcollections 
 
 Both lemmas were used to prove the so called \emph{covering theorems} in measure theory,
 which state that ``undesirable sets'' have vanishing measure.
-Their applications overlap but aren't identical, \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while \emph{Besikovitch covering theorem} work in nice metric spaces with arbitrary Borel measures.
+Their applications overlap but aren't identical, the \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while the \emph{Besikovitch covering theorem} work in nice metric spaces with arbitrary Borel measures.
 
 More precisely, Vitali works in arbitrary metric spaces with a \index{doubling measure}\emph{doubling measure} $\mu$;
 the latter means that 
@@ -398,17 +398,10 @@ these include Alexandrov spaces with curvature bounded below.
 
 
 \parbf{Kissing number.}
-Fix the dimension $m$.
 Set $n=\mathop{\rm kiss} B$.
 Let $B_1,\dots, B_n$ be copies of the ball $B$ that touch $B$ and don't have common interior points.
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
 Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
-
-For each $i$,
-consider the supporting hyperplane $\Pi_i$
-of $W$
-with outer normal vector $v_i$.
-Denote by $W_i$ the reflection of $W$ with respect to $\Pi_i$.
 
 \begin{wrapfigure}{o}{42 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kiss-sol(1)}
@@ -420,6 +413,12 @@ Denote by $W_i$ the reflection of $W$ with respect to $\Pi_i$.
 \end{lpic}
 \end{wrapfigure}
 
+For each $i$,
+consider the supporting hyperplane $\Pi_i$
+of $W$
+with outer normal vector $v_i$.
+Denote by $W_i$ the reflection of $W$ with respect to $\Pi_i$.
+
 Note that $W_i$ and $W_j$ have no common interior points if $i\ne j$;
 the latter gives the needed inequality.
 \qeds
@@ -430,7 +429,7 @@ The proof is given by
 Charles Halberg, 
 Eugene Levin 
 and Ernst Straus 
-\cite[see][]{halberg-levin-straus}.
+\cite{halberg-levin-straus}.
 It is not known if the same inequality holds for the orientation-preserving version of the kissing number.
 
 
@@ -449,20 +448,19 @@ Direct calculations show that the following homotopy is monotonic
  h_1(x)\cdot\sin\tfrac{\pi\cdot t}{2}\bigr).\qedsin\] 
 \medskip
 
-This homotopy was discovered by Ralph Alexander \cite[see][]{ralexander}.
+This homotopy was discovered by Ralph Alexander \cite{ralexander}.
 It has a  %wide?
 number of applications, 
 one of the most beautiful is the given 
 by K\'aroly Bezdek 
-and Robert Connelly 
-in the proof of 
-Kneser--Poulsen  
-and Klee--Wagon conjectures in the two-dimensional case \cite[see][]{bezdek-connelly}.
+and Robert Connelly \cite{bezdek-connelly};
+they proved the Kneser--Poulsen  
+and Klee--Wagon conjectures in the two-dimensional case.
 
 The dimension $2\cdot m$ is optimal;
 that is, for any positive integer $m$,
 there are two maps $h_0,h_1\:F\to \RR^m$ that cannot be connected by a monotonic homotopy $h_t\:F\to\RR^{2\cdot m-1}$.
-The latter was shown by Maria Belk and Robert Connelly \cite[see][]{belk-connelly}
+The latter was shown by Maria Belk and Robert Connelly \cite{belk-connelly}
 
 
 
@@ -474,7 +472,7 @@ where  $q_i=\pm1$.
 
 For each vertex $\bm{q}$,
 consider the intersection of the corresponding hyperoctant with the unit sphere;
-that is, the set
+that is, consider the set
 \[V_{\bm{q}}=\set{(x_1,\dots,x_m)\in\mathbb{S}^{m-1}}{q_i\cdot x_i\ge 0\ \text{for each}\ i}.\]
 
 Let $\mathcal{A}\subset\mathbb{S}^{m-1}$ be the union of all the sets $V_{\bm{q}}$ for black $\bm{q}$.
@@ -496,7 +494,7 @@ The problem was suggested by Greg Kuperberg.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Geodesic loop.}
-Assume such loop exists; denote it by $\gamma$ and let $v$ be its base vertex.
+Suppose that such a loop exists; denote it by $\gamma$ and let $v$ be its base vertex.
 
 Denote by $\xi$ and $\zeta$ the directions of exit and the entrance of the loop.
 Let $\alpha$ be the angle between $\xi$ and $\zeta$
@@ -590,19 +588,19 @@ it follows that
 Hence the result follows.
 \qeds
 
-The problem was posted by Paul Erd{\H{o}}s 
-and solved by Ludwig Danzer and Branko Gr\"unbaum \cite[see][]{erdos,danzer-guenbaum}.
+The problem was posted by Paul Erd{\H{o}}s \cite{erdos}
+and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-guenbaum}.
 
-Grigori Perelman noticed that the same proof works for a similar problem in Alexandrov spaces \cite[see][]{perelman-Erdos};
-the later led to interesting connections with the crystallographic groups \cite[see][]{lebedeva}.
+Grigori Perelman noticed that the same proof works for a similar problem in Alexandrov spaces \cite{perelman-Erdos};
+the later led to interesting connections with the crystallographic groups \cite{lebedeva}.
 
 
 Surprisingly, the maximal number of points that make only acute triangles grows exponentially with $m$ as well.
-The latter was shown by Paul Erd\H{o}s and Zolt\'an F\"uredi \cite[see][]{erdos-fueredi} using the \index{probabilistic method}\emph{probabilistic method}.
+The latter was shown by Paul Erd\H{o}s and Zolt\'an F\"uredi \cite{erdos-fueredi} using the \index{probabilistic method}\emph{probabilistic method}.
 Later, an elementary constructive argument was found and improved by Dmitriy Zakharov,
 \texttt{grizzly} (an anonymous mathematician),
 Bal{\'a}zs Gerencs{\'e}r and Viktor Harangi
-\cite[see][]{zakharov,grizzly,gerencser-harangi};
+\cite{zakharov,grizzly,gerencser-harangi};
 the current lower bound is $2^{m-1}+1$, which is exponentially optimal.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -613,7 +611,7 @@ The general case is done by a straightforward modification.
 Cut the plane by two lines into 4 angles of equal measure.
 Let $p$ be the intersection point of the two lines.
 Note that every convex set avoiding $p$ is fully contained in three angles out of the four.
-In particular its measure can not exceed $\tfrac34$.
+In particular its measure cannot exceed $\tfrac34$.
 
 Apply this construction recursively for the restriction of the measure to each triple of angles.
 After $n$ steps we get a $(1+\z\dots+4^{n-1})$-point set 
@@ -630,7 +628,7 @@ that is, exactly $m$ facets meet at each vertex of $P$.
 
 From the projective model of the hyperbolic plane, 
 one can see that for any simple compact hyperbolic polyhedron there is a simple Euclidean polyhedron with the same combinatorics. 
-In particular Dehn--Sommerville equations hold for $P$.
+In particular the Dehn--Sommerville equations hold for $P$.
 
 Denote by $(f_0,\dots f_m)$ and $(h_0,\dots h_m)$ the $f$- and $h$-vectors of $P$.
 Recall that $h_i\ge 0$ for any $i$ and $h_0=h_m=1$.
@@ -646,7 +644,7 @@ The latter contradicts $({*})$ for $m\ge 6$.
 
 The above proof  
 is the core of the proof of nonexistence of compact hyperbolic Coxeter's polyhedrons of large dimensions 
-given by Ernest Vinberg \cite[see][]{vinberg, vinberg-strong}.
+given by Ernest Vinberg \cite{vinberg, vinberg-strong}.
 
 Playing a bit more with the same inequalities, 
 one gets nonexistence of  right-angled hyperbolic polyhedrons,
