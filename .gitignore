@@ -3,6 +3,7 @@ lib/*
 *.backup
 *.log
 *.aux
+*.dep
 *.dvi
 *.gz
 *.idx
