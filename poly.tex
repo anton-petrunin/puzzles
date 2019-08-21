@@ -4,7 +4,7 @@
 
 A \index{polyhedral space}\emph{polyhedral space} is a complete length-metric space that admits a locally finite triangulation 
 such that each simplex is isometric to a simplex in a Euclidean space.
-By a {}\emph{triangulation} of a polyhedral space we always understand a triangulation as above. 
+By a {}\emph{triangulation} of a polyhedral space we always mean a triangulation of that type. 
 
 A point in a polyhedral space is called \index{regular point}\emph{regular} if it has a neighborhood isometric to an open set in a Euclidean space;
 otherwise it is called {}\emph{singular}.
@@ -12,10 +12,10 @@ otherwise it is called {}\emph{singular}.
 If we replace the Euclidean spaces by the unit spheres or the hyperbolic spaces,
 we arrive to the definition of {}\emph{spherical} and {}\emph{hyperbolic polyhedral spaces} correspondingly.
 
-The term \index{piecewise}\emph{piecewise} typically mean that there is a triangulation with some property on each triangle.
+The term \index{piecewise}\emph{piecewise} typically means that there is a triangulation with some property on each triangle.
 For example,  if $P$ and $Q$ are polyhedral spaces, then
 \begin{itemize}
-\item a map $f\:P\to Q$ is called {}\emph{piecewise distance preserving} if there is a triangulation $\mathcal{T}$ of $P$ such that for any simplex $\Delta\in \mathcal{T}$ the restriction $f|_\Delta$ is distance preserving,
+\item a map $f\:P\to Q$ is called {}\emph{piecewise distance preserving} if there is a triangulation $\mathcal{T}$ of $P$ such that for any simplex $\Delta\in \mathcal{T}$ the restriction $f|_\Delta$ is distance preserving;
 \item a map $h\:P\z\to Q$  is called {}\emph{piecewise linear} if both spaces $P$ and $Q$ admit triangulations such that each simplex of $P$ is mapped to a simplex of $Q$ by an affine map.
 In particular, a {}\emph{piecewise linear homeomorphism} is a piecewise linear map which is a homeomorphism.\label{piecewise linear map}
 \end{itemize}
@@ -38,14 +38,14 @@ Show that $A$ is congruent to $B$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parit{Semisolution.}
-Let us cut the polygon $A$ from the sphere and glue instead the polygon $B$.
+Let us cut out the polygon $A$ from the sphere and glue the polygon $B$ in its place.
 Denote by $\Sigma$ the obtained spherical polyhedral space.
 Note that 
 \begin{itemize}
-\item $\Sigma$ is homeomorphic $\mathbb S^2$.
+\item $\Sigma$ is homeomorphic to $\mathbb S^2$.
 \item $\Sigma$ has curvature $\ge 1$ in the sense of Alexandrov; that is, the total angle around each singular point is less than $2\cdot \pi$.
 \item All the singular points of $\Sigma$ 
-lie outside of an isometric copy of a hemisphere $\mathbb{S}^2_+\subset \Sigma$
+lie outside of an isometric copy of a hemisphere $\mathbb{S}^2_+\subset \Sigma$.
 \end{itemize}
 
 Denote by $n$ the number of singular points in $\Sigma$.
@@ -58,16 +58,16 @@ Clearly $n>1$;
 that is, $\Sigma$ cannot have a single singular point.
 Therefore we can choose two singular points $p,q\in \Sigma$.
 Cut $\Sigma$ along a geodesic $[pq]$.
-The hole can be patched so that we obtain a new polyhedral space $\Sigma'$ of the same type but with $n-1$ singular points.
-Since $n$ is minimal, we arrive to a contradiction
+The obtained hole can be patched so that we obtain a new polyhedral space $\Sigma'$ of the same type but with $n-1$ singular points.
+Since $n$ is minimal, we arrive to a contradiction.
 
 Namely, if the total angles around $p$ and $q$ are $2\cdot \pi-\alpha$ and $2\cdot \pi-\beta$ correspondingly,
-consider the spherical triangle $\triangle$ with base $|p-q|_\Sigma$ and adjusted angles $\tfrac\alpha2$, $\tfrac\beta2$. 
+consider the spherical triangle $\triangle$ with the base $|p\z-q|_\Sigma$ and the adjacent angles $\tfrac\alpha2$, $\tfrac\beta2$. 
 The needed patch is obtained by doubling $\triangle$ along its lateral sides.
 \qeds
 
 \parit{Alternative end of proof.}
-By the Alexandrov embedding theorem, $\Sigma$ is isometric to the surface of a convex polyhedron $P$ in the unit 3-dimensional sphere $\mathbb S^3$. 
+By the Alexandrov embedding theorem, $\Sigma$ is isometric to the surface of a convex polyhedron $P$ in the unit sphere $\mathbb S^3$. 
 The center of the hemisphere has to lie in a facet of $P$, say $F$.
 It remains to note that $F$ contains the equator and therefore $P$ has to be a hemisphere in $\mathbb S^3$ or an intersection of two hemispheres.
 In both cases its surface is isometric to $\mathbb S^2$.
@@ -79,7 +79,7 @@ The patch construction above was introduced by
 Aleksandr Alexandrov
 in his proof of convex embeddability of polyhedra
 \cite[see VI, \S7 in][]{alexandrov1948}.
-The alternative end of proof is taken from \cite{panov-petrunin}.
+The alternative end of the proof is taken from \cite{panov-petrunin}.
 
 
 
@@ -126,15 +126,15 @@ that is, the total angle around each vertex of $\Sigma$ is at least~$2\cdot\pi$.
 \subsection*{Minimal polyhedral disk}\label{Minimal polyhedral disk}
 
 By a polyhedral disk in $\RR^3$
-we understand a triangulation of a plane polygon $P$ with a map $P\to\RR^3$ that is affine on each triangle.
+we mean a triangulation of a plane polygon $P$ with a map $P\to\RR^3$ that is affine on each triangle.
 The area of the polyhedral disk is defined as the sum of areas of the images of the triangles in the triangulation.
 
 \begin{pr}
 Consider the  class of polyhedral disks glued from $n$ triangles in $\RR^3$ 
-with fixed broken line as the boundary.
+with a fixed broken line as the boundary.
 Let $\Sigma_n$ be a disk of minimal area in this class.
-Show that $\Sigma_n$ is  \index{saddle surface}\emph{saddle};
-that is, a plane cannot cut all the edges coming from one of the interior vertices of $\Sigma_n$.
+Show that $\Sigma_n$ is a \index{saddle surface}\emph{saddle surface};
+that is, a plane cannot cut all the edges coming from one of the interior vertices of~$\Sigma_n$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,13 +159,13 @@ singular points.
 Construct spherical polyhedral space $P$ that is homeomorphic to $\mathbb{S}^3$ and such that $P_s$ is formed by a knotted circle.
 \end{pr}
 
-In addition the total length of $P_s$ can be made arbitrary large and the angle around $P_s$ can be made strictly less than $2\cdot\pi$.
+In addition, the total length of $P_s$ can be made arbitrarily large and the angle around $P_s$ can be made strictly less than $2\cdot\pi$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Triangulation of a torus}\label{Triangulation of a torus}
 
 \begin{pr}
-Show that the torus does not admit a triangulation 
+Show that a torus does not admit a triangulation 
 such that one vertex has 5 edges,
 one has 7 edges and 
 all other vertices have 
@@ -198,7 +198,7 @@ Therefore it is sufficient to show that any two vertices of $P$ are connected by
 The latter follows from the following claim.
 
 \begin{cl}{$({*})$}
-For any two points $p$ and $q$ on $\gamma$ there is a hyperplane $H$ in $\RR^4$ which intersects $\gamma$ only at $p$ and $q$ and leaves $\gamma$ on one side.
+Given two points $p$ and $q$ on $\gamma$, there is a hyperplane $H$ in $\RR^4$ that intersects $\gamma$ only at $p$ and $q$ and leaves $\gamma$ on one side.
 \end{cl}
 
 To prove the claim, assume that $p=\gamma(t_1)$ and $q=\gamma(t_2)$. 
@@ -223,7 +223,7 @@ so that the Voronoi domain of each vertex is isometric to a convex subset in the
 
 The boundaries of all the Voronoi domains form a graph with straight edges.
 Let us triangulate $P$ so that each triangle has one of those edges as the base 
-and the opposite vertex is the center of an adjusted Voronoi domain; 
+and the opposite vertex is the center of an adjacent Voronoi domain; 
 such a vertex will be called the {}\emph{main} vertex of the triangle.
 
 
@@ -316,9 +316,9 @@ $|a_1-y|<|b_1-f(y)|$; that is, $y\in\Omega$.
 The boundary $\partial\Omega$ can be subdivided into a finite collection of line segments $\{E_i\}$
 so that $f$ maps rigidly each $E_i$.
 Note that $|f(x)\z-b_1|=|x-a_1|$ for any $x\in E_i$.
-Denote by $T_i$ the triangle with base $E_i$ and vertex $a_1$.
+Denote by $T_i$ the triangle with the base $E_i$ and the vertex $a_1$.
 From the above there is a rigid motion $m_i$ of $T_i$ such that $m_i(x)\z=f(x)$ for any $x\in E_i$ and $m_i(a_1)=b_1$.
-Let us redefine the map $f$ in $\Omega$ by sending $x$ to $m_i(x)$ for $x\in T_i$.
+Let us redefine the map $f$ in $\Omega$ by sending $x$ to $m_i(x)$ for any $x\in T_i$.
 
 The maps $m_i$ agree on the common sides of triangles $T_i$.
 Therefore we have produced a new piecewise isometric map $f'\:\RR^2\to \RR^2$ satisfying all the requirements.
@@ -337,7 +337,7 @@ and rediscovered by Arseniy Akopyan and Alexey Tarasov [see \ncite{brehm}, \ncit
 \end{wrapfigure}
 
 \parbf{Closed polyhedral surface.}
-An example can be constructed by drilling a polyhedral cave from your favorite convex polyhedron.
+An example can be constructed by drilling a polyhedral cave in your favorite convex polyhedron.
 On the diagram you see the result of this construction for the octahedron.
 
 \medskip
@@ -355,7 +355,7 @@ The problem suggested by Jaros{\l}aw K\k{e}dra.
 The construction above produces a surface of genus at least 3.
 One can also construct a polyhedral surface in $\RR^3$
 which is isometric to a flat torus.
-The existence of such torus follows from very general result of Yuri Burago and Victor Zalgaller \cite{burago-zalgaller:pl}.
+The existence of such torus follows from a general result of Yuri Burago and Victor Zalgaller \cite{burago-zalgaller:pl}.
 They show in particular that any 1-Lipschitz smooth embedding of the flat torus in $\RR^3$ can be approximated by a piecewise distance preserving embedding.
 
 \begin{wrapfigure}[4]{r}{20 mm}
@@ -367,7 +367,7 @@ The following construction is more direct;
 it is a bent version of the so called \index{Schwarz boot}\emph{Schwarz boot} \cite{schwarz1890definition}.
 Construct an isometric piecewise linear embedding of a cylinder $\mathbb{S}^1\times [0,a]$ from six triangles like in the diagram in such a way
 that the planes through the boundary triangles meet at an angle of $\tfrac\pi n$ for a positive integer $n$.
-It remains to reflect the obtained surface several times with respect to the planes through the boundary triangles.
+After that reflect the obtained surface several times with respect to the planes through the boundary triangles.
 
 The following related problem was proposed by Brian Bowditch;
 a solution can be built with the construction of Joel Hass \cite{hass}.
@@ -380,14 +380,14 @@ Construct a polyhedral metric on the 3-sphere such that the total angle around a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Minimal polyhedral disk.}
 Arguing by contradiction, 
-assume a polyhedral disk $\Sigma$ minimizing the area is not saddle;
+assume that a polyhedral disk $\Sigma$ minimizing the area is not saddle;
 that is, there is an interior vertex $v$ of $\Sigma$ such that all the edges from $v$ can be cut with a plane.
 
 Note that we can move $v$ in such a way that the lengths of all its edges decrease.
 
 Since the area is minimal,  this deformation does not decrease the area. 
 Taking the derivative of the total area along this deformation implies that $\Sigma$
-contains two adjusted non-coplanar triangles $[pvw]$ and $[qvw]$ such that
+contains two adjacent non-coplanar triangles $[pvw]$ and $[qvw]$ such that
 \[\measuredangle \hinge pvw+\measuredangle \hinge qvw> \pi.\]
 
 \begin{center}
@@ -463,7 +463,7 @@ The given example is closely related to the so called \index{Sch\"onhardt polyhe
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sphere with one edge.} 
-An example $P$ can be found among polyhedral spaces with an isometric $\mathbb{S}^1$-action with geodesic orbits.
+An example, say $P$, can be found among polyhedral spaces that admit an isometric $\mathbb{S}^1$-action with geodesic orbits.
 (Equivalently the cone over $P$ admits a complex structure; 
 that is, one can cut simplexes from $\CC^2$ and glue the cone from them so that the complex structures agree on the gluing.)
 
@@ -531,7 +531,7 @@ Let us equip the torus with the flat metric such that each triangle is equilater
 The metric will have two singular cone points $z_5$ and $z_7$.
 The total angle around $z_5$ is $\tfrac53\cdot\pi$
 and the total angle around $z_7$ is $\tfrac73\cdot\pi$.
-Note the following. 
+Note the following:
 
 \begin{cl}{$({*})$}
 The holonomy group of the obtained polyhedral metric on the torus is generated by the rotation by $\tfrac\pi3$.
@@ -540,7 +540,6 @@ The holonomy group of the obtained polyhedral metric on the torus is generated b
 Indeed, since parallel translation along any loop preserves the directions of the sides of any triangle;
 it can only permute it cyclically, which corresponds to rotations by multiple of $\tfrac\pi3$. 
 On the other hand, the holonomy of the loop which surrounds $z_5$ is a rotation by $\tfrac\pi3$.
-
 
 Consider a closed geodesic $\gamma_1$ minimizing the length among all not null-homotopic circles.
 Let $\gamma_2$ be another closed geodesic that minimize the length and is not homotopic to any power of $\gamma_1$.
@@ -553,7 +552,7 @@ In fact no geodesic can pass through any singular point with total angle smaller
 
 
 Assume that $\gamma_i$ passes through $z_7$.
-Then by $({*})$, one of the two angles cut by $\gamma_i$ at $z_7$ equals $\pi$.
+Then by $({*})$, one of the two angles cut by $\gamma_i$ at $z_7$ is $\pi$.
 It follows that one can push $\gamma_i$ aside so that it does not longer pass through $z_7$, but remains to be a closed geodesic with the same length.
 
 \begin{wrapfigure}[5]{r}{30 mm}
@@ -566,7 +565,6 @@ It follows that one can push $\gamma_i$ aside so that it does not longer pass th
 Cut $\TT^2$ along $\gamma_1$ and $\gamma_2$.
 In the obtained quadrilateral, connect $z_5$ to $z_7$ by a minimizing geodesic and cut along it.
 This way we obtain an annulus $\Omega$ with flat metric.
-
 
 Note that a neighborhood of the first boundary component is a parallelogram --- it has equal opposite sides and its angles add up to $2\cdot \pi$.
 In particular $\Omega$ admits an isometric immersion into the plane.
@@ -592,16 +590,16 @@ and John Sullivan \cite{izmestiev-rote-springborn-kusner}.
 \end{wrapfigure}
 
 There are flat metrics on the torus with 
-only two singular points with total angles $\tfrac53\cdot\pi$ and $\tfrac73\cdot\pi$.
+only two singular points of total angles $\tfrac53\cdot\pi$ and $\tfrac73\cdot\pi$.
 Such an example can be obtained by identifying the hexagon on the picture  according to the arrows.
 However, the holonomy group of the obtained torus is generated by the rotation by $\tfrac\pi6$. 
 In particular, the observation $({*})$ is essential in the proof.
 
 The same argument shows that the
-holonomy group of a flat torus with exactly two singular points with total angle $2\cdot(1\pm \tfrac1n)\cdot\pi$ has more than $n$ elements.
+holonomy group of a flat torus with exactly two singular points of total angle $2\cdot(1\pm \tfrac1n)\cdot\pi$ has more than $n$ elements.
 In the solution we did the case $n=6$.
 
-If one denotes by $v_m$ the number of vertexes in a triangulation of the torus with $m$ incoming edges,
+If one denotes by $v_m$ the number of vertices in a triangulation of the torus with $m$ incoming edges,
 then by Euler's formula, we get
 \[\sum_m(m-6)\cdot v_m=0.\leqno({*}{*})\]
 Note that this equation says nothing about $v_6$.

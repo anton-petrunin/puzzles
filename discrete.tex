@@ -1,7 +1,7 @@
 \csname @openrightfalse\endcsname
 \chapter{Discrete geometry}
 
-In this chapter we consider geometrical problems with strong combinatoric flavor.
+In this chapter we consider geometrical problems with a strong combinatoric flavor.
 No special prerequisite is needed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -14,13 +14,13 @@ Prove that there is an isotopy of $\mathcal{C}$ that moves all of them into grea
 
 
 \parit{Semisolution.}
-For each circle in $\mathcal{C}$ consider the plane containing it.
+For each circle in $\mathcal{C}$, consider the plane containing it.
 Note that the circles are linked 
 if and only if 
 the corresponding planes intersect at a single point inside the unit sphere $\mathbb{S}^3\subset \RR^4$.
 
-Take the intersection of the planes with the sphere of radius $R\ge 1$,
-rescale and pass to the limit as $R\to\infty$.  
+Consider the collection of circles formed by the intersections of the planes with the sphere of radius $R\ge 1$.
+Rescale the sphere and pass to the limit as $R\to\infty$.  
 This way we get the needed isotopy.\qeds
 
 This problem was discussed 
@@ -60,7 +60,7 @@ Construct a set in the Euclidean plane that intersects each line at exactly 2 po
 
 \begin{pr}
 Let $B_1,\dots,B_n$ be balls  
-of raduses $r_1,\dots,r_n$ 
+of radii $r_1,\dots,r_n$ 
 in a Euclidean space.
 Assume that no hyperplane divides the balls into two
 non-empty sets without intersecting at least one of the balls. 
@@ -73,7 +73,7 @@ $r=r_1+\dots+r_n$.
 \subsection*{Covering lemma}
 
 \begin{pr}
-Let $\{B_i\}_{i\in F}$ be any finite collection of  balls in $m$-dimensional Euclidean space. 
+Let $\{B_i\}_{i\in F}$ be any finite collection of  balls in $\RR^m$. 
 Show that there is a subcollection of pairwise disjoint balls $\{B_i\}_{i\in G}$, $G\subset F$
 such that
 \[\vol \left(\bigcup_{i\in F}B_i\right)\le 3^m\cdot \vol \left(\bigcup_{i\in G}B_i\right).\]
@@ -108,10 +108,10 @@ and (3) no pair $W_i,W_j$ has common interior points.
 
 }
 
-As you may guess from the diagram, the kissing number of the round disk in the plane is $6$.
+As you may have guessed from the diagram, the kissing number of the round disk in a plane is $6$.
 
 \begin{pr}
-Show that for any convex body $W_0$ in $\RR^m$
+Show that for any convex body $W_0$ in $\RR^m$ we have that
 $$\mathop{\rm kiss}W_0\ge \mathop{\rm kiss}B,$$
 where $B$ denotes the unit ball in $\RR^m$.
 \end{pr}
@@ -159,7 +159,7 @@ Show that $n\le 2^m$.
 
 \begin{pr}
 Let $\mu$ be a Borel probability measure on the plane.
-Show that given $\eps>0$ there is a finite set of points $S$ that intersects every convex figure of measure at leaset $\eps$.
+Show that given $\eps>0$, there is a finite set of points $S$ that intersects every convex figure of measure at leaset $\eps$.
 Moreover we can assume that $|S|$ --- the number of points in $S$, depends only on $\eps$ (in fact one can take $|S|=\lceil\tfrac1{\eps^5}\rceil$).
 \end{pr}
 
@@ -172,7 +172,7 @@ A polyhedron is called {}\emph{right-angled} if all its dihedral angles are righ
 Show that in all sufficiently large dimensions, there is no compact convex hyperbolic right-angled polyhedron. 
 \end{pr}
 
-Let us give a short summary of the Dehn--Sommerville equations which can help to solve this problem.
+Let us give a short summary of the Dehn--Sommerville equations which can help solve this problem.
 
 Let $P$ be a \index{simple polyhedron}\emph{simple} Euclidean $m$-dimensional polyhedron;
 that is, exactly $m$ facets meet at each vertex of $P$.
@@ -188,12 +188,12 @@ The array of integers $(h_0,\dots h_m)$ is called the $h$-vector of $P$.
 Clearly $h_0=h_m=1$ and 
 \[h_k\ge 0\quad\text{for all}\quad k.\leqno({*})\]
 
-Each $k$-face of $P$ contains a unique vertex that maximizes $\ell$;
-if the vertex has index $i$,
+Each $k$-face of $P$ contains a unique vertex that maximizes $\ell$.
+If the vertex has index $i$,
 then $i\ge k$ and
 then it is the maximal vertex of exactly $\tfrac{i!}{k!\cdot (i-k)!}$
 faces of dimension $k$.
-This observation can be packed in the following polynomial identity 
+This observation can be packed in the following polynomial identity:
 \[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
 
 Note that the identity above implies that the $h$-vector does not depend on the choice of $\ell$.
@@ -202,12 +202,14 @@ that is,
 \[h_k=h_{m-k}\leqno({*}{*})\]
 for any $k$.
 
-The identities $({*}{*})$ are called the Dehn--Sommerville equations.
-It gives the complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
+The identities $({*}{*})$ for all $k$ are called the Dehn--Sommerville equations.
+They give a complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
 
-Note that the Dehn--Sommerville equations $({*}{*})$ 
+Note that the Dehn--Sommerville equations 
 as well as the inequalities $({*})$ can be rewritten in terms of 
 $f$-vectors.
+
+For more on the subject, see \cite[Chapter 9]{gruenbaum}.
 
 
 \section*{Semisolutions}
@@ -337,7 +339,7 @@ Assume this is not the case.
 Then there is a line $\ell$ through $z$, 
 such that the orthogonal projection of some ball $B_i$ to $\ell$ 
 does not lie completely inside the projection of $B$.
-(This projection reduces the problem to the one-dimensional case.)
+(This observation reduces the problem to the one-dimensional case.)
 
 Note that the projection of all balls $B_1,\dots,B_n$ has to be connected and it contains a line segment longer than $r$ on one side from $z$. 
 In this case, the center of mass of the balls projects inside of this segment, a contradiction.
@@ -359,14 +361,14 @@ on each step we take the largest ball that does not intersect those which we hav
 Note that each ball in the original collection $\{B_i\}_{i\in F}$ intersects a ball in $\{B_i\}_{i\in G}$ with larger radius.
 Therefore 
 \[\bigcup_{i\in F}B_i\subset \bigcup_{i\in G}3\cdot B_i,\leqno({*})\]
-where $3\cdot B_i$ denotes the ball with the same center as $B_i$ and with radius three times larger.
+where $3\cdot B_i$ denotes the ball concentric to $B_i$ and three times larger radius.
 Hence the statement follows.
 \qeds
 
-
-
-The constant $3^n$ is not optimal.
-The optimal constant is at least $2^n$, but its value is not known and maybe no one is willing to know.
+The constant $3^m$ can be improved slightly \cite{domotorp}.
+For $m=1$ the optimal constant is $2$.
+Possibly, for any $m$, the optimal constant is $2^m$;
+it can not be smaller, an example can be found among collections of unit balls that contain a fixed point.
 
 The inclusion $({*})$ is called the \emph{Vitali covering lemma}.
 The following statement is called the \emph{Besikovitch covering lemma};
@@ -374,10 +376,10 @@ it has a similar proof.
 
 \begin{pr}
 For any positive integer $m$ there is a positive integer $M$ such that 
-any finite collection of balls $\{B_i\}_{i\in F}$ in the $m$-dimensional Euclidean space 
+any finite collection of balls $\{B_i\}_{i\in F}$ in $\RR^m$ 
 contains a subcollection $\{B_i\}_{i\in G}$
-such that center of any ball in $\{B_i\}_{i\in F}$ lies inside one of the balls from $\{B_i\}_{i\in G}$
-and the collection $\{B_i\}_{i\in G}$ can be subdivided into $M$ subcollections of pairwise disjoint balls.
+such that (1) center of any ball in $\{B_i\}_{i\in F}$ lies inside one of a ball from $\{B_i\}_{i\in G}$
+and (2) the collection $\{B_i\}_{i\in G}$ can be subdivided into $M$ subcollections of pairwise disjoint balls.
 \end{pr}
 
 Both lemmas were used to prove the so called \emph{covering theorems} in measure theory,
@@ -386,8 +388,8 @@ Their applications overlap but aren't identical, the \emph{Vitali covering theor
 
 More precisely, Vitali works in arbitrary metric spaces with a \index{doubling measure}\emph{doubling measure} $\mu$;
 the latter means that 
-\[\mu [B(x,2\cdot r)]\le C\cdot \mu [B(x,r)]\] 
-for some fixed constant $C$ and any ball $B(x,r)$ in the metric space.
+\[\mu [2\cdot B]\le C\cdot \mu B\] 
+for some fixed constant $C$ and any ball $B$ in the metric space.
 On the other hand, Besikovitch works for all Borel measures in the so called \emph{directionally limited} metric spaces \cite[see 2.8.9 in][]{federer};
 these include Alexandrov spaces with curvature bounded below.
 
@@ -508,10 +510,11 @@ It follows that there is a rotational symmetry of the cube with order 3 that fix
 The latter leads to a contradiction.
 \qeds
 
+The problem suggested by Jaros{\l}aw K\k{e}dra.
 The same idea can be used to solve the following harder problems.
 
 \begin{pr}
-Show the same for the surface of the higher dimensional cube.
+Show the same for the surface of $n$-dimensional cube, $n\ge 4$.
 \end{pr}
 
 \begin{pr}
@@ -530,8 +533,6 @@ The vertices of a cube inscribed in the dodecahedron are circled.
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/geodesic-loop(1)}
 \end{lpic}
 \end{center}
-
-The problem suggested by Jaros{\l}aw K\k{e}dra.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right and acute triangles.}
@@ -618,7 +619,7 @@ After $n$ steps we get a $(1+\z\dots+4^{n-1})$-point set
 that intersects each convex figure $F$ of measure $(\tfrac34)^n$.
 \qeds
 
-This is a stripped version of a theorem proved by Boris Bukh and Gabriel Nivasch in \cite{bukh-nivasch}.
+This is a stripped version of a theorem proved by Boris Bukh and Gabriel Nivasch \cite{bukh-nivasch}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right-angled polyhedron.}
@@ -642,8 +643,7 @@ It follows that
 The latter contradicts $({*})$ for $m\ge 6$.
 \qeds
 
-The above proof  
-is the core of the proof of nonexistence of compact hyperbolic Coxeter's polyhedrons of large dimensions 
+This is the core of the proof of nonexistence of compact hyperbolic Coxeter's polyhedrons of large dimensions 
 given by Ernest Vinberg \cite{vinberg, vinberg-strong}.
 
 Playing a bit more with the same inequalities, 
@@ -652,7 +652,7 @@ in all dimensions starting from $5$.
 In the 4-dimensional case,
 there is a regular right-angled  hyperbolic polyhedron with \index{120-cells}\emph{120-cells} --- a 4-dimensional uncle of the dodecahedra.
 
-The following question is open.
+The following related question is open.
 
 \begin{pr}
 Let $m$ be a large integer.

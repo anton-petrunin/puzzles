@@ -70,7 +70,7 @@ pics/Convex-triangulation.eps
 pics/thurston.eps
 pics/57-parallelogram.eps
 pics/57-triangulation.eps
-descrete.tex
+discrete.tex
 pics/kiss.eps
 pics/kiss-sol.eps
 pics/geodesic-loop.eps
