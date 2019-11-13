@@ -29,9 +29,9 @@ Let $\gamma$ be a smooth regular plane curve with strictly monotonic curvature.
 Show that $\gamma$ has no self-intersections.
 \end{pr}
 
-\begin{wrapfigure}{o}{25 mm}
-\begin{lpic}[t(-4 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/kneser-log(1)}
-\end{lpic}
+\begin{wrapfigure}{o}{35 mm}
+\centering
+\includegraphics{mppics/pic-11}
 \end{wrapfigure}
 
 \parit{Semisolution.}
@@ -230,6 +230,31 @@ with finite 1-dimensional Hausdorff measure.
 Show that there is a rectifiable curve passing through all the points in $X$.
 \end{pr}
 
+\subsection*{Straight set}
+
+A set $X$ in the plane is called $\delta$-straight if for any disc $\DD(x,r)$ with radius $r>0$ and center at a point $x\in X$, the intersection 
+$X\cap \DD(x,r)$ is $\delta\cdot r$-close in the sense of Hausdorff to a diameter of $\DD(x,r)$. 
+
+\begin{pr}
+Show that for any $\eps>0$ there is $\delta>0$ such that any $\delta$-straight closed plane set $X$ admits a locally $(1\pm\eps)$-bi-H\"older parametrization.
+That is, for any $x\in X$ there is a curve $\alpha\:[0,1]\to \RR^2$ that covers a neighborhood of $x$ in $X$ and the inequality
+\[c\cdot |t_1-t_0|^{1+\eps}\le|\alpha(t_0)-\alpha(t_1)| \le C\cdot |t_1-t_0|^{1-\eps}\]
+holds for any $t_0$ and $t_1$ and positive constants $c$ and $C$,
+\end{pr}
+
+Before trying to solve the problem, it might be useful to look at the following example.
+Consider the set $X_k$ formed by the origin and the two logarithmic spirals $\rho = \pm e^{k\varphi}$ in the polar coordinates $(\rho,\phi)$.
+Observe that if $k$ is large, then $X_k$ is $\delta$-straight.
+
+\hskip-30mm\includegraphics{mppics/pic-2}
+
+Another example of $\delta$-straight set is shown; it is constructed in a way similar to Koch snowflake curve, where instead of equilateral triangle we use a very obtuse isosceles triangle.
+The Hausdorff dimension of this example is larger than 1;
+in particular it shows that one can not expect to have a Lipschitz parametrization of $X$.
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Typical convex curves}
 
@@ -281,7 +306,13 @@ The cut locus can be defined as the closure
 of the set of points $x\in F$ 
 for which there exist two or more points in $\partial F$ minimizing the distance to $x$.
 
-
+\begin{wrapfigure}{r}{28 mm}
+\begin{lpic}[t(-4 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
+\lbl[t]{21,10;$\partial F$}
+\lbl[br]{8.5,30,;{\small $T$}}
+\lbl[tr]{6,3;{\small $z$}}
+\end{lpic}
+\end{wrapfigure}
 
 For each point $x\in T$, consider the subset $X\subset\partial F$ where minimal distance to $x$ is attained.
 If $X$ is not connected then we say that $x$ is a \emph{cut point};
@@ -290,15 +321,6 @@ the complement $U\backslash T$ is disconnected.
 If $X$ is connected 
 then we say that $x$ is a \emph{focal point};
 equivalently it means that the osculating circle to $\partial F$ at any point of $X$ is centered at $x$.
-
-
-\begin{wrapfigure}{r}{28 mm}
-\begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
-\lbl[t]{21,10;$\partial F$}
-\lbl[br]{8.5,30,;{\small $T$}}
-\lbl[tr]{6,3;{\small $z$}}
-\end{lpic}
-\end{wrapfigure}
 
 The trick is to show that $T$ contains a focal point, say $z$.
 Since $\partial F$ has curvature of at most $1$, the radius of any osculating circle is at lest $1$.
@@ -732,6 +754,48 @@ and Orville Harrold
 it also appears in the book of Kenneth Falconer \cite[see Exercise 3.5 in][]{falconer}.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Straight set.}
+A set $L$ in the plane will be called $r$-reachable
+if it is formed by a collection of disjoint proper smooth curves 
+with $r$-tubular neighborhood;
+that is, the closest-point projection to $L$ is uniquely defined in the $r$-neighborhood of $L$.
+Note that in this case $L$ has curvature at most $\tfrac1r$ at any point.
+
+Note that any for $\eps$-straight set $X$ and any $r>0$ there is a $r$-reachable set $L$ 
+that is $\eps\cdot r$-close to $X$ in the sense of Hausdorff.
+Construct a sequence of such approximations $L_n$ for $r_n=\tfrac1{2^n}$.
+Note that $L_n$ lies in a $2\cdot\eps\cdot r_n$-neighborhood of $L_{n+1}$.
+It follows that the closest point porojection $f_n\:L_n\to L_{n+1}$ is uniquely defined.
+Moreover it is straightforward to check that $f_n$ is $(1\mp \eps)$-bi-Lipschitz.
+
+Given $x_1\in L_1$ consider the sequence $x_n\in L_n$ defined by $x_{n+1}\z=f_n(x_n)$.
+From above, we have that 
+\[
+\begin{aligned}|x_{n+1}-x_n|&<2\cdot\eps\cdot r_n,
+&
+|x_{n+1}-y_{n+1}|&\gtrless(1\mp\eps)\cdot |x_{n}-y_{n}|.
+\end{aligned}
+\eqno({*})
+\]
+In particular, for any $x_1\in L_1$, the sequence $(x_n)$ converges in it-self; denote its limit by $x_\infty$. consider the map $F\:x_1\mapsto x_\infty$.
+Evidently $F\:L_1\to X$ is onto.
+
+Note that inequalities $({*})$ imply that 
+\[
+\begin{aligned}
+|x_{n+1}-y_{n+1}|\le \min\{(1+\eps)\cdot |x_{n}-y_{n}|, |x_{n}-y_{n}|-4\cdot \eps\cdot r_n\},
+\\
+|x_{n+1}-y_{n+1}|\ge \max\{(1-\eps)\cdot |x_{n}-y_{n}|, |x_{n}-y_{n}|+4\cdot \eps\cdot r_n\}
+\end{aligned}
+\eqno({*}{*})
+\]
+Applying these two inequalities recursively, we get that $F$ is bi-H\"older. 
+\qeds
+
+A very similar construction is used in the proof of Nash--Kuiper theorem about length preserving $C^1$-embeddings \cite{nash,kuiper}.
+This puzzle is a baby case of the so called \emph{Reifenberg's lemma}.
+It was introduced by Ernst Reifenberg \cite{reifenberg} and became a useful tool in metric geometry, in particular it is used to study the limit spaces with lower Ricci curvature bound \cite{cheeger-colding-1, naber}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{wrapfigure}[10]{r}{38 mm}
