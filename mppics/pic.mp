@@ -30,7 +30,7 @@ a:=20;
 n:=6;
 
 z0=origin;
-z1=(1,0)*u;
+z1=(1,-.2)*u;
 z2=z1+(z1 rotated a);
 z3=z2+(z1 rotated -a);
 z4=z3+z1;
@@ -47,7 +47,7 @@ endfor
 
 draw p[n]--z4;
 
-clip currentpicture to circle(.4[z0,z4], .3abs(z4));
+clip currentpicture to (1cm,-2cm)--(1cm,1cm)--(17cm,1cm)--(17cm,-2cm)--cycle;
 
 endfig;
 
@@ -76,5 +76,26 @@ endfor
 
 endfig;
 
+beginfig(4)
+save u,a,n;
+u:=1.2cm;
+a:=20;
+n:=6;
 
+path p,q;
+p = (0,0){right} .. (4*u,1*u){right} .. (8*u,-.5*u){right};
+draw p;
+s = 2.5*u;
+q=
+(point arctime 0 of p of p)
+for t=1 step s until arclength p: 
+..{(direction arctime t of p of p) zscaled (1,.4)}(point arctime t of p of p) 
+endfor
+..{(direction 2 of p) zscaled (1,-.4)}(point 2 of p)
+;
+draw q penhair;
+
+label.bot (btex $L_{n-1}$ etex, point arctime s/4 of p of p);
+label.top (btex $L_n$ etex, point arctime s/4 of q of q);
+endfig;
 end

@@ -236,8 +236,8 @@ A set $X$ in the plane is called $\delta$-straight if for any disc $\DD(x,r)$ wi
 $X\cap \DD(x,r)$ is $\delta\cdot r$-close in the sense of Hausdorff to a diameter of $\DD(x,r)$. 
 
 \begin{pr}
-Show that for any $\eps>0$ there is $\delta>0$ such that any $\delta$-straight closed plane set $X$ admits a locally $(1\pm\eps)$-bi-H\"older parametrization.
-That is, for any $x\in X$ there is a curve $\alpha\:[0,1]\to \RR^2$ that covers a neighborhood of $x$ in $X$ and the inequality
+Show that for any $\eps>0$ there is $\delta>0$ such that any $\delta$-straight closed plane set $X$ is a curve that admits a locally $(1\pm\eps)$-bi-H\"older parametrization.
+That is, $X$ is connected and for any $x\in X$ there is a curve $\alpha\:[0,1]\to \RR^2$ that covers a neighborhood of $x$ in $X$ and the inequality
 \[c\cdot |t_1-t_0|^{1+\eps}\le|\alpha(t_0)-\alpha(t_1)| \le C\cdot |t_1-t_0|^{1-\eps}\]
 holds for any $t_0$ and $t_1$ and positive constants $c$ and $C$,
 \end{pr}
@@ -248,7 +248,7 @@ Observe that if $k$ is large, then $X_k$ is $\delta$-straight.
 
 \hskip-30mm\includegraphics{mppics/pic-2}
 
-Another example of $\delta$-straight set is shown; it is constructed in a way similar to Koch snowflake curve, where instead of equilateral triangle we use a very obtuse isosceles triangle.
+Another example of $\delta$-straight set is shown; it is constructed in a way similar to Koch snowflake curve, where we used a very obtuse isosceles triangle instead of equilateral triangle.
 The Hausdorff dimension of this example is larger than 1;
 in particular it shows that one can not expect to have a Lipschitz parametrization of $X$.
 
@@ -762,38 +762,50 @@ with $r$-tubular neighborhood;
 that is, the closest-point projection to $L$ is uniquely defined in the $r$-neighborhood of $L$.
 Note that in this case $L$ has curvature at most $\tfrac1r$ at any point.
 
-Note that any for $\eps$-straight set $X$ and any $r>0$ there is a $r$-reachable set $L$ 
-that is $\eps\cdot r$-close to $X$ in the sense of Hausdorff.
-Construct a sequence of such approximations $L_n$ for $r_n=\tfrac1{2^n}$.
-Note that $L_n$ lies in a $2\cdot\eps\cdot r_n$-neighborhood of $L_{n+1}$.
-It follows that the closest point porojection $f_n\:L_n\to L_{n+1}$ is uniquely defined.
-Moreover it is straightforward to check that $f_n$ is $(1\mp \eps)$-bi-Lipschitz.
+Further $\Eps$ may denote any positiove value that depend on $\eps$ such that $\Eps\to0$ as $\eps\to 0$.
+(The actual value $\Eps$ might change, but every statement below holds for $\Eps=239\cdot\eps$).
+We assume that $\eps$ and, therefore, $\Eps$ are small.
+
+Fix an $\eps$-straight set $X$.
+Note that for any $r>0$ there is a $r$-reachable set $L$ 
+that is $\Eps\cdot r$-close to $X$ in the sense of Hausdorff.
+(Indeed, using $\eps$-straightness one may approximate $X$ by a polygonal line that has sides about $r$, very obtuce angles and that does not come close to a fixed point twice.
+Smoothing its corners produces $L$.)
+\begin{figure}[h!]
+\centering
+\includegraphics{mppics/pic-4}
+\end{figure}
+
+Let $L_n$ be a sequence of such approximations for $r_n=\tfrac1{2^n}$.
+Note that $L_{n-1}$ lies in a $\Eps\cdot r_n$-neighborhood of $L_{n}$.
+In particular the closest point porojection $f_n\:L_{n-1}\to L_{n}$ is uniquely defined.
+Moreover it is straightforward to check that $f_n$ is $(1\mp \Eps)$-bi-Lipschitz.
 
 Given $x_1\in L_1$ consider the sequence $x_n\in L_n$ defined by $x_{n+1}\z=f_n(x_n)$.
 From above, we have that 
 \[
-\begin{aligned}|x_{n+1}-x_n|&<2\cdot\eps\cdot r_n,
+\begin{aligned}|x_{n+1}-x_n|&<\Eps\cdot r_n,
 &
-|x_{n+1}-y_{n+1}|&\gtrless(1\mp\eps)\cdot |x_{n}-y_{n}|.
+|x_{n+1}-y_{n+1}|&\gtrless(1\mp\Eps)\cdot |x_{n}-y_{n}|.
 \end{aligned}
 \eqno({*})
 \]
-In particular, for any $x_1\in L_1$, the sequence $(x_n)$ converges in it-self; denote its limit by $x_\infty$. consider the map $F\:x_1\mapsto x_\infty$.
-Evidently $F\:L_1\to X$ is onto.
+In particular, for any $x_1\in L_1$, the sequence $(x_n)$ converges in it-self.
+Denote its limit by $F(x_1)$;
+evidently $F\:L_1\to X$ is onto.
 
 Note that inequalities $({*})$ imply that 
 \[
 \begin{aligned}
-|x_{n+1}-y_{n+1}|\le \min\{(1+\eps)\cdot |x_{n}-y_{n}|, |x_{n}-y_{n}|-4\cdot \eps\cdot r_n\},
+|x_{n+1}-y_{n+1}|\le \min\,\{\,(1+\Eps)\cdot |x_{n}-y_{n}|,\, |x_{n}-y_{n}|- \Eps\cdot r_n\,\},
 \\
-|x_{n+1}-y_{n+1}|\ge \max\{(1-\eps)\cdot |x_{n}-y_{n}|, |x_{n}-y_{n}|+4\cdot \eps\cdot r_n\}
+|x_{n+1}-y_{n+1}|\ge \max\,\{\,(1-\Eps)\cdot |x_{n}-y_{n}|,\, |x_{n}-y_{n}|+ \Eps\cdot r_n\,\}.
 \end{aligned}
 \eqno({*}{*})
 \]
 Applying these two inequalities recursively, we get that $F$ is bi-H\"older. 
 \qeds
 
-A very similar construction is used in the proof of Nash--Kuiper theorem about length preserving $C^1$-embeddings \cite{nash,kuiper}.
 This puzzle is a baby case of the so called \emph{Reifenberg's lemma}.
 It was introduced by Ernst Reifenberg \cite{reifenberg} and became a useful tool in metric geometry, in particular it is used to study the limit spaces with lower Ricci curvature bound \cite{cheeger-colding-1, naber}.
 
