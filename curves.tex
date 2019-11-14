@@ -762,48 +762,52 @@ with $r$-tubular neighborhood;
 that is, the closest-point projection to $L$ is uniquely defined in the $r$-neighborhood of $L$.
 Note that in this case $L$ has curvature at most $\tfrac1r$ at any point.
 
-Further $\Eps$ may denote any positiove value that depend on $\eps$ such that $\Eps\to0$ as $\eps\to 0$.
-(The actual value $\Eps$ might change, but every statement below holds for $\Eps=239\cdot\eps$).
-We assume that $\eps$ and, therefore, $\Eps$ are small.
+Further $\delta_i$ will denote a positive value that depends on $\delta$ such that $\delta_i\to0$ as $\delta\to 0$.
+In fact every statement below holds for $\delta_i=239\cdot\delta$ for any $i$.
+We assume that $\delta$ and, therefore, each $\delta_i$ are small.
 
-Fix an $\eps$-straight set $X$.
+Fix an $\delta$-straight set $X$.
 Note that for any $r>0$ there is a $r$-reachable set $L$ 
-that is $\Eps\cdot r$-close to $X$ in the sense of Hausdorff.
-(Indeed, using $\eps$-straightness one may approximate $X$ by a polygonal line that has sides about $r$, very obtuce angles and that does not come close to a fixed point twice.
-Smoothing its corners produces $L$.)
+that is $\delta_1\cdot r$-close to $X$ in the sense of Hausdorff.
+Indeed, using $\delta$-straightness one may approximate $X$ by a polygonal line that has sides about $r$, very obtuse angles and that does not come close to a fixed point twice.
+Smoothing its corners produces $L$.
 \begin{figure}[h!]
 \centering
 \includegraphics{mppics/pic-4}
 \end{figure}
 
 Let $L_n$ be a sequence of such approximations for $r_n=\tfrac1{2^n}$.
-Note that $L_{n-1}$ lies in a $\Eps\cdot r_n$-neighborhood of $L_{n}$.
+Note that $L_{n-1}$ lies in a $\delta_2\cdot r_n$-neighborhood of $L_{n}$.
 In particular the closest point porojection $f_n\:L_{n-1}\to L_{n}$ is uniquely defined.
-Moreover it is straightforward to check that $f_n$ is $(1\mp \Eps)$-bi-Lipschitz.
+Moreover it is straightforward to check that $f_n$ is $(1\mp \delta_3)$-bi-Lipschitz.
 
 Given $x_1\in L_1$ consider the sequence $x_n\in L_n$ defined by $x_{n+1}\z=f_n(x_n)$.
 From above, we have that 
 \[
-\begin{aligned}|x_{n+1}-x_n|&<\Eps\cdot r_n,
+\begin{aligned}|x_{n+1}-x_n|&<\delta_4\cdot r_n,
 &
-|x_{n+1}-y_{n+1}|&\gtrless(1\mp\Eps)\cdot |x_{n}-y_{n}|.
+|x_{n+1}-y_{n+1}|&\gtrless(1\mp\delta_4)\cdot |x_{n}-y_{n}|.
 \end{aligned}
 \eqno({*})
 \]
 In particular, for any $x_1\in L_1$, the sequence $(x_n)$ converges in it-self.
 Denote its limit by $F(x_1)$;
 evidently $F\:L_1\to X$ is onto.
+It follows in particular, that any pair of points in $X$ on distance at most 1 lie in one connected component.
+Since the $\delta$-straightness does not depend on scale, it implies that $X$ is connected.
 
-Note that inequalities $({*})$ imply that 
-\[
-\begin{aligned}
-|x_{n+1}-y_{n+1}|\le \min\,\{\,(1+\Eps)\cdot |x_{n}-y_{n}|,\, |x_{n}-y_{n}|- \Eps\cdot r_n\,\},
+Note that $({*})$ implies the following two pairs of inequalities
+\begin{align*}
+|x_{n+1}-y_{n+1}|&\le (1+\delta_5)\cdot |x_{n}-y_{n}|,
 \\
-|x_{n+1}-y_{n+1}|\ge \max\,\{\,(1-\Eps)\cdot |x_{n}-y_{n}|,\, |x_{n}-y_{n}|+ \Eps\cdot r_n\,\}.
-\end{aligned}
-\eqno({*}{*})
-\]
-Applying these two inequalities recursively, we get that $F$ is bi-H\"older. 
+|x_{n+1}-y_{n+1}|&\le|x_{n}-y_{n}|+ \delta_5\cdot r_n,
+\intertext{and}
+|x_{n+1}-y_{n+1}|&\ge (1-\delta_5)\cdot |x_{n}-y_{n}|,
+\\
+|x_{n+1}-y_{n+1}|&\ge |x_{n}-y_{n}|- \delta_5\cdot r_n.
+\end{align*}
+To prove that $F$ is bi-H\"older,
+apply recursively the first inequality in each pair until $|x_{n}-y_{n}|\z>r_n$ and after the second one. 
 \qeds
 
 This puzzle is a baby case of the so called \emph{Reifenberg's lemma}.

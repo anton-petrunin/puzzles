@@ -84,7 +84,7 @@ n:=6;
 
 path p,q;
 p = (0,0){right} .. (4*u,1*u){right} .. (8*u,-.5*u){right};
-draw p;
+
 s = 2.5*u;
 q=
 (point arctime 0 of p of p)
@@ -93,9 +93,19 @@ for t=1 step s until arclength p:
 endfor
 ..{(direction 2 of p) zscaled (1,-.4)}(point 2 of p)
 ;
-draw q penhair;
+
+
+for t=1 step s/30 until arclength q: 
+draw 
+(point arctime t of q of q)+(unitvector(direction arctime t of q of q) zscaled (0,7))
+--
+(point arctime t of q of q)-(unitvector(direction arctime t of q of q) zscaled (0,7)) penhair withcolor .6;
+endfor
+
+draw p;
+draw q withcolor .3;
 
 label.bot (btex $L_{n-1}$ etex, point arctime s/4 of p of p);
-label.top (btex $L_n$ etex, point arctime s/4 of q of q);
+label.top (btex $L_n$ etex, point arctime s/4 of q of q) withcolor .3;
 endfig;
 end
