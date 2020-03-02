@@ -21,10 +21,176 @@ linecap:=butt;
 
 
 
+beginfig(102);
+save u, n, p;
+path p[];
+u:=.1cm;
+n:=30;
 
 
-beginfig(2)
-save u,a,n;
+z.a=(1,0)*u;
+z.b=z.a rotated 180/n;
+x.r=abs(z.a-z.b)/2.6;
+y.r=3*u;
+
+for i=0 
+upto n:
+draw circle(z.a rotated (i*360/n),y.r+i*x.r) penhair;
+endfor
+
+draw
+for i=0 
+upto n-1:
+(z.a rotated (i*360/n) + (y.r+i*x.r)*unitvector(z.a rotated ((i-1)*360/n)-z.a rotated (i*360/n)))..
+endfor
+(z.a rotated (n*360/n) + (y.r+n*x.r)*unitvector(z.a rotated ((n-1)*360/n)-z.a rotated (n*360/n)))
+;
+
+endfig;
+
+
+
+beginfig(104)
+save u,p;
+u:=1cm;
+path p[];
+
+z.x=(1,0)*u;
+z.y=(0,1)*u;
+z.p=.5[z.x,z.y];
+z.q=(x.p,-y.p);
+
+
+p[1]=
+(arc(z.p,z.p rotatedabout(z.x,-10),z.q))
+--
+arc(z.q,z.q rotatedabout(-z.y,10),-z.p)
+--
+(arc(-z.p,-z.p rotatedabout(-z.x,-10),-z.q))
+--
+arc(-z.q,-z.q rotatedabout(z.y,10),z.p)
+--
+cycle;
+
+p[2]= circle(z.x,.9*(z.p-z.x));
+
+draw p[1];
+draw p[2];
+hatchfill p[2]  withcolor (20, 1mm, -.5bp);
+
+label (btex $F$ etex, -z.x);
+endfig;
+
+beginfig(106)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a1=(0,0)*u;
+z.a2=(.5,-.7)*u;
+z.a3=(-.6,-.7)*u;
+
+z.b1=(1,.2)*u;
+z.b2=(0,-1.3)*u;
+z.b3=-z.b1;
+
+p[3]=z.a1{z.b1}..z.a2..z.a3..cycle;
+p[2]=z.b1..z.b2..z.b3..cycle;
+
+draw p[3];
+draw p[2];
+draw z.b1--z.b3;
+
+rimmark(z.a1--z.b1,z.b3--z.a1);
+
+dOt z.a1,z.b1,z.b3;
+
+endfig;
+
+beginfig(107)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a1=origin;
+z.a2=(.5,-.7)*u;
+z.a3=(-.6,-.7)*u;
+
+z.b1=(1,.2)*u;
+z.b2=(0,-1.3)*u;
+z.b3=-(1.3)*z.b1;
+
+p[3]=z.a1{z.b1}..z.a2..z.a3..cycle;
+p[2]=z.b1..z.b2..z.b3..cycle;
+
+draw p[3];
+draw p[2];
+draw z.b1--z.b3;
+z.u=(.5*z.b1) rotated 90;
+drawarrow z.a1--z.u;
+
+%rimmark(z.a1--z.b1,z.b3--z.a1);
+
+dOt z.a1,z.b1,z.b3;
+
+label.top (btex $r$ etex, .5[z.a1,z.b1]);
+label.top (btex $l$ etex, .5[z.a1,z.b3]);
+label.top (btex $u$ etex, z.u);
+label.bot (btex $x_u$ etex, z.a1+(3,-1));
+endfig;
+
+beginfig(108)
+save u,gap,p;
+path p[];
+u:=1cm;
+gap:=.07*u;
+
+z.a=(0,.3)*u;
+z.b=(.1,-.3)*u;
+z.l=(-1,-.1)*u;
+z.r=(.7,0)*u;
+
+p1=z.a..z.b..z.l..cycle;
+p2=z.b..z.a..z.r..cycle;
+
+draw subpath (arctime gap of p1, arctime ((arclength p1)-gap) of p1) of p1;
+draw subpath (arctime gap of p2,arctime ((arclength p2)-gap) of p2) of p2;
+endfig;
+
+beginfig(109)
+save u,gap,p;
+path p[];
+u:=1cm;
+gap:=.07*u;
+
+z.a=(0,.4)*u;
+z.b=(.1,-.6)*u;
+z.l=(-1,-.1)*u;
+z.r=(.9,0)*u;
+z.z=(-.4,-.1)*u;
+
+p1=z.a..z.b..z.l..cycle;
+p2=z.b{-1,-.2}..z.z..z.a{1,.2}..z.r..cycle;
+
+z.y=(subpath (0,1) of p1) intersectionpoint (z.z--(4*z.z-3*z.l));
+
+draw subpath (arctime gap of p1, arctime ((arclength p1)-gap) of p1) of p1;
+draw subpath (arctime gap of p2,arctime ((arclength p2)-gap) of p2) of p2;
+
+draw z.l--z.y dashed evenly;
+
+dOt z.l,z.z,z.y;
+
+label.lft (btex $x$ etex, z.l);
+label.rt (btex $y$ etex, z.y);
+label.llft (btex $z$ etex, z.z);
+label.rt (btex $\beta$ etex, z.r);
+label.top (btex $\alpha$ etex, point 2.5 of p1);
+endfig;
+
+beginfig(110)
+save u,a,n,p;
+path p[];
 u:=8cm;
 a:=20;
 n:=6;
@@ -51,33 +217,152 @@ clip currentpicture to (1cm,-2cm)--(1cm,1cm)--(17cm,1cm)--(17cm,-2cm)--cycle;
 
 endfig;
 
-beginfig(11);
-save u, n;
-u:=.1cm;
-n:=30;
+beginfig(112)
+save u,gap,p;
+path p[];
+u:=1cm;
 
-z.a=(1,0)*u;
-z.b=z.a rotated 180/n;
-x.r=abs(z.a-z.b)/2.6;
-y.r=3*u;
+z.a1=(0,0)*u;
+z.b1=(1,0)*u;
 
-for i=0 
-upto n:
-draw circle(z.a rotated (i*360/n),y.r+i*x.r) penhair;
-endfor
+z.c1=z.b1 rotatedabout(z.a1, 60);
+z.c2=z.c1 rotatedabout(z.a1, 30);
+z.c3=z.c2 rotatedabout(z.a1, 60);
 
-draw
-for i=0 
-upto n-1:
-(z.a rotated (i*360/n) + (y.r+i*x.r)*unitvector(z.a rotated ((i-1)*360/n)-z.a rotated (i*360/n)))..
-endfor
-(z.a rotated (n*360/n) + (y.r+n*x.r)*unitvector(z.a rotated ((n-1)*360/n)-z.a rotated (n*360/n)))
+z.b2=z.b1 rotatedabout(z.c1, 20);
+z.b3=z.b2 rotatedabout(z.c1, 60);
+
+z.a2=z.a1 rotatedabout(z.b1, 40);
+z.a3=z.a2 rotatedabout(z.b1, 60);
+
+z.p1=.6[z.a1,z.c1];
+z.q2=z.p1 rotatedabout(z.a1, 30/2);
+z.p2=z.p1 rotatedabout(z.a1, 30);
+z.q3=z.p2 rotatedabout(z.c2, -60/2);
+z.p3=z.p2 rotatedabout(z.c2, -60);
+z.q4=z.p3 rotatedabout(z.c3, 300/2);
+z.p4=z.p3 rotatedabout(z.c3, 300);
+z.p5=z.p4 rotatedabout(z.a1, -60);
+z.p6=z.p5 rotatedabout(z.a1, -30);
+
+z.r1=z.p6 rotatedabout(z.a1, -60);;
+z.s2=z.r1 rotatedabout(z.b1, 40/2);
+z.r2=z.r1 rotatedabout(z.b1, 40);
+z.s3=z.r2 rotatedabout(z.a2, -60/2);
+z.r3=z.r2 rotatedabout(z.a2, -60);
+z.s4=z.r3 rotatedabout(z.a3, 300/2);
+z.r4=z.r3 rotatedabout(z.a3, 300);
+z.r5=z.r4 rotatedabout(z.b1, -60);
+z.r6=z.r5 rotatedabout(z.b1, -40);
+
+z.v1=z.r6 rotatedabout(z.b1, -60);;
+z.w2=z.v1 rotatedabout(z.c1, 20/2);
+z.v2=z.v1 rotatedabout(z.c1, 20);
+z.w3=z.v2 rotatedabout(z.b2, -60/2);
+z.v3=z.v2 rotatedabout(z.b2, -60);
+z.w4=z.v3 rotatedabout(z.b3, 300/2);
+z.v4=z.v3 rotatedabout(z.b3, 300);
+z.v5=z.v4 rotatedabout(z.c1, -60);
+z.v6=z.v5 rotatedabout(z.c1, -20);
+
+p5=
+arc(z.p1,z.q2,z.p2)
+--arc(z.p2,z.q3,z.p3)
+--arc(z.p3,z.q4,z.p4)
+--arc(z.p4,z.p5,z.r1)
+--arc(z.r1,z.s2,z.r2)
+--arc(z.r2,z.s3,z.r3)
+--arc(z.r3,z.s4,z.r4)
+--arc(z.r4,z.r5,z.v1)
+--arc(z.v1,z.w2,z.v2)
+--arc(z.v2,z.w3,z.v3)
+--arc(z.v3,z.w4,z.v4)
+--arc(z.v4,z.v5,z.p1)
+--cycle
 ;
+
+draw p5;
+
+z.z=(z.a1+z.b1+z.c1)/3;
+z.ac1=.5[z.a1,z.c1];
+z.ac2=z.ac1 rotatedabout(z.a1,10);
+z.ac3=z.ac1 rotatedabout(z.a1,30);
+
+draw z.z--arc(z.ac1,z.ac2,z.ac3)--z.c3;
+
+z.ba1=.5[z.a1,z.b1];
+z.ba2=z.ba1 rotatedabout(z.b1,10);
+z.ba3=z.ba1 rotatedabout(z.b1,40);
+
+draw z.z--arc(z.ba1,z.ba2,z.ba3)--z.a3;
+
+z.cb1=.5[z.c1,z.b1];
+z.cb2=z.cb1 rotatedabout(z.c1,10);
+z.cb3=z.cb1 rotatedabout(z.c1,20);
+
+draw z.z--arc(z.cb1,z.cb2,z.cb3)--z.b3;
+
+p[1]=circle(z.a3,.5*(z.a1-z.b1));
+
+hatchfill p[1]  withcolor (20, 1mm, -.5bp);
+draw p[1];
+
+dOt z.a3;
+
+whitelabel.bot (btex $z$ etex, z.a3+(0,-1));
+label.lft (btex $T$ etex, z.c3);
+label.top (btex $\partial F$ etex, point 29.9 of p5);
 
 endfig;
 
-beginfig(4)
-save u,a,n;
+beginfig(112)
+save u,gap,p;
+path p[];
+u:=1.4cm;
+
+z.shift=(2,0)*u;
+
+p0=(0,0)*u--(1,0)*u--(1,1)*u--(0,1)*u--cycle;
+
+p1=(0,0)*u--(1,1)*u;
+
+z1=point length p1 of p1;
+
+p2=(0,0)*u--(2,2)*u;
+
+z2=point length p2 of p2;
+
+p3= p2--(p1 yscaled (-1) shifted z2)--(p2 shifted (z2+(x1,-y1))); 
+ 
+z3=point length p3 of p3;
+
+p4= p3--(p2 yscaled (-1) shifted z3)--(p3 shifted (z3+(x2,-y2))); 
+ 
+z4=point length p4 of p4;
+
+p5= p4--(p3 yscaled (-1) shifted z4)--(p4 shifted (z4+(x3,-y3))); 
+ 
+z5=point length p5 of p5;
+
+draw p2 xscaled (u/x2) yscaled (u/y2) shifted z.shift pensemibold;
+draw p3 xscaled (u/x3) yscaled (u/y3) shifted (2*z.shift) pensemibold;
+draw p4 xscaled (u/x4) yscaled (u/y4) shifted (3*z.shift) pensemibold;
+draw p5 xscaled (u/x5) yscaled (u/y5) shifted (4*z.shift) pensemibold;
+
+draw p0 shifted z.shift penhair;
+draw p0 shifted (2*z.shift) penhair;
+draw p0 shifted (3*z.shift) penhair;
+draw p0 shifted (4*z.shift) penhair;
+
+label.bot (btex $\eps=\tfrac12$ etex, ((.5,0)*u+1*z.shift));
+label.bot (btex $\eps=\tfrac13$ etex, ((.5,0)*u+2*z.shift));
+label.bot (btex $\eps=\tfrac14$ etex, ((.5,0)*u+3*z.shift));
+label.bot (btex $\eps=\tfrac15$ etex, ((.5,0)*u+4*z.shift));
+endfig;
+
+beginfig(114)
+save u,a,n,p;
+path p[];
 u:=1.2cm;
 a:=20;
 n:=6;
@@ -108,4 +393,29 @@ draw q withcolor .3;
 label.bot (btex $L_{n-1}$ etex, point arctime s/4 of p of p);
 label.top (btex $L_n$ etex, point arctime s/4 of q of q) withcolor .3;
 endfig;
+
+beginfig(116)
+save u, gap, p;
+path p[];
+u:=1cm;
+
+z.o=(0,0)*u;
+z.r=(2,0)*u;
+z.o1=.4[z.o,z.r];
+z.o2=.25[z.o,z.r];
+z.r0=z.r rotatedabout(z.o2,-40);
+z.r1=z.r rotatedabout(z.o2,60);
+
+p0=reverse (arc(z.r0,z.r,z.r1)..cycle);
+
+
+draw circle(z.o,z.r-z.o) dashed evenly;
+draw circle(z.o1,z.r-z.o1) dashed evenly;
+draw p0 pensemibold;
+
+label.lft (btex $\gamma$ etex, point .5 of p0);
+
+
+endfig;
+
 end

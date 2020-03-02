@@ -31,7 +31,7 @@ Show that $\gamma$ has no self-intersections.
 
 \begin{wrapfigure}{o}{35 mm}
 \centering
-\includegraphics{mppics/pic-11}
+\includegraphics{mppics/pic-102}
 \end{wrapfigure}
 
 \parit{Semisolution.}
@@ -85,19 +85,18 @@ The latter result could be considered as a continuous analog of the Leibniz test
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
 
-\begin{wrapfigure}{r}{27 mm}
-\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle(1)}
-\lbl{14.5,22.5;$F$}
-\end{lpic}
+\begin{wrapfigure}{r}{35 mm}
+\vskip2mm
+\centering
+\includegraphics{mppics/pic-104}
 \end{wrapfigure}
 
 \subsection*{Moon in a puddle}
 \label{moon-in-puddle}
 
-
 \begin{pr}
 A smooth closed simple plane curve with curvature less than $1$ at every point bounds a figure~$F$. 
-Prove that $F$ contains a disk of radius~$1$.
+Prove that $F$ contains a unit disk.
 \end{pr}
 
 }
@@ -125,9 +124,10 @@ Show that if a closed curve on the unit sphere intersects every equator then its
 
 {
 
-\begin{wrapfigure}{r}{30 mm}
-\begin{lpic}[t(2 mm),b(-1 mm),r(0 mm),l(0 mm)]{pics/tangent-eq(1)}
-\end{lpic}
+\begin{wrapfigure}{r}{25 mm}
+\vskip2mm
+\centering
+\includegraphics{mppics/pic-106}
 \end{wrapfigure}
 
 \subsection*{Oval in an oval}
@@ -140,6 +140,8 @@ Show that there is a chord of the outer curve that is tangent to the inner curve
 \end{pr}
 
 }
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Capture a sphere in a knot\hard}
@@ -165,9 +167,11 @@ and $f_1(\mathbb{S}^1)$ can be separated from $B$ by a plane.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-\begin{wrapfigure}{r}{24 mm}
-\begin{lpic}[t(-4 mm),b(-1 mm),r(0 mm),l(0 mm)]{pics/gehring-0(1)}
-\end{lpic}
+
+\begin{wrapfigure}{r}{20 mm}
+\vskip2mm
+\centering
+\includegraphics{mppics/pic-108}
 \end{wrapfigure}
 
 \subsection*{Linked circles}
@@ -180,6 +184,7 @@ Show that the length of each curve is at least $2\cdot\pi$.
 \end{pr}
 
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Surrounded area}
 \label{Surrounded area}
@@ -246,7 +251,7 @@ Before trying to solve the problem, it might be useful to look at the following 
 Consider the set $X_k$ formed by the origin and the two logarithmic spirals $\rho = \pm e^{k\varphi}$ in the polar coordinates $(\rho,\phi)$.
 Observe that if $k$ is large, then $X_k$ is $\delta$-straight.
 
-\hskip-30mm\includegraphics{mppics/pic-2}
+\hskip-30mm\includegraphics{mppics/pic-110}
 
 Another example of $\delta$-straight set is shown; it is constructed in a way similar to Koch snowflake curve, where we used a very obtuse isosceles triangle instead of equilateral triangle.
 The Hausdorff dimension of this example is larger than 1;
@@ -306,12 +311,10 @@ The cut locus can be defined as the closure
 of the set of points $x\in F$ 
 for which there exist two or more points in $\partial F$ minimizing the distance to $x$.
 
-\begin{wrapfigure}{r}{28 mm}
-\begin{lpic}[t(-4 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/moon-in-puddle-sol(1)}
-\lbl[t]{21,10;$\partial F$}
-\lbl[br]{8.5,30,;{\small $T$}}
-\lbl[tr]{6,3;{\small $z$}}
-\end{lpic}
+\begin{wrapfigure}{r}{35 mm}
+\vskip2mm
+\centering
+\includegraphics{mppics/pic-112}
 \end{wrapfigure}
 
 For each point $x\in T$, consider the subset $X\subset\partial F$ where minimal distance to $x$ is attained.
@@ -503,27 +506,22 @@ to decrease the ratio.
 Hence the problem follows.
 \qeds
 
-\begin{wrapfigure}{r}{51 mm}
-\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/tangent-eq-sol(1)}
-\lbl[tr]{20,5;$u$}
-\lbl[rt]{18,15;$r$}
-\lbl[rt]{26,6;$l$}
-\lbl[bl]{25,10;$x_u$}
-\end{lpic}
-\end{wrapfigure}
-
-
 \parit{Alternative solution.}
 Given a unit vector $u$, denote by $x_u$ the point on the inner curve
 with outer normal vector $u$.
 Draw a chord of outer curve that is tangent to the inner curve at $x_u$;
 denote by $r\z=r(u)$ and $l=l(u)$ the lengths of the segments of this chord to the right and to the left of $x_u$, respectively.
 
+\begin{wrapfigure}{r}{25 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-107}
+\end{wrapfigure}
 
-Arguing by contradiction, assume that $r(u)\ne l(u)$ for all $u\in\mathbb{S}^1$.
+Arguing by contradiction, assume that $r(u)\z\ne l(u)$ for all $u\in\mathbb{S}^1$.
 Since the functions $r$ and $l$ are continuous,
 we can assume that 
-$$r(u)>l(u)\ \ \text{for all}\ \ u\in\mathbb{S}^1.\leqno{({*})}$$
+$$r(u)<l(u)\ \ \text{for all}\ \ u\in\mathbb{S}^1.\leqno{({*})}$$
 
 Prove that
 each of the following two integrals 
@@ -582,31 +580,27 @@ Denote the linked circles by $\alpha$ and $\beta$.
 
 Choose a point $x\in\alpha$. 
 Note that there is a point $y\in\alpha$ such that the line segment 
-$[xy]$ intersects $\beta$, say at the point $z$. 
+$[xy]$ intersects $\beta$, say at $z$. 
 Indeed, if this is not the case, 
 applying a homothety with center $x$ to $\alpha$, would shrink it to $x$ without crossing $\beta$.
 The latter contradicts that $\alpha$ and $\beta$ are linked. 
 
-\begin{wrapfigure}{r}{54 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/gehring(1)}
-\lbl[br]{4,31;$x$}
-\lbl[l]{37.3,12;$y$}
-\lbl[rw]{29,19;$z$}
-\lbl[bl]{12.2,3.2;$\alpha$}
-\lbl[br]{49,11;$\beta$}
-\lbl[bl]{18,11;$\alpha^{*}$}
-\end{lpic}
+\begin{wrapfigure}{r}{25 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-109}
 \end{wrapfigure}
 
 Let $\alpha^{*}$ be the image of $\alpha$ under the central projection onto the unit sphere around $z$.
-Clearly
+Since $|\alpha(t)-z|\ge1$ for any $t$, we have that
 $$\length \alpha\ge \length\alpha^{*}.$$
 
-Note that $\alpha^{*}$ contains two antipodal points of the sphere,
-one corresponding to $x$ and the other corresponding to $y$.
-Therefore 
+Observe that $\alpha^{*}$ is a closed spherical curve that contains two antipodal points,
+one corresponds to $x$ and the other to $y$.
+It follows that
 $$\length \alpha^{*}\ge 2\cdot\pi.$$
 Hence the result follows.\qeds
+
 
 
 This problem was proposed by Frederick Gehring \cite[see 7.22 in][]{gehring};
@@ -645,15 +639,10 @@ such that
 A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
 Figure out the construction looking at the following diagram.
 
-\begin{center}
-\begin{lpic}[t(-0 mm),b(4 mm),r(0 mm),l(0 mm)]{pics/crooked(1)}
-\lbl[t]{8,0;$\eps=\tfrac12$}
-\lbl[t]{33,0;$\eps=\tfrac13$}
-\lbl[t]{57,0;$\eps=\tfrac14$}
-\lbl[t]{80,0;$\eps=\tfrac15$}
-\end{lpic}
-\end{center}
-
+\begin{figure}[h!]
+\centering
+\includegraphics{mppics/pic-112}
+\end{figure}
 
 Now, start with the unit circle, 
 $\gamma_0(t)=(\cos 2\pi t,\sin 2 \pi t)$.
@@ -662,16 +651,7 @@ Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\z\to\R
 and 
 \[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
 for some $\eps_n$-crooked function $f_n$.
-(On the diagram you can see an attempt to draw the first iteration.)
-
-{
-
-\begin{wrapfigure}{r}{46 mm}
-\begin{lpic}[t(-2 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/circrooked(1)}
-\lbl[tr]{35,33;$\gamma_0$}
-\lbl[bl]{38,36;$\gamma_1$}
-\end{lpic}
-\end{wrapfigure}
+(It is hard to draw $\gamma_{n+1}$; it runs like crazy back-and-forth almost along $\gamma_n$.)
 
 Denote by $D$ the union of all disks bounded by the curves $\gamma_n$.
 Clearly $D$ is homeomorphic to an open disk.
@@ -686,7 +666,6 @@ constructed by Bronis\l{}aw Knaster \cite{knaster}.
 The proof resembles construction of the Cantor set.
 Here are few similar problems:
 
-}
 
 \begin{pr}
  Construct three distinct open sets in $\RR$ with the same boundary.
@@ -773,7 +752,7 @@ Indeed, using $\delta$-straightness one may approximate $X$ by a polygonal line 
 Smoothing its corners produces $L$.
 \begin{figure}[h!]
 \centering
-\includegraphics{mppics/pic-4}
+\includegraphics{mppics/pic-114}
 \end{figure}
 
 Let $L_n$ be a sequence of such approximations for $r_n=\tfrac1{2^n}$.
@@ -814,10 +793,10 @@ This puzzle is a baby case of the so called \emph{Reifenberg's lemma}.
 It was introduced by Ernst Reifenberg \cite{reifenberg} and became a useful tool in metric geometry, in particular it is used to study the limit spaces with lower Ricci curvature bound \cite{cheeger-colding-1, naber}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}[10]{r}{38 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/typical-curve(1)}
-\lbl[rt]{20,20;$\gamma$}
-\end{lpic}
+\begin{wrapfigure}{r}{40 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-116}
 \end{wrapfigure}
 
 \parbf{Typical convex curves.}

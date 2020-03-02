@@ -1,0 +1,63 @@
+\RequirePackage{snapshot}
+\documentclass[twoside]{book}
+
+\usepackage{problems}
+\usepackage[colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={Unsolved puzzles in geometry that I love},
+pdfsubject={Geometry},
+pdfauthor={Anton Petrunin}
+]{hyperref}
+\makeindex
+
+\begin{document}
+
+
+\title{Unsolved puzzles in\\ 
+geometry that I love}
+\author{Anton Petrunin}
+\date{}
+\maketitle
+
+
+
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty}
+\section*{Preface}
+
+For me puzzles are contagious problems --- they might be pleasant or unpleasant, but once you start to think about them it is hard to stop.
+It does not really matter if the puzzle has a solution, altho knowing that a simple solution exists might make it more even more contagious.
+Usually, when I think about a puzzle, I see many things to grip, but I do not have enuf hands (otherwise I would call it a conjecture, especially if it is important in some way).
+
+Originally I thought to include this collection in my collection of solved puzzles ???, but a book format does not suite the goal.
+Send me an email if you solve one of the problems, or have a good idea how to solve it.
+
+\vfill
+
+
+
+\include{open}
+
+%the total number of problems is \thethm.
+
+\backmatter
+\newpage
+\phantomsection
+{\scriptsize
+\input{open-problems.ind}
+}
+\sloppy
+\printbibliography[heading=bibintoc]
+\fussy
+
+
+\end{document}
