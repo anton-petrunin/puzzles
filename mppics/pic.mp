@@ -415,7 +415,142 @@ draw p0 pensemibold;
 
 label.lft (btex $\gamma$ etex, point .5 of p0);
 
+endfig;
+
+beginfig(202)
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.a=(0,0)*u;
+z.b=(1,0)*u;
+
+p0=z.a{.7,1}..z.b{.6,-1}..cycle;
+
+draw p0;
+draw subpath(0,1) of p0 reflectedabout (z.a,z.b) dashed evenly;
+draw ddline(z.a,z.b)(.4,.4);
+
+label.top (btex $\Delta$ etex, point .5 of p0);
+label.top (btex $\Sigma$ etex, point 1.5 of p0);
+label.ulft (btex $\Pi$ etex, 1.4[z.a,z.b]);
 
 endfig;
 
+beginfig(204)
+save u,p;
+path p[];
+u:=2.8cm;
+
+z.a=(0,0)*u;
+z.b=(1,0)*u;
+
+z.p=(.05,-.05)*u;
+z.q=(.8,.1)*u;
+z.pq=(.6,.15)*u;
+z.v=unitvector(-1,.1);
+
+p0=z.a{.7,1}..z.b{.6,-1}..cycle;
+p1=z.q..z.pq{z.v}..z.p;
+
+z.pp=z.pq+(arclength subpath (1,2) of p1)*z.v;
+
+draw p0;
+draw p1;
+draw z.pq--z.pp dashed evenly;
+
+rimmark(z.pq--z.pp, subpath (1,2) of p1);
+
+dOt z.p,z.q,z.pq,z.pp;
+
+label.top (btex {\Large $\Sigma$} etex, (0,10)+point 1.5 of p0);
+label.bot (btex $p$ etex, z.p);
+label.bot (btex $q$ etex, z.q);
+label.bot (btex $\gamma(t)$ etex, z.pq);
+label.top (btex $p_t$ etex, z.pp);
+endfig;
+
+beginfig(205)
+save u,p;
+path p[];
+u:=2.8cm;
+
+
+z.p=(.2,-.1)*u;
+z.q=(1,-.2)*u;
+z.pq=(.6,.15)*u;
+z.v=unitvector(-1,.1);
+
+p1=z.q..z.pq{z.v}..z.p..cycle;
+
+z.pp=z.pq+(arclength subpath (1,2) of p1)*z.v;
+
+draw p1;
+draw z.pq--z.pp;
+draw ddline(z.pq,z.pp)(.8,-1) dashed evenly; 
+draw ddline(z.pq,z.pp)(-1,.8) dashed evenly;
+draw z.p{(direction 2 of p1) rotated -90}..{z.v rotated -90}z.pp dashed evenly;
+
+z.u=z.pp+15*(z.v rotated -90);
+drawarrow z.pp--z.u;
+
+rimmark(z.pq--z.pp, subpath (1,2) of p1);
+
+dOt z.p,z.q,z.pq,z.pp;
+
+label.top (btex $\Sigma$ etex, (0,2)+point 2.5 of p1);
+label.top (btex $W$ etex, (-.6*u,2)+point 2.5 of p1);
+label.top (btex $\Pi$ etex, 1.7[z.pp,z.pq]);
+label.rt (btex $p$ etex, z.p);
+label.lft (btex $q$ etex, z.q);
+label.bot (btex $\gamma(t)$ etex, z.pq);
+label.llft (btex $p_t$ etex, z.pp);
+label.urt (btex $\alpha'(t)$ etex, z.u);
+endfig;
+
+beginfig(206)
+save u,p;
+path p[];
+u:=.7cm;
+
+z.a=(-1,1)*u;
+z.b=(0,-1)*u;
+z.bb=(0,-.3)*u;
+z.bbb=(0,.3)*u;
+z.c=(1,1)*u;
+
+draw z.a{1,0}...z.b{-1,.6}..z.bb{1,0}..z.b{-1,-.6}...{1,0}z.c;
+draw (z.a{0,-1}...z.b{1,-.6}..z.bbb{-1,0}..z.b{1,.6}...{0,1}z.c) shifted ((3,0)*u);
+endfig;
+
+beginfig(208)
+save u,p;
+path p[];
+u:=.5cm;
+
+z.a0=(0,2)*u;
+z.a1=(1,3)*u;
+z.a2=(2,2.1)*u;
+z.a3=(3,2.5)*u;
+z.a4=(4,3)*u;
+z.a5=(5,2.9)*u;
+
+path p.a;
+p.a=z.a0{.2,1}..z.a1..z.a2..z.a3..z.a4..z.a5;
+
+draw p.a pensemibold;
+draw z.a1--z.a3 dashed evenly pensemibold;
+draw (x.a1,0)--z.a1 penhair;
+draw (x.a2,0)--.5[z.a1,z.a3] penhair;
+draw (x.a3,0)--z.a3 penhair;
+draw (x.a4,0)--z.a4 penhair;
+draw (x.a5,0)--z.a5 penhair;
+drawarrow (0,0)*u--(0,4.5)*u;
+drawarrow (0,0)*u--(6,0)*u;
+
+dOt (x.a2,0);
+label.bot (btex $s_0$ etex, (x.a2,0));
+label.rt (btex $s$ etex, (6,0)*u);
+label.top (btex $z$ etex, (0,4.5)*u);
+endfig;
 end
