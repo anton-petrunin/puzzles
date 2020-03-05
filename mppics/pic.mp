@@ -315,7 +315,7 @@ label.top (btex $\partial F$ etex, point 29.9 of p5);
 
 endfig;
 
-beginfig(112)
+beginfig(113)
 save u,gap,p;
 path p[];
 u:=1.4cm;
@@ -549,8 +549,176 @@ drawarrow (0,0)*u--(0,4.5)*u;
 drawarrow (0,0)*u--(6,0)*u;
 
 dOt (x.a2,0);
+
 label.bot (btex $s_0$ etex, (x.a2,0));
 label.rt (btex $s$ etex, (6,0)*u);
 label.top (btex $z$ etex, (0,4.5)*u);
 endfig;
+
+beginfig(302)
+save u,gap,p,n;
+path p[];
+u:=.7cm;
+n:=25;
+
+z.a0=(0,0)*u;
+z.a1=(-.5,-2)*u;
+z.a2=(0,-1)*u;
+z.a3=(.5,-2)*u;
+
+z.z=(-.5,-.5)*u;
+
+p0=z.a0{left}..z.a1{right}..z.a2{left}..z.a3{right}..cycle;
+
+p1=
+for i=.1 step .1 until length p0:
+(point i of p0) + 3*u*(unitvector(direction i of p0) rotated -90)..
+endfor
+cycle;
+
+z.p0= point n*.1 of p0;
+z.p1= (point n*.1 of p0) + 3*u*(unitvector(direction n*.1 of p0) rotated -90);
+
+z.q0= point 3.7 of p0;
+z.q1= (point 3.7 of p0) + 3*u*(unitvector(direction 3.7 of p0) rotated -90);
+
+draw p0 pensemibold;
+draw p1 pensemibold;
+draw z.p0--z.p1--z.z;
+
+fill_angle(z.z, z.p1, z.p0, 10);
+
+
+dOt z.p0,z.p1,z.z;
+
+label.rt (btex $p$ etex, z.p0);
+label.lft (btex $p_r$ etex, z.p1);
+label.rt (btex $z$ etex, z.z);
+
+label.urt (btex $\Sigma$ etex, z.q0);
+label.urt (btex $\Sigma_r$ etex, z.q1);
+
+endfig;
+
+beginfig(304)
+save u,p;
+path p[];
+u:=.5cm;
+
+
+p0=
+for i=1 step 1 until 360:
+((0,1)*u rotated i)+((0,2)*u rotated (2*i))..
+endfor
+cycle;
+
+p1=
+for i=1 step 1 until 360:
+((0,1)*u rotated i)+((0,2)*u rotated (2*i))-1.5*u*unitvector(((0,1)*u rotated i)+((0,2)*u rotated (2*i))-((0,1)*u rotated (i-1))+((0,2)*u rotated ((2*i)-1)))..
+endfor
+cycle;
+
+draw p0 pensemibold;
+draw p1 dashed evenly;
+
+endfig;
+
+beginfig(306)
+save u,p,eps,upp,del;
+path p[];
+u:=1cm;
+eps=.1;
+del=.15;
+upp:=2.5;
+
+z.q0=(-1,0)*u;
+z.q1=z.q0+(1*(1+eps),0)*u;
+z.q2=z.q0+(2*(1+eps),0)*u;
+z.q3=z.q0+(3*(1+eps),0)*u;
+z.q4=z.q0+(4*(1+eps),0)*u;
+z.q5=z.q0+(5*(1+eps),0)*u;
+z.q6=z.q0+(6*(1+eps),0)*u;
+
+z.x0=z.q0+(0,upp-0*del)*u;
+z.x1=z.q1+(0,upp-1*del)*u;
+z.x2=z.q2+(0,upp-2*del)*u;
+z.x3=z.q3+(0,upp-3*del)*u;
+z.x4=z.q4+(0,upp-4*del)*u;
+
+z.p0=(0,0)*u;
+z.p1=(1,0)*u;
+z.p2=(2,0)*u;
+z.p3=(3,0)*u;
+z.p4=(4,0)*u;
+
+mark_rt_angle(z.p0,z.q0,z.x0);
+mark_rt_angle(z.p1,z.q1,z.x1);
+mark_rt_angle(z.p2,z.q2,z.x2);
+mark_rt_angle(z.p3,z.q3,z.x3);
+mark_rt_angle(z.p4,z.q4,z.x4);
+
+draw ddline(z.q0,z.p4)(.2,.4);
+draw z.p0{up}..z.x0;
+draw z.p1{up}..z.x1;
+draw z.p2{up}..z.x2;
+draw z.p3{up}..z.x3;
+draw z.p4{up}..z.x4;
+
+draw z.q0{up}--z.x0 dashed evenly;
+draw z.q1{up}--z.x1 dashed evenly;
+draw z.q2{up}--z.x2 dashed evenly;
+draw z.q3{up}--z.x3 dashed evenly;
+draw z.q4{up}--z.x4 dashed evenly;
+
+dOt 
+z.p0,z.p1,z.p2,z.p3,z.p4,
+z.q0,z.q1,z.q2,z.q3,z.q4,
+z.x0,z.x1,z.x2,z.x3,z.x4;
+
+label.bot (btex $p_0$ etex, z.p0+(-3,0));
+label.bot (btex $p_1$ etex, z.p1+(-2,0));
+label.bot (btex $p_2$ etex, z.p2+(-1,0));
+label.bot (btex $p_3$ etex, z.p3);
+label.bot (btex $p_4$ etex, z.p4);
+
+label.bot (btex $q_0$ etex, z.q0);
+label.bot (btex $q_1$ etex, z.q1+(4,0));
+label.bot (btex $q_2$ etex, z.q2+(3,0));
+label.bot (btex $q_3$ etex, z.q3+(2,0));
+label.bot (btex $q_4$ etex, z.q4+(1,0));
+label.bot (btex $\dots$ etex, z.q5);
+label.top (btex $M$ etex, z.q6);
+
+label.top (btex $x_0$ etex, z.x0);
+label.top (btex $x_1$ etex, z.x1);
+label.top (btex $x_2$ etex, z.x2);
+label.top (btex $x_3$ etex, z.x3);
+label.top (btex $x_4$ etex, z.x4);
+endfig;
+
+beginfig(308)
+save u,p;
+path p[];
+u:=.5cm;
+
+z.p=origin;
+z.pp=(.4,.6)*u;
+z.q=(4,0)*u;
+z.r=(0,2)*u;
+
+p1=circle(z.p,z.r/2);
+p2=circle(z.p,z.r);
+
+hatchfill p1  withcolor (20, 1mm, -.5bp);
+draw p1;
+draw p2;
+draw z.pp{right}..z.q;
+
+dOt z.p,z.pp,z.q;
+
+whitelabel.lft (btex $p$ etex,z.p);
+label.rt  (btex $q$ etex,z.q);
+label.top  (btex $\partial B(p,r)$ etex,z.r);
+endfig;
+
 end

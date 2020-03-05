@@ -530,17 +530,10 @@ that lies on the geodesic starting at $p$ in the outer normal direction to $\Sig
 Note that for fixed $r\ge 0$,
 the points $p_r$ sweep an immersed locally convex hypersurface which we denote by $\Sigma_r$.
 
-\begin{wrapfigure}{r}{54 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(3 mm),l(0 mm)]{pics/sigma-r(1)}
-\lbl[br]{21,27;$\Sigma$}
-\lbl[rb]{10,42;$\Sigma_r$}
-%\lbl[l]{14,19;$S_r$}
-\lbl[bl]{31,25;$p$}
-\lbl[l]{50.8,25;$p_r$}
-%\lbl[b]{16,41.4;$x$}
-\lbl[t]{31.5,15.5;$z$}
-%\lbl[r]{18.5,34;{\small $\phi_r(x)$}}
-\end{lpic}
+\begin{wrapfigure}{r}{60 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-302}
 \end{wrapfigure}
 
 Choose $z\in M$. 
@@ -611,9 +604,10 @@ take the point $p$ as the image of the center $\bar B^m$
 and take the surfaces $\Sigma_t$ as the restrictions of the  embedding to the spheres;
 the existence of the immersion follows from the Morse lemma.\qeds
 
-\begin{wrapfigure}[5]{r}{20 mm}
-\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/ass(1)}
-\end{lpic}
+\begin{wrapfigure}{r}{30 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-304}
 \end{wrapfigure}
 
 As you see from the picture, 
@@ -1177,31 +1171,18 @@ Choose $p$ and $v \in \mathrm{N}^1_p$ so that $r=|p-p^{\delta\cdot v}|$
 takes the maximal possible value.
 From $({*}{*})$ it follows that $r>0$.
 
-Let $\gamma$ be the extension of the unit-speed minimizing geodesic from $p_v$ to $p$;
+Let $\gamma$ be the extension of the unit-speed minimizing geodesic from $p^{\delta\cdot v}$ to $p$;
 denote by $v_t$ the parallel translation of $v$ to $\gamma(t)$ along $\gamma$. 
 
-We can choose the parameter of $\gamma$ so that $p=\gamma(0)$, $p^v=\gamma(-r)$.
-Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^v=p_{-1}$. 
-Choose a large integer $N$ and set $w_n=(1-\tfrac nN)\cdot v_{n\cdot r}$, $q_n=p_n^{w_n}$.
+We can choose the parameter of $\gamma$ so that $p=\gamma(0)$, $p^{\delta\cdot v}=\gamma(-r)$.
+Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^{\delta\cdot v}=p_{-1}$. 
+Choose a large integer $N$ and set $w_n=\delta\cdot(1-\tfrac nN)\cdot v_{n\cdot r}$, $q_n=p_n^{w_n}$, $x_n=\exp_{p_n} (w_n)$, and $q_n=p_n^{w_n}=s(x_n)$.
 
-
-\begin{center}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/perelman(1)}
-\lbl[trw]{8,5;$p_{-1}{=}q_0$}
-\lbl[tr]{14,5;$p_0$}
-\lbl[tl]{15,5;$q_1$}
-\lbl[tr]{24,5;$p_1$}
-\lbl[tl]{26,5;$q_2$}
-\lbl[tr]{34.5,5;$p_2$}
-\lbl[tl]{36.5,5;$q_3$}
-\lbl[tr]{45,5;$p_3$}
-\lbl[tl]{47.2,5;$q_4$}
-\lbl[tr]{55.5,5;$p_4$}
-\lbl[b]{64,8;$M$}
-\lbl[t]{64,5;$\dots$}
-\lbl[b]{35.2,26,90;{\small $\exp_{p_3} (w_3)$}}
-\end{lpic}
-\end{center}
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-306}
+\end{figure}
 
 By $(\asterism)$, there is a constant $C$ independent of $N$ such that
 \[|q_k-q_{k+1}|<r+\tfrac C{N^2}\cdot\delta^2.\]
@@ -1212,11 +1193,9 @@ By induction, we get
 Since $N$ is large we get
 \[|q_N-p_N|>0.\]
 Note that $w_N=0$;
-therefore by $({*})$, we get $q_N=p_N^0=p_N$, a contradiction.\qeds
+therefore by $({*})$, we get $q_N=p_N^0=p_N$ --- a contradiction.\qeds
 
-
-This is the core of the solution of Soul conjecture
-by Grigori Perelman \cite{perelman}.
+This is the core of Perelman's solution of Soul conjecture \cite{perelman}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Warped product.}
@@ -1350,20 +1329,29 @@ An alternative solution of this problem can be build on the almost splitting the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Area of spheres.}
+We will use the following rough volume comparison inequality; it can be proved along the same lines as the Bishop--Gromov inequality.
+
+Let $M$ be a complete $n$-dimensional Riemannian manifold with nonnegative Ricci curvature.
+Given real numbers $0<\alpha<\beta<\gamma$, there is a constant $C=C(n,\alpha,\beta,\gamma)$ that satisfies the following condition:
+Suppose any point of a region $R\subset M$ lies on distance between $\beta$ and $\gamma$ to a fixed point $q$.
+Let $S$ be a hypersurface in $M$ that lies on the distance at least $\alpha$ from $q$ and intersects every geodesic from $q$ to $R$.
+Then  \[\area S\ge C\cdot\vol R.\]
+
+\medskip
+
 Fix $r_0>0$.
 Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
 
-\begin{wrapfigure}{r}{30 mm}
-\begin{lpic}[t(0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/calabi-yau(1)}
-\lbl[t]{9.5,8.5;$p$}
-\lbl[t]{28,2.5;$q$}
-\lbl[b]{10,20.5;$\partial B(p,r)$}
-\end{lpic}
+\begin{wrapfigure}{r}{35 mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-308}
 \end{wrapfigure}
 
 Note that any minimizing geodesic from $q$ to a point in $B(p,r_0)$
 has to cross $\partial B(p,r)$.
-By volume comparison, we get 
+By the volume comparison, %???spell
+we get 
 \[\vol B(p,r_0)\le C_m\cdot r_0\cdot \area \partial B(p,r),\]
 where $C_m$ is a constant depending only on the dimension $m=\dim M$
 ($C_m\z=10^m$ will do).\qeds
