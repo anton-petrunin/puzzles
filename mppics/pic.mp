@@ -718,7 +718,168 @@ dOt z.p,z.pp,z.q;
 
 whitelabel.lft (btex $p$ etex,z.p);
 label.rt  (btex $q$ etex,z.q);
-label.top  (btex $\partial B(p,r)$ etex,z.r);
+label.top  (btex $S$ etex,z.r);
 endfig;
 
+beginfig(402)
+save u,p,k;
+path p[];
+u:=1cm;
+k=.2;
+
+z.a0=(0,1)*u;
+z.a1=k*z.a0 rotated 60;
+z.a2=z.a0 rotated 120;
+z.a3=k*z.a0 rotated 180;
+z.a4=z.a0 rotated -120;
+z.a5=k*z.a0 rotated -60;
+
+p1=z.a0..z.a1..z.a2..z.a3..z.a4..z.a5..cycle;
+
+hatchfill p1  withcolor (20, 1mm, -.5bp);
+draw p1;
+
+endfig;
+
+beginfig(404)
+save u,p,k;
+path p[];
+u:=.8cm;
+k:=1.01;
+
+z.a=(-1,0)*u;
+z.b=(-.1,0)*u;
+
+draw
+z.a+z.b
+for i=1 step 1 until 200:
+..(z.a+(k**i)*z.b) rotated (10*i)
+endfor;
+
+dOt origin;
+
+endfig;
+
+beginfig(406)
+save u,p;
+path p[];
+u:=.3cm;
+
+z.o=origin;
+z.a=(-1,0)*u;
+z.b=z.a rotated 120;
+z.c=z.a rotated -120;
+
+z.ar=z.o rotatedabout(z.a,130);
+z.al=z.o rotatedabout(z.a,-130);
+z.arr=z.a rotatedabout(z.ar,130);
+z.arl=z.a rotatedabout(z.ar,-130);
+z.arrr=z.ar rotatedabout(z.arr,130);
+z.arrl=z.ar rotatedabout(z.arr,-130);
+z.arlr=z.ar rotatedabout(z.arl,130);
+z.arll=z.ar rotatedabout(z.arl,-130);
+
+z.br=z.o rotatedabout(z.b,130);
+z.bl=z.o rotatedabout(z.b,-130);
+z.brr=z.b rotatedabout(z.br,130);
+z.brl=z.b rotatedabout(z.br,-130);
+z.brrr=z.br rotatedabout(z.brr,130);
+z.brrl=z.br rotatedabout(z.brr,-130);
+z.brlr=z.br rotatedabout(z.brl,130);
+z.brll=z.br rotatedabout(z.brl,-130);
+
+z.cr=z.o rotatedabout(z.c,130);
+z.cl=z.o rotatedabout(z.c,-130);
+z.crr=z.c rotatedabout(z.cr,130);
+z.crl=z.c rotatedabout(z.cr,-130);
+z.crrr=z.cr rotatedabout(z.crr,130);
+z.crrl=z.cr rotatedabout(z.crr,-130);
+z.crlr=z.cr rotatedabout(z.crl,130);
+z.crll=z.cr rotatedabout(z.crl,-130);
+
+z.shift2=(.5*u+abs(z.o-z.a)+.5*u+1*u,0);
+z.shift3=z.shift2+(abs(z.o-z.a)+.5*u+abs(z.o-z.ar)+.5*u+1*u,0);
+z.shift4=z.shift3+(abs(z.o-z.ar)+abs(z.o-z.arlr)+.5*u+.5*u+1*u,0);
+
+
+draw (z.o--z.a) pensemibold;
+
+p1=circle(.5[z.o,z.a], abs(z.o-z.a)/2+.5*u);
+draw p1;
+
+draw (z.o--z.a) shifted z.shift2 pensemibold;
+draw (z.o--z.b) shifted z.shift2 pensemibold;
+draw (z.o--z.c) shifted z.shift2 pensemibold;
+
+p2=circle(z.o, abs(z.o-z.a)+.5*u) shifted z.shift2;
+draw p2;
+
+draw (z.o--z.a--z.ar) shifted z.shift3 pensemibold;
+draw (z.a--z.al) shifted z.shift3 pensemibold;
+
+draw (z.o--z.b--z.br) shifted z.shift3 pensemibold;
+draw (z.b--z.bl) shifted z.shift3 pensemibold;
+
+draw (z.o--z.c--z.cr) shifted z.shift3 pensemibold;
+draw (z.c--z.cl) shifted z.shift3 pensemibold;
+
+p3=circle(z.o, abs(z.o-z.ar)+.5*u) shifted z.shift3;
+draw p3; 
+
+draw (z.o--z.a--z.ar--z.arr--z.arrr) shifted z.shift4 pensemibold;
+draw (z.arr--z.arrl) shifted z.shift4 pensemibold;
+draw (z.ar--z.arl--z.arlr) shifted z.shift4 pensemibold;
+draw (z.arl--z.arll) shifted z.shift4 pensemibold;
+draw (z.a--z.al) shifted z.shift4 pensemibold;
+
+draw (z.o--z.b--z.br--z.brr--z.brrr) shifted z.shift4 pensemibold;
+draw (z.brr--z.brrl) shifted z.shift4 pensemibold;
+draw (z.br--z.brl--z.brlr) shifted z.shift4 pensemibold;
+draw (z.brl--z.brll) shifted z.shift4 pensemibold;
+draw (z.b--z.bl) shifted z.shift4 pensemibold;
+
+draw (z.o--z.c--z.cr--z.crr--z.crrr) shifted z.shift4 pensemibold;
+draw (z.crr--z.crrl) shifted z.shift4 pensemibold;
+draw (z.cr--z.crl--z.crlr) shifted z.shift4 pensemibold;
+draw (z.crl--z.crll) shifted z.shift4 pensemibold;
+draw (z.c--z.cl) shifted z.shift4 pensemibold;
+
+p4= circle(z.o, abs(z.o-z.arlr)+.5*u) shifted z.shift4;
+draw p4;
+
+label.llft (btex $T_1$ etex, point 2.9 of p1);
+label.llft (btex $T_2$ etex, point 2.8 of p2);
+label.llft (btex $T_3$ etex, point 2.7 of p3);
+label.llft (btex $T_4$ etex, point 2.6 of p4);
+
+endfig;
+
+beginfig(408)
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z.q=(1,2)*u;
+z.v=(-1,0)*u;
+z.w=(1,-1)*u;
+
+p1=z.p{z.v}..z.q{z.w}..cycle;
+
+z.lam= (point .7 of p1) scaled .7;
+
+p2=z.p{z.v rotated -20}..z.lam{1,.7}..{(z.p-z.q) rotated 20}z.p;
+
+draw p1;
+draw p2;
+draw z.p--z.q;
+
+dOt z.p,z.q;
+
+label.bot (btex $p$ etex, z.p);
+label.urt (btex $\gamma(t_0)$ etex, z.q);
+label.lrt (btex $\lambda_1$ etex, point .7 of p2);
+label.lrt (btex $\sigma$ etex, .5[z.p,z.q]);
+
+endfig;
 end

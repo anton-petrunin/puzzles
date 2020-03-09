@@ -1329,16 +1329,6 @@ An alternative solution of this problem can be build on the almost splitting the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Area of spheres.}
-We will use the following rough volume comparison inequality; it can be proved along the same lines as the Bishop--Gromov inequality.
-
-Let $M$ be a complete $n$-dimensional Riemannian manifold with nonnegative Ricci curvature.
-Given real numbers $0<\alpha<\beta<\gamma$, there is a constant $C=C(n,\alpha,\beta,\gamma)$ that satisfies the following condition:
-Suppose any point of a region $R\subset M$ lies on distance between $\beta$ and $\gamma$ to a fixed point $q$.
-Let $S$ be a hypersurface in $M$ that lies on the distance at least $\alpha$ from $q$ and intersects every geodesic from $q$ to $R$.
-Then  \[\area S\ge C\cdot\vol R.\]
-
-\medskip
-
 Fix $r_0>0$.
 Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
 
@@ -1348,13 +1338,13 @@ Given $r>r_0$, choose a point $q$ on the distance $2\cdot r$ from $p$.
 \includegraphics{mppics/pic-308}
 \end{wrapfigure}
 
-Note that any minimizing geodesic from $q$ to a point in $B(p,r_0)$
-has to cross $\partial B(p,r)$.
-By the volume comparison, %???spell
-we get 
-\[\vol B(p,r_0)\le C_m\cdot r_0\cdot \area \partial B(p,r),\]
-where $C_m$ is a constant depending only on the dimension $m=\dim M$
-($C_m\z=10^m$ will do).\qeds
+Note that any minimizing geodesic from $q$ to a point in $B=B(p,r_0)$
+has to cross $S=\partial B(p,r)$.
+The statement follows since  
+\[\vol B\le C_m\cdot r_0\cdot \area S,\]
+where $C_m$ is a constant depending only on the dimension $m=\dim M$.
+This volume comparison inequality can be proved along the same lines as the Bishop--Gromov inequality.
+\qeds
 
 
 Applying the coarea formula, 

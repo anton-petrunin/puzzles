@@ -18,17 +18,18 @@ Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\m
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{wrapfigure}{o}{31 mm}
-\begin{lpic}[t(0 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/tripod}
-\end{lpic}
-\end{wrapfigure}
-
 \parit{Semisolution.}
 Given $\eps>0$, construct a disk $\Delta$ in the plane with 
 \[\length\partial \Delta<10\ \ \text{and}\ \ \area \Delta<\eps\]
 that admits an continuous involution $\iota$ such that 
 \[|\iota(x)-x|\ge 1\]
 for any $x\in\partial \Delta$.
+
+\begin{wrapfigure}{o}{20 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-402}
+\end{wrapfigure}
 
 An example of $\Delta$ can be guessed from the picture;
 the invoultion $\iota$ makes a length preserving half turn of its boundary $\partial \Delta$.
@@ -41,7 +42,8 @@ $$\vol_3[\partial(\Delta\times \Delta)]=2\cdot\area \Delta\cdot\length \partial 
 The boundary $\partial(\Delta\times \Delta)$ is homeomorphic to $\mathbb{S}^3$
 and the restriction of the involution $(x,y)\z\mapsto (\iota(x),\iota(y))$ has the needed property.
 
-All we have to do now is to smooth $\partial(\Delta\times \Delta)$ a little bit. \qeds
+All we have to do now is to smooth $\partial(\Delta\times \Delta)$ a little bit.
+\qeds
 
 This example is given by Christopher Croke \cite{croke}.
 Note that according to Gromov's systolic inequality \cite{gromov-filling}, 
@@ -572,12 +574,13 @@ In each tunnel, shrink the metric long-wise and expand it  cross-wise while keep
 
 \medskip
 
-\begin{wrapfigure}{r}{29 mm}
-\begin{lpic}[t(-8 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/tunnels}
-\end{lpic}
+\begin{wrapfigure}{r}{33 mm}
+\vskip-4mm
+\centering
+\includegraphics{asy/cube}
 \end{wrapfigure}
 
-More precisely, assume $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\times [0,1]$. 
+More precisely, assume $(x,y,z)$ is the coordinate system on the cylindrical tunnel $\DD\z\times [0,1]$. 
 Then the new metric is defined by
 \[g=\phi\cdot [(dx)^2+ (dy)^2]+\tfrac1{\phi^2}\cdot (dz)^2,\]
 where $\phi=\phi(x,y)$ is a positive smooth function on $\DD$ taking huge values around the center and equal to 1 near the boundary of $\DD$.
@@ -595,12 +598,11 @@ Hence the statement follows.
 \qeds
 
 I learned this problem from Dmirti Burago.
-
 The following problem of Larry Guth \cite{guth} is closely related:
 
 \begin{pr}
 Given $\eps>0$, construct a bi-Lipschitz area-nonincreasing degree-one map 
-\[[0,9]\times[0,9]\times [0,9\cdot\eps]\to [0,\eps]\times [0,\eps]\times [0,\tfrac1\eps].\]
+\[[0,1]\times[0,1]\times [0,\eps]\to [0,\tfrac\eps7]\times [0,\tfrac\eps7]\times [0,\tfrac1{7\cdot\eps}].\]
 
 \end{pr}
 
@@ -632,19 +634,21 @@ Following $\gamma$ for some time brings us to $p$;
 that is, $p\in L$, a contradiction.
 \qeds
 
-\begin{wrapfigure}[7]{r}{25 mm}
-\begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/spiral}
-\end{lpic}
+{
+
+\begin{wrapfigure}{o}{28 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-404}
 \end{wrapfigure}
 
 The problem was suggested by Alexander Lytchak.
 
-From the picture, you should guess an example of an immersion 
+On the diagram you see an example of an immersion 
 such that one point does not lie in the image of the corresponding normal exponential map.
 It might be interesting to understand what type of subsets can be avoided by such images.
 
-
-
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Symplectic squeezing in the torus.}
 The embedding will be given as a composition of a linear symplectomorphism $\lambda$ 
@@ -719,16 +723,11 @@ Given a positive integer $n$ there is a binary tree $T_n$ embedded into the disk
 The proof of the claim can be done by induction on $n$; the base is trivial.
 Assuming we constructed $T_{n-1}$, the tree $T_n$ can be obtained by identifying three endpoints of three copies of $T_{n-1}$.
 
-\begin{center}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/trees(1)}
-\lbl[tr]{2,6.5;$T_1$}
-\lbl[tr]{12,5.5;$T_2$}
-\lbl[tr]{23.5,4.5;$T_3$}
-\lbl[tr]{38,3.5;$T_4$}
-\lbl[l]{55,9;{\Large $\cdots$}}
-\end{lpic}
-\end{center}
-
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-406}
+\end{figure}
 
 Take $\eps=\tfrac1{10}$ and fix a large integer $n$.
 Let us construct a metric on the disk $\DD$ with the embedded tree $T_n$ as in $({*})$ such that
@@ -778,14 +777,10 @@ Note that $\gamma_0$ is homotopic to the concatenation
 \[\gamma_0'=\gamma_0|_{[0,t_0]}*\sigma*\bar\sigma*\gamma|_{[t_0,1]},\]
 where $\bar\sigma$ denotes the backward parametrization of $\sigma$.
 
-
-\begin{wrapfigure}{o}{37 mm}
-\begin{lpic}[t(-0mm),b(-0 mm),r(1 mm),l(0 mm)]{pics/shortening-homotopy(1)}
-\lbl[bl]{31.5,20;$\gamma(t_0)$}
-\lbl[t]{21,0;$p$}
-\lbl[l]{27,10;$\sigma$}
-\lbl[lt]{9,17;$\lambda_1$}
-\end{lpic}
+\begin{wrapfigure}{o}{29 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-408}
 \end{wrapfigure}
 
 Applying a curve shortening process to the loop $\lambda_0=\gamma|_{[0,t_0]}*\sigma$, 
