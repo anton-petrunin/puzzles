@@ -882,4 +882,137 @@ label.lrt (btex $\lambda_1$ etex, point .7 of p2);
 label.lrt (btex $\sigma$ etex, .5[z.p,z.q]);
 
 endfig;
+
+beginfig(502)
+save u,p;
+path p[];
+u:=.5cm;
+
+z.p=origin;
+z.x=(5,0)*u;
+z.m=.6[z.p,z.x];
+z.y=z.x zscaled (0,1);
+z.x1=z.x rotated 10;
+z.x2=z.x rotated 25;
+z.x3=z.x rotated 40;
+z.x4=z.x rotated 50;
+z.x5=z.x rotated 65;
+z.x6=z.x rotated 80;
+
+p1=z.p--z.x..z.x1{-z.x1}..z.x2{z.x2}..z.x3{-z.x3}..z.x4{z.x4}..z.x5{-z.x5}..z.x6{z.x6}..z.y--cycle;
+
+draw p1;
+
+dOt z.p,z.m,z.x,z.y;
+
+label.llft (btex $\tau$ etex, point 4.5 of p1);
+label.llft (btex $p$ etex, z.p);
+label.bot (btex $x$ etex, z.x);
+label.lft (btex $y$ etex, z.y);
+label.bot (btex $m$ etex, z.m);
+
+endfig;
+
+beginfig(504)
+save u,gap,p;
+path p[];
+u:=1cm;
+gap:=.07*u;
+
+z.a=(1,0)*u;
+z.b=(0,.5)*u;
+
+p1=origin{1,-1}..z.a{1,1}..z.a+z.b{-1,1}..z.b{-1,-1}..cycle;
+
+draw subpath (0, arctime ((arclength subpath (0,1) of p1)-gap) of p1) of p1;
+draw subpath (arctime ((arclength subpath (0,1) of p1)+gap) of p1,4) of p1;
+
+draw subpath (0, arctime ((arclength subpath (0,2) of p1)-gap) of p1) of p1 shifted z.a;
+draw subpath (arctime ((arclength subpath (0,2) of p1)+gap) of p1,arctime ((arclength subpath (0,3) of p1)-gap) of p1) of p1 shifted z.a;
+draw subpath (arctime ((arclength subpath (0,3) of p1)+gap) of p1,4) of p1 shifted z.a;
+
+draw subpath (arctime gap of p1, arctime ((arclength subpath (0,1) of p1)-gap) of p1) of p1 shifted (2*z.a);
+draw subpath (arctime ((arclength subpath (0,1) of p1)+gap) of p1, arctime ((arclength subpath (0,4) of p1)-gap) of p1) of p1 shifted (2*z.a);
+
+draw subpath (0, arctime ((arclength subpath (0,2) of p1)-gap) of p1) of p1 shifted (3*z.a);
+draw subpath (arctime ((arclength subpath (0,2) of p1)+gap) of p1,arctime ((arclength subpath (0,3) of p1)-gap) of p1) of p1 shifted (3*z.a);
+draw subpath (arctime ((arclength subpath (0,3) of p1)+gap) of p1,4) of p1 shifted (3*z.a);
+
+draw subpath (arctime gap of p1, arctime ((arclength subpath (0,1) of p1)-gap) of p1) of p1 shifted (4*z.a);
+draw subpath (arctime ((arclength subpath (0,1) of p1)+gap) of p1, arctime ((arclength subpath (0,4) of p1)-gap) of p1) of p1 shifted (4*z.a);
+
+draw subpath (0, arctime ((arclength subpath (0,2) of p1)-gap) of p1) of p1 shifted (5*z.a);
+draw subpath (arctime ((arclength subpath (0,2) of p1)+gap) of p1,arctime ((arclength subpath (0,3) of p1)-gap) of p1) of p1 shifted (5*z.a);
+draw subpath (arctime ((arclength subpath (0,3) of p1)+gap) of p1,4) of p1 shifted (5*z.a);
+
+draw subpath (arctime gap of p1, arctime ((arclength subpath (0,1) of p1)-gap) of p1) of p1 shifted (6*z.a);
+draw subpath (arctime ((arclength subpath (0,1) of p1)+gap) of p1, arctime ((arclength subpath (0,4) of p1)-gap) of p1) of p1 shifted (6*z.a);
+
+draw subpath (0,arctime ((arclength subpath (0,3) of p1)-gap) of p1) of p1 shifted (7*z.a);
+draw subpath (arctime ((arclength subpath (0,3) of p1)+gap) of p1,4) of p1 shifted (7*z.a);
+
+label.bot (btex $c_0$ etex, point .5 of p1);
+label.bot (btex $c_1$ etex, z.a+point .5 of p1);
+label.bot (btex $\dots$ etex, 4*z.a+point .5 of p1);
+label.bot (btex $c_n$ etex, 7*z.a+point .5 of p1);
+endfig;
+
+beginfig(505)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a=origin;
+z.b=(1,0)*u;
+z.c=z.b rotated 60;
+z.aa=z.b+z.c;
+z.bb=z.c-z.b;
+z.cc=-z.bb;
+
+p1=z.cc..z.a..z.c..z.aa..cycle;
+p2=z.aa..z.b..z.a..z.bb..cycle;
+p3=z.bb..z.c..z.b..z.cc..cycle;
+
+p4=
+subpath (3,4) of p1
+--
+reverse(subpath (1,3) of p3)
+--
+reverse(subpath (1,2) of p1)
+--
+(subpath (2,4) of p2)
+--
+cycle;
+
+p5=subpath(3,4) of p2--subpath(0,1) of p2
+--
+reverse(subpath (0,2) of p3)
+--
+cycle;
+
+hatchfill p4  withcolor (20, 1mm, -.5bp);
+hatchfill p5  withcolor (120, 1mm, -.5bp);
+draw p1;
+draw p2;
+draw p3;
+
+endfig;
+
+beginfig(506)
+save u,p;
+path p[];
+u:=.03cm;
+
+for n=1 step 1 until 6:
+for i=2**n step 2*(2**n) until 100:
+draw (i,0)*u--(i,2*(2**n))*u;
+endfor
+endfor
+
+draw (0,0)*u--(100.5,0)*u;
+
+p1=(3.5,-1)*u--(100.5,-1)*u--(100.5,128.5)*u--(3.5,128.5)*u--cycle;
+clip currentpicture to p1;
+
+endfig;
 end

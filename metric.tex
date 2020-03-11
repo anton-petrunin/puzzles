@@ -600,14 +600,10 @@ $\dist_p^{-1}((n-1,n+1))$ for all integers $n$.
 Clearly any point in $M$ is covered by at most two of these components.
 It remains to show that each of these components has diameter less than $100$.
 
-\begin{wrapfigure}{o}{40 mm}
-\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/pxy-tau(1)}
-\lbl[t]{2,0;$p$}
-\lbl[t]{35,0;$x$}
-\lbl[t]{24,0;$m$}
-\lbl[r]{.5,35;$y$}
-\lbl{23,28;$\tau$}
-\end{lpic}
+\begin{wrapfigure}{o}{31 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-502}
 \end{wrapfigure}
 
 Assume the contrary; let $x$ and $y$ be two points in one connected component 
@@ -624,22 +620,15 @@ Hence the statement follows.\qeds
 
 The problem was discussed in a talk by Nikita Zinoviev around 2004.
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{No Lipschitz embedding.}
 Consider a chain of circles $c_0,\dots,c_n$ in $\RR^3$;
 that is, $c_i$ and $c_{i-1}$ are linked for each $i$. 
-
-
-\begin{center}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/chain(1)}
-\lbl[t]{5,0;$c_0$}
-\lbl[t]{11,0;$c_1$}
-\lbl[t]{31,0;$\cdots$}
-\lbl[t]{54,0;$c_n$}
-\end{lpic}
-\end{center}
-
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-504}
+\end{figure}
 
 Assume that $\RR^3$ is equipped with a length-metric $\rho$ such that the total length of the circles is $\ell$
 and $U$ is an open bounded set containing all the circles $c_i$.
@@ -873,23 +862,21 @@ The triangle inequality follows since
 \cup 
 [B(y,\tfrac\pi2)\backslash B(z,\tfrac\pi2)]
 \supseteq
-B(x,\tfrac \pi2) \backslash B(z,\tfrac\pi2)
+B(x,\tfrac \pi2) \backslash B(z,\tfrac\pi2).
 \leqno(*)\]
-and 
-$B(x,\tfrac \pi2)\backslash B(y,\tfrac\pi2)$
-does not overlap
-$B(y,\tfrac\pi2)\backslash B(z,\tfrac\pi2)$.
 
-
-\begin{wrapfigure}{r}{31 mm}\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/B1B2B3(1)}
-\lbl{25,7,60;$B(x,\tfrac\pi2)$}
-\lbl{6,7,-60;$B(y,\tfrac\pi2)$}
-\lbl{15,23;$B(z,\tfrac\pi2)$}
-\end{lpic}
+\begin{wrapfigure}[8]{o}{31 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-505}
 \end{wrapfigure}
 
-Note that we get equality in $(*)$ if and only if $y$ lies on the great circle arc from $x$ to $z$.
+Observe that
+$B(x,\tfrac \pi2)\backslash B(y,\tfrac\pi2)$
+does not overlap
+$B(y,\tfrac\pi2)\backslash B(z,\tfrac\pi2)$ and  we get equality in $(*)$ if and only if $y$ lies on the great circle arc from $x$ to $z$.
 Therefore the second statement follows.\qeds
+
 
 
 This construction was given by 
@@ -911,6 +898,7 @@ Note that
 =
 |\lambda|\cdot\|\bm{v}\|_{\bm{x}}\]
 for any $\bm{x},\bm{v}\in\RR^m$ and $\lambda\in\RR$.
+
 
 Denote by $|x-y|$ the Euclidean distance between the points $x$ and~$y$.
 Since $\rho$ and $|{*}-{*}|$ are bi-Lipschitz equivalent,
@@ -1061,16 +1049,10 @@ Show that any Hausdorff continuous family of compact sets in $\RR$ admits a cont
 The existence of sections for a family of sets parameterized by a topological space was considered by Ernest Michael \cite{michael-1,michael-2,michael-3}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\begin{wrapfigure}{O}{33 mm}
-\begin{lpic}[t(-2 mm),b(0 mm),r(0 mm),l(2 mm)]{pics/comb(1)}
-\end{lpic}
-\end{wrapfigure}
-
 
 \parbf{Spaces with isometric balls.} 
 The needed examples can be constructed by cutting the upper half-plane along a ``dyadic comb'' shown on the diagram;
 the obtained space should be equipped with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
-Few concentric balls in this metric are shown in the diagram.
 
 \medskip
 
@@ -1080,6 +1062,12 @@ Given an integer $k$ cut the upper half-plane along the line segment between $(k
 if $m$ is the maximal number such that 
 \[k\equiv a_0+2\cdot a_1+\dots+2^{m-1}\cdot a_{m-1}\pmod{2^{m}};\]
 If the equality holds for all $m$, cut the half-plane along the vertical half-line starting at $(k,0)$.
+
+\begin{wrapfigure}{o}{31 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-506}
+\end{wrapfigure}
 
 Note that all the obtained spaces, independently from the sequence $(a_n)$, meet the conditions of the problem for the point $x_0=(\tfrac12,0)$.
 
