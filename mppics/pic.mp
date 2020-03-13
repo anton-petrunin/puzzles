@@ -1015,4 +1015,296 @@ p1=(3.5,-1)*u--(100.5,-1)*u--(100.5,128.5)*u--(3.5,128.5)*u--cycle;
 clip currentpicture to p1;
 
 endfig;
+
+beginfig(602)
+save u,p;
+path p[];
+u:=.7cm;
+
+
+draw lemniscate_of_bernoulli((-1,0)*u, (1,0)*u);
+
+endfig;
+
+beginfig(604)
+save u,p,pi;
+path p[];
+u:=.7cm;
+pi:=3.141592;
+
+z.a=origin;
+z.b=(0,1)*u;
+z.a4=z.a+4*z.b zscaled (0,pi/2);
+z.b4=z.a4+z.b;
+z.k=z.b zscaled (0,pi/2);
+z.shift =(3,0)*u;
+
+p1=z.a..z.b..cycle;
+p5=z.a{right}..{left}z.b--z.b4{left}..{right}z.a4--cycle;
+
+draw p1 shifted z.shift;
+draw (z.a--z.b) shifted z.shift;
+
+draw p5;
+
+draw (z.a--z.b);
+draw (z.a--z.b) shifted (1*z.k);
+draw (z.a--z.b) shifted (2*z.k);
+draw (z.a--z.b) shifted (3*z.k);
+draw (z.a--z.b) shifted (4*z.k);
+
+dOt z.a,z.b+z.k,z.a+2*z.k,z.b+3z.k,z.a+4*z.k, z.a+z.shift;
+Dot z.b,z.a+z.k,z.b+2*z.k,z.a+3z.k,z.b+4*z.k, z.b+z.shift;
+
+label (btex $\longrightarrow$ etex, .5*z.b+.5*z.shift);
+endfig;
+
+beginfig(606)
+save u,p;
+path p[];
+u:=2cm;
+
+z.o=origin;
+z.a=(1,0)*u;
+z.b=z.a rotated 60;
+
+picture triangle[];
+triangle1=image( fill z.o--z.a--z.b--cycle withcolor 0);
+triangle2=image(
+draw triangle1 scaled .5;
+draw triangle1 shifted z.a scaled .5;
+draw triangle1 shifted z.b scaled .5;
+);
+triangle3=image(
+draw triangle2 scaled .5;
+draw triangle2 shifted z.a scaled .5;
+draw triangle2 shifted z.b scaled .5;
+);
+triangle4=image(
+draw triangle3 scaled .5;
+draw triangle3 shifted z.a scaled .5;
+draw triangle3 shifted z.b scaled .5;
+);
+triangle5=image(
+draw triangle4 scaled .5;
+draw triangle4 shifted z.a scaled .5;
+draw triangle4 shifted z.b scaled .5;
+);
+
+draw triangle5;
+
+endfig;
+
+beginfig(607)
+save u,p;
+path p[];
+u:=2cm;
+
+z.o=origin;
+z.a=(1,0)*u;
+z.b=z.a rotated 60;
+
+picture triangle[];
+triangle1=image( fill z.o--z.a--z.b--cycle withcolor 0);
+triangle2=image(
+draw triangle1 scaled .5;
+draw triangle1 shifted z.a scaled .5;
+draw triangle1 shifted z.b scaled .5;
+);
+triangle3=image(
+draw triangle2 scaled .5;
+draw triangle2 shifted z.a scaled .5;
+draw triangle2 shifted z.b scaled .5;
+);
+triangle4=image(
+draw triangle3 scaled .5;
+draw triangle3 shifted z.a scaled .5;
+draw triangle3 shifted z.b scaled .5;
+);
+triangle5=image(
+draw triangle4 scaled .5;
+draw triangle4 shifted z.a scaled .5;
+draw triangle4 shifted z.b scaled .5;
+);
+
+draw triangle5;
+
+z.x=.5[z.b,z.o];
+z.y=.5[z.o,z.a];
+z.z=.5[z.a,z.b];
+dOt z.x,z.y,z.z;
+
+label.ulft (btex $x$ etex, z.x);
+label.bot (btex $y$ etex, z.y);
+label.urt (btex $z$ etex, z.z);
+endfig;
+
+beginfig(610)
+save u,p;
+path p[];
+u:=.3cm;
+
+
+z.o=origin;
+z.a=(-1,0)*u;
+z.b=(0,1)*u;
+z.c=z.b rotated -60;
+z.b2=z.o rotatedabout(z.c, -120);
+z.b3=z.o rotatedabout(z.c, -180);
+z.b4=z.o rotatedabout(z.c, 120);
+z.b5=z.o rotatedabout(z.c, 60);
+
+z.shift1= (0,-7)*u+3*z.a;
+
+p1=(z.o..z.a..z.a+z.b..z.b..cycle) shifted -z.a;
+p2=z.o..z.b..z.b2..z.b3..z.b4..z.b5..cycle;
+
+draw subpath (.5,2.5) of p1;
+draw p1 shifted z.a;
+draw p1 shifted (2*z.a);
+draw p1 shifted (3*z.a);
+draw p1 shifted (4*z.a);
+draw p1 shifted (5*z.a);
+draw p1 shifted (6*z.a);
+draw subpath (0,.5) of p1 shifted (7*z.a);
+draw subpath (2.5,4) of p1 shifted (7*z.a);
+
+draw p2  shifted z.shift1;
+
+draw p1 shifted z.a shifted z.shift1;
+draw p1 shifted (2*z.a) shifted z.shift1;
+draw p1 shifted (3*z.a) shifted z.shift1;
+draw subpath (0,.5) of p1 shifted (4*z.a) shifted z.shift1;
+draw subpath (2.5,4) of p1 shifted (4*z.a) shifted z.shift1;
+
+draw p1 shifted z.a rotatedabout(z.c,120) shifted z.shift1;
+draw p1 shifted (2*z.a) rotatedabout(z.c,120) shifted z.shift1;
+draw p1 shifted (3*z.a) rotatedabout(z.c,120) shifted z.shift1;
+draw subpath (0,.5) of p1 shifted (4*z.a) rotatedabout(z.c,120) shifted z.shift1;
+draw subpath (2.5,4) of p1 shifted (4*z.a) rotatedabout(z.c,120) shifted z.shift1;
+
+draw p1 shifted z.a rotatedabout(z.c,-120) shifted z.shift1;
+draw p1 shifted (2*z.a) rotatedabout(z.c,-120) shifted z.shift1;
+draw p1 shifted (3*z.a) rotatedabout(z.c,-120) shifted z.shift1;
+draw subpath (0,.5) of p1 shifted (4*z.a) rotatedabout(z.c,-120) shifted z.shift1;
+draw subpath (2.5,4) of p1 shifted (4*z.a) rotatedabout(z.c,-120) shifted z.shift1;
+
+
+endfig;
+
+beginfig(612)
+save u,p;
+path p[];
+u:=1cm;
+
+z.x0=origin;
+z.a=(0,2)*u;
+z.b=(.6,1.2)*u;
+z.c=(2,1)*u;
+z.x1=1.3[z.a,z.c];
+z.x2=(-.3)[z.a,z.c];
+
+p0=z.x0{z.c rotated -40}..z.x1..tension 1.3..z.x2..{-z.a rotated 30}z.x0;
+p1=z.x0{z.a rotated 20}..tension 4..1.1[z.x0,z.a]..tension 4..{-z.a rotated -15}z.x0;
+p2=z.x0{z.b rotated 15}..tension 4..1.14[z.x0,z.b]..tension 4..{-z.b rotated -15}z.x0;
+p3=z.x0{z.c rotated 15}..tension 4..1.1[z.x0,z.c]..tension 4..{-z.c rotated -16}z.x0;
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+
+draw z.a--z.b--z.c--cycle dashed evenly;
+draw point 1.6 of p0 --z.a--point 2.2 of p0 dashed evenly;
+draw point .2 of p0 --z.b--point 2.7 of p0 dashed evenly;
+draw point .7 of p0 --z.c--point 1.2 of p0 dashed evenly;
+draw z.c--point 1.4 of p0 dashed evenly;
+
+dOt z.x0,z.a,z.b,z.c;
+
+label.urt (btex $\ell$ etex, point 1.5 of p0);
+label (btex the disc etex rotated angle(z.c-z.a), (.5[z.a,z.c]+(4,8)));
+label.llft (btex $x_0$ etex, z.x0);
+endfig;
+
+beginfig(614)
+save u,p,a;
+path p[];
+u:=1cm;
+a:=360/24;
+
+z.o=origin;
+z.r1=(0,1)*u;
+z.r2=(0,sqrt(2))*u;
+z.r3=(0,sqrt(3))*u;
+
+p1=z.r3 rotated (2*a-a/2)..z.r2 rotated (2*a-a/2)..z.r1..z.o..z.r1 rotated (8*a-a/2)..z.r2 rotated (8*a-a/2)..z.r3 rotated (8*a-a/2);
+p2=z.r3 rotated -(2*a-a/2)..z.r2 rotated -(2*a-a/2)..z.r1..z.o..z.r1 rotated -(8*a-a/2)..z.r2 rotated -(8*a-a/2)..z.r3 rotated -(8*a-a/2);
+p3=z.r3 rotated (a-a/2)..z.r2 rotated (2*a-a/2)..z.r3 rotated (3*a-a/2);
+p4=z.r3 rotated -(a-a/2)..z.r2 rotated -(2*a-a/2)..z.r3 rotated -(3*a-a/2);
+p5=z.r3 rotated (5*a-a/2)..z.r2 rotated (5*a-a/2)..z.r1 rotated (8*a-a/2)..z.r2 rotated (11*a-a/2)..z.r3 rotated (11*a-a/2);
+p6=z.r3 rotated -(5*a-a/2)..z.r2 rotated -(5*a-a/2)..z.r1 rotated -(8*a-a/2)..z.r2 rotated -(11*a-a/2)..z.r3 rotated -(11*a-a/2);
+p7=z.r3 rotated (4*a-a/2)..z.r2 rotated (5*a-a/2)..z.r3 rotated (6*a-a/2);
+p8=z.r3 rotated -(4*a-a/2)..z.r2 rotated -(5*a-a/2)..z.r3 rotated -(6*a-a/2);
+p9=z.r3 rotated (7*a-a/2)..z.r2 rotated (8*a-a/2)..z.r3 rotated (9*a-a/2);
+p10=z.r3 rotated -(7*a-a/2)..z.r2 rotated -(8*a-a/2)..z.r3 rotated -(9*a-a/2);
+p11=z.r3 rotated (10*a-a/2)..z.r2 rotated (11*a-a/2)..z.r3 rotated (12*a-a/2);
+p12=z.r3 rotated -(10*a-a/2)..z.r2 rotated -(11*a-a/2)..z.r3 rotated -(12*a-a/2);
+
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+draw p6;
+draw p7;
+draw p8;
+draw p9;
+draw p10;
+draw p11;
+draw p12;
+draw circle (z.o,z.r3) dashed evenly;
+
+label.bot (btex $\tilde p$ etex, z.o+(0,-1));
+label.bot (btex $\bar B(\tilde p,2\tfrac12)$ etex, -z.r3);
+
+endfig;
+
+beginfig(616)
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z.q=(0,2)*u;
+
+p0=z.p{z.q rotated 60}..z.q{right}..{-z.q rotated -60}z.p;
+
+z.p1=point (1/3) of p0;
+z.p2=point (2/3) of p0;
+z.p3=point (1) of p0;
+z.p4=point (4/3) of p0;
+z.p5=point (5/3) of p0;
+
+p1=z.p{z.q rotated 20}..z.p1;
+p2=z.p{z.q rotated 10}..z.p2;
+p3=z.p{z.q rotated 0}..z.p3;
+p4=z.p{z.q rotated -10}..z.p4;
+p5=z.p{z.q rotated -20}..z.p5;
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+
+dOt z.p,z.p1,z.p2,z.p3,z.p4,z.p5;
+
+label.bot (btex $p$ etex, z.p);
+label.lft (btex $p_1$ etex, z.p1);
+label.urt (btex $p_i$ etex, z.p4);
+label (btex $\dots$ etex rotated angle(direction (2/3) of p0), z.p2+(-2,4));
+whitelabel (btex $\gamma_i$ etex rotated angle(direction (7/6) of p0), (point (7/6) of p0)+(0,5));
+endfig;
 end

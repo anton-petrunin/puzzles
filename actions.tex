@@ -59,9 +59,10 @@ defining the length of curve $\alpha$ in $\tilde X$ as the length of the composi
 
 {
 
-\begin{wrapfigure}[3]{r}{28 mm}
-\begin{lpic}[t(-7 mm),b(-5 mm),r(0 mm),l(0 mm)]{pics/figure-eight(1)}
-\end{lpic}
+\begin{wrapfigure}{o}{23 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-602}
 \end{wrapfigure}
 
 Let us define the \index{figure eight}\emph{figure eight} as the length-metric space obtained by gluing together all four ends of two unit segments.
@@ -91,11 +92,11 @@ $$\diam\tilde X\le m\cdot \diam X.$$
 
 From the figure below you could guess an example of 5-fold covering with the diameter of the total space being exactly 5 times the diameter of the target.
 
-\begin{center}
-\begin{lpic}[t(0mm),b(0 mm),r(0 mm),l(0 mm)]{pics/5-fold(1)}
-\lbl[t]{49,4.5;$\to$}
-\end{lpic}
-\end{center}
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-604}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Symmetric square\easy}\label{Symmetric square}
@@ -112,9 +113,10 @@ has commutative fundamental group.
 
 {
 
-\begin{wrapfigure}[4]{r}{23 mm}
-\begin{lpic}[t(2 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/serpinski-triangle(1)}
-\end{lpic}
+\begin{wrapfigure}{r}{23 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-606}
 \end{wrapfigure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -294,31 +296,21 @@ For each pair $x,y\in F$ choose a chain of points $x=x_0,x_1,\dots, x_n=y$ such 
 $|x_i-x_{i-1}|_K<\eps$ for each $i$ and 
 \[|x-y|_K=|x_0-x_1|_K+\dots+|x_{n-1}-x_n|_K.\]
 Denote by $F'$ the union of all these chains with $F$.
-Consider the metric graph with $F'$ as the set of vertices
-where every pair of vertices $v$ and $w$ such that $|v-w|_K<\eps$ is connected by an edge of length $|v-w|_K$.
+Connect a pair of vertexes $v,w\in F'$ by an edge of length $|v-w|_K$ if $|v-w|_K<\eps$.
 Note that the obtained metric graph is $\eps$ close to $K$ in the Gromov--Hausdorff metric.
 
-{
-
-\begin{wrapfigure}{r}{47 mm}
-\begin{lpic}[t(-8 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/cubic-graph(1)}
-\lbl{23,10;{\large$\approx$}}
-\end{lpic}
+\begin{wrapfigure}{o}{25 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-610}
+\vskip-3mm
 \end{wrapfigure}
 
-Further, any finite metric graph is a limit of cubic\footnote{A graph is cubic if the degree of each vertex is 3.} metric graphs $\Gamma_n$ such that the length of each edge is a multiple of $\tfrac 1n$.
-A construction can be guessed from the diagram.
+Further, any finite metric graph can be approximated by a graph made from the fragments shown on the diagram
+(we have attach each pair of free ends of one fragment to a pair of ends in another fragment).
 
-}
-
-\begin{wrapfigure}{l}{27 mm}
-\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/fig8(1)}
-\end{lpic}
-\end{wrapfigure}
-
-It remains to approximate $\Gamma_n$ by finite coverings of $(\Phi,d/n)$.
-Guess this part from the picture; 
-it shows the needed covering of the figure eight for the doted cubic graph.\qeds
+It remains to observe that metric graphs obtained from these fragments are finite coverings of $(\Phi,d/n)$.
+\qeds
 
 
 The same idea works if instead of the figure eight, we have any compact length-metric space $X$ that admits a map $X\to\Phi$ inducing an epimorphism of fundamental groups.
@@ -394,25 +386,26 @@ The problem was suggested by Rostislav Matveyev.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{wrapfigure}[6]{r}{23 mm}
-\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/serpinski-triangle-xyz(1)}
-\lbl[br]{5.5,11;$x$}
-\lbl[t]{11,-0.2;$y$}
-\lbl[bl]{17.5,11;$z$}
-\end{lpic}
-\end{wrapfigure}
-
 \parbf{Sierpi\'nski gasket.}
-Denote the Sierpi\'nski gasket by $\triangle$.
+Denote the Sierpi\'nski gasket by~$\triangle$.
 
 Let us show that any homeomorphism of $\triangle$ is also an isometry.
 Therefore its homeomorphism group is the symmetric group $S_3$. 
 
+{
+
+\begin{wrapfigure}{r}{23 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-607}
+\end{wrapfigure}
 Let $\{x,y,z\}$ be a 3-point set in $\triangle$ such that $\triangle \backslash\{x,y,z\}$ has 3 connected components.
 Note that there is unique choice for the set $\{x,y,z\}$ and 
 it is formed by the midpoints of the long sides.
 
 It follows that any homeomorphism of $\triangle$ permutes the set $\{x,y,z\}$.
+
+}
 
 Applying a similar argument recursively to the smaller triangles,
 we get that this permutation  uniquely describes the homeomorphism.
@@ -465,12 +458,10 @@ it is not known if $G$ and $G\times \ZZ_2$ can fail to be bi-Lipschitz.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{wrapfigure}{O}{41 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/loop(1)}
-\lbl[t]{10,-1;$x_0$}
-\lbl[lb]{35,35;$\ell$}
-\lbl{18,33,-16;{\textit{the disk}}}
-\end{lpic}
+\begin{wrapfigure}{r}{35 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-612}
 \end{wrapfigure}
 
 \parbf{Piecewise Euclidean quotient.}
@@ -505,11 +496,11 @@ a complete classification of such actions is given in \cite{lange}.
 \parbf{Subgroups of a free group.}
 The proof exploits the fact that free groups are fundamental groups of graphs.
 
-\begin{wrapfigure}{o}{18 mm}
-\begin{lpic}[t(-4 mm),b(2 mm),r(0 mm),l(0 mm)]{pics/ball-in-group(1)}
-\lbl[t]{8.5,7;$\tilde p$}
-\lbl[t]{8.5,-2;{\small $\bar B(\tilde p,2+\tfrac12)$}}
-\end{lpic}
+
+\begin{wrapfigure}{o}{38 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-614}
 \end{wrapfigure}
 
 \medskip
@@ -563,15 +554,10 @@ the some element $w$.
 \parbf{Short generators.}
 Choose a length minimizing loop $\gamma$ that represents a given element $a\in\pi_1M$.
 
-\begin{wrapfigure}{r}{24 mm}
-\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/loop-arcs(1)}
-\lbl[r]{-.5,9;$p$}
-\lbl[tr]{7,3;$p_1$}
-\lbl[t]{15,-.3;$\dots$}
-\lbl[b]{17,15;$p_i$}
-\lbl[w]{11.3,10.4,15;$\,\sigma_i$}
-\lbl[w]{20.1,11.1,-49;$\,\gamma_i$}
-\end{lpic}
+\begin{wrapfigure}{o}{20 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-616}
 \end{wrapfigure}
 
 Choose $\eps>0$.
@@ -581,6 +567,7 @@ as a concatenation of paths
 such that
 \[\length\gamma_i<\eps\] 
 for each $i$.
+
  
 Denote by $p=p_0,p_1,\dots, p_n=p$ the endpoints of these arcs.
 Connect $p$ with $p_i$ by a minimizing geodesic $\sigma_i$.
