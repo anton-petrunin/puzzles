@@ -7,7 +7,6 @@
 %
 
 
-
 marksize:=4pt;
 angle_radius:=8pt;
 angle_radius2:=9pt;
@@ -34,6 +33,11 @@ def penextrabold = withpen pencircle scaled 1.6 enddef;
 pen leftpen,rightpen;
 leftpen = makepen((-1,0)--(0,0)--cycle);
 rightpen = makepen((0,0)--(1,0)--cycle);
+
+%Штрихпунктир
+def linedot =  dashpattern(on 3 off 2 on .5 off 2) enddef;
+def lpdashed =  dashed dashpattern(on 3 off 2 on 1 off 2) enddef;
+
 
 %=========================================================================
 %
@@ -87,8 +91,6 @@ def dOOt text t =
 for $=t: draw $ withpen pencircle scaled (1.3dotlabeldiam+1);
 								 draw $ withpen pencircle scaled 1.3dotlabeldiam withcolor .6white; endfor;
 enddef;
-
-
 								 
 %% Квадратик
 def Dotsq text t = 
@@ -123,6 +125,29 @@ def Bigdot text t =
 for$=t: draw $ withpen pencircle scaled 2dotlabeldiam; endfor;
 enddef;
 
+% Точка отрезочком
+vardef kisDot(expr a, b) =
+	save s; pair s;
+	2s=unitvector((b-a) rotated 90)*marksize;
+	draw (a+s)--(a-s);
+enddef;
+
+% Точка отрезочком
+vardef kisDotAng(expr a, b, c) =
+	save s; pair s;
+	2s=unitvector((b-a) rotated c)*marksize;
+	draw (a+s)--(a-s);
+enddef;
+
+% Точка отрезочком
+vardef kisDotAngSize(expr a, b, c, d) =
+	save s; pair s;
+	2s=unitvector((b-a) rotated c)*d;
+	draw (a+s)--(a-s);
+enddef;
+
+
+
 % Рисовать много путей
 def Draw text t = 
 for$=t: draw $; endfor
@@ -138,7 +163,8 @@ def mark_rt_angle (expr a,b,c) =
 	pair m,n;
 	r:=angle_radius*2/3;
 	m=unitvector(a-b); n=unitvector(c-b);
-	draw (m--(m+n)--n) scaled r shifted b
+	fill ((m--(m+n)--n--(0,0)--cycle) scaled r shifted b) withcolor white;
+	draw (m--(m+n)--n) scaled r shifted b;
 enddef;
 
 % Квадратик, помечающий прямой угол с заданным размером
@@ -202,6 +228,7 @@ if known __mult@#: n:=__mult@# else: n:=1 fi;
 	p = unitvector(a-b)..unitvector(bisector(a,b,c)-b)..unitvector(c-b);
 	s = rad;
 	if s < 1: s:=angle_radius; fi
+	filldraw b--(p scaled (s+((n-1)/2)*(angle_radius2-angle_radius)*2+l) shifted b)--cycle withcolor white;
 				 for i=-(n-1)/2 upto (n-1)/2:
 					draw p scaled (s+i*(angle_radius2-angle_radius)*2+l) shifted b;
 				 endfor
@@ -794,7 +821,7 @@ __parc1; else: __parc2; fi
 enddef;
 
 %25.07.98 Вялый: общий макрос для пересечений введенных кривых
-vardef cross@#(expr C,  S) =
+vardef cross@#(expr C, S) =
 clearparc;
 	 save u, l,ll,lll, c, s;
 	 pair u,v;
@@ -1771,4 +1798,62 @@ t60;
 expandafter p scaled (abs(a-b)) rotated (angle(b-a)) shifted (a)
 enddef;
 
+vardef rimmarkS(expr a, b) =
+	save s; pair s;
+	2s=unitvector(b-a);
+	draw (.5[a,b]+ s zscaled (6,-3))..(.5[a,b]+ s zscaled (3,3))..(.5[a,b]+ s zscaled (-3,-3))..(.5[a,b]+ s zscaled (-6,3));
+enddef;
 
+vardef smallarc(expr a, b) =
+	draw arc(b rotatedaround(a,10),b,b rotatedaround(a,-10));
+enddef;
+
+
+% отметка стрелкой
+vardef arrowmark(expr a, b, c, d) =
+	save s, k; pair s; numeric k;
+	2s=unitvector((b-a) rotated 90)*d;
+if (abs(a-b)>abs((llcorner c)-(lrcorner c))+10): k=.6*abs((llcorner c)-(lrcorner c)); else: k=.5*abs(a-b)+5;
+fi;
+	drawarrow (.5[a,b]+k*unitvector(b-a)+s)--(b+s);
+	drawarrow (.5[a,b]-k*unitvector(b-a)+s)--(a+s);
+	kisDot(a+s,b+s);
+	kisDot(b+s,a+s);
+	label(c rotated angle(b-a),.5[a+s,b+s]+2*unitvector(d*s));
+enddef;
+
+% значки для параллельных прямых
+vardef parallel_mark@#(expr p) =
+	save m,dm,n; pair dm[]; numeric n;
+	if known __rmult@#: n:=__rmult@# else: n:=1 fi;
+	m = .5 arclength p;
+ 
+	if (n=0):
+		fill (fullcircle scaled marksize shifted (point (arctime m of p) of p)) withcolor white;
+		draw (fullcircle scaled marksize shifted (point (arctime m of p) of p));
+	elseif (n<=4):
+			dm1=(marksize*unitvector direction (arctime (m+0.4marksize) of p) of p) rotated 90;
+			for i=-(n-1)/2 upto (n-1)/2:
+			draw (-.5dm1--.5dm1 rotated -90--.5dm1) shifted point (arctime (m+0.4marksize*i) of p) of p;
+			endfor
+	
+
+	elseif (n=5):
+		dm1=marksize*unitvector direction arctime m of p of p;
+		dm2=dm1 rotated 90;
+		draw (.5dm2-.35dm1--(-.55dm2)--.5dm2+.35dm1) shifted point (arctime m of p) of p;
+	
+	elseif (n=6):
+		dm1:=marksize*unitvector direction (arctime m+0.4marksize of p) of p rotated 90;
+		draw (-.5dm1.. .5dm1) shifted point (arctime m+0.4marksize of p) of p;
+		dm1:=marksize*unitvector direction (arctime m-0.35marksize of p) of p;
+		dm2=dm1 rotated 90;
+		draw (.5dm2-.35dm1--(-.55dm2)--.5dm2+.35dm1) shifted point (arctime m-0.35marksize of p) of p;
+	
+	elseif (n=10):
+		dm1=marksize*unitvector direction arctime m of p of p;
+		dm2=dm1 rotated 90;
+		draw (.5dm2+.35dm1--(-.5dm2)-.35dm1) shifted point (arctime m of p) of p;
+		draw (.5dm2-.35dm1--(-.5dm2)+.35dm1) shifted point (arctime m of p) of p;
+	fi;
+enddef;

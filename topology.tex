@@ -29,20 +29,15 @@ denote these maps by $f\:\RR^m\z\to \RR^m$ and $g\:\RR^m\z\to \RR^m$ correspondi
 
 {
 
-\begin{wrapfigure}[]{r}{57 mm}
-\begin{lpic}[t(-3 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/klee-trick(1)}
-\lbl[t]{53,2;$\RR^m$}
-\lbl[l]{26,30;$\RR^m$}
-\lbl[t]{10,2;$K_1$}
-\lbl[t]{43,2;$K_2$}
-\lbl[l]{11,12;$h_1$}
-\lbl[b]{18.5,22;$h_2$}
-\lbl[lb]{37,17;$h_3$}
-\end{lpic}
+\begin{wrapfigure}{o}{65 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-702}
 \end{wrapfigure}
 
-Consider the homeomorphisms
-$h_1, h_2, h_3\:\RR^m\times\RR^m\z\to\RR^m\times\RR^m$ defined in the following way:
+Consider homeomorphisms
+$h_1$, $h_2$, and $h_3$ of $\RR^m\times\RR^m$
+defined in the following way:
 \begin{align*}
 h_1(x,y)&=(x,y+f(x)),
 \\
@@ -56,8 +51,7 @@ h_3(x,y)&=(y,-x).
 It remains to observe that each homeomorphism $h_i$ is isotopic to the identity map and
 \[K_2=h_3\circ h_2\circ h_1(K_1).\qedsin\]
 
-
-This construction is called \emph{Klee's trick}; it is due to Victor Klee \cite{klee}.
+This construction is due to Victor Klee \cite{klee} and it is called \emph{Klee's trick}.
 This trick is used in the five-line proof of the Jordan separation theorem by Patrick Doyle \cite{doyle};
 a proof of the separation theorem for embeddings $\mathbb{S}^n\hookrightarrow\mathbb{S}^{n+1}$
 can be given using the same idea \cite{cohen}. 
@@ -79,13 +73,11 @@ into the plane that coincide near the boundary.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Positive Dehn twist}\label{Positive Dehn twist} 
 
-\begin{wrapfigure}{r}{48 mm}
-\begin{lpic}[t(-10 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/dehn-twist(1)}
-\lbl[b]{24,15;$h$}
-\lbl{24,14;$\longrightarrow$}
-\end{lpic}
+\begin{wrapfigure}{r}{43 mm}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{asy/dehn-twist()}
+\lbl[b]{20,10;$\xrightarrow{\ h\ }$}
+\end{lpic} 
 \end{wrapfigure}
-
 
 Let $\Sigma$ be a surface and 
 \[\gamma\:\RR/\ZZ\z\to\Sigma\] 
@@ -199,9 +191,12 @@ Show that any path with distinct ends in a surface is homotopic (relative to the
 
 {
 
-\begin{wrapfigure}{r}{46 mm}
-\begin{lpic}[t(-3 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/milnors-discs()}
-\end{lpic}
+\begin{wrapfigure}{o}{30 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-704}
+\bigskip
+\includegraphics{mppics/pic-706}
 \end{wrapfigure}
 
 \section*{Semisolutions}
@@ -216,7 +211,7 @@ Show that any path with distinct ends in a surface is homotopic (relative to the
 \parbf{Immersed disks.}
 Both circles on the picture bound essentially different disks.
 
-}
+
 
 \medskip
 
@@ -225,16 +220,19 @@ gluing these disks along the dashed lines gives the first immersion.
 The reflection of this immersion across the vertical line of symmetry gives another immersion which is essentially different.
 \qeds
 
+}
 
-
-{
-\begin{wrapfigure}{r}{19 mm}
-\begin{lpic}[t(-3 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/annuli()}
-\end{lpic}
-\end{wrapfigure}
 
 It is a good exercise to count the essentially different disks in the second example. 
 (The answer is 5.) 
+
+{
+
+\begin{wrapfigure}{o}{30 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-708}
+\end{wrapfigure}
 
 The existence of examples of that type is generally attributed to John Milnor \cite{bennequin}.
 
@@ -246,18 +244,9 @@ An easier problem would be to construct two essentially different immersions of 
 \parbf{Positive Dehn twist.}
 Consider the universal covering 
 $f\:\tilde\Sigma\z\to\Sigma$.
-The surface $\tilde \Sigma$ comes with the orientation induced from $\Sigma$.
+The surface $\tilde \Sigma$ has boundary and it comes with the orientation induced from $\Sigma$.
 
-%\begin{center}
-\begin{wrapfigure}{r}{47 mm}
-\begin{lpic}[t(-3 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn()}
-\lbl[t]{13,1.5;$x_0$}
-\lbl[bl]{23,20;$y$}
-\lbl[br]{4,17;$z$}
-\lbl[]{33,5;$\tilde \Sigma$}
-\end{lpic} 
-\end{wrapfigure}
-%\end{center}
+
 
 Choose a point $x_0$ on the boundary $\partial \tilde \Sigma$.
 Given two other points $y$ and $z$ in $\partial \tilde \Sigma$ we will write
@@ -266,10 +255,20 @@ Note that  $\succ $ defines a linear order on $\partial\tilde\Sigma\backslash\{x
 We will write $z \succeq y$ 
 if $z\succ y$ or $z=y$.
 
+{
+
+\begin{wrapfigure}{r}{27 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-710}
+\end{wrapfigure}
+
 Note that any homeomorphism $h\:\Sigma\to\Sigma$ identical on the boundary
 lifts to the unique homeomorphism $\tilde h\:\tilde \Sigma\to\tilde\Sigma$ 
-such that $\tilde h(x_0)=x_0$.
-The following claim is the key step in the proof. 
+such that $\tilde h(x_0)\z=x_0$.
+The following claim is the key step in the proof:
+
+}
 
 \begin{cl}{$({*})$} 
 If $h$ is a positive Dehn twist along a closed curve $\gamma$,
@@ -277,11 +276,9 @@ then $y\succeq \tilde h(y)$ for any $y\in\partial\tilde\Sigma\backslash\{x_0\}$
 and $y_0\succ\tilde h(y_0)$ for some $y_0\in\partial\tilde\Sigma\backslash\{x_0\}$.
 \end{cl}
 
-
-
-Note that the property in $({*})$ is a homotopy invariant 
+Note that the problem follows from~$({*})$.
+Indeed, the property in $({*})$ is a homotopy invariant 
 and it survives under compositions of maps.
-Therefore the problem follows from~$({*})$.
 
 \medskip
 
@@ -301,18 +298,11 @@ and if the geodesic $[x_0x]$ crosses $f^{-1}(U_\gamma)$ then
 \[\phi(x)> \phi\circ\tilde h(x).\]
 In particular, if $x$ lies on the boundary then $\tilde h(x)$ lies on the right of the geodesic $[x_0x]$; hence the claim $({*})$ follows. 
 
-\begin{center}
-\begin{lpic}[t(1 mm),b(1 mm),r(0 mm),l(0 mm)]{pics/dehn-annulus(1)}
-\lbl[t]{58.5,.5;$x_0$}
-\lbl[rb]{8,21;$x$}
-\lbl[rb]{41,21;$\tilde h(x)$}
-\lbl[]{17,6;$\tilde \Sigma$}
-\lbl[]{7,14;$f^{-1}(U_\gamma)$}
-\lbl[b]{75,15;$f^{-1}(\gamma)$}
-\lbl[b]{60.3,6.3,-12;{\small $\phi(x)$}}
-\end{lpic} 
-\end{center}
-
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-712}
+\end{figure}
 
 If $\Sigma$ is an annulus, then the same argument works except we have to choose a flat metric on $\Sigma$.
 In this case $\tilde \Sigma$ is a strip between two parallel lines in the plane, see the diagram.
@@ -322,7 +312,7 @@ The problem was suggested by Rostislav Matveyev.
 It is instructive to solve the following problem.
 
 \begin{pr}
-Construct a composition of positive Dehn twists on a compact oriented surface without boundary which is homotopic to the identity. 
+Construct a composition of positive Dehn twists on a compact oriented surface without boundary that is homotopic to the identity. 
 \end{pr}
 
 
@@ -362,10 +352,11 @@ The problem is due to Kyung Whan Kwun \cite{kwun}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Unknots.}
 
-\begin{center}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/knot(1)}
-\end{lpic}
-\end{center}
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-714}
+\end{figure}
 
 Observe that it is possible to draw an arbitrary tight knot 
 while keeping it smoothly embedded at all times including the last moment.\qeds
@@ -376,24 +367,19 @@ This problem was suggested by Greg Kuperberg.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{wrapfigure}[6]{r}{50 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-716}
+\end{wrapfigure}
 
 \parbf{Stabilization.}
 The example can be guessed from the diagram.
-
-\medskip
 
 The two sets $K_1$ and $K_2$ are subspaces of the plane, 
 each one being a closed annulus with two attached line segments.
 In $K_1$ one segment is attached from inside and the other from outside and 
 in $K_2$ both segments are attached from outside.
-
-{
-\begin{wrapfigure}{o}{39 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/K1K2(1)}
-\lbl[]{3,9;{\small\color{white} $K_1$}}
-\lbl[]{23,9;{\small\color{white} $K_2$}}
-\end{lpic}
-\end{wrapfigure}
 
 The product spaces $K_1\times[0,1]$ and $K_2\times[0,1]$ are solid tori with attached rectangles.
 A homeomorphism $K_1\times[0,1]\z\to K_2\times[0,1]$ can be constructed by twisting a part of one solid torus.
@@ -404,16 +390,15 @@ and $W_i$ is the boundary of the annulus without points where the segments are a
 Note that $V_i\cup W_i=\partial K_i$;
 in particular, a homeomorphism $K_1\to K_2$ (if it exists) sends $\partial K_1$ to $\partial K_2$.
 
-}
-
 Finally note that each $\partial K_i$ has two connected components and 
 $V_1$ intersects both components of $\partial K_1$
 while $V_2$ lies in one component of $\partial K_2$.
 Hence $K_1\ncong K_2$.
 \qeds
 
+It should a very old puzzle;
+I learned it from Maria Goluzina around 1988.
 
-I learned this problem from Maria Goluzina around 1988.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Homeomorphism of a cube.}
@@ -428,20 +413,16 @@ that is,
 \[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
 
-\begin{wrapfigure}[12]{o}{47 mm}
-\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/Phi(1)}
-\end{lpic}
-\end{wrapfigure}
-
-Choose a smooth increasing concave function $\phi\:\RR ^{ +} \to\RR$ such that
+Choose a smooth increasing function $\phi\:\RR ^{ +} \to\RR$ such that
 \[\phi(r)\z=r\] 
 for any $r\le 1$ and 
 \[\sup\{\phi(r)\}=2.\]
 
 Equip $\RR^m$ with polar coordinates $(u,r)$, 
-where $u\in\mathbb{S}^{m-1}$ and $r\ge 0$.
-Consider the open embedding $\Phi\:\RR^m\hookrightarrow\RR^m$
-defined by $\Phi(u,r)=(u,\phi(r))$.
+where $u\in\mathbb{S}^{m-1}$, $r\z\ge 0$.
+Consider a homeomorphism $\Phi$ from $\RR^m$ to an open ball of radius $2$
+defined by 
+\[\Phi(u,r)\z=(u,\phi(r)).\]
 
 Set 
 \[
@@ -464,8 +445,8 @@ instead of homeomorphism one could take any embedding close to the identity.
 An interesting twist to this idea was given by Dennis Sullivan \cite{sullivan}.
 Instead of the discrete group of motions of the Euclidean space,
 he uses a discrete group of motions of the hyperbolic space in the conformal disk model.
-
-To see the idea, note that the construction of $\tilde h$ can be done for a Coxeter polytope in the hyperbolic space instead of a cube.
+To see the idea, note that the construction of $\tilde h$ can be done for a Coxeter polytope in the hyperbolic space instead of a cube.%
+\footnote{By Vinberg's theorem \cite{vinberg, vinberg-strong} hyperbolic space of large dimension has no Coxeter polytopes, but the idea works anyway after some modifications.}
 Then the constructed map $\tilde h$
 coincides with the identity on the absolute and therefore the last ``shrinking'' step in the proof above is not needed.
 Moreover, 
@@ -588,16 +569,11 @@ and Stefan Wenger \cite[see 7.13 in][]{lytchak-wenger}.
 Denote the surface by $\Sigma$, assume that the path runs from $p$ to $q$.
 The following picture suggests an idea for an induction proof on the number of self-crossings.
 
-\begin{center}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/simplification-of-path(1)}
-\lbl[t]{9,17;$p$}
-\lbl[t]{47,17;$p$}
-\lbl[t]{86,17;$p$}
-\lbl[tr]{15.5,2.5;$q$}
-\lbl[tr]{52.5,2.5;$q$}
-\lbl[tr]{91,2.5;$q$}
-\end{lpic}
-\end{center}
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-718}
+\end{figure}
 
 To do the proof formally,
 let us present the path as a concatenation $\alpha*\beta$ of two paths  such that $\alpha$ is simple
@@ -627,6 +603,5 @@ Since $\beta_1$ is a constant path, $\alpha*\beta$ is homotopic to $\alpha_1$.
 Hence the statement follows.
 \qeds
 
-
 This is a stripped version of the problem suggested by Jaros{\l}aw K\k{e}dra \cite{One-step}; 
-it was used by Michael Khanevsky \cite[see Lemma 3 in][]{khanevsky}.
+it was used by Michael Khanevsky \cite[Lemma 3 in][]{khanevsky}.
