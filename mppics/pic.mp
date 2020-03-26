@@ -1670,8 +1670,220 @@ Dot point 0  of p2 shifted (z.shift), point length p2 -.1  of p2 shifted (z.shif
 draw subpath(0,length p3 -.1) of p3 shifted (2*z.shift);
 Dot point 0  of p3 shifted (2*z.shift), point length p3 -.1  of p3 shifted (2*z.shift);
 
+endfig;
 
+beginfig(802)
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.b=(.5,1)*u;
+z.a=(1,-1)*u;
+z.v=(-.3,0)*u;
+z.w= z.v reflectedabout(z.a,z.b);
+
+z.a1=(-.2,-1.1)*u;
+z.a2=(-1,-.2)*u;
+z.a3=(-.8,1)*u;
+
+z.b1=(1.9,1.2)*u;
+z.b2=(2.2,0)*u;
+
+z.x=.7[z.v,.4[z.b,z.a]];
+
+p0=z.a--z.b--z.v--cycle;
+
+hatchfill p0  withcolor (-50, 1mm, -.5bp);
+labelarcsprof(z.b, z.v, z.x, 18, 5, btex $\theta$ etex);
+
+draw p0;
+draw z.a--z.w--z.b;
+draw z.a--z.a1--z.a2--z.a3--z.b;
+draw z.b--z.b1--z.b2--z.a;
+
+draw z.v--z.a1 dashed evenly;
+draw z.v--z.a2 dashed evenly;
+draw z.v--z.a3 dashed evenly;
+
+draw z.w--z.b1 dashed evenly;
+draw z.w--z.b2 dashed evenly;
+
+draw z.v--z.x;
+
+rimmark(z.v--z.a,z.w--z.a);
+rimmark2(z.v--z.b,z.w--z.b);
+
+dOt z.v,z.w,z.a,z.b,z.x;
+
+
+label.bot (btex $a$ etex, z.a);
+label.top (btex $b$ etex, z.b);
+whitelabel.rt (btex $x$ etex, z.x);
+whitelabel (btex $\triangle$ etex, .6[.5[z.v,z.b],z.a]);
+whitelabel.ulft (btex $v$ etex, z.v);
+whitelabel.rt (btex $w$ etex, z.w);
+whitelabel (btex $V_v$ etex, .5[z.v,z.a1]+(-1,0));
+whitelabel (btex $V_w$ etex, z.w+(3,-20));
+endfig;
+
+beginfig(804)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a1=origin;
+
+z.e0=(.8,1)*u;
+z.e1=(-1.2,2)*u;
+z.e2=(-1.3,.5)*u;
+z.e3=(-2,-.5)*u;
+z.e4=(-.7,-.5)*u;
+z.e5=(.5,-1)*u;
+z.e6=(1.5,-.3)*u;
+z.e7=(1,.4)*u;
+z.e8=(2,1.5)*u;
+
+p0=z.e0--z.e1--z.e2--z.e3--z.e4--z.e5--z.e6--z.e7--z.e8--cycle;
+p1=z.e0--z.a1--z.e1--cycle;
+p2=(.8*z.e1..tension 2..(.8)*z.e3..tension 2..z.e5..tension 2..z.e6..tension 2..(.8)*z.e8..tension 2..cycle) scaled 1.4;
+
+%hatchfill p1  withcolor (-50, 1mm, -.5bp);
+hatchfill p0--reverse(p2)--cycle  withcolor (40, 1mm, -.5bp);
+draw p0;
+draw z.e0--z.a1--z.e1 dashed evenly;
+
+dOt z.a1;
+
+label.bot (btex $a_1$ etex, z.a1);
+label (btex $\Omega$ etex, (1/3)[.5[z.e2,z.e3],z.a1]);
+label (btex $T_i$ etex, (.3)[.4[z.e0,z.e1],z.a1]);
+whitelabel (btex $E_i$ etex rotated angle(z.e0-z.e1), .5[z.e0,z.e1]+12*(unitvector(z.e0-z.e1) rotated 90));
+endfig;
+
+beginfig(806)
+save u,p;
+path p[];
+u:=.8cm;
+
+z.shift=(2.5,0)*u;
+
+z.p=(-.1,0)*u;
+z.q=(1,-.7)*u;
+z.v=(.1,-.8)*u;
+z.w=(.6,.4)*u;
+z.q1=(.4,-1.4)*u;
+z.q2=(-.4,-1.1)*u;
+z.q3=(-.7,.2)*u;
+z.q4=(.1,.7)*u;
+z.q5=(-.2,1.1)*u;
+z.q6=(1.2,.7)*u;
+
+p0=z.q--z.q1--z.q2--z.q3--z.q4--z.q5--z.q6--cycle;
+p1=z.q1--z.v--z.q2--z.p--z.q3--z.q5;
+p2=z.p--z.q4--z.q6--z.w--z.p--z.v--z.q--z.w--z.q4;
+
+draw p0;
+draw p1;
+draw p2;
+draw z.v--z.w penbold;
+
+draw p0 shifted z.shift;
+draw p1 shifted z.shift;
+draw p2 shifted z.shift;
+draw (z.p--z.q) shifted z.shift penbold;
+
+dOt z.p,z.q,z.v,z.w,z.q1,z.q2,z.q3,z.q4,z.q5,z.q6,
+z.p+z.shift,z.q+z.shift,z.v+z.shift,z.w+z.shift,z.q1+z.shift,z.q2+z.shift,z.q3+z.shift,z.q4+z.shift,z.q5+z.shift,z.q6+z.shift;
+
+label.lrt (btex $q$ etex, z.q);
+label.llft (btex $p$ etex, z.p+(-1,1));
+label.bot (btex $v$ etex, z.v+(-2,-1));
+label.rt (btex $w$ etex, z.w+(0,-2));
+
+label.lrt (btex $q$ etex, z.q+z.shift);
+label.llft (btex $p$ etex, z.p+(-1,1)+z.shift);
+label.bot (btex $v$ etex, z.v+(-2,-1)+z.shift);
+label.rt (btex $w$ etex, z.w+(0,-2)+z.shift);
+endfig;
+
+beginfig(808)
+save u,p;
+path p[];
+u:=.7cm;
+
+z.z=(0,.7)*u;
+z.x=z.z rotated 120;
+z.y=z.z rotated -120;
+
+z.zscale=(2.8,-.1);
+
+z.zz=z.z zscaled z.zscale;
+z.yy=z.y zscaled z.zscale;
+z.xx=z.x zscaled z.zscale;
+
+draw z.x--z.y--z.z--cycle;
+draw z.xx--z.yy--z.zz--cycle;
+draw z.x--z.xx--z.y--z.yy--z.z--z.zz--cycle;
+
+dOt z.x,z.y,z.z,z.xx,z.yy,z.zz;
+
+label.urt (btex $z$ etex, z.z);
+label.top (btex $z'$ etex, z.zz);
+label.ulft (btex $x$ etex, z.x);
+label.lft (btex $x'$ etex, z.xx);
+label.bot (btex $y$ etex, z.y);
+label.rt (btex $y'$ etex, z.yy);
+endfig;
+
+beginfig(810)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a=(2,0)*u;
+z.b=(.5,1.5)*u;
+
+p0=origin--z.a--z.a+z.b--z.b--cycle;
+
+arcs(z.a,origin,z.b,10);
+arcs(z.a,z.a+z.b,z.b,10);
+arcs2(origin,z.a,z.a+z.b,10);
+arcs2(origin,z.b,z.a+z.b,10);
+rimmark(origin--z.a,z.b--z.a+z.b);
+rimmark2(origin--z.b,z.a--z.a+z.b);
+
+z5=.4*z.a+.2*z.b;
+z7=.7*z.a+.7*z.b;
+
+draw p0;
+draw z5{(z7-z5) rotated 30}..{(z7-z5) rotated -30}z7;
+draw z5{(z7-z5) rotated -30}..{(z7-z5) rotated 30}z7;
+
+dOt z5,z7;
+
+label.lft (btex $z_5$ etex, z5);
+label.rt (btex $z_7$ etex, z7);
 
 endfig;
 
+beginfig(812)
+save u,p;
+path p[];
+u:=1cm;
+
+z0=origin;
+z1=(1,0)*u;
+z2=z1+(z1 rotated 75);
+z3=z2+(z1 rotated 105);
+z4=z3-z1;
+z5=z1 rotated 105;
+
+draw z0--z1--z2--z3--z4--z5--cycle;
+parallel_mark(z0--z1);
+parallel_mark(z4--z3);
+parallel_mark2(z1--z2);
+parallel_mark2(z0--z5);
+parallel_mark3(z2--z3);
+parallel_mark3(z5--z4);
+endfig;
 end

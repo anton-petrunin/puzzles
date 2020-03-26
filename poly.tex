@@ -226,20 +226,10 @@ Let us triangulate $P$ so that each triangle has one of those edges as the base
 and the opposite vertex is the center of an adjacent Voronoi domain; 
 such a vertex will be called the {}\emph{main} vertex of the triangle.
 
-
-\begin{wrapfigure}[8]{o}{43 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/zalgaller(1)}
-\lbl[tl]{12.5,13.5;$v$}
-\lbl[tr]{36.5,24;$w$}
-\lbl[l]{33.5,2;$a$}
-\lbl[b]{21,34;$b$}
-\lbl[tl]{22,17;$x$}
-\lbl{26,11;$\triangle$}
-\lbl[w]{11,8;$V_v$}
-\lbl[w]{36,30;$V_w$}
-\lbl[tl]{17,17;$\rho$}
-\lbl[bl]{17,19;{\small $\theta$}}
-\end{lpic}
+\begin{wrapfigure}[7]{o}{47 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-802}
 \end{wrapfigure}
 
 Choose a solid triangle $\triangle=[vab]$ in the constructed triangulation; 
@@ -257,7 +247,6 @@ Note that for each triangle $\triangle$,
 the constructed map $\triangle\to\RR^2$ is piecewise distance preserving.
 It remains to check that these maps agree on the common sides of the triangles.
 \qeds
-
 
 This construction was given by Victor Zalgaller \cite{zalgaller-polyhedra}.
 Svetlana Krat generalized the statement to higher dimensions \cite{krat}.
@@ -302,20 +291,17 @@ $|a_1-y|+|y-x|=|a_1-x|$ and since $f$ is length-preserving we get $|f(x)-f(y)|\l
 By the triangle inequality, 
 $|a_1-y|<|b_1-f(y)|$; that is, $y\in\Omega$. 
 
-
-
-\begin{wrapfigure}{r}{40 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/star(1)}
-\lbl{11,11;$\Omega$}
-\lbl[t]{21,9.5;$a_1$}
-\lbl[bl]{17,26.3,-36;$E_i$}
-\lbl{20,19;$T_i$}
-\end{lpic}
+\begin{wrapfigure}{o}{47 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-804}
 \end{wrapfigure}
 
 The boundary $\partial\Omega$ can be subdivided into a finite collection of line segments $\{E_i\}$
 so that $f$ maps rigidly each $E_i$.
-Note that $|f(x)\z-b_1|=|x-a_1|$ for any $x\in E_i$.
+Note that 
+\[|f(x)\z-b_1|=|x-a_1|\]
+for any $x\in E_i$.
 Denote by $T_i$ the triangle with the base $E_i$ and the vertex $a_1$.
 From the above there is a rigid motion $m_i$ of $T_i$ such that $m_i(x)\z=f(x)$ for any $x\in E_i$ and $m_i(a_1)=b_1$.
 Let us redefine the map $f$ in $\Omega$ by sending $x$ to $m_i(x)$ for any $x\in T_i$.
@@ -327,24 +313,29 @@ Therefore we have produced a new piecewise isometric map $f'\:\RR^2\to \RR^2$ sa
 The same proof works in all dimensions.
 
 The statement was proved by Ulrich Brehm 
-and rediscovered by Arseniy Akopyan and Alexey Tarasov [see \ncite{brehm}, \ncite{akopyan-tarasov}, and also the section 2 in \ncite{petrunin-yashinsky}].
+and rediscovered by Arseniy Akopyan and Alexey Tarasov [see \ncite{brehm}, \ncite{akopyan-tarasov}, and Section 2 in \ncite{petrunin-yashinsky}].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{wrapfigure}{o}{37 mm}
-\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/octahedron-with-holes(1)}
-\end{lpic}
-\end{wrapfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \parbf{Closed polyhedral surface.}
 An example can be constructed by drilling a polyhedral cave in your favorite convex polyhedron.
 On the diagram you see the result of this construction for the octahedron.
 
+{
+
+\begin{wrapfigure}{r}{43 mm}
+\vskip-4mm
+\centering
+\includegraphics{asy/kedra}
+\bigskip
+\includegraphics{asy/kedra-torus}
+\end{wrapfigure}
+
 \medskip
 
 Choose a convex polyhedron $K$.
 We can assume that the interior of $K$ contains the origin $0\in\RR^3$.
-Remove from $K$ the interior of $K'=\tfrac56\cdot K$.
+Remove from $K$ the interior of $K'=\tfrac45\cdot K$.
 
 Note that one can drill from each vertex of $K$ a polyhedral tunnel to the corresponding vertex of $K'$
 so that the surface $\Sigma$ of the obtained non-convex polytope is a solution.
@@ -352,22 +343,15 @@ so that the surface $\Sigma$ of the obtained non-convex polytope is a solution.
 
 The problem suggested by Jaros{\l}aw K\k{e}dra.
 
-The construction above produces a surface of genus at least 3.
-One can also construct a polyhedral surface in $\RR^3$
-which is isometric to a flat torus.
-The existence of such torus follows from a general result of Yuri Burago and Victor Zalgaller \cite{burago-zalgaller:pl}.
+The given construction above produces a surface of genus at least 3.
+Another example shown on the diagram is isometric to a flat torus.
+It is a bent version of the so called \index{Schwarz boot}\emph{Schwarz boot} \cite{schwarz1890definition}.
+It is made by joining few identical cylinders, each made from six triangles.
+
+}
+
+The existence of such torus also follows from a general result of Yuri Burago and Victor Zalgaller \cite{burago-zalgaller:pl}.
 They show in particular that any 1-Lipschitz smooth embedding of the flat torus in $\RR^3$ can be approximated by a piecewise distance preserving embedding.
-
-\begin{wrapfigure}[4]{r}{20 mm}
-\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/cylinder(1)}
-\end{lpic}
-\end{wrapfigure}
-
-The following construction is more direct;
-it is a bent version of the so called \index{Schwarz boot}\emph{Schwarz boot} \cite{schwarz1890definition}.
-Construct an isometric piecewise linear embedding of a cylinder $\mathbb{S}^1\times [0,a]$ from six triangles like in the diagram in such a way
-that the planes through the boundary triangles meet at an angle of $\tfrac\pi n$ for a positive integer $n$.
-After that reflect the obtained surface several times with respect to the planes through the boundary triangles.
 
 The following related problem was proposed by Brian Bowditch;
 a solution can be built with the construction of Joel Hass \cite{hass}.
@@ -385,36 +369,29 @@ that is, there is an interior vertex $v$ of $\Sigma$ such that all the edges fro
 
 Note that we can move $v$ in such a way that the lengths of all its edges decrease.
 
+\begin{wrapfigure}{r}{43 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-806}
+\end{wrapfigure}
+
 Since the area is minimal,  this deformation does not decrease the area. 
 Taking the derivative of the total area along this deformation implies that $\Sigma$
 contains two adjacent non-coplanar triangles $[pvw]$ and $[qvw]$ such that
 \[\measuredangle \hinge pvw+\measuredangle \hinge qvw> \pi.\]
-
-\begin{center}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/flip(1)}
-\lbl[t]{15,8.2;$v$}
-\lbl[r]{20.2,26.8;$w$}
-\lbl[rb]{13,21;$p$}
-\lbl[tl]{29,11;$q$}
-\lbl[t]{52.5,8.2;$v$}
-\lbl[r]{57.7,26.8;$w$}
-\lbl[rb]{50.5,21;$p$}
-\lbl[tl]{66.5,11;$q$}
-\end{lpic}
-\end{center}
-
-{
-
-\begin{wrapfigure}[8]{r}{21 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/tent(1)}
-\end{lpic}
-\end{wrapfigure}
-
 In this case replacing the triangles $[pvw]$ and $[qvw]$
 by the triangles $[vpq]$ and $[wpq]$
 leads to a polyhedral surface with smaller area.
 That is, $\Sigma$ is not area minimizing, a contradiction.
 \qeds
+
+{
+
+\begin{wrapfigure}{r}{43 mm}
+\vskip-8mm
+\centering
+\includegraphics{asy/tent}
+\end{wrapfigure}
 
 For a general polyhedral surface, a deformation decreasing the lengths of all edges may not decrease the area.
 Moreover, the surface that minimizes the area among all surfaces with a fixed  triangulation might not be saddle;
@@ -433,20 +410,15 @@ $[yx']$, $[zy']$, $[xz']$.
 
 \medskip
 
-\begin{wrapfigure}{r}{32 mm}
-\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{pics/Convex-triangulation(1)}
-\lbl[br]{10,8;$x$}
-\lbl[t]{21,6.5;$y$}
-\lbl[l]{16.5,17.5;$z$}
-\lbl[br]{2,4;$x'$}
-\lbl[bl]{30,4;$y'$}
-\lbl[l]{17,27;$z'$}
-\end{lpic}
-\end{wrapfigure}
-
 Assume this triangulation is coherent;
 let $f$ be the corresponding piecewise linear convex function.
 Without loss of generality we can assume that $f$ vanishes on the boundary of the big triangle.
+
+\begin{wrapfigure}{r}{33 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-808}
+\end{wrapfigure}
 
 From the convexity of $f$ at the edges $[x'y]$,  $[y'z]$ and $[z'x]$, we get 
 \[f(x)>f(y)>f(z)>f(x),\]
@@ -458,8 +430,6 @@ Israel Gelfand,
 Mikhail Kapranov 
 and Andrei Zelevinsky  \cite[see 7C in][]{GKZ}.
 The given example is closely related to the so called \index{Sch\"onhardt polyhedron}\emph{Sch\"onhardt polyhedron}, an example of a non-convex polyhedron which does not admit a triangulation \cite{schoenhardt}.
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sphere with one edge.} 
@@ -509,9 +479,10 @@ The solution of the problem gives the polyhedral metric on $\CP^2$ with nonnegat
 It is not known whether the canonical metric on $\CP^2$ can be approximated by such polyhedral metrics or not.
 
 
-\begin{wrapfigure}{r}{20 mm}
-\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/thurston(1)}
-\end{lpic}
+\begin{wrapfigure}{r}{23 mm}
+\vskip-4mm
+\centering
+\includegraphics{asy/thurston-cube}
 \end{wrapfigure}
 
 I do not know if such knots exist in Euclidean polyhedral spaces, but there are links.
@@ -519,6 +490,8 @@ For example, the Borromean rings can appear as the singular set of a Euclidean p
 It can be obtained by gluing each face of a cube to itself
 along the reflections with respect to the middle lines shown on the picture. 
 This construction is due to William Thurston \cite{thurston}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Triangulation of a torus.}
@@ -531,15 +504,15 @@ Let us equip the torus with the flat metric such that each triangle is equilater
 The metric will have two singular cone points $z_5$ and $z_7$.
 The total angle around $z_5$ is $\tfrac53\cdot\pi$
 and the total angle around $z_7$ is $\tfrac73\cdot\pi$.
-Note the following:
+Note that
 
 \begin{cl}{$({*})$}
-The holonomy group of the obtained polyhedral metric on the torus is generated by the rotation by $\tfrac\pi3$.
+the holonomy group of the obtained polyhedral metric on the torus is generated by the rotation by $\tfrac\pi3$.
 \end{cl}
 
 Indeed, since parallel translation along any loop preserves the directions of the sides of any triangle;
 it can only permute it cyclically, which corresponds to rotations by multiple of $\tfrac\pi3$. 
-On the other hand, the holonomy of the loop which surrounds $z_5$ is a rotation by $\tfrac\pi3$.
+On the other hand, the holonomy of the loop that surrounds $z_5$ is a rotation by $\tfrac\pi3$.
 
 Consider a closed geodesic $\gamma_1$ minimizing the length among all not null-homotopic circles.
 Let $\gamma_2$ be another closed geodesic that minimize the length and is not homotopic to any power of $\gamma_1$.
@@ -555,14 +528,13 @@ Assume that $\gamma_i$ passes through $z_7$.
 Then by $({*})$, one of the two angles cut by $\gamma_i$ at $z_7$ is $\pi$.
 It follows that one can push $\gamma_i$ aside so that it does not longer pass through $z_7$, but remains to be a closed geodesic with the same length.
 
-\begin{wrapfigure}[5]{r}{30 mm}
-\begin{lpic}[t(-7 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/57-parallelogram(1)}
-\lbl[br]{9.5,6;$z_5$}
-\lbl[b]{20,13.5;$z_7$}
-\end{lpic}
+\begin{wrapfigure}{r}{33 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-810}
 \end{wrapfigure}
 
-Cut $\TT^2$ along $\gamma_1$ and $\gamma_2$.
+Cut the torus along $\gamma_1$ and $\gamma_2$.
 In the obtained quadrilateral, connect $z_5$ to $z_7$ by a minimizing geodesic and cut along it.
 This way we obtain an annulus $\Omega$ with flat metric.
 
@@ -570,7 +542,7 @@ Note that a neighborhood of the first boundary component is a parallelogram --- 
 In particular $\Omega$ admits an isometric immersion into the plane.
 
 The second boundary component has to be mapped to a diangle with straight sides and angles $\tfrac\pi3$.
-Such diangle does not exist in the plane, a contradiction.
+Such diangle does not exist in the plane --- a contradiction.
 \qeds
 
 The problem was originally discovered and solved by {\fontencoding{T1}\selectfont Stanislav Jendro\v{l}}
@@ -585,8 +557,9 @@ Boris Springborn
 and John Sullivan \cite{izmestiev-rote-springborn-kusner}.
 
 \begin{wrapfigure}{r}{20 mm}
-\begin{lpic}[t(-4 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/57-triangulation(1)}
-\end{lpic}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-812}
 \end{wrapfigure}
 
 There are flat metrics on the torus with 
