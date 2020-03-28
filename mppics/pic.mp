@@ -1886,4 +1886,150 @@ parallel_mark2(z0--z5);
 parallel_mark3(z2--z3);
 parallel_mark3(z5--z4);
 endfig;
+
+beginfig(902)
+save u,p;
+path p[];
+u:=.4cm;
+
+z.W0=origin;
+z.r=(1,0)*u;
+p0=circle(z.W0,z.r);
+z.W1=2*z.r;
+z.W2=2*z.r rotated 60;
+z.W3=2*z.r rotated 120;
+z.W4=2*z.r rotated 180;
+z.W5=2*z.r rotated -120;
+z.W6=2*z.r rotated -60;
+
+hatchfill p0  withcolor (20, 1mm, -.5bp);
+draw p0;
+draw p0 shifted z.W1;
+draw p0 shifted z.W2;
+draw p0 shifted z.W3;
+draw p0 shifted z.W4;
+draw p0 shifted z.W5;
+draw p0 shifted z.W6;
+
+whitelabel (btex $W_0$ etex, z.W0);
+label (btex $W_1$ etex, z.W1);
+label (btex $W_2$ etex, z.W2);
+label (btex $W_3$ etex, z.W3);
+label (btex $W_4$ etex, z.W4);
+label (btex $W_5$ etex, z.W5);
+label (btex $W_6$ etex, z.W6);
+
+endfig;
+
+beginfig(903)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a=(0,0)*u;
+z.da=(1,.5);
+z.b=(2,0)*u;
+z.db=(1,-1)*u;
+z.c=(1,-1)*u;
+z.x=z.a+whatever*z.da=z.b+whatever*z.db;
+
+z0=.3[.5[z.a,z.b],z.c];
+
+p0=z.a{z.da}..z.b{z.db}..z.c..cycle;
+
+arcs(z.a,z.x,z.b,8);
+arcs(z.a,z.x,z.b reflectedabout(z.a,z.x),6);
+arcs(z.a reflectedabout(z.b,z.x),z.x,z.b,6);
+
+hatchfill p0  withcolor (20, 1mm, -.5bp);
+draw p0;
+draw p0 reflectedabout(z.a,z.a+z.da);
+draw p0 reflectedabout(z.b,z.b+z.db);
+
+draw ddline(z.x,z.a)(0,.5);
+draw ddline(z.x,z.b)(0,1);
+draw (ddline(z.x,z.a)(0,.5)) reflectedabout(z.b,z.b+z.db) dashed evenly;
+draw (ddline(z.x,z.b)(0,1)) reflectedabout (z.a,z.a+z.da) dashed evenly;
+
+whitelabel (btex $W_0$ etex, z0);
+label (btex $W_i$ etex, z0 reflectedabout(z.b,z.b+z.db));
+label (btex $W_j$ etex, z0 reflectedabout(z.a,z.a+z.da));
+label.bot (btex $\Pi_i$ etex, 2[z.x,z.b]);
+label.bot (btex $\Pi_j$ etex, 1.5[z.x,z.a]);
+endfig;
+
+beginfig(905)
+save u,p;
+path p[];
+u:=.7cm;
+
+z0=(1,0)*u;
+z1=z0 rotated (1*360/5);
+z2=z0 rotated (2*360/5);
+z3=z0 rotated (3*360/5);
+z4=z0 rotated (4*360/5);
+
+
+
+p0=z0--z1--z2--z3--z4--cycle;
+p1=p0 reflectedabout(z4,z0);
+p2=p0 reflectedabout(z0,z1)  reflectedabout(z4,z0);
+p3=p0 reflectedabout(z1,z2) reflectedabout(z0,z1)  reflectedabout(z4,z0);
+p4=p0 reflectedabout(z3,z4) reflectedabout(z1,z2) reflectedabout(z0,z1)  reflectedabout(z4,z0);
+p5=p0 reflectedabout(z1,z2) reflectedabout(z3,z4) reflectedabout(z1,z2) reflectedabout(z0,z1)  reflectedabout(z4,z0);
+p6=p0 reflectedabout(z4,z0) reflectedabout(z1,z2) reflectedabout(z3,z4) reflectedabout(z1,z2) reflectedabout(z0,z1)  reflectedabout(z4,z0);
+
+x.a=angle(point 2 of p6 - point 3 of p0);
+
+draw p0 rotated -x.a;
+draw p1 rotated -x.a;
+draw p2 rotated -x.a;
+draw p3 rotated -x.a;
+draw p4 rotated -x.a;
+draw p5 rotated -x.a;
+draw p6 rotated -x.a;
+draw (point 3 of p0 -- point 2 of p6) rotated -x.a;
+
+rimmark(subpath (2,3) of p0 rotated -x.a, subpath (2,3) of p6 rotated -x.a);
+rimmark2(subpath (0,1) of p0 rotated -x.a, subpath (4,5) of p2 rotated -x.a);
+rimmark3(subpath (1,2) of p1 rotated -x.a, subpath (0,1) of p3 rotated -x.a);
+
+dOt point 3 of p0 rotated -x.a, point 2 of p1 rotated -x.a, point 3 of p2 rotated -x.a, point 0 of p3 rotated -x.a, point 1 of p4 rotated -x.a, point 2 of p6 rotated -x.a;
+
+endfig;
+
+beginfig(907)
+save u,p;
+path p[];
+u:=1cm;
+
+z.xi=(0,0)*u;
+z.xj=(2,0)*u;
+z.z=(1.2,.6)*u;
+z.zi=2[z.xi,z.z];
+z.zj=2[z.xj,z.z];
+
+z.x2=(3.2,1.5)*u;
+z.x3=(1.7,2.3)*u;
+z.x4=(-.2,1.6)*u;
+
+p0=z.xi--z.xj--z.x2--z.x3--z.x4--cycle;
+
+hatchfill p0  withcolor (20, 1mm, -.5bp);
+draw p0;
+
+draw z.xi--z.zi--z.xj--z.zj--cycle;
+
+whiterimmark(z.xi--z.z,z.z--z.zi);
+whiterimmark2(z.xj--z.z,z.z--z.zj);
+
+dOt z.xi,z.xj,z.z ,z.zi,z.zj;
+
+label.bot (btex $x_i$ etex, z.xi);
+label.bot (btex $x_j$ etex, z.xj);
+whitelabel.top (btex $z$ etex, z.z+(1,0));
+whitelabel.top (btex $z_i$ etex, z.zi+(1,0));
+whitelabel.top (btex $z_j$ etex, z.zj+(2,0));
+whitelabel.top (btex $K$ etex, .5[z.zi,z.zj]+(0,.2)*u);
+endfig;
 end

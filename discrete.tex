@@ -84,16 +84,11 @@ such that
 {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}[7]{r}{27 mm}
-\begin{lpic}[t(-0 mm),b(-4 mm),r(0 mm),l(0 mm)]{pics/kiss(1)}
-\lbl[]{12.5,11;{\color{white} $W_0$}}
-\lbl[]{8.5,18;$W_1$}
-\lbl[]{16.5,18;$W_2$}
-\lbl[]{20.5,11;$W_3$}
-\lbl[]{16.5,4;$W_4$}
-\lbl[]{8.5,4;$W_5$}
-\lbl[]{4.5,11;$W_6$}
-\end{lpic}
+
+\begin{wrapfigure}{r}{27 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-902}
 \end{wrapfigure}
 
 \subsection*{Kissing number\easy}\label{pr:Kissing number}
@@ -119,6 +114,9 @@ where $B$ denotes the unit ball in $\RR^m$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Monotonic homotopy}
 \label{mono-homotopy}
+
+
+
 
 \begin{pr}
 Let $F$ be a finite set and $h_0,h_1\: F\to\RR^m$ be two maps.
@@ -406,14 +404,10 @@ Let $B_1,\dots, B_n$ be copies of the ball $B$ that touch $B$ and don't have com
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
 Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
 
-\begin{wrapfigure}{o}{42 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/kiss-sol(1)}
-\lbl[]{21,5;{\color{white} $W$}}
-\lbl[t]{28,19;$W_j$}
-\lbl[t]{10,19;$W_i$}
-\lbl[t]{40,3;$\Pi_j$}
-\lbl[tl]{3,1;$\Pi_i$}
-\end{lpic}
+\begin{wrapfigure}{r}{43 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-903}
 \end{wrapfigure}
 
 For each $i$,
@@ -434,7 +428,6 @@ Eugene Levin
 and Ernst Straus 
 \cite{halberg-levin-straus}.
 It is not known if the same inequality holds for the orientation-preserving version of the kissing number.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -528,12 +521,13 @@ Show the same for the surface of $n$-dimensional cube, $n\ge 4$.
 
 For the dodecahedron such loop exists;
 its development is shown on the diagram.
-The vertices of a cube inscribed in the dodecahedron are circled.
+Vertices of an inscribed tetrahedron are circled.
 
-\begin{center}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/geodesic-loop(1)}
-\end{lpic}
-\end{center}
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-905}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right and acute triangles.}
@@ -552,15 +546,10 @@ Set $K_i=h_i(K)$.
 
 {
 
-\begin{wrapfigure}[10]{r}{31 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/acute-triangles(1)}
-\lbl[t]{2,-1;$x_i$}
-\lbl[t]{20,-1;$x_j$}
-\lbl[b]{13,9;$z$}
-\lbl[t]{25,17;$z_i$}
-\lbl[t]{7.4,17;$z_j$}
-\lbl[b]{15,17;$K$}
-\end{lpic}
+\begin{wrapfigure}{o}{35 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-907}
 \end{wrapfigure}
 
 Let us show that $K_i$ and $K_j$ have no common interior points.
@@ -589,6 +578,7 @@ it follows that
 \end{align*}
 Hence the result follows.
 \qeds
+
 
 The problem was posted by Paul Erd{\H{o}}s \cite{erdos}
 and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-guenbaum}.
