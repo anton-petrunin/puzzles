@@ -883,6 +883,35 @@ label.lrt (btex $\sigma$ etex, .5[z.p,z.q]);
 
 endfig;
 
+beginfig(501)
+save u;
+u:=1cm;
+
+z.www=(1,-3)*u;
+z.q=(-1,-3)*u;
+save p,q;
+path p[];
+path q[];
+
+p[1]=circle((1/1,0)*u,u/1);
+q[1]=circle((-1/1,0)*u,u/1);
+draw p[1] yscaled .5;
+draw q[1] yscaled .5;
+draw ((support.lft(p[1],z.www)--z.www--support.rt(p[1],z.www))) yscaled .5;
+draw ((support.rt(q[1],z.q)--z.q--support.lft(q[1],z.q))) yscaled .5;
+
+for i=2 step 1 until 100:
+p[i]=circle((1/i,0)*u,u/i);
+q[i]=circle((-1/i,0)*u,u/i);
+draw p[i] yscaled .5;
+draw q[i] yscaled .5;
+draw ((z.www--support(p[i],z.www)) cutbefore p[i-1]) yscaled .5;
+draw ((z.q--support.lft(q[i],z.q)) cutbefore q[i-1]) yscaled .5;
+endfor
+
+endfig;
+
+
 beginfig(502)
 save u,p;
 path p[];
