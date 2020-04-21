@@ -332,15 +332,16 @@ Suppose that $p,q\in\gamma_1$, then
 That is, the minimal distance from $\gamma_1$ to $\gamma_1'$ is at least~$\tfrac12$.
 The same way we get that the minimal distance from $\gamma_2$ to $\gamma_2'$ is at least~$\tfrac12$.
 By Besicovitch inequality, we get that 
-\[\area(D,g)> \tfrac14\quad\text{and}\quad \area(D',g)> \tfrac14.\]
+\[\area(D,g)\ge \tfrac14\quad\text{and}\quad \area(D',g)\ge \tfrac14.\]
 Therefore 
-\[\area(\mathbb{S}^2,g)>\tfrac12.\]
+\[\area(\mathbb{S}^2,g)\ge\tfrac12.\]
 \qedsf
 
 This inequality was proved by Marcel Berger \cite{berger}. 
 Christopher Croke conjectured that the optimal bound is $\tfrac4\pi$ and the round sphere is the only space that achieves this \cite[see Conjecture 0.3 in][]{croke}.
 
-Let us indicate how to improve the obtained bound from $\tfrac12$ to $1$.
+Let us indicate how to improve the obtained bound to
+\[\area(\mathbb{S}^2,g)\ge1.\]
 
 Suppose $x$, $x'$, $\gamma$ and $\gamma'$ are as above.
 Consider the function
@@ -431,20 +432,20 @@ without zeros defines a symplectic structure.
 \medskip
 
 Note that there is a self-dual harmonic 2-form on $(\mathbb{S}^2\times\mathbb{S}^2,g)$;
-that is, a 2-form $\omega$ such that $d\omega=0$ and $\star\omega=\omega$,
-where $\star$ is the Hodge star operator.
+that is, a 2-form $\omega$ such that $d\omega=0$ and $\mathop{\star}\omega=\omega$,
+where $\mathop{\star}$ is the Hodge star operator.
 Indeed, take a generic harmonic form $\phi$.
-Note that the form $\star\phi$ is also harmonic.
-Since $\star(\star\phi)=\phi$,
-the form $\omega=\phi+\star\phi$ does the job.
+Note that the form $\mathop{\star}\phi$ is also harmonic.
+Since $\mathop{\star}(\mathop{\star}\phi)=\phi$,
+the form $\omega=\phi+\mathop{\star}\phi$ does the job.
 
 Choose $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 We can use $g_p$ to identify the tangent space $\T_p$ and the cotangent space $\T^*_p$.
 There is a $g_p$-orthonormal basis $e_1, e_2, e_3, e_4$ on $\T_p$ such that 
 \[\omega_p=\lambda_p\cdot e_1\wedge e_2+\lambda'_p\cdot  e_3\wedge e_4.\]
 Note that 
-\[\star\omega_p=\lambda'_p\cdot e_1\wedge e_2+\lambda_p\cdot  e_3\wedge e_4.\]
-Since $\star\omega_p=\omega_p$, we have $\lambda_p=\lambda'_p$.
+\[\mathop{\star}\omega_p=\lambda'_p\cdot e_1\wedge e_2+\lambda_p\cdot  e_3\wedge e_4.\]
+Since $\mathop{\star}\omega_p=\omega_p$, we have $\lambda_p=\lambda'_p$.
 
 Consider the rotation $\mathrm{J}_p\:\T_p\to\T_p$ defined by 
 \[ 

@@ -1739,8 +1739,8 @@ draw z.w--z.b2 dashed evenly;
 
 draw z.v--z.x;
 
-rimmark(z.v--z.a,z.w--z.a);
-rimmark2(z.v--z.b,z.w--z.b);
+whiterimmark(z.v--z.a,z.w--z.a);
+whiterimmark2(z.v--z.b,z.w--z.b);
 
 dOt z.v,z.w,z.a,z.b,z.x;
 
