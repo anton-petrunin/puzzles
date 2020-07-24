@@ -235,6 +235,16 @@ with finite 1-dimensional Hausdorff measure.
 Show that there is a rectifiable curve passing through all the points in $X$.
 \end{pr}
 
+\subsection*{Shortcut\hard}
+
+\begin{pr}
+Let $X\subset \RR^2$ be a compact connected set. 
+Show that any two points $x,y\in X$ can be connected by a path $\alpha$ such that the complement $\alpha\backslash X$ has arbitrary small length.
+\end{pr}
+
+Note that it might be impossible to connect $x$ and $y$ by a path in~$X$.
+In fact there are connected set in the plane (for examle pseudoarc) that contain no curves.
+
 \subsection*{Straight set}
 
 A set $X$ in the plane is called $\delta$-straight if for any disc $\DD(x,r)$ with radius $r>0$ and center at a point $x\in X$, the intersection 
@@ -570,6 +580,27 @@ Therefore it drifts the knot to a single hemisphere and allows the ball to escap
 
 This is a problem by Zarathustra Brady, 
 the given solution is based on the idea of David Eppstein \cite{zeb}.
+A solution of the following problem is based on the same idea.
+
+\begin{pr}
+Show that a sphere cannot be captured in a link with 3 components, but can be captured in a link with 4 components.
+\end{pr}
+
+It seems unknown which convex bodies can be captured by a knot.
+The following problem is quite tricky already.
+
+\begin{pr}
+Show that one can capture some convex bodies in a link.
+\end{pr}
+
+The following problem of Abram Besicovitch is closely related \cite{besicovitch-sphere}; it can be solved using spherical Crofton's formula.
+
+\begin{pr}
+Show the total length of strings in a net that can hold a unit sphere has to be larger than $3\cdot\pi$.
+\end{pr}
+
+
+
 
 
 
@@ -731,6 +762,61 @@ Samuel Eilenberg
 and Orville Harrold 
 \cite{eilenberg-harrold};
 it also appears in the book of Kenneth Falconer \cite[see Exercise 3.5 in][]{falconer}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\parbf{Shortcut.} 
+Choose $\eps>0$.
+Let us construct a set $X'\subset X$ 
+ and a collection of paths $\alpha_0,\dots,\alpha_n$ such that 
+\begin{enumerate}[(i)]
+\item the total length of $\alpha_i\backslash X$ is at most $\eps$,
+\item the set $X'$ is a union of a finite collection of closed connected sets $X_0,\dots,X_n$,
+\item diameter of each $X_i$ is at most $\eps$,
+\item $x\in\alpha_0$, $y\in\alpha_n$, and
+\item the union $X'\cup \alpha_0\cup\dots\cup\alpha_n$ is connected
+\end{enumerate}
+
+Imagine that the construction is given.
+Let us show that the statement can be proved by applying this construction recursively for a sequence of $\eps_n$ that converges to zero very fast.
+
+Indeed we can apply the construction to each of the subsets $X_n$ and take as $X''$ the union of all closed subsets provided by the construction.
+This way we obtain a nested sequence of closed sets $X\supset X'\supset X''\supset\dots$ which break into a finite union of closed connected subsets of arbitrary small diameter and a countable collection of arcs with total length at most $\eps_1+\eps_2+\dots$ 
+outside of $X$.
+Consider the Cantor set 
+\[Y= X\cap  X'\cap X''\cap\dots\]
+Note that there is a simple curve from $x$ to $y$ that runs in the constructed arcs and $Y$.
+The the total length of the constructed curves outside of $X$ can not exceed 
+\[\eps_1+\eps_2+\dots;\]
+hence the result.
+
+It remains to do the construction.
+
+Let us cover $X$ by a grid of $\tfrac\eps2$-squares $Q_1,\dots,Q_k$.
+Denote by $\Delta$ the union of all the sides of the squares.
+
+By the regularity of length, we may cover $\Delta\cap X$ by a finite collection of arcs with total length arbitrary close to the length of $\Delta\cap X$.
+Denote these arcs by $\alpha_0,\dots,\alpha_n$.
+Without loss of generality we may assume that $x\in\alpha_0$ and $y\in\alpha_n$.
+
+Consider a finite graph with vertexes labeled by $\alpha_0,\dots,\alpha_n$;
+two vertexes $\alpha_i$ and $\alpha_j$ are connected by an edge if there is a connected set $\Theta\subset  X\cap Q_k$ 
+for some $k$ such that $\Theta$ intersects $\alpha_i$ and $\alpha_j$.
+Note that the graph is connected. Therefore we may choose a path from $\alpha_0$ to $\alpha_n$ in the graph.
+
+The path corresponds to a sequence of arcs $\alpha_i$ and a sequence of $\Theta$-sets.
+The $\Theta$-sets that correspond to the edges in the path can be taken as $ X_i$ in the construction.
+\qeds
+
+This solution was found by Taras Banakh \cite{banakh};
+it was used by Stephan Stadler and the author \cite{petrunin-stadler:revisited}.
+The proof works only in dimension two and we are not aware of a generalization to higher dimensions. 
+Namely the following question is open:
+
+\begin{pr}
+Let $x,y$ be two points in a compact connected subset $X\subset \RR^3$. 
+Is it always possible to connected $x$ and $y$ by a path $\alpha$ such that the complement $\alpha\backslash X$ has arbitrary small length?
+\end{pr}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

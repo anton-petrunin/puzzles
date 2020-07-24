@@ -382,9 +382,9 @@ isometric to the ball $B(y_0,R)_Y$.
 \subsection*{Average distance\easy}
 
 \begin{pr}
-Show that for any compact length-metric space $X$ there is unique number $\ell=\ell(X)$ such that for any finite collection of points there is a point $z$ that lies of average distance $\ell$ from the collection;
-that is, for any $x_1,\dots,x_n\in X$ there is $z\in X$ such that
-\[\tfrac1n\cdot\sum_i|x_i-z|_X=\ell.\]
+Show that for any compact length-metric space $X$ there is a number $\ell$ such that for any finite collection of points there is a point $z$ that lies of average distance $\ell$ from the collection;
+that is, for any $x_1,\dots,x_n\z\in X$ there is $z\in X$ such that
+\[\tfrac1n\cdot\sum_i|x_i-z|_{X}=\ell.\]
 
 \end{pr}
 
@@ -1097,9 +1097,6 @@ two random sequences of zeros and ones will do the job with probability one.\qed
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Average distance.}
-The uniqueness follows since a constant function can be approximated by average of distance functions to a finite set of points.
-Let us show the existence.
-
 If such number does not exist then the ranges of average distance functions have empty intersection.
 Since $X$ is a compact length-metric space, the range of any continuous function on $X$ is a closed interval.
 By 1-dimesional Helly's theorem, there is a pair of such range intervals that do not intersect.
@@ -1114,4 +1111,6 @@ that is, the average value of $f(y_j)$ coincides with the average value of $h(x_
 which contradicts $({*})$.
 \qeds
 
-This is a result of Oliver Gross \cite{gross}; the value $\ell(X)$ is called the \emph{rendezvous value} of $X$.
+This is a result of Oliver Gross \cite{gross}. 
+The value $\ell$ is called the \emph{rendezvous value} of $X$;
+in fact it is uniquely defined.
