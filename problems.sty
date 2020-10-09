@@ -3,7 +3,7 @@
 \usepackage{bm}%makes better bold fornt in math
 \usepackage{color}
 \usepackage{pifont,manfnt}
-\usepackage[top=0.9in, bottom=0.9in,left=0.9in, right=0.9in, paperwidth=6in, paperheight=9in]{geometry}
+\usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{epsfig,lpic,wrapfig}
 \usepackage{ushort}
@@ -14,13 +14,10 @@
 
 \hyphenation{Kirsz-braun para-met-rized}
 
-\usepackage[russian,
-slovak,
-german,
-english]{babel}
 \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
+
 
 \usepackage[
 sorting=none,
@@ -39,6 +36,11 @@ isbn=false]{biblatex}
 \renewbibmacro{in:}{}
 \renewcommand*{\bibfont}{\scriptsize}
 \addbibresource{library.bib}
+
+\usepackage[russian,
+slovak,
+german,
+english]{babel}
 
 
 %LIST STILES
