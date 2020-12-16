@@ -68,8 +68,8 @@ it was constructed in \cite{kuratowski}.
 Essentially the same map 
 was described by Maurice Fr\'echet \cite[][this is the paper where metric spaces were introduced]{frechet}.
 
-The problem also follows directly from a theorem of John Isbell, stating that \emph{injective envelope} of compact metric space is compact;
-injective envelope is an analog of convex hull in the category of metric spaces
+The problem also follows directly from a theorem of John Isbell, stating that \emph{injective envelopes} of compact metric spaces are compact;
+the injective envelope is an analog of convex hull in the category of metric spaces
 \cite[see 2.11 in][]{isbell}.
 
 The following related problem is open even for three-point sets.
@@ -397,7 +397,7 @@ that is, for any $x_1,\dots,x_n\z\in X$ there is $z\in X$ such that
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Non-contracting map.}
-Given any pair of point $x_0,y_0\in K$, 
+Given any pair of points $x_0,y_0\in K$, 
 consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
 such that $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
 
@@ -472,7 +472,7 @@ In particular, the intersection is nonempty.
 
 {\sloppy
 According to Tikhonov's theorem \cite[see][and the references therein]{wright}, $Y^X$ is compact.
-By the finite intersection propery, the intersection $\bigcap_F\mathfrak{C}_F$ with $F$ ranging along all finite subsets of $X$ is nonempty.
+By the finite intersection property, the intersection $\bigcap_F\mathfrak{C}_F$ with $F$ ranging along all finite subsets of $X$ is nonempty.
 It remains to note that any map $h\in \bigcap_F\mathfrak{C}_F$ solves the problem.
 \qeds
 
@@ -552,7 +552,7 @@ This statement was proved by Steven Ferry and Boris Okun \cite{ferry-okun}.
 \includegraphics{mppics/pic-501}
 \end{wrapfigure}
 
-(A a doubled cone over Hawaiian earring gives an example of \emph{unreasonable} space. 
+(A doubled cone over Hawaiian earring gives an example of \emph{unreasonable} space. 
 It has nontrivial fundamental group, but admits an approximation by Riemannian metrics on $\mathbb{S}^3$.)
 
 
@@ -570,13 +570,13 @@ that is, $X\backslash\{x_0\}$ is disconnected \cite[see 3.32 in][]{gromov-MetStr
 The following claim resembles Besicovitch inequality;
 it is key to the proof.
 \begin{cl}{$({*})$} Let $a$ be a positive real number.
- Assume that a closed curve $\gamma$ in a metric space $X$ can be sudivided into 4 arcs $\alpha$, $\beta$, $\alpha'$, and $\beta'$ in such a way that 
+ Assume that a closed curve $\gamma$ in a metric space $X$ can be subdivided into 4 arcs $\alpha$, $\beta$, $\alpha'$, and $\beta'$ in such a way that 
  \begin{itemize}
  \item $|x-x'|>a$ for any $x\in\alpha$ and $x'\in \alpha'$
  and
  \item $|y-y'|>a$ for any $y\in\beta$ and $y'\in \beta'$.
  \end{itemize}
- Then $\gamma$ is not contractable in its $\tfrac a2$-neighborhood.
+ Then $\gamma$ is not contractible in its $\tfrac a2$-neighborhood.
 \end{cl}
 
 
@@ -630,7 +630,7 @@ Consider the closed curve $\sigma$ formed by $\tau$ and two geodesics $[px]$, $[
 Note that $|p-x|>40$.
 Therefore there is a point $m$ on $[px]$ such that $|m-x|=20$.
 
-By the triangle inequality, the subsdivision of $\sigma$ into the arcs $[pm]$, $[mx]$, $\tau$ and $[yp]$ satisfy the conditions of the claim $({*})$ for $a=10$.
+By the triangle inequality, the subdivision of $\sigma$ into the arcs $[pm]$, $[mx]$, $\tau$ and $[yp]$ satisfy the conditions of the claim $({*})$ for $a=10$.
 Hence the statement follows.\qeds
 
 The problem is due to Mikhael Gromov \cite[Appendix 1(E$_{2}$)]{gromov-filling}.
@@ -668,7 +668,7 @@ The construction of $\rho$
 is done by shrinking the length of each circle
 and expanding the length in the normal directions  
 to the circles in a small neighborhood.
-The latter is made in order to make impossible to use the circles $c_i$ as a shortcut;
+The latter is made in order to make it impossible to use the circles $c_i$ as a shortcut;
 that is, one spends more time to go from one circle to another 
 than the time one saves by going along the circle.
 
@@ -1025,7 +1025,7 @@ for any $x\in B(p,R)$.
 Cover $\RR^m$ by balls $B(p_n,R)$ and construct a $[\tfrac1M,M]$-bi-Lipschitz map $h_n\:B(p_n,R)\to \RR^m$ close to the restrictions $f|_{B(p_n,R)}$ for each $n$.
 
 The maps $h_n$ are $2\cdot \eps\cdot R$ close to each other on the overlaps of their domains of definition.
-This makes possible to deform slightly each $h_n$ so that they agree on the overlaps.
+This makes it possible to deform slightly each $h_n$ so that they agree on the overlaps.
 This can be done by Siebenmann's theorem \cite{siebenmann}.
 If instead you apply Sullivan's theorem \cite{sullivan}, you get a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.\qeds
 
@@ -1097,9 +1097,9 @@ two random sequences of zeros and ones will do the job with probability one.\qed
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Average distance.}
-If such number does not exist then the ranges of average distance functions have empty intersection.
+If such a number does not exist then the ranges of average distance functions have empty intersection.
 Since $X$ is a compact length-metric space, the range of any continuous function on $X$ is a closed interval.
-By 1-dimesional Helly's theorem, there is a pair of such range intervals that do not intersect.
+By 1-dimensional Helly's theorem, there is a pair of such range intervals that do not intersect.
 That is, for two point-arrays $(x_1,\dots,x_n)$ and $(y_1,\dots,y_m)$
 and their average distance functions 
 \[f(z)=\tfrac1n\cdot\sum_i|x_i-z|_X\quad\text{and}\quad h(z)=\tfrac1m\cdot\sum_j|y_j-z|_X,\] we have 
