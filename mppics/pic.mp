@@ -14,12 +14,43 @@ etex
 filenametemplate "%j-%1c.mps";
 prologues:=3;
 setarrows(barbedsharp);
-linecap:=butt;
 %linejoin:=mitered;
 
 %outputformat := "svg";
 
+beginfig(5);
+save u, m, n, p;
+path p[];
+u:=1.4cm;
+m:=.45;
+n:=.5;
 
+
+p0=(0,0)*u--(0,1)*u--(1,1)*u--(1,0)*u--cycle;
+
+p1= p0 shifted ((3,0)*u);
+
+pickup pencircle scaled 5pt;
+linecap:=rounded;
+
+fill p0 withcolor 1;
+fill p1 withcolor 1;
+draw p0 withcolor 1;
+draw p1 withcolor 1;
+
+draw (0,0)*u--(-n,-n)*u withcolor 1;
+draw (1,0)*u--(1+n,-n)*u withcolor 1;
+draw ((0,0)*u--(-n,-n)*u) shifted ((3,0)*u) withcolor 1;
+draw ((1,1)*u--(1+n,1+n)*u) shifted ((3,0)*u) withcolor 1;
+
+draw (0,1)*u{up}..(-m,1+m)*u..{right}(0,1)*u withcolor 1;
+draw (1,1)*u{right}..(1+m,1+m)*u..{down}(1,1)*u withcolor 1;
+draw ((0,1)*u{up}..(-m,1+m)*u..{right}(0,1)*u) shifted ((3,0)*u) withcolor 1;
+draw ((1,0)*u{down}..(1+m,-m)*u..{left}(1,0)*u) shifted ((3,0)*u) withcolor 1;
+
+endfig;
+
+linecap:=butt;
 
 beginfig(102);
 save u, n, p;
@@ -213,8 +244,8 @@ endfor
 
 draw p[n]--z4;
 
-clip currentpicture to (1cm,-2cm)--(1cm,1cm)--(17cm,1cm)--(17cm,-2cm)--cycle;
-
+%clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in-0.375in,.5in)--(6.625in-0.375in,-1in)--cycle;
+clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in,.5in)--(6.625in,-1in)--cycle;
 endfig;
 
 beginfig(112)

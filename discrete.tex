@@ -157,7 +157,7 @@ Show that $n\le 2^m$.
 
 \begin{pr}
 Let $\mu$ be a Borel probability measure on the plane.
-Show that given $\eps>0$, there is a finite set of points $S$ that intersects every convex figure of measure at leaset $\eps$.
+Show that given $\eps>0$, there is a finite set of points $S$ that intersects every convex figure of measure at least $\eps$.
 Moreover we can assume that $|S|$ --- the number of points in $S$, depends only on $\eps$ (in fact one can take $|S|=\lceil\tfrac1{\eps^5}\rceil$).
 \end{pr}
 
@@ -268,18 +268,18 @@ Further generalizations lead to the theory of \index{mixed volumes}\emph{mixed v
 
 The equality $w_1(\Pi)=\pi\cdot (a+b+c)$ still holds for all parallelepipeds, not only rectangular ones.
 In particular, if one parallelepiped 
-lies inside another then sum of all edges of the first one cannot exceed the sum for the second.
+lies inside another then the sum of all edges of the first one cannot exceed the sum for the second.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Harnack's circles.}
-Let $\sigma\subset \RP^2$ be a algebraic curve of degree~$d$.
+Let $\sigma\subset \RP^2$ be an algebraic curve of degree~$d$.
 Consider the complexification $\Sigma\subset \CP^2$ of~$\sigma$.
 Without loss of generality, we may assume that $\Sigma$ is regular.
 
 Note that all regular complex algebraic curves of degree $d$ in $\CP^2$
 are isotopic to each other in the class of regular algebraic curves of degree $d$.
-Indeed, the set of equations of degree $d$ that correspond to singular curves have real codimesion 2.
+Indeed, the set of equations of degree $d$ that correspond to singular curves have real codimension 2.
 Therefore the set of equations of degree $d$ that correspond to regular curves is connected.
 In particular one can construct an isotopy from one regular curve to any other by changing continuously the parameters of the equations.
 
@@ -299,7 +299,7 @@ Hence the result follows.
 The inequality was originally proved 
 by Axel Harnack using a different method \cite{harnack}.
 The idea to use complexification is due to Felix Klein \cite{klein}.
-This problem is a background for the Hilbert's 16th problem. 
+This problem is a background for Hilbert's 16th problem. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Two points on each line.}
@@ -313,7 +313,7 @@ in $0$ or $1$ point.
 Note that the set of all lines intersecting $X$ at two points has cardinality less than continuum.
 Therefore we can choose a point on $\ell$ and add it to $X$ so that the remaining lines are not overloaded.
 
-It remains to apply well ordering principle.
+It remains to apply the well ordering principle.
 \qeds
 
 This problem has an endless list of variations.
@@ -335,7 +335,7 @@ The ball $B(z,r)$ contains all $B_1,\dots,B_n$.
 \end{cl}
 
 Assume this is not the case.
-Then there is a line $\ell$ through $z$, 
+Then there is a line $\ell$ thru $z$, 
 such that the orthogonal projection of some ball $B_i$ to $\ell$ 
 does not lie completely inside the projection of $B$.
 (This observation reduces the problem to the one-dimensional case.)
@@ -370,7 +370,7 @@ Possibly, for any $m$, the optimal constant is $2^m$;
 it can not be smaller, an example can be found among collections of unit balls that contain a fixed point.
 
 The inclusion $({*})$ is called the \emph{Vitali covering lemma}.
-The following statement is called the \emph{Besikovitch covering lemma};
+The following statement is called the \emph{Besicovitch covering lemma};
 it has a similar proof.
 
 \begin{pr}
@@ -381,15 +381,15 @@ such that (1) center of any ball in $\{B_i\}_{i\in F}$ lies inside one of a ball
 and (2) the collection $\{B_i\}_{i\in G}$ can be subdivided into $M$ subcollections of pairwise disjoint balls.
 \end{pr}
 
-Both lemmas were used to prove the so called \emph{covering theorems} in measure theory,
+Both lemmas were used to prove the so-called \emph{covering theorems} in measure theory,
 which state that ``undesirable sets'' have vanishing measure.
-Their applications overlap but aren't identical, the \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while the \emph{Besikovitch covering theorem} work in nice metric spaces with arbitrary Borel measures.
+Their applications overlap but aren't identical, the \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while the \emph{Besicovitch covering theorem} works in nice metric spaces with arbitrary Borel measures.
 
 More precisely, Vitali works in arbitrary metric spaces with a \index{doubling measure}\emph{doubling measure} $\mu$;
 the latter means that 
 \[\mu [2\cdot B]\le C\cdot \mu B\] 
 for some fixed constant $C$ and any ball $B$ in the metric space.
-On the other hand, Besikovitch works for all Borel measures in the so called \emph{directionally limited} metric spaces \cite[see 2.8.9 in][]{federer};
+On the other hand, Besicovitch works for all Borel measures in the so-called \emph{directionally limited} metric spaces \cite[see 2.8.9 in][]{federer};
 these include Alexandrov spaces with curvature bounded below.
 
 
@@ -519,7 +519,7 @@ Show the same for the surface of $n$-dimensional cube, $n\ge 4$.
 %The same statement holds for tetrahedron, octahedron and icosahedron.
 %In this case $\alpha$ is a multiple of $\tfrac\pi3$; it implies existence of rotational symmetry of which fix $v$ and sends $\xi$ to $\zeta$ and leads to a contradiction the same way.
 
-For the dodecahedron such loop exists;
+For the dodecahedron such a loop exists;
 its development is shown on the diagram.
 Vertices of an inscribed tetrahedron are circled.
 
@@ -532,7 +532,7 @@ Vertices of an inscribed tetrahedron are circled.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right and acute triangles.}
 Denote by $K$ the convex hull of $\{x_1,\z\dots,x_n\}$.
-Without loss of generality we can assume that $K$ is $m$-dimensional. 
+Without loss of generality we can assume that $\dim K=m$. 
 Note that for any distinct points $x_i$ and $x_j$
 and any interior point $z$ in $K$
 we have 
@@ -647,7 +647,7 @@ The following related question is open.
 
 \begin{pr}
 Let $m$ be a large integer.
-Can a cocompact group of isomtries on the $m$-dimensional Lobachevsky space be generated by finite order elements (for example by central symmetries)?
+Can a cocompact group of isometries on the $m$-dimensional Lobachevsky space be generated by finite order elements (for example by central symmetries)?
 \end{pr}
 
 

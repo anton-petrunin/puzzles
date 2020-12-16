@@ -42,7 +42,7 @@ The trick is to show that the osculating circles of $\gamma$ are nested.
 Without loss of generality we may assume that the curve is parametrized by its length and its
 curvature decreases.
 
-Let $z(t)$ be the center of osculating circle at $\gamma(t)$
+Let $z(t)$ be the center of the osculating circle at $\gamma(t)$
 and $r(t)$ its radius.
 Note that 
 \begin{align*}
@@ -59,7 +59,7 @@ therefore
 if $t_1>t_0$.
 
 Denote by $D_t$ the osculating disk of $\gamma$ at $\gamma(t)$;
-it has center at $z(t)$ and radius $r(t)$.
+it has a center at $z(t)$ and radius $r(t)$.
 By $({*})$, $D_{t_1}$ lies in the interior of $D_{t_0}$ for any $t_1>t_0$.
 Hence the result follows.\qeds
 
@@ -232,7 +232,7 @@ This value $\mathcal{H}_\alpha(X)$ is called $\alpha$-dimensional Hausdorff meas
 \begin{pr}
 Let $X\subset \RR^2$ be a compact connected set
 with finite 1-dimensional Hausdorff measure. 
-Show that there is a rectifiable curve passing through all the points in $X$.
+Show that there is a rectifiable curve passing thru all the points in $X$.
 \end{pr}
 
 \subsection*{Shortcut\hard}
@@ -243,7 +243,7 @@ Show that any two points $x,y\in X$ can be connected by a path $\alpha$ such tha
 \end{pr}
 
 Note that it might be impossible to connect $x$ and $y$ by a path in~$X$.
-In fact there are connected set in the plane (for examle pseudoarc) that contain no curves.
+In fact there are connected sets in the plane (for example the pseudo-arc) that contain no curves.
 
 \subsection*{Straight set}
 
@@ -261,13 +261,14 @@ Before trying to solve the problem, it might be useful to look at the following 
 Consider the set $X_k$ formed by the origin and the two logarithmic spirals $\rho = \pm e^{k\varphi}$ in the polar coordinates $(\rho,\phi)$.
 Observe that if $k$ is large, then $X_k$ is $\delta$-straight.
 
-%\hskip-0mm
-%\includegraphics{mppics/pic-110}
+\noindent
+\hskip-.9in
+\includegraphics[scale=1]{mppics/pic-110}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.65]{mppics/pic-110}
-\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=.65]{mppics/pic-110}
+%\end{figure}
 
 Another example of $\delta$-straight set is shown; it is constructed in a way similar to Koch snowflake curve, where we used a very obtuse isosceles triangle instead of equilateral.
 The Hausdorff dimension of this example is larger than 1;
@@ -375,7 +376,7 @@ That is, if $\gamma$ is an osculating circle of curve $\alpha$ at $t_0$,
 $\gamma'$ is the inversion of $\gamma$, and 
 $\alpha'$ is the inversion of $\alpha$,
 then $\gamma'$ is an osculating circle of curve $\alpha'$ at $t_0$.
-Therefore appling an inversion about a circle with the center in $F$, we also get a pair of osculating circles of $\partial F$ which surround $F$.
+Therefore applying an inversion about a circle with the center in $F$, we also get a pair of osculating circles of $\partial F$ which surround $F$.
 This way we obtain 4 osculating circles that lie on one side of $\partial F$.
 The latter statement is a generalization of the four-vertex theorem.
 
@@ -391,11 +392,11 @@ As you can see from the following problem, the 3-dimensional analog of this stat
 
 \begin{pr}
 Construct a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
-with all the principle curvatures between $-1$ and $1$
+with all the principal curvatures between $-1$ and $1$
 such that it does not surround a ball of radius 1.
 \end{pr}
 
-Such example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
+Such an example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
 [Bing's house constructed in \ncite{bing} will do the job].
 This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet} 
 and it was generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}.
@@ -440,7 +441,7 @@ Also
 \\
 &\le|\alpha''(t)|.
 \end{align*}
-Since $|\alpha''(t)|$ is the absoloute curvature of $\alpha$ at $t$,
+Since $|\alpha''(t)|$ is the absolute curvature of $\alpha$ at $t$,
 the result follows from $({*})$.\qeds
 
 The statement was originally proved 
@@ -450,7 +451,7 @@ several different proofs are discussed by Serge Tabachnikov [see \ncite{tabachni
 Note that the same argument works for curves in the unit ball.
 
 If instead of the disk we have a region bounded by a closed convex curve $\gamma$, 
-then it is still true that the average curvature of $\alpha$ is at least as big as average curvature of $\gamma$. 
+then it is still true that the average curvature of $\alpha$ is at least as big as the average curvature of $\gamma$. 
 The proof was given by Jeffrey Lagarias
 and Thomas Richardson [see \ncite{lagarias-richardson} and also \ncite{nazarov-petrov}].
 
@@ -461,7 +462,7 @@ Let us present two solutions.
 We assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ that intersects each equator.
 
 \parit{A solution with the Crofton formula.}
-Given a unit vector $u$ denote by $e_u$ the equator with pole at $u$.
+Given a unit vector $u$, denote by $e_u$ the equator with pole at $u$.
 Let $k(u)$ be the number of intersections
 of $\alpha$ and $e_u$.
 
@@ -490,7 +491,7 @@ Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$.
 Let $r$ be a point of intersection of $\alpha$ with the equator with pole at~$z$. 
 Without loss of generality we may assume that $r\in\check\alpha$. 
 
-The arc $\check\alpha$ together with its reflection with respect to the point $z$ forms a closed curve of length $2\cdot \ell$ passing throgh both $r$ and its antipodal point $r^{*}$.
+The arc $\check\alpha$ together with its reflection with respect to the point $z$ forms a closed curve of length $2\cdot \ell$ passing thru both $r$ and its antipodal point $r^{*}$.
 Therefore 
 \[\ell=\length \check\alpha\ge |r-r^{*}|_{\mathbb S^2}=\pi.\]
 Here $|r-r^{*}|_{\mathbb S^2}$ 
@@ -516,7 +517,7 @@ and Daniel Wienholtz \cite{EWW}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Oval in an oval.}
-Choose the a chord that divides the area of bigger oval in the minimal (or maximal) ratio.
+Choose the a chord that divides the area of the bigger oval in the minimal (or maximal) ratio.
 
 If the chord is not divided into equal parts, then you can rotate it slightly
 to decrease the ratio.
@@ -587,7 +588,7 @@ Therefore it drifts the knot to a single hemisphere and allows the ball to escap
 
 This is a problem by Zarathustra Brady, 
 the given solution is based on the idea of David Eppstein \cite{zeb}.
-A solution of the following problem is based on the same idea.
+A solution to the following problem is based on the same idea.
 
 \begin{pr}
 Show that a sphere cannot be captured in a link with 3 components, but can be captured in a link with 4 components.
@@ -699,7 +700,7 @@ By construction, the boundary of $D$ contains no simple curves. \qeds
 
 In fact, the only curves in the boundary of the constructed set are constant. Compare to the problem \emph{Simple path} on page~\pageref{Simple path}.
 
-The proof use the so called \emph{pseudo-arc} 
+The proof uses the so-called \emph{pseudo-arc} 
 constructed by Bronis\l{}aw Knaster \cite{knaster}.
 The proof resembles construction of the Cantor set.
 Here are few similar problems:
@@ -716,13 +717,13 @@ Here are few similar problems:
 These disks are called \index{lakes of Wada}\emph{lakes of Wada}; it is described by Kuniz\^{o} Yoneyama \cite{yoneyama}.
 
 \begin{pr}
- Construct a Cantor set in $\RR^3$ with non simply connected complement.
+ Construct a Cantor set in $\RR^3$ with a non-simply connected complement.
 \end{pr}
 
 This example is called \index{Antoine's necklace}\emph{Antoine's necklace} \cite{antoine}.
 
 \begin{pr}
- Construct an open set in $\RR^3$ with fundamental group isomorphic to the additive group of rational numbers.
+ Construct an open set in $\RR^3$ with a fundamental group isomorphic to the additive group of rational numbers.
 \end{pr}
 
 More advanced examples include
@@ -793,16 +794,16 @@ outside of $X$.
 Consider the Cantor set 
 \[Y= X\cap  X'\cap X''\cap\dots\]
 Note that there is a simple curve from $x$ to $y$ that runs in the constructed arcs and $Y$.
-The the total length of the constructed curves outside of $X$ can not exceed 
-\[\eps_1+\eps_2+\dots;\]
-hence the result.
+The total length of the constructed curves outside of $X$ can not exceed the sum
+$\eps_1+\eps_2+\dots$;
+whence the result.
 
 It remains to do the construction.
 
 Let us cover $X$ by a grid of $\tfrac\eps2$-squares $Q_1,\dots,Q_k$.
 Denote by $\Delta$ the union of all the sides of the squares.
 
-By the regularity of length, we may cover $\Delta\cap X$ by a finite collection of arcs with total length arbitrary close to the length of $\Delta\cap X$.
+By the regularity of length, we may cover $\Delta\cap X$ by a finite collection of arcs with total length arbitrarily close to the length of $\Delta\cap X$.
 Denote these arcs by $\alpha_0,\dots,\alpha_n$.
 Without loss of generality we may assume that $x\in\alpha_0$ and $y\in\alpha_n$.
 
@@ -822,7 +823,7 @@ Namely the following question is open:
 
 \begin{pr}
 Let $x,y$ be two points in a compact connected subset $X\subset \RR^3$. 
-Is it always possible to connected $x$ and $y$ by a path $\alpha$ such that the complement $\alpha\backslash X$ has arbitrary small length?
+Is it always possible to connect $x$ and $y$ by a path $\alpha$ such that the complement $\alpha\backslash X$ has arbitrary small length?
 \end{pr}
 
 
@@ -850,10 +851,10 @@ Smoothing its corners produces $L$.
 
 Let $L_n$ be a sequence of such approximations for $r_n=\tfrac1{2^n}$.
 Note that $L_{n-1}$ lies in a $\delta_2\cdot r_n$-neighborhood of $L_{n}$.
-In particular the closest point porojection $f_n\:L_{n-1}\to L_{n}$ is uniquely defined.
+In particular the closest point projection $f_n\:L_{n-1}\to L_{n}$ is uniquely defined.
 Moreover it is straightforward to check that $f_n$ is $(1\mp \delta_3)$-bi-Lipschitz.
 
-Given $x_1\in L_1$ consider the sequence $x_n\in L_n$ defined by $x_{n+1}\z=f_n(x_n)$.
+Given $x_1\in L_1$, consider the sequence $x_n\in L_n$ defined by $x_{n+1}\z=f_n(x_n)$.
 From above, we have that 
 \[
 \begin{aligned}|x_{n+1}-x_n|&<\delta_4\cdot r_n,
@@ -882,20 +883,21 @@ To prove that $F$ is bi-H\"older,
 apply recursively the first inequality in each pair until $|x_{n}-y_{n}|\z>r_n$ and after the second one. 
 \qeds
 
-This puzzle is a baby case of the so called \emph{Reifenberg's lemma}.
+This puzzle is a baby case of the so-called \emph{Reifenberg's lemma}.
 It was introduced by Ernst Reifenberg \cite{reifenberg} and became a useful tool in metric geometry, in particular it is used to study the limit spaces with lower Ricci curvature bound \cite{cheeger-colding-1, naber}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{40 mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-116}
-\end{wrapfigure}
 
 \parbf{Typical convex curves.}
 Denote by $\mathfrak{C}$ the space of all closed convex curves in the plane equipped with the Hausdorff metric.
 Recall that $\mathfrak{C}$ is locally compact.
 In particular, by the Baire theorem, a countable intersection of everywhere dense open sets is everywhere dense.
+
+\begin{wrapfigure}{o}{40 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-116}
+\end{wrapfigure}
 
 Note that if a curve $\gamma\in\mathfrak{C}$ 
 has nonzero second derivative at some point $p$,

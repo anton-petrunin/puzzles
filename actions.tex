@@ -10,7 +10,7 @@ Recall that a metric space is called \index{proper metric space}\emph{proper} if
 \begin{pr} Let $X$ be a 
 proper metric space 
 and $\iota\:X\to X$ an isometry.
-Assume that for some $x\in X$, the sequence $x_n\z=\iota^n(x)$, $n\in\ZZ$ has a converging subsequence.
+Assume that for some $x\in X$, the sequence $x_n\z=\iota^n(x)$, $n\in\ZZ$ has a convergent subsequence.
 Prove that the sequence $x_n$ is bounded.
 \end{pr}
 
@@ -108,7 +108,7 @@ The quotient  space $X{\times} X/\ZZ_2$ is called the \index{symmetric square}\e
 \begin{pr} 
 Show that the symmetric square 
 of any path connected topological space 
-has commutative fundamental group.
+has a commutative fundamental group.
 \end{pr}
 
 {
@@ -252,7 +252,7 @@ on the inverse image $W=f^{-1}(V)$
 of a small open neighborhood $V\ni x$.
 Therefore the quotient map $\theta\:W\z\to W'\z=W/\ZZ_p$ is a $p$-fold covering.
 By (\ref{f(x)=f(a(x))}),
-the restriction $f|_W$ factors through $\theta$;
+the restriction $f|_W$ factors thru $\theta$;
 that is,
 there is $f'\:W'\to V$ such that
 $f|_W=f'\circ\theta$.
@@ -307,13 +307,13 @@ Note that the obtained metric graph is $\eps$ close to $K$ in the Gromov--Hausdo
 \end{wrapfigure}
 
 Further, any finite metric graph can be approximated by a graph made from the fragments shown on the diagram
-(we have attach each pair of free ends of one fragment to a pair of ends in another fragment).
+(we have to attach each pair of free ends of one fragment to a pair of ends in another fragment).
 
 It remains to observe that metric graphs obtained from these fragments are finite coverings of $(\Phi,d/n)$.
 \qeds
 
 
-The same idea works if instead of the figure eight, we have any compact length-metric space $X$ that admits a map $X\to\Phi$ inducing an epimorphism of fundamental groups.
+The same idea works if instead of the figure eight, we have a compact length-metric space $X$ that admits a map $X\to\Phi$ inducing an epimorphism of fundamental groups.
 Such spaces $X$ can be found among compact hyperbolic manifolds of any dimension $\ge 2$.
 All this is due to Vedrin Sahovic \cite{sahovic}.
 
@@ -327,7 +327,7 @@ A similar idea was used later to show that any finitely presented group can appe
 \parbf{Diameter of \textit{m}-fold covering.}
 Choose points $\tilde p,\tilde q\in\tilde M$.
 Let  
-$\tilde\gamma\:[0,1]\to \tilde M$ be a minimizing geodesic path from $\tilde p$ to $\tilde q$. 
+$\tilde\gamma\:[0,1]\z\to \tilde M$ be a minimizing geodesic path from $\tilde p$ to $\tilde q$. 
 
 We need to show that 
 \[\length \tilde\gamma\le m\cdot \diam M.\]
@@ -349,7 +349,7 @@ Consider $m+1$ paths $\alpha_0,\dots,\alpha_m$ defined as the concatenations
 
 Let $\tilde\alpha_0,\dots,\tilde\alpha_m$ be their liftings
 with $\tilde q$ as an endpoint.
-The staring point of each curve $\tilde\alpha_i$ is one of $m$ inverse images of $p$. 
+The starting point of each curve $\tilde\alpha_i$ is one of $m$ inverse images of $p$. 
 Therefore two curves, $\tilde\alpha_i$ and $\tilde\alpha_j$ for $i<j$, 
 have the same starting point in $\tilde M$.
 
@@ -369,7 +369,7 @@ A closely related problem for universal coverings is discussed by Sergio Zamora 
 \parbf{Symmetric square.}
 Let $\Gamma=\pi_1 X$ and $\Delta=\pi_1((X\times X)/\ZZ_2)$.
 Consider the homomorphism $\phi\:\Gamma\times \Gamma\to \Delta$
-induced by the quotient map $X\times X\to (X\times X)/\ZZ_2$.
+induced by the quotient map $X\times X\z\to (X\times X)/\ZZ_2$.
 
 Note that $\phi(\alpha,1)=\phi(1,\alpha)$ for any $\alpha\in \Gamma$ and the restrictions $\phi|_{\Gamma\times \{1\}}$ and $\phi|_{\{1\}\times\Gamma}$
 are onto.
@@ -472,7 +472,7 @@ for any $\gamma\in\Gamma$ there is a loop $\ell$ based at $x_0$ that runs in the
 Choose $\gamma$ and $\ell$ as above.
 Since $P$ is simply connected, we can shrink $\ell$ by a disk.
 By general position argument we can assume that the disk 
-only pass through simplices of codimension $0$, $1$ and $2$
+only passes thru simplices of codimension $0$, $1$ and $2$
 and intersects the simplices of codimension $2$ transversely.
 
 In other words, $\ell$ can be presented as a product of 
@@ -524,7 +524,7 @@ Let us denote the obtained doubling by $Z_n$ and set $G_n=\pi_1(Z_n,\tilde p)$.
 Note that $Z_n$ is a metric covering of $W$;
 this allows us to consider $G_n$ as a subgroup of $F$.
 By construction, $Z_n$ is compact;
-therefore $G_n$ has finite index in $F$.
+therefore $G_n$ has a finite index in $F$.
 
 
 It remains to show that 
@@ -585,7 +585,7 @@ Hence the result follows.
 \qeds
 
 The statement is due to 
-Mikhael Gromov \cite[see Proposition 3.22 in][]{gromov-MetStr}.
+Mikhael Gromov \cite[Proposition 3.22 in][]{gromov-MetStr}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Number of generators.}
@@ -598,7 +598,7 @@ Given  $a\in \pi_1M$,
 set 
 \[|a|=|p- a\cdot p|_{\tilde M}.\]
 
-Consider the so called \index{short basis}\emph{short basis} in $\pi_1M$;
+Consider the so-called \index{short basis}\emph{short basis} in $\pi_1M$;
 that is, a sequence of elements $a_1,a_2,\dots{} \in\pi_1M$ defined in the following way:
 \begin{enumerate}[(i)]
 \item choose $a_1\in\pi_1M$ so that $|a_1|$ takes the minimal value,
@@ -645,7 +645,7 @@ In particular geodesics starting at the identity element $e\in G$ are given by h
 Consider the map $\phi\:G\to G$ defined by
 \[\phi(x)=x\cdot g_1\cdot x\cdot g_2\cdots x\cdot g_n.\]
 We need to show that $\phi$ is onto.
-Note that it is sufficient to show that $\phi$ has nonzero degree.
+Note that it is sufficient to show that $\phi$ has a nonzero degree.
 
 The map $\phi$ is homotopic to the map $\psi\:x\mapsto x^n$.
 Therefore it is sufficient to show that
@@ -667,10 +667,10 @@ By $({*}{*})$, for a regular value $y$, each point in the  inverse image $\psi^{
 Hence $({*})$ follows.
 
 It remains to prove $({*}{*})$.
-Given an element $g\in G$, denote by $L_g,R_g\:G\to G$ the corresponding left and right shift;
-that is, $L_g(x)=g\cdot x$ and $R_g(x)=x\cdot g$.
+Given an element $g\in G$, denote by $L_g$ and $R_g$ the left and right shift $G\to G$ respectively;
+that is, $L_g(x)\z=g\cdot x$ and $R_g(x)=x\cdot g$.
 
-Identify the tangent spaces $\T_xG$ and $\T_{x^n}G$ with the Lie algebra $\mathfrak{g}=\T_eG$
+Identify the tangent spaces $\T_xG$ and $\T_{x^n}G$ with the Lie algebra $\mathfrak{g}\z=\T_eG$
 using $d{R_x}\:\mathfrak{g}\to \T_xG$ and $d{R_x^n}\:\mathfrak{g}\to \T_{x^n}G$ respectively.
 Then for any $V\in \mathfrak{g}$, we have
 \[d_x\psi(V)=V+\Ad_x(V)+\dots+\Ad_x^{n-1}(V),\]
@@ -710,7 +710,7 @@ Consider the Hilbert space $\HH$ of all $L^2$-functions $f\:[0,1]\to\mathfrak{g}
 
 
 \parit{Construction of the quotient map $\phi\:\HH\to G$.}
-Given $v\in \mathfrak{g}$ denote by $\tilde v$ the corresponding right invariant tangent field on $G$.
+Given $v\in \mathfrak{g}$, denote by $\tilde v$ the corresponding right invariant tangent field on $G$.
 
 Given $f\:[0,1]\to \mathfrak{g}$ in $\HH$,
 consider the path 
@@ -773,3 +773,11 @@ Instead of the group $\Omega$,
 one could consider the subgroup $\Omega_H$ of paths $\gamma\:[0,1]\to G$ such that the pair $(\gamma(0),\gamma(1))$ belongs to a given subgroup $H<G\times G$.
 In this case the quotient $\HH/\Omega_H$ is isometric to the \emph{double quotient} $G/\!\!/H$;
 that is, the quotient of the action on $G$ defined by $(h_1,h_2)\cdot g=h_1\cdot g\cdot h_2^{-1}$ for $(h_1,h_2)\in H<G\times G$.
+
+
+The following question is open.
+
+\begin{pr} Suppose $R$ is a compact simply connected Riemannian manifold that is isometric to a quotient of the Hilbert space by a group of isometris (or more generally $R$ is the target of Riemannian submersion from a Hilbert space).
+Is it true that $R$ is isometric to a double quotient? That is, is it true that $R$ is a quotient of compact Lie group $G$ by a group of isometries?
+ 
+\end{pr}
