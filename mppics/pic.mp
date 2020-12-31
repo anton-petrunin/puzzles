@@ -244,8 +244,8 @@ endfor
 
 draw p[n]--z4;
 
-%clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in-0.375in,.5in)--(6.625in-0.375in,-1in)--cycle;%.375in magins at KDP
-clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in,.5in)--(6.625in,-1in)--cycle;
+clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in-0.375in,.5in)--(6.625in-0.375in,-1in)--cycle;%.375in magins at KDP
+%clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in,.5in)--(6.625in,-1in)--cycle;
 endfig;
 
 beginfig(112)

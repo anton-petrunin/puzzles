@@ -127,6 +127,14 @@ is monotonic for any pair $x,y\in F$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Facet cover}\label{Facet cover}
+
+\begin{pr}
+Show that any facet of a convex polyhedron can be covered by the remaining facets.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Cube}\label{Cube}
 
 \begin{pr}
@@ -458,6 +466,19 @@ that is, for any positive integer $m$,
 there are two maps $h_0,h_1\:F\to \RR^m$ that cannot be connected by a monotonic homotopy $h_t\:F\to\RR^{2\cdot m-1}$.
 The latter was shown by Maria Belk and Robert Connelly \cite{belk-connelly}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Facet cover.}
+Choose a convex polyhedron $P$ and its facet $F$.
+Denote by $\Pi$ the hyperplane of $F$.
+
+For each point $p\in F$ consider the maximal ball $B_p\subset P$ that contains~$p$.
+Note that $B_p$ touches another facet of $P$ at some point $q$.
+
+Show that the restriction of the partially defined map $q\mapsto p$ to any other facet $F'$ can be extended to a distance preserving map $F'\to \Pi$.
+By construction union of all such images cover $F$.
+\qeds
+
+This is a modified version of a problem from All-Russian olympiad of 2012; it was proposed by Igor Pak \cite{pak}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
