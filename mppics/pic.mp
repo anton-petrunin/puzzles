@@ -248,6 +248,35 @@ clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in-0.375in,.5in)--(6.625i
 %clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in,.5in)--(6.625in,-1in)--cycle;
 endfig;
 
+beginfig(111)
+save u,a,n,p;
+path p[];
+u:=8cm;
+a:=20;
+n:=6;
+
+z0=origin;
+z1=(1,-.2)*u;
+z2=z1+(z1 rotated a);
+z3=z2+(z1 rotated -a);
+z4=z3+z1;
+x.r=abs(z1)/abs(z4);
+
+save p;
+path p[];
+
+p0=z0--z1--z2--z3;
+
+for i = 1 upto n : 
+p[i]=(p[i-1] scaled x.r)--(p[i-1] scaled x.r rotated a shifted z1)--(p[i-1] scaled x.r  rotated -a shifted z2)--(p[i-1] scaled x.r  shifted z3); 
+endfor
+
+draw p[n]--z4;
+
+%clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in-0.375in,.5in)--(6.625in-0.375in,-1in)--cycle;%.375in magins at KDP
+clip currentpicture to (.5in,-1in)--(.5in,.5in)--(6.625in,.5in)--(6.625in,-1in)--cycle;
+endfig;
+
 beginfig(112)
 save u,gap,p;
 path p[];
