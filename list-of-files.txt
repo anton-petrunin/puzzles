@@ -9,6 +9,7 @@ mppics/pic-104.mps
 mppics/pic-106.mps
 mppics/pic-108.mps
 mppics/pic-110.mps
+mppics/pic-111.mps
 mppics/pic-112.mps
 mppics/pic-107.mps
 mppics/pic-109.mps
@@ -77,3 +78,4 @@ mppics/pic-905.mps
 mppics/pic-907.mps
 problems.ind
 lib/post1222167.html
+pics/by-sa.eps

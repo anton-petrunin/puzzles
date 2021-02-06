@@ -1,6 +1,9 @@
 %\RequirePackage{snapshot}
 \documentclass[twoside]{book}
 
+\newcommand{\arxiv}[2]{#1} %for arxiv
+%\newcommand{\arxiv}[2]{#2} %for kdp
+
 \usepackage{problems}
 \usepackage[colorlinks=true,
 citecolor=black,
@@ -61,6 +64,14 @@ A semisolution is given at the end of the chapter,
 but think before reading,
 otherwise it will not help. 
 
+Some problems are marked by $\circ$, $*$, $+$ or $\sharp$.
+\begin{itemize}
+\item[$\circ$] --- easy problem;%\easy
+\item[$*$] --- the solution requires at least two ideas;%\hard
+\item[$+$] --- the solution requires knowledge of a theorem;%\thm
+\item[$\sharp$] --- there are interesting solutions based on different ideas.%\many
+\end{itemize}
+
 \parbf{Acknowledgments.} 
 I want to thank everyone who helped me;
 here is an incomplete list:
@@ -90,15 +101,13 @@ NSF grants DMS
 and Simons Foundation grants 
 245094 and 584781.
 
-\vfill
-
-Some problems are marked by $\circ$, $*$, $+$ or $\sharp$.
-\begin{itemize}
-\item[$\circ$] --- easy problem;%\easy
-\item[$*$] --- the solution requires at least two ideas;%\hard
-\item[$+$] --- the solution requires knowledge of a theorem;%\thm
-\item[$\sharp$] --- there are interesting solutions based on different ideas.%\many
-\end{itemize}
+\null\vfill\noindent{\includegraphics[scale=0.5]{pics/by-sa}
+\vspace*{1mm}
+\\
+\hbox{\parbox{1\textwidth}
+{\textit{PIGTIKAL (puzzles in geometry that I know and love)} by Anton Petrunin is licensed under CC BY-SA 4.0.
+To view a copy of this license, visit
+\texttt{https://creativecommons.org/licenses/by-sa/4.0}}}}
 
 
 \include{curves}
@@ -113,7 +122,7 @@ Some problems are marked by $\circ$, $*$, $+$ or $\sharp$.
 %\include{unfinished}
 %\include{open}
 
-%the total number of problems is \thethm.
+the total number of problems is \thethm.
 
 \backmatter
 \newpage
