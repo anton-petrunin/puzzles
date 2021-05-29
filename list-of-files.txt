@@ -4,6 +4,14 @@ problems.bbl
 problems.sty
 library.bib
 curves.tex
+asy/gutter.eps
+asy/cube.eps
+asy/P213.eps
+asy/dehn-twist.eps
+asy/kedra.eps
+asy/kedra-torus.eps
+asy/tent.eps
+asy/thurston-cube.eps
 mppics/pic-102.mps
 mppics/pic-104.mps
 mppics/pic-106.mps
@@ -19,7 +27,6 @@ mppics/pic-116.mps
 surfaces.tex
 mppics/pic-202.mps
 mppics/pic-204.mps
-asy/gutter.eps
 mppics/pic-205.mps
 mppics/pic-206.mps
 mppics/pic-208.mps
@@ -30,7 +37,6 @@ mppics/pic-306.mps
 mppics/pic-308.mps
 curvature-free.tex
 mppics/pic-402.mps
-asy/cube.eps
 mppics/pic-404.mps
 mppics/pic-406.mps
 mppics/pic-408.mps
@@ -51,7 +57,6 @@ mppics/pic-614.mps
 mppics/pic-616.mps
 topology.tex
 mppics/pic-702.mps
-asy/dehn-twist.eps
 mppics/pic-704.mps
 mppics/pic-706.mps
 mppics/pic-708.mps
@@ -63,12 +68,8 @@ mppics/pic-718.mps
 poly.tex
 mppics/pic-802.mps
 mppics/pic-804.mps
-asy/kedra.eps
-asy/kedra-torus.eps
 mppics/pic-806.mps
-asy/tent.eps
 mppics/pic-808.mps
-asy/thurston-cube.eps
 mppics/pic-810.mps
 mppics/pic-812.mps
 discrete.tex
