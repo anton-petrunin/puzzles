@@ -122,7 +122,7 @@ where $B$ denotes the unit ball in $\RR^m$.
 Let $F$ be a finite set and $h_0,h_1\: F\to\RR^m$ be two maps.
 Consider $\RR^m$ as a subspace of $\RR^{2\cdot m}$.
 Show that there is a homotopy  $h_t\:F\z\to\RR^{2\cdot m}$ from $h_0$ to $h_1$ such that  the function 
-\[t\z\mapsto |h_t(x)-h_t(y)|\] 
+$t\z\mapsto |h_t(x)-h_t(y)|$
 is monotonic for any pair $x,y\in F$.
 \end{pr}
 
@@ -185,37 +185,29 @@ that is, exactly $m$ facets meet at each vertex of $P$.
 Denote by $f_k$ the number of $k$-dimensional faces of $P$;
 the array of integers $(f_0,\dots f_m)$ is called the $f$-vector of $P$.
 
-Choose an ordering of the vertices $v_1,\dots, v_{f_0}$
-of $P$ so that for some linear function $\ell$, we have $\ell(v_i)<\ell(v_j)\ \Leftrightarrow\ i<j$.
-The \index{index of vertex}\emph{index} of the vertex $v_i$ 
-is defined as the number of edges $[v_iv_j]$ of $P$ such that $i>j$. 
+Choose linear function $\ell$ that takes different values on the vertices of~$P$.
+The \index{index of vertex}\emph{index} of a vertex $v$ 
+is defined as the number of edges $[vw]$ of $P$ such that $\ell(v)>\ell(w)$. 
 The number of vertices of index $k$ will be denoted by $h_k$.
 The array of integers $(h_0,\dots h_m)$ is called the $h$-vector of $P$.
-Clearly $h_0=h_m=1$ and 
-\[h_k\ge 0\quad\text{for all}\quad k.\leqno({*})\]
 
 Each $k$-face of $P$ contains a unique vertex that maximizes $\ell$.
 If the vertex has index $i$,
 then $i\ge k$ and
-then it is the maximal vertex of exactly $\tfrac{i!}{k!\cdot (i-k)!}$
+then it is the maximal vertex of exactly $\tbinom i k$
 faces of dimension $k$.
 This observation can be packed in the following polynomial identity:
 \[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
 
-Note that the identity above implies that the $h$-vector does not depend on the choice of $\ell$.
-In particular, the $h$-vector is the same for the reversed order;
+This identity implies that the $h$-vector does not depend on the choice of $\ell$.
+Changing the sign of $\ell$, we get that, the $h$-vector is the same for the reversed order;
 that is,
 \[h_k=h_{m-k}\quad\text{for all}\quad k.
-\leqno({*}{*})\]
+\leqno({*})\]
 for any $k$.
 
-The identities $({*}{*})$ for all $k$ are called the Dehn--Sommerville equations.
+The identities $({*})$ for all $k$ are called the Dehn--Sommerville equations.
 They give a complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
-
-Note that the Dehn--Sommerville equations 
-as well as the inequalities $({*})$ can be rewritten in terms of 
-$f$-vectors.
-
 For more on the subject, see \cite[Chapter 9]{gruenbaum}.
 
 
@@ -405,18 +397,11 @@ these include Alexandrov spaces with curvature bounded below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \parbf{Kissing number.}
 Set $n=\mathop{\rm kiss} B$.
 Let $B_1,\dots, B_n$ be copies of the ball $B$ that touch $B$ and don't have common interior points.
 For each $B_i$ consider the vector $v_i$ from the center of $B$ to the center of $B_i$.
 Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
-
-\begin{wrapfigure}{r}{43 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-903}
-\end{wrapfigure}
 
 For each $i$,
 consider the supporting hyperplane $\Pi_i$
@@ -428,7 +413,13 @@ Note that $W_i$ and $W_j$ have no common interior points if $i\ne j$;
 the latter gives the needed inequality.
 \qeds
 
+{
 
+\begin{wrapfigure}{r}{43 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-903}
+\end{wrapfigure}
 
 The proof is given by 
 Charles Halberg, 
@@ -445,6 +436,8 @@ that $h_0(F)$ and $h_1(F)$ both lie in the coordinate $m$-spaces of $\RR^{2\cdot
 that is,
 $h_0(F)\z\subset\RR^m\times\{0\}$
 and $h_1(F)\subset  \{0\}\times\RR^m$.
+
+}
 
 Direct calculations show that the following homotopy is monotonic
 \[h_t(x)=\bigl(h_0(x)\cdot \cos\tfrac{\pi\cdot t}2
@@ -598,9 +591,7 @@ Note that $K_i\subset K$ for any $i$;
 it follows that 
 \begin{align*}
 \tfrac n{2^m}\cdot \vol K
-&=\sum_{i=1}^n\vol K_i\le
-\\
-&\le\vol K.
+&=\sum_{i=1}^n\vol K_i\le\vol K.
 \end{align*}
 Hence the result follows.
 \qeds
@@ -649,8 +640,15 @@ one can see that for any simple compact hyperbolic polyhedron there is a simple 
 In particular the Dehn--Sommerville equations hold for $P$.
 
 Denote by $(f_0,\dots f_m)$ and $(h_0,\dots h_m)$ the $f$- and $h$-vectors of $P$.
-Recall that $h_i\ge 0$ for any $i$ and $h_0=h_m=1$.
-By the Dehn--Sommerville equations, we get
+Recall that 
+\begin{align*}
+h_i&=h_{m-i},
+\\
+f_1&=h_1+2\cdot h_2+\dots+m\cdot h_m,
+\\
+f_2&= h_2+3\cdot h_3+\dots+\tbinom m 2\cdot h_m,
+\end{align*}
+Observe that $h_i\ge 1$; together with the identities above it implies that
 \[f_2> \tfrac{m-2}4\cdot f_1.
 \leqno({*})\]
 
@@ -667,13 +665,13 @@ Playing a bit more with the same inequalities,
 one gets nonexistence of  right-angled hyperbolic polyhedrons,
 in all dimensions starting from~$5$.
 In the $4$-dimensional case,
-there is a regular right-angled  hyperbolic polyhedron with \index{120-cells}\emph{120-cells} --- a $4$-dimensional uncle of the dodecahedra.
+there is a regular right-angled  hyperbolic polyhedron with \index{120-cells}\emph{120-cells} --- a $4$-dimensional uncle of the dodecahedron.
 
 The following related question is open:
 
 \begin{pr}
 Let $m$ be a large integer.
-Is there a cocompact properly dicontinuous isometric action  on the $m$-dimensional Lobachevsky space that is generated by finite order elements (for example by central symmetries)?
+Is there a cocompact properly dicontinuous isometric action  on the $m$-dimensional Lobachevsky space that is generated by finite order elements (for example involutions)?
 \end{pr}
 
 
