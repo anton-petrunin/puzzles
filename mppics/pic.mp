@@ -1723,6 +1723,52 @@ label (btex {\color{white} $K_1$} etex, .5[z.r,z.R]);
 label (btex {\color{white} $K_2$} etex, .5[z.r,z.R]+z.shift);
 endfig;
 
+beginfig(717)
+save u,p,n;
+path p[];
+u:=1cm;
+n:=103; %должно быть нечётным
+picture moon;
+
+moon=image(
+draw 
+(0,-2)*u
+for i=-n step 2 until -3:
+..unitvector(1,i)*(2-sqrt(2)/abs(1,i))*u
+endfor
+..{up}unitvector(1,-1)*(2-sqrt(2)/abs(1,-1))*u
+--unitvector(1,1)*(2-sqrt(2)/abs(1,1))*u{up}
+for i=3 step 2 until n:
+..unitvector(1,i)*(2-sqrt(2)/abs(1,i))*u
+endfor
+..
+(0,2)*u penhair;
+
+for j=3 step 2 until n:
+draw 
+(0,-2)*u
+for i=-n step 2 until n:
+..unitvector(j,i)*(2-sqrt(2)/abs(j,i))*u
+endfor
+..
+(0,2)*u penhair;
+endfor
+);
+
+draw moon;
+draw moon rotated 90;
+draw moon rotated 180;
+draw moon rotated -90;
+
+hatchfill  unitvector(1,1)*u--unitvector(1,-1)*u--unitvector(-1,-1)*u--unitvector(-1,1)*u--cycle withcolor (-50, 2mm, -.5bp);
+
+draw circle(origin,u) penhair dashed evenly;
+draw circle(origin,2*u) penhair;
+
+whitelabel (btex $\square$ etex, origin);
+
+endfig;
+
 beginfig(718)
 save u,p;
 path p[];

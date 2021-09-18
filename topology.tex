@@ -138,9 +138,9 @@ $K_1$ is not homeomorphic to $K_2$, but $K_1\times[0,1]$ is homeomorphic to $K_2
 \subsection*{Homeomorphism of a cube}\label{Homeomorphism of cube}
 
 \begin{pr}
-Let $\square^m$ be a cube in $\RR^m$
-and $h\:\square^m\z\to\square^m$ be
-a homeomorphism that sends each face of $\square^m$ to itself.
+Let $\square$ be a cube in $\RR^m$
+and $h\:\square\z\to\square$ be
+a homeomorphism that sends each face of $\square$ to itself.
 Extend $h$ to a homeomorphism $f\:\RR^m\z\to\RR^m$ that coincides with the identity map outside of a bounded set.    
 \end{pr}
 
@@ -338,7 +338,7 @@ and $\Psi_n\:W\to W$
 are homeomorphisms
 of the form 
 \[\Phi_n(x)=\phi_n(x)\ast x\quad \text{and}\quad \Phi_n(x)=\psi_n(x)\star x,\]
-where $\phi_n\:V\to \RR_+$, $\psi_n\:W\to \RR_+$ are suitable continuous functions;
+where $\phi_n\:V\to \RR_{\ge 0}$, $\psi_n\:W\to \RR_{\ge 0}$ are suitable continuous functions;
 ``$\ast$'' and ``$\star$'' denote the {}\emph{multiplication} in the cone structures of $V$ and $W$ respectively.\qeds
 
 
@@ -397,20 +397,28 @@ I learned it from Maria Goluzina around 1988.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Homeomorphism of a cube.}
 Let us extend the homeomorphism $h$ to $\RR^m$ by reflecting the cube across its facets.
-We get a homeomorphism $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any $x\in\square^m$ and 
+We get a homeomorphism $\tilde h\:\RR^m\to\RR^m$ such that $\tilde h(x)=h(x)$ for any $x\in\square$ and 
 \[\tilde h\circ\gamma=\gamma\circ \tilde h,\]
 where $\gamma$ is any reflection with respect to the facets of the cube.
 
-Without loss of generality we may assume that the cube $\square^m$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
+Without loss of generality we may assume that the cube $\square$ is inscribed in the unit sphere centered at the origin of $\RR^m$.
 In this case $\tilde h$ has \index{displacement}\emph{displacement} at most $2$;
 that is, 
 \[|\tilde h(x)-x|\le 2\]
 for any $x\in\RR^m$.
 
-Choose a smooth increasing function $\phi\:\RR ^{ +} \to\RR$ such that
-\[\phi(r)\z=r\] 
+Choose a smooth increasing function $\phi\:\RR_{\ge 0} \to\RR$ such that
+$\phi(r)\z=r$
 for any $r\le 1$ and 
-\[\sup\{\phi(r)\}=2.\]
+$\sup\{\phi(r)\}=2$.
+{
+
+\begin{wrapfigure}{o}{41 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-717}
+\vskip0mm
+\end{wrapfigure}
 
 Equip $\RR^m$ with polar coordinates $(u,r)$, 
 where $u\in\mathbb{S}^{m-1}$, $r\z\ge 0$.
@@ -428,6 +436,8 @@ f(x)=\left[
 \end{aligned}
 \right.
 \]
+
+}
 
 It remains to observe that $f\:\RR^m\to\RR^m$ is a solution.
 \qeds
