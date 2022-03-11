@@ -29,6 +29,7 @@ mppics/pic-202.mps
 mppics/pic-204.mps
 mppics/pic-205.mps
 mppics/pic-206.mps
+mppics/pic-207.mps
 mppics/pic-208.mps
 comparison.tex
 mppics/pic-302.mps
@@ -64,6 +65,7 @@ mppics/pic-710.mps
 mppics/pic-712.mps
 mppics/pic-714.mps
 mppics/pic-716.mps
+mppics/pic-717.mps
 mppics/pic-718.mps
 poly.tex
 mppics/pic-802.mps

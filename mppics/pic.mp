@@ -583,6 +583,75 @@ draw z.a{1,0}...z.b{-1,.6}..z.bb{1,0}..z.b{-1,-.6}...{1,0}z.c;
 draw (z.a{0,-1}...z.b{1,-.6}..z.bbb{-1,0}..z.b{1,.6}...{0,1}z.c) shifted ((3,0)*u);
 endfig;
 
+beginfig(207) 
+save u,p,k,l;
+path p[];
+u:=.5cm;
+k:=-1.8;
+l:=2.2;
+
+z0=(0,0)*u;
+z1=(1,0)*u;
+z2=(2,0)*u;
+z3=(3,0)*u;
+z4=(4,0)*u;
+z5=(5,0)*u;
+
+z.a=(0,-.8)*u;
+z.b=z.a rotated 120;
+z.c=z.a rotated -120;
+
+z.shift=(5,0)*u;
+z.shifty=(-.8,-3)*u;
+
+p1=
+z0{up}..
+z1{1,-2}..
+z2{1,2}..
+z3{1,-2}..
+z4{up}..
+z3{-1,-2}..
+z2{-1,2}..
+z1{-1,-2}..cycle;
+
+p2=
+z0{up}..
+z1{1,-2}..
+z2{1,2}..
+z4{-1,-2}..
+z3{up}..
+z4{1,-2}..
+z2{-1,2}..
+z1{-1,-2}..cycle;
+
+p3=
+z1{up}..
+z0{-1,-2}..
+z2{1,2}..
+z4{-1,-2}..
+z3{up}..
+z4{1,-2}..
+z2{-1,2}..
+z0{1,-2}..cycle;
+
+p4=z.a..z.b..k*z.a..z.c..z.a..k*z.c..z.b..z.c..k*z.b..cycle;
+
+p5=z.a..z.b..l*z.b{z.b rotated -90}..z.b..z.c..l*z.c{z.c rotated -90}..z.c..z.a..l*z.a{z.a rotated -90}..cycle;
+
+p6=
+z0{up}..z1{1,-2}..z4{1,2}..z5{down}..z4{-1,2}..z2{down}..z3{up}..z1{-1,-2}..cycle
+;
+
+%draw p1 pensemibold;
+%draw p2 shifted z.shift pensemibold;
+%draw p3 shifted (2*z.shift) pensemibold;
+%draw p4 shifted (z.shifty+z2) pensemibold;
+draw p5 rotated 180 shifted (z.shifty+z2+z.shift) pensemibold;
+draw p6 shifted (z.shifty+2*z.shift) pensemibold;
+
+endfig;
+
+
 beginfig(208)
 save u,p;
 path p[];

@@ -2,7 +2,7 @@
 \chapter{Metric geometry}
 
 In this chapter, we consider metric spaces.
-All the necessary material could be found in the first three chapters of the textbook \cite{bbi}. 
+The relevant background material can be found in \cite{bbi} or \cite{petrunin2021pure}. 
 
 Let us fix a few standard notations.
 \begin{itemize}
@@ -899,6 +899,18 @@ It is closely related to the construction given
 by David Hilbert in \cite{hilbert}
 which was the motivating example for his 4th problem.
 
+The following problem was suggested by Jairo Bochi \cite{bochi};
+it looks similar, but actually quite different.
+
+\begin{pr}
+Consider the set $E$ of all ellipses with unit area centered at the origin of the plane.
+Equip $E$ with the metric defined by 
+\[\rho(A,B)=\area(A\cup B)-\area(A\cap B).\]
+Let $\hat\rho$ be the length-metric induced by $\rho$.
+Show that $(E,\hat\rho)$ is isometric to a Lobachevsky plane.
+\end{pr}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Straight geodesics.}
@@ -1068,6 +1080,12 @@ The existence of sections for a family of sets parametrized by a topological spa
 The needed examples can be constructed by cutting the upper half-plane along a ``dyadic comb'' shown on the diagram;
 the obtained space should be equipped with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
 
+\begin{wrapfigure}{o}{31 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-506}
+\end{wrapfigure}
+
 \medskip
 
 First let us describe the comb precisely.
@@ -1076,12 +1094,6 @@ Given an integer $k$, cut the upper half-plane along the line segment between $(
 if $m$ is the maximal number such that 
 \[k\equiv a_0+2\cdot a_1+\dots+2^{m-1}\cdot a_{m-1}\pmod{2^{m}};\]
 If the equality holds for all $m$, cut the half-plane along the vertical half-line starting at $(k,0)$.
-
-\begin{wrapfigure}{o}{31 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-506}
-\end{wrapfigure}
 
 Note that all the obtained spaces, independently from the sequence $(a_n)$, meet the conditions of the problem for the point $x_0=(\tfrac12,0)$.
 
