@@ -157,9 +157,9 @@ such that the map $[0,1]\times \mathbb{S}^1\to\RR^3$ is smooth.
 Show that one cannot capture a sphere in a knot.
 
 More precisely, let $B$ be the closed unit ball in $\RR^3$
-and $f\:\mathbb{S}^1\z\to \RR^3\backslash B$ a knot.
+and $f\:\mathbb{S}^1\z\to \RR^3\setminus B$ a knot.
 Show that there is a smooth isotopy 
-$$f_t\:\mathbb{S}^1\to \RR^3\backslash B,\ \ \ t\in [0,1]$$ 
+$$f_t\:\mathbb{S}^1\to \RR^3\setminus B,\ \ \ t\in [0,1]$$ 
 such that $f_0=f$,
 the length of $f_t$ is non-increasing with respect to $t$
 and $f_1(\mathbb{S}^1)$ can be separated from $B$ by a plane.
@@ -239,7 +239,7 @@ Show that there is a rectifiable curve passing thru all the points in $X$.
 
 \begin{pr}
 Let $X\subset \RR^2$ be a compact connected set. 
-Show that any two points $x,y\in X$ can be connected by a path $\alpha$ such that the complement $\alpha\backslash X$ has arbitrary small length.
+Show that any two points $x,y\in X$ can be connected by a path $\alpha$ such that the complement $\alpha\setminus X$ has arbitrary small length.
 \end{pr}
 
 Note that it might be impossible to connect $x$ and $y$ by a path in~$X$.
@@ -323,7 +323,7 @@ This is the meaning of the word {}\emph{most} used in the problem.
 
 \parbf{Moon in a puddle.}
 In the proof we will use the \emph{cut locus}
-of $F$ with respect to its boundary\footnote{Also called \emph{medial axis}.};
+of $F$ with respect to its boundary (also known as \emph{medial axis}.);
 it will be further denoted by $T$.
 The cut locus can be defined as the closure
 of the set of points $x\in F$ 
@@ -338,7 +338,7 @@ for which there exist two or more points in $\partial F$ minimizing the distance
 For each point $x\in T$, consider the subset $X\subset\partial F$ where minimal distance to $x$ is attained.
 If $X$ is not connected then we say that $x$ is a \emph{cut point};
 equivalently it means that for any sufficiently small neighborhood $U\ni x$, 
-the complement $U\backslash T$ is disconnected.
+the complement $U\setminus T$ is disconnected.
 If $X$ is connected 
 then we say that $x$ is a \emph{focal point};
 equivalently it means that the osculating circle to $\partial F$ at any point of $X$ is centered at $x$.
@@ -365,10 +365,10 @@ consider the (necessarily unique) point $\hat x\in \partial F$ that minimize the
 In particular, $T$ is a tree.
 Therefore $T$ has
 an end vertex, say $z$.
-The point $z$ is focal since there are arbitrary small neighborhoods $U$ of $z$ such that the complements $U\backslash T$ are connected.
+The point $z$ is focal since there are arbitrary small neighborhoods $U$ of $z$ such that the complements $U\setminus T$ are connected.
 \qeds
 
-Note that we proved a slightly stronger statement, namely there are at least two points on $\partial F$ which osculating circles lie in $F$.
+We proved a slightly stronger statement, namely \textit{there are at least two points on $\partial F$ which osculating circles lie in $F$}.
 Note that these points are \index{vertex of curve}\emph{vertices} of $\partial F$;
 that is, they are critical points of its curvature.
 
@@ -379,22 +379,31 @@ $\alpha'$ is the inversion of $\alpha$,
 then $\gamma'$ is an osculating circle of curve $\alpha'$ at $t_0$.
 Therefore applying an inversion about a circle with the center in $F$, we also get a pair of osculating circles of $\partial F$ which surround $F$.
 This way we obtain 4 osculating circles that lie on one side of $\partial F$.
-The latter statement is a generalization of the four-vertex theorem.
+The latter statement is a generalization of the four-vertex theorem \cite{petrunin-zamora:moon}.
 
 The case of convex curves of this problem appears in a book of Wilhelm Blaschke \cite[see \S 24 in][]{blaschke}.
 In full generality, the problem was discussed by Vladimir Ionin and German Pestov \cite{pestov-ionin}. %???include ref to my lectures 
 A solution via curve shortening flow of a weaker statement 
 was given by Konstantin Pankrashkin \cite{pankrashkin}.
-The statement still holds if the curve fails to be smooth at one point.
+The statement still holds if the curve fails to be smooth at one point \cite{petrunin-zamora:moon}.
 A spherical version of the later statement 
 was used by Dmitri Panov and me \cite{panov-petrunin-ramification}.
+
+The statement admits a generalization to curves that bound a disc $F$ in a surface with nonpositive curvature.
+The latter can be used to prove the following problem which was suggested by Dmitri Burago.
+
+\begin{pr}
+Let $\gamma$ be a closed space curve with curvature at most 1.
+Show that $\gamma$ cannot be filled by a disc with area less than $\pi$.
+\end{pr}
+
 
 As you can see from the following problem, the 3-dimensional analog of this statement does not hold.
 
 \begin{pr}
 Construct a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
 with all the principal curvatures between $-1$ and $1$
-such that it does not surround a ball of radius 1.
+such that it does not surround a ball of radius~1.
 \end{pr}
 
 Such an example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
@@ -779,7 +788,7 @@ Choose $\eps>0$.
 Let us construct a set $X'\subset X$ 
  and a collection of paths $\alpha_0,\dots,\alpha_n$ such that 
 \begin{enumerate}[(i)]
-\item the total length of $\alpha_i\backslash X$ is at most $\eps$,
+\item the total length of $\alpha_i\setminus X$ is at most $\eps$,
 \item the set $X'$ is a union of a finite collection of closed connected sets $X_0,\dots,X_n$,
 \item diameter of each $X_i$ is at most $\eps$,
 \item $x\in\alpha_0$, $y\in\alpha_n$, and
@@ -824,7 +833,7 @@ Namely the following question is open:
 
 \begin{pr}
 Let $x,y$ be two points in a compact connected subset $X\subset \RR^3$. 
-Is it always possible to connect $x$ and $y$ by a path $\alpha$ such that the complement $\alpha\backslash X$ has arbitrary small length?
+Is it always possible to connect $x$ and $y$ by a path $\alpha$ such that the complement $\alpha\setminus X$ has arbitrary small length?
 \end{pr}
 
 
@@ -894,12 +903,6 @@ Denote by $\mathfrak{C}$ the space of all closed convex curves in the plane equi
 Recall that $\mathfrak{C}$ is locally compact.
 In particular, by the Baire theorem, a countable intersection of everywhere dense open sets is everywhere dense.
 
-\begin{wrapfigure}{o}{41 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-116}
-\end{wrapfigure}
-
 Note that if a curve $\gamma\in\mathfrak{C}$ 
 has nonzero second derivative at some point $p$,
 then it lies between two circles with one of them tangent to the other from inside at $p$.
@@ -909,13 +912,19 @@ It is straightforward to check that there is $\eps>0$ such that
 the Hausdorff distance from any convex curve $\gamma$ squeezed between the circles 
 to any convex $n$-gon is at least $\frac{\eps}{n^{100}}$.
 
+\begin{wrapfigure}{o}{41 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-116}
+\end{wrapfigure}
+
 Choose a countable dense set of convex polygons $\mathfrak{p}_1,\mathfrak{p}_2,\dots$ in $\mathfrak{C}$.
 Denote by $n_i$ the number of sides in $\mathfrak{p}_i$.
 For any positive integer $k$,
 consider the set $\Omega_k\subset\mathfrak{C}$ defined by 
 \[\Omega_k
 =
-\set{\xi\in \mathfrak{C}}{|\xi-\mathfrak{p}_i|_{H}<\tfrac1{k\cdot n_i^{100}}\quad\text{for some}\quad i},\]
+\set{\xi\in \mathfrak{C}}{\min_i\{|\xi-\mathfrak{p}_i|_{H}\}<\tfrac1{k\cdot n_i^{100}}},\]
 where $|{*}-{*}|_H$ denotes the Hausdorff distance 
 
 From the above we get that $\gamma\notin\Omega_k$ for some $k$. 
