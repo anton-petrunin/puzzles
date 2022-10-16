@@ -1,4 +1,5 @@
 settings.render=0;
+
 import solids;
 import three;
 size(3cm,0);

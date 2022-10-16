@@ -1,4 +1,5 @@
 list-of-files.txt
+00README.XXX
 problems.tex
 problems.bbl
 problems.sty
@@ -12,6 +13,14 @@ asy/kedra.eps
 asy/kedra-torus.eps
 asy/tent.eps
 asy/thurston-cube.eps
+asy/gutter.pdf
+asy/cube.pdf
+asy/P213.pdf
+asy/dehn-twist.pdf
+asy/kedra.pdf
+asy/kedra-torus.pdf
+asy/tent.pdf
+asy/thurston-cube.pdf
 mppics/pic-102.mps
 mppics/pic-104.mps
 mppics/pic-106.mps
@@ -81,4 +90,5 @@ mppics/pic-905.mps
 mppics/pic-907.mps
 problems.ind
 lib/post1222167.html
-pics/by-sa.eps
+pics/by-sa.pdf
+cover/amr-small.png

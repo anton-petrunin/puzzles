@@ -204,7 +204,6 @@ Changing the sign of $\ell$, we get that, the $h$-vector is the same for the rev
 that is,
 \[h_k=h_{m-k}\quad\text{for all}\quad k.
 \leqno({*})\]
-for any $k$.
 
 The identities $({*})$ for all $k$ are called the Dehn--Sommerville equations.
 They give a complete list of linear equations for $h$-vectors (and therefore $f$-vectors) of simple polyhedrons.
@@ -509,22 +508,21 @@ The problem was suggested by Greg Kuperberg.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Geodesic loop.}
-Suppose that such a loop exists; denote it by $\gamma$ and let $v$ be its base vertex.
+Let $\gamma$ be a geodesic from vetrex to vertex;
+denote by $v$ its midpoint.
 
-Denote by $\xi$ and $\zeta$ the directions of exit and the entrance of the loop.
-Let $\alpha$ be the angle between $\xi$ and $\zeta$
-measured in the tangent cone to the surface of the cube at $v$.
-
-Note that $\alpha=\tfrac\pi2$.
-It can be seen from the Gauss--Bonnet formula since each vertex of the cube has curvature $\tfrac\pi2$.
-Alternatively, it can be proved by unfolding $\gamma$ on the plane.
-
-It follows that there is a rotational symmetry of the cube with order 3 that fixes $v$ and sends $\xi$ to $\zeta$.
-The latter leads to a contradiction.
+Show that there is symmetry of the cube that fix $v$, reverts $\gamma$ and moves all the vertices of the cube.
+Conclude that the endpoints of $\gamma$ are different.
 \qeds
 
-The problem suggested by Jaros{\l}aw K\k{e}dra; 
-The same idea can be used to solve the following harder problems.
+I learned this problem from Jaros{\l}aw K\k{e}dra; 
+it was rediscovered independently by
+Diana Davis,
+Victor Dods,
+Cynthia Traub,
+and Jed Yang \cite{DDTY}.
+The presented solution is taken from the paper of Serge Troubetzkoy \cite{troubetzkoy}.
+This idea can be used to solve the following harder problems.
 
 \begin{pr}
 Show the same for the surface of $n$-dimensional cube, $n\ge 4$.
@@ -534,9 +532,6 @@ Show the same for the surface of $n$-dimensional cube, $n\ge 4$.
  Show the same for the surface of the tetrahedron, octahedron and icosahedron.
 \end{pr}
 
-%The same statement holds for tetrahedron, octahedron and icosahedron.
-%In this case $\alpha$ is a multiple of $\tfrac\pi3$; it implies existence of rotational symmetry of which fix $v$ and sends $\xi$ to $\zeta$ and leads to a contradiction the same way.
-
 For the dodecahedron such loops exist;
 \begin{figure}[!ht]
 \vskip0mm
@@ -545,7 +540,7 @@ For the dodecahedron such loops exist;
 \end{figure}
 a development of one example is on the diagram.
 Vertices of an inscribed tetrahedron are circled.
-A classification of all such loops is fund by Jayadev S. Athreya, David Aulicino, and W. Patrick Hooper \cite{athreya-aulicino-hooper}.
+A classification of all such loops is found by Jayadev S. Athreya, David Aulicino, and W. Patrick Hooper \cite{athreya-aulicino-hooper}.
 
 These and related problems are discussed by Dmitry Fuchs \cite{fuchs-2016}.
 
@@ -647,7 +642,7 @@ h_i&=h_{m-i},
 \\
 f_1&=h_1+2\cdot h_2+\dots+m\cdot h_m,
 \\
-f_2&= h_2+3\cdot h_3+\dots+\tbinom m 2\cdot h_m,
+f_2&= h_2+3\cdot h_3+\dots+\tbinom m 2\cdot h_m.
 \end{align*}
 Observe that $h_i\ge 1$; together with the identities above it implies that
 \[f_2> \tfrac{m-2}4\cdot f_1.

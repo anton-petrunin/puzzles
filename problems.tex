@@ -1,8 +1,8 @@
 %\RequirePackage{snapshot}
 \documentclass[twoside]{book}
 
-%\newcommand{\arxiv}[2]{#1} %for arxiv
-\newcommand{\arxiv}[2]{#2} %for kdp
+\newcommand{\arxiv}[2]{#1} %for arxiv
+%\newcommand{\arxiv}[2]{#2} %for kdp
 
 \usepackage{problems}
 \usepackage[colorlinks=true,
@@ -25,13 +25,79 @@ pdfauthor={Anton Petrunin},
 \begin{document}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
-\title{PIGTIKAL}
-\subtitle{(puzzles in geometry\\
-that I know and love)}
-\author{Anton Petrunin}
-\date{}
-\maketitle
+%\title{\huge PIGTIKAL}
+%\subtitle{(puzzles in geometry\\
+%that I know and love)}
+%\author{\Large Anton Petrunin}
+%\date{}
+%\maketitle
 
+\begin{titlepage}
+\fontfamily{pbk}\selectfont  
+    \vspace*{4.5\baselineskip}
+    \centering
+
+\centering
+\vspace*{3mm}
+{\huge PIGTIKAL} \\[0em]
+{\huge (puzzles in geometry\\
+that I know and love)}\\[14mm]
+{\Large Anton Petrunin} 
+\par
+\vspace*{55mm}
+{\large Association for Mathematical Research\\[0mm]
+Monographs Volume 2}
+\par
+\vspace*{14mm}
+\includegraphics[angle=0, scale=.17]{cover/amr-small.png}
+\end{titlepage}
+
+\noindent
+Anton Petrunin\\
+Department of Mathematics\\
+The Pennsylvania State University\\
+University Park, PA 16802\\
+USA\\[20mm]
+\noindent
+AMR Monographs\\
+Editorial Board:
+
+\qquad George Andrews
+
+\qquad Colin Adams
+
+\qquad 
+Eric Friedlander
+
+\qquad 
+Robert Ghrist
+
+\qquad 
+Joel Hass
+
+\qquad 
+Robion Kirby
+
+\qquad 
+Alex Kontorovich
+
+\qquad 
+Sergei Tabachnikov\\
+[30mm]
+\noindent{\includegraphics[scale=0.5]{pics/by-sa}
+\vspace*{1mm}
+\\
+Copyright © 2022 by Anton Petrunin\\
+This work is licensed under a CC BY-SA 4.0 license\\
+To view a copy of this license, visit:\\
+\texttt{https://creativecommons.org/licenses/by-sa/4.0/legalcode}\\
+\null\vfill
+\noindent %ISBN : 979-8694260817\\
+Association for Mathematical Research
+
+\qquad Davis, CA; Jenkintown PA\\
+[5mm]
+\noindent Cover design: Robert Ghrist
 
 
 \thispagestyle{empty}
@@ -76,12 +142,14 @@ Some problems are marked by $\circ$, $*$, $+$ or $\sharp$.
 I want to thank everyone who helped me;
 here is an incomplete list:
 Stephanie Alexander,
+Ilya Alexeev,
 Miroslav Ba\v{c}\'{a}k, 
 Christopher Croke,
 Bogdan Georgiev,
 Sergei Gelfand,
 Jouni Luukkainen,
 Alexander Lytchak,
+Andrei Malyutin, 
 Rostislav Matveyev, 
 Dmitri Panov, 
 Peter Petersen, 
@@ -102,14 +170,6 @@ NSF grants DMS
 2005279,
 and Simons Foundation grants 
 245094 and 584781.
-
-\null\vfill\noindent{\includegraphics[scale=0.5]{pics/by-sa}
-\vspace*{1mm}
-\\
-\hbox{\parbox{1\textwidth}
-{\textit{PIGTIKAL (puzzles in geometry that I know and love)} by Anton Petrunin is licensed under CC BY-SA 4.0.
-To view a copy of this license, visit
-\texttt{https://creativecommons.org/licenses/by-sa/4.0}}}}
 
 
 \include{curves}

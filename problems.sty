@@ -11,6 +11,11 @@
 \usepackage{xfrac}
 \usepackage{gensymb}%degree
 
+\usepackage{epstopdf}
+\epstopdfsetup{
+    suffix=,
+}%removes -eps-converted-to
+
 %\pdfminorversion=3
 
 \pdfminorversion=7 %removes worning "found PDF version <1.7>, but at most version <1.5> allowed"
@@ -20,7 +25,7 @@
 \newcommand{\subtitle}[1]{%
 \posttitle{%
 \par\end{center}
-\begin{center}#1\end{center}
+\begin{center}\huge #1\end{center}
 \vskip0.5em}%
 }
 
@@ -202,7 +207,6 @@ english]{babel}
 
 \let\oldcdot\cdot
 \def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
-
 
 
 \hyphenation{ 

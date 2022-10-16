@@ -302,15 +302,19 @@ If $\Sigma$ is an annulus, then the same argument works except we have to choose
 In this case $\tilde \Sigma$ is a strip between two parallel lines in the plane, see the diagram.
 \qeds
 
-The problem was suggested by Rostislav Matveyev.
-It is instructive to solve the following problem.
+Note that if the surface has an empty boundary, then the answer is different:
 
 \begin{pr}
 Construct a composition of positive Dehn twists on a compact oriented surface without boundary that is homotopic to the identity. 
 \end{pr}
 
+I learned the problem from Rostislav Matveyev.
+The described construction was given by Hamish Short and Bert Wiest \cite{short-wiest} and attributed to William Thurston.
 
-
+It turns out that there is no upper bound on the length of the product.
+Namely, there is a compact oriented surface $\Sigma$ with a nonempty boundary and a homeomorphism $f\:\Sigma\to \Sigma$ that does not move boundary points such that $f$ is homotopic relative to the boundary to an arbitrary long product of positive Dehn twists.
+Such an example was constructed by Refik İnanç Baykur and Jeremy Van Horn-Morris \cite{baykur-vanhornmorris};
+see also \cite{baykur-monden-vanhornmorris}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Conic neighborhood.}
@@ -355,19 +359,18 @@ The problem is due to Kyung Whan Kwun \cite{kwun}.
 Observe that it is possible to draw an arbitrary tight knot 
 while keeping it smoothly embedded at all times including the last moment.\qeds
 
-
-\begin{wrapfigure}[6]{r}{50 mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-716}
-\end{wrapfigure}
-
 This problem was suggested by Greg Kuperberg.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \parbf{Stabilization.}
 The example can be guessed from the diagram.
+
+\begin{wrapfigure}[6]{r}{50 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-716}
+\end{wrapfigure}
 
 The two sets $K_1$ and $K_2$ are subspaces of the plane, 
 each one being a closed annulus with two attached line segments.
@@ -410,7 +413,13 @@ Choose a smooth increasing function $\phi\:\RR_{\ge 0} \to\RR$ such that
 $\phi(r)\z=r$
 for $r\le 1$ and $\phi(r)\to 2$ as $r\to\infty$.
 
-{
+Equip $\RR^m$ with polar coordinates $(u,r)$, 
+where $u\in\mathbb{S}^{m-1}$, $r\z\ge 0$.
+Consider a homeomorphism $\Phi$ from $\RR^m$ to an open ball of radius $2$
+defined by 
+\[\Phi(u,r)\z=(u,\phi(r)).\]
+
+
 
 \begin{wrapfigure}{o}{41 mm}
 \vskip-0mm
@@ -419,11 +428,6 @@ for $r\le 1$ and $\phi(r)\to 2$ as $r\to\infty$.
 \vskip0mm
 \end{wrapfigure}
 
-Equip $\RR^m$ with polar coordinates $(u,r)$, 
-where $u\in\mathbb{S}^{m-1}$, $r\z\ge 0$.
-Consider a homeomorphism $\Phi$ from $\RR^m$ to an open ball of radius $2$
-defined by 
-\[\Phi(u,r)\z=(u,\phi(r)).\]
 Set 
 \[
 f(x)=\left[
@@ -434,9 +438,6 @@ f(x)=\left[
 \end{aligned}
 \right.
 \]
-
-}
-
 It remains to observe that $f\:\RR^m\to\RR^m$ is a solution.
 \qeds
 

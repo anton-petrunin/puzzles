@@ -44,15 +44,17 @@ The \emph{closed convex hull} of a subset $K\subset X$ is defined as the interse
 
 \begin{pr}
 Let $X$ be complete length $\mathop{\rm CAT}(0)$-space and $K\subset X$ be a compact subset.
-Is it true that closed  convex hull of $K$ is compact?
+Is it true that the closed convex hull of $K$ is compact?
 \end{pr}
 
 
-Note that the space is not assumed to be locally compact; otherwise the statement is evident.
-I believe there is a counterexample, maybe even in case of negatively pinched curvature (in the sense of Alexandrov).
+Note that the space is not assumed to be locally compact; otherwise, the statement is evident.
+I believe there is a counterexample, maybe even with negatively pinched curvature (in the sense of Alexandrov).
+
+The closed convex hull of a compact set (in particular of a three-point set) might look ugly even in a smooth 3-dimensional manifold; if doubt, check the note of Alexander Lytchak and the author \cite{lytchak-petrunin}.
 
 This problem was mentioned by Mikhael Gromov \cite[6.B$_1\text{(f)}$]{gromov-asymptotic}
-and restated by Eva Kopeck\'a and Simeon Reich in \cite[see][]{kopecka-reich}, 
+and restated by Eva Kopeck\'a and Simeon Reich \cite{kopecka-reich}, 
 but the problem seems to be known in mathematical folklore for a long time. 
 
 
@@ -60,32 +62,34 @@ but the problem seems to be known in mathematical folklore for a long time.
 \subsection*{Two-convexity}
 \label{Two-convexity}
 
-Note that an open connected set $\Omega\subset\mathbb R^n$ is convex (in the usual sense) if together with two sides of triangle $\Omega$ contains whole triangle.
+Note that an open connected set $\Omega\subset\mathbb R^n$ is convex (in the usual sense) if together with two sides of triangle $\Omega$ contains the whole triangle.
 This observation motivates the definition of two-convexity used in the following problem.
 
 
 \begin{pr}
-Let $\Omega$ be a simply connected open set in $\mathbb R^n$.
+Let $\Omega$ be a simply-connected open set in $\mathbb R^n$.
 Assume that $\Omega$ is two-convex; that is, if 3 faces of arbitrary 3-simplex belong to $\Omega$, then the whole simplex lies in $\Omega$.
 
-Is it true that any component of intersection of $\Omega$ with any 2-plane is simply connected?
+Is it true that any component of the intersection of $\Omega$ with any 2-plane is simply-connected?
 \end{pr}
 
 
 If the boundary of $\Omega$ is a smooth hypersurface then the answer is ``yes''.
 Indeed, the above property implies that at most one principle curvature of the boundary is negative.
 Then the statement follows easily from a Morse-type argument \cite[see Lefschetz theorem in Section~$\tfrac12$ in][]{gromov-SGMC}.
-This argument, shows that any component of intersection of $\Omega$ with any affine subspace (not necessary 2-dimensional) is simply connected.
-By the following example, a general 2-convex open sets does not satisfy the latter property.
+This argument shows that any component of the intersection of $\Omega$ with any affine subspace (not necessarily 2-dimensional) is simply-connected.
+By the following example, a general 2-convex open set does not satisfy the latter property.
 
-The answer is ``yes'' if $n=3$; in this case one can mimic the Morse-type argument;
+The answer is ``yes'' if $n=3$; in this case, one can mimic the Morse-type argument;
 it also follows from \cite[4.5.2 in][]{AKP-invitation}.
 
-The statement would follow if one could approximate any $\Omega$ by two-convex domains with smooth boundary. However, the example below shows that such approximation does not exist for $n\ge 4$.
+The statement would follow if one could approximate any $\Omega$ by two-convex domains with smooth boundaries.
+However, the example below shows that such an approximation does not exist for $n\ge 4$.
 
 
-\parit{Example.} We will construct a two-convex simply connected open set $\Omega$ in $\mathbb R^4$ such that intersection $L_{t_0}$ of $\Omega$ with some hyperplane is not simply connected.
-(Note that this not a counterexample;
+\parit{Example.}
+We will construct a two-convex simply connected open set $\Omega$ in $\mathbb R^4$ such that intersection $L_{t_0}$ of $\Omega$ with some hyperplane is not simply-connected.
+(Note that this is not a counterexample;
 it only shows that it is impossible to prove it using smoothing, as indicated in the comments.)
 
 Set 
@@ -94,7 +98,7 @@ Let $\Pi'$ be the image of $\Pi$ under a generic rotation of $\mathbb R^4$,
 say $(x,y,z,t)\z\mapsto(z,t,x,y)$.
 
 Note that $\Pi$ is open and two-convex.
-Therefore $\Omega=\Pi\cap \Pi'$ is also open two-convex set.
+Therefore $\Omega=\Pi\cap \Pi'$ is also an open two-convex set.
 Note that we can choose coordinates so that $\Omega$ is an epigraph for a function $f\colon\mathbb R^3\to\mathbb R$ like
 $$f=\max\{\alpha_1-\beta_1^2,\alpha_2-\beta_2^2 \},$$
 where $\alpha_i$ and $\beta_i$ are linear functions.
@@ -104,22 +108,24 @@ Let $L_{t_0}$ be the intersection of $\Omega$ with hyperplane $t=t_0$;
 it is a complement of two convex parabolic cylinders in general position. 
 If these cylinders have a point of intersection then $\pi_1 L_{t_0}=\mathbb Z$.
  
-In particular, the function $f$ cannot be approximated by smooth functions which Hessian has at most one negative eigenvalue value at all points.
+In particular, the function $f$ cannot be approximated by smooth functions such that their Hessians have at most one negative eigenvalue value at all points.
  
 \subsection*{Homeomorphism of torus}
 
-Let $\TT$ denotes the 2-dimensional torus.
+Let $\TT$ denote the 2-dimensional torus.
 
-A homeomorphism $h\:\TT\to \TT$ is called \emph{simple} if it supported on en embedded open disc;
+A homeomorphism $h\:\TT\to \TT$ is called \emph{simple} if it is supported on an embedded open disc;
 that is, there is an embedded open disc $\Delta\subset \TT$ such that $h$ is identity outside of $\Delta$.
 
-The \emph{disc norm} of a homeomorphism $h\:\TT\to \TT$ is defined as the least number simple homeomorphisms $h_1,\dots,h_n$ such that
+The \emph{disc norm} of a homeomorphism $h\:\TT\to \TT$ is defined as the least number of simple homeomorphisms $h_1,\dots,h_n$ such that
 \[h=h_1\circ\dots\circ h_n.\]
 
 \begin{pr}
-Is there a homeomorphism of the 2-dimensional torus with arbitrary large finite disc norm?
+Is there a homeomorphism of the 2-dimensional torus with an arbitrary large disc norm?
 \end{pr}
-I learned this problem from Dmitri Burago.
+
+Analogous questions for cylinder and sphere are solved, but for M\"obius band is open.
+This problem is discussed in by Dmitri Burago, Sergei Ivanov, and Leonid Polterovich \cite{BIP};
 
 \subsection*{Open projection}
 
@@ -161,26 +167,25 @@ Is it true that $\mathbb{B}^n$ is $\mathrm{CAT}(0)$ for any $n$?
 
 The answer is yes for $n\le 3$.
 While the case $n=2$ is trivial.
-The case $n=3$ follows from the theorem of Ruth Charney and Michael Davis about branched covering of 3-sphere \cite{charney-davis};
+The case $n=3$ follows from the theorem of Ruth Charney and Michael Davis about branched coverings of 3-sphere \cite{charney-davis};
 another proof is given by Dmitri Panov and the author \cite{panov-petrunin-ramification}.
 
 The space $\mathbb{B}^n$ has plenty of convex functions that can be constructed the following way:
-given $n$ distinct points in $\CC$ (that is, an element of $\mathbb{W}^n$) consider cycle $z$ in its complement.
-Consider the function $\mathbb{B}^n\to \RR$  that returns greatest lower bound on curves that realize of $z$. 
+given $n$ distinct points in $\CC$ (that is, an element of $\mathbb{W}^n$) consider a circle $z$ in its complement.
+Consider the function $\mathbb{B}^n\to \RR$  that returns the greatest lower bound of lengths of closed curves that homotopic of $z$. 
 This construction can be used to show that there is no geodesic loops in $\mathbb{B}^n$;
 in order to show that $\mathbb{B}^n$ is $\mathrm{CAT}(0)$ one has to show that there are no geodesic diangles.
-This construction is inspired by the argument given by Ian Agol \cite{agol-braid} that provides an affirmative answer to a corollary from the conjecture. 
-
+This construction is inspired by the argument given by Ian Agol \cite{agol-braid} which provides an affirmative answer to a corollary from the conjecture. 
 
 \subsection*{Quotients of Hilbert space}
 
-\begin{pr} Suppose $R$ is a compact simply connected Riemannian manifold that is isometric to a quotient of the Hilbet space by group of isometris (or more generally $R$ is the target of a Riemannian submersion from a Hilbet space).
+\begin{pr} Suppose $R$ is a compact simply-connected Riemannian manifold that is isometric to a quotient of the Hilbert space by a group of isometris (or more generally $R$ is the target of a Riemannian submersion from a Hilbert space).
 Is it true that $R$ is isometric to a double quotient?
-That is, is it true that $R$ is a quotient of compact Lie group $G$ with bi-invariant metric by a group of isometries?
+That is, is it true that $R$ is a quotient of compact Lie group $G$ with a bi-invariant metric by a group of isometries?
  
 \end{pr}
 
-Any double quotient can appear as a quotient of the Hilbert space by group of isometries.
+Any double quotient can appear as a quotient of the Hilbert space by a group of isometries.
 The following proof is taken from \cite{lebedeva-petrunin-zolotov}; it was suggested by Alexander Lytchak.
 Another proof follows from the construction of Chuu-Lian Terng and Gudlaugur Thorbergsson given in \cite[Section 4]{terng-thorbergsson}.
 
@@ -196,16 +201,16 @@ where $\beta_i\in G$ and $(\beta_0,\beta_n)\in H<G\times G$.
 Denote by $\rho_n$ the product metric on $G^n$ rescaled with factor $\sqrt{n}$.
 Note that the quotient $(G^n,\rho_n)/(H\times G^{n-1})$ is isometric to $G/\!\!/H\z=(G,\rho_1)/\!\!/H$.
 Let $\phi_n\:(G^n,\rho_n)\to G/\!\!/H$ be the corresponding quotient map; 
-clearly $\phi_n$ is a submetry. 
+clearly, $\phi_n$ is a submetry. 
 
 As $n\to\infty$ the curvature of $(G^n,\rho_n)$ converges to zero and its injectivity radius goes to infinity.
-Therefore the ultra-limit of $(G^n,\rho_n)$ with marked identity element is a Hilbert space $\HH$ and the submetries $\phi_n$ ultra-converge to a submetry $\phi\:\HH\to G/\!\!/H$.
+Therefore the ultralimit of $(G^n,\rho_n)$ with marked identity element is a Hilbert space $\HH$, and the submetries $\phi_n$ ultraconverge to a submetry $\phi\:\HH\to G/\!\!/H$.
 
 
 \subsection*{Nested convex surfaces}
 
 \begin{pr}
-Describe the Riemannian metrics on $\mathbb{S}^n$ that are isometric to a smooth nested convex surfaces;
+Describe the Riemannian metrics on $\mathbb{S}^n$ that are isometric to smooth nested convex surfaces;
 that is, a complete smooth convex hypersurface in a complete smooth convex hypersurface in ... in a Euclidean space.
 \end{pr}
 
@@ -214,34 +219,30 @@ If $n=2$, then by Alexandrov embedding theorem these are all Riemannian metrics 
 Direct calculations show that the metric has \emph{nonnegative cosectional curvature};
 the latter means that at each point the curvature tensor can be expressed as a linear combination of the curvature tensors of $\mathbb{S}^2\times \RR^{n-2}$ with positive coefficients.
 It might happen that any metric with nonnegative cosectional curvature on $\mathbb{S}^n$ is isometric to a nested convex surface.
-If one drops completeness from the definition of nested convex surface
-and assume that the cosectional curvature is strictly positive,
-then we get the answer is yes; see \cite{petrunin-poly}.
-
-
+If one drops completeness from the definition of nested convex surfaces
+and assumes that the cosectional curvature is strictly positive,
+then we get the answer is yes \cite{petrunin-poly}.
 
 \subsection*{Maximal finite subgroups}
 
 \begin{pr}
-Suppose that a group $\Gamma$ acts by isometrically and totally discontinuously on the Euclidean space.
+Suppose that a group $\Gamma$ acts isometrically and totally discontinuously on the Euclidean space.
 Show that $\Gamma$ contains at most $2^n$ maximal finite subgroups up to conjugation.
 \end{pr}
 
 Let $F$ be a maximal finite subgroup in $\Gamma$.
-Note that the fixed points of $F$ is an affine subset of $\mathbb{E}^n$ and it is mapped to a singular set $S_F$ in the quotient space $X=\mathbb{E}^n/\Gamma$.
+Note that the fixed points of $F$ form an affine subset of $\mathbb{E}^n$ and it is mapped to a singular set $S_F$ in the quotient space $X=\mathbb{E}^n/\Gamma$.
 Moreover, (1) a conjugation of $F$ does not change the set $S_F$ and, since $F$ is maximal, (2) $S_F$ is a \emph{simple} singular set;
-that is, $S_F$ does not have a proper singular subsets.
+that is, $S_F$ does not have a proper singular subset.
 So instead of counting subgroups up to conjugation, we may count simple singular sets in $X$.
 
-It is expected that the maximal number of simple singular set appears if all of them have dimension 0;
+It is expected that the maximal number of simple singular sets appears if all of them have dimension 0;
 that is, each set $S_F$ is an isolated point in $X$.
 If this is indeed true, then the statement would follow.
 The latter was shown by  Nina Lebedeva \cite{lebedeva};
 she proved that the number of such points indeed can not exceed $2^n$.
-This is done by modifying a solution of the following problem of Paul Erdős given by Ludwig Danzer and Branko Gr{\"u}nbaum \cite{danzer-guenbaum}.
-\emph{Show that one can chose at most $2^m$ points in $\mathbb{E}^m$ such that any triangle with the vertexes in the chosen points is acute or right.}
-
-
+This is done by modifying a solution to the following problem of Paul Erdős given by Ludwig Danzer and Branko Gr{\"u}nbaum \cite{danzer-guenbaum}.
+\emph{Show that one can choose at most $2^m$ points in $\mathbb{E}^m$ such that any triangle with the vertexes in the chosen points is acute or right.}
 
 \subsection*{Zero-curvature along geodesics}
 
@@ -250,29 +251,31 @@ Let $M$ be a surface of genus 2 with a Riemannian metric of nonpositive curvatur
 Show that with probability 1, a random geodesic in $M$ runs into the set of negative curvature.
 \end{pr}
 
+I learned the problem from 
+Dmitri Buragov; it originated from a discussion with Keith Burns, Michael Brin, and Yakov Pesin \cite[see also][]{hertz}.
+It seems that \textit{there are no known examples of $M$ with nonperiodic geodesic that runs in the set of zero curvature}.
+
 \subsection*{Ambrose problem}
 
 \begin{pr}
-Let $(M,g)$ be a simply connected complete Riemannian manifold and $p\in M$.
-Denote by $h$ the pullback of the metric tenor $g$ to the tangent space $\T_pM$ along the exponential map $\exp_p\:\T_pM\z\to M$;
-in general $h$ might be degenerate at some points.
-Does $h$ defines the manifold $(M,g)$ and the point $p$ up to isometry? 
+Let $(M,g)$ be a simply-connected complete Riemannian manifold and $p\in M$.
+Denote by $h$ the pullback of the metric tensor $g$ to the tangent space $\T_pM$ along the exponential map $\exp_p\:\T_pM\z\to M$;
+in general, $h$ might degenerate at some points.
+Does $h$ define the manifold $(M,g)$ and the point $p$ up to isometry? 
 \end{pr}
 
 This simple-looking question was asked a long time ago by Warren Ambrose \cite{ambrose}.
 Affirmative answers were obtained in three cases: (1) in dimension 2, (2) for analytic metrics, and (3) for generic metrics; see \cite{hebla, itoh, ardoy} and the references therein.
 
 
-
-
 \subsection*{Shortcut in a connected set}
 
 \begin{pr}
 Let $p$ and $q$ be a pair of points in a compact connected subset $K\subset \RR^n$.
-Is it possible to connect $p$ to $q$ by a curve $\gamma$ the length of $\gamma\backslash K$ is arbitrary small?
+Is it possible to connect $p$ to $q$ by a curve $\gamma$ the length of $\gamma\setminus K$ is arbitrary small?
 \end{pr}
 
-Be aware that there are examples of compact connected set which contains no nontrivial paths; for example the so-called \emph{pseudoarc}.
+Be aware that there are examples of compact connected sets which contain no nontrivial paths; for example, the so-called \emph{pseudoarc}.
 
 In the case $n=2$, an affirmative answer was obtained by Taras Banakh \cite{banakh}.
 His argument is based on the following claim
@@ -287,17 +290,17 @@ His argument is based on the following claim
 \end{itemize}
 
 Assume that the claim is proved.
-Let us apply it recursively to each $K_i$ choosing much smaller value $\eps$; each time we can assume that the number $n$ is taken to be minimal for the given $\eps$.
+Let us apply it recursively to each $K_i$ choosing a much smaller value $\eps$; each time we can assume that the number $n$ is taken to be minimal for the given $\eps$.
 Consider the closure $L$ of the set of all points $p_i$ and $q_i$ for all iterations; it is a closed subset $L\subset K$.
-By adding to $L$ the line segments $\ell_i$ for all the iterations we obtain a curve connecting $p$ to $q$ that spends arbitrary small length outside of $L$.
+By adding to $L$ the line segments $\ell_i$ for all the iterations we obtain a curve connecting $p$ to $q$ that spends an arbitrary small length outside of $L$.
 Whence the 2-dimensional case follows.
 It remains to prove the claim.
 
 Consider a coordinate grid $\Gamma$ on the plane with step $\tfrac\eps2$.
 Since the intersection $\Gamma\cap K$ is compact, it can be covered by a finite collection of closed line segments $\{I_1,\dots,I_n\}$ in the grid such that the 
-\[\sum_i\length(I_i\backslash K)<\eps.\]
+\[\sum_i\length(I_i\setminus K)<\eps.\]
 
-Take a minimal collection of sets $\{K_i\}$ such that each set $K_i$ is a connected component of intersection of $K$ with a closed square of the grid and the union 
+Take a minimal collection of sets $\{K_i\}$ such that each set $K_i$ is a connected component of the intersection of $K$ with a closed square of the grid and the union 
 \[\biggl(\bigcup_i I_i\biggr)\cup\biggl(\bigcup_j K_j\biggr)\]
 is a connected set containing $p$ and $q$. 
 Observe that the collection $\{K_i\}$ is finite and it satisfies the conditions in the claim, assuming that $K_i$ are ordered correctly.
@@ -307,13 +310,13 @@ the line segments $\ell_j$ can be chosen to lie in the union of $\{I_i\}$.)
 
 \subsection*{Optic fiber}
 
-Suppose that $V$ be body in $\RR^3$ bounded by two plane figures $F_1$ and $F_2$ (the ends) and a smooth surface $\Sigma$ (a tube).
+Suppose that $V$ is a body in $\RR^3$ bounded by two plane figures $F_1$ and $F_2$ (the ends) and a smooth surface $\Sigma$ (a tube).
 Suppose that a light ray that is coming into $V$ thru one end and bouncing with perfect reflection from the interior walls of $\Sigma$ will emerge from the other end with probability 1;
-moreover a light ray that emerges from the interior of $V$, after bouncing $\Sigma$ emerges from one of the ends with  probability 1.
-In this case we say that $V$ is an \emph{optic fiber}.
+moreover, a light ray that emerges from the interior of $V$, after bouncing $\Sigma$ emerges from one of the ends with  probability 1.
+In this case, we say that $V$ is an \emph{optic fiber}.
 
 A small tubular neighborhood of a smooth curve $\gamma\:[a,b]$ with disk ends gives an example of optic fiber.
-A more general example can be constructed along the same lines using any simple close smooth plane curve $(x(\theta),y(\theta))$ instead of circle.
+A more general example can be constructed along the same lines using any plane figure bounded by a smooth curve instead of the disk.
 To do this one has to choose a  parallel normal frame $e_1,e_2$ along $\gamma$ 
 (that is, such that $e_i'(t)\parallel\dot\gamma(t)$ for all $t$) 
 and consider the tube $[a,b]\times\mathbb S^1\hookrightarrow\mathbb R^3$ defined as
@@ -324,7 +327,7 @@ This way we get an \emph{optic fiber} with congruent ends.
 Are there any constructions of optic fibers different from the one described above? In other words:
 
 \begin{pr}
-Is it always possible so slice an optic fibers by planes that cut the walls at right angle?
+Is it always possible to slice an optic fiber by planes that cut the walls at right angle?
 \end{pr}
 
 In particular, 
@@ -335,36 +338,19 @@ Is there an optic fiber with noncongruent ends?
 
 Note that by  Liouville's theorem, it is clear that the ends must have the same area.
 
-If the walls are only assumed to be \emph{piecewise} smooth then one can make an optic fiber with a pair of equidecomposable figures at the ends. (The construction is the same, but one splits tube into few on the way and then rearrange them back together.) 
+If the walls are only assumed to be \emph{piecewise} smooth then one can make an optic fiber with a pair of equidecomposable figures at the ends.
+(The construction is the same, but one splits the tube into few on the way and then rearranges them back together.) 
 
 In dimension 2, a line passing through focal points cuts from confocal ellipses an optic fiber. (I learned it from Arseniy Akopyan.)  I do not know smooth 3D examples of that type.
 
-The question is based on two question posted on mathoverflow \cite{rourke-optic, petrunin-optic}
+The problem is based on two questions posted on mathoverflow \cite{rourke-optic, petrunin-optic}
 
-\subsection*{Sponge Problem}
+\subsection*{Sponge}
 
 \begin{pr}
-Show that there is $\eps_n>0$ such that any open set in $\RR^n$ with volume at most $\eps_n$ admits a lenght-increasing embedding into a unit ball.
+Show that there is $\eps_n>0$ such that any open set in $\RR^n$ with volume at most $\eps_n$ admits a length-increasing embedding into a unit ball.
 \end{pr}
 
 The question was asked by Lary Guth in his thesis \cite{guth-2005}.
 It seems that if one removes the injectivity condition, then the answer is ``yes''.
 At least it is true in the two-dimensional case; a proof is sketched in \cite{petrunin-guth}.
-
-\subsection*{Completion by one point}
-
-\begin{pr}
-Let $S$ be a surface equipped with a Riemannian metric of curvature $\ge 1$;
-denote by $\bar S$ the completion of $S$.
-Suppose that $\bar S\backslash S$ is a one-point set.
-Is it true that $\diam S\le \pi$?
-\end{pr}
-
-This problem was mentioned by Changfeng Gui and Qinfeng Li
-\cite[right after Theorem 1.3]{gui-li}.
-
-It is straightforward to show that all points in $\bar S$ lie on the distance at most $\pi$ from the only point in $p=\bar S\backslash S$.
-In particular, $\diam S\le 2\cdot\pi$.
-Note that Alexandrov comparison around $\bar S$ might fail;
-an example can be found among surfaces with rotational symmetry.
-

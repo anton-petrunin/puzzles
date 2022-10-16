@@ -50,6 +50,20 @@ draw ((1,0)*u{down}..(1+m,-m)*u..{left}(1,0)*u) shifted ((3,0)*u) withcolor 1;
 
 endfig;
 
+beginfig(10);
+save u, p;
+path p[];
+u:=1cm;
+
+p1=circle(origin,1*u);
+
+fill p1 withcolor 1;
+draw p1 penbold;
+
+label (btex {\huge $\bm 2$} etex, origin);
+
+endfig;
+
 linecap:=butt;
 
 beginfig(102);
