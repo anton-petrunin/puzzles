@@ -905,12 +905,18 @@ it looks similar, but actually quite different.
 \begin{pr}
 Consider the set $E$ of all ellipses with unit area centered at the origin of the plane.
 Equip $E$ with the metric defined by 
-\[\rho(A,B)=\area(A\cup B)-\area(A\cap B).\]
+\[\rho(A,B)=\area(A\triangle B),\]
+where $\triangle$ denote symmetric difference; that is, $A\triangle B=(A\setminus B)\cup (B\setminus A)$.
 Let $\hat\rho$ be the length-metric induced by $\rho$.
 Show that $(E,\hat\rho)$ is isometric to a Lobachevsky plane.
 \end{pr}
 
-
+Metrics of the form $\rho(A,B)=\mu(A\bigtriangleup B)$ are very special.
+In particular, they satisfy the so called \index{hypermetric inequality}\emph{hypermetric inequalities}; that is, 
+\[\sum_{i,j}b_i\cdot b_j\cdot \rho(A_i,A_j)\le 0\]
+for any sequence of sets $A_1,\dots A_n$ and any sequence of integers $b_1,\dots,b_n$ such that $\sum_ib_i\z=1$.
+Note that for $n=3$ and $b_1=b_2=-b_3=1$ we get the usual triangle inequality.
+For more on the subject, see \cite{deza-laurent}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Straight geodesics.}
@@ -1068,6 +1074,14 @@ a contradiction.\qeds
 The problem was suggested by Stephan Stadler.
 Here is a simpler, closely related problem.
 
+{
+
+\begin{wrapfigure}{o}{31 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-506}
+\end{wrapfigure}
+
 \begin{pr}
 Show that any Hausdorff continuous family of compact sets in $\RR$ admits a continuous section.
 \end{pr}
@@ -1080,11 +1094,7 @@ The existence of sections for a family of sets parametrized by a topological spa
 The needed examples can be constructed by cutting the upper half-plane along a ``dyadic comb'' shown on the diagram;
 the obtained space should be equipped with the intrinsic metric induced from the $\ell_\infty$-norm on the plane. 
 
-\begin{wrapfigure}{o}{31 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-506}
-\end{wrapfigure}
+}
 
 \medskip
 
