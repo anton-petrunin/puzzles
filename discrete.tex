@@ -41,6 +41,15 @@ Show that
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Piercing the cube}\label{Piercing the cube}
+
+\begin{pr}
+Let $\Pi$ be a $k$-plane that passes thru the center of a unit $n$-cube $Q$.
+Show that $k$-area of the intersection $\Pi\cap Q$ is at least 1.
+\end{pr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Harnack's circles}\label{Harnack}
 
 \begin{pr}
@@ -210,6 +219,8 @@ They give a complete list of linear equations for $h$-vectors (and therefore $f$
 For more on the subject, see \cite[Chapter 9]{gruenbaum}.
 
 
+
+
 \section*{Semisolutions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -268,6 +279,33 @@ Further generalizations lead to the theory of \index{mixed volumes}\emph{mixed v
 The equality $w_1(\Pi)=\pi\cdot (a+b+c)$ still holds for all parallelepipeds, not only rectangular ones.
 In particular, if one parallelepiped 
 lies inside another then the sum of all edges of the first one cannot exceed the sum for the second.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Piercing the cube.}
+Observe that there is an odd increasing 1-Lipschitz function $\phi\:\RR\to(-\tfrac12,\tfrac12)$ that pushes the measure with the density $e^{-\pi x^2}$ to the Lebesgue measure on $(-\tfrac12,\tfrac12)$.
+
+We can assume that $Q=\set{(x_1,\dots,x_n)\in \RR^n}{|x_i|\le \tfrac12}$.
+Applying $\phi$ to each coordinate,
+we get a 1-Lipschitz diffeomorphism from $\RR^n$ to the interior of $Q$ that pushes the measure with the Gauss density 
+$\rho(x_1,\dots,x_n)=e^{-\pi (x_1^2+\dots+x_n^2)}$ to the Lebesgue measure on $Q$.
+
+Note that the inverse image $\Pi'=\phi^{-1}(\Pi)$ is a symmetric $k$-surface in~$\RR^n$.
+Since $\phi$ is $1$-Lipschitz, we get that the area of $\Pi\cap Q$ cannot be smaller than the $\rho$-weighted $k$-area of $\Pi'$.
+Moreover, we have equality for coordinate $k$-planes.
+
+Denote by $S_r$ the sphere of radius $r$ in $\RR^n$ centered at the origin.
+Note that $\Pi'\cap S_r$ intersects each great $(n-k-1)$-sphere in $S_r$.
+By the Crofton formula, we get that $(k-1)$-area of $\Pi'\cap S_r$ cannot be smaller than $(k-1)$-area of the great $(k-1)$-sphere in $S_r$.
+By the coarea formula, the $\rho$-weighted $k$-area of $\Pi'$ cannot be smaller than $\rho$-weighted $k$-area of a $k$-plane that passes thru the origin --- hence the result.
+\qeds
+
+The problem was posed by Anton Good
+and solved by Jeffrey Vaaler \cite{vaaler}.
+The presented solution was found by Arseniy Akopyan, Alfredo Hubard, and Roman Karasev \cite{akopyan-hubard-karasev};
+note that it proves the following more general statement:
+\textit{If $f\:Q \to \RR^{n-k}$ is an odd continuous map, such that $Z = f^{-1}\{0\}$ is smooth $k$-surface, then the $k$-area of $Z$ is at least 1.}
+The map $\RR^n\to Q$ was first used by Gilles Pisier \cite[p. 182]{pisier}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -548,24 +586,23 @@ These and related problems are discussed by Dmitry Fuchs \cite{fuchs-2016}.
 \parbf{Right and acute triangles.}
 Denote by $K$ the convex hull of $\{x_1,\z\dots,x_n\}$.
 Without loss of generality we can assume that $\dim K=m$. 
-Note that for any distinct points $x_i$ and $x_j$
-and any interior point $z$ in $K$
-we have 
-\[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\leqno({*})\]
-Indeed, if $({*})$ does not hold, then $\langle x_j-x_i,z-x_i\rangle<0$.
-Since $z\in K$ we have $\langle x_j-x_i,x_k-x_i\rangle<0$ for some vertex $x_k$.
-That is, $\measuredangle \hinge{x_i}{x_j}{x_k} > \tfrac\pi2$, a contradiction.
-
-Denote by $h_i$ the homothety with center $x_i$ and coefficient $\tfrac12$.
-Set $K_i=h_i(K)$.
-
-{
 
 \begin{wrapfigure}{o}{35 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-907}
 \end{wrapfigure}
+
+Note that for any distinct points $x_i$ and $x_j$
+and any interior point $z$ in $K$
+we have 
+\[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\leqno({*})\]
+Indeed, if $({*})$ does not hold, then $\langle x_j-x_i,z-x_i\rangle<0$.
+Since $z\in K$ we have $\langle x_j-x_i,x_k-x_i\rangle\z<0$ for some vertex $x_k$.
+That is, $\measuredangle \hinge{x_i}{x_j}{x_k} > \tfrac\pi2$, a contradiction.
+
+Denote by $h_i$ the homothety with center $x_i$ and coefficient $\tfrac12$.
+Set $K_i=h_i(K)$.
 
 Let us show that $K_i$ and $K_j$ have no common interior points.
 Assume the contrary; 
@@ -581,8 +618,6 @@ Note that
 \]
 which contradicts $({*})$.
 
-}
-
 Note that $K_i\subset K$ for any $i$;
 it follows that 
 \begin{align*}
@@ -592,12 +627,18 @@ it follows that
 Hence the result follows.
 \qeds
 
-
 The problem was posted by Paul Erd{\H{o}}s \cite{erdos}
 and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-guenbaum}.
 
-Grigori Perelman noticed that the same proof works for a similar problem in Alexandrov spaces \cite{perelman-Erdos};
-the later led to interesting connections with the crystallographic groups \cite{lebedeva}.
+Grigori Perelman noticed that the same proof works for a similar problem in Alexandrov spaces \cite{perelman-Erdos}.
+The later led to interesting connections with the crystallographic groups \cite{lebedeva};
+in particular, it gives an approach to the following open problem.
+
+\begin{pr}
+Let $\Gamma\acts\RR^n$ be a  properly discontinuous isometric action.
+Denote by $m$ the number of maximal finite subgroups $\Gamma$ up to conjugation. 
+Is it true that $m\le 2^n$?
+\end{pr}
 
 
 Surprisingly, the maximal number of points that make only acute triangles grows exponentially with $m$ as well.
