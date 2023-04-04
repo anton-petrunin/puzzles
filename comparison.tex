@@ -284,7 +284,7 @@ For more on Alexandrov geometry see \cite{akp}.
 
 Let $F$ be a smooth map from a closed Riemannian manifold $M$ to a Riemannian manifold $N$.
 The energy functional of $F$ is defined by
-\[E(F)=\int\limits_M |d_xF|^2\cdot d_x\vol_M.\]
+\[E(F)=\int\limits_{x\in M} |d_xF|^2.\]
 We assume that  
 \[|d_xF|^2=\sum_{i,j}a_{i,j}^2,\]
 where $(a_{i,j})$ denote the components 
@@ -454,15 +454,22 @@ The expected solution uses the following relative version of the Bochner formula
 Let $M$ be a Riemannian manifold with boundary $\partial M$.
 If $f\:M\to \RR$ is a smooth function that vanish on $\partial M$,
 then 
-\[\int\limits_M |\Delta f|^2
+\[\int\limits_M \left(|\Delta f|^2
 -|\Hess f|^2
--\langle\mathrm{Ric}(\nabla f),\nabla f\rangle
+-\langle\mathrm{Ric}(\nabla f),\nabla f\rangle\right)
 =\int\limits_{\partial M}
 H\cdot|\nabla f|^2.\]
 Here we denote by $\Ric$ the Ricci curvature of $M$ 
 and by $H$ the mean curvature of $\partial M$, we assume that $H\ge 0$ is the boundary is convex.
-%???REF
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Small-twist}
+\label{Small-twist}
+
+\begin{pr}
+Show that any smooth closed manifold admits an immersion with all normal curvatures less than $\sqrt{3}$ into the unit ball in a Euclidean space of sufficiently large dimension.
+\end{pr}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -529,8 +536,8 @@ that lies on the geodesic starting at $p$ in the outer normal direction to $\Sig
 Note that for fixed $r\ge 0$,
 the points $p_r$ sweep an immersed locally convex hypersurface which we denote by $\Sigma_r$.
 
-\begin{wrapfigure}{r}{61 mm}
-\vskip-4mm
+\begin{wrapfigure}{o}{61 mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-302}
 \end{wrapfigure}
@@ -664,7 +671,7 @@ v(r)&=\vol_m U_r,
 \tfrac d{dr}\tilde v(r)&=\tilde a(r).
 \end{align*}
 Note that
-\begin{align*}\tfrac d{dr}a(r)&\le \int\limits_{\partial U_r} H_r(x)\cdot d_x\vol_{m-1}\le
+\begin{align*}\tfrac d{dr}a(r)&\le \int\limits_{x\in\partial U_r} H_r(x)\le
 \\
 &\le a(r)\cdot \tilde H_r,
 \end{align*}
@@ -944,23 +951,24 @@ respectively.
 
 
 According to Liouville's theorem about phase volume, the identity
-\[\int\limits_{\mathcal{U}}f(v)\cdot d_v\vol_{2\cdot m-1}
+\[\int\limits_{v\in \mathcal{U}}f(v)
 =
-\int\limits_{\mathcal{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} f(\ell'(t))\cdot dt\]
+\int\limits_{\ell\in\mathcal{L}}\ \int\limits_{t\in\RP^1} f(\ell'(t))\]
 holds for any integrable function $f\:\mathcal{U}\to\RR$.
 
 Let $F\:\RP^m\to\RP^m$ be a smooth map.
 Note that up to a multiplicative constant,
 the energy of $F$ can be expressed the following way
-\[\int\limits_{\mathcal{U}} |dF(v)|^2\cdot d_v\vol_{2m-1}
+\[\int\limits_{v\in\mathcal{U}} |dF(v)|^2
 =
-\int\limits_{\mathcal{L}}d_\ell\vol_{2\cdot(m-1)}\cdot\int\limits_{\RP^1} |[d(F\circ \ell)](t)|^2\cdot dt.\]
+\int\limits_{\ell\in\mathcal{L}}\ \int\limits_{t\in\RP^1} |[d(F\circ \ell)](t)|^2.\]
 
 Notice that any noncontractible curve in $\RP^m$ has length at least $\pi$.
 Therefore, by Bunyakovsky inequality, we get
 \begin{align*}
-\int\limits_{\RP^1} \left|[d(F\circ \ell)](t)\right|^2\cdot dt&\ge 
-\tfrac1\pi\cdot \left(\,\int\limits_{\RP^1} \left|[d(F\circ \ell)](t)\right|\cdot dt\right)^2=
+\int\limits_{t\in\RP^1} \left|[d(F\circ \ell)](t)\right|^2
+&\ge 
+\tfrac1\pi\cdot \left(\,\int\limits_{t\in\RP^1} \left|[d(F\circ \ell)](t)\right|\right)^2=
 \\
 &=\tfrac1\pi\cdot (\length F\circ\ell)^2\ge
 \\
@@ -1042,6 +1050,7 @@ The problem illustrates the idea of Eberhard Hopf \cite{hopf-conjugate}
 which was developed further by Leon Green \cite{green}.
 Hopf used it to show that a metric on 2-dimensional torus without conjugate points must be flat
 and Green showed that the average of sectional curvature on a closed manifold without conjugate points cannot be positive.
+For more on the subject see the paper of Mikhael Gromov \cite{gromov2021}.
 
 
 
@@ -1171,7 +1180,7 @@ We can choose the parameter of $\gamma$ so that $p=\gamma(0)$, $p^{\delta\cdot v
 Set $p_n=\gamma(n\cdot r)$, so $p=p_0$ and $p^{\delta\cdot v}=p_{-1}$. 
 Choose a large integer $N$ and set $w_n=\delta\cdot(1-\tfrac nN)\cdot v_{n\cdot r}$, $q_n=p_n^{w_n}$, $x_n=\exp_{p_n} (w_n)$, and $q_n=p_n^{w_n}=s(x_n)$.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \vskip0mm
 \centering
 \includegraphics{mppics/pic-306}
@@ -1239,15 +1248,15 @@ Direct calculations show that
 \begin{align*}
 \delta(f)
 &=
-\int\limits_{\Sigma} 
-\left(-[\Ric(\nu_x)+\kappa_x^2]\cdot f^2(x)+|\nabla f(x)|^2\right)\cdot d_x\area=
+\int\limits_{x\in\Sigma} 
+\left(-[\Ric(\nu_x)+\kappa_x^2]\cdot f^2(x)+|\nabla f(x)|^2\right)=
 \\
-&=\int\limits_{\Sigma} 
-(Lf)(x)\cdot f(x)\cdot d_x\area.\end{align*}
+&=\int\limits_{x\in\Sigma} 
+(Lf)(x)\cdot f(x).\end{align*}
 Since $\Sigma$ is area minimizing we get 
 \[\delta(f)\ge 0\leqno({*}{*})\] for any $f$.
 
-Choose a function $f$ that minimize $\delta(f)$ for all functions such that $\int_\Sigma f^2(x)\cdot d_x\area=1$.
+Choose a function $f$ that minimize $\delta(f)$ for all functions such that $\int_{x\in\Sigma} f^2(x)=1$.
 Note that $f$ is an eigenfunction 
 for the linear operator $L$;
 in particular $f$ is smooth.
@@ -1468,9 +1477,9 @@ k_1\cdot k_2&=\det s\le
 
 
 Applying the Bochner formula for $f$, we get that
-\[\int\limits_D |\Delta f|^2
+\[\int\limits_D \left(|\Delta f|^2
 -|\Hess f|^2
--K\cdot|\nabla f|^2
+-K\cdot|\nabla f|^2\right)
 =\int\limits_{\partial D}
 \kappa\cdot|\nabla f|^2,\]
 where $K$ and $\kappa$ denotes the curvature of $D$ and geodesic curvature of $\partial D$ in $D$ respectively.
@@ -1485,3 +1494,30 @@ If $f$ is not smooth, then one can smooth it using Greene--Wu construction \cite
 
 This estimate was used by Nina Lebedeva and the author \cite{lebedeva-petrunin-curvature}.
 For classical applications of Bochner's formula including the vanishing theorems and estimates for eigenvalues of Laplacian see \cite[][II \S 8 in]{lawson-michelsohn}.
+
+\parbf{Small-twist.}
+Given a positive integer $s$,
+consider the the Clifford torus
+\[\TT^s_{\text{Cl}}=\tfrac1{\sqrt{s}}\cdot\underbrace{\SSS^1\times\dots\times\SSS^1}_\text{$s$ times}\subset\SSS^{2\cdot s-1}\subset\RR^{2\cdot s}.\]
+Note that the normal curvatures of $\TT^s_{\text{Cl}}$ lie in the range from $1$ to $\sqrt{s}$, and $\TT^s_{\text{Cl}}$ comes with a flat metric.
+
+Show that given a positive integer $n$, one can choose large $s=s(n)$
+so that $\TT^s_{\text{Cl}}$ contains a geodesic $n$-dimensional
+subtorus $\TT^n$ with all normal curvatures identically equal to $\sqrt{3\cdot\frac n{n+2}}$;
+here we consider $\TT^n$ as a submanifold in $\RR^{2\cdot s}$.
+
+Now, choose a closed smooth manifold $M$.
+By the Whitney embedding theorem, there is a smooth embedding $M\hookrightarrow\RR^n$ for $n>2\cdot \dim M$.
+Applying rescaling we can assume that normal curvatures of this embeeding arbitrarily small;
+we need it to be smaller than $\sqrt{3}-\sqrt{3\cdot\frac n{n+2}}$.
+Composing this embedding with the natural length-preserving covering map $\RR^n\to \TT^n$, we get the needed immersion of $\iota\:M\to \RR^{2\cdot s}$.
+\qeds
+
+This construction was discovered by Mikhael Gromov \cite[2.A]{gromov2022}.
+In fact the bound $\sqrt{3\cdot\frac n{n+2}}$ is optimal \cite{petrunin2023}.
+The immersion $\iota$ can be easily upgraded to embedding.
+Applying the Nash embedding theorem instead of the Whitney embedding theorem,
+one gets that the induced metric on $M\hookrightarrow\RR^n$ is proportional to any given Riemannian metric $g$ on $M$.
+
+
+

@@ -266,11 +266,7 @@ Observe that if $k$ is large, then $X_k$ is $\delta$-straight.
 \hskip-.9in
 \arxiv{\includegraphics[scale=1]{mppics/pic-111}}{\includegraphics[scale=1]{mppics/pic-110}}
 
-%\begin{figure}[h!]
-%\centering
-%\includegraphics[scale=.65]{mppics/pic-110}
-%\end{figure}
-
+\vskip-.3in
 Another example of $\delta$-straight set is shown; it is constructed in a way similar to Koch snowflake curve, where we used a very obtuse isosceles triangle instead of equilateral.
 The Hausdorff dimension of this example is larger than 1;
 in particular it shows that one can not expect to have a Lipschitz parametrization of $X$.
@@ -408,7 +404,7 @@ such that it does not surround a ball of radius~1.
 
 Such an example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
 [Bing's house constructed in \ncite{bing} will do the job].
-This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet} 
+This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet-1,lagunov-fet-2} 
 and it was generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}.
 
 A similar argument shows that for any Riemannian metric $g$ on the 2-sphere $\mathbb S^2$ 
@@ -451,20 +447,35 @@ Also
 \\
 &\le|\alpha''(t)|.
 \end{align*}
-Since $|\alpha''(t)|$ is the absolute curvature of $\alpha$ at $t$,
-the result follows from $({*})$.\qeds
+Note that $|\alpha''(t)|$ is the absolute curvature of $\alpha$ at $t$.
+Therefore, the result follows from~$({*})$.
+\qeds
 
 The statement was originally proved 
 by Istv\'an F\'ary in \cite{fary};
 several different proofs are discussed by Serge Tabachnikov [see \ncite{tabachnikov} and also 19.5 in \ncite{fuchs-tabachnikov}].
-
-Note that the same argument works for curves in the unit ball.
 
 If instead of the disk we have a region bounded by a closed convex curve $\gamma$, 
 then it is still true that the average curvature of $\alpha$ is at least as big as the average curvature of $\gamma$. 
 The proof was given by Jeffrey Lagarias
 and Thomas Richardson [see \ncite{lagarias-richardson} and also \ncite{nazarov-petrov}].
 
+Our solution can be adapted to the unit ball of arbitrary dimension.
+Further, the same argument together with Liouville's theorem (geodesic flow preserves the phase volume) implies that a closed smooth submanifold in a unit ball has average normal curvatures at least~1.
+Let us formulate two more related problems.
+
+\begin{pr}
+Let $M$ be a closed smooth $n$-dimensional submanifold in the unit ball in $\RR^q$.
+Denote by $H_p$ the mean curvature vector of $M$ at $p$.
+Show that the average value of $|H_p|$ is at lest $n$.
+\end{pr}
+
+\begin{pr}
+Suppose $T$ is a smoothly embedded 2-torus in the unit ball in $\RR^q$.
+Show that the average value of squared normal curvatures of $T$ is at least $\tfrac32$.
+\end{pr}
+
+See also the problem ``Small-twist embedding'' on page \pageref{Small-twist embedding}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Curve on a sphere.} 
@@ -481,7 +492,7 @@ Since each equator intersects $\alpha$, we get $k(u)\ge 2$ for almost all $u$.
 
 Then we get
 \begin{align*}
-2\cdot\ell&=\tfrac14\cdot\int\limits_{\mathbb{S}^2}k(u)\cdot\, d_u\area\ge 
+2\cdot\ell&=\tfrac14\cdot\int\limits_{u\in \mathbb{S}^2}k(u)\ge 
 \\
 &\ge\tfrac12\cdot\area\mathbb{S}^2=
 \\
@@ -496,7 +507,7 @@ and by approximation it holds for all curves.
 
 \parit{A solution by symmetry.}
 Let $\check\alpha$ be a sub-arc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
-Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in $\mathbb{S}^2$. 
+Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in~$\mathbb{S}^2$. 
 
 Let $r$ be a point of intersection of $\alpha$ with the equator with pole at~$z$. 
 Without loss of generality we may assume that $r\in\check\alpha$. 
@@ -530,17 +541,17 @@ to decrease the ratio.
 Hence the problem follows.
 \qeds
 
+\begin{wrapfigure}{r}{25 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-107}
+\end{wrapfigure}
+
 \parit{Alternative solution.}
 Given a unit vector $u$, denote by $x_u$ the point on the inner curve
 with outer normal vector $u$.
 Draw a chord of outer curve that is tangent to the inner curve at $x_u$;
 denote by $r\z=r(u)$ and $l=l(u)$ the lengths of the segments of this chord to the right and to the left of $x_u$, respectively.
-
-\begin{wrapfigure}{r}{25 mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-107}
-\end{wrapfigure}
 
 Arguing by contradiction, assume that $r(u)\z\ne l(u)$ for all $u\in\mathbb{S}^1$.
 Since the functions $r$ and $l$ are continuous,
@@ -550,9 +561,9 @@ $$r(u)<l(u)\ \ \text{for all}\ \ u\in\mathbb{S}^1.\leqno{({*})}$$
 Prove that
 each of the following two integrals 
 \begin{align*}
-\tfrac12\cdot\int\limits_{\mathbb{S}^1}r^2(u)\cdot du
+\tfrac12\cdot\int\limits_{u\in\mathbb{S}^1}r^2(u)
 \quad\text{and}\quad
-\tfrac12\cdot\int\limits_{\mathbb{S}^1}l^2(u)\cdot du
+\tfrac12\cdot\int\limits_{u\in\mathbb{S}^1}l^2(u)
 \end{align*}
 give the area between the curves.
 In particular, 
@@ -579,9 +590,9 @@ as
 
 Applying the area formula for $m$,
 we get 
-$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u^2=1.$$ 
+$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{u\in\mathbb{S}^2} u^2=1.$$ 
 By Bunyakovsky inequality, 
-$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{\mathbb{S}^2} u<1.$$ 
+$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{u\in\mathbb{S}^2} u<1.$$ 
 
 It follows that after a suitable rotation of $\mathbb{S}^2$, 
 the map $m$ decreases the length of the knot.

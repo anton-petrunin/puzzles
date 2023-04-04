@@ -1483,7 +1483,7 @@ endfig;
 beginfig(702)
 save u,p;
 path p[];
-u:=1cm;
+u:=.8cm;
 
 z.b0=(-2,1)*u;
 z.b1=(-1,2.2)*u;

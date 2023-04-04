@@ -320,7 +320,7 @@ It follows that for any $x\in\Sigma$ the function
 \[t\mapsto |x - p_t|
 \quad\text{and, therefore,}\quad
 t\mapsto |x - p_t|_W\] are non-decreasing;
-here $|x - p_t|_W$ stays for the intrinsic distance from $x$ to $p_t$ in $W$.
+here $|x - p_t|_W$ stands for the intrinsic distance from $x$ to $p_t$ in $W$.
 
 
 \begin{wrapfigure}{r}{43 mm}
@@ -342,7 +342,17 @@ From the above,
 $\gamma_t$  coincides with the line segment $[qp_t]$.
 On the other hand, $\gamma_t$ contains $\gamma(t)\in\Sigma$, a contradiction.\qeds
 
-This problem is based on an observation used by Anatoliy Milka in the proof of his (beautiful) generalization of the comparison theorem for convex surfaces \cite{milka-geod}.
+This problem is based on an observation used by Anatoliy Milka in the proof of the following generalization of the comparison theorem for convex surfaces \cite[Theorem 2]{milka-geod}.
+
+\begin{pr}
+Let $W$ be the closed unbounded set formed by a (not necessarily smooth) closed convex surface $\Sigma$ and its exterior points.
+Suppose $\gamma_1\:[0,\ell_1]\to \Sigma$ and $\gamma_2\:[0,\ell_2]\to \Sigma$ are unit-speed minimizing geodesics that start at the same point $p$.
+Set $x_i=\gamma_i(\ell_i)$ and $y_i=p+\ell_i\cdot\gamma_i'(0)$.
+Show that 
+\[|x_1-x_2|_W\le |y_1-y_2|_W,\]
+where $|\  - \ |_W$ stands for the intrinsic distance in $W$.
+\end{pr}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -449,8 +459,8 @@ The function $t\mapsto z$ is concave.
 Parametrize the plane curve $t\mapsto (x(t),y(t))$ by the arc length $s$
 and reparametrize $\gamma$ by $s$.
 
-\begin{wrapfigure}{r}{35 mm}
-\vskip-4mm
+\begin{wrapfigure}{o}{35 mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-208}
 \end{wrapfigure}
@@ -474,14 +484,14 @@ It follows that its second derivative $\gamma''(t)$ is defined almost everywhere
 Since $z(t)$ is concave, we have $z''(t)\le 0$.
 Since $f$ is $\ell$-Lipschitz, $z(t)$ is $\tfrac{\ell}{\sqrt{1+\ell^2}}$-Lipschitz.
 It follows that 
-\[\int\limits_a^b |z''(t)|\le 2\cdot\tfrac{\ell}{\sqrt{1+\ell^2}}.\]
+\[\int\limits_a^b |z''(t)|\cdot dt\le 2\cdot\tfrac{\ell}{\sqrt{1+\ell^2}}.\]
 
 The curvature vector $\gamma''(t)$ is perpendicular to the surface.
 Since the surface has slope at most $\ell$,
 we get 
 \[|\gamma''(t)|\le |z''(t)|\cdot\sqrt{1+\ell^2}.\]
 Hence 
-\[\int\limits_a^b |\gamma''(t)|\le 2\cdot\ell.\qedsin\]
+\[\int\limits_a^b |\gamma''(t)|\cdot dt\le 2\cdot\ell.\qedsin\]
 \medskip
 
 The statement holds for general $\ell$-Lischitz functions,
@@ -566,7 +576,7 @@ Together, $({*}{*})$ and $(\asterism)$ imply that there is $\eps>0$ such that
 \[\ell(t)\ge \frac\eps{t-a}\]
 for sufficiently large $t$.
 By the coarea formula we get 
-\[\area\triangle=\int\limits_a^\infty\ell(t)=\infty;\]
+\[\area\triangle=\int\limits_a^\infty\ell(t)\cdot dt=\infty;\]
 the latter contradicts $(*)$.\qeds
 
 I learned the problem from 

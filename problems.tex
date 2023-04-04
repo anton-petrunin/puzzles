@@ -1,8 +1,7 @@
-%\RequirePackage{snapshot}
 \documentclass[twoside]{book}
 
-%\newcommand{\arxiv}[2]{#1} %for arxiv
-\newcommand{\arxiv}[2]{#2} %for kdp
+\newcommand{\arxiv}[2]{#1} %for arxiv
+%\newcommand{\arxiv}[2]{#2} %for kdp
 
 \usepackage{problems}
 \usepackage[colorlinks=true,
@@ -21,6 +20,8 @@ pdfauthor={Anton Petrunin},
 %\geometry{top=0.9in, bottom=0.9in,left=0.9in, right=0.9in, paperwidth=6in, paperheight=9in}%without bleed
 %\geometry{top=1.025in, bottom=1.025in,inner=.9in, outer=1.025in, paperwidth=6.125in, paperheight=9.25in}%with bleed
 \makeindex
+
+\arxiv{}{\usepackage[x-1a]{pdfx}} 
 
 \begin{document}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
@@ -49,7 +50,7 @@ that I know and love)}\\[14mm]
 Monographs Volume 2}
 \par
 \vspace*{14mm}
-\includegraphics[angle=0, scale=.17]{cover/amr-small.png}
+\includegraphics[angle=0, scale=.17]{cover/amr-small.jpg}
 \end{titlepage}
 
 \noindent
@@ -168,8 +169,10 @@ NSF grants DMS
 0905138,
 1309340,
 2005279,
-and Simons Foundation grants 
-245094 and 584781.
+Simons Foundation grants 
+245094 and 584781,
+and
+Minobrnauki grant 075-15-2022-289.
 
 
 \include{curves}
@@ -181,6 +184,7 @@ and Simons Foundation grants
 \include{topology}
 \include{poly}
 \include{discrete}
+
 %\include{unfinished}
 %\include{open}
 

@@ -5,6 +5,7 @@ The following command will create a local copy of the source code for you.
 
 `git clone https://github.com/anton-petrunin/puzzles.git`
 
+Choose two values of commant `\arxiv` (first lines in `problems.tex`) for kdp or arXiv.
 Go to the created folder and run `pdflatex`, `biber` and `makeindex` few times:
 
 `cd puzzles/`<br/>
