@@ -482,7 +482,7 @@ See also the problem ``Small-twist embedding'' on page \pageref{Small-twist embe
 Let us present two solutions.
 We assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$ that intersects each equator.
 
-\parit{A solution with the Crofton formula.}
+\parit{A solution with Crofton's formula.}
 Given a unit vector $u$, denote by $e_u$ the equator with pole at $u$.
 Let $k(u)$ be the number of intersections
 of $\alpha$ and $e_u$.
@@ -499,7 +499,7 @@ Then we get
 &=2\cdot\pi.
 \end{align*}
 
-The first identity above is called the \index{Crofton formula}\emph{Crofton formula}.
+The first identity above is called \index{Crofton's formula}\emph{Crofton's formula}.
 To prove this formula, start with the case when the curve is formed by one geodesic segment,
 summing up we get it for broken lines
 and by approximation it holds for all curves.
@@ -615,7 +615,7 @@ It seems unknown which convex bodies can be captured by a knot.
 The following problem is quite tricky already.
 
 \begin{pr}
-Show that one can capture some convex bodies in a link.
+Show that one can capture some convex bodies in a knot.
 \end{pr}
 
 The following problem of Abram Besicovitch is closely related \cite{besicovitch-sphere}; it can be solved using spherical Crofton's formula.
@@ -661,7 +661,7 @@ Hence the result follows.\qeds
 
 This problem was proposed by Frederick Gehring \cite[see 7.22 in][]{gehring};
 solutions and generalizations are surveyed in \cite{mateljevic}. 
-The presented solution is attributed to Marvin Ortel in \cite{CJKSW} and it is very close to the solution given by Michael Edelstein and Binyamin Schwarz \cite{edelstein-schwatz}.
+The presented solution is attributed to Marvin Ortel in \cite{CJKSW} and it is close to the solution given by Michael Edelstein and Binyamin Schwarz \cite{edelstein-schwatz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Surrounded area.} The trick is to use the Kirszbraun theorem:
@@ -706,7 +706,7 @@ Choose a sequence of positive numbers $\eps_n$ converging to zero very fast.
 Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\z\to\RR^2$ such that $\gamma_{n+1}$ runs outside of the disk bounded by $\gamma_n$
 and 
 \[|\gamma_{n+1}(t)-\gamma_n\circ f_n(t)|<\eps_n,\]
-for some $\eps_n$-crooked function $f_n$.
+for an $\eps_n$-crooked function $f_n$.
 (It is hard to draw $\gamma_{n+1}$; it runs like crazy back-and-forth almost along $\gamma_n$.)
 
 Denote by $D$ the union of all disks bounded by the curves $\gamma_n$.
@@ -825,7 +825,7 @@ Denote these arcs by $\alpha_0,\dots,\alpha_n$.
 Without loss of generality we may assume that $x\in\alpha_0$ and $y\in\alpha_n$.
 
 Consider a finite graph with vertices labeled by $\alpha_0,\dots,\alpha_n$;
-two vertices $\alpha_i$ and $\alpha_j$ are connected by an edge if there is a connected set $\Theta\subset  X\cap Q_k$ 
+two vertices $\alpha_i$ and $\alpha_j$ are adjacent if there is a connected set $\Theta\subset  X\cap Q_k$ 
 for some $k$ such that $\Theta$ intersects $\alpha_i$ and $\alpha_j$.
 Note that the graph is connected. Therefore we may choose a path from $\alpha_0$ to $\alpha_n$ in the graph.
 
@@ -910,9 +910,8 @@ Denote by $\mathfrak{C}$ the space of all closed convex curves in the plane equi
 Recall that $\mathfrak{C}$ is locally compact.
 In particular, by the Baire theorem, a countable intersection of everywhere dense open sets is everywhere dense.
 
-Note that if a curve $\gamma\in\mathfrak{C}$ 
-has nonzero second derivative at some point $p$,
-then it lies between two circles with one of them tangent to the other from inside at $p$.
+Note that if a curve $\gamma\in\mathfrak{C}$ has nonzero second derivative at a point~$p$,
+then $\gamma$ lies between two circles tangent to each other at $p$.
 
 Fix these two circles.
 It is straightforward to check that there is $\eps>0$ such that 
@@ -943,7 +942,7 @@ is a G-delta dense set.
 Hence the statement follows.\qeds
 
 This problem states that typical convex curves have an unexpected property.
-In fact, this is a very common situation --- it is hard to see the typical objects and these objects often have surprising properties.
+This is common --- it is hard to see the typical objects and these objects often have surprising properties.
 
 For example, as it was proved by
 Bernd Kirchheim, 
