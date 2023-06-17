@@ -1,7 +1,7 @@
 \documentclass[twoside]{book}
 
-\newcommand{\arxiv}[2]{#1} %for arxiv
-%\newcommand{\arxiv}[2]{#2} %for kdp
+%\newcommand{\arxiv}[2]{#1} %for arxiv
+\newcommand{\arxiv}[2]{#2} %for kdp
 
 \usepackage{problems}
 \usepackage[colorlinks=true,
@@ -24,7 +24,7 @@ pdfauthor={Anton Petrunin},
 \arxiv{}{\usepackage[x-1a]{pdfx}} 
 
 \begin{document}
-%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\footnote[1]{}
 
 %\title{\huge PIGTIKAL}
 %\subtitle{(puzzles in geometry\\
@@ -50,7 +50,7 @@ that I know and love)}\\[14mm]
 Monographs Volume 2}
 \par
 \vspace*{14mm}
-\includegraphics[angle=0, scale=.17]{cover/amr-small.jpg}
+\arxiv{\includegraphics[angle=0, scale=.17]{cover/amr-small.png}}{\includegraphics[angle=0, scale=.17]{cover/amr-small.jpg}}
 \end{titlepage}
 
 \noindent
@@ -126,10 +126,10 @@ when the problem was discovered.
 %On the other hand, learning a theory is harder and not as much fun, but if you miss it, then likely you can get help from a friend, so usually it does not stop you.
 
 \parbf{How to read it.}
-Open at a random chapter, make sure you like the practice problem --- if yes try to solve a random problem in the chapter.
+Open a random chapter; make sure you like the practice problem --- if yes try to solve a random problem in the chapter.
 A semisolution is given at the end of the chapter,
 but think before reading,
-otherwise it will not help. 
+otherwise, it will not help. 
 
 Some problems are marked by $\circ$, $*$, $+$ or $\sharp$.
 \begin{itemize}
@@ -203,6 +203,4 @@ Minobrnauki grant 075-15-2022-289.
 
 \end{document}
 
-Fedor Petrov 400
-Jarek Kędra 200
-Fedor Petrov 100
+%MO:Greg Kuperberg/Fedor Petrov/Jarek Kędra/Fedor Petrov 

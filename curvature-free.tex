@@ -3,15 +3,17 @@
 \chaptermark{Curvature-free}
 
 The reader should be familiar 
-with the notions of smooth manifolds, 
-Riemannian metrics and symplectic forms.
+with the notions of
+smooth manifolds, 
+Riemannian metrics,
+and symplectic forms.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Distant involution}
 \label{Distant involution}
 
 \begin{pr}
-Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\mathbb{S}^3\z\to\mathbb{S}^3$ such that $\vol (\mathbb{S}^3,g)$ is arbitrary small and 
+Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\mathbb{S}^3\z\to\mathbb{S}^3$ such that $\vol (\mathbb{S}^3,g)$ is arbitrarily small and 
 \[|x\z-\iota(x)|_g>1\]
  for any $x\in\mathbb{S}^3$.
 \end{pr}
@@ -21,7 +23,7 @@ Construct a Riemannian metric $g$ on $\mathbb{S}^3$ and an involution $\iota\:\m
 \parit{Semisolution.}
 Given $\eps>0$, construct a disk $\Delta$ in the plane with 
 \[\length\partial \Delta<10\ \ \text{and}\ \ \area \Delta<\eps\]
-that admits an continuous involution $\iota$ such that 
+that admits a continuous involution $\iota$ such that 
 \[|\iota(x)-x|\ge 1\]
 for any $x\in\partial \Delta$.
 
@@ -101,7 +103,7 @@ The expected solution requires pseudo-holomorphic curves introduced by Mikhael G
 \subsection*{Volume and convexity\thm}
 \label{Volume and convexity} 
 
-A function $f$ defined on a Riemannian manifold is called convex if for any geodesic $\gamma$, the composition $f\circ\gamma$ is a convex real-to-real function.
+A function $f$ defined on a Riemannian manifold is called convex if, for any geodesic $\gamma$, the composition $f\circ\gamma$ is a convex real-to-real function.
 
 \begin{pr}
 Let $M$ be a complete Riemannian manifold that admits a non-constant convex function. 
@@ -143,7 +145,7 @@ Let $g$ be a Riemannian metric on the sphere $\mathbb{S}^2$.
 Consider the tangent bundle $\T \mathbb{S}^2$ 
 equipped with the induced Sasaki metric $\hat g$.
 Show that
-the space $(\T \mathbb{S}^2, \hat g)$ lies at bounded distance to the ray $\RR_{\ge 0}=[0,\infty)$ in the sense of Gromov--Hausdorff.
+the space $(\T \mathbb{S}^2, \hat g)$ lies at a bounded distance to the ray $\RR_{\ge 0}=[0,\infty)$ in the sense of Gromov--Hausdorff.
 \end{pr}
 
 
@@ -207,7 +209,7 @@ admits a symplectic embedding into the quotient space $(\RR^4,\omega)/\ZZ^2$.
 
 
 \begin{pr}
-Let $M$ and $N$ be complete $m$-dimensional simply connected Riemannian manifolds, and $f\:M\to N$ a smooth map such that 
+Let $M$ and $N$ be complete $m$-dimensional simply-connected Riemannian manifolds, and $f\:M\to N$ a smooth map such that 
 $$|df(v)|\ge |v|$$
 for any tangent vector $v$ of $M$.
 Show that $f$ is a diffeomorphism.
@@ -260,7 +262,7 @@ such that
 \end{pr}
 
 Examples of manifolds satisfying the above condition for some $L$ have been found among the Zoll spheres
-by Florent Balachev, Christopher Croke and Mikhail Katz \cite{balacheff-croke-katz}.
+by Florent Balachev, Christopher Croke, and Mikhail Katz \cite{balacheff-croke-katz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -268,7 +270,7 @@ by Florent Balachev, Christopher Croke and Mikhail Katz \cite{balacheff-croke-ka
 \subsection*{Convex hypersurface}
 \label{Convex hypersurface}
 
-Recall that a subset $K$ of Riemannian manifold is called \index{convex set}\emph{convex} if every minimizing geodesic connecting two  points in $K$ lies completely in $K$. 
+Recall that a subset $K$ of a Riemannian manifold is called \index{convex set}\emph{convex} if every minimizing geodesic connecting two  points in $K$ lies completely in $K$. 
 
 \begin{pr}
 Let $M$ be a totally geodesic hypersurface 
@@ -309,7 +311,7 @@ has probability at most $\eps$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Another distant involution.}
-Let $x\in \mathbb{S}^2$ be a point that minimize the distance $|x-x'|_g$.
+Let $x\in \mathbb{S}^2$ be a point that minimizes the distance $|x-x'|_g$.
 Consider a minimizing geodesic $\gamma$ from $x$ to $x'$.
 We can assume that 
 \[|x-x'|_g=\length \gamma=1.\]
@@ -343,7 +345,7 @@ Christopher Croke conjectured that the optimal bound is $\tfrac4\pi$ and the rou
 Let us indicate how to improve the obtained bound to
 \[\area(\mathbb{S}^2,g)\ge1.\]
 
-Suppose $x$, $x'$, $\gamma$ and $\gamma'$ are as above.
+Suppose $x$, $x'$, $\gamma$, and $\gamma'$ are as above.
 Consider the function
 \[f(z)=\min_t \{\,|\gamma'(t)-z|_g+t\,\}.\]
 Observe that $f$ is 1-Lipschitz.
@@ -370,8 +372,8 @@ Set
 
 Consider the functions $f_i\:Q\to\RR$ defined by
 $$f_i(x)=\min \{1,\dist_{A_i}(x)\}.$$
-Note that each $f_i$ is $1$-Lipschitz, 
-in particular $|\nabla f_i|\le 1$ almost everywhere.
+Note that each $f_i$ is $1$-Lipschitz; 
+in particular, $|\nabla f_i|\le 1$ almost everywhere.
 
 Consider the map
 \[\bm{f}\:x\mapsto(f_1(x),\dots,f_m(x)).\]
@@ -394,7 +396,7 @@ By the area formula, we get
 &=1.
 \end{align*}
 
-In the case of equality we have that $\<\nabla_x f_i,\nabla_x f_j\>=0$ for $i\ne j$ 
+In the case of equality, we have that $\<\nabla_x f_i,\nabla_x f_j\>=0$ for $i\ne j$ 
 and $|\nabla_x f_i|=1$ for almost all $x$.
 It follows then that the map 
 \[\bm{f}\:(Q,g)\z\to (Q,h)\] 
@@ -403,7 +405,7 @@ is an isometry.
 
 This inequality was proved by Abram Besicovitch \cite{besicovitch}.
 It has a number of applications in Riemannian geometry.
-For example using this inequality it is easy to solve the following problem.
+For example, using this inequality it is easy to solve the following problem.
 
 \begin{pr}
 Assume a metric $g$ on $\RR^m$ coincides with the Euclidean metric outside of a bounded set $K$;
@@ -411,9 +413,7 @@ assume further that any geodesic that enters $K$ exits $K$ the same way the Eucl
 Show that $g$ is flat.
 \end{pr}
 
-
-The Besicovitch inequality has a weaker version for Hausdorff measure that holds for any metric on the cube;
-nearly the same proof works.
+There is a weaker version of the Besicovitch inequality that works for the Hausdorff measure for any metric on the cube; nearly the same proof works.
 Here is one of its applications suggested by Stephan Stadler:
 
 \begin{pr}
@@ -468,13 +468,13 @@ Note that for the canonical metric on $\mathbb{S}^2\times\mathbb{S}^2$,
 the form $\omega_0$ is harmonic and self-dual. 
 Since $g$ is close to the standard metric,
 we can assume that $\omega$ is close to $\omega_0$.
-In particular $\lambda_p\ne0$ for any $p\in \mathbb{S}^2\times\mathbb{S}^2$.
+In particular, $\lambda_p\ne0$ for any $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 
 It follows that $\mathrm{J}$ is a pseudo-complex structure for the symplectic form $\omega$ on $\mathbb{S}^2\times\mathbb{S}^2$.
 The Riemannian metric $g'=\lambda\cdot g$ is conformal to $g$ and $\omega(X,Y)=g'(X,\mathrm{J} Y)$ 
 for any two tangent vectors $X,Y$ at one point.
-In this case the $\mathrm{J}$-holomorphic curves are minimal with respect to $g'$;
-in fact, each of them is area minimizing in its homology class. 
+In this case, the $\mathrm{J}$-holomorphic curves are minimal with respect to $g'$;
+in fact, each of them is area-minimizing in its homology class. 
 
 It remains to reparametrize $\mathbb{S}^2\times \mathbb{S}^2$
 so that vertical and horizontal spheres would form pseudo-holomorphic curves in the homology classes of $x\times \mathbb{S}^2$ and $\mathbb{S}^2\times y$.
@@ -540,7 +540,7 @@ Shing-Tung Yau \cite{yau}.
 Choose a point $p\in\mathbb{S}^2$.
 Note that any rotation of the tangent space $\T_p=\T_p(\mathbb{S}^2,g)$
 appears as a holonomy of a loop at $p$;
-moreover the length of such loop can be bounded by a constant, say~$\ell$.
+moreover, the length of such loop can be bounded by a constant, say~$\ell$.
 
 Indeed, fix a smooth homotopy $\gamma_t\:[0,1]\to \mathbb{S}^2$, $t\in[0,1]$ of loops based at $p$ that sweeps out $\mathbb{S}^2$.
 By the Gauss--Bonnet formula, the total curvature of $(\mathbb{S}^2,g)$ is $4\cdot\pi$.
@@ -548,7 +548,7 @@ Therefore any rotation of $\T_p$ appears as the holonomy of $\gamma_t$ for some 
 \[\ell=\max\set{\length\gamma_t}{t\in[0,1]}.\]
 
 Denote by $d$ the diameter of $(\mathbb{S}^2,g)$.
-From the above it follows that for any two unit tangent vectors $v\in\T_p$ 
+From the above, it follows that for any two unit tangent vectors $v\in\T_p$ 
 and $w\in T_q$
 there is a path 
 $\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
@@ -592,14 +592,14 @@ Gluing the opposite faces of the cube, we obtain a 3-dimensional torus with a sm
 
 Since the surface $S$ does not bound in $\TT^3=\mathbb{S}^1\times\mathbb{S}^1\times\mathbb{S}^1$,
 one of the three coordinate projections $\TT^3\to\TT^2=\mathbb{S}^1\times\mathbb{S}^1$
-induces a map of non-zero degree $S\to\TT^2$.
+induces a map of a non-zero degree $S\to\TT^2$.
 It follows that 
 \[\area S\ge  \area(\DD,\phi\cdot [(dx)^2+ (dy)^2]).\]
-For the right choice of the function $\phi$, the right hand side can be made larger than the given number $L$.
+For the right choice of the function $\phi$, the right-hand side can be made larger than the given number $L$.
 Hence the statement follows.
 \qeds
 
-I learned this problem from Dmirti Burago.
+I learned this problem from Dmitri Burago.
 The following problem of Larry Guth \cite{guth} is closely related:
 
 \begin{pr}
@@ -622,12 +622,12 @@ is bounded below by a constant, say $K$.
 
 Given $q\in L$, denote by $v_q \in \T_qM$ the direction of a minimizing geodesic $[qp]$.
 Note that $v_q\notin \mathrm{N}_qL$.
-Moreover there is $\delta=\delta(\eps,K,R)\z>0$ 
+Moreover, there is $\delta=\delta(\eps,K,R)\z>0$ 
 such that for any point $q\in B(p,R)_M\cap L$,
 and any normal vector $n\in \mathrm{N}_qL$,
 we have 
 \[\measuredangle (v_q,n)>\delta.\]
-Otherwise the geodesic in the direction of $n$ would cross $B(p,\eps)_M$.
+Otherwise, the geodesic in the direction of $n$ would cross $B(p,\eps)_M$.
 
 It follows that starting at any point $q\in B(p,R)_M\cap L$ 
 one can construct a unit-speed curve $\gamma$ in $L$ such that 
@@ -646,7 +646,7 @@ that is, $p\in L$ --- a contradiction.
 
 The problem was suggested by Alexander Lytchak.
 
-On the diagram you see an example of an immersion 
+On the diagram, you see an example of an immersion 
 such that one point does not lie in the image of the corresponding normal exponential map.
 It might be interesting to understand what type of subsets can be avoided by such images.
 
@@ -691,11 +691,11 @@ cannot be made arbitrarily small.
 Note that the map $f$ is an open immersion.
 
 Let $h$ be the pullback metric on $M$ for $f\:M\to N$.
-Clearly $h\ge g$.
-In particular $(M,h)$ is complete and the map $f\:(M,h)\to N$ is a local isometry. 
+Clearly, $h\ge g$.
+In particular, $(M,h)$ is complete and the map $f\:(M,h)\to N$ is a local isometry. 
 
 Note that any local isometry between complete connected Riemannian manifolds of the same dimension is a covering map.
-Since $N$ is simply connected, the result follows.
+Since $N$ is simply-connected, the result follows.
 \qeds 
 
 %???
@@ -704,7 +704,7 @@ Since $N$ is simply connected, the result follows.
 \parbf{Volume of tubular neighborhoods.}
 This problem is a direct corollary of the so-called \emph{tube formula} given by Hermann Weyl \cite{weyl}.
 It expresses the volume of the $r$-neighborhood of $M$ as a polynomial $p(r)$;
-the coefficients of $p$, up to a multiplicative constant, are integrals over~$M$ of some quantities called the \emph{Lipschitz--Killing curvatures} --- these are certain scalars which can be expressed in terms of the curvature tensor at the given point.
+the coefficients of $p$, up to a multiplicative constant, are integrals over~$M$ of some quantities called the \emph{Lipschitz--Killing curvatures} --- these are certain scalars that can be expressed in terms of the curvature tensor at the given point.
 The proof is done by straightforward calculations.
 
  
@@ -728,7 +728,7 @@ Assuming we constructed $T_{n-1}$, the tree $T_n$ can be obtained by identifying
 \end{figure}
 
 Take $\eps=\tfrac1{10}$ and fix a large integer $n$.
-Let us construct a metric on the disk $\DD$ with the embedded tree $T_n$ as in $({*})$ such that
+Let us construct a metric on $\DD$ with the embedded tree $T_n$ as in $({*})$ such that
 its diameter and the length of its boundary are less than $1$
 and  
 the distance between any two edges of $T_n$ without a common vertex 
@@ -750,7 +750,7 @@ in such a way that the resulting space is homeomorphic to a disk and the obtaine
 By $({*})$, any null-homotopy of the boundary passes a curve that intersects $n$ different edges of $T_n$.
 By construction this curve is longer than $\tfrac{\eps}{10}\cdot n=\tfrac{1}{100}\cdot n$.
 
-The obtained metric is not Riemannian, but is easy to smooth it while keeping this property.
+The obtained metric is not Riemannian, but it is easy to smooth while keeping this property.
 Since $n$ is large the result follows.
 \qeds
  
@@ -791,7 +791,7 @@ From the above,
 The concatenation $\gamma_t=\lambda_t*\bar\sigma*\gamma|_{[t_0,1]}$
 is a homotopy
 from $\gamma_0'$ to another curve $\gamma_1$.
-From the construction it is clear that 
+From the construction, it is clear that 
 \begin{align*}
  \length \gamma_t&\le \length \gamma_0+2\cdot \length\sigma\le
  \\
@@ -805,13 +805,13 @@ and
 \\ &=\ell_0 -\delta.
 \end{align*}
 
-Repeating the procedure sufficient number of times, we get curves $\gamma_2,\dots,\gamma_n$
+Repeating the procedure a sufficient number of times, we get curves $\gamma_2,\dots,\gamma_n$
 connected by the needed homotopies so that 
 $\ell_{i+1}\le\ell_i-\delta$ and $\ell_n\z< L+\delta$,
 where $\ell_i=\length\gamma_i$.
 
 If $\ell_n\le L$, we are done.
-Otherwise repeat the argument again for $\delta'=\ell_n-L$.
+Otherwise, repeat the argument again for $\delta'=\ell_n-L$.
 \qeds
 
 The problem is due to 
@@ -821,7 +821,7 @@ and Regina Rotman \cite{nabutovsky-rotman}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Convex hypersurface.}
-First let us define the {}\emph{cone construction} of maps into $M$.
+First, let us define the {}\emph{cone construction} of maps into $M$.
 
 Let $\Delta'$ be a simplex 
 with a vertex $v$.
@@ -836,13 +836,13 @@ is called the {}\emph{cone over $f$} with vertex $x$.
 One may start with a map $f_0\:\Delta_0\to M$ and iterate the cone construction for the vertices $x_1,\dots x_k$,
 to get a sequence of maps $f_i\:\Delta_i\to M$
 as long as $f_{i-1}(\Delta_{i-1})\subset B(x_i,1)$.
-Straightforward application of the triangle inequality 
+A straightforward application of the triangle inequality 
 shows that the latter conditions hold if 
 $f_0(\Delta_0)\subset B(x_i,s)$ for each $i$ and $s<\tfrac2{2+k}$.
 
 \medskip
 
-Now we go back to the solution of the problem.
+Now we go back to the solution.
 
 Choose a fine triangulation of $W$ so that $M$ becomes a sub-complex of $W$.
 We can assume that the diameter of each simplex in $\tau$ is less than any given
@@ -905,8 +905,7 @@ Note that
 &\le \int\limits_0^1\left|df(\gamma'(t))\right|\cdot dt.
 \end{align*}
 
-Assume that $\gamma'(0)$
-takes random value in $\UU M$.
+Assume that $\gamma'(0)$ takes a random value in $\UU M$.
 By Liouville's theorem about phase volume, the same holds for $\gamma'(t)$
 for any fixed $t$.
 Therefore

@@ -1,7 +1,7 @@
 \csname @openrightfalse\endcsname
 \chapter{Discrete geometry}
 
-In this chapter we consider geometrical problems with a strong combinatoric flavor.
+In this chapter, we consider geometrical problems with a strong combinatoric flavor.
 No special prerequisite is needed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,7 +175,7 @@ Show that $n\le 2^m$.
 \begin{pr}
 Let $\mu$ be a Borel probability measure on the plane.
 Show that given $\eps>0$, there is a finite set of points $S$ that intersects every convex figure of measure at least $\eps$.
-Moreover we can assume that $|S|$ --- the number of points in $S$, depends only on $\eps$ (in fact one can take $|S|=\lceil\tfrac1{\eps^5}\rceil$).
+Moreover, we can assume that $|S|$ --- the number of points in $S$, depends only on $\eps$ (in fact, one can take $|S|=\lceil\tfrac1{\eps^5}\rceil$).
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,14 +187,14 @@ A polyhedron is called {}\emph{right-angled} if all its dihedral angles are righ
 Show that in all sufficiently large dimensions, there is no compact convex hyperbolic right-angled polyhedron. 
 \end{pr}
 
-Let us give a short summary of the Dehn--Sommerville equations which can help solve this problem.
+Here is a summary of the Dehn--Sommerville equations that can help.
 
 Let $P$ be a \index{simple polyhedron}\emph{simple} Euclidean $m$-dimensional polyhedron;
 that is, exactly $m$ facets meet at each vertex of $P$.
 Denote by $f_k$ the number of $k$-dimensional faces of $P$;
 the array of integers $(f_0,\dots f_m)$ is called the $f$-vector of $P$.
 
-Choose linear function $\ell$ that takes different values on the vertices of~$P$.
+Choose a linear function $\ell$ that takes different values on the vertices of~$P$.
 The \index{index of vertex}\emph{index} of a vertex $v$ 
 is defined as the number of edges $[vw]$ of $P$ such that $\ell(v)>\ell(w)$. 
 The number of vertices of index $k$ will be denoted by $h_k$.
@@ -202,8 +202,7 @@ The array of integers $(h_0,\dots h_m)$ is called the $h$-vector of $P$.
 
 Each $k$-face of $P$ contains a unique vertex that maximizes $\ell$.
 If the vertex has index $i$,
-then $i\ge k$ and
-then it is the maximal vertex of exactly $\tbinom i k$
+then $i\ge k$, and then it is the maximal vertex of exactly $\tbinom i k$
 faces of dimension $k$.
 This observation can be packed in the following polynomial identity:
 \[\sum_k h_k\cdot (t+1)^k=\sum_k f_k\cdot t^k.\]
@@ -230,7 +229,7 @@ Show that $\tfrac{\ell_n}{\pi}$ is the expected number of real roots of a polyno
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Space coloring}\label{Right-angled polyhedron}
+\subsection*{Space coloring\easy}\label{Right-angled polyhedron}
 
 \begin{pr}
 Let $A$ be a set of colored points in $\mathbb{R}^d$.
@@ -249,7 +248,7 @@ What is the minimal number of points in $A$ as a function of $d$ and $k$?
 
 \parbf{Box in a box.} 
 Let $\Pi$ be a parallelepiped
-with dimensions $a$, $b$ and $c$.
+with dimensions $a$, $b$, and $c$.
 Denote by $v(r)$ the volume of the $r$-neighborhood of $\Pi$,
  
 Note that for all positive $r$ we have
@@ -272,7 +271,7 @@ For $r\to\infty$, these inequalities imply
 \parit{Alternative proof.}
 Note that the average length of the projection of $\Pi$ to a line is
 $\Const\cdot(a+b+c)$ for some $\Const>0$.
-(In fact $\Const=\tfrac12$, but we will not need it.)
+(In fact, $\Const=\tfrac12$, but we will not need it.)
 
 Since $\Pi\subset \Pi'$,
 the average length of the projection of $\Pi$
@@ -285,8 +284,8 @@ The problem was discussed by Alexander Shen \cite{shen}.
 A formula analogous to $({*})$
 holds for an arbitrary convex body $B$ of arbitrary dimension $m$.
 It was discovered by Jakob Steiner \cite{steiner}.
-The coefficient $w_i(B)$ in the polynomial with different normalization constants 
-appear under different names, most commonly
+The coefficient $w_i(B)$ in the polynomial (with different normalization constants)
+appears under different names, most commonly
 \emph{intrinsic volumes} and
 \emph{quermassintegrals}.
 Up to a normalization constant,
@@ -338,11 +337,11 @@ Without loss of generality, we may assume that $\Sigma$ is regular.
 
 Note that all regular complex algebraic curves of degree $d$ in $\CP^2$
 are isotopic to each other in the class of regular algebraic curves of degree $d$.
-Indeed, the set of equations of degree $d$ that correspond to singular curves have real codimension 2.
+Indeed, the set of equations of degree $d$ that correspond to singular curves has real codimension 2.
 Therefore the set of equations of degree $d$ that correspond to regular curves is connected.
-In particular one can construct an isotopy from one regular curve to any other by changing continuously the parameters of the equations.
+In particular, one can construct an isotopy from one regular curve to any other by changing continuously the parameters of the equations.
 
-In particular it follows that all regular complex algebraic curves of degree $d$ in $\CP^2$ have the same genus,
+In particular, it follows that all regular complex algebraic curves of degree $d$ in $\CP^2$ have the same genus,
 denote it by $g$.
 Perturbing a singular curve formed by $d$ lines in $\CP^2$,
 we can see that 
@@ -350,7 +349,7 @@ we can see that
 
 The real curve $\sigma$ forms the fixed point set in $\Sigma$ 
 by the complex conjugation. 
-In particular $\sigma$ divides $\Sigma$ into two symmetric surfaces with boundary formed by $\sigma$.
+In particular, $\sigma$ divides $\Sigma$ into two symmetric surfaces with boundary formed by $\sigma$.
 It follows that each connected component of $\sigma$ adds one to the genus of $\Sigma$.
 Hence the result follows.
 \qeds
@@ -372,7 +371,7 @@ in $0$ or $1$ point.
 Note that the set of all lines intersecting $X$ at two points has cardinality less than continuum.
 Therefore we can choose a point on $\ell$ and add it to $X$ so that the remaining lines are not overloaded.
 
-It remains to apply the well ordering principle.
+It remains to apply the well-ordering principle.
 \qeds
 
 This problem has an endless list of variations.
@@ -380,7 +379,7 @@ The following problem looks similar but far more involved;
 a solution follows from the proof of Paul Monsky that a square cannot be cut into triangles with equal areas \cite{monsky}.
 
 \begin{pr}
-Subdivide the plane into three everywhere dense sets $A$, $B$ and $C$ such that each line meets exactly two of these sets.
+Subdivide the plane into three everywhere dense sets $A$, $B$, and $C$ such that each line meets exactly two of these sets.
 \end{pr}
 
 
@@ -416,7 +415,7 @@ on each step we take the largest ball that does not intersect those which we hav
 
 \medskip
 
-Note that each ball in the original collection $\{B_i\}_{i\in F}$ intersects a ball in $\{B_i\}_{i\in G}$ with larger radius.
+Note that each ball in the original collection $\{B_i\}_{i\in F}$ intersects a ball in $\{B_i\}_{i\in G}$ with a larger radius.
 Therefore 
 \[\bigcup_{i\in F}B_i\subset \bigcup_{i\in G}3\cdot B_i,\leqno({*})\]
 where $3\cdot B_i$ denotes the ball concentric to $B_i$ and three times larger radius.
@@ -433,7 +432,7 @@ The following statement is called the \emph{Besicovitch covering lemma};
 it has a similar proof.
 
 \begin{pr}
-For any positive integer $m$ there is a positive integer $M$ such that 
+For any positive integer $m$, there is a positive integer $M$ such that 
 any finite collection of balls $\{B_i\}_{i\in F}$ in $\RR^m$ 
 contains a subcollection $\{B_i\}_{i\in G}$
 such that (1) center of any ball in $\{B_i\}_{i\in F}$ lies inside one of a ball from $\{B_i\}_{i\in G}$
@@ -441,7 +440,7 @@ and (2) the collection $\{B_i\}_{i\in G}$ can be subdivided into $M$ subcollecti
 \end{pr}
 
 Both lemmas were used to prove the so-called \emph{covering theorems} in measure theory,
-which state that ``undesirable sets'' have vanishing measure.
+which state that ``undesirable sets'' have vanishing measures.
 Their applications overlap but aren't identical, the \emph{Vitali covering theorem} works for nice measures in arbitrary metric spaces while the \emph{Besicovitch covering theorem} works in nice metric spaces with arbitrary Borel measures.
 
 More precisely, Vitali works in arbitrary metric spaces with a \index{doubling measure}\emph{doubling measure} $\mu$;
@@ -456,11 +455,7 @@ these include Alexandrov spaces with curvature bounded below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{wrapfigure}{r}{43 mm}
-\vskip-10mm
-\centering
-\includegraphics{mppics/pic-903}
-\end{wrapfigure}
+
 
 \parbf{Kissing number.}
 Set $n=\mathop{\rm kiss} B$.
@@ -471,8 +466,15 @@ Note that $\measuredangle(v_i,v_j)\ge \tfrac\pi3$ if $i\ne j$.
 For each $i$,
 consider the supporting hyperplane $\Pi_i$
 of $W$
-with outer normal vector $v_i$.
+with the outer normal vector $v_i$.
 Denote by $W_i$ the reflection of $W$ with respect to $\Pi_i$.
+
+\begin{wrapfigure}{r}{43 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-903}
+\vskip-2mm
+\end{wrapfigure}
 
 Note that $W_i$ and $W_j$ have no common interior points if $i\ne j$;
 the latter gives the needed inequality.
@@ -480,7 +482,7 @@ the latter gives the needed inequality.
 
 The proof is given by 
 Charles Halberg, 
-Eugene Levin 
+Eugene Levin, 
 and Ernst Straus 
 \cite{halberg-levin-straus}.
 It is not known if the same inequality holds for the orientation-preserving version of the kissing number.
@@ -503,7 +505,7 @@ Direct calculations show that the following homotopy is monotonic
 This homotopy was discovered by Ralph Alexander \cite{ralexander}.
 It has a  %wide?
 number of applications, 
-one of the most beautiful is the given 
+one of the most beautiful is given 
 by K\'aroly Bezdek 
 and Robert Connelly \cite{bezdek-connelly};
 they proved the Kneser--Poulsen  
@@ -522,13 +524,13 @@ Denote by $\Pi$ the hyperplane of $F$.
 For each point $p\in F$ consider the maximal ball $B_p\subset P$ that contains~$p$.
 Note that $B_p$ touches another facet of $P$ at some point $q$.
 
-Show that the restriction of the partially defined map $q\mapsto p$ to any other facet $F'$ can be extended to a distance preserving map $F'\to \Pi$.
+Show that the restriction of the partially defined map $q\mapsto p$ to any other facet $F'$ can be extended to a distance-preserving map $F'\to \Pi$.
 By construction union of all such images cover $F$.
 \qeds
 
 This problem was considered by Igor Pak and Rom Pinchasi \cite{pak-pinchas};
 the presented proof was given by Arseniy Akopyan \cite{akopyan-2012}.
-A slightly different version of this problem made it to All-Russian olympiad of 2012 \cite[№ 116774]{problems}.
+A slightly different version of this problem made it to the All-Russian olympiad of 2012 \cite[№ 116774]{problems}.
 
 In the three-dimensional case,
 a more involved, but straightforward solution can be built on the fact that orthogonal projection of a convex figure can be covered by the figure itself.
@@ -567,7 +569,7 @@ The problem was suggested by Greg Kuperberg.
 Let $\gamma$ be a geodesic from vetrex to vertex;
 denote by $v$ its midpoint.
 
-Show that there is symmetry of the cube that fix $v$, reverts $\gamma$ and moves all the vertices of the cube.
+Show that there is symmetry of the cube that fixes $v$, reverts $\gamma$, and moves all the vertices of the cube.
 Conclude that the endpoints of $\gamma$ are different.
 \qeds
 
@@ -581,11 +583,11 @@ The presented solution is taken from the paper of Serge Troubetzkoy \cite{troube
 This idea can be used to solve the following harder problems.
 
 \begin{pr}
-Show the same for the surface of $n$-dimensional cube, $n\ge 4$.
+Show the same for the surface of the $n$-dimensional cube, $n\ge 4$.
 \end{pr}
 
 \begin{pr}
- Show the same for the surface of the tetrahedron, octahedron and icosahedron.
+ Show the same for the surface of the tetrahedron, octahedron, and icosahedron.
 \end{pr}
 
 For the dodecahedron such loops exist;
@@ -603,7 +605,7 @@ These and related problems are discussed by Dmitry Fuchs \cite{fuchs-2016}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Right and acute triangles.}
 Denote by $K$ the convex hull of $\{x_1,\z\dots,x_n\}$.
-Without loss of generality we can assume that $\dim K=m$. 
+Without loss of generality, we can assume that $\dim K=m$. 
 
 \begin{wrapfigure}{o}{35 mm}
 \vskip-0mm
@@ -611,8 +613,8 @@ Without loss of generality we can assume that $\dim K=m$.
 \includegraphics{mppics/pic-907}
 \end{wrapfigure}
 
-Note that for any distinct points $x_i$ and $x_j$
-and any interior point $z$ in $K$
+Note that for any distinct points $x_i$, $x_j$,
+and any interior point $z$ in $K$,
 we have 
 \[\measuredangle \hinge{x_i}{x_j}z<\tfrac\pi2.\leqno({*})\]
 Indeed, if $({*})$ does not hold, then $\langle x_j-x_i,z-x_i\rangle<0$.
@@ -649,7 +651,7 @@ The problem was posted by Paul Erdős \cite{erdos}
 and solved by Ludwig Danzer and Branko Grünbaum \cite{danzer-guenbaum}.
 
 Grigori Perelman noticed that the same proof works for a similar problem in Alexandrov spaces \cite{perelman-Erdos}.
-The later led to interesting connections with the crystallographic groups \cite{lebedeva};
+The latter led to interesting connections with the crystallographic groups \cite{lebedeva};
 in particular, it gives an approach to the following open problem.
 
 \begin{pr}
@@ -663,7 +665,7 @@ Surprisingly, the maximal number of points that make only acute triangles grows 
 The latter was shown by Paul Erdős and Zolt\'an Füredi \cite{erdos-fueredi} using the \index{probabilistic method}\emph{probabilistic method}.
 Later, an elementary constructive argument was found and improved by Dmitriy Zakharov,
 \texttt{grizzly} (an anonymous mathematician),
-Bal{\'a}zs Gerencs{\'e}r and Viktor Harangi
+Bal{\'a}zs Gerencs{\'e}r, and Viktor Harangi
 \cite{zakharov,grizzly,gerencser-harangi};
 the current lower bound is $2^{m-1}+1$, which is exponentially optimal.
 
@@ -675,7 +677,7 @@ The general case is done by a straightforward modification.
 Cut the plane by two lines into 4 angles of equal measure.
 Let $p$ be the intersection point of the two lines.
 Note that every convex set avoiding $p$ is fully contained in three angles out of the four.
-In particular its measure cannot exceed $\tfrac34$.
+In particular, its measure cannot exceed $\tfrac34$.
 
 Apply this construction recursively for the restriction of the measure to each triple of angles.
 After $n$ steps we get a $(1+\z\dots+4^{n-1})$-point set 
@@ -691,8 +693,8 @@ Note that $P$ is simple;
 that is, exactly $m$ facets meet at each vertex of $P$.
 
 From the projective model of the hyperbolic plane, 
-one can see that for any simple compact hyperbolic polyhedron there is a simple Euclidean polyhedron with the same combinatorics. 
-In particular the Dehn--Sommerville equations hold for $P$.
+one can see that for any simple compact hyperbolic polyhedron, there is a simple Euclidean polyhedron with the same combinatorics. 
+In particular, the Dehn--Sommerville equations hold for $P$.
 
 Denote by $(f_0,\dots f_m)$ and $(h_0,\dots h_m)$ the $f$- and $h$-vectors of $P$.
 Recall that 
@@ -717,7 +719,7 @@ This is the core of the proof of nonexistence of compact hyperbolic Coxeter's po
 given by Ernest Vinberg \cite{vinberg, vinberg-strong}.
 
 Playing a bit more with the same inequalities, 
-one gets nonexistence of  right-angled hyperbolic polyhedrons,
+one gets the nonexistence of right-angled hyperbolic polyhedrons,
 in all dimensions starting from~$5$.
 In the $4$-dimensional case,
 there is a regular right-angled  hyperbolic polyhedron with \index{120-cells}\emph{120-cells} --- a $4$-dimensional uncle of the dodecahedron.
@@ -726,7 +728,7 @@ The following related question is open:
 
 \begin{pr}
 Let $m$ be a large integer.
-Is there a cocompact properly dicontinuous isometric action  on the $m$-dimensional Lobachevsky space that is generated by finite order elements (for example involutions)?
+Is there a cocompact properly discontinuous isometric action  on the $m$-dimensional Lobachevsky space that is generated by finite order elements (for example, involutions)?
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -735,7 +737,7 @@ Choose a polynomial
 \[p(t)=a_0+\dots+a_n\cdot t^n.\]
 Consider the hyperplane $\Pi$ in $\RR^{n+1}$ defined by the equation 
 \[a_0\cdot x_0+\dots+a_n\cdot x_n=0.\]
-Note that the number of real roots of $p$ equals to the number of intersections of $\Pi$ with the moment curve.
+Note that the number of real roots of $p$ equals the number of intersections of $\Pi$ with the moment curve.
 
 It remains to apply the spherical Crofton formula.
 \qeds
@@ -752,7 +754,7 @@ Let $A$ be the set of all $\binom{d+k-1}{d}$ intersection points of every $d$-tu
 Show that starting with $A$ one can color every point in $\RR^d$.
 
 To prove the lower bound, note that $\binom{d+k-1}{d}$ is the dimension of the space of polynomials $p\:\RR^d\to\RR$ of total degree at most $k-1$.
-Therefore, if $A$ has less than $\binom{d+k-1}{d}$ points, then there is a nonzero polynomial $p$ of degree at most $k-1$ such that $A$ lies in its zero set $Z$.
+Therefore, if $A$ has less than $\binom{d+k-1}{d}$ points, then there is a non-zero polynomial $p$ of degree at most $k-1$ such that $A$ lies in its zero-set $Z$.
 Observe that if a line does not lie in $Z$, then it has at most $k-1$ common points with $Z$.
 Therefore, it is impossible to color a point outside of $Z$.
 \qeds

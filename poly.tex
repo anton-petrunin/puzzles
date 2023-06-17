@@ -4,10 +4,10 @@
 
 A \index{polyhedral space}\emph{polyhedral space} is a complete length-metric space that admits a locally finite triangulation 
 such that each simplex is isometric to a simplex in a Euclidean space.
-By a {}\emph{triangulation} of a polyhedral space we always mean a triangulation of that type. 
+By a {}\emph{triangulation} of a polyhedral space, we always mean a triangulation of that type. 
 
 A point in a polyhedral space is called \index{regular point}\emph{regular} if it has a neighborhood isometric to an open set in a Euclidean space;
-otherwise it is called {}\emph{singular}.
+otherwise, it is called {}\emph{singular}.
 
 If we replace the Euclidean spaces by the unit spheres or the hyperbolic spaces,
 we arrive at the definition of {}\emph{spherical} and {}\emph{hyperbolic polyhedral spaces} respectively.
@@ -15,7 +15,7 @@ we arrive at the definition of {}\emph{spherical} and {}\emph{hyperbolic polyhed
 The term \index{piecewise}\emph{piecewise} typically means that there is a triangulation with some property on each triangle.
 For example,  if $P$ and $Q$ are polyhedral spaces, then
 \begin{itemize}
-\item a map $f\:P\to Q$ is called {}\emph{piecewise distance preserving} if there is a triangulation $\mathcal{T}$ of $P$ such that for any simplex $\Delta\in \mathcal{T}$ the restriction $f|_\Delta$ is distance preserving;
+\item a map $f\:P\to Q$ is called {}\emph{piecewise distance-preserving} if there is a triangulation $\mathcal{T}$ of $P$ such that for any simplex $\Delta\in \mathcal{T}$ the restriction $f|_\Delta$ is distance-preserving;
 \item a map $h\:P\z\to Q$  is called {}\emph{piecewise linear} if both spaces $P$ and $Q$ admit triangulations such that each simplex of $P$ is mapped to a simplex of $Q$ by an affine map.
 In particular, a {}\emph{piecewise linear homeomorphism} is a piecewise linear map which is a homeomorphism.\label{piecewise linear map}
 \end{itemize}
@@ -27,7 +27,7 @@ In particular, a {}\emph{piecewise linear homeomorphism} is a piecewise linear m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Spherical arm lemma}\label{Spherical arm lemma}
 
-Recall that a polygon without self intersections is called \index{simple polygon}\emph{simple}.
+Recall that a polygon without self-intersections is called \index{simple polygon}\emph{simple}.
 
 \begin{pr}
 Let $A=[a_1\dots a_n]$ and $B=[b_1\dots b_n]$ be two simple spherical polygons 
@@ -38,7 +38,7 @@ Show that $A$ is congruent to $B$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parit{Semisolution.}
-Let us cut out the polygon $A$ from the sphere and glue the polygon $B$ in its place.
+Cut out $A$ from the sphere and glue $B$ in its place.
 Denote by $\Sigma$ the obtained spherical polyhedral space.
 Note that 
 \begin{itemize}
@@ -54,7 +54,7 @@ It is sufficient to show that $n=0$.
 Assume the contrary; that is, $n\ge 1$.
 We can assume that $n$ takes the minimal possible value.
 
-Clearly $n>1$;
+Clearly, $n>1$;
 that is, $\Sigma$ cannot have a single singular point.
 Therefore we can choose two singular points $p,q\in \Sigma$.
 Cut $\Sigma$ along a geodesic $[pq]$.
@@ -66,11 +66,11 @@ consider the spherical triangle $\triangle$ with the base $|p\z-q|_\Sigma$ and t
 The needed patch is obtained by doubling $\triangle$ along its lateral sides.
 \qeds
 
-\parit{Alternative end of proof.}
+\parit{Alternative end of the proof.}
 By the Alexandrov embedding theorem, $\Sigma$ is isometric to the surface of a convex polyhedron $P$ in the unit sphere $\mathbb S^3$. 
 The center of the hemisphere has to lie in a facet of $P$, say $F$.
 It remains to note that $F$ contains the equator and therefore $P$ has to be a hemisphere in $\mathbb S^3$ or an intersection of two hemispheres.
-In both cases its surface is isometric to $\mathbb S^2$.
+In both cases, its surface is isometric to $\mathbb S^2$.
 \qeds
 
 The problem is due to Victor Zalgaller \cite{zalgaller-shperical-polygon};
@@ -99,18 +99,18 @@ such that any two vertices are connected by an edge.
 Let $P$ be a compact $2$-dimensional 
 polyhedral space. 
 Construct a 
-piecewise distance preserving map
+piecewise distance-preserving map
 $f\:P\to \RR^2$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Piecewise distance preserving extension}\label{iso-kirzhbraun}
+\subsection*{Piecewise distance-preserving extension}\label{iso-kirzhbraun}
 
 \begin{pr}
 Prove that any 1-Lipschitz map from a finite subset $F\subset \RR^2$
 to 
 $\RR^2$ can be extended to a 
-piecewise distance preserving map
+piecewise distance-preserving map
 $\RR^2\to\RR^2$.
 \end{pr}
 
@@ -199,11 +199,11 @@ Given two points $p$ and $q$ on $\gamma$, there is a hyperplane $H$ in $\RR^4$ t
 To prove the claim, assume that $p=\gamma(t_1)$ and $q=\gamma(t_2)$. 
 Consider the polynomial
 \[f(t)=a+b\cdot t+c\cdot t^2+d\cdot t^3+t^4=(t-t_1)^2\cdot(t-t_2)^2.\]
-Clearly $f(t)\ge 0$ and the equality holds only at $t_1$ and $t_2$.
+Clearly, $f(t)\ge 0$, and the equality holds only at $t_1$ and $t_2$.
 It follows that the affine function $\ell\:\RR^4\to\RR$ defined by 
 \[\ell\:(w,x,y,z)\mapsto a+b\cdot w+c\cdot x+d\cdot y+z\]
 is nonnegative at the points of $\gamma$ and vanishes only at $p$ and $q$.
-Therefore the zero set of $\ell$ is the required hyperplane $H$ in $({*})$. 
+Therefore the zero-set of $\ell$ is the required hyperplane $H$ in $({*})$. 
 \qeds
 
 The polyhedron $P$ above is an example of the so-called \index{cyclic polytope}\emph{cyclic polytopes}.
@@ -239,7 +239,7 @@ $x\in  \triangle$, set
 Let us map $x$ to the point with polar coordinates $(\rho(x),\theta(x))$ in the plane.
 
 Note that for each triangle $\triangle$, 
-the constructed map $\triangle\to\RR^2$ is piecewise distance preserving.
+the constructed map $\triangle\to\RR^2$ is piecewise distance-preserving.
 It remains to check that these maps agree on the common sides of the triangles.
 \qeds
 
@@ -249,14 +249,14 @@ Svetlana Krat generalized the statement to higher dimensions \cite{krat}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Piecewise distance preserving extension.}
+\parbf{Piecewise distance-preserving extension.}
 Let $a_1,\dots,a_n$
 and $b_1,\z\dots,b_n$
 be two collections of points in $\RR^2$
 such that 
 \[|a_i-a_j|\ge |b_i-b_j|\] 
 for all pairs $i$, $j$.
-We need to construct a piecewise distance preserving map $f\:\RR^2\to\RR^2$
+We need to construct a piecewise distance-preserving map $f\:\RR^2\to\RR^2$
 such that $f(a_i)=b_i$ for each $i$.
 
 Assume that the problem is already solved for $n<m$;
@@ -299,7 +299,7 @@ Note that
 \[|f(x)\z-b_1|=|x-a_1|\]
 for any $x\in E_i$.
 Denote by $T_i$ the triangle with the base $E_i$ and the vertex $a_1$.
-From the above there is a rigid motion $m_i$ of $T_i$ such that $m_i(x)\z=f(x)$ for any $x\in E_i$ and $m_i(a_1)=b_1$.
+From the above, there is a rigid motion $m_i$ of $T_i$ such that $m_i(x)\z=f(x)$ for any $x\in E_i$ and $m_i(a_1)=b_1$.
 Let us redefine the map $f$ in $\Omega$ by sending $x$ to $m_i(x)$ for any $x\in T_i$.
 
 The maps $m_i$ agree on the common sides of triangles $T_i$.
@@ -315,7 +315,7 @@ and rediscovered by Arseniy Akopyan and Alexey Tarasov [see \ncite{brehm}, \ncit
 
 \parbf{Closed polyhedral surface.}
 An example can be constructed by drilling a polyhedral cave in your favorite convex polyhedron.
-On the diagram you see the result of this construction for the octahedron.
+On the diagram, you see the result of this construction for the octahedron.
 
 {
 
@@ -344,8 +344,8 @@ Another example shown on the diagram is isometric to a flat torus.
 It is a bent version of the so-called \index{Schwarz boot}\emph{Schwarz boot} \cite{schwarz1890definition}.
 It is made by joining a few identical cylinders, each made from six triangles.
 
-The existence of such torus also follows from a general result of Yuri Burago and Victor Zalgaller \cite{burago-zalgaller:pl}.
-They show in particular that any 1-Lipschitz smooth embedding of the flat torus in $\RR^3$ can be approximated by a piecewise distance preserving embedding.
+The existence of such a torus also follows from a general result of Yuri Burago and Victor Zalgaller \cite{burago-zalgaller:pl}.
+They show in particular that any 1-Lipschitz smooth embedding of the flat torus in $\RR^3$ can be approximated by a piecewise distance-preserving embedding.
 
 }
 
@@ -358,7 +358,7 @@ Construct a polyhedral metric on the 3-sphere such that the total angle around a
 
 A solution can be built using the construction of Joel Hass \cite{hass}.
 Another solution was given by Karim Adiprasito \cite{adiprasito};
-he proved that an example can be found among spaces which admits a cubulation into unit cubes.
+he proved that an example can be found among spaces that admit a cubulation into unit cubes.
 One can also show that it is impossible to find such an example by starting with a doubled cube (as well as other simple polyhedral metrics on the sphere) and passing to coverings branching along unknots а finite number of times.
 
 
@@ -380,10 +380,10 @@ Since the area is minimal,  this deformation does not decrease the area.
 Taking the derivative of the total area along this deformation implies that $\Sigma$
 contains two adjacent non-coplanar triangles $[pvw]$ and $[qvw]$ such that
 \[\measuredangle \hinge pvw+\measuredangle \hinge qvw> \pi.\]
-In this case replacing the triangles $[pvw]$ and $[qvw]$
+In this case, replacing the triangles $[pvw]$ and $[qvw]$
 by the triangles $[vpq]$ and $[wpq]$
 leads to a polyhedral surface with a smaller area.
-That is, $\Sigma$ is not area minimizing --- a contradiction.
+That is, $\Sigma$ is not area-minimizing --- a contradiction.
 \qeds
 
 {
@@ -418,18 +418,18 @@ $[yx']$, $[zy']$, $[xz']$.
 
 Assume this triangulation is coherent;
 let $f$ be the corresponding piecewise linear convex function.
-Without loss of generality we can assume that $f$ vanishes on the boundary of the big triangle.
+Without loss of generality, we can assume that $f$ vanishes on the boundary of the big triangle.
 
-From the convexity of $f$ at the edges $[x'y]$,  $[y'z]$ and $[z'x]$, we get 
+From the convexity of $f$ at the edges $[x'y]$,  $[y'z]$, and $[z'x]$, we get 
 \[f(x)>f(y)>f(z)>f(x)\]
 --- a contradiction.
 \qeds
 
 The problem is discussed in the book of 
 Israel Gelfand, 
-Mikhail Kapranov 
+Mikhail Kapranov,
 and Andrei Zelevinsky  \cite[see 7C in][]{GKZ}.
-The given example is closely related to the so-called \index{Schönhardt polyhedron}\emph{Schönhardt polyhedron}, an example of a non-convex polyhedron which does not admit a triangulation \cite{schoenhardt}.
+The given example is closely related to the so-called \index{Schönhardt polyhedron}\emph{Schönhardt polyhedron}, an example of a non-convex polyhedron that does not admit a triangulation \cite{schoenhardt}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sphere with one edge.} 
@@ -455,7 +455,7 @@ Therefore any point in $P$ admits a neighborhood that is isometric to an open se
 Both of these spaces are topological 3-manifolds;
 therefore, $P$ is a 3-dimensional manifold as well. 
 
-Note that $P$ is simply connected;
+Note that $P$ is simply-connected;
 this follows since the action is generated by rotations. 
 By the Poincaré conjecture, $P$ is a topological sphere.
 
@@ -469,7 +469,7 @@ This is the so-called P$2_13$ action.
 Among 219 crystallographic actions, this is the only one with the quotient space that has the required property; see \cite{dunbar}.
 
 Note that a 3-fold covering of $P$ that is branching in $P_s$ is a flat manifold. 
-In particular, this covering is \emph{not} simply connected.
+In particular, this covering is \emph{not} simply-connected.
 Therefore $P_s$ is \emph{not} a trivial knot;
 it is, in fact, the figure-eight knot.
 
@@ -490,7 +490,7 @@ more examples are given by Alexander Mednykh \cite{mednykh}.
 
 I get intrigued by this problem because of the following connection:
 spaces of directions in 4-dimensional polyhedral Kähler manifolds
-are 3-spheres with spherical polyhedral metric that has singular locus formed by knot or link.
+are 3-spheres with a spherical polyhedral metric with a singular locus formed by a knot or link.
 In addition, these spaces have an isometric $\RR$-action induced by the complex structure.
 
 Polyhedral Kähler manifolds admit a natural stratification into flat manifolds of even codimensions.
@@ -511,7 +511,7 @@ Is it possible to approximate the canonical metric on $\CP^2$ by polyhedral metr
 \parbf{Triangulation of a torus.}
 Assume the contrary;
 let $\tau$ be a triangulation of the torus with the vertex $z_5$ meeting $5$ triangles,
-vertex $z_7$ meeting $7$ triangles 
+vertex $z_7$ meeting $7$ triangles, 
 and every other vertex meeting $6$ triangles.
 
 Let us equip the torus with the flat metric such that each triangle is equilateral.
@@ -525,17 +525,17 @@ the holonomy group of the obtained polyhedral metric on the torus is generated b
 \end{cl}
 
 Indeed, since parallel translation along any loop preserves the directions of the sides of any triangle;
-it can only permute it cyclically, which corresponds to rotations by multiple of $\tfrac\pi3$. 
+it can only permute it cyclically, which corresponds to rotations by multiples of $\tfrac\pi3$. 
 On the other hand, the holonomy of the loop that surrounds $z_5$ is a rotation by $\tfrac\pi3$.
 
 Consider a closed geodesic $\gamma_1$ minimizing the length among all not null-homotopic circles.
 Let $\gamma_2$ be another closed geodesic that minimizes the length and is not homotopic to any power of $\gamma_1$.
 
-Note that $\gamma_1$ and $\gamma_2$ intersect at a single point.
-Otherwise one could shorten one of them keeping the defining property.
+Note that $\gamma_1$ and $\gamma_2$ intersect at a single point;
+otherwise, one could shorten one of them keeping the defining property.
 
 Note that $\gamma_i$ does not contain $z_5$.
-In fact no geodesic can pass thru any singular point with a total angle smaller than $2\cdot\pi$.
+In fact, no geodesic can pass thru any singular point with a total angle smaller than $2\cdot\pi$.
 
 Assume that $\gamma_i$ passes thru $z_7$.
 Then by $({*})$, one of the two angles cut by $\gamma_i$ at $z_7$ is $\pi$.
@@ -552,7 +552,7 @@ In the obtained quadrilateral, connect $z_5$ to $z_7$ by a minimizing geodesic a
 This way we obtain an annulus $\Omega$ with a flat metric.
 
 Note that a neighborhood of the first boundary component is a parallelogram --- it has equal opposite sides and its angles add up to $2\cdot \pi$.
-In particular $\Omega$ admits an isometric immersion into the plane.
+In particular, $\Omega$ admits an isometric immersion into the plane.
 
 The second boundary component has to be mapped to a diangle with straight sides and angles $\tfrac\pi3$.
 Such diangle does not exist in the plane --- a contradiction.
@@ -566,7 +566,7 @@ A complex-analytic proof was found by
 Ivan Izmestiev, 
 Robert Kusner, 
 Günter Rote, 
-Boris Springborn 
+Boris Springborn, 
 and John Sullivan \cite{izmestiev-rote-springborn-kusner}.
 
 \begin{wrapfigure}{r}{20 mm}
@@ -583,7 +583,7 @@ In particular, the observation $({*})$ is essential in the proof.
 
 The same argument shows that the
 holonomy group of a flat torus with exactly two singular points of total angle $2\cdot(1\pm \tfrac1n)\cdot\pi$ has more than $n$ elements.
-In the solution we did the case $n=6$.
+In the solution, we did the case $n=6$.
 
 If one denotes by $v_m$ the number of vertices in a triangulation of the torus with $m$ incoming edges,
 then by Euler's formula, we get
@@ -606,7 +606,7 @@ Show that there is a closed polygonal line in the unit sphere with sides
 $\delta_1,\dots,\delta_n$.  
 \end{pr}
 
-This problem was stated and solved by Gabirele Mondello and Dmitri Panov \cite{mondello-panov}.
+This problem was stated and solved by Gabriele Mondello and Dmitri Panov \cite{mondello-panov}.
 The solution requires another holonomy group ---
 it assigns an element of the double covering of $\SO(3)$ (which is $\SU(2)\z=\mathbb{S}^3$) to any loop in $\Sigma$ that avoids singularities.
 
@@ -623,8 +623,8 @@ $2\cdot\pi$ cannot be obtained as a sum of some of the $\omega_i$.
 An example of that type can be found among the tetrahedrons.
 \qeds
 
-The problem is due to Gregory Galperin \cite{galperin} 
-and rediscovered by Dmitry Fuchs and Serge Tabachnikov \cite[see 20.8 in][]{fuchs-tabachnikov}.
+The problem is due to Gregory Galperin \cite{galperin};
+it was rediscovered by Dmitry Fuchs and Serge Tabachnikov \cite[see 20.8 in][]{fuchs-tabachnikov}.
 The following problem is closely related.
 
 \begin{pr}
