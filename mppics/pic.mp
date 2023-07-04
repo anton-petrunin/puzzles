@@ -698,6 +698,54 @@ label.rt (btex $s$ etex, (6,0)*u);
 label.top (btex $z$ etex, (0,4.5)*u);
 endfig;
 
+beginfig(301)
+save u,k,d,e;
+u:=2cm;
+k:=.2;
+d:=.8;
+e:=.3;
+
+
+z.O=origin;
+z.R=(0,1)*u;
+z.A=sqrt(1-k**2)*z.R;
+
+save p;
+path p[];
+
+p0=circle(z.O,z.R);
+p1=p0 scaled (sqrt(1-d**2)) shifted (sqrt(1-k**2)*d*z.R/k);
+p2=p0 scaled (sqrt(1-e**2)) shifted (sqrt(1-k**2)*e*z.R/k);
+
+z.tan=support(p1,z.O);
+z.tane=support(p2,z.O);
+ 
+save T;
+transform T[];
+
+T1= identity yscaled k;
+
+z.C=(p0 yscaled sqrt(1-k**2)) intersectionpoint (p2 transformed T1);
+z.D=(p0 yscaled sqrt(1-k**2)) intersectionpoint (p1 transformed T1);
+
+p10=p0 cutafter (p1 transformed T1) cutbefore (p1 transformed T1);
+
+z.shift = (z.O transformed T1);
+
+draw p10;
+draw p10  yscaled -1 shifted (2*sqrt(1-k**2)*d*z.R);
+
+draw (p1 transformed T1) cutbefore p0 cutafter (p0 scaled .999) dashed evenly;
+draw subpath (1,4) of (p1 transformed T1) cutbefore (p0 scaled .999);
+draw subpath (0,1) of(p1 transformed T1) cutafter (p0 scaled .999);
+
+%dOt ((z.tan reflectedabout (z.O,z.R)) transformed T1), -(point 0 of p10);
+ 
+label(btex $L$ etex, sqrt(1-k**2)*d*z.R);
+label.bot(btex $D$ etex, sqrt(1-k**2)*d*z.R+(0,.45)*u);
+label.top(btex $D'$ etex, sqrt(1-k**2)*d*z.R+(0,-.45)*u);
+endfig;
+
 beginfig(302)
 save u,gap,p,n;
 path p[];
