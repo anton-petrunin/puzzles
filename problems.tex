@@ -1,7 +1,8 @@
 \documentclass[twoside]{book}
 
-\newcommand{\arxiv}[2]{#1} %for arxiv
-%\newcommand{\arxiv}[2]{#2} %for kdp
+%\newcommand{\arxiv}[2]{#1} %for arxiv
+\newcommand{\arxiv}[2]{#2} %for kdp
+\arxiv{}{\pdfminorversion=3}
 
 \usepackage{problems}
 \usepackage[colorlinks=true,
@@ -36,7 +37,7 @@ pdfauthor={Anton Petrunin},
 %\maketitle
 
 \begin{titlepage}
-\fontfamily{pbk}\selectfont  
+\fontfamily{cmr}\selectfont  
     \vspace*{4.5\baselineskip}
     \centering
 
@@ -176,6 +177,11 @@ Simons Foundation grants
 and
 Minobrnauki grant 075-15-2022-289.
 
+\vfill
+
+\setlength{\epigraphwidth}{.6\textwidth}
+\epigraph{Know what you're using, decide just why you're using it, and you can have a rich experience.}{---Alexander Shulgin}
+
 
 \include{curves}
 \include{surfaces}
@@ -189,6 +195,7 @@ Minobrnauki grant 075-15-2022-289.
 
 %\include{unfinished}
 %\include{open}
+%\include{extra}
 
 %the total number of problems is \thethm.
 

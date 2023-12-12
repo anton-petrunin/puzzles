@@ -17,3 +17,7 @@ Go to the created folder and run `pdflatex`, `biber` and `makeindex` few times:
 To get arXiv.tar with all needed files do
 
 `tar -cvf arXiv.tar --files-from list-of-files.txt`
+
+The following command produces PDF version 1.3 from eps-file
+
+`epstopdf --gsopt=-dCompatibilityLevel=1.3 foo.eps`
