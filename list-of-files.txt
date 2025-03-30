@@ -41,6 +41,7 @@ mppics/pic-206.mps
 mppics/pic-207.mps
 mppics/pic-208.mps
 comparison.tex
+mppics/pic-301.mps
 mppics/pic-302.mps
 mppics/pic-304.mps
 mppics/pic-306.mps
@@ -92,3 +93,4 @@ problems.ind
 lib/post1222167.html
 pics/by-sa.pdf
 cover/amr-small.png
+lib/ShortCurves.pdf
