@@ -311,6 +311,18 @@ the intersection of a finite or countable collection of G-delta dense sets is al
 It means that each G-delta dense set contains {}\emph{most} of $X$.
 This is the meaning of the word {}\emph{most} used in the problem.
 
+\subsection*{Chord integrals}
+
+Since  Archimedes, we know that the surface area of a sphere between two parallel planes depends only on the distance between the planes.
+
+Consider the function $f(x) = \tfrac{2}{1 - |x|^2}$ defined on the open unit disk in the plane.
+Observe that $f$ is the density of the push-forward of the area measure on the unit sphere under orthogonal projection onto the plane.
+It follows that $f$ has the same integral over every chord of the disk.
+The challenge is to show that functions with this property can exist only on round disks.
+
+\begin{pr}
+If an open convex figure $D \subset \mathbb{R}^2$ admits a function $f$ such that the integral of $f$ over every chord of $D$ equals 1, then $D$ must be a round disk.
+\end{pr}
 
 
 \section*{Semisolutions}
@@ -951,9 +963,34 @@ but the construction of a concrete example is not trivial
 [see ``Crooked circle'', page \pageref{Crooked circle}].
 More problems of that type are surveyed by Tudor Zamfirescu \cite{zamfirescu}.
 
+\parbf{Chord integrals.}
+Let $s(u) = \max\set{\langle x, u \rangle}{x \in D}$
+for $u \in \mathbb{S}^1$.
+Since $D$ is convex, we have $D = \set{x \in \mathbb{R}^2}{\langle x, u \rangle \le s(u)}$.
 
+Suppose $f$ satisfies the given conditions, and let $w = \int_{x \in D} f(x)$.
+Observe that
+\begin{align*}
+w
+&= \int\limits_{-s(-u)}^{s(u)} \, dt = s(u) + s(-u)
+\end{align*}
+for any $u \in \mathbb{S}^1$.
+It follows that $D$ is a figure of constant width $w$.
 
+By shifting the origin, we can assume that
+\[\int\limits_{x \in D} f(x) \cdot x = 0.\]
+In this case,
+\begin{align*}
+0
+&= \int\limits_{x \in D} f(x) \cdot \langle x, u \rangle \, dx = \int\limits_{-s(-u)}^{s(u)} t \, dt = \tfrac{1}{2} \cdot (s^2(u) - s^2(-u))
+\end{align*}
+for any $u$.
+It follows that $s \equiv \tfrac{w}{2}$ — hence the result.
+\qeds
 
-
+The problem is inspired by a question of Mariano Suárez-Álvarez~\cite{suarez-alvarez}.
+This problem and more are discussed by Joonas Ilmavirta and Gabriel Paternain~\cite{ilmavirta-paternain}.
+Our solution is closely related to the consistency conditions of the Radon transform;
+see \cite[Lemma 2.3, Chapter I]{helgason}.
 
 
