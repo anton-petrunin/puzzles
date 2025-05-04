@@ -403,30 +403,35 @@ Let $\gamma$ be a closed space curve with curvature at most 1.
 Show that $\gamma$ cannot be filled by a disc with area less than $\pi$.
 \end{pr}
 
+The 3-dimensional analog of this statement does not hold in general.
+Namely, there exists a smooth embedded sphere in $\RR^3$ with principal curvatures lying between $-1$ and $1$, yet it does not enclose an open ball of radius~$1$.
+An example can be obtained by thickening a nontrivial contractible 2-complex in $\RR^3$
+[Bing's house, constructed in \ncite{bing} will do the job].
+Such examples are discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet-1,lagunov-fet-2}.
+They were later generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}.
 
-As you can see from the following problem, the 3-dimensional analog of this statement does not hold.
+The same reason stands behind the difference between dimensions 2 and 3 in the following statements.
+For any Riemannian metric $g$ on the 2-sphere $\mathbb{S}^2$
+and any point $p \in (\mathbb{S}^2, g)$, there exists a minimizing geodesic $[pq]$ with conjugate endpoints.
+In contrast, this is not true for $(\mathbb{S}^3, g)$.
+Moreover, there exists a metric $g$ on $\mathbb{S}^3$
+with sectional curvature bounded above by an arbitrarily small $\eps > 0$, and with $\diam(\mathbb{S}^3, g) \le 1$.
+In particular, $(\mathbb{S}^3, g)$ contains no minimizing geodesics with conjugate endpoints.
+An example was originally constructed by Mikhael Gromov \cite{gromov-almost-flat};
+a simplified version was given by Peter Buser and Detlef Gromoll \cite{buser-gromoll}.
+
+Let us now formulate several weaker 3-dimensional analogs of the problem.
 
 \begin{pr}
-Construct a smooth embedding $\mathbb{S}^2\hookrightarrow \RR^3$ 
-with all the principal curvatures between $-1$ and $1$
-such that it does not surround a ball of radius~1.
+Show that a smooth closed surface $\Sigma$ in $\RR^3$ with all principal curvatures between $-1$ and $1$ encloses a ball of radius~$1$, provided it satisfies one of the following conditions:
+\begin{enumerate}[(a)]
+ \item $\Sigma$ is a surface of revolution,
+ \item $\Sigma$ is convex, or
+ \item $\Sigma$ lies inside a ball of radius 2.
+\end{enumerate}
 \end{pr}
 
-Such an example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
-[Bing's house constructed in \ncite{bing} will do the job].
-This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet-1,lagunov-fet-2} 
-and it was generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}.
-
-A similar argument shows that for any Riemannian metric $g$ on the 2-sphere $\mathbb S^2$ 
-and any point $p\in(\mathbb S^2,g)$ there is a minimizing geodesic $[pq]$ with conjugate ends.
-On the other hand, for $(\mathbb S^3,g)$ this is not true.
-Moreover, there is a metric $g$ on $\mathbb{S}^3$ 
-with sectional curvature bounded above by arbitrarily small $\eps>0$ and $\diam(\mathbb{S}^3,g)\le 1$.
-In particular, $(\mathbb S^3,g)$ has no minimizing geodesic with conjugate ends.
-An example was originally constructed by Mikhael Gromov \cite{gromov-almost-flat}; 
-a simplification was given by 
-Peter Buser
-and Detlef Gromoll \cite{buser-gromoll}.
+All three cases are discussed in \cite{petrunin-zamora}; the last problem is inspired by the work of Hongda Qiu.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Wire in a tin.}
@@ -977,15 +982,14 @@ w
 for any $u \in \mathbb{S}^1$.
 It follows that $D$ is a figure of constant width $w$.
 
-By shifting the origin, we can assume that
-\[\int\limits_{x \in D} f(x) \cdot x = 0.\]
+By shifting the origin, we can assume that $\int_{x \in D} f(x) \cdot x = 0$.
 In this case,
 \begin{align*}
 0
 &= \int\limits_{x \in D} f(x) \cdot \langle x, u \rangle \, dx = \int\limits_{-s(-u)}^{s(u)} t \, dt = \tfrac{1}{2} \cdot (s^2(u) - s^2(-u))
 \end{align*}
 for any $u$.
-It follows that $s \equiv \tfrac{w}{2}$ — hence the result.
+It follows that $s \equiv \tfrac{w}{2}$ --- hence the result.
 \qeds
 
 The problem is inspired by a question of Mariano Suárez-Álvarez~\cite{suarez-alvarez}.
