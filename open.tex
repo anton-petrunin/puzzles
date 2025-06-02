@@ -241,7 +241,7 @@ that is, each set $S_F$ is an isolated point in $X$.
 If this is indeed true, then the statement would follow.
 The latter was shown by  Nina Lebedeva \cite{lebedeva};
 she proved that the number of such points indeed can not exceed $2^n$.
-This is done by modifying a solution to the following problem of Paul Erdős given by Ludwig Danzer and Branko Gr{\"u}nbaum \cite{danzer-guenbaum}.
+This is done by modifying a solution to the following problem of Paul Erdős given by Ludwig Danzer and Branko Gr{\"u}nbaum \cite{danzer-gruenbaum}.
 \emph{Show that one can choose at most $2^m$ points in $\mathbb{E}^m$ such that any triangle with the vertexes in the chosen points is acute or right.}
 
 \subsection*{Zero-curvature along geodesics}
@@ -368,4 +368,23 @@ The same question can be asked about polyhedral spaces with curvature at least 1
 If instead of an isometric involution we have an $\mathbb{S}^1$-action, then the answer is yes.
 It follows since the quotient space $(\mathbb{S}^3,g)/\mathbb{S}^1$ is a convex disc with sectional curvature at least 1,
 and $\gamma$ projects isometrically to its boundary.
+
+
+\subsection*{Faceting Fubini--Study}
+
+A \index{polyhedral metric}\emph{polyhedral metric} on a compact manifold is a length metric such that, for some triangulation, each simplex is isometric to a simplex in Euclidean space.
+Such a metric is said to be nonnegatively curved if the total angle around each codimension-one simplex does not exceed $2\cdot\pi$; this is equivalent to nonnegative curvature in the sense of Alexandrov.
+
+\begin{pr}
+Let $d$ be the Fubini--Study metric on the complex projective plane $\CP^2$.
+Is it possible to find a sequence of nonnegatively curved polyhedral metrics $d_n$ on $\CP^2$ that converges to $d$?
+\end{pr}
+
+Nonnegatively curved polyhedral metrics on $\CP^2$ have a number of interesting properties.
+For example, any such metric is Kähler; that is, one can choose a complex structure on each simplex of its triangulation that is preserved by the gluings.
+Furthermore, these complex structures can be induced by a fixed parametrization of $\CP^2$, and
+in this parametrization, the singular set forms an algebraic submanifold.
+Many examples of such metrics on $\CP^2$ were constructed and studied by Dmitri Panov \cite{panov-Kaeler}.
+
+
 
