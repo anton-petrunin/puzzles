@@ -491,6 +491,16 @@ label.lft (btex $\gamma$ etex, point .5 of p0);
 
 endfig;
 
+beginfig(120)
+save u, gap, p;
+path p[];
+u:=1cm;
+
+p0=(0,1)*u{1,.2}..tension 1.5 ..(0,-1)*u{-1,.2}..(0,0)*u{1,.2}..(0,1)*u{-1,.2}..tension 1.5 ..(0,-1)*u{1,.2}..(0,0)*u{-1,.2}..cycle;
+draw p0;
+
+endfig;
+
 beginfig(202)
 save u,p;
 path p[];
