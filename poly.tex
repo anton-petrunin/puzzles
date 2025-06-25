@@ -651,18 +651,18 @@ The latter statement was proved by Vladimir Protasov [see \ncite{protasov} and a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Cavalieri congruence.}
 We may assume that both simplices have a vertex at the origin.
-In this case, there exists a volume-preserving linear transformation $L\:\RR^n\to\RR^n$ that maps the first simplex to the second.
+In this case, there exists a volume-preserving linear transformation $L\:\RR^n \to \RR^n$ that maps the first simplex to the second.
 
-It is sufficient to show that $L = O_2 U O_1$, where $O_1$ and $O_2$ are orthogonal transformations, and $U$ is defined by an upper triangular matrix.
-We will use induction on $n$; the base case $n=1$ is trivial.
+We need to find unit vectors $v$ and $w$ such that $\langle Lx, w \rangle = \langle x, v \rangle$ for all $x$;
+in other words, $v = L^*w$ and $|L^*w| = |w| = 1$, where $L^*$ denotes the adjoint of $L$.
+Once this is done, it remains to rotate the simplices so that both $v$ and $w$ point in the vertical direction.
 
-Since $L$ is volume-preserving, there exists a nonzero vector $u$ such that $|L(u)| = |u|$.
-Applying orthogonal transformations, we may assume that $u$ points in the direction of the first axis and $L(u) = u$.
-
-Identify the orthogonal complement of $u$ with $\RR^{n-1}$.
-Given $v \in \RR^{n-1}$, denote by $L'(v)$ the orthogonal projection of $L(v)$ to $\RR^{n-1}$.
-Observe that $L'\:\RR^{n-1} \to \RR^{n-1}$ is volume-preserving, and apply the induction hypothesis.
+Note and use that $L^*$ is also volume-preserving.
 \qeds
 
-The two-dimensional version of this problem (with a rather convoluted proof) appears in the collection of Paul Halmos \cite[5J]{halmos}.
+The two-dimensional version of this problem (with a more elementary but rather convoluted proof) appears in the collection of Paul Halmos \cite[5J]{halmos}.
+
+With a bit more work, one can position the simplices so that, for any $k$, their intersections with any coordinate $k$-plane spanned by the first $k$ elements of the standard basis vectors in $\RR^n$ have the same $k$-volume.
+In this case, $L$ is represented by an upper triangular matrix with units on the diagonal.
+
 
