@@ -2,7 +2,7 @@
 \chapter{Curves}
 
 Recall that a \index{curve}\emph{curve} is a continuous map 
-from a real interval into a space (for example, Euclidean plane)
+from a real interval into a space (for example, the Euclidean plane)
 and 
 a {}\emph{closed curve} is a continuous map defined on a circle.
 If the map is injective then the curve is called {}\emph{simple}.
@@ -20,9 +20,9 @@ We give a practice problem with a solution --- after that, you are on your own.
 \subsection*{Spiral}
 \label{spiral}
 
-The following problem states that 
-if you drive on the plane and turn the steering wheel to the right all the time,
-then you will not be able to come back to the same place.
+The following problem shows that
+if you drive in the plane while continuously turning the steering wheel in the same direction
+(say, to the right), you cannot return to your starting point.
 
 \begin{pr}
 Let $\gamma$ be a smooth regular plane curve with strictly monotonic curvature. 
@@ -406,7 +406,7 @@ Show that $\gamma$ cannot be filled by a disc with area less than $\pi$.
 {
 
 \begin{wrapfigure}{r}{20 mm}
-\vskip-2mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-120}
 \end{wrapfigure}
@@ -455,7 +455,7 @@ All three cases are discussed in \cite{petrunin-zamora}; the last problem is ins
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Wire in a tin.}
 To solve this problem,
-you should imagine that you travel on a train along the curve $\alpha(t)$
+you should imagine that you travel on a train along the curve $\alpha$
 and watch the position of the center of the disk in the frame of your train car.
 
 \medskip
@@ -950,12 +950,6 @@ It is straightforward to check that there is $\eps>0$ such that
 the Hausdorff distance from any convex curve $\gamma$ squeezed between the circles 
 to any convex $n$-gon is at least $\frac{\eps}{n^{100}}$.
 
-\begin{wrapfigure}{o}{41 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-116}
-\end{wrapfigure}
-
 Choose a countable dense set of convex polygons $\mathfrak{p}_1,\mathfrak{p}_2,\dots$ in $\mathfrak{C}$.
 Denote by $n_i$ the number of sides in $\mathfrak{p}_i$.
 For any positive integer $k$,
@@ -963,7 +957,13 @@ consider the set $\Omega_k\subset\mathfrak{C}$ defined by
 \[\Omega_k
 =
 \set{\xi\in \mathfrak{C}}{\min_i\{|\xi-\mathfrak{p}_i|_{H}\}<\tfrac1{k\cdot n_i^{100}}},\]
-where $|{*}-{*}|_H$ denotes the Hausdorff distance 
+where $|{*}-{*}|_H$ denotes the Hausdorff distance.
+
+\begin{wrapfigure}{o}{41 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-116}
+\end{wrapfigure}
 
 From the above, we get that $\gamma\notin\Omega_k$ for some $k$. 
 

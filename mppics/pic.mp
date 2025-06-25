@@ -497,7 +497,12 @@ path p[];
 u:=1cm;
 
 p0=(0,1)*u{1,.2}..tension 1.5 ..(0,-1)*u{-1,.2}..(0,0)*u{1,.2}..(0,1)*u{-1,.2}..tension 1.5 ..(0,-1)*u{1,.2}..(0,0)*u{-1,.2}..cycle;
-draw p0;
+
+hatchfill subpath (0,1) of p0 -- subpath (4,3) of p0 -- cycle  withcolor (20, 1mm, -.5bp);
+
+draw p0 pensemibold;
+
+whitelabel(btex $F$ etex, (.5,0)*u);
 
 endfig;
 
