@@ -18,6 +18,8 @@ setarrows(barbedsharp);
 
 %outputformat := "svg";
 
+linecap:=butt;
+
 beginfig(5);
 save u, m, n, p;
 path p[];
@@ -64,7 +66,41 @@ label (btex {\huge $\bm 2$} etex, origin);
 
 endfig;
 
-linecap:=butt;
+beginfig(30)
+save u,p,k,a;
+path p[];
+u:=.5cm;
+k:=1.8;
+a:=1.3*u;
+
+z0=(0,1)*u;
+z1=k*z0 rotated 60;
+z2=z0 rotated 120;
+z3=k*z0 rotated 180;
+z4=z0 rotated -120;
+z5=k*z0 rotated -60;
+
+
+
+draw z0..z1..z3..z4..cycle;
+draw z1..z2..z4..z5..cycle;
+draw z2..z3..z5..z0..cycle;
+%draw z0--z2--z4--cycle;
+%draw z0..z1..z3..z4..z5..z1..z2..z3..z5..z0..z1..z3..z4..z5..z1..z2..z3..z5..cycle;
+
+dOt z0,z1,z2,z3,z4,z5;
+
+
+
+label.top (btex $x'$ etex,  z3+(1,0));
+label.top (btex $x$ etex,  z0);
+label.lrt (btex $y$ etex,  z4);
+label.ulft (btex $y'$ etex,  z1+(3,0));
+label.llft (btex $z$ etex,  z2);
+label.urt (btex $z'$ etex,  z5);
+
+label.bot (btex Graph $O_3$. etex,  z3+(0,-10));
+endfig;
 
 beginfig(102);
 save u, n, p;
@@ -1952,6 +1988,29 @@ draw subpath(0,length p3 -.1) of p3 shifted (2*z.shift);
 Dot point 0  of p3 shifted (2*z.shift), point length p3 -.1  of p3 shifted (2*z.shift);
 
 endfig;
+
+beginfig(800)
+save u,p,k;
+path p[];
+u:=1cm;
+k:=.5;
+
+z.A=(0,0)*u;
+z.B=(1,.8)*u;
+z.C=(-.5,2)*u;
+
+z.shift=(1.4,0)*u;
+
+p1=z.A--z.B--z.C--cycle;
+p2=z.A slanted k+z.shift--z.B slanted k+z.shift--z.C slanted k+z.shift--cycle;
+
+hatchfill p1 withcolor (0, 1mm, -.5bp);
+hatchfill p2 withcolor (0, 1mm, -.5bp);
+draw p1;
+draw p2;
+
+endfig;
+
 
 beginfig(802)
 save u,p;

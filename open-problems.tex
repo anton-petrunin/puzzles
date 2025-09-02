@@ -1,4 +1,4 @@
-\documentclass[twoside]{book}
+\documentclass[twoside]{article}
 
 \usepackage{problems}
 \usepackage[colorlinks=true,
@@ -8,7 +8,7 @@ anchorcolor=black,
 filecolor=black,
 menucolor=black,
 urlcolor=black,
-pdftitle={UPTIKAL: unsolved puzzles that I know and love},
+pdftitle={A gallery of open problems in geometry that keep me puzzled and amused},
 pdfsubject={Geometry},
 pdfauthor={Anton Petrunin}
 ]{hyperref}
@@ -20,8 +20,10 @@ pdfauthor={Anton Petrunin}
 \begin{document}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
-\title{UPTIKAL}
-\subtitle{(unsolved puzzles that\\ I know and love)}
+\title{
+A gallery of open problems in geometry\\
+that keep me puzzled and amused
+}
 \author{Anton Petrunin}
 \date{}
 \maketitle
@@ -32,49 +34,50 @@ pdfauthor={Anton Petrunin}
 %\tableofcontents
 %\thispagestyle{empty}
 
-\newpage
-\thispagestyle{empty}
-\section*{Preface}
+%\newpage
+%\thispagestyle{empty}
+%\section*{Preface}
 
-This is a collection of open problems which I consider to be \emph{puzzles};
-it means that they are contagious to my brain (I see many grips, but do not have enuf hands).
+This is a collection of open problems in geometry that I think of as \textit{puzzles}:
+they stick to my brain — I see many grips, but no spare hands.
+Puzzle-charm is the only criterion for including a problem here;
+importance is ignored.
 
-Originally, I was planning to include these problems in PIGTIKAL~\cite{petrunin2021pigtikal} --- my collection of puzzles,
-but things around open problems change rapidly, so it makes more sense to separate them.
+Originally, I was planning to add these problems to my PIGTIKAL~\cite{petrunin2021pigtikal} (a collection of solved puzzles), but things around open problems change rapidly, so it makes more sense to separate them.
 
 Please send me an email if you solve one of the problems, or see a good approach.
 
+%\null\vfill\noindent{\includegraphics[scale=0.5]{pics/by-sa}
+%\vspace*{1mm}
+%\\
+%\hbox{\parbox{1\textwidth}
+%{\textit{UPTIKAL (unsolved puzzles that I know and love)} by Anton Petrunin is licensed under CC BY-SA 4.0.
+%To view a copy of this license, visit
+%\texttt{https://creativecommons.org/licenses/by-sa/4.0}}}}
 
+
+\renewcommand\thesubsection{\arabic{subsection}}
+\input{open.tex}
+
+\paragraph*{Acknowledgment.}
 This work was partially supported by the following grants:
-NSF grants DMS 
+NSF grants DMS
 0103957,
 0406482,
 0905138,
 1309340,
 2005279,
-and Simons Foundation grants 
+and Simons Foundation grants
 245094 and 584781.
-
-\null\vfill\noindent{\includegraphics[scale=0.5]{pics/by-sa}
-\vspace*{1mm}
-\\
-\hbox{\parbox{1\textwidth}
-{\textit{UPTIKAL (unsolved puzzles that I know and love)} by Anton Petrunin is licensed under CC BY-SA 4.0.
-To view a copy of this license, visit
-\texttt{https://creativecommons.org/licenses/by-sa/4.0}}}}
-
-
-
-\include{open}
 
 %the total number of problems is \thethm.
 
-\backmatter
-\newpage
-\phantomsection
-{\scriptsize
-\input{open-problems.ind}
-}
+%\backmatter
+%\newpage
+%\phantomsection
+%{\scriptsize
+%\input{open-problems.ind}
+%}
 \sloppy
 \printbibliography[heading=bibintoc]
 \fussy
