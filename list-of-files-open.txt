@@ -1,0 +1,8 @@
+list-of-files-open.txt
+00README.XXX
+library.bib
+mppics/pic-30.mps
+open-problems.tex
+open-problems.bbl
+open.tex
+problems.sty

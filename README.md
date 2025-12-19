@@ -21,3 +21,7 @@ To get arXiv.tar with all needed files do
 The following command produces PDF version 1.3 from eps-file
 
 `epstopdf --gsopt=-dCompatibilityLevel=1.3 foo.eps`
+
+### Open problems
+
+`tar -cvf arXiv.tar --files-from list-of-files-open.txt`

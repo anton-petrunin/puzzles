@@ -26,8 +26,11 @@ pdfauthor={Anton Petrunin},
 
 \usepackage{attachfile}
 
+
+%\makeatletter\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}\RenewEnviron{Figure}[1][]{}\pagestyle{empty}\let\ps@plain\ps@empty\makeatother\usepackage[none]{hyphenat}\def\emph{\textit}\renewcommand{\footnote}[1]{\textup{\ (#1)}}\renewcommand{\frac}[2]{(#1)/(#2)}\renewcommand{\tfrac}[2]{(#1/#2)}\everydisplay{\textstyle}
+
 \begin{document}
-%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\footnote[1]{}
+
 
 %\title{\huge PIGTIKAL}
 %\subtitle{(puzzles in geometry\\
@@ -107,6 +110,9 @@ Association for Mathematical Research
 
 
 \thispagestyle{empty}
+\cleardoublepage
+\phantomsection
+\pdfbookmark[0]{\contentsname}{bm:toc}
 \tableofcontents
 \thispagestyle{empty}
 

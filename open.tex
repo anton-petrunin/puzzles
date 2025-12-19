@@ -18,7 +18,7 @@ that is, if 3 faces of a 3-simplex $\triangle$ lie in $\Omega$, then $\triangle\
 Is it true that any component of the intersection of $\Omega$ with any 2-plane is simply connected?
 \end{pr}
 
-If the boundary of $\Omega$ is a smooth hypersurface then the answer is ``yes''.
+If the boundary of $\Omega$ is a smooth hypersurface, then the answer is ``yes''.
 Also, the answer is ``yes'' if $n=3$.
 
 To prove the first statement, note that two-convexity implies that
@@ -26,7 +26,8 @@ at most one of the principal curvatures of the boundary is negative.
 Then follow the Morse-type argument in Lefschetz theorem \cite[see Section~$\tfrac12$ in][]{gromov-SGMC}.
 In the case $n=3$, one can mimic the Morse-type argument;
 it also follows from \cite[4.5.2 in][]{AKP-invitation}.
-This argument proves that \textit{if $\Omega$ is a simply connected open two-convex set in $\mathbb R^n$ with smooth boundary, then any component of the intersection of $\Omega$ with any affine subspace (not necessarily 2-dimensional) is simply connected.}
+
+The first argument also proves that \textit{if $\Omega$ is a simply connected open two-convex set in $\mathbb R^n$ with a smooth boundary, then any component of the intersection of $\Omega$ with any affine subspace (not necessarily 2-dimensional) is simply connected.}
 The example below shows that a general 2-convex open set does not meet this property.
 
 One may hope to prove the statement by constructing an approximation of $\Omega$ by two-convex domains with smooth boundaries.
@@ -42,27 +43,27 @@ Let $\Pi'$ be the image of $\Pi$ under a generic rotation of $\mathbb R^4$,
 say $(x,y,z,t)\z\mapsto(z,t,x,y)$.
 
 Since $\Pi$ is open and two-convex, so is the intersection $\Omega=\Pi\cap \Pi'$.
-Note that we can choose coordinates so that $\Omega$ is an epigraph for a function $f\colon\mathbb R^3\to\mathbb R$ like
+Note that we can choose $(x,y,z,t)$-coordinates so that $\Omega$ is an epigraph for a function $f\colon\mathbb R^3\to\mathbb R$ like
 $$f=\max\{\alpha_1-\beta_1^2,\alpha_2-\beta_2^2 \},$$
-where $\alpha_i$ and $\beta_i$ are linear functions.
+where $\alpha_i$ and $\beta_i$ are linear functions on the $(x,y,z)$-coordinate subspace.
 Thus, in particular, $\Omega$ is contractible.
 
 Let $L_{t_0}$ be the intersection of $\Omega$ with hyperplane $t=t_0$;
 it is a complement of two convex parabolic cylinders in general position.
-If these cylinders have a point of intersection then $\pi_1 L_{t_0}=\mathbb Z$.
+If these cylinders have a point of intersection, then $\pi_1 L_{t_0}=\mathbb Z$.
 
-In particular, the function $f$ cannot be approximated by smooth functions such that their Hessians have at most one negative eigenvalue at all points.
+The discussion above implies that $f$ cannot be approximated by smooth functions such that their Hessians have at most one negative eigenvalue at all points.
 
 \parit{Remark.}
-Two-convexity also shows up in comparison geometry --- the maximal open flat sets in the manifolds of nonnegative or nonpositive curvature are two-convex \cite{panov-petrunin}.
+Two-convexity shows up in comparison geometry --- the maximal open flat sets in the manifolds of nonnegative or nonpositive curvature are two-convex \cite{panov-petrunin}.
 
 \subsection{Braid space}
 
-Let us define \emph{braid space} $\mathbb{B}^n$ as the universal covering of $\CC^n$ infinitely branching along the lines $z_i=z_j$ for $i\ne j$.
+Let us define \emph{braid space} $\mathbb{B}^n$ as the universal covering of $\CC^n$ infinitely branching along the complex hyperplanes $z_i=z_j$ for $i\ne j$.
 We suppose that $\CC^n$ is equipped with the canonical Euclidean metric,
 and $\mathbb{B}^n$ is equipped with lifted length metric.
 
-In other words, if $\mathbb{W}^n$ denotes the complement of lines $z_i=z_j$ in $\CC^n$,
+In other words, if $\mathbb{W}^n$ denotes the complement of complex hyperplanes $z_i=z_j$ in $\CC^n$,
 then the braid space $\mathbb{B}^n$ is the completion of the universal metric covering of $\mathbb{W}^n$.
 
 \begin{pr}
@@ -74,13 +75,13 @@ The case $n=2$ is trivial, and the case $n=3$ follows from the theorem of Ruth C
 another proof is given by Dmitri Panov and the author \cite{panov-petrunin-ramification}.
 
 The space $\mathbb{B}^n$ has plenty of convex functions, which might help to understand its geometry.
-The following construction is inspired by the argument given by Ian Agol \cite{agol-braid}, which provides an affirmative answer to a corollary of the conjecture:
+The following construction is inspired by the argument given by Ian Agol \cite{agol-braid}:
 (1) choose $n$ distinct points in $\CC$ (which is, an element of $\mathbb{W}^n$),
 (2) choose a closed curve $z$ in its complement,
 (3) consider the function $\mathbb{B}^n\to \RR$  that returns the greatest lower bound of lengths of closed curves that are homotopic to $z$.
 
-This construction implies, for example, that $\mathbb{B}^n$ has no geodesic loops.
-(Recall that, in order to show that $\mathbb{B}^n$ is $\mathrm{CAT}(0)$ one has to show that there are no geodesic digons.)
+This construction provides an affirmative answer to the following corollary of the conjecture: \textit{$\mathbb{B}^n$ has no geodesic loops}.
+(Recall that, in order to show that $\mathbb{B}^n$ is $\mathrm{CAT}(0)$ one has to show that there are no geodesic digons \cite[3.4.3]{AKP-invitation}.)
 
 \subsection{Quotients of Hilbert space}
 
@@ -114,7 +115,7 @@ Therefore, the ultralimit of $(G^n,\rho_n)$, with the identity element as the ba
 \subsection{Nested convex surfaces}
 
 \begin{pr}
-Describe the Riemannian metrics on $\mathbb{S}^n$ that are isometric to smooth nested convex surfaces;
+Describe the Riemannian metrics on $\mathbb{S}^n$ that are isometric to smooth \emph{nested convex surfaces};
 that is, a complete smooth convex hypersurface
 in a complete smooth convex hypersurface
 in ...
@@ -126,6 +127,7 @@ If $n=2$, then by Alexandrov's embedding theorem these are all Riemannian metric
 Direct calculations show that the metric has \emph{nonnegative cosectional curvature};
 the latter means that, at each point, the curvature tensor can be expressed as a linear combination with positive coefficients of the curvature tensors of $\mathbb{S}^2\times \RR^{n-2}$.
 It might happen that any metric with nonnegative cosectional curvature on $\mathbb{S}^n$ is isometric to a nested convex surface.
+(It's embarrassing, but I don't understand the situation with the Berger spheres.)
 If one drops completeness from the definition of nested convex surfaces
 and assumes that the cosectional curvature is strictly positive,
 then the answer is ``yes'' \cite{petrunin-poly}.
@@ -138,14 +140,15 @@ Show that $\Gamma$ contains at most $2^n$ maximal finite subgroups up to conjuga
 \end{pr}
 
 Let $F$ be a maximal finite subgroup in $\Gamma$.
-Note that the fixed points of $F$ form an affine subset of $\mathbb{E}^n$, and it is mapped to a singular set $S_F$ in the quotient space $X=\mathbb{E}^n/\Gamma$.
+Note that its fixed-point set $\mathrm{Fix}(F)$ is an affine subset of $\mathbb{E}^n$.
+Furthermore, $\mathrm{Fix}(F)$ is mapped to a singular set $S_F$ in the quotient space $X=\mathbb{E}^n/\Gamma$.
 Moreover, (1) a conjugation of $F$ does not change the set $S_F$; and, since $F$ is maximal, (2) $S_F$ is a \emph{simple} singular set;
 that is, $S_F$ does not have a proper singular subset.
 So instead of counting subgroups up to conjugation, we may count simple singular sets in $X$.
 
 It is expected that if the number of simple singular sets is maximal, then each of them has dimension 0;
 that is, each set $S_F$ is an isolated point in $X$.
-If this is indeed true, then the problem essentially boils down to the following well-known problem:
+If this is indeed true, then the problem essentially boils down to the following well-known problem in discrete geometry:
 \emph{show that one can choose at most $2^n$ points in $\mathbb{E}^n$ such that any triangle with vertices among the chosen points is acute or right.}
 This problem was was posed by Paul Erdős and solved by Ludwig Danzer and Branko Grünbaum \cite{danzer-gruenbaum}.
 More on the subject can be found in the paper by Nina Lebedeva \cite{lebedeva}.
@@ -167,7 +170,7 @@ His argument is based on the following claim
  Then, given $\eps>0$ there is a sequence of compact connected subsets $K_0,K_2,\dots K_n$
  with pairs of points $p_i,q_i\in K_i$ for each $i$ such that
 (1) $\diam K_i<\eps$ for each $i$,
-(2) $p_0=p$, $q_n=q$, and (3) if $\ell_i$ denotes the line segment $[q_{i-1}q_i]$, then
+(2) $p_0=p$, $q_n=q$, and (3) if $\ell_i$ denotes the line segment $[q_{i-1}p_i]$, then
  \[\length \ell_1+\dots+\length \ell_n<\eps.\]
 \end{itemize}
 
@@ -216,8 +219,7 @@ Is it possible to find a sequence of nonnegatively curved polyhedral metrics $d_
 
 Nonnegatively curved polyhedral metrics on $\CP^2$ have a number of interesting properties.
 For example, any such metric is Kähler; that is, one can choose a complex structure on each simplex of its triangulation that is respected by the gluings.
-Furthermore, these complex structures can be induced by a fixed parametrization of $\CP^2$, and,
-in this parametrization, the singular set forms an algebraic submanifold.
+Furthermore, these complex structures coincide with the standard complex structure on $\CP^2$ for a right parametrization, and in this parametrization, the singular set forms an algebraic submanifold.
 Such metrics on $\CP^2$ were constructed and studied by Dmitri Panov \cite{panov-Kaeler}.
 
 \subsection{Octahedron comparison}
@@ -231,7 +233,7 @@ Such metrics on $\CP^2$ were constructed and studied by Dmitri Panov \cite{panov
 Suppose $\Gamma$ is a graph with vertices $v_1,\dots,v_n$.
 We say that a metric space $X$ meets the \emph{$\Gamma$-comparison} if, for any set of points in $X$ labeled by the vertices of $\Gamma$, there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that
 if $v_i$ is adjacent to $v_j$, then
-$|\tilde v_i-\tilde v_j|_{\HH}\le | v_i-v_j|_{X}$,
+$|\tilde v_i-\tilde v_j|_{\HH}\z\le | v_i-v_j|_{X}$,
 and otherwise,
 $|\tilde v_i-\tilde v_j|_{\HH}\ge | v_i-v_j|_{X}$;
 here $|p-q|_M$ denotes the distance between points $p$ and $q$ in the metric space~$M$.
@@ -244,7 +246,7 @@ For the labeling shown on the diagram, $O_3$-comparison means that any six-point
 Is it true that $O_3$-comparison holds in any geodesic $\CAT(0)$ space?
 \end{pr}
 
-This problem is motivated by \cite[1.19$_+(e)$]{gromov-MetStr}.
+This problem is motivated by the question of Michael Gromov \cite[1.19$_+(e)$]{gromov-MetStr}.
 
 Note that the 4-cycle $C_4$ is an induced subgraph of $O_3$.
 Therefore, \textit{$O_3$-comparison implies $C_4$-comparison};
@@ -257,7 +259,7 @@ The five-point case was solved by Tetsu Toyoda \cite{toyoda2020} (see also \cite
 
 On the other hand, Nina Lebedeva and the author proved that $O_3$-comparison holds in product of trees \cite{lebedeva-petrunin2025}.
 Therefore, a counterexample would mean that $O_3$-comparison is something new and interesting;
-so both answers would be good.
+so both answers are good.
 
 
 \section*{Overheard}
@@ -298,7 +300,7 @@ It can be proved using the idea of Gary Lawlor \cite{lawlor}.
 \label{Convex hull in CAT(0)}
 
 Let $X$ be a geodesic metric space.
-Recall that, a set $C\subset X$ is called \emph{convex} if, for any two points $x,y\in C$, every geodesic from $x$ to $y$ lies in $C$.
+Recall that, a set $C\subset X$ is called \emph{convex} if, for any two points $x,y\in C$, every geodesic from $x$ to $y$ lies in~$C$.
 The \emph{closed convex hull} of a subset $K\subset X$ is defined as the intersection of all closed convex sets containing $K$.
 
 
@@ -317,7 +319,7 @@ If in doubt, check the note of Alexander Lytchak and the author \cite{lytchak-pe
 This problem was mentioned by Mikhael Gromov \cite[6.B$_1\text{(f)}$]{gromov-asymptotic}
 and restated by Eva Kopeck\'a and Simeon Reich \cite{kopecka-reich}, 
 but the problem seems to have been known in mathematical folklore for a long time.
-
+A counterexample to a stronger version of the question was constructed by Giuliano Basso, Yannick Krifka, and Elefterios Soultanis \cite{BKS}.
 
 
 
@@ -337,7 +339,7 @@ Is there a homeomorphism of the 2-dimensional torus with arbitrarily large disc 
 \end{pr}
 
 Analogous questions for the cylinder and the sphere are solved, but for the Möbius band the problem is open.
-This problem is discussed by Dmitri Burago, Sergei Ivanov, and Leonid Polterovich in \cite{BIP};
+This problem is discussed by Dmitri Burago, Sergei Ivanov, and Leonid Polterovich in \cite{BIP}.
 
 \subsection{Open projection}
 
@@ -358,10 +360,8 @@ Therefore, there is an open map $f_3\:\DD^3\to\mathbb{S}^2$.
 
 Composing $f_3$ with any open map $\DD^4\to \DD^3$,
 one gets an open map $f_4:\DD^4\to \mathbb{S}^2$.
-
-The map $f_3$
-is not the projection of an embedding $\DD^3\hookrightarrow \mathbb{S}^2\times\mathbb R$.
-(We have $f_3^{-1}(p)=\mathbb{S}^1$ for some $p\in \mathbb{S}^2$ and $\mathbb{S}^1$ cannot be embedded in $\mathbb R$.)  
+However, this map is not a projection of an embedding $\DD^4\hookrightarrow \mathbb{S}^2\times
+\mathbb R^2$.
 
 The question was asked by $\eps$-$\delta$ (an anonymous mathematician)  \cite{epsilon-delta}.
 
@@ -388,7 +388,6 @@ Does $h$ define the manifold $(M,g)$ and the point $p$ up to isometry?
 This simple-looking question was asked a long time ago by Warren Ambrose \cite{ambrose}.
 Affirmative answers were obtained in three cases: (1) in dimension 2, (2) for analytic metrics, and (3) for generic metrics; see \cite{hebla, itoh, ardoy} and the references therein.
 
-
 \subsection{Optical fibers}
 
 Suppose that $V$ is a body in $\RR^3$ bounded by two plane figures $F_1$ and $F_2$ (the ends) and a smooth surface $\Sigma$ (a tube).
@@ -397,11 +396,11 @@ moreover, a light ray that emerges from the interior of $V$, after bouncing, eme
 In this case, we say that $V$ is an \emph{optical fiber}.
 
 A small tubular neighborhood of a smooth curve $\gamma\:[a,b]\to \RR^3$ with disk ends provides an example of an optical fiber.
-Let us describe a more general example, which can be can be constructed in the same way using any plane figure bounded by a smooth curve instead of a disk.
-Suppose a plane curve is given by the parametrization $\theta\mapsto (x(\theta),y(\theta))$.
+Let us describe a more general example, which can be constructed in the same way using any plane figure bounded by a smooth curve instead of a disk.
+Suppose a plane curve is given by a periodic parametrization $\theta\mapsto (x(\theta),y(\theta))$.
 Choose a  parallel normal frame $e_1,e_2$ along $\gamma$
-(that is, such that $e_i'(t)\parallel\dot\gamma(t)$ for all $t$),
-and consider the tube $[a,b]\times\mathbb S^1\hookrightarrow\mathbb R^3$ defined as
+(that is, $e_i'(t)\parallel\dot\gamma(t)$ for all~$t$),
+and consider the tube $[a,b]\times\mathbb S^1\hookrightarrow\mathbb R^3$ defined by
 $$(t,\theta)\mapsto \gamma(t)+x(\theta){\cdot}e_1(t)+y(\theta){\cdot}e_2(t)$$
 (The condition that the frame is parallel implies that any normal plane to $\gamma$ cuts the tube at a right angle.)
 This way we get an \emph{optical fiber} with congruent ends.
@@ -421,8 +420,7 @@ Is there an optical fiber with noncongruent ends?
 By  Liouville's theorem, it is clear that the ends must have the same area.
 
 If the walls are only assumed to be \emph{piecewise} smooth, then one can construct an optical fiber with a pair of equidecomposable figures at the ends.
-(The construction is the same, but one splits the tube into a few tubes along the way and then reassembles them.
-)
+(The construction is the same, but one splits the tube into a few tubes along the way and then reassembles them.)
 
 The problem is based on two questions posted on MathOverflow \cite{rourke-optic, petrunin-optic}
 
@@ -433,5 +431,3 @@ Show that there is $\eps_n>0$ such that any open set in $\RR^n$ with volume at m
 \end{pr}
 
 The question was asked by Larry Guth in his thesis \cite{guth-2005}.
-It seems that if one removes the injectivity condition, then the answer is ``yes''.
-At least it is true in the two-dimensional case; a proof is sketched in \cite{petrunin-guth}.
