@@ -4,6 +4,9 @@
 %\newcommand{\arxiv}[2]{#2} %for kdp
 \arxiv{}{\pdfminorversion=3}
 
+\newcommand{\spell}[2]{#1} %for text
+%\newcommand{\spell}[2]{#2} %for spelling
+
 \usepackage{problems}
 \usepackage[colorlinks=true,
 citecolor=black,
@@ -27,7 +30,7 @@ pdfauthor={Anton Petrunin},
 \usepackage{attachfile}
 
 
-%\makeatletter\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}\RenewEnviron{Figure}[1][]{}\pagestyle{empty}\let\ps@plain\ps@empty\makeatother\usepackage[none]{hyphenat}\def\emph{\textit}\renewcommand{\footnote}[1]{\textup{\ (#1)}}\renewcommand{\frac}[2]{(#1)/(#2)}\renewcommand{\tfrac}[2]{(#1/#2)}\everydisplay{\textstyle}
+\spell{}{\makeatletter\usepackage{environ}\RenewEnviron{figure}[1][]{ [PICTURE] }\RenewEnviron{figure*}[1][]{ [PICTURE] }\RenewEnviron{wrapfigure}[1][]{ [PICTURE] }\usepackage{emptypage}\pagestyle{empty}\makeatother\usepackage[none]{hyphenat}\def\emph{\textit}\renewcommand{\footnote}[1]{\textup{\ (#1)}}\renewcommand{\frac}[2]{(#1)/(#2)}\renewcommand{\tfrac}[2]{(#1/#2)}\everydisplay{\textstyle}}
 
 \begin{document}
 
