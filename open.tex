@@ -9,7 +9,6 @@ Note that an open connected set $\Omega\subset\mathbb R^n$ is convex (in the usu
 for any triangle $\triangle$, if two sides of $\triangle$ lie in $\Omega$, then $\triangle\subset\Omega$.
 This observation motivates the definition of two-convexity used in the following problem.
 
-
 \begin{pr}
 Let $\Omega$ be a simply connected open set in $\mathbb R^n$.
 Assume that $\Omega$ is two-convex;
@@ -25,14 +24,13 @@ To prove the first statement, note that two-convexity implies that
 at most one of the principal curvatures of the boundary is negative.
 Then follow the Morse-type argument in Lefschetz theorem \cite[see Section~$\tfrac12$ in][]{gromov-SGMC}.
 In the case $n=3$, one can mimic the Morse-type argument;
-it also follows from \cite[4.5.2 in][]{AKP-invitation}.
+it also follows from \cite[7.17 in][]{AKP-invitation-2}.
 
 The first argument also proves that \textit{if $\Omega$ is a simply connected open two-convex set in $\mathbb R^n$ with a smooth boundary, then any component of the intersection of $\Omega$ with any affine subspace (not necessarily 2-dimensional) is simply connected.}
-The example below shows that a general 2-convex open set does not meet this property.
+The example below shows that a general 2-convex open set does not have this property.
 
 One may hope to prove the statement by constructing an approximation of $\Omega$ by two-convex domains with smooth boundaries.
 Again, the example below shows that such an approximation does not exist for $n\ge 4$.
-
 
 \parit{Example.}
 We will construct a two-convex simply connected open set $\Omega$ in $\mathbb R^4$ such that the intersection of $\Omega$ with some hyperplane is not simply connected.
@@ -50,7 +48,7 @@ Thus, in particular, $\Omega$ is contractible.
 
 Let $L_{t_0}$ be the intersection of $\Omega$ with hyperplane $t=t_0$;
 it is a complement of two convex parabolic cylinders in general position.
-If these cylinders have a point of intersection, then $\pi_1 L_{t_0}=\mathbb Z$.
+If these cylinders have a point of intersection, then $\pi_1 L_{t_0}\z=\mathbb Z$.
 
 The discussion above implies that $f$ cannot be approximated by smooth functions such that their Hessians have at most one negative eigenvalue at all points.
 
@@ -61,27 +59,34 @@ Two-convexity shows up in comparison geometry --- the maximal open flat sets in 
 
 Let us define \emph{braid space} $\mathbb{B}^n$ as the universal covering of $\CC^n$ infinitely branching along the complex hyperplanes $z_i=z_j$ for $i\ne j$.
 We suppose that $\CC^n$ is equipped with the canonical Euclidean metric,
-and $\mathbb{B}^n$ is equipped with lifted length metric.
+and $\mathbb{B}^n$ is equipped with the lifted length metric.
 
 In other words, if $\mathbb{W}^n$ denotes the complement of complex hyperplanes $z_i=z_j$ in $\CC^n$,
 then the braid space $\mathbb{B}^n$ is the completion of the universal metric covering of $\mathbb{W}^n$.
+
+The following problem is a special case of a conjecture formulated by Daniel Allcock~\cite[Conjecture 1.4]{allcock}, which is related to an earlier conjecture of Ruth Charney and Michael Davis \cite[Conjecture 3]{charney-davis-95}, which in turn is motivated by the $K(\pi,1)$-conjecture \cite{vanderlek,paris}.
+Dmitri Panov and the author are also responsible for a more general version of Allcock's conjecture \cite[Conjecture 1.1]{panov-petrunin}.
 
 \begin{pr}
 Is it true that $\mathbb{B}^n$ is $\mathrm{CAT}(0)$ for any $n$?
 \end{pr}
 
 The answer is ``yes'' for $n\le 3$.
-The case $n=2$ is trivial, and the case $n=3$ follows from the theorem of Ruth Charney and Michael Davis about branched coverings of 3-sphere \cite{charney-davis};
+The case $n=2$ is trivial, and the case $n=3$ follows from the theorem of Ruth Charney and Michael Davis about branched coverings of the 3-sphere \cite{charney-davis};
 another proof is given by Dmitri Panov and the author \cite{panov-petrunin-ramification}.
+The case of the real braid space with 4 strings was settled by Ruth Charney thru a detailed analysis of
+short galleries \cite[Theorem~5.4]{charney2004}.
+The \emph{real braid space} is defined as the inverse image of the real subspace $\RR^n\subset \CC^n$ under the projection $\mathbb{B}^n\to \CC^n$.
+This is a convex subset of  $\mathbb{B}^n$; therefore, the question about real braid space is a special case of our problem.
 
 The space $\mathbb{B}^n$ has plenty of convex functions, which might help to understand its geometry.
 The following construction is inspired by the argument given by Ian Agol \cite{agol-braid}:
-(1) choose $n$ distinct points in $\CC$ (which is, an element of $\mathbb{W}^n$),
+(1) choose $n$ distinct points in $\CC$ (that is, an element of $\mathbb{W}^n$),
 (2) choose a closed curve $z$ in its complement,
 (3) consider the function $\mathbb{B}^n\to \RR$  that returns the greatest lower bound of lengths of closed curves that are homotopic to $z$.
 
-This construction provides an affirmative answer to the following corollary of the conjecture: \textit{$\mathbb{B}^n$ has no geodesic loops}.
-(Recall that, in order to show that $\mathbb{B}^n$ is $\mathrm{CAT}(0)$ one has to show that there are no geodesic digons \cite[3.4.3]{AKP-invitation}.)
+Existence of convex functions forbids geodesic loops in $\mathbb{B}^n$; this would also follow if $\mathbb{B}^n$ is $\mathrm{CAT}(0)$.
+To show that $\mathbb{B}^n$ is $\mathrm{CAT}(0)$ one has to forbid geodesic digons \cite[6.6]{AKP-invitation-2}.
 
 \subsection{Quotients of Hilbert space}
 
@@ -101,7 +106,9 @@ Consider the map $\phi_n\:G^n\to G/\!\!/H$ defined by
 where $[x]_H$ denotes the $H$-orbit of $x$ in $G$.
 
 Note that $\phi_n$ is a quotient map for the action of $H\times G^{n-1}$ on $G^n$ defined by
-\[(\beta_0,\dots,\beta_n)\cdot(\alpha_1,\dots,\alpha_n)=(\gamma_1\cdot \alpha_1\cdot\beta_1^{-1},\beta_1\cdot\alpha_2\cdot\beta_2^{-1},\dots,\beta_{n-1}\cdot\alpha_n\cdot\beta_n^{-1}),\]
+\[(\beta_0,\dots,\beta_n)\cdot(\alpha_1,\dots,\alpha_n)
+=
+(\beta_0\cdot \alpha_1\cdot\beta_1^{-1},\beta_1\cdot\alpha_2\cdot\beta_2^{-1},\dots,\beta_{n-1}\cdot\alpha_n\cdot\beta_n^{-1}),\]
 where $\beta_i\in G$ and $(\beta_0,\beta_n)\in H<G\times G$.
 
 Denote by $\rho_n$ the product metric on $G^n$ rescaled by the factor $\sqrt{n}$.
@@ -125,32 +132,36 @@ in a Euclidean space.
 If $n=2$, then by Alexandrov's embedding theorem these are all Riemannian metrics with nonnegative curvature.
 
 Direct calculations show that the metric has \emph{nonnegative cosectional curvature};
-the latter means that, at each point, the curvature tensor can be expressed as a linear combination with positive coefficients of the curvature tensors of $\mathbb{S}^2\times \RR^{n-2}$.
+the latter means that, at each point, the curvature tensor can be expressed as a linear combination with nonnegative coefficients of the curvature tensors of $\mathbb{S}^2\times \RR^{n-2}$.
+(In dimension three, nonnegative cosectional curvature is equivalent
+to nonnegative sectional curvature; in dimension 4, it is equivalent to nonnegative curvature operator.)
+
 It might happen that any metric with nonnegative cosectional curvature on $\mathbb{S}^n$ is isometric to a nested convex surface.
 (It's embarrassing, but I don't understand the situation with the Berger spheres.)
 If one drops completeness from the definition of nested convex surfaces
 and assumes that the cosectional curvature is strictly positive,
-then the answer is ``yes'' \cite{petrunin-poly}.
+then the answer is ``yes''~\cite{petrunin-poly}.
 
 \subsection{Maximal finite subgroups}
 
 \begin{pr}
-Suppose that a group $\Gamma$ acts effectively, isometrically, and totally discontinuously on Euclidean space $\mathbb{E}^n$.
+Suppose that a group $\Gamma$ acts effectively, isometrically, and properly discontinuously on Euclidean space $\mathbb{E}^n$.
 Show that $\Gamma$ contains at most $2^n$ maximal finite subgroups up to conjugation.
 \end{pr}
 
 Let $F$ be a maximal finite subgroup in $\Gamma$.
-Note that its fixed-point set $\mathrm{Fix}(F)$ is an affine subset of $\mathbb{E}^n$.
+Its fixed-point set $\mathrm{Fix}(F)$ is an affine subset of $\mathbb{E}^n$.
 Furthermore, $\mathrm{Fix}(F)$ is mapped to a singular set $S_F$ in the quotient space $X=\mathbb{E}^n/\Gamma$.
 Moreover, (1) a conjugation of $F$ does not change the set $S_F$; and, since $F$ is maximal, (2) $S_F$ is a \emph{simple} singular set;
 that is, $S_F$ does not have a proper singular subset.
 So instead of counting subgroups up to conjugation, we may count simple singular sets in $X$.
+Crude bounds on this number were obtained by Tadashi Fujioka \cite{fujioka2025}.
 
 It is expected that if the number of simple singular sets is maximal, then each of them has dimension 0;
 that is, each set $S_F$ is an isolated point in $X$.
 If this is indeed true, then the problem essentially boils down to the following well-known problem in discrete geometry:
 \emph{show that one can choose at most $2^n$ points in $\mathbb{E}^n$ such that any triangle with vertices among the chosen points is acute or right.}
-This problem was was posed by Paul Erdős and solved by Ludwig Danzer and Branko Grünbaum \cite{danzer-gruenbaum}.
+This problem was posed by Paul Erdős and solved by Ludwig Danzer and Branko Grünbaum \cite{danzer-gruenbaum}.
 More on the subject can be found in the paper by Nina Lebedeva \cite{lebedeva}.
 
 \subsection{Shortcut in a connected set}
@@ -162,17 +173,17 @@ Is it possible to connect $p$ to $q$ by a curve $\gamma$ such that the length of
 
 Be aware that there are compact connected sets which contain no nontrivial paths; for example, the \emph{pseudoarc}.
 
+The problem remains open for $n\ge 3$.
 In the case $n=2$, an affirmative answer was obtained by Taras Banakh \cite{banakh}.
-His argument is based on the following claim
+His argument is based on the following claim:
 
-\begin{itemize}
- \item Suppose $K$ is a connected compact set in the plane and $p,q\in K$.
- Then, given $\eps>0$ there is a sequence of compact connected subsets $K_0,K_2,\dots K_n$
+\textit{Suppose $K$ is a connected compact set in the plane and $p,q\in K$.
+ Then, given $\eps>0$ there is a sequence of compact connected subsets $K_0,\dots, K_n$
  with pairs of points $p_i,q_i\in K_i$ for each $i$ such that
 (1) $\diam K_i<\eps$ for each $i$,
-(2) $p_0=p$, $q_n=q$, and (3) if $\ell_i$ denotes the line segment $[q_{i-1}p_i]$, then
- \[\length \ell_1+\dots+\length \ell_n<\eps.\]
-\end{itemize}
+(2) $p_0=p$, $q_n=q$, and
+(3) if $\ell_i$ denotes the line segment $[q_{i-1}p_i]$, then
+ \[\length \ell_1+\dots+\length \ell_n<\eps.\]}
 
 Assume that the claim is proved.
 Then we can prove the statement by applying it recursively to each $K_i$, choosing a much smaller value of $\eps$ at each step.
@@ -200,12 +211,13 @@ Assume that the sectional curvature of $g$ is at least~$1$.
 Is it true that $\length\gamma\le2\cdot\pi$?
 \end{pr}
 
+A nonsharp universal upper bound on $\length\gamma$ follows from a
+result of Tadashi Fujioka \cite{fujioka2025}.
 The same question can be asked about spherical polyhedral metrics with curvature at least 1 in the sense of Alexandrov.
 
 If, instead of an isometric involution, we have an $\mathbb{S}^1$-action, then the answer is ``yes''.
 It follows since the quotient space $(\mathbb{S}^3,g)/\mathbb{S}^1$ is a convex disc with sectional curvature at least 1,
 and $\gamma$ projects isometrically to its boundary.
-
 
 \subsection{Faceting Fubini--Study}
 
@@ -220,15 +232,10 @@ Is it possible to find a sequence of nonnegatively curved polyhedral metrics $d_
 Nonnegatively curved polyhedral metrics on $\CP^2$ have a number of interesting properties.
 For example, any such metric is Kähler; that is, one can choose a complex structure on each simplex of its triangulation that is respected by the gluings.
 Furthermore, these complex structures coincide with the standard complex structure on $\CP^2$ for a right parametrization, and in this parametrization, the singular set forms an algebraic submanifold.
-Such metrics on $\CP^2$ were constructed and studied by Dmitri Panov \cite{panov-Kaeler}.
+Such metrics on $\CP^2$ were constructed and studied by Dmitri Panov \cite{panov-Kaeler};
+see also his paper with Martin de Borbon \cite{deborbon-panov2026}.
 
 \subsection{Octahedron comparison}
-
-\begin{wrapfigure}[8]{r}{25 mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-30}
-\end{wrapfigure}
 
 Suppose $\Gamma$ is a graph with vertices $v_1,\dots,v_n$.
 We say that a metric space $X$ meets the \emph{$\Gamma$-comparison} if, for any set of points in $X$ labeled by the vertices of $\Gamma$, there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that
@@ -238,13 +245,32 @@ and otherwise,
 $|\tilde v_i-\tilde v_j|_{\HH}\ge | v_i-v_j|_{X}$;
 here $|p-q|_M$ denotes the distance between points $p$ and $q$ in the metric space~$M$.
 
+%\begin{wrapfigure}[8]{r}{25 mm}\vskip-6mm\centering\includegraphics{mppics/pic-30}\end{wrapfigure}
+
+{
+
+\begin{wrapfigure}{r}{30 mm}
+\vskip-6mm\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\coordinate (z0) at ( 0,       0.5);\coordinate (z1) at (-0.7794,  0.45);\coordinate (z2) at (-0.4330, -0.25);\coordinate (z3) at ( 0,      -0.9);\coordinate (z4) at ( 0.4330, -0.25);\coordinate (z5) at ( 0.7794,  0.45);
+\draw[use Hobby shortcut, closed=true]  (z0) .. (z1) .. (z3) .. (z4);\draw[use Hobby shortcut, closed=true]  (z1) .. (z2) .. (z4) .. (z5);\draw[use Hobby shortcut, closed=true]  (z2) .. (z3) .. (z5) .. (z0);
+\fill (z0) circle (1.2pt);\fill (z1) circle (1.2pt);\fill (z2) circle (1.2pt);\fill (z3) circle (1.2pt);\fill (z4) circle (1.2pt);\fill (z5) circle (1.2pt);
+\node[above]  at (z0) {$x$};\node[above,xshift=1pt] at (z3) {$x'$};
+\node[below right] at (z4) {$y$};\node[above left,xshift=3pt] at (z1) {$y'$};
+\node[below left]  at (z2) {$z$};\node[above right] at (z5) {$z'$};
+\end{tikzpicture}
+\end{wrapfigure}
+
 Let us denote by $O_3$ the graph of the octahedron.
 For the labeling shown on the diagram, $O_3$-comparison means that any six-point configuration $x,x',y,y',z,z'\in X$ can be mapped to $\HH$ so that the diagonals $xx'$, $yy'$, and $zz'$ do not get shorter and the edges do not get longer.
 
+}
 
 \begin{pr}
 Is it true that $O_3$-comparison holds in any geodesic $\CAT(0)$ space?
 \end{pr}
+
+
 
 This problem is motivated by the question of Michael Gromov \cite[1.19$_+(e)$]{gromov-MetStr}.
 
@@ -257,12 +283,12 @@ but for intrinsic metrics it is unknown; a weaker inequality was proved by Tetsu
 An affirmative answer might lead to a classification of six-point spaces that admit an isometric embedding in a geodesic $\CAT(0)$ space.
 The five-point case was solved by Tetsu Toyoda \cite{toyoda2020} (see also \cite{lebedeva-petrunin2021}).
 
-On the other hand, Nina Lebedeva and the author proved that $O_3$-comparison holds in product of trees \cite{lebedeva-petrunin2025}.
+On the other hand, Nina Lebedeva and the author proved that $O_3$-comparison holds in products of trees \cite{lebedeva-petrunin2025}.
 Therefore, a counterexample would mean that $O_3$-comparison is something new and interesting;
 so both answers are good.
 
 \parbf{Postscript.}
-The problem appears to have been solved by Jihun Kim \cite{kim2026}.
+The problem has been solved by Jihun Kim \cite{kim2026}.
 
 \section*{Overheard}
 
@@ -288,7 +314,7 @@ This solves part (\ref{vinberg}) for $k=1$; the remaining questions are complete
 
 \begin{pr}
 Let $\Omega$ be a round disc of radius $\alpha<\tfrac\pi2$ on the unit sphere $\mathbb{S}^2$,
-and let $\Omega'$ be a convex domain in $\mathbb{S}^2$ with the same area as $\Omega$. Show that there is $(1,\tfrac{\alpha}{\sin\alpha})$-bi-Lipschitz map from $\Omega'$ to the plane.
+and let $\Omega'$ be a convex domain in $\mathbb{S}^2$ with the same area as $\Omega$. Show that there is a $(1,\tfrac{\alpha}{\sin\alpha})$-bi-Lipschitz map from $\Omega'$ to the plane.
 \end{pr}
 
 The question was asked by John Milnor \cite{milnor-cartography}.
@@ -305,15 +331,13 @@ The problem has since been solved by the author \cite{petrunin2026}.
 \label{Convex hull in CAT(0)}
 
 Let $X$ be a geodesic metric space.
-Recall that, a set $C\subset X$ is called \emph{convex} if, for any two points $x,y\in C$, every geodesic from $x$ to $y$ lies in~$C$.
+Recall that a set $C\subset X$ is called \emph{convex} if, for any two points $x,y\in C$, every geodesic from $x$ to $y$ lies in~$C$.
 The \emph{closed convex hull} of a subset $K\subset X$ is defined as the intersection of all closed convex sets containing $K$.
 
-
 \begin{pr}
-Let $K$ be a compact subset in a complete length $\mathop{\rm CAT}(0)$ space $X$.
+Let $K$ be a compact subset of a complete length $\mathop{\rm CAT}(0)$ space $X$.
 Is it true that the closed convex hull of $K$ is compact?
 \end{pr}
-
 
 Note that the space is not assumed to be locally compact; otherwise, the statement is evident.
 I believe in a counterexample, perhaps even with negatively pinched curvature (in the sense of Alexandrov).
@@ -323,11 +347,13 @@ If in doubt, check the note of Alexander Lytchak and the author \cite{lytchak-pe
 
 This problem was mentioned by Mikhael Gromov \cite[6.B$_1\text{(f)}$]{gromov-asymptotic}
 and restated by Eva Kopeck\'a and Simeon Reich \cite{kopecka-reich}, 
-but the problem seems to have been known in mathematical folklore for a long time.
-A counterexample to a stronger version of the question was constructed by Giuliano Basso, Yannick Krifka, and Elefterios Soultanis \cite{BKS}.
+but it seems to have been known in mathematical folklore for a long time.
 
+The problem remains open even when $K$ consists of three points.
+A counterexample is known if the $\mathop{\rm CAT}(0)$ assumption is weakened to the existence of a conical geodesic bicombing; it was constructed by Giuliano Basso, Yannick Krifka, and Elefterios Soultanis \cite{BKS}.
 
-
+\parbf{Postscript.}
+The problem has been solved by Ariel Goodwin \cite{goodwin2026, lytchak2026}.
  
 \subsection{Homeomorphism of the torus}
 
@@ -346,11 +372,14 @@ Is there a homeomorphism of the 2-dimensional torus with arbitrarily large disc 
 Analogous questions for the cylinder and the sphere are solved, but for the Möbius band the problem is open.
 This problem is discussed by Dmitri Burago, Sergei Ivanov, and Leonid Polterovich in \cite{BIP}.
 
+\parbf{Postscript.}
+Jonathan Bowden, Sebastian Hensel, and Richard Webb \cite{bowden-hensel-webb} constructed unbounded quasimorphisms on the group of homeomorphisms of the torus that are isotopic to the identity, which implies an affirmative answer to the problem.
+
 \subsection{Open projection}
 
 Let us denote by $\DD^n$ a closed $n$-dimensional ball.
 
-Recall that, a map is called \emph{open} if the image of any open set is open.
+Recall that a map is called \emph{open} if the image of any open set is open.
 
 \begin{pr}
 Is it possible to construct an embedding $\DD^4\hookrightarrow \mathbb{S}^2\times
@@ -358,9 +387,8 @@ Is it possible to construct an embedding $\DD^4\hookrightarrow \mathbb{S}^2\time
 such that the projection  $\DD^4\to \mathbb{S}^2$ is an open map?
 \end{pr}
 
-
 It is easy to construct an embedding $\DD^3\hookrightarrow \mathbb{S}^3$
-such that its composition with the Hopf fibration $f_3:\DD^3\to \mathbb{S}^2$ is open.
+such that its composition with the Hopf fibration is open.
 Therefore, there is an open map $f_3\:\DD^3\to\mathbb{S}^2$.
 
 Composing $f_3$ with any open map $\DD^4\to \DD^3$,
@@ -370,7 +398,6 @@ However, this map is not a projection of an embedding $\DD^4\hookrightarrow \mat
 
 The question was asked by $\eps$-$\delta$ (an anonymous mathematician)  \cite{epsilon-delta}.
 
-
 \subsection{Zero-curvature along geodesics}
 
 \begin{pr}
@@ -379,7 +406,8 @@ Show that, with probability 1, a random geodesic in $M$ runs into the set of neg
 \end{pr}
 
 I learned this problem from Dmitri Burago; it originated from a discussion with Keith Burns, Michael Brin, and Yakov Pesin \cite[see also][]{hertz}.
-It seems that \textit{there are no known examples of a surface $M$ with nonperiodic geodesic that runs in the set of zero curvature}.
+Weisheng Wu \cite{wu2015} proved the statement under the additional assumption that the set of points with negative curvature has finitely many connected components.
+It seems that \textit{there are no known examples of a surface $M$ with a nonperiodic geodesic that runs in the set of zero curvature}.
 
 \subsection{Ambrose problem}
 
@@ -391,13 +419,13 @@ Does $h$ define the manifold $(M,g)$ and the point $p$ up to isometry?
 \end{pr}
 
 This simple-looking question was asked a long time ago by Warren Ambrose \cite{ambrose}.
-Affirmative answers were obtained in three cases: (1) in dimension 2, (2) for analytic metrics, and (3) for generic metrics; see \cite{hebla, itoh, ardoy} and the references therein.
+Affirmative answers were obtained in three cases: (1) in dimension 2, (2) for analytic metrics, and (3) for generic metrics; see \cite{hebda1994, hebda2010, itoh, ardoy} and the references therein.
 
 \subsection{Optical fibers}
 
 Suppose that $V$ is a body in $\RR^3$ bounded by two plane figures $F_1$ and $F_2$ (the ends) and a smooth surface $\Sigma$ (a tube).
 Suppose that a light ray entering $V$ thru one end and bouncing with perfect reflection from the interior walls of $\Sigma$ will emerge from the other end with probability 1;
-moreover, a light ray that emerges from the interior of $V$, after bouncing, emerges from one of the ends with  probability 1.
+moreover, a light ray that starts in the interior of $V$, after bouncing, emerges from one of the ends with  probability 1.
 In this case, we say that $V$ is an \emph{optical fiber}.
 
 A small tubular neighborhood of a smooth curve $\gamma\:[a,b]\to \RR^3$ with disk ends provides an example of an optical fiber.
@@ -427,12 +455,14 @@ By  Liouville's theorem, it is clear that the ends must have the same area.
 If the walls are only assumed to be \emph{piecewise} smooth, then one can construct an optical fiber with a pair of equidecomposable figures at the ends.
 (The construction is the same, but one splits the tube into a few tubes along the way and then reassembles them.)
 
-The problem is based on two questions posted on MathOverflow \cite{rourke-optic, petrunin-optic}
+The problem is based on two questions posted on MathOverflow \cite{rourke-optic, petrunin-optic}.
 
 \subsection{Guth's sponge}
 
 \begin{pr}
-Show that there is $\eps_n>0$ such that any open set in $\RR^n$ with volume at most $\eps_n$ admits a length-increasing embedding into a unit ball.
+Show that there is $\eps_n>0$ such that any bounded open set in $\RR^n$ with volume at most $\eps_n$ admits a length-increasing embedding into a unit ball.
 \end{pr}
 
 The question was asked by Larry Guth in his thesis \cite{guth-2005}.
+It is open in all dimensions $n\ge 2$.
+In dimension 2, Parker Glynn-Adey proved a weaker version using a strip between parallel lines instead of the ball \cite{glynn-adey}.

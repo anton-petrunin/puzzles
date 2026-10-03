@@ -1,6 +1,12 @@
 \documentclass[twoside]{article}
 
+%\documentclass{article}
+\usepackage{tikz}\usetikzlibrary{hobby}
+
 \usepackage{problems}
+
+\geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
+
 \usepackage[colorlinks=true,
 citecolor=black,
 linkcolor=black,
@@ -13,12 +19,10 @@ pdfsubject={Geometry},
 pdfauthor={Anton Petrunin}
 ]{hyperref}
 
-\geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
-
 \makeindex
 
 \begin{document}
-%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+
 
 \title{
 A gallery of open problems in geometry\\
@@ -28,56 +32,23 @@ that keep me puzzled and amused
 \date{}
 \maketitle
 
-
-
-%\thispagestyle{empty}
-%\tableofcontents
-%\thispagestyle{empty}
-
-%\newpage
-%\thispagestyle{empty}
-%\section*{Preface}
-
-This is a collection of open problems in geometry that I think of as \textit{puzzles}:
-they stick to my brain — I see many grips, but no spare hands.
-Puzzle-charm is the only criterion for including a problem here;
+This is a collection of open questions in geometry that I think of as \textit{puzzles}:
+they stick to my brain --- I see grips, but no spare hands.
+Puzzle-charm is the only criterion for inclusion here;
 importance is ignored.
 
-Originally, I was planning to add these problems to my PIGTIKAL~\cite{petrunin2021pigtikal} (a collection of solved puzzles), but things around open problems change rapidly, so it makes more sense to separate them.
+These puzzles grew out of my collection of solved puzzles~\cite{petrunin2021pigtikal}.
+I kept it aside since things around open questions change rapidly.
 
-Please send me an email if you solve one of the problems, or see a good approach.
-
-%\null\vfill\noindent{\includegraphics[scale=0.5]{pics/by-sa}
-%\vspace*{1mm}
-%\\
-%\hbox{\parbox{1\textwidth}
-%{\textit{UPTIKAL (unsolved puzzles that I know and love)} by Anton Petrunin is licensed under CC BY-SA 4.0.
-%To view a copy of this license, visit
-%\texttt{https://creativecommons.org/licenses/by-sa/4.0}}}}
-
+Please send me an email if you solve one of the puzzles, or see a good approach.
 
 \renewcommand\thesubsection{\arabic{subsection}}
 \input{open.tex}
 
-\paragraph*{Acknowledgment.}
-This work was partially supported by the following grants:
-NSF grants DMS
-0103957,
-0406482,
-0905138,
-1309340,
-2005279,
-and Simons Foundation grants
-245094 and 584781.
+%\paragraph*{Acknowledgment.} This work was partially supported by the following grants: NSF grants DMS 0103957, 0406482, 0905138, 1309340, 2005279, and Simons Foundation grants 245094 and 584781.
 
 %the total number of problems is \thethm.
 
-%\backmatter
-%\newpage
-%\phantomsection
-%{\scriptsize
-%\input{open-problems.ind}
-%}
 \sloppy
 \printbibliography[heading=bibintoc]
 \fussy
