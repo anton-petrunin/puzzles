@@ -66,7 +66,7 @@ for any $x\in\mathbb{S}^2$.
 Show that the area of $(\mathbb{S}^2,g)$ is bounded below by a fixed positive constant. 
 \end{pr}
 
-The expected solution uses Besicovitch inequality described in the next problem.
+The expected solution uses the Besicovitch inequality described in the next problem.
 
 %???
 
@@ -78,7 +78,7 @@ The expected solution uses Besicovitch inequality described in the next problem.
 Let $g$ be a Riemannian metric on an $m$-dimensional cube $Q$ such that any curve connecting opposite faces has length at least $1$. 
 Prove that 
 \[\vol(Q,g)\ge 1,\] 
-and the equality holds if and only if $(Q,g)$ is isometric to the unit cube.
+and equality holds if and only if $(Q,g)$ is isometric to the unit cube.
 \end{pr}
 
 
@@ -111,7 +111,7 @@ Prove that $M$ has infinite volume.
 \end{pr}
 
 The expected solution uses Liouville's theorem about phase volume.
-It implies in particular, that the geodesic flow on the unit tangent bundle of a Riemannian manifold preserves the volume.
+It implies, in particular, that the geodesic flow on the unit tangent bundle of a Riemannian manifold preserves the volume.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,7 +145,7 @@ Let $g$ be a Riemannian metric on the sphere $\mathbb{S}^2$.
 Consider the tangent bundle $\T \mathbb{S}^2$ 
 equipped with the induced Sasaki metric $\hat g$.
 Show that
-the space $(\T \mathbb{S}^2, \hat g)$ lies at a bounded distance to the ray $\RR_{\ge 0}=[0,\infty)$ in the sense of Gromov--Hausdorff.
+the space $(\T \mathbb{S}^2, \hat g)$ lies at a bounded Gromov--Hausdorff distance from the ray $\RR_{\ge 0}=[0,\infty)$.
 \end{pr}
 
 
@@ -159,7 +159,7 @@ for any closed surface $S$ that does not bound in $\TT^3$.
 \end{pr}
 
 According to Gromov's systolic inequality \cite{gromov-filling}, the volume of $(\TT^3,g)$ can be bounded below in terms of its \emph{1-systole} defined to be the shortest length of a noncontractible closed curve in $(\TT^3,g)$.
-The lower bound on the area of $S$ in the problem is called the 2-systole of $(\TT^3,g)$.
+The optimal lower bound on the area of $S$ in the problem is called the 2-systole of $(\TT^3,g)$.
 
 The problem implies that Gromov's systolic inequality does not have a direct 2-dimensional analog.
 
@@ -168,14 +168,14 @@ The problem implies that Gromov's systolic inequality does not have a direct 2-d
 \label{Normal exponential map}
 \label{page:Normal exponential map}
 
-Let $(M,g)$ be a Riemannian manifold;
+Let $(M,g)$ be a complete Riemannian manifold;
 denote by $\T M$ the tangent bundle over $M$ and by $\T_p=\T_pM$ the tangent space at the point~$p$.
 
 Given a vector $v\in\T_pM$, denote by $\gamma_v$ the geodesic in $(M,g)$
-such that $\gamma(0)=p$ and $\gamma'(0)=v$.
+such that $\gamma_v(0)=p$ and $\gamma_v'(0)=v$.
 The map $\exp\:\T M\to M$ defined by $v\mapsto \gamma_v(1)$ is called the exponential map.
 
-The restriction of $\exp|_{\T_p}$ is called the \index{exponential map}\emph{exponential map at} $p$ and is denoted by $\exp_p$.
+The restriction $\exp|_{\T_p}$ is called the \index{exponential map}\emph{exponential map at} $p$ and is denoted by $\exp_p$.
 
 Given a smooth immersion $L\to M$,
 denote by $\mathrm{N} L$ the normal bundle over $L$.
@@ -255,14 +255,14 @@ Show that for any path $\gamma_0$ in $(M,g)$ starting at $p$,
 there is a homotopy $\gamma_t$ relative to its endpoints
 such that 
 \begin{enumerate}[a)]
-\item $\length \gamma_1<L$;
+\item $\length \gamma_1\le L$;
 \item $\length \gamma_t\le \length \gamma_0+2\cdot D$ for any $t\in[0,1]$.
  
 \end{enumerate}
 \end{pr}
 
 Examples of manifolds satisfying the above condition for some $L$ have been found among the Zoll spheres
-by Florent Balachev, Christopher Croke, and Mikhail Katz \cite{balacheff-croke-katz}.
+by Florent Balacheff, Christopher Croke, and Mikhail Katz \cite{balacheff-croke-katz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -274,11 +274,11 @@ Recall that a subset $K$ of a Riemannian manifold is called \index{convex set}\e
 
 \begin{pr}
 Let $M$ be a totally geodesic hypersurface 
-in a closed Riemannian $m$-dimensional manifold $W$.
+in a closed simply connected Riemannian $m$-dimensional manifold $W$.
 Assume that the injectivity radius of $M$ is at least $1$
 and $M$ forms a convex set in $W$.
 
-Show that the maximal distance from $M$ to the points of $W$ can be bounded below by a positive constant $\eps_m$ that depends only on the dimension $m$ (in fact, $\eps_m=\tfrac2{m+3}$ will~do).
+Show that the maximal distance from $M$ to the points of $W$ can be bounded below by a positive constant $\eps_m$ that depends only on the dimension $m$ (in fact, $\eps_m=\tfrac1{2\cdot(m+1)}$ will~do).
 \end{pr}
 
 Note that we did not make any assumption on the injectivity radius of $W$.
@@ -325,7 +325,7 @@ It follows that $\gamma$ together with $\gamma'$ forms a closed simple curve in 
 that divides the sphere into two disks $D$ and $D'$.
 
 Let us divide $\gamma$ into two equal arcs $\gamma_1$ and $\gamma_2$; each of length $\tfrac12$.
-Suppose that $p,q\in\gamma_1$, then 
+If $p,q\in\gamma_1$, then
 \begin{align*}
 |p-q'|_g&\ge |q-q'|_g-|p-q|_g\ge
 \\
@@ -333,35 +333,15 @@ Suppose that $p,q\in\gamma_1$, then
 \end{align*}
 That is, the minimal distance from $\gamma_1$ to $\gamma_1'$ is at least~$\tfrac12$.
 The same way we get that the minimal distance from $\gamma_2$ to $\gamma_2'$ is at least~$\tfrac12$.
-By Besicovitch inequality, we get that 
+By the Besicovitch inequality, we get that
 \[\area(D,g)\ge \tfrac14\quad\text{and}\quad \area(D',g)\ge \tfrac14.\]
 Therefore 
 \[\area(\mathbb{S}^2,g)\ge\tfrac12.\]
 \qedsf
 
 This inequality was proved by Marcel Berger \cite{berger}. 
+The bound can be improved slightly by applying the coarea formula to an appropriately chosen function.
 Christopher Croke conjectured that the optimal bound is $\tfrac4\pi$ and the round sphere is the only space that achieves this \cite[see Conjecture 0.3 in][]{croke}.
-
-Let us indicate how to improve the obtained bound to
-\[\area(\mathbb{S}^2,g)\ge1.\]
-
-Suppose $x$, $x'$, $\gamma$, and $\gamma'$ are as above.
-Consider the function
-\[f(z)=\min_t \{\,|\gamma'(t)-z|_g+t\,\}.\]
-Observe that $f$ is 1-Lipschitz.
-
-Show that two points $\gamma'(c)$ and $\gamma(1-c)$ lie on one connected component of the level set $L_c=\set{z\in\mathbb{S}^2}{f(z)=c}$;
-in particular 
-\[\length L_c\ge 2\cdot|\gamma'(c)-\gamma(1-c)|_g.\]
-By the triangle inequality, we have that
-\begin{align*}
-|\gamma'(c)-\gamma(1-c)|_g&\ge 1-|\gamma(c)-\gamma(1-c)|_g=
-\\
-&=1-|1-2\cdot c|.
-\end{align*}
-
-It remains to apply the coarea formula
-\[\area(\mathbb{S}^2,g)\ge \int\limits_0^1\length L_c\cdot dc.\]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -441,7 +421,7 @@ the form $\omega=\phi+\mathop{\star}\phi$ does the job.
 
 Choose $p\in \mathbb{S}^2\times\mathbb{S}^2$.
 We can use $g_p$ to identify the tangent space $\T_p$ and the cotangent space $\T^*_p$.
-There is a $g_p$-orthonormal basis $e_1, e_2, e_3, e_4$ on $\T_p$ such that 
+There is a positively oriented $g_p$-orthonormal basis $e_1, e_2, e_3, e_4$ on $\T_p$ such that
 \[\omega_p=\lambda_p\cdot e_1\wedge e_2+\lambda'_p\cdot  e_3\wedge e_4.\]
 Note that 
 \[\mathop{\star}\omega_p=\lambda'_p\cdot e_1\wedge e_2+\lambda_p\cdot  e_3\wedge e_4.\]
@@ -540,7 +520,7 @@ Shing-Tung Yau \cite{yau}.
 Choose a point $p\in\mathbb{S}^2$.
 Note that any rotation of the tangent space $\T_p=\T_p(\mathbb{S}^2,g)$
 appears as a holonomy of a loop at $p$;
-moreover, the length of such loop can be bounded by a constant, say~$\ell$.
+moreover, the length of such a loop can be bounded by a constant, say~$\ell$.
 
 Indeed, fix a smooth homotopy $\gamma_t\:[0,1]\to \mathbb{S}^2$, $t\in[0,1]$ of loops based at $p$ that sweeps out $\mathbb{S}^2$.
 By the Gauss--Bonnet formula, the total curvature of $(\mathbb{S}^2,g)$ is $4\cdot\pi$.
@@ -549,7 +529,7 @@ Therefore any rotation of $\T_p$ appears as the holonomy of $\gamma_t$ for some 
 
 Denote by $d$ the diameter of $(\mathbb{S}^2,g)$.
 From the above, it follows that for any two unit tangent vectors $v\in\T_p$ 
-and $w\in T_q$
+and $w\in \T_q$
 there is a path 
 $\gamma\:[0,1]\to\mathbb{S}^2$ from $p$ to $q$
 such that 
@@ -557,9 +537,9 @@ such that
 and
 $w$ is the parallel transport of $v$ along $\gamma$.
 
-In particular, the diameter of the set of all vectors of fixed magnitude in $(\T \mathbb{S}^2,\hat g)$ has diameter at most $\ell+d$.
+It follows that the set of all vectors of fixed magnitude in $(\T \mathbb{S}^2,\hat g)$ has diameter at most $\ell+2\cdot d$.
 Therefore the map $\T\mathbb{S}^2\to[0,\infty)$ defined by $v\mapsto |v|$ 
-preserves the distance up to an error of $\ell+d$.
+preserves the distance up to an error of $\ell+2\cdot d$.
 Hence the result follows.
 \qeds
 
@@ -570,9 +550,9 @@ Hence the result follows.
 
 
 \parbf{Two-systole.}
-Consider the unit cube with three not intersecting cylindrical tunnels  
+Consider the unit cube with three disjoint cylindrical tunnels
 between the pairs of opposite faces.
-In each tunnel, shrink the metric long-wise and expand it  cross-wise while keeping the volume the same.
+In each tunnel, shrink the metric lengthwise and expand it crosswise while keeping the volume the same.
 
 \medskip
 
@@ -688,9 +668,22 @@ the projection of $\lambda(\Omega)$ as above
 to the $(x_1,y_1)$-plane
 cannot be made arbitrarily small.
 
+
+The following delightful problem was extracted from OpenAI's proof of the symmetric Mahler conjecture \cite[2.1]{openai2026symplectic}; see also \cite{kienzle2026mahler}.
+
+\begin{pr}
+Let $M\subset\CC^N$ be a smooth complex $n$-dimensional submanifold, equipped with the induced symplectic form.
+Suppose that $M$ is closed as a subset of $\CC^N$ and contains the origin.
+Show that, for every $R>0$, the open ball of radius $R$ in $\CC^n$ admits a symplectic embedding into $M\cap B(0,R)_{\CC^N}$.
+\end{pr}
+
+\parit{Hint:}
+Show and use that $\mathcal{L}_V\omega=2\cdot \omega$, where $V(x)$ is the orthogonal projection of $x$ to $\T_x M$ and $\omega$ is the symplectic form on $M$.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Diffeomorphism test.}
-Note that the map $f$ is an open immersion.
+Note that the map $f$ is a local diffeomorphism.
 
 Let $h$ be the pullback metric on $M$ for $f\:M\to N$.
 Clearly, $h\ge g$.
@@ -716,7 +709,7 @@ The proof is done by straightforward calculations.
 \parbf{Disk.}
 The following claim is the key step in the proof.
 \begin{cl}{$({*})$}
-Given a positive integer $n$, there is a binary tree $T_n$ embedded into the disk $\DD$ such that any null-homotopy of $\partial \DD$ passes a curve that intersects $n$ different edges.
+Given a positive integer $n$, there is a binary tree $T_n$ embedded into the disk $\DD$ such that any null-homotopy of $\partial \DD$ passes thru a curve that intersects $n$ different edges.
 \end{cl}
 
 
@@ -749,7 +742,7 @@ Equip $T_n$ with a length-metric so that each edge has length $\eps$.
 Glue the cylinder $(\mathbb S^1\times [0,1],g)$ along its long boundary component to the tree $T_n$ by a piecewise isometry 
 in such a way that the resulting space is homeomorphic to a disk and the obtained embedding of $T_n$ in $\DD$ is the same as in the claim $({*})$.
 
-By $({*})$, any null-homotopy of the boundary passes a curve that intersects $n$ different edges of $T_n$.
+By $({*})$, any null-homotopy of the boundary passes thru a curve that intersects $n$ different edges of $T_n$.
 By construction this curve is longer than $\tfrac{\eps}{10}\cdot n=\tfrac{1}{100}\cdot n$.
 
 The obtained metric is not Riemannian, but it is easy to smooth while keeping this property.
@@ -771,13 +764,13 @@ such that no geodesic loop based at $p$ has length in the interval $(L-D, L+D+\d
 Assume that $\ell_0\ge L+\delta$.
 Choose $t_0\in [0,1]$ such that
 \[\length\left(\gamma_0|_{[0,t_0]}\right)=L+\delta.\]
-Let $\sigma$ be a minimizing geodesic from $\gamma(t_0)$
+Let $\sigma$ be a minimizing geodesic from $\gamma_0(t_0)$
 to $p$.
 Note that $\gamma_0$ is homotopic to the concatenation 
-\[\gamma_0'=\gamma_0|_{[0,t_0]}*\sigma*\bar\sigma*\gamma|_{[t_0,1]},\]
+\[\gamma_0'=\gamma_0|_{[0,t_0]}*\sigma*\bar\sigma*\gamma_0|_{[t_0,1]},\]
 where $\bar\sigma$ denotes the backward parametrization of $\sigma$.
 
-Applying a curve shortening process to the loop $\lambda_0=\gamma|_{[0,t_0]}*\sigma$, 
+Applying a curve shortening process to the loop $\lambda_0=\gamma_0|_{[0,t_0]}*\sigma$,
 we get a  homotopy $\lambda_t$
 relative to its endpoints 
 from the loop $\lambda_0$ to a geodesic loop $\lambda_1$ at $p$.
@@ -790,7 +783,7 @@ From the above,
 \includegraphics{mppics/pic-408}
 \end{wrapfigure}
 
-The concatenation $\gamma_t=\lambda_t*\bar\sigma*\gamma|_{[t_0,1]}$
+The concatenation $\gamma_t=\lambda_t*\bar\sigma*\gamma_0|_{[t_0,1]}$
 is a homotopy
 from $\gamma_0'$ to another curve $\gamma_1$.
 From the construction, it is clear that 
@@ -802,8 +795,8 @@ From the construction, it is clear that
 for any $t\in[0,1]$
 and 
 \begin{align*}
- \length \gamma_1&=\length\lambda_1+\length\sigma+\length\gamma|_{[t_0,1]}\le
-\\ &\le L-D+D+\length\gamma-(L+\delta)=
+ \length \gamma_1&=\length\lambda_1+\length\sigma+\length\gamma_0|_{[t_0,1]}\le
+\\ &\le L-D+D+\length\gamma_0-(L+\delta)=
 \\ &=\ell_0 -\delta.
 \end{align*}
 
@@ -835,18 +828,18 @@ The map $f'\:\Delta'\to M$ defined as
 \[f'\:(1-t)\cdot v+t\cdot w\mapsto \gamma_w(t)\] 
 is called the {}\emph{cone over $f$} with vertex $x$. 
 
-One may start with a map $f_0\:\Delta_0\to M$ and iterate the cone construction for the vertices $x_1,\dots x_k$,
+One may start with a map $f_0\:\Delta_0\to M$ and iterate the cone construction for the vertices $x_1,\dots, x_k$,
 to get a sequence of maps $f_i\:\Delta_i\to M$
 as long as $f_{i-1}(\Delta_{i-1})\subset B(x_i,1)$.
 A straightforward application of the triangle inequality 
 shows that the latter conditions hold if 
-$f_0(\Delta_0)\subset B(x_i,s)$ for each $i$ and $s<\tfrac2{2+k}$.
+$f_0(\Delta_0)\subset B(x_i,s)$ for each $i$ and $s<\tfrac1k$.
 
 \medskip
 
 Now we go back to the solution.
 
-Choose a fine triangulation of $W$ so that $M$ becomes a sub-complex of $W$.
+Choose a fine triangulation $\tau$ of $W$ so that $M$ becomes a sub-complex of $W$.
 We can assume that the diameter of each simplex in $\tau$ is less than any given
 $\eps>0$.
 Furthermore, we can assume that all the vertices of $\tau$ can be colored with $m+2$ colors $(0,\dots, m+1)$
@@ -864,15 +857,15 @@ if $v$ and $w$ are vertices of one simplex,
 then
 \[|v'-w'|_M<2\cdot h+\eps.\]
 
-Assume that $\tfrac{2}{m+3}>h$.
-Choose positive $\eps<\tfrac{2}{m+3}-h$ and use it in the construction of the triangulation $\tau$ above.
+Assume that $\tfrac1{m+1}>2\cdot h$.
+Choose positive $\eps<\tfrac1{m+1}-2\cdot h$ and use it in the construction of the triangulation $\tau$ above.
 Applying the iterated cone construction for each simplex of $\tau$
-we get an extension of the map $v\mapsto v'$ defined on $\tau_0$ to $\tau_1,\dots\tau_{m+1}$.
+we get an extension of the map $v\mapsto v'$ defined on $\tau_0$ to $\tau_1,\dots,\tau_{m+1}$.
 According to the above estimates, the cone constructions are defined at each of the needed $m+1$ iterations.
 
 This way we get 
-to a retraction $W\to M$.
-It follows that the fundamental class of $M$ vanishes in the homology ring of $M$ --- 
+to a map $r\:W\to M$ such that the restriction $r|_M$ is homotopic to $\id_M$.
+It follows that the fundamental class of $M$ vanishes in the homology group of $M$ ---
 a contradiction. 
 \qeds
 
