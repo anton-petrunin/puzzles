@@ -542,6 +542,45 @@ whitelabel(btex $F$ etex, (.5,0)*u);
 
 endfig;
 
+beginfig(125)
+save u,p;
+path p[];
+u:=1cm;
+
+z.z=origin;
+z.r=(1,1)*u;
+
+p0=circle(z.z,z.r);
+
+z.p=(.3,-.2)*u;
+z.q=-z.p;
+
+draw z.p--z.q;
+
+z.s=(.5,-.5)*u;
+
+p1= z.p{up}..z.r..z.q{-1,-1}..z.s..cycle;
+
+draw p1;
+
+p2=(subpath (0,2) of p1) rotated 180;
+
+draw p2 dashed evenly;
+
+clip currentpicture to p0;
+draw p0;
+
+dOt z.p,z.q,z.r,-z.r,z.z;
+
+label.rt(btex $p$ etex, z.p);
+label.ulft(btex $q$ etex, z.q);
+label.urt(btex $z$ etex, z.z);
+label.urt(btex $r$ etex, z.r);
+label.llft(btex $r^{*}$ etex, -z.r);
+
+label.ulft(btex $\hat\alpha$ etex, point 1.6 of p1+(1,0));
+endfig;
+
 beginfig(202)
 save u,p;
 path p[];
@@ -747,6 +786,54 @@ dOt (x.a2,0);
 label.bot (btex $s_0$ etex, (x.a2,0));
 label.rt (btex $s$ etex, (6,0)*u);
 label.top (btex $z$ etex, (0,4.5)*u);
+endfig;
+
+beginfig(222)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a0=(.5,.1)*u;
+z.a1=(0,1)*u;
+z.a2=(-.8,1)*u;
+z.a3=z.a0;
+z.a4=(1,1)*u;
+z.a5=z.a1;
+
+p1=z.a0..z.a1..z.a2..z.a3..z.a4..z.a5;
+
+z.b0=(0,.2)*u;
+z.b1=(-1,.5)*u;
+z.b2=(0,.8)*u;
+z.b3=z.b0;
+z.b4=(1,.5)*u;
+z.b5=z.b2;
+
+p2=z.b0{(-1,.2)}..z.b1..z.b2..z.b3..z.b4..{(-1,-.2)}z.b5;
+
+z.c0=(-.3,0)*u;
+z.c1=(-1,.5)*u;
+z.c2=z.c0;
+z.c3=(.3,0)*u;
+z.c4=(1,1)*u;
+z.c5=z.c3;
+
+p3=z.c0{(.1,1)}..z.c1..z.c2..z.c3..z.c4..{(.1,-1)}z.c5;
+
+z.d0=(-.3,0)*u;
+z.d1=(-1,.7)*u;
+z.d2=z.d0;
+z.d3=(.3,1)*u;
+z.d4=(1,.3)*u;
+z.d5=z.d3;
+
+p4=z.d0{(0,1)}..z.d1..z.d2..z.d3..z.d4{(0,-1)}..{(0,1)}z.d5;
+
+draw p1;
+draw p2 shifted ((3,0)*u);
+draw p3 shifted ((6,0)*u);
+draw p4 shifted ((9,0)*u);
+
 endfig;
 
 beginfig(301)

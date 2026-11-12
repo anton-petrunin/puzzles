@@ -94,7 +94,7 @@ and $\iota$ is orientation preserving,
 then the Dehn twist described above is called {}\emph{positive}.
 
 \begin{pr}
-Let $\Sigma$ be a compact oriented surface with nonempty boundary.
+Let $\Sigma$ be a compact connected oriented surface with nonempty boundary.
 Prove that any composition of positive Dehn twists of $\Sigma$ is not homotopic to the identity relative to the boundary.
 
 In other words, any product of positive Dehn twists represents a nontrivial class in the mapping class group of $\Sigma$.
@@ -111,7 +111,7 @@ if there is a homeomorphism from a cone
 to $U$ that sends the vertex to $p$.
 
 \begin{pr}  
-Show that any two conic neighborhoods of one point are homeomorphic to each other.
+Show that any two conic neighborhoods of one point in a locally compact metric space are homeomorphic to each other.
 \end{pr}
 
 Note that two cones $\mathop{\rm Cone}(\Sigma_1)$ and $\mathop{\rm Cone}(\Sigma_2)$ might be homeomorphic while $\Sigma_1$ and $\Sigma_2$ are not;
@@ -157,9 +157,9 @@ that admits a weak homotopy equivalence  $K\to F$.
 \subsection*{Dense homeomorphism\easy}\label{Dense homeomorphism}
 
 \begin{pr}
-Denote by $\mathcal{H}$ be the set of all orientation preserving homeomorphisms $\mathbb {S}^2\z\to\mathbb {S}^2$ 
+Denote by $\mathcal{H}$ the set of all orientation preserving homeomorphisms $\mathbb {S}^2\z\to\mathbb {S}^2$
 equipped with the $C^0$-metric.
-Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugations $a\circ h\circ a^{-1}$ for all $a\in\mathcal{H}$ form a dense set in $\mathcal{H}$.
+Show that there is a homeomorphism $h\in \mathcal{H}$ such that its conjugates $a\circ h\circ a^{-1}$ for all $a\in\mathcal{H}$ form a dense set in $\mathcal{H}$.
  
 \end{pr}
 
@@ -175,7 +175,7 @@ that is, there is an injective continuous map $\beta\:[0,1]\z\to X$
 such that $\beta(0)=p$ and $\beta(1)=q$.
 \end{pr}
 
-(This statement might be intuitively obvious, but its proof is not simple.)
+(This statement might look obvious, but the proof is not so simple.)
 
 \subsection*{Path on a surface\easy}
 \label{Path on a surface}
@@ -192,7 +192,7 @@ Show that any path with distinct ends in a surface is homotopic (relative to the
 {
 
 \begin{wrapfigure}{r}{29 mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-704}
 \bigskip
@@ -203,15 +203,15 @@ Show that any path with distinct ends in a surface is homotopic (relative to the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Immersed disks.}
-Both circles in the picture bound essentially different disks.
-
+Each of the two curves in the picture bounds at least two essentially different immersed disks.
 
 
 \medskip
 
 On the first diagram, the dashed lines and the solid lines together bound three embedded disks;
-gluing these disks along the dashed lines gives the first immersion.
-The reflection of this immersion across the vertical line of symmetry gives another essentially different immersion.
+gluing these disks along the dashed lines gives the first immersion, say $\iota_1$.
+The reflection of $\iota_1$ across the vertical line of symmetry gives an essentially different immersion $\iota_2$.
+After a suitable reparametrization, the two immersions coincide near the boundary of the disk.
 \qeds
 
 }
@@ -228,7 +228,7 @@ It is a good exercise to count the essentially different disks in the second exa
 \includegraphics{mppics/pic-708}
 \end{wrapfigure}
 
-The existence of examples of that type is generally attributed to John Milnor \cite{bennequin}.
+The discovery of such examples is generally attributed to John Milnor, who published it much later in his collected papers \cite{milnor2007}.
 
 An easier problem would be to construct two essentially different immersions of annuli with the same boundary curves; a solution is shown in the picture \cite[for more details and references see][]{eppstein-mumford}.
 
@@ -244,7 +244,7 @@ The surface $\tilde \Sigma$ has a boundary and it comes with the orientation ind
 
 Choose a point $x_0$ on the boundary $\partial \tilde \Sigma$.
 Given two other points $y$ and $z$ in $\partial \tilde \Sigma$, we will write
-$z\succ y$ if $y$ lies on the right side from a simple curve from $x_0$ to $z$ in $\tilde\Sigma$.
+$z\succ y$ if $y$ lies on the right of a simple curve from $x_0$ to $z$ in $\tilde\Sigma$.
 Note that  $\succ $ defines a linear order on $\partial\tilde\Sigma\setminus\{x_0\}$.
 We will write $z \succeq y$ 
 if $z\succ y$ or $z=y$.
@@ -271,13 +271,13 @@ and $y_0\succ\tilde h(y_0)$ for some $y_0\in\partial\tilde\Sigma\setminus\{x_0\}
 \end{cl}
 
 Note that the problem follows from~$({*})$.
-Indeed, the property in $({*})$ is a homotopy invariant 
+Indeed, the property in $({*})$ is invariant under homotopies relative to the boundary
 and it survives under compositions of maps.
 
 \medskip
 
 If $\Sigma$ is not an annulus,
-then by the uniformization theorem we can assume that $\Sigma$ has a  hyperbolic metric with geodesic boundary; 
+then by the uniformization theorem we can assume that $\Sigma$ has a  hyperbolic metric with strictly convex boundary;
 the lifted metric on $\tilde\Sigma$ has the same properties.
 Furthermore, we can assume that (1) $\gamma$ is a closed geodesic,
 (2) the parametrization $\iota\:\RR/\ZZ\z\times (0,1)\to U_\gamma$ from the definition of Dehn twist is rotationally symmetric 
@@ -287,10 +287,10 @@ Consider the polar coordinates $(\phi,\rho)$ on $\tilde\Sigma$ with the origin a
 since $x_0$ lies on the boundary, the angle coordinate $\phi$ is defined in $[0,\pi]$. 
 By construction of the Dehn twist, we get 
 \[\phi(x)\ge \phi\circ\tilde h(x)\]
-for any $x\ne x_0$,
-and if the geodesic $[x_0x]$ crosses $f^{-1}(U_\gamma)$, then 
+for any $x\in\partial \tilde\Sigma\setminus\{x_0\}$,
+and if the geodesic $[x_0x]$ crosses $f^{-1}(\gamma)$, then
 \[\phi(x)> \phi\circ\tilde h(x).\]
-In particular, if $x$ lies on the boundary then $\tilde h(x)$ lies on the right of the geodesic $[x_0x]$; hence the claim $({*})$ follows. 
+In particular, if $x$ lies on the boundary then $\tilde h(x)$ cannot lie on the left of the geodesic $[x_0x]$; hence the claim $({*})$ follows.
 
 \begin{figure}[!ht]
 \vskip0mm
@@ -309,10 +309,10 @@ Construct a composition of positive Dehn twists on a compact oriented surface wi
 \end{pr}
 
 I learned the problem from Rostislav Matveyev.
-The described construction was given by Hamish Short and Bert Wiest \cite{short-wiest} and attributed to William Thurston.
+The described construction was given by Hamish Short and Bert Wiest \cite[2.4]{short-wiest} and attributed to William Thurston.
 
 It turns out that there is no upper bound on the length of the product.
-Namely, there is a compact oriented surface $\Sigma$ with a nonempty boundary and a homeomorphism $f\:\Sigma\to \Sigma$ that does not move boundary points such that $f$ is homotopic relative to the boundary to an arbitrary long product of positive Dehn twists.
+Namely, there is a compact oriented surface $\Sigma$ with a nonempty boundary and a homeomorphism $f\:\Sigma\to \Sigma$ that does not move boundary points such that $f$ is homotopic relative to the boundary to an arbitrarily long product of positive Dehn twists.
 Such an example was constructed by Refik İnanç Baykur and Jeremy Van Horn-Morris \cite{baykur-vanhornmorris};
 see also \cite{baykur-monden-vanhornmorris}.
 
@@ -322,12 +322,12 @@ Let $V$ and $W$ be two conic neighborhoods of~$p$.
 Without loss of generality, we may assume that $V\Subset W$;
 that is, the closure of $V$ lies in $W$.
 
-We will need to construct a sequence of embeddings $f_n\:V\to W$
+We will need to construct a sequence of open embeddings $f_n\:V\to W$
 such that 
 \begin{itemize}
 \item 
 For any compact set $K\subset V$ 
-there is a positive integer $n=n_K$ such that 
+there is a positive integer $n_K$ such that
 $f_n(k)=f_m(k)$ for any $k\in K$ and $m, n \ge n_K$.
 \item For any point $w\in W$ there is a point $v\in V$ such that $f_n(v)=w$ for all large $n$.
 \end{itemize}
@@ -340,7 +340,7 @@ where $\Phi_n\:V\to V$
 and $\Psi_n\:W\to W$ 
 are homeomorphisms
 of the form 
-\[\Phi_n(x)=\phi_n(x)\ast x\quad \text{and}\quad \Phi_n(x)=\psi_n(x)\star x,\]
+\[\Phi_n(x)=\phi_n(x)\ast x\quad \text{and}\quad \Psi_n(x)=\psi_n(x)\star x,\]
 where $\phi_n\:V\to \RR_{\ge 0}$, $\psi_n\:W\to \RR_{\ge 0}$ are suitable continuous functions;
 ``$\ast$'' and ``$\star$'' denote the {}\emph{multiplication} in the cone structures of $V$ and $W$ respectively.\qeds
 
@@ -356,7 +356,7 @@ The problem is due to Kyung Whan Kwun \cite{kwun}.
 \includegraphics{mppics/pic-714}
 \end{figure}
 
-Observe that it is possible to draw an arbitrary tight knot 
+Observe that it is possible to draw an arbitrarily tight knot
 while keeping it smoothly embedded at all times including the last moment.\qeds
 
 This problem was suggested by Greg Kuperberg.
@@ -381,8 +381,8 @@ The product spaces $K_1\times[0,1]$ and $K_2\times[0,1]$ are solid tori with att
 A homeomorphism $K_1\times[0,1]\z\to K_2\times[0,1]$ can be constructed by twisting a part of one solid torus.
 
 To prove the nonexistence of a homeomorphism $K_1\to K_2$ consider the sets of cut points $V_i\subset K_i$ and the sets $W_i\subset K_i$ of points that admit a punctured simply-connected neighborhood.
-Note that the set $V_i$ is the union of the attached line segments 
-and $W_i$ is the boundary of the annulus without points where the segments are attached.
+The set $W_i$ is the boundary of the annulus without points where the segments are attached together with free ends of the segments.
+The set $V_i$ is the union of the attached line segments without their free ends.
 Note that $V_i\cup W_i=\partial K_i$;
 in particular, a homeomorphism $K_1\to K_2$ (if it exists) sends $\partial K_1$ to $\partial K_2$.
 
@@ -394,7 +394,6 @@ Hence $K_1\ncong K_2$.
 
 It should be an old puzzle;
 I learned it from Maria Goluzina around 1988.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Homeomorphism of a cube.}
@@ -442,8 +441,7 @@ It remains to observe that $f\:\RR^m\to\RR^m$ is a solution.
 \qeds
 
 This problem is stripped from the proof of Robion Kirby \cite{kirby}.
-The condition that each face is mapped to itself can be removed and 
-instead of homeomorphism one could take any embedding close to the identity.
+The condition that each face is mapped to itself can be relaxed; one could take any embedding of a neighborhood of the cube that is close to the identity.
 
 An interesting twist to this idea was given by Dennis Sullivan [see \ncite{sullivan} and also 5.10 in \ncite{tukia-vaisala}].
 Instead of the discrete group of motions of the Euclidean space,
@@ -456,6 +454,7 @@ Moreover,
 if the original homeomorphism is bi-Lipschitz,
 then the Sullivan construction produces a bi-Lipschitz homeomorphism ---
 this is its main advantage.
+
 
   
 
@@ -476,8 +475,8 @@ and declaring a collection of vertices to be a simplex
 if it can be linearly ordered with respect to $\preccurlyeq$.
 
 Given $k\in K$,
-consider the minimal simplex $(f_0,\dots,f_m)\ni k$;
-we can assume that $f_0\preccurlyeq \dots\preccurlyeq f_m$.
+consider the minimal simplex $(f_0,\ldots,f_m)\ni k$;
+we can assume that $f_0\preccurlyeq \ldots\preccurlyeq f_m$.
 Set $h\:k\mapsto f_0$;
 it defines a map $K\to F$.
 
@@ -485,16 +484,15 @@ It remains to check that $h$ is continuous
 and induces isomorphisms for all the homotopy groups.
 \qeds
 
-In a similar fashion, one can construct a finite topological space $F$ for any given simplicial complex $K$ 
+In a similar fashion, one can construct a finite topological space $F$ for any given finite simplicial complex $K$
 such that 
 there is a weak homotopy equivalence $K\to F$.
-Both constructions are due to Pavel Alexandrov
-\cite{alexandrov-finite,mccord}.
+The constructions are due to Pavel Alexandrov~\cite{alexandrov-finite} and Michael McCord~\cite{mccord}.
 
 \parbf{Dense homeomorphism.}
-Note that there is a countable set of homeomorphisms $h_1,h_2,\dots$ that is dense in $\mathcal{H}$
-such that
-each $h_n$ fixes all the points outside an open round disk, say $D_n$.
+Note that there is a countable set of homeomorphisms $h_1,h_2,\ldots$ that is dense in $\mathcal{H}$
+such that each $h_n$ fixes all the points outside an open round disk, say $D_n$,
+and $\diam (\mathbb{S}^2\setminus D_n)\to0$ as $n\to\infty$.
 
 Choose a countable disjoint collection of round disks $D_n'$.
 Consider the homeomorphism $h\:\mathbb S^2\to \mathbb S^2$
@@ -507,17 +505,14 @@ Note that for large $n$, the homeomorphism $h$ is conjugate to a homeomorphism c
 Therefore $h$ is a solution.
 \qeds
 
-The problem was mentioned by Frederic Le Roux \cite{rox} in the problem section of a conference in Oberwolfach.
-The underlying idea can be traced back to the following problem of John Mather \cite{mather}:
+The problem is discussed by Eli Glasner and Benjamin Weiss \cite{glasner-weiss}.
+The underlying idea can be traced back to the following problem of Richard Anderson \cite{anderson1958}:
 
 \begin{pr}
 Show that any homeomorphism of the plane with compact support is a commutator of two homeomorphisms with compact support.
 \end{pr}
 
-Frederic Le Roux also conjectured that an analogous statement does not hold for area-preserving homeomorphisms.
-This conjecture was later confirmed by Daniel Dore, Andrew Hanlon, and Sobhan Seyfaddini \cite{dore-hanlon,seyfaddini}.
-In particular, their result implies the following seemingly obvious but nontrivial statement.
-
+Let us mention the following seemingly obvious but nontrivial statement that was conjectured by François Béguin, Sylvain Crovisier, and Frederic Le Roux \cite{rox} and proved by Daniel Dore and Andrew Hanlon \cite{dore-hanlon}, and by Sobhan Seyfaddini \cite{seyfaddini}.
 
 \begin{pr}
 Given $\eps>0$, there is $\delta>0$ such that 
@@ -525,37 +520,42 @@ Given $\eps>0$, there is $\delta>0$ such that
 for any topological disk $\Omega\subset \mathbb{S}^2$ with area at least $\eps$
 and 
 any area-preserving homeomorphism $h\:\mathbb{S}^2\to\mathbb{S}^2$ with displacement at most $\delta$;
-that is, such that $|h(x)-x|_{\mathbb{S}^2}<\delta$ for any $x\in \mathbb{S}^2$. 
+that is, such that $|h(x)-x|_{\mathbb{S}^2}\le\delta$ for any $x\in \mathbb{S}^2$.
 \end{pr}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Simple path.}
-We will give two solutions, the first one is elementary and the second one is involved. 
+We will give two solutions: the first one is elementary and the second one is involved.
 
 \parit{First solution.}
 Let $\alpha$ be a path connecting $p$ to $q$.
 
-Passing to a subinterval if necessary,
-we can assume that $\alpha(t)\ne p,q$ for $t\ne0,1$.
+Passing to a subinterval if necessary, we can assume that $\alpha(t)\ne p,q$ for $t\ne0,1$.
 
 An open set $\Omega$ in $(0,1)$ will be called {}\emph{suitable} if, for any connected component $(a,b)$ of $\Omega$, we have $\alpha(a)=\alpha(b)$.
 Since the union of nested suitable sets is suitable, we can find a maximal suitable set $\hat \Omega$.
 
-Define $\beta(t)=\alpha(a)$ for any $t$ in a connected component $(a,b)\subset\Omega$.
+Define $\beta(t)=\alpha(t)$ if $t\notin\hat \Omega$ and $\beta(t)=\alpha(a)$ for any $t$ in a connected component $(a,b)\subset\hat \Omega$.
 Note that $\beta$ is continuous and monotonic;
 that is, for any $x\in [0,1]$ the set $\beta^{-1}\{\beta(x)\}$ is connected.
 
+
+
+
+
+
 It remains to reparametrize $\beta$ to make it injective.
 In other words, we need to construct a non-decreasing surjective function $\tau\:[0,1]\z\to[0,1]$ such that 
-$\tau(t_1)=\tau(t_2)$ if and only if there is a connected component $(a,b)$ such that $t_1,t_2\z\in [a,b]$.
-The construction is similar to the construction of the devil's staircase.
-\qeds
+\[\tau(t_1)=\tau(t_2)
+\quad\Leftrightarrow\quad\beta(t_1)=\beta(t_2).\]
+The construction is similar to the construction of the devil's staircase.\qeds
 
 \parit{Second solution.}
 Note that one can assume that $X$ coincides with the image of $\alpha$.
-In particular, $X$ is a connected locally connected compact Hausdorff space.
+As a Hausdorff continuous image of $[0,1]$, the space $X$ is metrizable.
 
+Thus $X$ is a connected locally connected compact metrizable space.
 Any such space admits a length-metric.
 This statement is not at all trivial;
 it was conjectured by Karl Menger \cite{menger}
@@ -566,12 +566,12 @@ and Edwin Moise \cite{moise}.
 It remains to consider a geodesic path from $p$ to $q$.
 \qeds
 
-The first proof was found Reinhard Börger \cite{borger}; see also note by Jeremy Brazas \cite{brazas}.
+The first proof was found by Reinhard Börger \cite{borger}; see also the note by Jeremy Brazas \cite{brazas}.
+A note of B. J. Ball \cite{ball1984} discusses a standard error in the proof that appeared in several textbooks.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Path on a surface.}
-Denote the surface by $\Sigma$; assume that the path runs from $p$ to $q$.
-The following picture suggests an idea for an induction on the number of self-crossings.
+The following picture suggests an idea for an induction on the number of self-crossings:
 
 \begin{figure}[!ht]
 \vskip0mm
@@ -579,12 +579,13 @@ The following picture suggests an idea for an induction on the number of self-cr
 \includegraphics{mppics/pic-718}
 \end{figure}
 
-To do the proof formally,
-let us present the path as a concatenation $\alpha*\beta$ of two paths  such that $\alpha$ is simple
+Let us do it formally.
+Denote the surface by $\Sigma$; assume that the path, say $\gamma$, runs from $p$ to $q$.
+Applying a homotopy relative to the endpoints, we can assume that $\gamma$ is a concatenation $\alpha*\beta$, where $\alpha$ is a simple path
 and $\beta$ does not pass thru~$p$.
-We can assume that $\beta\:[0,1]\to \Sigma$ is smooth.
+We can also assume that $\beta\:[0,1]\to \Sigma$ is smooth.
 
-Choose a smooth time-dependent vector field $V_t$ on $\Sigma$ such that
+Choose a smooth time-dependent vector field $V_t$ on $\Sigma$ with supports in a fixed compact set such that
 \[V_t(\beta(t))=\beta'(t)\quad\text{and}\quad V_t(p)=0\]
 for any $t\in[0,1]$. 
 
@@ -601,7 +602,7 @@ That is, the path $\alpha_1$ runs from $p$ to $q$.
 It remains to show that $\alpha_1$ is homotopic to $\alpha*\beta$ relative to the ends.
 Set $\alpha_\tau=\Phi^\tau\circ\alpha$ and denote by  $\beta_\tau$ the path running along $\beta$ from $\beta(\tau)$ to $q$;
 that is, 
-\[\beta_\tau(t)=\beta(\tau+\tfrac1{1-\tau}\cdot t).\]
+\[\beta_\tau(t)=\beta(\tau+(1-\tau)\cdot t).\]
 The concatenation $\alpha_\tau*\beta_\tau$ provides a homotopy from $\alpha*\beta$ to $\alpha_1*\beta_1$. 
 Since $\beta_1$ is a constant path, $\alpha*\beta$ is homotopic to $\alpha_1$.
 Hence the statement follows.

@@ -47,8 +47,8 @@ Note that
 \[\length\hat\gamma=\length\gamma.\]
 
 
-Denote by $\bar\gamma$ the closest point projection of $\hat\gamma$ on $\Sigma$.
-Since $\Sigma$ is convex, the closest point projection decreases the length.
+Denote by $\bar\gamma$ the nearest-point projection of $\hat\gamma$ on $\Sigma$.
+Since $\Sigma$ is convex, the nearest-point projection decreases the length.
 Therefore 
 the curve $\bar\gamma$ lies in $\Sigma$, 
 it has the same ends as $\gamma$,
@@ -72,10 +72,10 @@ This means that $\gamma$ is not length-minimizing
 \label{Involute of  geodesic}
 
 \begin{pr}
-Let $\Sigma$ be a smooth closed strictly convex surface 
-in $\RR^3$ 
-and $\gamma\:[0,\ell]\z\to \Sigma$ a unit-speed minimizing geodesic.
-Set $p\z=\gamma(0)$, $q=\gamma(\ell)$, and 
+Let $\Sigma$ be a smooth closed strictly convex surface
+in $\RR^3$,
+and let $\gamma\:[0,\ell]\z\to \Sigma$ be a unit-speed minimizing geodesic.
+Set $p\z=\gamma(0)$, $q\z=\gamma(\ell)$, and
 $$p_t=\gamma(t)-t\cdot\gamma'(t),$$ 
 where $\gamma'(t)$ denotes the velocity vector of $\gamma$ at~$t$.
 \end{pr}
@@ -91,7 +91,7 @@ that is, the line segment $[p_tq]$ intersects $\Sigma$ at a point distinct from 
 \label{Simple geodesic}
 
 \begin{pr}
-Let $\Sigma$ be a complete unbounded convex surface in $\mathbb R^3$.
+Let $\Sigma$ be a complete unbounded strictly convex surface in $\mathbb R^3$.
 Show that there is a two-sided infinite geodesic in $\Sigma$ with no self-intersections.
 \end{pr}
 
@@ -103,8 +103,8 @@ If $\Sigma$ is a convex surface in $\RR^3$ then its Gauss curvature is nonnegati
 Assume that a simply-connected region $\Omega$ in the surface $\Sigma$ is bounded by a closed broken geodesic $\gamma$.
 Denote by $\kappa(\Omega)$ the integral of the Gauss curvature over $\Omega$.
 
-For any point $p\in\Sigma$ consider the outer unit normal vector $n(p)\z\in\mathbb{S}^2$.
-Then 
+Consider the spherical map $n\colon\Sigma\to \mathbb{S}^2$, which sends each point $p\in \Sigma$ to the outer unit normal vector at $p$.
+Note that
 \begin{align*}
 \kappa(\Omega)&=\area[n(\Omega)]
 \intertext{and by the Gauss--Bonnet formula}
@@ -141,7 +141,7 @@ $$W=\set{(x,y,z)\in\RR^3}{z\ge f(x,y)}.$$
 Equip $W$ with the induced intrinsic metric.
 
 Show that any geodesic in $W$ 
- has  total curvature at most $2\cdot\ell$. 
+ has  total curvature at most $2\cdot\ell$.
 \end{pr}
 
 Actually, geodesics in $W$ are $C^{1,1}$-smooth;
@@ -154,9 +154,9 @@ This is an easy exercise in real analysis which can be also taken for granted.
 \label{Immersed surface}
 
 \begin{pr}
-Let $\Sigma$ be a smooth connected immersed surface in $\RR^3$ with strictly positive Gauss curvature and nonempty boundary $\partial\Sigma$.
+Let $\Sigma$ be a smooth connected immersed compact surface in $\RR^3$ with strictly positive Gauss curvature and nonempty boundary $\partial\Sigma$.
 Assume that the boundary $\partial\Sigma$ lies in a plane $\Pi$
-and $\Sigma$ lies entirely on one side of~$\Pi$.
+and the remaining part of $\Sigma$ lies on one side of~$\Pi$.
 Prove that $\Sigma$ is an embedded disk.
 \end{pr}
 
@@ -170,7 +170,7 @@ and let $\gamma$ be a geodesic in $\Sigma$.
 Assume that $\gamma$ is not periodic
 and the curvature of $\Sigma$ vanishes at every point of $\gamma$.
 Show that $\gamma$ does not have a periodic asymptote;
-that is, there is no periodic geodesic $\delta$ such that the distance from $\gamma(t)$ to $\delta$  converges to $0$ as $t\to\infty$. 
+that is, there is no periodic geodesic $\delta$ such that the distance from $\gamma(t)$ to $\delta$  converges to $0$ as $t\to\infty$.
 \end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -178,7 +178,7 @@ that is, there is no periodic geodesic $\delta$ such that the distance from $\ga
 \label{Saddle surface}
 
 Recall that a smooth surface $\Sigma$ in $\RR^3$
-is \index{saddle surface}\emph{saddle} at a point $p$ if its principal curvatures at $p$ have opposite signs. 
+is \index{saddle surface}\emph{saddle} at a point $p$ if its principal curvatures at $p$ have opposite signs.
 We say that $\Sigma$ is {}\emph{saddle} if it is saddle at all points.
 
 \begin{pr}
@@ -218,7 +218,7 @@ Recall that a smooth surface in $\RR^3$ is called \index{minimal surface}\emph{m
 The \index{mean curvature}\emph{mean curvature} at each point is defined as the sum of the principal curvatures at that point.
 
 \begin{pr}
-Let $\Sigma$ be a minimal surface in $\RR^3$ having its boundary on a unit sphere.
+Let $\Sigma$ be a compact minimal surface in $\RR^3$ having its boundary on a unit sphere.
 Assume that $\Sigma$ passes thru the center of the sphere.
 Show that the area of $\Sigma$ is at least $\pi$.
 \end{pr}
@@ -249,24 +249,23 @@ and the circle $\gamma$ is called its {}\emph{main latitude}.
 
 
 \begin{pr}
-Let $\Omega\subset \RR^3$ be a round gutter with the main latitude $\gamma$. 
+Let $\Omega\subset \RR^3$ be a round gutter with the main latitude $\gamma$.
 Assume that $\iota\:\Omega\z\to\RR^3$ 
 is a smooth length-preserving embedding that is sufficiently close to the identity.
 Show that $\gamma$ and $\iota(\gamma)$ are congruent;
-that is, there is an isometric motion of $\RR^3$ sending $\gamma$ to $\iota(\gamma)$
+that is, there is an isometric motion of $\RR^3$ sending $\gamma$ to $\iota(\gamma)$.
 \end{pr}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Non-contractible geodesics}
+\subsection*{Contractible geodesic}
 \label{torus}
 
 \begin{pr}
-Give an example of a non-flat metric 
-on the $2$-torus such that no closed geodesic is contractible.
+If a Riemannian $2$-torus has a contractible geodesic loop,
+then it has a contractible closed geodesic.
 \end{pr}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Two disks}
@@ -274,7 +273,7 @@ on the $2$-torus such that no closed geodesic is contractible.
 
 \begin{pr}
 Let $\Sigma_1$ and $\Sigma_2$ be two smoothly embedded open disks in $\mathbb R^3$ 
-that have a common closed smooth curve $\gamma$.
+that have a common closed smooth simple curve $\gamma$.
 Show that there is a pair of points  $p_1\in \Sigma_1$ and $p_2\in \Sigma_2$ with parallel tangent planes.
 \end{pr}
 
@@ -294,13 +293,11 @@ Show that $f$ is Lipschitz.
 Let $W$ be the closed unbounded set formed by $\Sigma$ and its exterior points.
 Choose $t\in (0,\ell)$;
 denote by $\gamma_t$ the concatenation of the line segment $[p_t\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$.
-The key step is to show the following:
 
 \begin{cl}{$({*})$} The curve $\gamma_t$ is a minimizing geodesic in the intrinsic metric induced on $W$.
 \end{cl}
 
-
-Try to prove it before reading further.
+This statement is the key to the proof; try to prove it before reading further.
 
 \medskip
 
@@ -360,11 +357,12 @@ where $|\  - \ |_W$ stands for the intrinsic distance in $W$.
 \end{wrapfigure}
 
 \parbf{Simple geodesic.} 
-Look at two combinatorial types of a self-intersection shown in the diagram.
+Look at two combinatorial types of a self-intersection.
 One of them can and the other cannot appear as self-intersections of a geodesic on an unbounded convex surface.
 Try to determine which is which before reading further.
 
 \medskip
+
 
 Let $\gamma$ be a two-sided infinite geodesic in $\Sigma$.
 The following is the key statement in the proof.
@@ -379,18 +377,17 @@ To prove $({*})$, we use the following observation.
 The integral curvature $\omega$ of $\Sigma$ cannot exceed $2\cdot\pi$.
 \end{cl}
 
-Indeed, since $\Sigma$ is unbounded and convex,
-it surrounds a half-line.
-Consider a coordinate system with this half-line as the positive half of its $z$-axis. 
+Indeed, since $\Sigma$ is unbounded and convex, it surrounds a half-line.
+Consider a coordinate system with this half-line as the positive half of its $z$-axis.
 In these coordinates, the surface $\Sigma$ is described as a graph $z=f(x,y)$ of a convex function $f$.
 In particular, all outer normal vectors to $\Sigma$ have a negative $z$-coordinate;
 in other words, they point to the southern hemisphere.
 Therefore the area of the spherical image of $\Sigma$ is at most $2\cdot\pi$.
-The area of this image is the integral of the Gauss curvature over $\Sigma$. 
+The area of this image is the integral of the Gauss curvature over $\Sigma$.
 Hence $({*}{*})$ follows.
 
 From the Gauss--Bonnet formula, we get the following conclusion.
-If $\phi$ is the angle at the base of a simple geodesic loop then the integral curvature surrounded by the loop equals $\pi+\phi$. 
+If $\phi$ is the angle at the base of a simple geodesic loop then the integral curvature surrounded by the loop equals $\pi+\phi$.
 In particular, $({*}{*})$ implies that $\phi\le\pi$; in other words, there are no \emph{concave loops}.
 
 Now assume that $({*})$ does not hold, so that a geodesic has two simple loops.
@@ -412,11 +409,11 @@ Note that the geodesic $t\mapsto \gamma(t)$ is clockwise
 if and only if 
 $t\z\mapsto \gamma(-t)$
 is counterclockwise.
-The sets of clockwise and counterclockwise are open and the space of all geodesics is connected. 
-It follows that there are geodesics that aren't clockwise nor counterclockwise.
+The sets of clockwise and counterclockwise geodesics are open and the space of all geodesics is connected.
+It follows that there are geodesics that are neither clockwise nor counterclockwise.
 Those geodesics have no self-intersections.\qeds
 
-Note that the proof implies that a two-sided infinite geodesic can be found among geodesics containing a given point in $\Sigma$.
+Note that the proof implies that a two-sided infinite geodesic with no self-intersections can be found among geodesics containing a given point in $\Sigma$.
 
 The problem is due to Stephan Cohn-Vossen \cite[Satz 9 in][]{convossen};
 generalizations were obtained  by 
@@ -434,7 +431,7 @@ Let $\gamma$ be a closed geodesic on a closed surface of positive curvature $\Si
 \centering
 \includegraphics{mppics/pic-207}
 \end{figure}
-Show that $\gamma$ cannot look like one of the curves on the diagram.
+Show that $\gamma$ cannot look like one of the curves in the picture.
 In other words, $\gamma$ cannot subdivide $\Sigma$ into (1) one hexagon, one triangle, and three monogons, and (2) one pentagon, one quadrangle, and three monogons.
 \end{pr}
 
@@ -444,28 +441,27 @@ In other words, $\gamma$ cannot subdivide $\Sigma$ into (1) one hexagon, one tri
 \parbf{Geodesics for birds.}
 Choose a unit-speed geodesic in $W$, say
 \[\gamma\:t\mapsto(x(t),y(t),z(t)).\]
-We can assume that $\gamma$ is defined on a closed interval $[a,b]$.
+We can assume that $\gamma$ is defined on a closed interval $[a,b]$ and has both ends on the graph.
 The key step is to show the following:
 
 \begin{cl}{$({*})$} 
 The function $t\mapsto z$ is concave.
 \end{cl}
 
-
 Parametrize the plane curve $t\mapsto (x(t),y(t))$ by the arc length $s$
 and reparametrize $\gamma$ by $s$.
-
-\begin{wrapfigure}{o}{35 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-208}
-\end{wrapfigure}
 
 Note that the function $s\mapsto z$ is concave.
 Indeed, suppose $s\mapsto z$ is not concave around $s_0$.
 Then one could shorten $\gamma$ by increasing its $z$ component in a small interval around $s_0$ while keeping its endpoints fixed.
 After the deformation, the curve still lies in $W$.
 The latter contradicts that $\gamma$ is locally length-minimizing.
+
+\begin{wrapfigure}{o}{35 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-208}
+\end{wrapfigure}
 
 Finally, notice that the concavity of $s\mapsto z$ is equivalent to the concavity of $t\mapsto z$.
 Hence $({*})$ follows.
@@ -490,29 +486,29 @@ Hence
 \[\int\limits_a^b |\gamma''(t)|\cdot dt\le 2\cdot\ell.\qedsin\]
 \medskip
 
-The statement holds for general $\ell$-Lischitz functions,
+The statement holds for general $\ell$-Lipschitz functions,
 not necessarily smooth.
-The given bound is optimal, the equality is attained by a two-side infinite geodesic on the graph of  
+The given bound is optimal, the equality is attained by a two-sided infinite geodesic on the graph of
 \[f(x,y)=-\ell\cdot\sqrt{x^2+y^2}.\]
 
 The problem is due to David Berg \cite{berg},
-the same bound for convex $\ell$-Lipschitz surfaces was proved earlier by Vladimir Usov \cite{usov}.
+the same bound for convex $\ell$-Lipschitz surfaces was proved by Vladimir Usov \cite{usov}.
 The observation $({*})$
 is called \index{Liberman’s lemma}\emph{Liberman’s lemma}; 
 it was used earlier 
 to bound the total curvature
 of a geodesic on a convex surface \cite{liberman}.\footnote{It is a part of the thesis of Joseph Liberman, defended a couple of months before he died in WWII.}
-This lemma is often useful when working with geodesics on general convex surfaces.
+This lemma is the main tool for studying geodesics on general convex surfaces.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Immersed surface.}
 Let $\ell$ be a linear function that vanishes on $\Pi$ 
-and is positive on $\Sigma$. 
+and is positive on the interior of $\Sigma$.
 We will apply a Morse-type argument for the restriction of $\ell$ to $\Sigma$.
 
 \medskip
 
-Let $z_0$ be a maximum of $\ell$ on $\Sigma$;
+Let $z_0$ be a maximum point of $\ell$ on $\Sigma$;
 set $s_0=\ell(z_0)$.
 Given $s<s_0$, denote by $\Sigma_s$ the connected component of $z_0$ in $\Sigma\cap\ell^{-1}([s,s_0])$.
 Note that 
@@ -533,15 +529,15 @@ This problem is discussed in the lectures of Mikhael Gromov \cite[see \S$\tfrac1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Periodic asymptote.}
-Arguing by contradiction, assume that there is a geodesic $\gamma$ on the surface $\Sigma$ with a periodic asymptote $\delta$. 
+Arguing by contradiction, assume that there is a geodesic $\gamma$ on the surface $\Sigma$ with a periodic asymptote $\delta$ for $t\to-\infty$.
 
 Passing to a finite cover of $\Sigma$, we can ensure that the asymptote has no self-intersections.
 In this case, 
-the restriction $\gamma|_{[a,\infty)}$  
+the restriction $\gamma|_{(-\infty,a]}$
 has no self-intersections 
-if $a$ is sufficiently large.
+if $a\approx -\infty$.
 
-Cut $\Sigma$ along $\gamma([a,\infty))$ and then cut from the obtained surface an infinite triangle $\triangle$. 
+Cut $\Sigma$ along $\gamma((-\infty,a])$ and then cut from the obtained surface an infinite triangle $\triangle$.
 The triangle has two sides formed by both sides of cuts along $\gamma$;
 let us denote these sides of $\triangle$ by $\gamma_-$ and $\gamma_+$.
 Note that 
@@ -550,51 +546,52 @@ Note that
 and both sides $\gamma_\pm$ 
 are infinite minimizing geodesics in $\triangle$.
 
-Consider the Busemann function $f$ for $\gamma_+$ [defined on page~\pageref{page:Busemann function}];
-denote by $\ell(t)$ the length of the level curve $f^{-1}(t)$.
-Let $-\kappa(t)$  be the total curvature of the sup-level set $f^{-1}([t,\infty))$.  
+Let $f$ be the Busemann function for $\gamma_+$; so, $f \circ\gamma_+(t)=t$ [see the definition on page~\pageref{page:Busemann function}].
+Denote by $\ell(t)$ the length of the level curve $f^{-1}(t)$.
+Let $-\kappa(t)$ be the integral curvature of the sublevel set $f^{-1}((-\infty,t])$.
 From the Gauss--Bonnet formula,
-\[\ell'(t)=\kappa(t).\leqno({*}{*})\]
+\[\ell'(t)=\kappa(t).\]
 
-The level curve $f^{-1}(t)$ can be parametrized by a unit-speed curve, say $\theta_t\:[0,\ell(t)]\to \triangle$.
+Equip the level curve $f^{-1}(t)$ with a unit-speed parametrization, say $\theta_t\:[0,\ell(t)]\to \triangle$.
 By the coarea formula we have
 \[\kappa'(t)
 =
 -\int\limits_0^{\ell(t)} K_{\theta_t(\tau)}\cdot d\tau,
 \]
 where $K_x$ denotes the Gauss curvature of $\Sigma$ at the point $x$.
-Since $K_{\theta_t(0)}\z=K_{\theta_t(\ell_t)}=0$ and the surface is smooth,
+Since $K_{\theta_t(0)}\z=K_{\theta_t(\ell(t))}=0$ and the surface is smooth,
 there is a constant $C$ such that $|K_{\theta_t(\tau)}|\le C\cdot \ell(t)^2$ for all $t$, $\tau$.
-Therefore
-\[\kappa'(t)\le C\cdot \ell(t)^3 \leqno(\asterism)\]
-
-Together, $({*}{*})$ and $(\asterism)$ imply that there is $\eps>0$ such that
-\[\ell(t)\ge \frac\eps{t-a}\]
-for sufficiently large $t$.
+Therefore,
+\[0\le \ell''(t)=\kappa'(t)\le C\cdot \ell(t)^3.\]
+Hence
+\[\ell(t)\ge \frac\eps{a-t}\]
+for fixed $\eps>0$ and all $t\approx-\infty$.
 By the coarea formula we get 
-\[\area\triangle=\int\limits_a^\infty\ell(t)\cdot dt=\infty;\]
-the latter contradicts $(*)$.\qeds
+\[\area\triangle\ge\int\limits^{t_0}_{-\infty}\ell(t)\cdot dt=\infty\]
+for some $t_0$; the latter contradicts $(*)$.
+\qeds
 
-I learned the problem from 
+I learned this problem from
 Dmitri Burago 
 and Sergei Ivanov, 
 it originated from a discussion with
 Keith Burns, 
 Michael Brin, 
 and Yakov Pesin.
+The infinite-area property used in the argument was proved by Rafael Ruggiero \cite[Lemma 4.1]{ruggiero}.
 
 Here is a motivation.
 Let $\Sigma$ be a closed surface with non-positive curvature that is not flat.
-The space $\Gamma$ of all unit-speed geodesics $\gamma\:\RR\z\to\Sigma$ can be identified with the unit tangent bundle $\UU\Sigma$. 
+The space $\Gamma$ of all unit-speed geodesics $\gamma\:\RR\z\to\Sigma$ can be identified with the unit tangent bundle $\UU\Sigma$.
 In particular $\Gamma$ comes with a natural choice of measure.
 Denote by $\Gamma_0\subset \Gamma$ the set of geodesics that run in the set of zero curvature all the time.
 It is expected that $\Gamma_0$ has a vanishing measure.
-In all known examples $\Gamma_0$ contains only periodic geodesics in only finitely many homotopy classes \cite[see also][]{hertz}.
+In all known examples $\Gamma_0$ contains only periodic geodesics in only finitely many homotopy classes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Saddle surface.}
 Denote by $\Sigma^\circ$ the interior of $\Sigma$.
-Choose a plane $\Pi$. 
+Choose a plane $\Pi$.
 Note that the intersection $\Pi\cap \Sigma^\circ$ 
 locally looks either like a curve or like two curves intersecting transversally;
 in the latter case, $\Pi$ is tangent to $\Sigma^\circ$ at the intersection point.
@@ -602,22 +599,22 @@ in the latter case, $\Pi$ is tangent to $\Sigma^\circ$ at the intersection point
 Further, note that $\Pi\cap \Sigma^\circ$ has no cycle.
 Otherwise, $\Sigma$ would fail to be saddle at the point of the disk surrounded by that cycle maximizing the distance to $\Pi$.
 
-If $\Sigma$ is not a graph then there is a point $p\in\Sigma$ with a vertical tangent plane;
-denote this plane by $\Pi$.
-The intersection $\Pi\cap\Sigma$ has a cross-point at~$p$.
+If $\Sigma$ is not a graph then there is a point $p\in\Sigma^\circ$ with a vertical tangent plane; denote this plane by $\Pi$.
+Observe that the projection of $p$ lies in the interior of the convex figure.
+Furthermore, the intersection $\Pi\cap\Sigma$ has a cross-point at~$p$.
 
 Since the boundary of $\Sigma$ projects injectively onto a closed convex curve in $(x,y)$-plane,
-the intersection of $\Pi\cap\partial \Sigma$ has at most 2 points --- these are the only endpoints of $\Pi\cap\Sigma$.
+the intersection of $\Pi\cap\partial \Sigma$ has only 2 points --- these are the only endpoints of $\Pi\cap\Sigma$.
 
 It follows that the connected component of $p$ in $\Pi\cap\Sigma$ is a tree 
-with a vertex of degree 4 at $p$ and at most two end-points --- a contradiction.\qeds
+with a vertex of degree 4 at $p$ and only two end-points --- a contradiction.\qeds
 
 The described idea can be used to prove the result of Richard Schoen and Shing-Tung  Yau \cite{schoen-yau-2D} which gives a sufficient condition for a harmonic map between surfaces to be a diffeomorphism.
 Unlike the original proof, it requires no calculations.
 
 The proof above is based on the observation 
 that for any saddle surface $\Sigma$ and plane $\Pi$,
-each connected component of $\Sigma\setminus \Pi$ is either unbounded or intersects the boundary curve.
+each connected component of $\Sigma\setminus \Pi$ either intersects the boundary curve or has non-compact closure in $\Sigma$.
 This observation plays a central role in the proof of Sergei Bernstein \cite{bernshtein}
 of the following problem:
 
@@ -625,7 +622,8 @@ of the following problem:
 Show that a smooth bounded function $f\:\RR^2\to\RR$ cannot have a strictly saddle graph.
 \end{pr}
 
-One could go further and define a \emph{generalized saddle surface} as an arbitrary (non-necessarily smooth) surface satisfying the observation above.
+One could go further and define a \emph{generalized saddle surface} as an arbitrary (not necessarily smooth) surface, say $\Sigma$, satisfying the \emph{no-hat condition} described above;
+that is, a plane cannot cut from $\Sigma$ a compact set that does not meet $\partial \Sigma$.
 The geometry of these surfaces is far from being understood,
 Samuil Shefel has a number of beautiful results about them, 
 \cite[see][and the references therein]{shefel, AKP-invitation}.
@@ -643,7 +641,7 @@ Since $\Sigma$ is saddle, the speed of rotation cannot vanish.%
 
 Note that $\Pi_t$ is a graph of a linear function, say $h_t$, defined on the $(x, y)$-plane.
 Denote by $\bar\ell_t$ the projection of $\ell_t$ to the $(x, y)$-plane.
-The described rotation of $\Pi_t$ can be expressed algebraically:
+The described rotation of $\Pi_t$ can be expressed in a more algebraic way:
 the derivative $\tfrac{d}{dt}h_t(w)$ vanishes at the point $w$ if and only if $w\in \bar\ell_t$ 
 and the derivative changes sign if $w$ changes the side of $\bar\ell_t$.
 
@@ -668,7 +666,7 @@ Without loss of generality, we may assume that the sphere is centered at the ori
 
 Let $h$ be the restriction of the function $x\mapsto \tfrac12\cdot|x|^2$ to the surface $\Sigma$.
 Direct calculations show that $\Delta_\Sigma h =  2$;
-here $\Delta_\Sigma$ denoted Laplacian on $\Sigma$.
+here $\Delta_\Sigma$ denotes the Laplacian on $\Sigma$.
 Applying the divergence theorem for the gradient $\nabla_\Sigma h$
 in $\Sigma_r\z=\Sigma\cap B(0,r)$, we get
 \[2\cdot \area\Sigma_r\le r\cdot\length [\partial\Sigma_r].\]
@@ -682,7 +680,7 @@ is non-decreasing in the interval $(0,1)$.
 
 Since $f(r)\to \pi$ as $r\to0$, the result follows.\qeds
 
-We described a partial case of the so-called \index{monotonicity formula}\emph{monotonicity formula} for minimal surfaces.
+We described a partial case of the so-called \index{monotonicity formula}\emph{monotonicity formula} for minimal surfaces \cite{colding-minicozzi}.
 
 The same argument shows that if $0$ is a double point
 of $\Sigma$ then $\area\Sigma\z\ge 2\cdot \pi$.
@@ -697,29 +695,29 @@ and Daniel Wienholtz
 an amusing variation of this proof
 was obtained by 
 Stephan Stadler \cite{stadler-FM}.
-This result also implies that any embedded circle of total curvature at most $4\cdot\pi$ is unknot.
-The latter was proved independently by Istv{\'a}n F{\'a}ry \cite{fary-knot} and  John Milnor \cite{milnor}.
+This result also implies that any embedded circle of total curvature at most $4\cdot\pi$ is an unknot.
+The latter was first proved independently by Istv{\'a}n F{\'a}ry \cite{fary-knot} and  John Milnor \cite{milnor}.
 
 Note that if we assume in addition that the surface is a disk,
-then the statement holds for any saddle surface. 
-Indeed, denote by $S_r$ the sphere of radius $r$ concentrical with the unit sphere. 
+then the statement holds for any saddle surface.
+Indeed, denote by $S_r$ the sphere of radius $r$ concentric with the unit sphere.
 Then according to the problem ``A curve on a sphere'' [page \pageref{A curve in a sphere}], 
 \[\length[\partial\Sigma_r]\ge 2\cdot\pi\cdot r.\]
 Then by the coarea formula, we get $\area\Sigma\ge \pi$.
 
 On the other hand, there are saddle surfaces homeomorphic to the cylinder
-having an arbitrarily small area in the ball. 
+having an arbitrarily small area in the ball.
 
 If $\Sigma$ does not pass thru the center 
 and we only know the distance, say $r$, 
 from the center to $\Sigma$,
 then the optimal bound is $\pi\cdot(1-r^2)$.
-This question was open for about 40 years and proved by Simon Brendle and Pei-Ken Hung \cite{brende-hung};
+This question remained open for about 40 years and was settled by Simon Brendle and Pei-Ken Hung \cite{brende-hung};
 their proof is based on a similar idea and is quite elementary.
 Earlier Herbert Alexander, 
 David Hoffman,
 and Robert Osserman 
-proved it for two cases: (1) for disks and (2) for arbitrary area minimizing surfaces, any dimension and codimension
+proved it for two cases: (1) for disks and (2) for arbitrary area-minimizing surfaces, any dimension and codimension
  \cite{alexander-osserman,alexander-hoffman-osserman}.
 
 
@@ -732,13 +730,13 @@ proved it for two cases: (1) for disks and (2) for arbitrary area minimizing sur
 Without loss of generality, we can assume that the length of $\gamma$ is $2{\cdot}\pi$ and its intrinsic curvature is $1$ at all points.
 
 Let $K$ be the convex hull of $\hat\Omega=\iota(\Omega)$.
-Part of $\hat\Omega$ touches the boundary of $K$ and the rest lies in the interior of $K$. 
+Part of $\hat\Omega$ touches the boundary of $K$ and the rest lies in the interior of $K$.
 Denote by $\hat\gamma$ the curve in $\hat\Omega$ dividing these two parts.
 
 First note that the Gauss curvature of $\hat\Omega$ should vanish at the points of $\hat\gamma$;
 in other words, $\hat\gamma=\iota(\gamma)$.
 Indeed, since $\hat\gamma$ lies on the convex part, 
-the Gauss curvature at the points of $\hat\gamma$ should be non-negative. 
+the Gauss curvature at the points of $\hat\gamma$ should be non-negative.
 On the other hand, $\hat\gamma$ bounds a flat disk in $\partial K$;
 therefore its integral intrinsic curvature should be $2{\cdot}\pi$.
 If the Gauss curvature is positive at a point of $\hat\gamma$, 
@@ -746,13 +744,23 @@ then by the Gauss--Bonnet formula, the total intrinsic curvature of $\hat\gamma$
 
 On the other hand, $\hat\gamma$ is an asymptotic line.
 Indeed, if the direction of $\hat\gamma$ is not asymptotic at $t_0$,
-then $\hat\gamma(t_0 \pm\eps)$ lies the interior of $K$ for some small $\eps>0$ --- a contradiction.
+then $\hat\gamma(t_0 \pm\eps)$ lies in the interior of $K$ for some small $\eps>0$ --- a contradiction.
 
 Therefore, as the space curve,
 $\hat\gamma$ has to be a closed curve with constant curvature $1$.
-Any such curve is congruent to a unit circle.\qeds
+Since $\hat\gamma=\iota(\gamma)$, we have $\length\hat\gamma=2\cdot\pi$.
+Any such curve is congruent to a unit circle.
+\qeds
 
-It is not known whether $\hat\Omega$ is congruent to $\Omega$ or not.
+It is very plausible that $\hat\Omega$ is congruent to $\Omega$.
+
+%In fact, $\hat\Omega=\iota(\Omega)$ in a neighborhood of $\hat\gamma$, assuming that the embeddings are $C^\infty$.
+%The proof is much more technical; it is done separately on the convex side $\hat\Omega_+$ and the saddle side $\hat\Omega_-$.
+%Parametrize $\iota(\Omega)$ and $\hat\Omega$ by common intrinsic coordinates $(t,s)$, where $t$ is a parameter along $\hat\gamma$ and $s$ is the signed intrinsic distance to $\hat\gamma$, positive on the convex side.
+%Consider the signed distance functions $h(t,s)$ and $\hat h(t,s)$ to the plane containing~$\hat\gamma$.
+%Their Darboux equations imply that $h-\hat h$ vanishes to infinite order along $s=0$.
+%For $\hat\Omega_+$, lift the equation for $h-\hat h$ to a 3-manifold by setting $s=u^2+v^2$; the resulting equation is uniformly elliptic, so Aronszajn's theorem applies.
+%Once this is done, the statement on $\hat\Omega_-$ follows by the argument of Han--Khuri~\cite[Lemma 3.1]{han-khuri}.
 
 The solution presented above is based on my answer 
 to the question of Joseph O'Rourke \cite{rourke}.
@@ -776,27 +784,44 @@ and for the surfaces of revolution, the assumption of analyticity can be removed
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\parbf{Non-contractible geodesics.}
-A torus of revolution is an example.
+\parbf{Contractible geodesic.}
+Let $\gamma$ be a contractible geodesic loop in $(\mathbb{T}^2,g)$;
+in other words, its lift $\tilde\gamma$ in the universal metric cover by plane $(\mathbb{R}^2,\tilde g)$ is a geodesci loop.
 
-Indeed, it has a family of {}\emph{meridians} --- a family of circles that form closed geodesics.
-Note that a geodesic on the torus is either a meridian
-or it intersects meridians transversally.
-In the latter case, all the meridians are crossed by the geodesic in the same direction.
+We may assume that $\tilde \gamma$ is simple; so, it bounds a disc, say $D$, in $(\mathbb{R}^2,\tilde g)$.
+Let $\alpha$ be the angle of $D$ at the base of $\tilde \gamma$.
 
-Note that a contractible curve has to cross each meridian an equal number of times in both directions.
-Therefore no geodesic of the torus is contractible.\qeds 
+If $\alpha=\pi$, then $\tilde \gamma$ is a closed geodesic in $(\mathbb{R}^2,\tilde g)$.
+Therefore, $\gamma$ is a contractible closed geodesic in $(\mathbb{T}^2,g)$.
 
+If $\alpha>\pi$ then curve-shortening flow starting from $\gamma$ produces a closed geodesic outside of $D$, and it projects to a contractible closed geodesic in $(\mathbb{T}^2,g)$.
 
-I learned this problem 
-from the book of Mikhael Gromov \cite{gromov-MetStr},
-where it is attributed to Y. Colin de Verdi\`ere.
-The same argument can be used to show that a torus with a geodesic foliation has no contractible closed geodesics.
-I do not know other examples of that type \cite{petrunin-torus}; namely, the following question is open:
+If $\alpha<\pi$, then applying the Poincaré recurrence theorem, we can perturb $\gamma$ a bit so that it remains a loop and one of its extensions almost repeat $\gamma$, making another contractible loop.
+Thus, after perturbation, we have a loop $\tilde\gamma$ in $(\mathbb{R}^2,\tilde g)$ that can be extended to one side to another point of self-intersection;
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-222}
+\end{figure}
+we might get a curve as is picture.
+Let us cut $(\mathbb{R}^2,\tilde g)$ along the obtained curve; the unbounded piece is a surface with locally convex boundary.
+It remains to apply curve-shortening flow as before.
+\qeds
+
+This problem is extracted from the paper of Eva Glasmachers and Gerhard Knieper \cite{glasmachers-knieper}.
+
+If the torus admits a geodesic foliation, then it has no contractible closed geodesics.
+Indeed, a lift of geodesic in $(\mathbb{R}^2,\tilde g)$ is eithre runs long the foliation and therefore cannot come back, or it crosses leaves of the foliation transversally and therefore cannot come back.
+For a torus of revolution, this observation is due to
+Y. Colin de Verdière; see \cite[7.9]{gromov-MetStr}.
+
+The following question is open \cite{petrunin-torus}.
 
 \begin{pr}
 Are there examples of Riemannian metrics on the 2-torus without closed null-homotopic geodesics and without a geodesic foliation?
 \end{pr}
+
+A Finsler version of this problem was also posed by Jan Philipp Schröder \cite[Problem 10.1]{schroeder2016}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

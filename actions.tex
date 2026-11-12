@@ -16,24 +16,27 @@ Prove that the sequence $x_n$ is bounded.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parit{Semisolution.}
-Note that we can assume that the orbit $\{x_n\}$ is dense in $X$;
-otherwise, we can pass to the closure of the orbit.
-In particular, we can choose a finite number of positive integers $n_1,\dots,n_k$
-such that the set of points $\{x_{n_1},\dots,x_{n_k}\}$ is a $1$-net for the ball $B(x_0,10)$;
-that is, for any $x\in B(x_0,10)$ there is $x_{n_i}$ such that
-\[|x-x_{n_i}|<1.\]
+Note that we can assume that the orbit $\{x_n\}$ is dense in~$X$;
+otherwise, pass to the closure of the orbit.
+
+If $x_{m_1},x_{m_2},\ldots$ is a convergent subsequence, then the distances
+\[|x_{m_i}-x_{m_{i-1}}|=|x_{j+m_i}-x_{j+m_{i-1}}|\]
+take arbitrarily small values.
+Therefore, we can choose a finite number of positive integers $n_1,\ldots,n_k$
+such that the set of points $\{x_{n_1},\ldots,x_{n_k}\}$ is a $1$-net for the ball $B(x_0,10)$;
+that is, for any $x\in B(x_0,10)$ there is $x_{n_i}$ such that $|x-x_{n_i}|<1$.
 
 Assume that $x_m\in B(x_0,1)$ for some $m$.
 Then 
-\[B(x_m,10)=f^m( B(x_0,10))\supset B(x_0,1).\] 
-In particular, $\{x_{m+n_1},\dots,x_{m+n_k}\}$ is a $1$-net for the ball $B(x_0,1)$
-Therefore $x_{m+n_i}\in B(x_0,1)$ for some $i\z\in\{1,\dots,k\}$.
+\[B(x_m,10)=\iota^m( B(x_0,10))\supset B(x_0,1).\]
+In particular, $\{x_{m+n_1},\ldots,x_{m+n_k}\}$ is a $1$-net for the ball $B(x_0,1)$.
+Therefore $x_{m+n_i}\in B(x_0,1)$ for some $i\z\in\{1,\ldots,k\}$.
 
 Set $N=\max_i\{n_i\}$.
-Applying the above observation inductively, we get that at least one point from any string $x_{i+1},\dots x_{i+N}$ lies in $B(x_0,1)$.
-In particular, the $N$ balls
-\[B(x_1,10),\dots,B(x_N,10)\]
-cover whole $X$.
+Applying the above observation inductively, we get that at least one point from any string $x_{i+1},\ldots x_{i+N}$ lies in $B(x_0,1)$.
+In particular, the balls
+\[B(x_{1},10),\ldots,B(x_N,10)\]
+cover the whole space $X$.
 Hence the result follows.\qeds
 
 The problem is due to Aleksander Ca{\l}ka \cite{calka}.
@@ -51,11 +54,11 @@ there is an orbit that does not lie in the interior of a hemisphere.
 
 \subsection*{Covers of the figure eight}\label{figure-eight-1}
 
-Given a covering 
+Given a connected covering
 \[f\:\tilde X \to X\]
 of the length-metric space $X$,
 one can consider the induced length-metric on $\tilde X$,
-defining the length of curve $\alpha$ in $\tilde X$ as the length of the composition $f\circ\alpha$; the obtained metric space $\tilde X$ is called the  \index{metric covering}\emph{metric covering} of $X$.
+defining the length of a curve $\alpha$ in $\tilde X$ as the length of the composition $f\circ\alpha$; the obtained metric space $\tilde X$ is called the  \index{metric covering}\emph{metric covering} of $X$.
 
 {
 
@@ -73,7 +76,7 @@ Let us define the \index{figure eight}\emph{figure eight} as the length-metric s
 Show that any compact length-metric space 
 is a Gromov--Hausdorff limit of a sequence $(\widetilde \Phi_n, \tilde d/n)$
 where 
-\[(\widetilde \Phi_n, \tilde d)\to(\Phi,d),\]
+\[(\widetilde \Phi_n, \tilde d)\to(\Phi,d)\]
 are metric coverings of the figure eight $(\Phi,d)$.
 \end{pr}
 
@@ -84,7 +87,7 @@ are metric coverings of the figure eight $(\Phi,d)$.
 The metric covering is defined in the previous problem.
 
 \begin{pr}
-Let $X$ be a length-metric space,
+Let $X$ be a compact length-metric space,
 and let $\tilde X$ be an $m$-fold metric covering of $X$.
 Show that
 $$\diam\tilde X\le m\cdot \diam X.$$
@@ -97,6 +100,18 @@ The figure below shows a 5-fold covering with the diameter of the total space be
 \centering
 \includegraphics{mppics/pic-604}
 \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Total shift minimizer\easy}\label{Total shift minimizer}
+
+\begin{pr}
+Let $\tilde X\to X$ be the universal metric covering of a compact length-metric space $X$, and let $\pi_1 X\acts \tilde X$ be the corresponding isometric action of the fundamental group.
+Show that given elements $g_1,\ldots,g_n\in \pi_1 X$, there is a point $x\in \tilde X$ that minimizes the total shift
+\[s(x)=|x-g_1\cdot x|+\ldots+|x-g_n\cdot x|.\]
+
+\end{pr}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Symmetric square\easy}\label{Symmetric square}
@@ -138,16 +153,16 @@ Find the homeomorphism group of the Sierpi\'nski gasket.
 
 \begin{pr}
 Let $L$ and $M$ be two discrete subgroups of a connected Lie group $G$,
-and let $h$ be a left-invariant metric on $G$.
+and let $h$ be a left-invariant Riemannian metric on $G$.
 Equip the groups $L$ and $M$ 
 with the metric induced from $G$.
 Assume that $L\setminus G$ and $M\setminus G$ are compact and
 $$\vol(L\setminus (G,h))
 =
 \vol(M\setminus (G,h)).$$
-Prove that there is a bi-Lipschitz one-to-one mapping $f\:L
+Prove that there is a bi-Lipschitz bijection $f\:L
 \to
-M$, not necessarily a homomorphism.
+M$, which is not necessarily a homomorphism.
 \end{pr}
 
 
@@ -163,13 +178,13 @@ Let $\Gamma$ be a finite subgroup of $\SO(m)$.
 Denote by $P$ the quotient $\RR^m/\Gamma$ equipped with the induced
 polyhedral metric.
 Assume that $P$ admits a piecewise linear homeomorphism to $\RR^m$.
-Show that $\Gamma$ is generated by rotations  around subspaces of codimension $2$.
+Show that $\Gamma$ is generated by rotations around \emph{hyperlines} (subspaces of codimension $2$).
 \end{pr}
 
 The action of the symmetric group $S_m$ on $\CC^m=\RR^{2\cdot m}$ by permutation of complex coordinates provides a remarkable example.
 The homeomorphism $\CC^m/S_m\to \CC^m$ can be given by symmetric polynomials on $\CC^m$;
-that is, $(z_1,\dots,z_m)\mapsto (a_0,\dots,a_{m-1})$, where
-\[(z+z_1)\cdots(z+z_m)=a_0+a_1\cdot z+\dots+a_{m-1}\cdot z^{m-1}+z^m.\]
+that is, $(z_1,\ldots,z_m)\mapsto (a_0,\ldots,a_{m-1})$, where
+\[(z+z_1)\cdots(z+z_m)=a_0+a_1\cdot z+\ldots+a_{m-1}\cdot z^{m-1}+z^m.\]
 This homeomorphism is isotopic to a piecewise linear homeomorphism.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -204,7 +219,7 @@ can be bounded above in terms of the dimension of $M$.
 
 \begin{pr}
 Let $G$ be a compact connected Lie group and $n$ a positive integer.
-Show that given a collection of elements $g_1,\dots,g_n\in G$
+Show that given a collection of elements $g_1,\ldots,g_n\in G$
 the equation 
 \[x\cdot g_1\cdot x\cdot g_2\cdots x\cdot g_n=e\]
 has a solution $x\in G$;
@@ -243,7 +258,7 @@ in particular
 \leqno({*})\]
 The homotopy can be defined by $(x,t)\mapsto \gamma_x(t)$,
 where $\gamma_x$ is the minimizing geodesic path in $\mathbb{S}^m$ from $x$ to $f(x)$.
-By construction, $|x-f(x)|_{\mathbb{S}^m}<\tfrac\pi2$; 
+By construction, $|x-f(x)|_{\mathbb{S}^m}<\pi$;
 therefore $\gamma_x$ is uniquely defined.
 
 Choose $x\in \mathbb{S}^m$ such that $a(x)\ne x$.
@@ -293,9 +308,9 @@ Show that $h$ has finite order.
 First note that any compact length-metric space $K$ can be approximated by finite metric graphs.
 
 Indeed, fix a finite $\eps$-net $F$ in $K$.
-For each pair $x,y\in F$ choose a chain of points $x=x_0,x_1,\dots, x_n=y$ such that
+For each pair $x,y\in F$ choose a chain of points $x=x_0,x_1,\ldots, x_n=y$ such that
 $|x_i-x_{i-1}|_K<\eps$ for each $i$ and 
-\[|x-y|_K=|x_0-x_1|_K+\dots+|x_{n-1}-x_n|_K.\]
+\[|x-y|_K=|x_0-x_1|_K+\ldots+|x_{n-1}-x_n|_K.\]
 Denote by $F'$ the union of all these chains with $F$.
 Connect a pair of vertices $v,w\in F'$ by an edge of length $|v-w|_K$ if $|v-w|_K<\eps$.
 Note that the obtained metric graph is $\eps$ close to $K$ in the Gromov--Hausdorff metric.
@@ -320,50 +335,72 @@ All this is due to Vedrin Šahović \cite{sahovic}.
 
 A similar idea was used later to show that any finitely presented group can appear as a fundamental group of the underlying space of a 3-dimensional hyperbolic orbifold \cite{panov-petrunin-telescopic}.
 
+The following related problem is due to Dana Angluin and Anthony Gardiner \cite{angluin-gardiner}.
 
-
-
+\begin{pr}
+Show that any two finite regular graphs of the same degree admit a common finite covering graph.
+\end{pr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Diameter of \textit{m}-fold covering.}
-Choose points $\tilde p,\tilde q\in\tilde M$.
+Choose points $\tilde p,\tilde q\in\tilde X$.
 Let  
-$\tilde\gamma\:[0,1]\z\to \tilde M$ be a minimizing geodesic path from $\tilde p$ to $\tilde q$. 
+$\tilde\gamma\:[0,1]\z\to \tilde X$ be a minimizing geodesic path from $\tilde p$ to $\tilde q$.
 
 We need to show that 
-\[\length \tilde\gamma\le m\cdot \diam M.\]
+\[\length \tilde\gamma\le m\cdot \diam X.\]
 Suppose the contrary.
 
-Denote by $p$, $q$, and $\gamma$ the projections to $M$ of $\tilde p$, $\tilde q$, and $\tilde \gamma$ respectively. 
+Denote by $p$, $q$, and $\gamma$ the projections to $X$ of $\tilde p$, $\tilde q$, and $\tilde \gamma$ respectively.
 Represent $\gamma$
 as the concatenation of $m$ paths of equal length,
-\[\gamma=\gamma_1{*}\dots{*}\gamma_m,\] 
+\[\gamma=\gamma_1{*}\ldots{*}\gamma_m,\]
 so
-\[\length\gamma_i=\tfrac{1}m\cdot\length\gamma>\diam M.\] 
+\[\length\gamma_i=\tfrac{1}m\cdot\length\gamma>\diam X.\]
 
-Let $\sigma_i$ be a minimizing geodesic in $M$ connecting the endpoints of $\gamma_i$. 
+Let $\sigma_i$ be a minimizing geodesic in $X$ connecting the endpoints of $\gamma_i$.
 Note that 
-\[\length\sigma_i\le \diam M< \length\gamma_i.\] 
+\[\length\sigma_i\le \diam X< \length\gamma_i.\]
 
-Consider $m+1$ paths $\alpha_0,\dots,\alpha_m$ defined as the concatenations 
-\[\alpha_i=\sigma_1{*}\dots{*}\sigma_i{*}\gamma_{i+1}{*}\dots{*}\gamma_m.\]
+Consider $m+1$ paths $\alpha_0,\ldots,\alpha_m$ defined as the concatenations
+\[\alpha_i=\sigma_1{*}\ldots{*}\sigma_i{*}\gamma_{i+1}{*}\ldots{*}\gamma_m.\]
 
-Let $\tilde\alpha_0,\dots,\tilde\alpha_m$ be their liftings
+Let $\tilde\alpha_0,\ldots,\tilde\alpha_m$ be their liftings
 with $\tilde q$ as an endpoint.
 The starting point of each curve $\tilde\alpha_i$ is one of $m$ inverse images of $p$. 
 Therefore two curves, $\tilde\alpha_i$ and $\tilde\alpha_j$ for $i<j$, 
-have the same starting point in $\tilde M$.
+have the same starting point in $\tilde X$.
 
 Note that the concatenation
-\[\beta=\gamma_1{*}\dots{*}\gamma_i{*}\sigma_{i+1}{*}\dots{*}\sigma_j{*}\gamma_{j+1}{*}\dots{*}\gamma_m.\]
-admits a lift $\tilde\beta$ that connects $\tilde p$ to $\tilde q$ in $\tilde M$.
+\[\beta=\gamma_1{*}\ldots{*}\gamma_i{*}\sigma_{i+1}{*}\ldots{*}\sigma_j{*}\gamma_{j+1}{*}\ldots{*}\gamma_m.\]
+admits a lift $\tilde\beta$ that connects $\tilde p$ to $\tilde q$ in $\tilde X$.
 Clearly, $\length \tilde\beta<\length \gamma$ --- a contradiction.
 \qeds
 
-The question was asked by Alexander  Nabutovsky
+The question was asked by Alexander Nabutovsky
 and answered by Sergei Ivanov \cite{ivanov};
 the same idea was used elsewhere \cite[see ``Red and blue dice'' in][and the references therein]{winkler2007}.
 A closely related problem for universal coverings is discussed by Sergio Zamora in \cite{zamora}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\parbf{Total shift minimizer.}
+Choose a compact set $K$, containing a fundamental domain,
+so, given $x\in \tilde X$ there is $h\in \pi_1 X$ such that $y=h\cdot x\in K$.
+
+Suppose $s(x_n)\to\inf \{\,s(x)\mid x\in \tilde X\,\}$;
+choose $y_n=h_n\cdot x_n\in K$.
+Show that we have only finitely many choices for $g_i'=h_n\cdot g_i h_n^{-1}$;
+passing to a subsequence, we may assume that $g_i'$ is independent of $n$;
+so $g_i'=h\cdot g_i h^{-1}$ for a fixed $h\in \pi_1 X$.
+
+Passing to a subsequence again, we can assume that $y_n\to y_\infty$ as $n\to\infty$.
+Then $x_\infty=h^{-1}\cdot y_\infty$ is the minimizer.
+\qeds
+
+
+The one-element version of this statement appears in the book of Martin Bridson and André Haefliger \cite[II.6.10(2)]{bridson-haefliger}; a closer version is used by OpenAI in the construction of a hyperbolic group with no geometric $\CAT(0)$ action \cite[Lemma 5.1]{openai2026hyperbolic}.
+In both cases, the proofs are essentially the same.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Symmetric square.}
@@ -380,7 +417,7 @@ for any $\alpha$ and $\beta$ in $\Gamma$.
 \qeds
 
  
-The problem was suggested by Rostislav Matveyev.
+The problem is due to Paul Smith \cite{smith1936}; it was suggested by Rostislav Matveyev.
 
 
 
@@ -412,6 +449,7 @@ we get that this permutation uniquely describes the homeomorphism.
 \qeds
 
 The problem was suggested by Bruce Kleiner.
+A more general statement was proved by Christoph Bandt and Teklehaimanot Retta \cite{band-retta}.
 The homeomorphism group of the Sierpi\'nski carpet is much more interesting \cite{kapovich-kleiner}.
 
 
@@ -435,7 +473,7 @@ Note that for any $\ell\in L$ and $m \in M$, we have
 \]
 
 Consider the bipartite graph $\Gamma$ with the parts $L$ and $M$
-such that $\ell\in L$ is adjacent  to $m \in M$ if and only if $V_\ell\cap W_m\ne\emptyset$.
+such that $\ell\in L$ is adjacent to $m \in M$ if and only if $V_\ell\cap W_m\ne\emptyset$.
 
 By $({*})$ the graph $\Gamma$ satisfies the condition of the marriage theorem \cite{hall-marriage}  ---
 any subset $S$ in $L$ has at least $|S|$ neighbors in $M$ and the other way around;
@@ -449,9 +487,9 @@ It remains to observe that $f$ is bi-Lipschitz.
 The problem is due to 
 Dmitri Burago 
 and Bruce Kleiner \cite{burago-kleiner}. 
-For a finitely generated group $G$, it is not known if $G$ and $G\times \ZZ_2$ can fail to be bi-Lipschitz.
-(The groups are assumed to be equipped with the word metric.)
- 
+Evidently $L$ and $M$ are quasi-isometric, but bi-Lipschitz equivalence is stronger; in general quasi-isometric groups may fail to be bi-Lipschitz.
+Moreover, a finitely generated group $G$ (equipped with the word metric) can fail to be bi-Lipschitz to $G\times \ZZ_2$; the lamplighter group $G=\ZZ_3\wr\ZZ$ does the trick.
+This example was found by Tullia Dymarz \cite[Cor. 3]{dymarz2010}.
 
 
 
@@ -474,14 +512,14 @@ By the general position argument, we can assume that the disk
 only passes thru simplices of codimension $0$, $1$ and $2$
 and intersects the simplices of codimension $2$ transversely.
 
-In other words, $\ell$ can be presented as a product of 
+In other words, $\ell$ can be presented as a product of
 loops such that each loop goes around a single simplex of codimension $2$ and comes back.
-The holonomy for each of these loops is a rotation around a hyperplane.
+The holonomy for each of these loops is a rotation around a hyperline.
 Hence the result follows.
 \qeds
 
 The converse of the problem also holds;
-it was proved by Christian Lange \cite{lange};
+it was proved by Christian Lange \cite{lange2016};
 his proof is based on earlier results of 
 Marina Mikhailova \cite{mikhailova}.
 
@@ -489,24 +527,17 @@ Note that the cone over the spherical suspension over the Poincaré sphere is ho
 Therefore, 
 if one replaces ``piecewise linear homeomorphism'' with ``homeomorphism'' in the formulation, 
 then the answer will be different; 
-a complete classification of such actions is given in \cite{lange}.
+a complete classification of such actions is given in \cite{lange2019}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Subgroups of a free group.}
 The proof exploits the fact that free groups are fundamental groups of graphs.
 
-
-\begin{wrapfigure}{o}{38 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-614}
-\end{wrapfigure}
-
 \medskip
 
-Let $F$ be a free group and $G$ a finitely generated subgroup in $F$.
+Let $G$ be a finitely generated subgroup in a free group $F$.
 We need to show that $G$ is an intersection of subgroups of finite index in $F$.
-Without loss of generality, we can assume that $F$ has a finite number of generators, denote it by $m$.
+Without loss of generality, we can assume that $G$ has infinite index and $F$ has a finite number of generators; denote it by $m$.
 
 Let $W$ be the wedge sum of $m$ circles so that $\pi_1(W,p)\z=F$.
 Equip $W$ with the length-metric such that each circle has unit length.
@@ -515,10 +546,16 @@ Pass to the metric covering $\tilde W$ of $W$
 such that  $\pi_1(\tilde W,\tilde p)=G$ 
 for a lift $\tilde p$ of $p$.
 
+\begin{wrapfigure}{o}{38 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-614}
+\end{wrapfigure}
+
 Choose a sufficiently large integer $n$ and consider the doubling of the closed ball $\bar B(\tilde p,n+\frac12)$ along  its boundary.
 Let us denote the obtained doubling by $Z_n$ and set $G_n=\pi_1(Z_n,\tilde p)$.
 
-Note that $Z_n$ is a metric covering of $W$;
+Show that $Z_n$ is a metric covering of $W$;
 this allows us to consider $G_n$ as a subgroup of $F$.
 By construction, $Z_n$ is compact;
 therefore $G_n$ has a finite index in $F$.
@@ -529,46 +566,49 @@ It remains to show that
 where $k$ is the maximal word length in the generating set of $G$.
 \qeds
 
-Originally the problem was solved by Marshall Hall \cite{hall1,hall2,burns}.
+This problem was solved by Marshall Hall \cite{hall1,hall2,burns}.
 Our proof is close to the solution of John Stallings \cite{stallings,wilton}.
-Note that the statement does not hold for infinitely generated subgroups. %???REF
+Note that the statement does not hold for infinitely generated subgroups.
+The following surprising corollary is a special case of
+a theorem of Lawton; see \cite[Theorem 1.3]{weiss2000}.
 
-The same idea can be used to solve many other problems; here are some examples.
+\begin{pr}
+Let $F$ be a free group with two generators, and let $A$ be a finite set.
+Consider the space $A^F$ of all maps $F\to A$ with the topology of pointwise convergence;
+the space $A^F$ comes with a natural action of $F$.
+Show that any continuous $F$-equivariant injective map $A^F\selfup$ is surjective.
+\end{pr}
+
+The idea of the presented solution can be used to solve many other problems; the Nielsen--Schreier theorem is a classical example:
 
 \begin{pr}
 Show that a subgroup of a free group is free.
-\end{pr}
 
-\begin{pr}
- Show that two elements $u$ and $v$ of a free group commute 
+In particular, any two elements $u$ and $v$ of a free group commute
 if and only if they are both powers of
 an element $w$.
 \end{pr}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Short generators.}
 Choose a length-minimizing loop $\gamma$ that represents a given element $a\in\pi_1M$.
 
+Choose $\eps>0$.
+Represent $\gamma$ 
+as a concatenation of paths
+$\gamma=\gamma_1{*}\ldots{*}\gamma_n$
+such that
+\[\length\gamma_i<\eps\] 
+for each $i$.
+
 \begin{wrapfigure}{o}{21 mm}
-\vskip0mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-616}
 \vskip1mm
 \end{wrapfigure}
 
-Choose $\eps>0$.
-Represent $\gamma$ 
-as a concatenation of paths
-$\gamma=\gamma_1{*}\dots{*}\gamma_n$
-such that
-\[\length\gamma_i<\eps\] 
-for each $i$.
-
- 
-Denote by $p=p_0,p_1,\dots, p_n=p$ the endpoints of these arcs.
+Denote by $p=p_0,p_1,\ldots, p_n=p$ the endpoints of these arcs.
 Connect $p$ with $p_i$ by a minimizing geodesic $\sigma_i$.
 Note that $\gamma$ is homotopic to a product of loops
 \[\alpha_i=\sigma_{i-1}{*}\gamma_i{*}\bar\sigma_{i},\]
@@ -598,9 +638,9 @@ set
 \[|a|=|p- a\cdot p|_{\tilde M}.\]
 
 Consider the so-called \index{short basis}\emph{short basis} in $\pi_1M$;
-that is, a sequence of elements $a_1,a_2,\dots{} \in\pi_1M$ defined in the following way:
+that is, a sequence of elements $a_1,a_2,\ldots{} \in\pi_1M$ defined in the following way:
 \begin{enumerate}[(i)]
-\item choose $a_1\in\pi_1M$ so that $|a_1|$ takes the minimal value,
+\item choose a nontrivial $a_1\in\pi_1M$ so that $|a_1|$ takes the minimal value,
 \item choose $a_2\in\pi_1M\setminus\langle a_1 \rangle$ so that $|a_2|$ takes the minimal value,
 \item choose $a_3\in\pi_1M\setminus\langle a_1,a_2 \rangle$ so that $|a_3|$ takes the minimal value,
 and so on.
@@ -608,15 +648,15 @@ and so on.
 
 Note that the sequence terminates at the $n$-th step 
 if 
-$a_1,\dots,a_n$  generate $\pi_1M$.
+$a_1,\ldots,a_n$  generate $\pi_1M$.
 By construction, we have
 \begin{align*}
-|a_j\cdot a_i^{-1}|&\ge |a_j|\ge |a_i|
+|a_i^{-1}\cdot a_j|&\ge |a_j|\ge |a_i|
 \intertext{for any $j>i$. 
 Set $p_i=a_i\cdot p$.
 Note that}
-|p_j-p_i|_{\tilde M}
-&=|a_j\cdot a_i^{-1}|\ge
+|p_i-p_j|_{\tilde M}
+&=|a_i^{-1}\cdot a_j|\ge
 \\
 &\ge |a_j|=
 \\
@@ -634,7 +674,12 @@ Therefore the number of points $p_i$ can be bounded in terms of the dimension of
 Hence the result follows.
 \qeds
 
+
+
+
 The \emph{short-basis construction}, as well as the result above are due to Mikhael Gromov \cite{gromov-almost-flat}.
+For nonnegative Ricci curvature, even finite generation fails;
+this was shown by Elia Bruè, Aaron Naber, and Daniele Semola \cite{brue-naber-semola}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{An equation in a Lie group.} 
@@ -653,7 +698,7 @@ Therefore it is sufficient to show that
 Note that the claim $({*})$ follows from $({*}{*})$.
 \begin{cl}{$({*}{*})$} For any $x\in G$ the differential 
  \[d_x\psi\:\T_xG\to \T_{x^n}G\] 
-does not revert orientation.
+does not reverse orientation.
 \end{cl}
 
 
@@ -666,41 +711,41 @@ By $({*}{*})$, for a regular value $y$, each point in the  inverse image $\psi^{
 Hence $({*})$ follows.
 
 It remains to prove $({*}{*})$.
-Given an element $g\in G$, denote by $L_g$ and $R_g$ the left and right shift $G\to G$ respectively;
+Given an element $g\in G$, denote by $L_g$ and $R_g$ the left and right shifts $G\to G$ respectively;
 that is, $L_g(x)\z=g\cdot x$ and $R_g(x)=x\cdot g$.
 
 Identify the tangent spaces $\T_xG$ and $\T_{x^n}G$ with the Lie algebra $\mathfrak{g}\z=\T_eG$
 using $d{R_x}\:\mathfrak{g}\to \T_xG$ and $d{R_x^n}\:\mathfrak{g}\to \T_{x^n}G$ respectively.
 Then for any $V\in \mathfrak{g}$, we have
-\[d_x\psi(V)=V+\Ad_x(V)+\dots+\Ad_x^{n-1}(V),\]
+\[d_x\psi(V)=V+\Ad_x(V)+\ldots+\Ad_x^{n-1}(V),\]
 where $\Ad_x=d_e(L_x\circ R_{x^{-1}})\:\mathfrak{g}\to \mathfrak{g}$. 
 Since the metric on $G$ is bi-invariant, $\Ad_x$ is an isometry of $\mathfrak{g}$.
 It remains to note that the linear transformation
-\[V\mapsto V+T(V)+\dots+T^{n-1}(V)\]
-cannot revert orientation for any isometric linear transformation $T$ of the Euclidean space.
+\[V\mapsto V+T(V)+\ldots+T^{n-1}(V)\]
+cannot reverse orientation for any isometric linear transformation $T$ of the Euclidean space.
 The last statement is an exercise in linear algebra.
 \qeds
 
 The idea of this solution is due to Murray Gerstenhaber and Oscar Rothaus 
 \cite{gerstenhaber-rothaus}.
-In fact, the degree of $g$ is $n^k$, where $k$ is the rank of~$G$ \cite{hopf}.
+In fact, the degree of $\psi$ is $n^k$, where $k$ is the rank of~$G$ \cite{hopf}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Quotient of Hilbert space.}
 We consider $\mathbb{S}^3$ as the set of unit quaternions;
 in particular, it has a group structure.
 
-Let $\HH$ be the set of paths of \emph{class $W^{1,2}$} in $\mathbb{S}^3$ starting at the identity element $e$;
+Let $\HH$ be the set of absolutely continuous paths $[0,1]\to\mathbb{S}^3$ of \emph{class $W^{1,2}$} starting at the identity element $e$;
 that is, the path's velocity is square-integrable.
 The pointwise multiplication of paths defines a group structure on $\HH$.
 Denote by $\Omega$ the subset of all loops in $\HH$.
 
-It remains to equip $\HH$ with the structure of a Hilbert space so that 
-the right action of $\Omega$ on $\HH$ is isometric and the quotient is isometric to~$\mathbb{S}^3$.
+We need to equip $\HH$ with the structure of a Hilbert space so that
+the left action of $\Omega$ on $\HH$ is isometric and the quotient is isometric to~$\mathbb{S}^3$.
 
 \medskip
 
-We will prove the statement for any connected Lie group $G$ with a bi-invariant metric; in particular, for $G=\mathbb{S}^3$.
+We will prove the statement for any connected Lie group $G$ with a bi-invariant Riemannian metric; in particular, for $G=\mathbb{S}^3$.
 Denote by $\mathfrak{g}=\T_eG$ the Lie algebra of $G$.
 Equip $G$ with a bi-invariant metric, and let $\langle{*},{*}\rangle_{\mathfrak{g}}$ be the corresponding scalar product in $\mathfrak{g}$.
 
@@ -715,15 +760,15 @@ Given $f\:[0,1]\to \mathfrak{g}$ in $\HH$,
 consider the path 
 \[\Gamma_f\:[0,1]\to G\] 
 with 
-$\Gamma_f(0)=1$ and $\Gamma_f'(t)=\tilde f(t)$ for any $t$.
+$\Gamma_f(0)=1$ and $\Gamma_f'(t)=\tilde f(t)$ for almost every $t$.
 
 The map $\phi\:\HH\to G$ is the evaluation map $\phi\:f\mapsto \Gamma_f(1)$.
 Since $G$ is connected, $\phi$ is onto.
 
 \parit{Group structure on $\HH$.}
-Note that the functional $f\mapsto \Gamma_f$ is an injective map from $\HH$ to the space of paths in $G$ starting at $e$.
+Note that $f\mapsto \Gamma_f$ is an injective map from $\HH$ to the space of paths in $G$ starting at $e$.
 
-Given $\alpha\in G$, we denote by $\Ad_\alpha\:\mathfrak{g}\to \mathfrak{g}$ its the adjoint transformation;
+Given $\alpha\in G$, we denote by $\Ad_\alpha\:\mathfrak{g}\to \mathfrak{g}$ its adjoint transformation;
 that is, $\Ad_\alpha=d_e\Inn_\alpha$, where $\Inn_\alpha\:x\mapsto \alpha\cdot x\cdot \alpha^{-1}$ is the inner automorphism of $G$.
 Note that $\Ad_\alpha$ preserves the scalar product on~$\mathfrak{g}$.
 
@@ -738,24 +783,24 @@ In particular, $(\HH,\star )$ is a group with neutral element~$0$.
 From $({*})$, we get
 \[(h\star f)(t)-(h\star g)(t)=\Ad_{\Gamma_h(t)}(f(t)-g(t))\]
 and therefore
-\[|(f\star h)(t)-(g\star h)(t)|=|f(t)-g(t)|\]
-for any $t$.
+\[|(h\star f)(t)-(h\star g)(t)|=|f(t)-g(t)|\]
+for almost every $t$.
 It follows that for any fixed $h$,
 the transformation $f\mapsto h\star f$ is an affine isometry of $\HH$.
 
 
 The set $\Omega=\phi^{-1}\{e\}$ is a subgroup of $(\HH,\star)$;
 it can be viewed as the group of $W^{1,2}$-loops in $G$.
-It remains to note that $\phi\:\HH\to G$ is the quotient map for the right action of $\Omega$ on $\HH$.
+It remains to show that $\phi\:\HH\to G$ is the quotient map for the left action of $\Omega$ on $\HH$.
 \qeds
 
-\parit{Alternative solution.} Again, we will prove the statement for any connected Lie group $G$ with a bi-invariant metric.
+\parit{Alternative solution.} Again, we will prove the statement for any connected Lie group $G$ with a bi-invariant Riemannian metric.
 
 Denote by $G^n$ the direct product of $n$ copies of $G$.
 Consider the map $\phi_n\:G^n\to G$ defined by
-\[\phi_n\:(\alpha_1,\dots,\alpha_n)\mapsto \alpha_1\cdots\alpha_n.\]
+\[\phi_n\:(\alpha_1,\ldots,\alpha_n)\mapsto \alpha_1\cdots\alpha_n.\]
 Note that $\phi_n$ is the quotient map for the $G^{n-1}$-action on $G^n$ defined by
-\[(\beta_1,\dots,\beta_{n-1})\cdot(\alpha_1,\dots,\alpha_n)=(\alpha_1\cdot\beta_1^{-1},\beta_1\cdot\alpha_2\cdot\beta_2^{-1},\dots,\beta_{n-1}\cdot\alpha_n).\]
+\[(\beta_1,\ldots,\beta_{n-1})\cdot(\alpha_1,\ldots,\alpha_n)=(\alpha_1\cdot\beta_1^{-1},\beta_1\cdot\alpha_2\cdot\beta_2^{-1},\ldots,\beta_{n-1}\cdot\alpha_n).\]
 
 Denote by $\rho_n$ the product metric on $G^n$ rescaled with factor $\sqrt{n}$.
 Note that the quotient $(G^n,\rho_n)/G^{n-1}$ is isometric to $G=(G,\rho_1)$.
@@ -765,18 +810,25 @@ Therefore passing to the ultra-limit of $G^n$ as $n\to\infty$ we get a Hilbert s
 It remains to observe that the limit action has the required property.
 \qeds
 
-This construction is given by Chuu-Lian Terng and Gudlaugur Thorbergsson \cite[see section 4 in][]{terng-thorbergsson};
-the alternative solution was suggested by Alexander Lytchak.
+This construction is given by Chuu-Lian Terng and Gudlaugur Thorbergsson \cite{terng-thorbergsson}; see also \cite{terng}.
+The alternative solution was suggested by Alexander Lytchak.
 
-Instead of the group $\Omega$, 
-one could consider the subgroup $\Omega_H$ of paths $\gamma\:[0,1]\to G$ such that the pair $(\gamma(0),\gamma(1))$ belongs to a given subgroup $H<G\times G$.
-In this case, the quotient $\HH/\Omega_H$ is isometric to the \emph{double quotient} $G/\!\!/H$;
-that is, the quotient of the action on $G$ defined by $(h_1,h_2)\cdot g=h_1\cdot g\cdot h_2^{-1}$ for $(h_1,h_2)\in H<G\times G$.
-
+It is natural to ask what type of spaces (compact, simply-connected, Riemannian, cross out what is not needed) can be realized as a quotient of the Hilbert space by an isometric action.
+We just proved that these spaces include every connected Lie group $G$ with a bi-invariant Riemannian metric.
+In addition, we get \emph{double quotients} $G/\!\!/H$; that is, the quotient of the action on $G$ defined by $(h_1,h_2)\cdot g=h_1\cdot g\cdot h_2^{-1}$ for $(h_1,h_2)\in H<G\times G$.
+To see this, modify the action $G^{n-1}\acts G^n$ in the alternative solution to the action $H\times G^{n-1}\acts G^n$ defined by
+\[(\beta_0,\ldots,\beta_n)\cdot(\alpha_1,\ldots,\alpha_n)
+=
+(\beta_0\cdot\alpha_1\cdot\beta_1^{-1},
+\ldots,
+\beta_{n-1}\cdot\alpha_n\cdot\beta_n^{-1}),\]
+where $(\beta_0,\beta_n)\in H$ and $\beta_i\in G$ if $0<i<n$.
 
 The following question is open.
 
-\begin{pr} Suppose $R$ is a compact simply-connected Riemannian manifold that is isometric to a quotient of the Hilbert space by a group of isometries (or more generally $R$ is the target of Riemannian submersion from a Hilbert space).
-Is it true that $R$ is isometric to a double quotient? That is, is it true that $R$ is a quotient of compact Lie group $G$ by a group of isometries?
+\begin{pr} Suppose $R$ is a compact simply-connected Riemannian manifold that is isometric to a quotient of the Hilbert space by a group of isometries (or more generally $R$ is the target of a Riemannian submersion from a Hilbert space).
+Is it true that $R$ is isometric to a double quotient? That is, is it true that $R$ is a quotient of a compact Lie group $G$
+with a bi-invariant Riemannian metric
+by a group of isometries?
  
 \end{pr}

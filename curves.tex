@@ -8,14 +8,14 @@ a {}\emph{closed curve} is a continuous map defined on a circle.
 If the map is injective then the curve is called {}\emph{simple}.
 
 We assume that the reader is familiar with related definitions including 
-length of curve 
+the length of a curve
 and its curvature.
 The necessary material is covered in the first couple of lectures 
 of a standard introduction to differential geometry, [see Part I in \ncite{petrunin-zamora}, Chapter 1 in \ncite{toponogov-curves-and-surfaces}, or \S26--27 in \ncite{hilbert-cohn-vossen}].
 
 \medskip
 
-We give a practice problem with a solution --- after that, you are on your own.
+Each chapter starts with a practice problem followed by a solution.
 
 \subsection*{Spiral}
 \label{spiral}
@@ -60,7 +60,7 @@ if $t_1>t_0$.
 
 Denote by $D_t$ the osculating disk of $\gamma$ at $\gamma(t)$;
 it has a center at $z(t)$ and radius $r(t)$.
-By $({*})$, $D_{t_1}$ lies in the interior of $D_{t_0}$ for any $t_1>t_0$.
+By $({*})$, $D_{t_0}$ lies in the interior of $D_{t_1}$ for any $t_1>t_0$.
 Hence the result follows.\qeds
 
 This problem was considered by Peter Tait \cite{tait}
@@ -95,7 +95,7 @@ The latter result could be considered as a continuous analog of the Leibniz test
 \label{moon-in-puddle}
 
 \begin{pr}
-A smooth closed simple plane curve with curvature less than $1$ at every point bounds figure~$F$. 
+A smooth closed simple plane curve with curvature less than $1$ at every point bounds a figure~$F$.
 Prove that $F$ contains a unit disk.
 \end{pr}
 
@@ -161,7 +161,7 @@ and $f\:\mathbb{S}^1\z\to \RR^3\setminus B$ a knot.
 Show that there is a smooth isotopy 
 $$f_t\:\mathbb{S}^1\to \RR^3\setminus B,\ \ \ t\in [0,1]$$ 
 such that $f_0=f$,
-the length of $f_t$ is non-increasing with respect to $t$
+the length of $f_t$ is non-increasing with respect to $t$,
 and $f_1(\mathbb{S}^1)$ can be separated from $B$ by a plane.
 \end{pr}
 
@@ -225,7 +225,7 @@ Given $\delta>0$, set
 where the greatest lower bound is taken over all finite coverings $\{X_i\}$ of $X$ 
 such that $\diam X_i<\delta$ for each $i$.
 
-Note that the function $\delta\mapsto h(\delta)$ is not decreasing in $\delta$.
+Note that the function $\delta\mapsto h(\delta)$ is non-increasing in $\delta$.
 In particular, $h(\delta)\to \mathcal{H}_\alpha(X)$ as $\delta\to 0$ for some (possibly infinite) value $\mathcal{H}_\alpha(X)$.
 This value $\mathcal{H}_\alpha(X)$ is called the $\alpha$-dimensional Hausdorff measure of $X$.
 
@@ -243,7 +243,7 @@ Show that any two points $x,y\in X$ can be connected by a path $\alpha$ such tha
 \end{pr}
 
 Note that it might be impossible to connect $x$ and $y$ by a path in~$X$.
-In fact, there are connected sets in the plane (for example, the pseudo-arc) that contain no curves.
+In fact, there are connected sets in the plane (for example, the pseudo-arc) that contain no nontrivial curves.
 
 \subsection*{Straight set}
 
@@ -251,29 +251,25 @@ A set $X$ in the plane is called $\delta$-straight if, for any disc $\DD(x,r)$ w
 $X\cap \DD(x,r)$ is $\delta\cdot r$-close in the sense of Hausdorff to a diameter of $\DD(x,r)$. 
 
 \begin{pr}
-Show that for any $\eps>0$ there is $\delta>0$ such that any $\delta$-straight closed plane set $X$ is a curve that admits a locally $(1\pm\eps)$-bi-Hölder parametrization.
+Show that for any small $\eps>0$ there is $\delta>0$ such that any $\delta$-straight closed plane set $X$ is a curve that admits a locally $(1\pm\eps)$-bi-Hölder parametrization.
 That is, $X$ is connected and for any $x\in X$ there is a curve $\alpha\:[0,1]\to \RR^2$ that covers a neighborhood of $x$ in $X$, and the inequality
 \[c\cdot |t_1-t_0|^{1+\eps}\le|\alpha(t_0)-\alpha(t_1)| \le C\cdot |t_1-t_0|^{1-\eps}\]
-holds for any $t_0$ and $t_1$ and positive constants $c$ and $C$,
+holds for any $t_0$ and $t_1$ and some fixed positive constants $c$ and $C$.
 \end{pr}
 
 Before trying to solve the problem, it might be useful to look at the following example.
-Consider the set $X_k$ formed by the origin and the two logarithmic spirals $\rho = \pm e^{k\varphi}$ in the polar coordinates $(\rho,\phi)$.
+Consider the set $X_k$ formed by the origin and the two logarithmic spirals $\rho = \pm e^{k\cdot \phi}$ in the polar coordinates $(\rho,\phi)$.
 Observe that if $k$ is large, then $X_k$ is $\delta$-straight.
 
+Below is another example of a $\delta$-straight set; it is constructed in a way similar to the Koch snowflake curve, where we used a very obtuse isosceles triangle instead of an equilateral one.
+The Hausdorff dimension of this example is larger than 1;
+in particular, one can not expect to have a Lipschitz parametrization of $X$.
 
 \noindent
 \hskip-.9in
 \arxiv{\includegraphics[scale=1]{mppics/pic-111}}{\includegraphics[scale=1]{mppics/pic-110}}
 
-\vskip-.3in
-Another example of a $\delta$-straight set is shown; it is constructed in a way similar to the Koch snowflake curve, where we used a very obtuse isosceles triangle instead of equilateral.
-The Hausdorff dimension of this example is larger than 1;
-in particular, it shows that one can not expect to have a Lipschitz parametrization of $X$.
-
-
-
-
+\vspace{-.5in}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Typical convex curves}
 
@@ -292,9 +288,9 @@ it uses \index{Hausdorff distance}\emph{Hausdorff distance} and \index{G-delta s
 The Hausdorff distance $|A-B|_H$ between two closed bounded sets $A$ and $B$ in the plane is defined by 
 \[|A-B|_H=\sup_{x\in\RR^2}\{|\dist_A(x)-\dist_B(x)|\},\]
 where $\dist_A(x)$ denotes the smallest distance from $A$ to $x$.
-Equivalently, $|A-B|_H$ can be defined as the greatest lower bound of the positive numbers $r$ such that the $r$-neighborhood of $A$ contains $B$ and the $r$-neighborhood of $B$ contains $A$.
+The distance $|A-B|_H$ can be also defined as the greatest lower bound of the positive numbers $r$ such that the $r$-neighborhood of $A$ contains $B$ and the $r$-neighborhood of $B$ contains $A$.
 
-It is straightforward to show that the Hausdorff distance defines a metric on the space of all closed plane curves.
+It is straightforward to show that the Hausdorff distance defines a metric on the space of all convex closed plane curves.
 The obtained metric space is locally compact.
 The latter follows from the \index{selection theorem}\emph{selection theorem} \cite[see \S18 in][]{blaschke},
 which states that closed subsets of a fixed closed bounded set in the plane form a compact set with respect to the Hausdorff metric. 
@@ -315,13 +311,13 @@ This is the meaning of the word {}\emph{most} used in the problem.
 
 Since  Archimedes, we know that the surface area of a sphere between two parallel planes depends only on the distance between the planes.
 
-Consider the function $f(x) = \tfrac{2}{1 - |x|^2}$ defined on the open unit disk in the plane.
+Consider the function $f(x) = 2/\sqrt{1 - |x|^2}$ defined on the open unit disk in the plane.
 Observe that $f$ is the density of the push-forward of the area measure on the unit sphere under orthogonal projection onto the plane.
 It follows that $f$ has the same integral over every chord of the disk.
 The challenge is to show that functions with this property can exist only on round disks.
 
 \begin{pr}
-If an open convex figure $D \subset \mathbb{R}^2$ admits a function $f$ such that the integral of $f$ over every chord of $D$ equals 1, then $D$ must be a round disk.
+If an open bounded convex plane set $D$ admits a continuous positive function $f$ with integral $1$ over every chord, then $D$ is a round disk.
 \end{pr}
 
 
@@ -331,14 +327,14 @@ If an open convex figure $D \subset \mathbb{R}^2$ admits a function $f$ such tha
 
 \parbf{Moon in a puddle.}
 In the proof we will use the \emph{cut locus}
-of $F$ with respect to its boundary (also known as \emph{medial axis}.);
+of $F$ with respect to its boundary (also known as \emph{medial axis});
 it will be further denoted by $T$.
 The cut locus can be defined as the closure
 of the set of points $x\in F$ 
 for which there exist two or more points in $\partial F$ minimizing the distance to $x$.
 
 \begin{wrapfigure}{r}{36 mm}
-\vskip-2mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-112}
 \end{wrapfigure}
@@ -347,12 +343,12 @@ For each point $x\in T$, consider the subset $X\subset\partial F$ where the mini
 If $X$ is not connected then we say that $x$ is a \emph{cut point};
 equivalently it means that for any sufficiently small neighborhood $U\ni x$, 
 the complement $U\setminus T$ is disconnected.
-If $X$ is connected 
+If $X$ is connected,
 then we say that $x$ is a \emph{focal point};
-equivalently it means that the osculating circle to $\partial F$ at any point of $X$ is centered at $x$.
+in this case, the osculating circle to $\partial F$ at any point of $X$ is centered at $x$.
 
 The trick is to show that $T$ contains a focal point, say $z$.
-Since $\partial F$ has curvature of at most~$1$, the radius of any osculating circle is at least $1$.
+Since curvature of $\partial F$ does not exceed~$1$, the radius of any osculating circle is at least $1$.
 Hence the distance from $\partial F$ to $z$ is at least 1,
 and the statement will follow.
 
@@ -378,21 +374,20 @@ namely, \textit{there are at least two points on $\partial F$ at which osculatin
 Note that these points are \index{vertex of curve}\emph{vertices} of $\partial F$;
 that is, they are critical points of its curvature.
 
-Note further that inversion respects osculating circles.
+Note further that inversion respects osculating circles (possibly degenerate to lines).
 That is, if $\gamma$ is an osculating circle of curve $\alpha$ at $t_0$,
 $\gamma'$ is the inversion of $\gamma$, and 
 $\alpha'$ is the inversion of $\alpha$,
 then $\gamma'$ is an osculating circle of curve $\alpha'$ at $t_0$.
-Therefore applying an inversion about a circle with the center in $F$, we also get a pair of osculating circles of $\partial F$ which surround $F$.
-This way we obtain 4 osculating circles that lie on one side of $\partial F$.
+Therefore applying an inversion about a circle with the center in $F$, we also get a pair of osculating circles (or lines) of $\partial F$, which support $F$ from outside.
+This gives at least four points of $\partial F$ at which the osculating circle (or line) supports $\partial F$.
 The latter statement is a generalization of the four-vertex theorem \cite{petrunin-zamora:moon}.
 
 The case of convex curves of this problem appears in the book of Wilhelm Blaschke \cite[see \S 24 in][]{blaschke}.
 In full generality, the problem was discussed by Vladimir Ionin and German Pestov \cite{pestov-ionin}. %???include ref to my lectures 
-A solution via curve shortening flow of a weaker statement 
-was given by Konstantin Pankrashkin \cite{pankrashkin}.
+Let us mention that curve shortening flow was used in a closely related problem by Konstantin Pankrashkin \cite{pankrashkin}.
 The statement still holds if the curve fails to be smooth at one point \cite{petrunin-zamora:moon}.
-A spherical version of the later statement 
+A spherical version of the latter statement
 was used by Dmitri Panov and me \cite{panov-petrunin-ramification}.
 
 The statement admits a generalization to curves that bound a disc $F$ in a surface with nonpositive curvature.
@@ -424,20 +419,10 @@ Show that $F$ contains two disjoint unit discs.
 
 The 3-dimensional analog of this statement does not hold in general.
 Namely, there exists a smooth embedded sphere in $\RR^3$ with principal curvatures lying between $-1$ and $1$, yet it does not enclose an open ball of radius~$1$.
-An example can be obtained by thickening a nontrivial contractible 2-complex in $\RR^3$
-[Bing's house, constructed in \ncite{bing} will do the job].
+An example can be obtained by thickening a nontrivial contractible 2-complex in $\RR^3$;
+Bing's house, constructed in \cite{bing} will do the job.
 Such examples are discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet-1,lagunov-fet-2}.
-They were later generalized to Riemannian manifolds with boundary by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}.
-
-The same reason stands behind the difference between dimensions 2 and 3 in the following statements.
-For any Riemannian metric $g$ on the 2-sphere $\mathbb{S}^2$
-and any point $p \in (\mathbb{S}^2, g)$, there exists a minimizing geodesic $[pq]$ with conjugate endpoints.
-In contrast, this is not true for $(\mathbb{S}^3, g)$.
-Moreover, there exists a metric $g$ on $\mathbb{S}^3$
-with sectional curvature bounded above by an arbitrarily small $\eps > 0$, and with $\diam(\mathbb{S}^3, g) \le 1$.
-In particular, $(\mathbb{S}^3, g)$ contains no minimizing geodesics with conjugate endpoints.
-An example was originally constructed by Mikhael Gromov \cite{gromov-almost-flat};
-a simplified version was given by Peter Buser and Detlef Gromoll \cite{buser-gromoll}.
+More surprisingly, such a sphere can bound a body with volume strictly smaller than the volume of the unit ball; such examples were constructed simultaneously by Matthew Bolan \cite{bolan2025} and Hongda Qiu \cite{qiu2025}.
 
 Let us now formulate several weaker 3-dimensional analogs of the problem.
 
@@ -450,12 +435,23 @@ Show that a smooth closed surface $\Sigma$ in $\RR^3$ with all principal curvatu
 \end{enumerate}
 \end{pr}
 
-All three cases are discussed in \cite{petrunin-zamora}; the last problem is inspired by the work of Hongda Qiu.
+All three cases are discussed in \cite{petrunin-zamora}; the last problem is inspired by the work of Hongda Qiu \cite{qiu2026}.
+
+Analogous problems for Riemannian manifolds with boundary were considered by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}.
+
+Let us mention that the same reason stands behind the difference between dimensions 2 and 3 in the following statements.
+For any Riemannian metric $g$ on the 2-sphere $\mathbb{S}^2$
+and any point $p \in (\mathbb{S}^2, g)$, there exists a minimizing geodesic $[pq]$ with conjugate endpoints.
+In contrast, this is not true for $(\mathbb{S}^3, g)$.
+Moreover, there exists a metric $g$ on $\mathbb{S}^3$
+with sectional curvature bounded above by an arbitrarily small $\eps > 0$, and with $\diam(\mathbb{S}^3, g) \le 1$.
+In particular, $(\mathbb{S}^3, g)$ contains no minimizing geodesics with conjugate endpoints.
+An example was originally constructed by Mikhael Gromov \cite{gromov-almost-flat};
+a simplified version was given by Peter Buser and Detlef Gromoll \cite{buser-gromoll}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Wire in a tin.}
-To solve this problem,
-you should imagine that you travel on a train along the curve $\alpha$
+It will help to imagine that you travel on a train along the curve $\alpha$
 and watch the position of the center of the disk in the frame of your train car.
 
 \medskip
@@ -519,7 +515,7 @@ We assume that $\alpha$ is a closed curve in $\mathbb{S}^2$ of length $2\cdot\el
 \parit{A solution with Crofton's formula.}
 Given a unit vector $u$, denote by $e_u$ the equator with the pole at $u$.
 Let $k(u)$ be the number of intersections
-of $\alpha$ and $e_u$.
+of $\alpha$ and $e_u$ counted with multiplicity.
 
 Note that for almost all $u\in \mathbb{S}^2$, the value $k(u)$ is even or infinite.
 Since each equator intersects $\alpha$, we get $k(u)\ge 2$ for almost all $u$.
@@ -544,6 +540,12 @@ Let $z$ be the midpoint of a minimizing geodesic $[pq]$ in~$\mathbb{S}^2$.
 Let $r$ be a point of intersection of $\alpha$ with the equator with pole at~$z$. 
 Without loss of generality, we may assume that $r\in\check\alpha$. 
 
+\begin{wrapfigure}{o}{35mm}
+\vskip2mm
+\centering
+\includegraphics{mppics/pic-125}
+\end{wrapfigure}
+
 The arc $\check\alpha$ together with its reflection with respect to the point $z$ forms a closed curve of length $2\cdot \ell$ passing thru both $r$ and its antipodal point~$r^{*}$.
 Therefore 
 \[\ell=\length \check\alpha\ge |r-r^{*}|_{\mathbb S^2}=\pi.\]
@@ -566,7 +568,7 @@ Six proofs of this statement are surveyed by Stephan Stadler and the author \cit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Oval in an oval.}
-Choose a chord that divides the area of the bigger oval in the minimal (or maximal) ratio.
+Choose a chord that is tangent to the smaller oval and divides the area of the bigger oval in the minimal (or maximal) ratio.
 
 If the chord is not divided into equal parts, then you can rotate it slightly
 to decrease the ratio.
@@ -597,7 +599,7 @@ each of the following two integrals
 \quad\text{and}\quad
 \tfrac12\cdot\int\limits_{u\in\mathbb{S}^1}l^2(u)
 \end{align*}
-give the area between the curves.
+gives the area between the curves.
 In particular, 
 the integrals are equal. 
 The latter contradicts $({*})$.\qeds
@@ -609,10 +611,10 @@ A closely related {}\emph{equal tangents problem} is discussed by the same autho
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Capture a sphere in a knot.}
-We can assume that the knot lies on the sphere $\partial B$.
+Let $\gamma$ be the nearest-point projection of the knot onto the sphere $\partial B$.
 
 Choose a Möbius transformation 
-$m\:\mathbb{S}^2\to\mathbb{S}^2$ close to the identity and not a rotation.
+$m\:\mathbb{S}^2\to\mathbb{S}^2$ close to the identity that is not a rotation.
 
 Note that $m$ is a conformal map;
 that is, there is a function $u$ defined on $\mathbb{S}^2$ 
@@ -622,16 +624,15 @@ as
 
 Applying the area formula for $m$,
 we get 
-$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{u\in\mathbb{S}^2} u^2=1.$$ 
+$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{x\in\mathbb{S}^2} u^2(x)=1.$$
 By Bunyakovsky inequality, 
-$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{u\in\mathbb{S}^2} u<1.$$ 
+$$\frac1{\area \mathbb{S}^2}\cdot\int\limits_{x\in\mathbb{S}^2} u(x)<1.$$
 
 It follows that after a suitable rotation of $\mathbb{S}^2$, 
-the map $m$ decreases the length of the knot.
+the map $m$ decreases the length of $\gamma$, and we can use it to decrease the length of the knot.
 
-Iterating this construction we get a sequence of knots $f_n\:\mathbb{S}^1\z\to\mathbb{S}^2$ with length decreasing  and tending to zero.
-Passing to the limit as $m\to\id$, we get a continuous one-parameter family of Möbius transformations which shorten the length of the knot.
-Therefore it drifts the knot to a single hemisphere and allows the ball to escape. 
+Iterating this construction we get a sequence of knots with length decreasing and tending to zero.
+Passing to the limit as $m\to\id$, we get a continuous one-parameter family of Möbius transformations which drifts $\gamma$ to a single hemisphere and allows the ball to escape from the knot.
 \qeds
 
 This problem was posed by Zarathustra Brady.
@@ -694,7 +695,7 @@ Hence the result follows.\qeds
 
 This problem was proposed by Frederick Gehring \cite[see 7.22 in][]{gehring};
 solutions and generalizations are surveyed in \cite{mateljevic}. 
-The presented solution is attributed to Marvin Ortel in \cite{CJKSW} and it is close to the solution of Michael Edelstein and Binyamin Schwarz \cite{edelstein-schwatz}.
+The presented solution is attributed to Marvin Ortel \cite{CJKSW} and it is close to the solution of Michael Edelstein and Binyamin Schwarz \cite{edelstein-schwatz}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Surrounded area.} The trick is to use the Kirszbraun theorem:
@@ -710,7 +711,7 @@ Ludwig Danzer, Branko Grünbaum and Victor Klee \cite[][]{danzer-grunbaum-klee}.
 Let $C_1$ and $C_2$ be the compact regions bounded by $\gamma_1$ and $\gamma_2$ respectively.
 
 By the Kirszbraun theorem, there is a 1-Lipschitz map $f\:\RR^2\to\RR^2$ 
-such that $f(\gamma_2(v))\z=f(\gamma_1(v))$ for any $v\in\mathbb S^1$.
+such that $f(\gamma_2(v))\z=\gamma_1(v)$ for any $v\in\mathbb S^1$.
 
 Note that $f(C_2)\supset C_1$.
 Hence the statement follows.\qeds
@@ -726,7 +727,7 @@ such that
 \[|f(y)-f(a)|\le\eps\ \ \text{and}\ \ |f(x)-f(b)|\le\eps.\]
 
 A sequence of $\tfrac1n$-crooked maps can be constructed recursively. 
-Figure out the construction by looking at the following diagram.
+Figure out the construction from the picture.
 
 \begin{figure}[ht!]
 \centering
@@ -734,7 +735,7 @@ Figure out the construction by looking at the following diagram.
 \end{figure}
 
 Now, start with the unit circle, 
-$\gamma_0(t)=(\cos 2\pi t,\sin 2 \pi t)$.
+$\gamma_0(t)=(\cos (2\cdot \pi\cdot t),\sin (2\cdot \pi\cdot t))$.
 Choose a sequence of positive numbers $\eps_n$ converging to zero very fast. 
 Construct recursively a sequence of simple closed curves $\gamma_n\:[0,1]\z\to\RR^2$ such that $\gamma_{n+1}$ runs outside of the disk bounded by $\gamma_n$
 and 
@@ -743,14 +744,15 @@ for an $\eps_n$-crooked function $f_n$.
 (It is hard to draw $\gamma_{n+1}$; it runs like crazy back-and-forth almost along $\gamma_n$.)
 
 Denote by $D$ the union of all disks bounded by the curves $\gamma_n$.
-Clearly $D$ is homeomorphic to an open disk.
+Observe that $D$ is homeomorphic to an open disk.
 For the right choice of the sequence $\eps_n$, 
 the set $D$ is bounded.
 By construction, the boundary of $D$ contains no simple curves. \qeds
 
-In fact, the only curves in the boundary of the constructed set are constant. Compare to the problem \emph{Simple path} on page~\pageref{Simple path}.
+The problem \emph{Simple path} on page~\pageref{Simple path} implies that the only curves in the boundary of the constructed set are constant.
 
-The proof uses the so-called \emph{pseudo-arc} 
+
+This example is closely related to the so-called \emph{pseudo-arc}
 constructed by Bronis\l{}aw Knaster \cite{knaster}.
 The proof resembles the construction of Cantor's set.
 Here are a few similar problems:
@@ -764,7 +766,7 @@ Here are a few similar problems:
  Construct three open disks in $\RR^2$ having the same boundary.
 \end{pr}
 
-These disks are called \index{lakes of Wada}\emph{lakes of Wada}; it is described by Kuniz\^{o} Yo\-ne\-ya\-ma \cite{yoneyama}.
+These disks are called \index{lakes of Wada}\emph{lakes of Wada}; they were described by Kuniz\^{o} Yo\-ne\-ya\-ma \cite{yoneyama}.
 
 \begin{pr}
  Construct a Cantor set in $\RR^3$ with a non-simply-connected complement.
@@ -776,6 +778,7 @@ This example is called \index{Antoine's necklace}\emph{Antoine's necklace} \cite
  Construct an open set in $\RR^3$ with a fundamental group isomorphic to the additive group of rational numbers.
 \end{pr}
 
+This example is discussed by Benny Evans and Louise Moser \cite{evans-moser}.
 More advanced examples include
 the \emph{Whitehead manifold}, 
 \emph{Dogbone space}, 
@@ -786,25 +789,25 @@ see also the problem ``Conic neighborhood'' on page \pageref{Conic neighborhood}
 
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Rectifiable curve.}
-The 1-dimensional Hausdorff measure will be denoted by $\mathcal{H}_1$. 
+Set $L=\mathcal{H}_1(X)$; here $\mathcal{H}_1$ denotes the 1-dimensional Hausdorff measure.
+Without loss of generality, we may assume that $X$ has diameter $1$.
 
-Set $L=\mathcal{H}_1(K)$.
-Without loss of generality, we may assume that $K$ has diameter $1$.
+Since $X$ is connected, we get
+\[\mathcal{H}_1(B(x,\eps)\cap X)\ge\eps\leqno(*)\]
+for any $x\in X$ and $0<\eps<\tfrac12$.
 
-Since $K$ is connected, we get 
-\[\mathcal{H}_1(B(x,\eps)\cap K)\ge\eps\leqno(*)\]
-for any $x\in K$ and $0<\eps<\tfrac12$.
-
-Let $x_1,\dots, x_n$ be a maximal set of points in $K$ with 
+Let $x_1,\ldots, x_n$ be a maximal set of points in $X$ with
 \[|x_i-x_j|\z\ge\eps\] for all $i\ne j$. 
 From $(*)$ we have $n\le2\cdot L/\eps$.
 
-Note that there is a tree $T_\eps$ with vertices $x_1,\dots, x_n$ and straight edges with lengths at most $2\cdot\eps$ each.
+Note that there is a tree $T_\eps$ with vertices $x_1,\ldots, x_n$ and straight edges with lengths at most $2\cdot\eps$ each.
 Therefore the total length of $T_\eps$ is below $2\cdot n\cdot\eps\le 4\cdot L$.
 By construction, 
-$T_\eps$ is $\eps$-close to $K$ in the Hausdorff metric.
+$T_\eps$ is $\eps$-close to $X$ in the Hausdorff metric.
 
 Clearly, there is a closed curve $\gamma_\eps$ whose image is $T_\eps$ and its length is twice the total length of $T_\eps$;
 that is, 
@@ -815,49 +818,45 @@ we get the needed curve. \qeds
 
 In terms of measure, the optimal bound is $2\cdot L$;
 if in addition the diameter $D$ is known then it is $2\cdot L-D$.
-The problem is due to 
-Samuel Eilenberg 
-and Orville Harrold 
-\cite{eilenberg-harrold};
-it also appears in the book of Kenneth Falconer \cite[see Exercise 3.5 in][]{falconer}.
+The problem is due to Tadeusz Ważewski \cite[§ 24]{wazewski1927}; see also \cite{eilenberg-harrold,alberti-ottolini} and \cite[Exercise 3.5 in][]{falconer}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \parbf{Shortcut.} 
 Choose $\eps>0$.
 Let us construct a set $X'\subset X$ 
- and a collection of paths $\alpha_0,\dots,\alpha_n$ such that 
+ and a collection of paths $\alpha_0,\ldots,\alpha_n$ such that
 \begin{enumerate}[(i)]
 \item the total length of $\alpha_i\setminus X$ is at most $\eps$,
-\item the set $X'$ is a union of a finite collection of closed connected sets $X_0,\dots,X_n$,
+\item the set $X'$ is a union of a finite collection of closed connected sets $X_0,\ldots,X_n$,
 \item diameter of each $X_i$ is at most $\eps$,
 \item $x\in\alpha_0$, $y\in\alpha_n$, and
-\item the union $X'\cup \alpha_0\cup\dots\cup\alpha_n$ is connected
+\item the union $X'\cup \alpha_0\cup\ldots\cup\alpha_n$ is connected
 \end{enumerate}
 
-Imagine that the construction is given.
-Let us show that the statement can be proved by applying this construction recursively for a sequence of $\eps_n$ that converges to zero very fast.
+
+First let us show that the statement can be proved by applying this construction recursively for a sequence of $\eps_n$ that converges to zero very fast.
 
 Indeed we can apply the construction to each of the subsets $X_n$ and take as $X''$ the union of all closed subsets provided by the construction.
-This way we obtain a nested sequence of closed sets $X\supset X'\supset X''\supset\dots$ which break into a finite union of closed connected subsets of arbitrary small diameter and a countable collection of arcs with total length at most $\eps_1+\eps_2+\dots$ 
+This way we obtain a nested sequence of closed sets $X\supset X'\supset X''\supset\ldots$ which break into a finite union of closed connected subsets of arbitrarily small diameter and a countable collection of arcs with total length at most $\eps_1+\eps_2+\ldots$
 outside of $X$.
-Consider the Cantor set 
-\[Y= X\cap  X'\cap X''\cap\dots\]
+Consider the compact set
+\[Y= X\cap  X'\cap X''\cap\ldots\]
 Note that there is a simple curve from $x$ to $y$ that runs in the constructed arcs and $Y$.
 The total length of the constructed curves outside of $X$ can not exceed the sum
-$\eps_1+\eps_2+\dots$;
+$\eps_1+\eps_2+\ldots$;
 whence the result.
 
 It remains to do the construction.
 
-Let us cover $X$ by a grid of $\tfrac\eps2$-squares $Q_1,\dots,Q_k$.
+Let us cover $X$ by a grid of $\tfrac\eps2$-squares $Q_1,\ldots,Q_k$.
 Denote by $\Delta$ the union of all the sides of the squares.
 
 By the regularity of length, we may cover $\Delta\cap X$ by a finite collection of arcs with total length arbitrarily close to the length of $\Delta\cap X$.
-Denote these arcs by $\alpha_0,\dots,\alpha_n$.
+Denote these arcs by $\alpha_0,\ldots,\alpha_n$.
 Without loss of generality, we may assume that $x\in\alpha_0$ and $y\in\alpha_n$.
 
-Consider a finite graph with vertices labeled by $\alpha_0,\dots,\alpha_n$;
+Consider a finite graph with vertices labeled by $\alpha_0,\ldots,\alpha_n$;
 two vertices $\alpha_i$ and $\alpha_j$ are adjacent if there is a connected set $\Theta\subset  X\cap Q_k$ 
 for some $k$ such that $\Theta$ intersects $\alpha_i$ and $\alpha_j$.
 Note that the graph is connected. Therefore we may choose a path from $\alpha_0$ to $\alpha_n$ in the graph.
@@ -868,8 +867,7 @@ The $\Theta$-sets that correspond to the edges in the path can be taken as $ X_i
 
 This solution was found by Taras Banakh \cite{banakh};
 it was used by Stephan Stadler and the author \cite{petrunin-stadler:revisited}.
-The proof works only in dimension two and we are not aware of a generalization to higher dimensions. 
-Namely, the following question is open:
+The proof works only in dimension two, and the following question is open:
 
 \begin{pr}
 Let $x,y$ be two points in a compact connected subset $X\subset \RR^3$. 
@@ -882,15 +880,15 @@ Is it always possible to connect $x$ and $y$ by a path $\alpha$ such that the co
 A set $L$ in the plane will be called $r$-reachable
 if it is formed by a collection of disjoint proper smooth curves 
 with $r$-tubular neighborhood;
-that is, the closest-point projection to $L$ is uniquely defined in the $r$-neighborhood of $L$.
+that is, the nearest-point projection to $L$ is uniquely defined in the $r$-neighborhood of $L$.
 Note that in this case, $L$ has curvature at most $\tfrac1r$ at any point.
 
-Further, $\delta_i$ will denote a positive value that depends on $\delta$ such that $\delta_i\to0$ as $\delta\to 0$.
-In fact, every statement below holds for $\delta_i=239\cdot\delta$ for any $i$.
+By $\delta_i$ we will denote different positive values that depend on $\delta$ such that $\delta_i\to0$ as $\delta\to 0$.
+(In fact, we can assume that $\delta_i\le 239\cdot\delta$ for every $i$.)
 We assume that $\delta$ and, therefore, each $\delta_i$ are small.
 
-Fix an $\delta$-straight set $X$.
-Note that for any $r>0$, there is a $r$-reachable set $L$ 
+Fix a $\delta$-straight set $X$.
+Note that for any $r>0$, there is an $r$-reachable set $L$
 that is $\delta_1\cdot r$-close to $X$ in the sense of Hausdorff.
 Indeed, using $\delta$-straightness one may approximate $X$ by a polygonal line that has sides about $r$, very obtuse angles, and that does not come close to a fixed point twice.
 Smoothing its corners produces $L$.
@@ -901,10 +899,10 @@ Smoothing its corners produces $L$.
 
 Let $L_n$ be a sequence of such approximations for $r_n=\tfrac1{2^n}$.
 Note that $L_{n-1}$ lies in a $\delta_2\cdot r_n$-neighborhood of $L_{n}$.
-In particular, the closest point projection $f_n\:L_{n-1}\to L_{n}$ is uniquely defined.
+In particular, the nearest-point projection $f_n\:L_{n-1}\to L_{n}$ is uniquely defined.
 Moreover, it is straightforward to check that $f_n$ is $(1\mp \delta_3)$-bi-Lipschitz.
 
-Given $x_1\in L_1$, consider the sequence $x_n\in L_n$ defined by $x_{n+1}\z=f_n(x_n)$.
+Given $x_1\in L_1$, consider the sequence $x_n\in L_n$ defined by $x_{n+1}\z=f_{n+1}(x_n)$.
 From above, we have that 
 \[
 \begin{aligned}|x_{n+1}-x_n|&<\delta_4\cdot r_n,
@@ -916,7 +914,7 @@ From above, we have that
 In particular, for any $x_1\in L_1$, the sequence $(x_n)$ converges in itself.
 Denote its limit by $F(x_1)$;
 evidently, $F\:L_1\to X$ is onto.
-It follows in particular, that any pair of points in $X$ on distance at most 1 lie in one connected component.
+It follows in particular, that any pair of points in $X$ at distance at most 1 lie in one connected component.
 Since the $\delta$-straightness does not depend on the scale, it implies that $X$ is connected.
 
 Note that $({*})$ implies the following two pairs of inequalities
@@ -930,7 +928,7 @@ Note that $({*})$ implies the following two pairs of inequalities
 |x_{n+1}-y_{n+1}|&\ge |x_{n}-y_{n}|- \delta_5\cdot r_n.
 \end{align*}
 To prove that $F$ is bi-Hölder,
-apply recursively the first inequality in each pair until $|x_{n}-y_{n}|\z>r_n$ and after the second one. 
+apply recursively the first inequality in each pair until $|x_{n}-y_{n}|\z>r_n$ and then the second one.
 \qeds
 
 This puzzle is a baby case of the so-called \emph{Reifenberg's lemma}.
@@ -943,21 +941,21 @@ Denote by $\mathfrak{C}$ the space of all closed convex curves in the plane equi
 Recall that $\mathfrak{C}$ is locally compact.
 In particular, by the Baire theorem, a countable intersection of everywhere dense open sets is everywhere dense.
 
-Note that if a curve $\gamma\in\mathfrak{C}$ has non-zero second derivative at a point~$p$,
-then $\gamma$ lies between two nested circles tangent to each other at $p$.
-
+If a curve $\gamma\in\mathfrak{C}$ has nonzero curvature at a point~$p$,
+then $\gamma$ lies between two nested circles tangent to each other at
+$p$.
 Fix these two circles.
-It is straightforward to check that there is $\eps>0$ such that 
+It is straightforward to check that there is $\eps\z>0$ such that
 the Hausdorff distance from any convex curve $\gamma$ squeezed between the circles 
-to any convex $n$-gon is at least $\frac{\eps}{n^{100}}$.
+to any convex $n$-gon is at least $\eps/100^{n^{100}}$.
 
-Choose a countable dense set of convex polygons $\mathfrak{p}_1,\mathfrak{p}_2,\dots$ in $\mathfrak{C}$.
+Choose a countable dense set of convex polygons $\mathfrak{p}_1,\mathfrak{p}_2,\ldots$ in $\mathfrak{C}$.
 Denote by $n_i$ the number of sides in $\mathfrak{p}_i$.
 For any positive integer $k$,
 consider the set $\Omega_k\subset\mathfrak{C}$ defined by 
 \[\Omega_k
 =
-\set{\xi\in \mathfrak{C}}{\min_i\{|\xi-\mathfrak{p}_i|_{H}\}<\tfrac1{k\cdot n_i^{100}}},\]
+\set{\xi\in \mathfrak{C}}{100^{n_i^{100}}\cdot |\xi-\mathfrak{p}_i|_{H}<\tfrac1k\ \text{for some}\ i},\]
 where $|{*}-{*}|_H$ denotes the Hausdorff distance.
 
 \begin{wrapfigure}{o}{41 mm}
@@ -974,27 +972,29 @@ Therefore
 is a G-delta dense set.
 Hence the statement follows.\qeds
 
-This problem states that typical convex curves have an unexpected property.
-This is common --- it is hard to see the typical objects and these objects often have surprising properties.
+The problem is due to Tudor Zamfirescu \cite{zamfirescu1980};
+more problems of that type can be found in his survey \cite{zamfirescu}.
+They have a common feature: typical objects have unexpected properties.
+In fact, it is hard to see the typical objects and these objects look like nothing that you saw before.
 
 For example, it was proved by
 Bernd Kirchheim, 
 Emanuele Spadaro, 
 and 
-L{\'a}szl{\'o} Sz{\'e}kelyhidi,
+L{\'a}szl{\'o} Sz{\'e}kelyhidi
 that \textit{typical 1-Lipschitz maps from the plane to itself preserve the length of all curves} \cite{KSS}.
 The same way, one could show that \textit{the boundaries of typical open sets in the plane contain no nontrivial curves}, 
 but the construction of a concrete example is not trivial
 [see ``Crooked circle'', page \pageref{Crooked circle}].
-More problems of that type are surveyed by Tudor Zamfirescu \cite{zamfirescu}.
+
 
 \parbf{Chord integrals.}
-Let $s(u) = \max\set{\langle x, u \rangle}{x \in D}$
+Let $s(u) = \sup\set{\langle x, u \rangle}{x \in D}$
 for $u \in \mathbb{S}^1$.
-Since $D$ is convex, we have $D = \set{x \in \mathbb{R}^2}{\langle x, u \rangle \le s(u)}$.
+Since $D$ is convex, we have $D = \set{x \in \mathbb{R}^2}{\langle x, u \rangle < s(u)\ \text{for any}\ u\in \mathbb{S}^1}$.
 
-Suppose $f$ satisfies the given conditions, and let $w = \int_{x \in D} f(x)$.
-Observe that
+Suppose $f$ satisfies the conditions, and let $w = \int_{x \in D} f(x)$.
+Then
 \begin{align*}
 w
 &= \int\limits_{-s(-u)}^{s(u)} \, dt = s(u) + s(-u)
