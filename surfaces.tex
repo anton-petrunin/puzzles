@@ -497,7 +497,7 @@ The observation $({*})$
 is called \index{Liberman’s lemma}\emph{Liberman’s lemma}; 
 it was used earlier 
 to bound the total curvature
-of a geodesic on a convex surface \cite{liberman}.\footnote{It is a part of the thesis of Joseph Liberman, defended a couple of months before he died in WWII.}
+of a geodesic on a convex surface \cite{liberman}.
 This lemma is the main tool for studying geodesics on general convex surfaces.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -698,10 +698,9 @@ Stephan Stadler \cite{stadler-FM}.
 This result also implies that any embedded circle of total curvature at most $4\cdot\pi$ is an unknot.
 The latter was first proved independently by Istv{\'a}n F{\'a}ry \cite{fary-knot} and  John Milnor \cite{milnor}.
 
-Note that if we assume in addition that the surface is a disk,
+Note that if we assume in addition that $\Sigma$ is a disk,
 then the statement holds for any saddle surface.
-Indeed, denote by $S_r$ the sphere of radius $r$ concentric with the unit sphere.
-Then according to the problem ``A curve on a sphere'' [page \pageref{A curve in a sphere}], 
+In this case the component of zero in $\Sigma_r$ is homeomorphic to an open disc, and according to the problem ``A curve on a sphere'' [page \pageref{A curve in a sphere}],
 \[\length[\partial\Sigma_r]\ge 2\cdot\pi\cdot r.\]
 Then by the coarea formula, we get $\area\Sigma\ge \pi$.
 
@@ -770,9 +769,8 @@ Here are some related statements.
 this was proved by Eduard Rembs
 [see \ncite{rembs} and also page 135 in \ncite{efimov}].
 \item Any second-order rigid surface does not admit analytic deformation 
-[proved by Nikolay Efimov; page 121 in \ncite{efimov}]
-and for the surfaces of revolution, the assumption of analyticity can be removed 
-\cite[proved by Idzhad Sabitov, see][]{sabitov}.
+[proved by Nikolay Efimov; page 121 in \ncite{efimov}].
+%and for the surfaces of revolution, the assumption of analyticity can be removed \cite[proved by Idzhad Sabitov, see][]{sabitov}.
 \end{itemize}
 
 
@@ -786,7 +784,7 @@ and for the surfaces of revolution, the assumption of analyticity can be removed
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Contractible geodesic.}
 Let $\gamma$ be a contractible geodesic loop in $(\mathbb{T}^2,g)$;
-in other words, its lift $\tilde\gamma$ in the universal metric cover by plane $(\mathbb{R}^2,\tilde g)$ is a geodesci loop.
+in other words, its lift $\tilde\gamma$ in the universal metric cover by the plane $(\mathbb{R}^2,\tilde g)$ is a geodesic loop.
 
 We may assume that $\tilde \gamma$ is simple; so, it bounds a disc, say $D$, in $(\mathbb{R}^2,\tilde g)$.
 Let $\alpha$ be the angle of $D$ at the base of $\tilde \gamma$.
@@ -794,16 +792,16 @@ Let $\alpha$ be the angle of $D$ at the base of $\tilde \gamma$.
 If $\alpha=\pi$, then $\tilde \gamma$ is a closed geodesic in $(\mathbb{R}^2,\tilde g)$.
 Therefore, $\gamma$ is a contractible closed geodesic in $(\mathbb{T}^2,g)$.
 
-If $\alpha>\pi$ then curve-shortening flow starting from $\gamma$ produces a closed geodesic outside of $D$, and it projects to a contractible closed geodesic in $(\mathbb{T}^2,g)$.
+If $\alpha>\pi$ then curve-shortening flow starting from $\tilde\gamma$ produces a closed geodesic outside of $D$, and it projects to a contractible closed geodesic in $(\mathbb{T}^2,g)$.
 
-If $\alpha<\pi$, then applying the Poincaré recurrence theorem, we can perturb $\gamma$ a bit so that it remains a loop and one of its extensions almost repeat $\gamma$, making another contractible loop.
+If $\alpha<\pi$, then applying the Poincaré recurrence theorem, we can perturb $\gamma$ a bit so that it remains a loop and one of its extensions almost repeats $\gamma$, making another contractible loop.
 Thus, after perturbation, we have a loop $\tilde\gamma$ in $(\mathbb{R}^2,\tilde g)$ that can be extended to one side to another point of self-intersection;
 \begin{figure}[ht!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-222}
 \end{figure}
-we might get a curve as is picture.
+we might get a curve as is the picture.
 Let us cut $(\mathbb{R}^2,\tilde g)$ along the obtained curve; the unbounded piece is a surface with locally convex boundary.
 It remains to apply curve-shortening flow as before.
 \qeds
@@ -811,7 +809,7 @@ It remains to apply curve-shortening flow as before.
 This problem is extracted from the paper of Eva Glasmachers and Gerhard Knieper \cite{glasmachers-knieper}.
 
 If the torus admits a geodesic foliation, then it has no contractible closed geodesics.
-Indeed, a lift of geodesic in $(\mathbb{R}^2,\tilde g)$ is eithre runs long the foliation and therefore cannot come back, or it crosses leaves of the foliation transversally and therefore cannot come back.
+Indeed, a lift of a geodesic in $(\mathbb{R}^2,\tilde g)$ either runs along the foliation and therefore cannot come back, or it crosses leaves of the foliation transversally always in the same direction and therefore cannot come back.
 For a torus of revolution, this observation is due to
 Y. Colin de Verdière; see \cite[7.9]{gromov-MetStr}.
 
