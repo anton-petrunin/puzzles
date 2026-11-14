@@ -700,7 +700,9 @@ The latter was first proved independently by Istv{\'a}n F{\'a}ry \cite{fary-knot
 
 Note that if we assume in addition that $\Sigma$ is a disk,
 then the statement holds for any saddle surface.
-In this case the component of zero in $\Sigma_r$ is homeomorphic to an open disc, and according to the problem ``A curve on a sphere'' [page \pageref{A curve in a sphere}],
+In this case the component of zero in $\Sigma_r$ is homeomorphic to an open disc:
+whose boundary intersects every equator of $\partial B(0,r)$.
+According to the problem ``A curve on a sphere'' [page \pageref{A curve in a sphere}],
 \[\length[\partial\Sigma_r]\ge 2\cdot\pi\cdot r.\]
 Then by the coarea formula, we get $\area\Sigma\ge \pi$.
 
@@ -792,7 +794,9 @@ Let $\alpha$ be the angle of $D$ at the base of $\tilde \gamma$.
 If $\alpha=\pi$, then $\tilde \gamma$ is a closed geodesic in $(\mathbb{R}^2,\tilde g)$.
 Therefore, $\gamma$ is a contractible closed geodesic in $(\mathbb{T}^2,g)$.
 
-If $\alpha>\pi$ then curve-shortening flow starting from $\tilde\gamma$ produces a closed geodesic outside of $D$, and it projects to a contractible closed geodesic in $(\mathbb{T}^2,g)$.
+If $\alpha>\pi$ then curve-shortening flow%
+\footnote{The midpoint version of Birkhoff's curve-shortening process works equally well.}
+starting from $\tilde\gamma$ produces a closed geodesic outside of $D$, and it projects to a contractible closed geodesic in $(\mathbb{T}^2,g)$.
 
 If $\alpha<\pi$, then applying the Poincaré recurrence theorem, we can perturb $\gamma$ a bit so that it remains a loop and one of its extensions almost repeats $\gamma$, making another contractible loop.
 Thus, after perturbation, we have a loop $\tilde\gamma$ in $(\mathbb{R}^2,\tilde g)$ that can be extended to one side to another point of self-intersection;
@@ -801,7 +805,7 @@ Thus, after perturbation, we have a loop $\tilde\gamma$ in $(\mathbb{R}^2,\tilde
 \centering
 \includegraphics{mppics/pic-222}
 \end{figure}
-we might get a curve as is the picture.
+we might get a curve as in the picture.
 Let us cut $(\mathbb{R}^2,\tilde g)$ along the obtained curve; the unbounded piece is a surface with locally convex boundary.
 It remains to apply curve-shortening flow as before.
 \qeds

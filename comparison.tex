@@ -196,7 +196,7 @@ therefore  the limit above is defined for any $p$.
 A \index{horo-sphere}\emph{horo-sphere} in $M$ is defined as a level set of a Busemann function
 on $M$.
 
-We say that a complete Riemannian manifold $M$ has \index{polynomial volume growth}\emph{polynomial volume growth} if, for some (and therefore any) $p\in M$, there are constants $C\in \RR$, $k\in ZZ$ such that
+We say that a complete Riemannian manifold $M$ has \index{polynomial volume growth}\emph{polynomial volume growth} if, for some (and therefore any) $p\in M$, there are constants $C\in \RR$, $k\in\ZZ$ such that
 $$\vol B(p,r)_M\z\le C\cdot (r^k+1),$$ 
 for any $r>0$;
 here $B(p,r)_M$ denotes the ball in $M$.
@@ -436,8 +436,8 @@ Show that the integral
 is small; here $k_1$ and $k_2$ denote the principal curvatures of $D$.
 \end{pr}
 
-The expected solution uses the following relative version of the integral Bochner formula \cite[7.10]{colding-minicozzi}.
-Let $M$ be a Riemannian manifold with boundary $\partial M$.
+The expected solution uses the following relative version of the integral Bochner formula \cite[Lemma~7.10]{colding-minicozzi}.
+Let $M$ be a compact Riemannian manifold with boundary $\partial M$.
 If $f\:M\to \RR$ is a smooth function that vanishes on $\partial M$,
 then 
 \[\int\limits_M \left(|\Delta f|^2
@@ -629,7 +629,7 @@ of $\Sigma$ and $\tilde\Sigma$ in $\mathbb{S}^m$ respectively.
 Note that 
 \[U_{\frac\pi2}=\tilde U_{\frac\pi2}=\mathbb{S}^m.
 \leqno({*})\]
-The equality $\tilde U_{\frac\pi2}=\mathbb{S}^m$ is evidnet.
+The equality $\tilde U_{\frac\pi2}=\mathbb{S}^m$ is evident.
 If $U_{\frac\pi2}\ne\mathbb{S}^m$, fix $x\in \mathbb{S}^m\setminus U_{\frac\pi2}$.
 Choose a closest point $y\in \Sigma$ to $x$.
 Since $r=|x-y|_{\mathbb{S}^m}>\tfrac\pi2$ the $r$-sphere $\mathrm{S}_r\subset \mathbb{S}^m$ with center $x$ is concave.
@@ -838,7 +838,7 @@ that start at $p$ and $p_0$ respectively
 and go in parallel directions, say $\nu$ and $\nu_0$. %???direction???
 Set $\ell_\nu(t)=|\alpha(t)-\alpha_0(t)|$.
 
-The second variation formula together with the lower bound on curvature imply that $\ell_\nu''(0)$ has a negative average for all tangent directions $\nu$ to $\Sigma$ at $p$.
+The second variation formula together with the lower bound on curvature implies that $\ell_\nu''(0)$ has a negative average over all tangent directions $\nu$ to $\Sigma$ at $p$.
 In particular, $\ell_\nu''(0)<0$ for a vector $\nu$ as above.
 For the corresponding pair $\alpha$ and $\alpha_0$,
 it follows that there are points $v=\alpha(\eps)\in\Sigma$ near $p$ 
@@ -1100,7 +1100,7 @@ For a long time, this trick was the main source of examples
 of positively and nonnegatively curved manifolds
 \cite{cheeger,aloff-wallach,gromoll-meyer,eschenburg-spaces,bazajkin}.
  
-The quotient space $(M,g)/G$ is an example of Alexandrov space.
+The quotient space $(M,g)/G$ is an Alexandrov space.
 It is expected that not all finite-dimensional Alexandrov spaces admit approximation by Riemannian manifolds with curvature bounded below
 [some partial results are discussed in \ncite{pwz,kapovitch}].
 
