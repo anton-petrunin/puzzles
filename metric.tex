@@ -871,22 +871,12 @@ if for any $x,y\in X$, we have
 and any point in $Y$ lies at a distance at most $A$ from a point in the image $f(X)$.
 
 
-Note that $(M,0)$-quasi-isometry is a $[\tfrac1M,M]$-bi-Lipschitz map.
-Moreover,
-if $f_n\:\RR^m\to\RR^m$ is a $(M,\frac1n)$-quasi-isometry
-for each $n$, 
-then any subsequential limit of $f_n$ as $n\to\infty$
-is a $[\tfrac1M,M]$-bi-Lipschitz map.
+Note that $(M,0)$-quasi-isometry is a $[\tfrac1M,M]$-bi-Lipschitz map, and
+any sequence of $(M,\tfrac1n)$-quasi-isometries
+$f_n\:\RR^m\to\RR^m$ with $f_n(0)=0$ has a subsequence
+converging locally uniformly to an $[\tfrac1M,M]$-bi-Lipschitz map.
 
-
-Therefore given $M\ge 1$ and $\eps>0$ there is $\delta>0$ such that 
-for any $(M,\delta)$-quasi-isometry $f\:\RR^m\to\RR^m$ and any $p\in \RR^m$
-there is an $[\tfrac1M,M]$-bi-Lipschitz map $h\:B(p,1)\to \RR^m$
-such that
-\[|f(x)-h(x)|<\eps\]
-for any $x\in B(p,1)$.
-
-Using rescaling, we can get the following equivalent formulation. 
+By compactness and rescaling, we obtain the following.
 Given $M\ge 1$, $A\ge 0$, and $\eps>0$,
 there is sufficiently large $R>0$ such that for any $(M,A)$-quasi-isometry 
 $f\:\RR^m\to\RR^m$ and any $p\in\RR^m$ there is a $[\tfrac1M,M]$-bi-Lipschitz map $h\:B(p,R)\to \RR^m$
@@ -896,17 +886,17 @@ for any $x\in B(p,R)$.
 
 Cover $\RR^m$ by balls $B(p_n,R)$ and construct a $[\tfrac1M,M]$-bi-Lipschitz map $h_n\:B(p_n,R)\to \RR^m$ close to the restrictions $f|_{B(p_n,R)}$ for each $n$.
 We choose the centers $p_n$ on a scaled lattice.
-Furthermore, we color the balls in a fixed number of colors so that balls of the same color do not overlap;
-it will make possible to perform gluing in finite number of stages, one stage for one color (compare to \cite[7.2--7.10]{tukia-vaisala}).
+In addition, we color the balls with fixed finite number of colors so that balls of the same color do not overlap; the gluing will then proceeds one color at a time (compare to \cite[7.2--7.10]{tukia-vaisala}).
 
-After shifting and rescaling, the maps $h_n$ belong to the compact family of $M$-bi-Lipschitz maps.
+After proper shifting and rescaling, the maps $h_n$ belong to the compact family of $M$-bi-Lipschitz maps defined on a fixed ball.
 Since only finitely many overlap configurations occur, the gluing estimates can be chosen uniformly at each stage.
-Notice however that we first choose small $\eps$ that is good for all stages of gluing, and only then choose $R$.
+We first choose small $\eps$ that is good for all stages of gluing, and only then choose $R$.
 
-After all stages, we glue a map $h$ from $h_n$; it is a a bounded distance from the quasi-isometry $f$.
+After all stages of gluing, we get a map $h$, which is at a bounded distance from $f$.
+The actual gluing can be performed using the Edwards--Kirby theorem \cite{edwards-kirby}.
 By construction $h$ is a proper local homeomorphism; hence it is a homeomorphism.
-The gluing is can be performed using the Edwards--Kirby theorem \cite{edwards-kirby}.
-Using Sullivan's theorem [see \ncite{sullivan} and also 5.10 in \ncite{tukia-vaisala}] instead leads to a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.
+
+Using the gluing provided by Sullivan's theorem [see \ncite{sullivan} and also 5.10 in \ncite{tukia-vaisala}] we get a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.)
 \qeds
 
 The problem was suggested by Dmitri Burago.
