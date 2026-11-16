@@ -106,7 +106,7 @@ Choose a point $x_0\in X$.
 Given a point $z\in X$, let $f_z\in C(X,\RR)$ be the function defined by 
 \[f_z(x)=\dist_z(x)-\dist_z(x_0).\]
 Let $F_X\:X\to C(X,\RR)$ be the map sending $z$ to $f_z$.
-(The Kuratowski embedding is defined by the same formula, but uses another topology on $C(X,\RR)$.)
+
 
 Denote by $\bar X$ the closure of $F_X(X)$ in $C(X,\RR)$;
 note that $\bar X$ is compact.
@@ -161,7 +161,7 @@ Construct a compatible length-metric $d$ on $\RR^3$ such that the space $(\RR^3,
 
 Let us refresh the definition of a sub-Riemannian metric.
 
-Suppose $(M,g)$ be a compact Riemannian manifold.
+Let $(M,g)$ be a compact Riemannian manifold.
 Assume that in the tangent bundle $\T M$ a choice of sub-bundle $H$ is given.
 
 Let us call the sub-bundle $H$ a \index{horizontal distribution}\emph{horizontal distribution}.
@@ -585,7 +585,7 @@ we get
 \le
 \\
 &\le
-L\cdot\ell_n+\tfrac{10}n+2\cdot\eps_n
+L\cdot(\ell_n+\tfrac{10}n+2\cdot\eps_n)
 \end{align*}
 for any positive integer $n$.
 The right-hand side converges to $0$ as $n\to\infty$.
@@ -608,25 +608,25 @@ Also, it seems feasible that any compatible length-metric on $\RR^3$ admits a lo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sub-Riemannian sphere.}
 If $d$ is a sub-Riemannian metric on $\mathbb{S}^m$,
-then there is a increasing sequence of Riemannian metric tensors
+then there is an increasing sequence of Riemannian metric tensors
 $g_0\z< g_1<\ldots$ such that their induced metrics $d_1<d_2<\ldots$ converge to $d$.
 The metric $g_0$ can be assumed to be the metric of a round sphere,
 so it is induced by an embedding $h_0\:\mathbb{S}^m\to \RR^{m+1}$.
 
 Applying the construction from the Nash--Kuiper theorem,
 one can produce a sequence of smooth embeddings $h_n\:\mathbb{S}^m\to \RR^{m+1}$ with the induced metrics $g_n'$
-such that $|g_n'-g_n|\to 0$.
+such that $|g_n'-g_n|\to 0$ and $g'_n<g_{n+1}$ for every $n$.
 In particular, if we denote by $d'_n$ the metric corresponding to $g'_n$, then $d'_n\to d$ as $n\to\infty$.
 
-The same construction implies that we an choose arbitrary $\eps_n>0$, depending on $h_n$,
+The same construction implies that we can choose arbitrary $\eps_n>0$, depending on $h_n$,
 and assume that
 \[|h_{n+1}(x)-h_n(x)|<\eps_n\] for any $x\in \mathbb{S}^m$.
 
-The choice of sequence $\eps_n$ should meet two conditions.
+The choice of the sequence $\eps_n$ should meet two conditions.
 We need to ensure that the sequence of maps $h_n$ converges;
 denote its limit by $h_\infty$.
 Furthermore, denote by $\bar d$ the length-metric induced by $h_\infty$.
-Note that $\bar d\le d$, and we aslo need to ensure that actually $\bar d=d$.
+Note that $\bar d\le d$, and we also need to ensure that actually $\bar d=d$.
 
 To meet the first condition it is sufficient to assume that $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ for any $n$.
 
@@ -635,7 +635,7 @@ Set $\Sigma=h_n(\mathbb{S}^m)$, and let $\Sigma_r$ be the tubular $r$-neighborho
 Equip $\Sigma$ and $\Sigma_r$ with the induced length-metrics.
 Since $\Sigma$ is a smooth hypersurface, we can choose $r_n\in(0,\eps_{n-1}]$ so that the inclusion $\Sigma\hookrightarrow \Sigma_{r_n}$ preserves the distance up to error $\tfrac1{2^n}$.
 
-Then to meet the secons condition it is sufficient to assume that $\eps_n< \tfrac12\cdot r_n$, which is evidently stronger than $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ above.
+Then to meet the second condition it is sufficient to assume that $\eps_n< \tfrac12\cdot r_n$, which is evidently stronger than $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ above.
 Indeed, if the sequence $h_n$ is constructed with the described choice of $\eps_n$,
 then $|h_\infty(x)-h_n(x)|<r_n$ for any $x\in\mathbb{S}^m$.
 Therefore,
@@ -851,8 +851,8 @@ for any two points $p,q\in \HH^3$.
 In particular, the map $\HH^3\to\HH^2\times\HH^2$ defined by $p\mapsto (\phi(p),\psi(p))$
 is $2^{\mp1}$-bi-Lipschitz.\qeds
 
-The problem was suggested by Sergei Buyalo and it must be an old folklore;
-its quasiisometry analog appears the paper of Noel Brady and Benson Farb \cite{brady-farb}.
+The problem was suggested by Sergei Buyalo and it must be folklore;
+its quasiisometry analog appears in the paper of Noel Brady and Benson Farb \cite{brady-farb}.
 We used that horo-spheres in the hyperbolic space are isometric to the Euclidean plane.
 This observation was made by Nikolai Lobachevsky \cite[§ 34]{lobachevsky}.
 The same observation is used in the following construction discovered by 
@@ -898,6 +898,7 @@ Cover $\RR^m$ by balls $B(p_n,R)$ and construct a $[\tfrac1M,M]$-bi-Lipschitz ma
 
 The maps $h_n$ are $2\cdot \eps\cdot R$ close to each other on the overlaps of their domains of definition.
 This makes it possible to deform slightly each $h_n$ so that they agree on the overlaps.
+(Formally speaking, we need ensure uniform control on closeness, choose coloring of balls, and perform gluing in a finite number of steps.)
 The resulting map $h$ is at a bounded distance from the quasi-isometry $f$.
 By construction $h$ is a proper local homeomorphism; hence it is a homeomorphism.
 This can be done by the Edwards--Kirby theorem \cite{edwards-kirby}.
