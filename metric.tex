@@ -39,8 +39,7 @@ Note that the map $K\to \mathcal{B}(K,\RR)$, defined by $x\mapsto \dist_x$ is a 
 Indeed, by the triangle inequality we have
 \[|\dist_x(z)-\dist_y(z)|\le |x-y|_K\]
 for any $z\in K$ and the equality holds for $z=x$.
-
-In other words, we can and will consider $K$ as a subspace of $\mathcal{B}(K,\RR)$.
+Thus we can and will consider $K$ as a subspace of $\mathcal{B}(K,\RR)$.
 
 Denote by $W$ the closed linear convex hull of $K$ in $\mathcal{B}(K,\RR)$;
 that is, $W$ is the intersection of all closed convex (with respect to the linear structure) subsets containing $K$.
@@ -107,6 +106,7 @@ Choose a point $x_0\in X$.
 Given a point $z\in X$, let $f_z\in C(X,\RR)$ be the function defined by 
 \[f_z(x)=\dist_z(x)-\dist_z(x_0).\]
 Let $F_X\:X\to C(X,\RR)$ be the map sending $z$ to $f_z$.
+(The Kuratowski embedding is defined by the same formula, but uses another topology on $C(X,\RR)$.)
 
 Denote by $\bar X$ the closure of $F_X(X)$ in $C(X,\RR)$;
 note that $\bar X$ is compact.
@@ -159,9 +159,9 @@ Construct a compatible length-metric $d$ on $\RR^3$ such that the space $(\RR^3,
 \subsection*{Sub-Riemannian sphere\thm}
 \label{sub-Riemannian} 
 
-Let us explain what a sub-Riemannian metric is.
+Let us refresh the definition of a sub-Riemannian metric.
 
-Let $(M,g)$ be a compact Riemannian manifold.
+Suppose $(M,g)$ be a compact Riemannian manifold.
 Assume that in the tangent bundle $\T M$ a choice of sub-bundle $H$ is given.
 
 Let us call the sub-bundle $H$ a \index{horizontal distribution}\emph{horizontal distribution}.
@@ -221,8 +221,7 @@ Show that $f$ fixes the line segment between $a$ and~$b$.
 \end{pr}
 
 Evidently, $f$ maps the line segment $[ab]$ to a minimizing geodesic connecting $a$ to $b$ in $(\RR^m,\rho)$.
-However, in general, there might be many minimizing geodesics connecting $a$ to $b$ in $(\RR^m,\rho)$.
-The problem states that $[ab]$ is mapped to itself.
+In general, there might be many minimizing geodesics connecting $a$ to $b$ in $(\RR^m,\rho)$, and by the problem $[ab]$ is mapped to itself.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Busemann's construction\easy}
@@ -391,7 +390,7 @@ It remains to notice that any map $h\in \bigcap_F\mathfrak{C}_F$ solves the prob
 
 }
 
-This observation was used by Stephan Stadler and me \cite{petrunin-stadler:revisited}.
+This observation was used by Stephan Stadler and the author \cite{petrunin-stadler:revisited}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Horo-compactification.}
@@ -499,8 +498,7 @@ Note that
 &
 \bm{w}(\beta')&=[0,a]\times a.
 \end{align*} 
-Therefore, the composition $\bm{w}\circ\gamma$ is a degree 1 map 
-\[\mathbb{S}^1\to \partial([0,a]\times[0,a]).\] 
+Therefore, the composition $\bm{w}\circ\gamma$ is a degree 1 map $\mathbb{S}^1\to \partial([0,a]\times[0,a])$.
 It follows that if $h\:\DD\to X$ shrinks $\gamma$, then there is a point $z\in\DD$ such that $\bm{w}\circ h(z)=(\tfrac a2,\tfrac a2)$.
 Therefore $h(z)$ lies at distance at least $\tfrac a2$ from $\alpha$, $\beta$, $\alpha'$, $\beta'$
 and therefore from $\gamma$.
@@ -599,18 +597,18 @@ The problem is due to
 Dmitri Burago, 
 Sergei Ivanov,
 and David Shoenthal \cite{BIS}.
+In fact any metric on the cube in $\RR^3$ admits a proper locally Lipschitz degree-one map to the unit cube with the canonical metric.
+Moreover, one can make this map injective on a given finite set of points.
+It is instructive to visualize this map for the metric of the solution.
 
 It is expected that any compatible length-metric on $\RR^2$ admits locally Lipschitz embeddings into the Euclidean plane.
 Also, it seems feasible that any compatible length-metric on $\RR^3$ admits a locally Lipschitz embedding into $\RR^4$.
 
-Note that any metric on the cube in $\RR^3$ admits a proper locally Lipschitz map to the unit cube with the canonical metric of degree 1.
-Moreover, one can make this map injective on any finite set of points.
-It is instructive to visualize this map for the metric of the solution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Sub-Riemannian sphere.}
 If $d$ is a sub-Riemannian metric on $\mathbb{S}^m$,
-then there is a non-decreasing sequence of Riemannian metric tensors
+then there is a increasing sequence of Riemannian metric tensors
 $g_0\z< g_1<\ldots$ such that their induced metrics $d_1<d_2<\ldots$ converge to $d$.
 The metric $g_0$ can be assumed to be the metric of a round sphere,
 so it is induced by an embedding $h_0\:\mathbb{S}^m\to \RR^{m+1}$.
@@ -620,28 +618,25 @@ one can produce a sequence of smooth embeddings $h_n\:\mathbb{S}^m\to \RR^{m+1}$
 such that $|g_n'-g_n|\to 0$.
 In particular, if we denote by $d'_n$ the metric corresponding to $g'_n$, then $d'_n\to d$ as $n\to\infty$.
 
-It follows from the same construction that
-if one chooses $\eps_n>0$, depending on $h_n$,
-then we can assume that 
+The same construction implies that we an choose arbitrary $\eps_n>0$, depending on $h_n$,
+and assume that
 \[|h_{n+1}(x)-h_n(x)|<\eps_n\] for any $x\in \mathbb{S}^m$.
 
-Let us introduce two conditions on the values $\eps_n$, called \emph{weak} and \emph{strong}.
-
-The weak condition states that $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ for any $n$.
-This ensures that the sequence of maps $h_n$ converges;
+The choice of sequence $\eps_n$ should meet two conditions.
+We need to ensure that the sequence of maps $h_n$ converges;
 denote its limit by $h_\infty$.
+Furthermore, denote by $\bar d$ the length-metric induced by $h_\infty$.
+Note that $\bar d\le d$, and we aslo need to ensure that actually $\bar d=d$.
 
-Denote by $\bar d$ the length-metric induced by $h_\infty$.
-Note that $\bar d\le d$.
-The strong condition on $\eps_n$ will ensure that actually $\bar d=d$.
+To meet the first condition it is sufficient to assume that $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ for any $n$.
 
 Fix $n$ and assume that $h_n$ and therefore $\eps_{n-1}$ are constructed already.
 Set $\Sigma=h_n(\mathbb{S}^m)$, and let $\Sigma_r$ be the tubular $r$-neighborhood of $\Sigma$.
 Equip $\Sigma$ and $\Sigma_r$ with the induced length-metrics.
 Since $\Sigma$ is a smooth hypersurface, we can choose $r_n\in(0,\eps_{n-1}]$ so that the inclusion $\Sigma\hookrightarrow \Sigma_{r_n}$ preserves the distance up to error $\tfrac1{2^n}$.
-Then the strong condition states that $\eps_n< \tfrac12\cdot r_n$, which is evidently stronger than the weak condition $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ above.
 
-Note that if the sequence $h_n$ is constructed with the described choice of $\eps_n$,
+Then to meet the secons condition it is sufficient to assume that $\eps_n< \tfrac12\cdot r_n$, which is evidently stronger than $\eps_{n}< \tfrac1{2}\cdot \eps_{n-1}$ above.
+Indeed, if the sequence $h_n$ is constructed with the described choice of $\eps_n$,
 then $|h_\infty(x)-h_n(x)|<r_n$ for any $x\in\mathbb{S}^m$.
 Therefore,
 \[\bar d(x,y)+2\cdot r_n+\tfrac1{2^n}\ge d_n'(x,y)\] 
@@ -649,10 +644,8 @@ for any $n$ and $x,y\in \mathbb{S}^m$;
 hence $\bar d\ge d$ as required. 
 \qeds
 
-The problem
-on this list was first discovered by Enrico Le Donne \cite{le-donne}.
-A similar construction is described in the lecture notes by Allan Yashinski and the author \cite{petrunin-yashinsky} which are aimed at undergraduate students.
-Yet the results in \cite{petrunin-paths} are closely relevant.
+The problem is extracted from the paper of Enrico Le Donne \cite{le-donne}.
+A similar construction is described in our popular lectures with Allan Yashinski \cite{petrunin-yashinsky}; see also \cite{petrunin-paths}.
 
 The construction in the Nash--Kuiper embedding theorem
 can be used to prove strange statements.
@@ -691,7 +684,7 @@ and
 \quad
 |d_xf(e_1+e_2)|=|e_1+e_2|\]
 for a basis $(e_1,e_2)$ of $\RR^2$.
-It follows that $d_xf$ has rank 2 --- a contradiction.
+Thus $d_xf$ has rank 2 --- a contradiction.
 \qeds
 
 The idea above can also be used to solve the following problem.
@@ -728,8 +721,8 @@ On the other hand, since $f_n$ is an isometry and $f_n(a)=a$,
 we also have $\|f_n(0)\|\le 2\cdot \|a\|$ --- a contradiction.
 \qeds
 
-The idea of the proof is due to Jussi Väisälä \cite{vaisala}.
-The problem is the main step in the proof of the Mazur--Ulam theorem \cite{mazur-ulam},
+This argument is due to Jussi Väisälä \cite{vaisala};
+it plays the key role in his proof of the Mazur--Ulam theorem \cite{mazur-ulam},
 which states that any isometry of $(\RR^m,\rho)$ is an affine map.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -858,7 +851,8 @@ for any two points $p,q\in \HH^3$.
 In particular, the map $\HH^3\to\HH^2\times\HH^2$ defined by $p\mapsto (\phi(p),\psi(p))$
 is $2^{\mp1}$-bi-Lipschitz.\qeds
 
-This problem must be an old folklore, its quasiisometry analog appears the paper of Noel Brady and Benson Farb \cite{brady-farb}.
+The problem was suggested by Sergei Buyalo and it must be an old folklore;
+its quasiisometry analog appears the paper of Noel Brady and Benson Farb \cite{brady-farb}.
 We used that horo-spheres in the hyperbolic space are isometric to the Euclidean plane.
 This observation was made by Nikolai Lobachevsky \cite[§ 34]{lobachevsky}.
 The same observation is used in the following construction discovered by 
@@ -871,13 +865,12 @@ Construct a tessellation of the hyperbolic plane with one polygonal tile of arbi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parbf{Quasi-isometry of a Euclidean space.}
 Choose two constants $M\ge 1$ and $A\ge 0$.
-A map $f\:X\z\to Y$ between metric spaces $X$ and $Y$ such that for any $x,y\in X$,
- we have
+A map $f\:X\z\to Y$ between metric spaces $X$ and $Y$ will be called \emph{$(M,A)$-quasi-isometry}
+if for any $x,y\in X$, we have
 \[\tfrac1M\cdot |x-y|-A\le |f(x)-f(y)|\le M\cdot |x-y|+A\]
-and any point in $Y$ lies at a distance at most $A$ from a point in the image $f(X)$
-will be called $(M,A)$-quasi-isometry.
+and any point in $Y$ lies at a distance at most $A$ from a point in the image $f(X)$.
 
-{\sloppy
+
 Note that $(M,0)$-quasi-isometry is a $[\tfrac1M,M]$-bi-Lipschitz map.
 Moreover,
 if $f_n\:\RR^m\to\RR^m$ is a $(M,\frac1n)$-quasi-isometry
@@ -885,7 +878,6 @@ for each $n$,
 then any subsequential limit of $f_n$ as $n\to\infty$
 is a $[\tfrac1M,M]$-bi-Lipschitz map.
 
-}
 
 Therefore given $M\ge 1$ and $\eps>0$ there is $\delta>0$ such that 
 for any $(M,\delta)$-quasi-isometry $f\:\RR^m\to\RR^m$ and any $p\in \RR^m$
