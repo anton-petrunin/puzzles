@@ -587,7 +587,7 @@ we get
 &\le
 L\cdot(\ell_n+\tfrac{10}n+2\cdot\eps_n)
 \end{align*}
-for any positive integer $n$.
+for all large $n$.
 The right-hand side converges to $0$ as $n\to\infty$.
 Therefore,
 \[h(a_\infty)=h(b_\infty)\]
@@ -641,7 +641,7 @@ then $|h_\infty(x)-h_n(x)|<r_n$ for any $x\in\mathbb{S}^m$.
 Therefore,
 \[\bar d(x,y)+2\cdot r_n+\tfrac1{2^n}\ge d_n'(x,y)\] 
 for any $n$ and $x,y\in \mathbb{S}^m$;
-hence $\bar d\ge d$ as required. 
+hence $\bar d\ge d$ as required. In particular, $h_\infty$ is injective.
 \qeds
 
 The problem is extracted from the paper of Enrico Le Donne \cite{le-donne}.
@@ -895,14 +895,18 @@ such that
 for any $x\in B(p,R)$.
 
 Cover $\RR^m$ by balls $B(p_n,R)$ and construct a $[\tfrac1M,M]$-bi-Lipschitz map $h_n\:B(p_n,R)\to \RR^m$ close to the restrictions $f|_{B(p_n,R)}$ for each $n$.
+We choose the centers $p_n$ on a scaled lattice.
+Furthermore, we color the balls in a fixed number of colors so that balls of the same color do not overlap;
+it will make possible to perform gluing in finite number of stages, one stage for one color (compare to \cite[7.2--7.10]{tukia-vaisala}).
 
-The maps $h_n$ are $2\cdot \eps\cdot R$ close to each other on the overlaps of their domains of definition.
-This makes it possible to deform slightly each $h_n$ so that they agree on the overlaps.
-(Formally speaking, we need ensure uniform control on closeness, choose coloring of balls, and perform gluing in a finite number of steps.)
-The resulting map $h$ is at a bounded distance from the quasi-isometry $f$.
+After shifting and rescaling, the maps $h_n$ belong to the compact family of $M$-bi-Lipschitz maps.
+Since only finitely many overlap configurations occur, the gluing estimates can be chosen uniformly at each stage.
+Notice however that we first choose small $\eps$ that is good for all stages of gluing, and only then choose $R$.
+
+After all stages, we glue a map $h$ from $h_n$; it is a a bounded distance from the quasi-isometry $f$.
 By construction $h$ is a proper local homeomorphism; hence it is a homeomorphism.
-This can be done by the Edwards--Kirby theorem \cite{edwards-kirby}.
-Applying instead Sullivan's theorem [see \ncite{sullivan} and also 5.10 in \ncite{tukia-vaisala}], you get a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.
+The gluing is can be performed using the Edwards--Kirby theorem \cite{edwards-kirby}.
+Using Sullivan's theorem [see \ncite{sullivan} and also 5.10 in \ncite{tukia-vaisala}] instead leads to a bi-Lipschitz homeomorphism $h\:\RR^m\z\to\RR^m$.
 \qeds
 
 The problem was suggested by Dmitri Burago.
